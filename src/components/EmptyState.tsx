@@ -1,0 +1,1 @@
+export default function EmptyState({ title, text }: { title: string; text: string }) { return <div className="empty-state"><div className="empty-ornament">✦</div><strong>{title}</strong><p>{text}</p></div>; }

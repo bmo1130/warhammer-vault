@@ -1,6 +1,8 @@
-export type EntityType = 'faction' | 'lord' | 'hero' | 'unit' | 'research' | 'building' | 'landmark';
+import type { BACKUP_FORMAT } from './appIdentity';
+export type { EntityType } from './entities';
+import type { EntityType } from './entities';
 export type SourceInfo = { gameVersion: string; source: string; tags: string[]; updatedAt?: string };
-export type Faction = SourceInfo & { id: string; name: string; subtitle: string; description: string; lordIds: string[]; unitIds: string[]; researchIds: string[]; buildingIds: string[]; landmarkIds: string[] };
+export type Faction = SourceInfo & { id: string; name: string; subtitle: string; description: string };
 export type UnitStats = { meleeAttack?: number; meleeDefense?: number; speed?: number; armor?: number; leadership?: number; health?: number; chargeBonus?: number };
 export type Unit = SourceInfo & { id: string; name: string; factionId: string; category: string; tier?: number; summary: string; stats: UnitStats; recruitmentCost?: number; upkeep?: number };
 export type Lord = SourceInfo & { id: string; name: string; factionId: string; title: string; summary: string; unitIds: string[] };
@@ -24,4 +26,4 @@ export type CampaignArmy = { lordId: string; units: { unitId: string; rank: numb
 export type CampaignProfile = { id: string; name: string; gameVersion: string; factionId: string; turn: number; modProfileIds: string[]; completedResearchIds: string[]; ownedBuildingIds: string[]; activeLandmarkIds: string[]; lords: CampaignLord[]; armies: CampaignArmy[]; createdAt: string; updatedAt: string };
 export type RosterEntry = { entityId: string; entityType: 'unit' | 'hero'; count: number };
 export type Roster = { id: string; name: string; lordId: string; entries: RosterEntry[]; createdAt: string; updatedAt: string };
-export type UserBackup = { format: 'hammer-archive-backup'; version: 1; exportedAt: string; articles: WikiArticle[]; notes: UserNote[]; bookmarks: Bookmark[]; recentViews: RecentView[] };
+export type UserBackup = { format: typeof BACKUP_FORMAT; version: 1; exportedAt: string; articles: WikiArticle[]; notes: UserNote[]; bookmarks: Bookmark[]; recentViews: RecentView[] };

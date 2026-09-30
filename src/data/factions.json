@@ -1,3 +1,15 @@
 [
-  {"id":"vampire_counts","name":"뱀파이어 카운트","subtitle":"Vampire Counts","description":"죽음의 군세를 이끄는 팩션. 이 항목은 앱 구조를 보여주기 위한 소량의 예시 데이터입니다.","lordIds":["heinrich_kemmler","vlad_von_carstein"],"unitIds":["zombies","grave_guard","hexwraiths","blood_knights","varghulf"],"researchIds":[],"buildingIds":[],"landmarkIds":[],"gameVersion":"sample","source":"구조 검증용 샘플 · 수치 미검증","tags":["언데드","마법","근접"]}
+  {
+    "id": "vampire_counts",
+    "name": "뱀파이어 카운트",
+    "subtitle": "Vampire Counts",
+    "description": "죽음의 군세를 이끄는 팩션. 이 항목은 앱 구조를 보여주기 위한 소량의 예시 데이터입니다.",
+    "gameVersion": "sample",
+    "source": "구조 검증용 샘플 · 수치 미검증",
+    "tags": [
+      "언데드",
+      "마법",
+      "근접"
+    ]
+  }
 ]

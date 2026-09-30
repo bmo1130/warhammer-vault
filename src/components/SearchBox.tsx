@@ -1,0 +1,2 @@
+export default function SearchBox({ value, onChange, autoFocus = false }: { value: string; onChange: (value: string) => void; autoFocus?: boolean }) { return <label className="search-box"><Icon name="search"/><input type="search" value={value} onChange={(event) => onChange(event.target.value)} placeholder="팩션, 군주, 유닛 검색" aria-label="팩션, 군주, 유닛 검색" autoFocus={autoFocus}/><span className="search-hint">검색</span></label>; }
+import Icon from './Icon';

@@ -3,23 +3,40 @@ import lordsJson from '../data/lords.json';
 import unitsJson from '../data/units.json';
 import type { EntityType, Faction, Lord, Unit } from '../domain/types';
 
-const factions = factionsJson as Faction[];
-const lords = lordsJson as Lord[];
-const units = unitsJson as Unit[];
+const factions: Faction[] = factionsJson;
+const lords: Lord[] = lordsJson;
+const units: Unit[] = unitsJson;
+
+const factionById = new Map(factions.map((item) => [item.id, item]));
+const lordById = new Map(lords.map((item) => [item.id, item]));
+const unitById = new Map(units.map((item) => [item.id, item]));
+
+// Membership is stored only on the child entity, including future entity kinds.
+function indexByFaction<T extends { factionId: string }>(items: T[]): Map<string, T[]> {
+  const index = new Map<string, T[]>();
+  for (const item of items) {
+    const entries = index.get(item.factionId);
+    if (entries) entries.push(item);
+    else index.set(item.factionId, [item]);
+  }
+  return index;
+}
+const lordsByFaction = indexByFaction(lords);
+const unitsByFaction = indexByFaction(units);
 
 export type SearchResult = { type: 'faction' | 'lord' | 'unit'; id: string; name: string; detail: string };
 
 export const gameRepository = {
   listFactions: () => factions,
-  getFaction: (id: string) => factions.find((item) => item.id === id),
-  getLord: (id: string) => lords.find((item) => item.id === id),
-  getUnit: (id: string) => units.find((item) => item.id === id),
-  getFactionLords: (id: string) => lords.filter((item) => item.factionId === id),
-  getFactionUnits: (id: string) => units.filter((item) => item.factionId === id),
+  getFaction: (id: string) => factionById.get(id),
+  getLord: (id: string) => lordById.get(id),
+  getUnit: (id: string) => unitById.get(id),
+  getFactionLords: (id: string) => lordsByFaction.get(id) ?? [],
+  getFactionUnits: (id: string) => unitsByFaction.get(id) ?? [],
   getEntityName: (type: EntityType, id: string) => {
-    if (type === 'faction') return factions.find((item) => item.id === id)?.name;
-    if (type === 'lord') return lords.find((item) => item.id === id)?.name;
-    if (type === 'unit') return units.find((item) => item.id === id)?.name;
+    if (type === 'faction') return factionById.get(id)?.name;
+    if (type === 'lord') return lordById.get(id)?.name;
+    if (type === 'unit') return unitById.get(id)?.name;
     return undefined;
   },
   search: (query: string): SearchResult[] => {

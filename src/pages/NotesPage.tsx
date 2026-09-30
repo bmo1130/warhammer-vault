@@ -1,0 +1,15 @@
+import { useEffect, useState, type FormEvent } from 'react';
+import { wikiRepository } from '../repositories/wikiRepository';
+import type { UserNote } from '../domain/types';
+import PageIntro from '../components/PageIntro';
+import Icon from '../components/Icon';
+import EmptyState from '../components/EmptyState';
+export default function NotesPage() {
+  const [notes, setNotes] = useState<UserNote[]>([]), [editing, setEditing] = useState<UserNote | null>(null), [title, setTitle] = useState(''), [body, setBody] = useState(''), [message, setMessage] = useState('');
+  const refresh = () => wikiRepository.listNotes().then(setNotes).catch(() => setMessage('메모를 불러오지 못했습니다.'));
+  useEffect(() => { void refresh(); }, []);
+  const start = (note?: UserNote) => { setEditing(note ?? { id: crypto.randomUUID(), title: '', body: '', createdAt: new Date().toISOString(), updatedAt: new Date().toISOString() }); setTitle(note?.title ?? ''); setBody(note?.body ?? ''); setMessage(''); };
+  const save = async (event: FormEvent) => { event.preventDefault(); if (!editing) return; try { await wikiRepository.saveNote({ ...editing, title: title.trim(), body, updatedAt: new Date().toISOString() }); setEditing(null); await refresh(); setMessage('메모를 저장했습니다.'); } catch { setMessage('메모를 저장하지 못했습니다.'); } };
+  const remove = async (id: string) => { if (!window.confirm('이 메모를 삭제할까요?')) return; try { await wikiRepository.deleteNote(id); setEditing(null); await refresh(); setMessage('메모를 삭제했습니다.'); } catch { setMessage('메모를 삭제하지 못했습니다.'); } };
+  return <><PageIntro eyebrow="PERSONAL NOTES" title="자유 메모" description="모딩 아이디어와 다음 캠페인에 쓸 생각을 모아두세요."/><div className="section-head"><h2>내 메모<span className="count">{notes.length}</span></h2><button className="button button-primary" onClick={() => start()}><Icon name="plus"/> 새 메모</button></div>{editing && <form className="editor panel note-editor" onSubmit={(event) => void save(event)}><label><span>제목</span><input required value={title} onChange={(event) => setTitle(event.target.value)} placeholder="메모 제목"/></label><label><span>내용</span><textarea value={body} onChange={(event) => setBody(event.target.value)} placeholder="아이디어나 기록을 자유롭게 적어보세요." rows={8}/></label><div className="editor-actions"><button className="button button-primary" type="submit">저장하기</button><button className="button button-quiet" type="button" onClick={() => setEditing(null)}>취소</button>{notes.some((note) => note.id === editing.id) && <button className="button button-danger" type="button" onClick={() => void remove(editing.id)}>삭제</button>}</div></form>}{notes.length ? <div className="note-list">{notes.map((note) => <button className="note-card" key={note.id} onClick={() => start(note)}><span className="note-date">{new Date(note.updatedAt).toLocaleDateString('ko-KR')}</span><strong>{note.title}</strong><p>{note.body || '내용이 없습니다.'}</p><span className="note-edit">편집하기 <Icon name="arrow"/></span></button>)}</div> : !editing && <EmptyState title="아직 메모가 없습니다" text="새 메모를 눌러 첫 아이디어를 기록하세요."/>}{message && <p className="message" role="status">{message}</p>}</>;
+}

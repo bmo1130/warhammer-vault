@@ -14,10 +14,17 @@ npm run dev
 ## 구조
 
 - `src/data`: 읽기 전용 WH3 샘플 JSON. 실제 수치는 아직 검증되지 않아 비워 뒀습니다.
-- `src/domain/types.ts`: WH3 엔티티와 향후 Modifier, ModProfile, CampaignProfile, Roster 타입.
-- `src/repositories/gameRepository.ts`: 게임 원본 조회와 이름 검색.
+- `src/domain/types.ts`: WH3 엔티티와 향후 Modifier, ModProfile, CampaignProfile, Roster 타입. 팩션 소속 관계는 각 엔티티의 `factionId`만 사용합니다.
+- `src/domain/entities.ts`: 엔티티 타입과 명시적 URL 매핑, 경로 생성 및 표시 이름.
+- `src/domain/appIdentity.ts`: 내부 앱 이름과 백업 식별자.
+- `src/repositories/gameRepository.ts`: ID 및 팩션별 Map 인덱스로 게임 원본 조회, 이름 검색.
 - `src/repositories/wikiRepository.ts`: IndexedDB에 개인 서술, 메모, 즐겨찾기, 최근 항목 저장. 백업 검증 및 복원.
-- `src/App.tsx`: 라우트와 화면. 유닛 및 군주는 ID를 이용하는 공통 페이지 템플릿.
+- `src/App.tsx`: 앱 셸과 라우팅.
+- `src/pages`: 홈, 팩션 목록 및 상세, 군주·유닛 상세, 메모, 백업, 없는 항목 화면.
+- `src/components`: 검색, 목록 행, 개인 기록 편집기 등 공통 UI.
+- `src/hooks`: 즐겨찾기 조회·토글(`useBookmark`), 상세 페이지 방문 기록(`useRecordView`).
+
+내부 식별자는 `warhammer-vault`입니다. IndexedDB는 `warhammer-vault`, JSON 백업 형식은 `warhammer-vault-backup`, 파일 이름은 `warhammer-vault-backup.json`을 사용합니다. 초기 버전의 기존 저장소 마이그레이션은 제공하지 않습니다.
 
 ## 현재 범위
 

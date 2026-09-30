@@ -1,6 +1,9 @@
 import type { ArticleTarget, Bookmark, RecentView, UserBackup, UserNote, WikiArticle } from '../domain/types';
 
-const DB_NAME = 'hammer-archive';
+import { APP_ID, BACKUP_FORMAT } from '../domain/appIdentity';
+import { entityRoutes } from '../domain/entities';
+
+const DB_NAME = APP_ID;
 const DB_VERSION = 1;
 type StoreName = 'articles' | 'notes' | 'bookmarks' | 'recentViews';
 
@@ -56,7 +59,7 @@ function put<T>(store: StoreName, value: T): Promise<void> { return write(store,
 function remove(store: StoreName, id: string): Promise<void> { return write(store, (objectStore) => { objectStore.delete(id); }); }
 
 const targetId = ({ entityType, entityId }: ArticleTarget) => `${entityType}:${entityId}`;
-const allowedTypes = ['faction', 'lord', 'hero', 'unit', 'research', 'building', 'landmark'];
+const allowedTypes = Object.keys(entityRoutes);
 const isRecord = (value: unknown): value is Record<string, unknown> => typeof value === 'object' && value !== null && !Array.isArray(value);
 const isString = (value: unknown): value is string => typeof value === 'string';
 const validTarget = (value: Record<string, unknown>) => allowedTypes.includes(String(value.entityType)) && isString(value.entityId) && value.entityId.length > 0;
@@ -66,7 +69,7 @@ const validBookmark = (value: unknown): value is Bookmark => isRecord(value) && 
 const validRecent = (value: unknown): value is RecentView => isRecord(value) && validTarget(value) && value.id === targetId(value as ArticleTarget) && isString(value.viewedAt);
 
 export function parseBackup(value: unknown): UserBackup {
-  if (!isRecord(value) || value.format !== 'hammer-archive-backup' || value.version !== 1 || !isString(value.exportedAt) || !Array.isArray(value.articles) || !value.articles.every(validArticle) || !Array.isArray(value.notes) || !value.notes.every(validNote) || !Array.isArray(value.bookmarks) || !value.bookmarks.every(validBookmark) || !Array.isArray(value.recentViews) || !value.recentViews.every(validRecent)) {
+  if (!isRecord(value) || value.format !== BACKUP_FORMAT || value.version !== 1 || !isString(value.exportedAt) || !Array.isArray(value.articles) || !value.articles.every(validArticle) || !Array.isArray(value.notes) || !value.notes.every(validNote) || !Array.isArray(value.bookmarks) || !value.bookmarks.every(validBookmark) || !Array.isArray(value.recentViews) || !value.recentViews.every(validRecent)) {
     throw new Error('이 앱의 백업 파일 형식이 아닙니다.');
   }
   return value as UserBackup;
@@ -92,7 +95,7 @@ export const wikiRepository = {
   recordView: (target: ArticleTarget) => put<RecentView>('recentViews', { ...target, id: targetId(target), viewedAt: new Date().toISOString() }),
   async exportBackup(): Promise<UserBackup> {
     const [articles, notes, bookmarks, recentViews] = await Promise.all([all<WikiArticle>('articles'), all<UserNote>('notes'), all<Bookmark>('bookmarks'), all<RecentView>('recentViews')]);
-    return { format: 'hammer-archive-backup', version: 1, exportedAt: new Date().toISOString(), articles, notes, bookmarks, recentViews };
+    return { format: BACKUP_FORMAT, version: 1, exportedAt: new Date().toISOString(), articles, notes, bookmarks, recentViews };
   },
   async importBackup(raw: unknown): Promise<void> {
     const backup = parseBackup(raw);
