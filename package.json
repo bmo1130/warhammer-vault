@@ -9,6 +9,9 @@
     "test": "node scripts/test.mjs",
     "extract:grail-knights": "node tools/wh3-importer/cli.mjs",
     "extract:wh3-unit": "node tools/wh3-importer/cli.mjs",
+    "research:wh3-unit": "node tools/wh3-importer/research-cli.mjs",
+    "inspect:wh3": "node tools/wh3-importer/inspect-cli.mjs",
+    "research:wh3-report": "node tools/wh3-importer/research-report.mjs",
     "test:wh3-integration": "node --test tools/wh3-importer/integration.test.mjs",
     "preview": "vite preview --host 0.0.0.0"
   },

@@ -1,0 +1,228 @@
+[
+  {
+    "table": "effect_bonus_value_ids_unit_sets_tables",
+    "where": [
+      {
+        "field": "effect",
+        "op": "oneOf",
+        "value": [
+          "wh2_dlc13_emp_reload_missile_infantry_cav",
+          "wh2_dlc13_emp_reload_missile_infantry_cav",
+          "wh3_dlc25_effect_skill_reload_increase_emp_missiles",
+          "wh3_dlc25_effect_skill_reload_increase_emp_missiles",
+          "wh2_main_effect_building_recruitment_cost_reduction_brt_resource_pastures",
+          "wh_main_effect_tech_recruitment_cost_reduction_brt_horse_units",
+          "wh_main_effect_tech_recruitment_cost_reduction_brt_horse_units",
+          "wh2_dlc11_effect_skill_reload_increase_emp_free_company_crossbowmen_huntsmen_archers_handgunners_pistoliers_outriders_rank7"
+        ]
+      }
+    ]
+  },
+  {
+    "table": "effects_tables",
+    "where": [
+      {
+        "field": "effect",
+        "op": "oneOf",
+        "value": [
+          "wh2_dlc13_emp_reload_missile_infantry_cav",
+          "wh3_dlc25_effect_skill_reload_increase_emp_missiles",
+          "wh2_main_effect_building_recruitment_cost_reduction_brt_resource_pastures",
+          "wh_main_effect_tech_recruitment_cost_reduction_brt_horse_units",
+          "wh_main_effect_force_all_campaign_upkeep",
+          "wh2_dlc11_effect_skill_reload_increase_emp_free_company_crossbowmen_huntsmen_archers_handgunners_pistoliers_outriders_rank7"
+        ]
+      }
+    ]
+  },
+  {
+    "table": "unit_sets_tables",
+    "where": [
+      {
+        "field": "key",
+        "op": "oneOf",
+        "value": [
+          "emp_missile_cavalry",
+          "emp_missile_infantry",
+          "emp_missile_cavalry",
+          "emp_missile_infantry",
+          "brt_horse_knights",
+          "brt_knights",
+          "brt_squires_yeomen",
+          "emp_missile_infantry_vet"
+        ]
+      }
+    ]
+  },
+  {
+    "table": "unit_set_to_unit_junctions_tables",
+    "where": [
+      {
+        "field": "unit_set",
+        "op": "oneOf",
+        "value": [
+          "emp_missile_cavalry",
+          "emp_missile_infantry",
+          "emp_missile_cavalry",
+          "emp_missile_infantry",
+          "brt_horse_knights",
+          "brt_knights",
+          "brt_squires_yeomen"
+        ]
+      }
+    ]
+  },
+  {
+    "table": "technology_effects_junction_tables",
+    "where": [
+      {
+        "field": "effect",
+        "op": "oneOf",
+        "value": [
+          "wh2_dlc13_emp_reload_missile_infantry_cav",
+          "wh2_dlc13_emp_reload_missile_infantry_cav",
+          "wh3_dlc25_effect_skill_reload_increase_emp_missiles",
+          "wh3_dlc25_effect_skill_reload_increase_emp_missiles",
+          "wh2_main_effect_building_recruitment_cost_reduction_brt_resource_pastures",
+          "wh_main_effect_tech_recruitment_cost_reduction_brt_horse_units",
+          "wh_main_effect_tech_recruitment_cost_reduction_brt_horse_units"
+        ]
+      }
+    ]
+  },
+  {
+    "table": "building_effects_junction_tables",
+    "where": [
+      {
+        "field": "effect",
+        "op": "oneOf",
+        "value": [
+          "wh2_dlc13_emp_reload_missile_infantry_cav",
+          "wh2_dlc13_emp_reload_missile_infantry_cav",
+          "wh3_dlc25_effect_skill_reload_increase_emp_missiles",
+          "wh3_dlc25_effect_skill_reload_increase_emp_missiles",
+          "wh2_main_effect_building_recruitment_cost_reduction_brt_resource_pastures",
+          "wh_main_effect_tech_recruitment_cost_reduction_brt_horse_units",
+          "wh_main_effect_tech_recruitment_cost_reduction_brt_horse_units"
+        ]
+      }
+    ]
+  },
+  {
+    "table": "character_skill_level_to_effects_junctions_tables",
+    "where": [
+      {
+        "field": "effect_key",
+        "op": "oneOf",
+        "value": [
+          "wh2_dlc13_emp_reload_missile_infantry_cav",
+          "wh2_dlc13_emp_reload_missile_infantry_cav",
+          "wh3_dlc25_effect_skill_reload_increase_emp_missiles",
+          "wh3_dlc25_effect_skill_reload_increase_emp_missiles",
+          "wh2_main_effect_building_recruitment_cost_reduction_brt_resource_pastures",
+          "wh_main_effect_tech_recruitment_cost_reduction_brt_horse_units",
+          "wh_main_effect_tech_recruitment_cost_reduction_brt_horse_units",
+          "wh2_dlc11_effect_skill_reload_increase_emp_free_company_crossbowmen_huntsmen_archers_handgunners_pistoliers_outriders_rank7"
+        ]
+      }
+    ]
+  },
+  {
+    "table": "campaign_difficulty_handicap_effects_tables",
+    "where": [
+      {
+        "field": "effect",
+        "op": "oneOf",
+        "value": [
+          "wh2_dlc13_emp_reload_missile_infantry_cav",
+          "wh3_dlc25_effect_skill_reload_increase_emp_missiles",
+          "wh2_main_effect_building_recruitment_cost_reduction_brt_resource_pastures",
+          "wh_main_effect_tech_recruitment_cost_reduction_brt_horse_units",
+          "wh_main_effect_force_all_campaign_upkeep"
+        ]
+      }
+    ]
+  },
+  {
+    "table": "building_levels_tables",
+    "where": [
+      {
+        "field": "level_name",
+        "op": "oneOf",
+        "value": [
+          "wh_main_brt_stables_4",
+          "wh_main_brt_stables_5",
+          "wh_main_emp_forges_3",
+          "wh_main_emp_forges_4",
+          "wh3_main_kho_bloodthirster_2",
+          "wh3_main_dae_advanced_2_kho_3",
+          "wh_main_emp_barracks_3",
+          "wh_main_emp_barracks_2",
+          "wh3_dlc25_special_gelt_embassy_2",
+          "wh_main_emp_barracks_1",
+          "wh3_dlc25_special_gelt_embassy_1",
+          "wh3_dlc25_gom_militia_of_morr_1",
+          "wh3_dlc25_emp_shooting_range_3",
+          "wh3_dlc25_emp_shooting_range_2"
+        ]
+      }
+    ]
+  },
+  {
+    "table": "building_chains_tables",
+    "where": [
+      {
+        "field": "key",
+        "op": "oneOf",
+        "value": [
+          "wh_main_BRETONNIA_stables",
+          "wh_main_EMPIRE_forges",
+          "wh3_main_kho_bloodthirster",
+          "wh3_main_dae_advanced_2_kho",
+          "wh_main_EMPIRE_barracks",
+          "wh3_dlc25_special_gelt_embassy",
+          "wh3_dlc25_gom_militia_of_morr",
+          "wh3_dlc25_EMPIRE_shooting_range"
+        ]
+      }
+    ]
+  },
+  {
+    "table": "main_units_tables",
+    "where": [
+      {
+        "field": "unit",
+        "op": "oneOf",
+        "value": [
+          "wh_main_brt_cav_grail_knights",
+          "wh2_dlc13_emp_art_helstorm_rocket_battery_imperial_supply",
+          "wh_main_emp_art_helstorm_rocket_battery",
+          "wh3_main_kho_mon_bloodthirster_0",
+          "wh3_main_kho_mon_bloodthirster_summoned_0",
+          "wh_main_emp_inf_swordsmen",
+          "wh2_dlc13_emp_inf_handgunners_imperial_supply",
+          "wh_main_emp_inf_handgunners",
+          "wh2_dlc13_emp_art_helblaster_volley_gun_imperial_supply",
+          "wh_main_emp_art_helblaster_volley_gun"
+        ]
+      }
+    ]
+  },
+  {
+    "table": "effect_bonus_value_unit_record_junctions_tables",
+    "where": [
+      {
+        "field": "unit_record_key",
+        "op": "oneOf",
+        "value": [
+          "wh_main_brt_cav_grail_knights",
+          "wh_main_emp_art_helstorm_rocket_battery",
+          "wh3_main_kho_mon_bloodthirster_0",
+          "wh_main_emp_inf_swordsmen",
+          "wh_main_emp_inf_handgunners",
+          "wh_main_emp_art_helblaster_volley_gun"
+        ]
+      }
+    ]
+  }
+]

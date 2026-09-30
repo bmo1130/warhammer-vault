@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import { resolveOptions, extractUnit } from './extract.mjs';
+import { inspectSource } from './inspect.mjs';
 
 // Expected keys were discovered in CA localisation/DB, never used for discovery.
 for (const [profile, expectedKey] of Object.entries({
@@ -42,4 +43,20 @@ for (const [profile, expectedKey] of Object.entries({
     assert(persisted.rows.some((row) => row.table === 'special_ability_phase_stat_effects_tables'));
     assert(persisted.rows.some((row) => row.table === 'Loc' && row.row.text === 'Wounds'));
   }
+});
+
+test('opt-in: representative current stat label and experience evidence exists in CA packs', { skip: !process.env.WH3_GAME_PATH && !process.env.WH3_INTEGRATION_CONFIG ? 'Set WH3_GAME_PATH or WH3_INTEGRATION_CONFIG and start RPFM to opt in.' : false }, async () => {
+  const args = process.env.WH3_INTEGRATION_CONFIG ? ['--config', process.env.WH3_INTEGRATION_CONFIG] : [];
+  const result = await inspectSource(await resolveOptions(args), { queries: [
+    { table: 'ui_unit_stats_tables', where: [{ field: 'key', op: 'eq', value: 'stat_resistance_magic' }] },
+    { table: 'unit_stat_localisations_tables', where: [{ field: 'stat_key', op: 'eq', value: 'stat_resistance_magic' }] },
+    { table: 'Loc:text/db/unit_stat_localisations__.loc', where: [{ field: 'key', op: 'eq', value: 'unit_stat_localisations_onscreen_name_stat_resistance_magic' }] },
+    { table: 'unit_experience_bonuses_tables', where: [{ field: 'stat', op: 'eq', value: 'stat_reloading' }] },
+  ] });
+  assert.equal(result.sourceKind, 'ca-pack');
+  assert(result.rows.some((row) => row.table === 'Loc' && row.row.text.includes('Spell Resistance')));
+  assert(result.rows.some((row) => row.table === 'unit_experience_bonuses_tables' && row.row.value === 1));
+  assert(result.relationships.some((edge) => edge.field === 'localisation' && edge.evidence.includes('is_reference')));
+  assert(result.relationships.some((edge) => edge.field === 'onscreen_name' && edge.evidence.includes('localised_fields')));
+  assert(result.provenance.packs.every((pack) => /^[a-f0-9]{64}$/.test(pack.sha256)));
 });

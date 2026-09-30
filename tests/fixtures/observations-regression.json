@@ -1,0 +1,17 @@
+{
+  "sourceKind": "synthetic-fixture",
+  "profiles": {
+    "grail-knights": {
+      "summarySha256": "2fdf29236f58543430c2801729535855aed919c8e7cb7fe7f8d88e87459709d0",
+      "observationsSha256": "07d59c83aa9ae62cdce9b6a56f5ff60db9a3f27275cbbcb5280aa20e498ce367"
+    },
+    "helstorm": {
+      "summarySha256": "b3155ba06f7c7d4d4e72229ebc11c48f45de1f9ba1788e12b3887db03af7e642",
+      "observationsSha256": "39cdb6188cc785e441831700be770d71a27473bf920920543158d4950427c95c"
+    },
+    "bloodthirster": {
+      "summarySha256": "cd803d426608d38c8879ce1db5d019cad40b8e055d4ada665e4d5e8e46a4fea8",
+      "observationsSha256": "f7d88feb04acdb2885902ec2dd5c07a133705ab0bcde2cc1afb96c8773fe035b"
+    }
+  }
+}

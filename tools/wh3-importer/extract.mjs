@@ -9,6 +9,7 @@ import { RawPackReader } from './raw-reader.mjs';
 import { traceUnit } from './trace-unit.mjs';
 import { observations, addObservationUnresolved, renderSummary } from './report.mjs';
 import { getProfile } from './profiles.mjs';
+import { sha256File } from './hash.mjs';
 
 const execute = promisify(execFile);
 const repositoryRoot = fileURLToPath(new URL('../../', import.meta.url));
@@ -38,7 +39,7 @@ export async function resolveOptions(argv = [], env = process.env) {
   return { gamePath: root, rpfmUrl: flags['--rpfm-url'] ?? env.RPFM_MCP_URL ?? local.rpfmUrl ?? 'http://127.0.0.1:45127/mcp', outputDir: path.resolve(flags['--output-dir'] ?? local.outputDir ?? path.join(repositoryRoot, 'generated', 'wh3')) };
 }
 
-async function gameVersion(gamePath) {
+export async function gameVersion(gamePath) {
   if (process.platform !== 'win32') return { gameVersion: 'unknown', gameVersionSource: 'Windows executable version resource unavailable' };
   try {
     const exe = path.join(gamePath, 'Warhammer3.exe');
@@ -49,7 +50,10 @@ async function gameVersion(gamePath) {
 }
 
 export async function extractUnit(options, profileName = 'grail-knights', log = console.log) {
-  const profile = getProfile(profileName);
+  return extractProfile(options, getProfile(profileName), log);
+}
+
+export async function extractProfile(options, profile, log = console.log) {
   const client = new RpfmClient(options.rpfmUrl);
   try {
     log('Connecting to installed RPFM and discovering its tools...');
@@ -85,7 +89,7 @@ export async function extractUnit(options, profileName = 'grail-knights', log = 
       schemaSha256: createHash('sha256').update(JSON.stringify(schema)).digest('hex'),
       packs: await Promise.all(reader.packs.map(async (pack) => {
         const file = await stat(pack.info.file_path);
-        return { ...pack.info, sizeBytes: file.size, filesystemModifiedAt: file.mtime.toISOString(), sha256: createHash('sha256').update(await readFile(pack.info.file_path)).digest('hex') };
+        return { ...pack.info, sizeBytes: file.size, filesystemModifiedAt: file.mtime.toISOString(), sha256: await sha256File(pack.info.file_path) };
       })),
       accessMethod: 'RPFM MCP / decode_packed_file source=PackFile, directly opened CA Release/Patch packs',
     };
@@ -96,7 +100,7 @@ export async function extractUnit(options, profileName = 'grail-knights', log = 
     addObservationUnresolved(dump, entries);
     dump.observations = entries;
     const manualFile = profile.slug === 'grail-knights' ? 'manual-reference.json' : `manual-references/${profile.slug}.json`;
-    const manual = JSON.parse(await readFile(new URL(manualFile, import.meta.url), 'utf8'));
+    const manual = profile.research ? { sourceKind: 'not-provided', values: {}, notDirectlyComparable: {} } : JSON.parse(await readFile(new URL(manualFile, import.meta.url), 'utf8'));
     await mkdir(options.outputDir, { recursive: true });
     const jsonPath = path.join(options.outputDir, `${profile.slug}.raw.json`);
     const summaryPath = path.join(options.outputDir, `${profile.slug}.summary.md`);

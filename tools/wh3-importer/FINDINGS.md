@@ -141,3 +141,7 @@ Raw JSON and summaries: `generated/wh3/{grail-knights,helstorm,bloodthirster}.{r
 Before normalization: confirm HP/count aggregation, speed display units, artillery ammo/crew/mass/size interpretation, accuracy/reload formula and animation limits, projectile shield/penetration semantics, current spell resistance, ability activation, effective recruitment and runtime/patch/campaign balance precedence.
 
 Data separation: these findings/generated artifacts are **actual CA rows**; `fixtures/` contains **synthetic test data**; `manual-reference.json` and `manual-references/` contain **user manual comparisons only**. Neither fixture nor manual values are used to fill extraction results.
+
+## Follow-up semantics research
+
+The next investigation is recorded in [SEMANTICS.md](SEMANTICS.md) and [semantics-findings.json](semantics-findings.json). It adds Swordsmen, Handgunners and Helblaster Volley Guns through the common tracer, current UI/stat localisation, experience and bounded campaign effect paths. The original three-unit extraction remains a historical raw record. Follow-up interpretations distinguish confirmed field/relationship facts from unverified HP, display, recruitment and cost formulas; no production normalization is implemented.

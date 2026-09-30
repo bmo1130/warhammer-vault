@@ -1,0 +1,102 @@
+[
+  {
+    "table": "unit_stat_modifiers_tables",
+    "where": [
+      {
+        "field": "key",
+        "op": "contains",
+        "value": "reload"
+      }
+    ]
+  },
+  {
+    "table": "unit_stat_modifiers_tables",
+    "where": [
+      {
+        "field": "key",
+        "op": "contains",
+        "value": "accuracy"
+      }
+    ]
+  },
+  {
+    "table": "unit_stat_modifiers_tables",
+    "where": [
+      {
+        "field": "key",
+        "op": "contains",
+        "value": "resistance"
+      }
+    ]
+  },
+  {
+    "table": "unit_stat_modifiers_tables",
+    "where": [
+      {
+        "field": "key",
+        "op": "contains",
+        "value": "hit_point"
+      }
+    ]
+  },
+  {
+    "table": "campaign_difficulty_handicap_effects_tables",
+    "where": [
+      {
+        "field": "effect",
+        "op": "contains",
+        "value": "upkeep"
+      }
+    ]
+  },
+  {
+    "table": "campaign_difficulty_handicap_effects_tables",
+    "where": [
+      {
+        "field": "effect",
+        "op": "contains",
+        "value": "recruitment_cost"
+      }
+    ]
+  },
+  {
+    "table": "campaign_difficulty_handicap_effects_tables",
+    "where": [
+      {
+        "field": "effect",
+        "op": "contains",
+        "value": "reload"
+      }
+    ]
+  },
+  {
+    "table": "effect_bonus_value_ids_unit_sets_tables",
+    "where": [
+      {
+        "field": "effect",
+        "op": "contains",
+        "value": "reload"
+      },
+      {
+        "field": "unit_set",
+        "op": "contains",
+        "value": "emp"
+      }
+    ]
+  },
+  {
+    "table": "effect_bonus_value_ids_unit_sets_tables",
+    "where": [
+      {
+        "field": "effect",
+        "op": "contains",
+        "value": "recruitment_cost"
+      },
+      {
+        "field": "unit_set",
+        "op": "contains",
+        "value": "brt"
+      }
+    ]
+  }
+]

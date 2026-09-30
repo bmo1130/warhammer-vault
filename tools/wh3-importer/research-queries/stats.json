@@ -1,0 +1,255 @@
+[
+  {
+    "table": "_kv_rules_tables",
+    "where": [
+      {
+        "field": "key",
+        "op": "contains",
+        "value": "health"
+      }
+    ]
+  },
+  {
+    "table": "_kv_rules_tables",
+    "where": [
+      {
+        "field": "key",
+        "op": "contains",
+        "value": "hit_point"
+      }
+    ]
+  },
+  {
+    "table": "_kv_rules_tables",
+    "where": [
+      {
+        "field": "key",
+        "op": "contains",
+        "value": "speed"
+      }
+    ]
+  },
+  {
+    "table": "_kv_rules_tables",
+    "where": [
+      {
+        "field": "key",
+        "op": "contains",
+        "value": "reload"
+      }
+    ]
+  },
+  {
+    "table": "_kv_rules_tables",
+    "where": [
+      {
+        "field": "key",
+        "op": "contains",
+        "value": "ammunition"
+      }
+    ]
+  },
+  {
+    "table": "_kv_rules_tables",
+    "where": [
+      {
+        "field": "key",
+        "op": "contains",
+        "value": "accuracy"
+      }
+    ]
+  },
+  {
+    "table": "_kv_rules_tables",
+    "where": [
+      {
+        "field": "key",
+        "op": "contains",
+        "value": "resist"
+      }
+    ]
+  },
+  {
+    "table": "_kv_rules_tables",
+    "where": [
+      {
+        "field": "key",
+        "op": "contains",
+        "value": "crew"
+      }
+    ]
+  },
+  {
+    "table": "ui_unit_stats_tables",
+    "where": [
+      {
+        "field": "key",
+        "op": "contains",
+        "value": "health"
+      }
+    ]
+  },
+  {
+    "table": "ui_unit_stats_tables",
+    "where": [
+      {
+        "field": "key",
+        "op": "contains",
+        "value": "speed"
+      }
+    ]
+  },
+  {
+    "table": "ui_unit_stats_tables",
+    "where": [
+      {
+        "field": "key",
+        "op": "contains",
+        "value": "reload"
+      }
+    ]
+  },
+  {
+    "table": "ui_unit_stats_tables",
+    "where": [
+      {
+        "field": "key",
+        "op": "contains",
+        "value": "ammunition"
+      }
+    ]
+  },
+  {
+    "table": "ui_unit_stats_tables",
+    "where": [
+      {
+        "field": "key",
+        "op": "contains",
+        "value": "accuracy"
+      }
+    ]
+  },
+  {
+    "table": "ui_unit_stats_tables",
+    "where": [
+      {
+        "field": "key",
+        "op": "contains",
+        "value": "resist"
+      }
+    ]
+  },
+  {
+    "table": "ui_unit_stats_tables",
+    "where": [
+      {
+        "field": "key",
+        "op": "contains",
+        "value": "ward"
+      }
+    ]
+  },
+  {
+    "table": "Loc:text/db/unit_stat_localisations__.loc",
+    "where": [
+      {
+        "field": "key",
+        "op": "contains",
+        "value": "resist"
+      }
+    ]
+  },
+  {
+    "table": "Loc:text/db/unit_stat_localisations__.loc",
+    "where": [
+      {
+        "field": "key",
+        "op": "contains",
+        "value": "ward"
+      }
+    ]
+  },
+  {
+    "table": "Loc:text/db/unit_stat_localisations__.loc",
+    "where": [
+      {
+        "field": "key",
+        "op": "contains",
+        "value": "reload"
+      }
+    ]
+  },
+  {
+    "table": "Loc:text/db/unit_stat_localisations__.loc",
+    "where": [
+      {
+        "field": "key",
+        "op": "contains",
+        "value": "accuracy"
+      }
+    ]
+  },
+  {
+    "table": "Loc:text/db/unit_stat_localisations__.loc",
+    "where": [
+      {
+        "field": "key",
+        "op": "contains",
+        "value": "speed"
+      }
+    ]
+  },
+  {
+    "table": "Loc:text/db/unit_stat_localisations__.loc",
+    "where": [
+      {
+        "field": "key",
+        "op": "contains",
+        "value": "health"
+      }
+    ]
+  },
+  {
+    "table": "Loc:text/db/unit_stat_localisations__.loc",
+    "where": [
+      {
+        "field": "key",
+        "op": "contains",
+        "value": "ammunition"
+      }
+    ]
+  },
+  {
+    "table": "unit_stats_land_experience_bonuses_tables",
+    "where": [
+      {
+        "field": "xp_level",
+        "op": "oneOf",
+        "value": [
+          0,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "table": "unit_stat_localisations_tables",
+    "where": [
+      {
+        "field": "stat_key",
+        "op": "oneOf",
+        "value": [
+          "stat_reloading",
+          "stat_accuracy",
+          "stat_health",
+          "scalar_speed",
+          "stat_resistance_magic",
+          "stat_resistance_all",
+          "stat_resistance_physical",
+          "stat_resistance_flame",
+          "stat_resistance_missile"
+        ]
+      }
+    ]
+  }
+]

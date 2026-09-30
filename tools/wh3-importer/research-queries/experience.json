@@ -1,0 +1,91 @@
+[
+  {
+    "table": "unit_experience_bonuses_tables",
+    "where": [
+      {
+        "field": "stat",
+        "op": "oneOf",
+        "value": [
+          "stat_reloading",
+          "stat_accuracy",
+          "stat_health",
+          "scalar_speed"
+        ]
+      }
+    ]
+  },
+  {
+    "table": "_kv_experience_bonuses_tables",
+    "where": [
+      {
+        "field": "key",
+        "op": "contains",
+        "value": "reload"
+      }
+    ]
+  },
+  {
+    "table": "_kv_experience_bonuses_tables",
+    "where": [
+      {
+        "field": "key",
+        "op": "contains",
+        "value": "accuracy"
+      }
+    ]
+  },
+  {
+    "table": "unit_stats_land_experience_bonuses_tables",
+    "where": [
+      {
+        "field": "xp_level",
+        "op": "oneOf",
+        "value": [
+          "0",
+          "1",
+          "9"
+        ]
+      }
+    ]
+  },
+  {
+    "table": "unit_stat_localisations_tables",
+    "where": [
+      {
+        "field": "stat_key",
+        "op": "oneOf",
+        "value": [
+          "stat_reloading",
+          "stat_accuracy",
+          "stat_health",
+          "scalar_speed",
+          "stat_resistance_magic",
+          "stat_resistance_all",
+          "stat_resistance_physical",
+          "stat_resistance_flame",
+          "stat_resistance_missile"
+        ]
+      }
+    ]
+  },
+  {
+    "table": "modifiable_unit_stats_tables",
+    "where": [
+      {
+        "field": "stat_key",
+        "op": "oneOf",
+        "value": [
+          "stat_reloading",
+          "stat_accuracy",
+          "stat_health",
+          "scalar_speed",
+          "stat_resistance_magic",
+          "stat_resistance_all",
+          "stat_resistance_physical",
+          "stat_resistance_flame",
+          "stat_resistance_missile"
+        ]
+      }
+    ]
+  }
+]

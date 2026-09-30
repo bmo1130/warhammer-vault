@@ -94,6 +94,8 @@ npm run extract:wh3-unit -- bloodthirster --game-path 'YOUR_WH3_INSTALLATION_ROO
 
 ## 현재 범위
 
+원본값의 의미 조사와 다음 정규화 단계의 제한은 [SEMANTICS.md](tools/wh3-importer/SEMANTICS.md)에 정리했습니다. 보병·단발 사격·추가 다발 포병 표본과 UI 통계·경험·캠페인 효과 경로를 실제 CA pack에서 확인했으며, 미확인 공식은 조사 가설로만 보관합니다. 이 파일과 기계 판독용 findings는 앱 데이터에 반영하지 않습니다.
+
 팩션, 군주, 유닛 검색과 상세 조회, 개인 서술 및 메모의 생성·수정·삭제, 즐겨찾기, 최근 본 항목, JSON 백업·복원을 지원합니다. 게임 원본 데이터는 UI에서 수정할 수 없습니다.
 
 세이브 파싱, 계산기, 비교기, 모드 오버라이드 편집, 동기화, APK는 아직 구현하지 않았습니다. 향후 계산기는 `Modifier` 타입을 바탕으로 별도 계산 모듈을 만들고 `gameRepository`가 제공하는 기본 스탯과 선택한 캠페인·모드 문맥을 입력으로 받도록 확장할 수 있습니다.

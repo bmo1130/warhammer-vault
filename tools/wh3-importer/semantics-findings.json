@@ -1,0 +1,67 @@
+{
+  "format": "warhammer-vault-semantics-findings-v1",
+  "productionUse": false,
+  "environment": { "gameProductVersion": "9.0.1.0", "rpfmVersion": "5.1.0", "schemaFormatVersion": 5 },
+  "scope": "Bounded CA pack research. Confidence applies to the stated conclusion, not every related formula. No current campaign session or independent UI readings for new samples.",
+  "evidenceRoot": "generated/wh3/",
+  "evidenceUnits": ["grail-knights", "helstorm", "bloodthirster", "research/swordsmen", "research/handgunners", "research/helblaster"],
+  "topics": {
+    "totalHealth": {
+      "status": "UNRESOLVED", "confidence": "low for a universal formula", "safeToNormalize": "NO",
+      "formulaHypothesis": ["unmounted: (bonus + manHP) * numMen", "mounted: (bonus + manHP + mountHP) * numMen", "artillery: (bonus + crewHP) * numMen + (bonus + engineHP) * numEngines"],
+      "evidence": ["research/semantics-evidence.json#/samples", "helstorm.raw.json#/schemas"],
+      "limitation": "Three different hypotheses fit three manual references; new samples have no independent displayed HP. Scale/aggregation rules unverified."
+    },
+    "displaySpeed": {
+      "status": "STRONGLY SUPPORTED", "confidence": "medium; three units, four manual movement comparisons", "safeToNormalize": "NO",
+      "formulaHypothesis": "rawSpeed * 10",
+      "evidence": ["research/semantics-evidence.json#/samples", "research/stat-inspection.json#/rows"],
+      "limitation": "No executable UI conversion or independent infantry UI readings; movement source selection and runtime effects remain unverified."
+    },
+    "displayAmmo": {
+      "status": "UNRESOLVED", "confidence": "low for displayed ammunition", "safeToNormalize": "NO",
+      "formulaHypothesis": "primaryAmmo / shotsPerVolley",
+      "evidence": ["helstorm.raw.json#/rows", "research/handgunners.raw.json#/rows", "research/helblaster.raw.json#/rows"],
+      "limitation": "66/3, 22/1, 198/9 all yield 22; only Helstorm has a supplied display reference. projectile_number and burst_size are separate fields."
+    },
+    "reloadTime": {
+      "status": "UNRESOLVED", "confidence": "low for runtime formula; high for field separation", "safeToNormalize": "NO",
+      "formulaHypothesis": "baseReloadTime * (1 - landReload / 100) is a schema-motivated candidate, not a complete runtime formula",
+      "evidence": ["helstorm.raw.json#/schemas", "research/experience-inspection.json#/rows", "research/runtime-inspection.json#/rows"],
+      "limitation": "marksmanship_bonus is documented as accuracy, not reload. Base landReload=0 does not explain manual 15.3."
+    },
+    "accuracy": {
+      "status": "STRONGLY SUPPORTED", "confidence": "medium for combined calibration influence; low for UI sum", "safeToNormalize": "PARTIAL",
+      "formulaHypothesis": "displayAccuracy = landAccuracy + marksmanshipBonus remains unverified",
+      "evidence": ["helstorm.raw.json#/schemas", "research/handgunners.raw.json#/rows", "research/helblaster.raw.json#/rows", "research/experience-inspection.json#/rows"],
+      "limitation": "Schema confirms both fields influence calibration area, not their UI sum or exact scatter algorithm. spread semantics remain unresolved."
+    },
+    "artillery": {
+      "status": "UNRESOLVED", "confidence": "low for aggregates; high for separate entities", "safeToNormalize": "PARTIAL",
+      "evidence": ["helstorm.raw.json#/relationships", "research/helblaster.raw.json#/relationships"],
+      "limitation": "Crew/engine references and collision properties are confirmed. Crew allocation, aggregate HP/mass and displayed size are not. Generic_3_Crew is a key, not verified total crew count."
+    },
+    "recruitmentTier": {
+      "status": "UNRESOLVED", "confidence": "low for universal displayed tier; high for distinct raw fields", "safeToNormalize": "PARTIAL",
+      "formulaHypothesis": "level + 1 fits chain positions in selected ordinary chains, not a universal settlement tier",
+      "evidence": ["research/runtime-inspection.json#/rows", "grail-knights.raw.json#/rows", "research/swordsmen.raw.json#/rows"],
+      "limitation": "Forges level=2 requires settlement=4; Bloodthirster chain level=1 requires=5. enabled=false and effective campaign unlock conditions remain unresolved."
+    },
+    "resistances": {
+      "status": "STRONGLY SUPPORTED", "confidence": "medium for raw-to-stat mapping; high for current UI labels", "safeToNormalize": "PARTIAL",
+      "evidence": ["bloodthirster.raw.json#/rows", "research/stat-inspection.json#/relationships", "research/experience-inspection.json#/rows"],
+      "confirmedSubfinding": "Current stat_resistance_magic localisation is Spell Resistance; stat_resistance_all uses a ward-save icon with Damage Resistance label.",
+      "limitation": "damage_mod_magic to runtime stat mapping lacks a declarative join; current combat stacking, caps and magical attack interaction not established."
+    },
+    "costDiscrepancies": {
+      "status": "UNRESOLVED", "confidence": "low for causes of supplied manual differences", "safeToNormalize": "PARTIAL",
+      "evidence": ["research/runtime-inspection.json#/relationships", "research/experience-inspection.json#/rows", "research/helblaster.raw.json#/rows"],
+      "limitation": "Separate multiplayer/recruitment raw costs, XP costs, building and difficulty layers exist; manual version, rank and campaign context are absent. No cause assigned to 1850/1700 or 2000/4600/575."
+    },
+    "runtimeOverrides": {
+      "status": "CONFIRMED", "confidence": "high for existence and schema paths only", "safeToNormalize": "PARTIAL",
+      "evidence": ["research/runtime-inspection.json#/relationships", "research/experience-inspection.json#/relationships", "bloodthirster.raw.json#/relationships", "research/stat-inspection.json#/rows"],
+      "limitation": "Technology, building, lord skill, difficulty, unit sets, recruitment locks, experience and ability phase paths are present. Application order and final effective stats/costs are not calculated."
+    }
+  }
+}
