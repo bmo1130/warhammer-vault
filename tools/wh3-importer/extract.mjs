@@ -8,6 +8,7 @@ import { RpfmClient } from './mcp-client.mjs';
 import { RawPackReader } from './raw-reader.mjs';
 import { traceUnit } from './trace-unit.mjs';
 import { observations, addObservationUnresolved, renderSummary } from './report.mjs';
+import { getProfile } from './profiles.mjs';
 
 const execute = promisify(execFile);
 const repositoryRoot = fileURLToPath(new URL('../../', import.meta.url));
@@ -47,7 +48,8 @@ async function gameVersion(gamePath) {
   } catch { return { gameVersion: 'unknown', gameVersionSource: 'Executable version resource could not be read' }; }
 }
 
-export async function extractGrailKnights(options, log = console.log) {
+export async function extractUnit(options, profileName = 'grail-knights', log = console.log) {
+  const profile = getProfile(profileName);
   const client = new RpfmClient(options.rpfmUrl);
   try {
     log('Connecting to installed RPFM and discovering its tools...');
@@ -64,6 +66,14 @@ export async function extractGrailKnights(options, log = console.log) {
     const locFiles = local.files.filter((file) => file.file_type === 'Loc' && file.path === 'text/db/land_units__.loc');
     if (locFiles.length !== 1) throw new Error('Verified land-unit localisation file not found in CA local_en.pack. Inspect this version inventory before changing the profile.');
     const localisation = await reader.decode(local, locFiles[0].path);
+    const supplementalLocalisations = [];
+    let supplementalLocalisationIssue;
+    if (profile.scopes.includes('abilityPhases')) {
+      // This file and unit_abilities.onscreen_name were verified in the CA pack.
+      const names = local.files.filter((file) => file.file_type === 'Loc' && file.path === 'text/db/unit_abilities__.loc');
+      if (names.length === 1) supplementalLocalisations.push(await reader.decode(local, names[0].path));
+      else supplementalLocalisationIssue = 'Verified unit_abilities__.loc file is missing or ambiguous in this CA pack; ability display names are unresolved.';
+    }
     let rpfmVersion = 'unknown';
     try {
       const version = await fetch(new URL('/version', options.rpfmUrl), { signal: AbortSignal.timeout(5000) });
@@ -79,15 +89,17 @@ export async function extractGrailKnights(options, log = console.log) {
       })),
       accessMethod: 'RPFM MCP / decode_packed_file source=PackFile, directly opened CA Release/Patch packs',
     };
-    log('Tracing localisation-confirmed Grail Knights and bounded schema references...');
-    const dump = await traceUnit(reader, schema, localisation, metadata);
+    log(`Tracing localisation-confirmed ${profile.displayName} and bounded schema references...`);
+    const dump = await traceUnit(reader, schema, localisation, metadata, profile, supplementalLocalisations);
+    if (supplementalLocalisationIssue) dump.unresolved.push({ field: 'abilityLocalisation', reason: supplementalLocalisationIssue });
     const entries = observations(dump);
     addObservationUnresolved(dump, entries);
     dump.observations = entries;
-    const manual = JSON.parse(await readFile(new URL('manual-reference.json', import.meta.url), 'utf8'));
+    const manualFile = profile.slug === 'grail-knights' ? 'manual-reference.json' : `manual-references/${profile.slug}.json`;
+    const manual = JSON.parse(await readFile(new URL(manualFile, import.meta.url), 'utf8'));
     await mkdir(options.outputDir, { recursive: true });
-    const jsonPath = path.join(options.outputDir, 'grail-knights.raw.json');
-    const summaryPath = path.join(options.outputDir, 'grail-knights.summary.md');
+    const jsonPath = path.join(options.outputDir, `${profile.slug}.raw.json`);
+    const summaryPath = path.join(options.outputDir, `${profile.slug}.summary.md`);
     await writeFile(jsonPath, JSON.stringify(dump, null, 2) + '\n');
     await writeFile(summaryPath, renderSummary(dump, entries, manual));
     log(`CA key: ${dump.unit.caKey}; ${dump.rows.length} source rows; ${new Set(dump.rows.map((row) => row.table)).size} tables.`);
@@ -97,3 +109,6 @@ export async function extractGrailKnights(options, log = console.log) {
     await client.close().catch(() => undefined);
   }
 }
+
+// Existing callers and npm script keep the same Grail Knights interface.
+export const extractGrailKnights = (options, log = console.log) => extractUnit(options, 'grail-knights', log);

@@ -1,0 +1,18 @@
+{
+  "sourceKind": "manual-reference",
+  "source": "User-provided wiki values; comparison only, never CA extraction input",
+  "values": {
+    "tier": 5, "entityCount": 1, "customBattleCost": 2200, "recruitmentCost": 4600,
+    "upkeep": 575, "recruitmentTurns": 3, "manEntityMass": 4000, "manEntitySize": "very_large",
+    "armor": 70, "leadership": 80, "meleeAttack": 60, "meleeDefense": 44,
+    "chargeBonus": 55, "baseDamage": 160, "apDamage": 380, "bonusLarge": 35,
+    "attackInterval": 4, "weaponLength": 9, "splashMaxTargets": 5,
+    "splashTargetSize": "large", "magicalAttack": true, "damageModPhysical": 20
+  },
+  "notDirectlyComparable": {
+    "totalHealth": 7732, "unitScale": "대형", "displayFlySpeed": 95,
+    "displayGroundSpeed": 55, "spellResistance": 35, "totalWeaponDamage": 540,
+    "attackProperties": ["flaming", "magical"],
+    "attributesAbilities": ["Wounds", "Fear", "Terror", "Flying", "Daemon", "Daemonic Instability", "Banishment", "Siege Attacker"]
+  }
+}

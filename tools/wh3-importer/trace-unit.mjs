@@ -1,23 +1,19 @@
 import { createHash } from 'node:crypto';
+import { baseTables, tablesForProfile, unitProfiles } from './profiles.mjs';
 
 // Names verified against the installed WH3 schema and actual db.pack inventory.
 // The bounded allowlist prevents following unrelated campaign/audio/VFX data.
-export const trackedTables = [
-  'main_units_tables', 'land_units_tables', 'mounts_tables', 'battle_entities_tables',
-  'melee_weapons_tables', 'unit_armour_types_tables', 'unit_shield_types_tables',
-  'battle_entities_size_enums_tables', 'unit_class_tables', 'unit_category_tables',
-  'building_units_allowed_tables', 'building_levels_tables',
-  'land_units_to_unit_abilites_junctions_tables', 'unit_abilities_tables',
-  'unit_special_abilities_tables', 'unit_attributes_groups_tables',
-  'unit_attributes_to_groups_junctions_tables', 'unit_attributes_tables',
-  'ground_type_stat_effect_groups_tables', 'ground_type_to_stat_effects_tables',
-];
+export const trackedTables = baseTables;
 const reverseTargets = {
   building_units_allowed_tables: 'main_units_tables',
   land_units_to_unit_abilites_junctions_tables: 'land_units_tables',
   unit_attributes_to_groups_junctions_tables: 'unit_attributes_groups_tables',
   unit_special_abilities_tables: 'unit_abilities_tables',
   ground_type_to_stat_effects_tables: 'ground_type_stat_effect_groups_tables',
+  special_ability_to_special_ability_phase_junctions_tables: 'unit_special_abilities_tables',
+  special_ability_phase_stat_effects_tables: 'special_ability_phases_tables',
+  special_ability_phase_attribute_effects_tables: 'special_ability_phases_tables',
+  special_ability_behaviour_groups_to_types_tables: 'special_ability_behaviour_groups_tables',
 };
 
 export function resolveReferenceTable(referenceName, schema) {
@@ -26,8 +22,10 @@ export function resolveReferenceTable(referenceName, schema) {
   return matches.length === 1 ? matches[0] : undefined;
 }
 
-export async function traceUnit(reader, schema, localisation, metadata = {}) {
-  const displayName = 'Grail Knights';
+export async function traceUnit(reader, schema, localisation, metadata = {}, profile = unitProfiles['grail-knights'], supplementalLocalisations = []) {
+  const { displayName } = profile;
+  const allowedTables = tablesForProfile(profile);
+  if (!['unique', 'paid-recruitment'].includes(profile.rootSelection)) throw new Error(`Unsupported root selection: ${profile.rootSelection}`);
   const unresolved = [];
   const problem = (field, reason) => unresolved.push({ field, reason });
   const mainTables = await reader.tables('main_units_tables');
@@ -50,8 +48,15 @@ export async function traceUnit(reader, schema, localisation, metadata = {}) {
       }
     }
   }
-  if (candidates.length !== 1) throw new Error(`Expected one localisation-confirmed Grail Knights root, found ${candidates.length}. Check localisation, CA DB pack/schema, or duplicate roots; no guessed key is used.`);
-  const root = candidates[0];
+  const candidateEvidence = candidates.map((candidate) => ({
+    mainKey: candidate.row.unit, landKey: candidate.landRow.key, localisationKey: candidate.loc.key,
+    sourcePack: candidate.table.sourcePack, path: candidate.table.path,
+    recruitmentCost: Object.hasOwn(candidate.row, 'recruitment_cost') ? candidate.row.recruitment_cost : null,
+    selectedByPolicy: profile.rootSelection === 'unique' || (typeof candidate.row.recruitment_cost === 'number' && candidate.row.recruitment_cost > 0),
+  }));
+  const eligible = candidates.filter((_, index) => candidateEvidence[index].selectedByPolicy);
+  if (eligible.length !== 1) throw new Error(`Expected one localisation-confirmed ${displayName} root, found ${eligible.length} after ${profile.rootSelection} policy. Candidates: ${JSON.stringify(candidateEvidence)}. Check localisation, CA DB pack/schema, or duplicate roots; no guessed key is used.`);
+  const root = eligible[0];
   if (!Object.hasOwn(root.row, 'unit')) throw new Error('main_units root no longer has the verified unit key field.');
   const records = new Map();
   const schemas = new Map();
@@ -72,6 +77,20 @@ export async function traceUnit(reader, schema, localisation, metadata = {}) {
       records.set(id, record); queue.push({ table, row, record });
       schemas.set(`${table.table}:${table.tableVersion}`, { table: table.table, version: table.tableVersion, fields: table.fields });
       if (!keyFields.length) problem(id, 'Schema has no declared row key; identity uses the complete raw row, not a positional index.');
+      for (const definition of (schema.definitions[table.table] ?? []).filter((item) => item.version === table.tableVersion)) {
+        for (const localisedField of definition.localised_fields ?? []) {
+          // Same verified table/field/key localisation convention as root
+          // discovery. Only matching child names from explicitly supplied Loc
+          // files are retained, never unrelated rows from those files.
+          if (keyFields.length !== 1) continue;
+          const locKey = `${table.table.replace(/_tables$/, '')}_${localisedField.name}_${row[keyFields[0]]}`;
+          for (const loc of supplementalLocalisations) for (const locRow of loc.rows.filter((entry) => entry.key === locKey)) {
+            const locRecord = add(loc, locRow);
+            const edge = { from: locRecord.id, field: 'key', to: record.id, targetField: keyFields[0], value: row[keyFields[0]], direction: 'localisation', evidence: 'Exact child Loc key + matching schema localised_fields + declared row key' };
+            relationships.set(JSON.stringify(edge), edge);
+          }
+        }
+      }
     }
     return records.get(id);
   };
@@ -98,12 +117,12 @@ export async function traceUnit(reader, schema, localisation, metadata = {}) {
       const ref = field.is_reference;
       if (!ref || row[field.name] === '' || row[field.name] === null || row[field.name] === undefined) continue;
       const targetName = resolveReferenceTable(ref[0], schema);
-      if (!targetName || !trackedTables.includes(targetName)) {
+      if (!targetName || !allowedTables.includes(targetName)) {
         skippedReferences.set(`${record.id}:${field.name}`, { from: record.id, field: field.name, targetTable: ref[0], value: row[field.name], reason: 'Outside the bounded single-unit trace scope.' });
         continue;
       }
       if ((targetName === 'main_units_tables' && row[field.name] !== root.row.unit) || (targetName === 'land_units_tables' && row[field.name] !== root.landRow.key)) {
-        skippedReferences.set(`${record.id}:${field.name}`, { from: record.id, field: field.name, targetTable: targetName, value: row[field.name], reason: 'A different unit is outside the single Grail Knights trace.' });
+        skippedReferences.set(`${record.id}:${field.name}`, { from: record.id, field: field.name, targetTable: targetName, value: row[field.name], reason: `A different unit is outside the single ${displayName} trace.` });
         continue;
       }
       const tables = await load(targetName);
@@ -118,6 +137,7 @@ export async function traceUnit(reader, schema, localisation, metadata = {}) {
       else if (matches > 1) problem(`${record.id}.${field.name}`, 'Multiple raw rows match; all sources retained, no pack precedence guessed.');
     }
     for (const [name, allowedTarget] of Object.entries(reverseTargets)) {
+      if (!allowedTables.includes(name)) continue;
       if (table.table !== allowedTarget) continue;
       if (allowedTarget === 'main_units_tables' && record.id !== rootRecord.id) continue;
       if (allowedTarget === 'land_units_tables' && record.id !== landRecord.id) continue;
@@ -136,6 +156,7 @@ export async function traceUnit(reader, schema, localisation, metadata = {}) {
   return {
     format: 'warhammer-vault-wh3-raw-v1', sourceKind: metadata.sourceKind ?? 'fixture',
     unit: { displayName, caKey: root.row.unit, gameVersion: metadata.gameVersion ?? 'unknown', extractedAt: metadata.extractedAt ?? new Date().toISOString() },
+    discovery: { profile: profile.slug, policy: profile.rootSelection, candidates: candidateEvidence },
     provenance: { ...metadata, extractionSource: metadata.sourceKind === 'ca-pack' ? 'Direct PackFile decode; no dependency-cache rows, no mod merge, no Unit normalization' : 'Synthetic fixture tables; no CA pack was read' },
     rootRow: rootRecord.id, schemas: [...schemas.values()], rows: [...records.values()],
     relationships: [...relationships.values()], skippedReferences: [...skippedReferences.values()],

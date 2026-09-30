@@ -82,10 +82,12 @@ npm run build
 
 ## WH3 원본 데이터 추적 도구
 
-`tools/wh3-importer/`는 설치된 RPFM server의 검증된 MCP 인터페이스로 실제 CA `db.pack`과 `local_en.pack`을 직접 읽어 성배기사 한 유닛의 원본 row와 schema 기반 join을 추적하는 개발 도구입니다. `Unit` 정규화, 전체 DB dump, 모드 병합, 앱 데이터·UI 변경은 하지 않습니다.
+`tools/wh3-importer/`는 설치된 RPFM server의 검증된 MCP 인터페이스로 실제 CA `db.pack`과 `local_en.pack`을 직접 읽어 성배기사, Helstorm, Bloodthirster 중 선택한 한 유닛의 원본 row와 schema 기반 join을 추적하는 개발 도구입니다. `Unit` 정규화, 전체 DB dump, 모드 병합, 앱 데이터·UI 변경은 하지 않습니다.
 
 ```powershell
 npm run extract:grail-knights -- --game-path 'YOUR_WH3_INSTALLATION_ROOT'
+npm run extract:wh3-unit -- helstorm --game-path 'YOUR_WH3_INSTALLATION_ROOT'
+npm run extract:wh3-unit -- bloodthirster --game-path 'YOUR_WH3_INSTALLATION_ROOT'
 ```
 
 게임 경로는 CLI, `WH3_GAME_PATH`, Git에서 제외한 로컬 설정으로 입력합니다. 원본 JSON과 출처·미확인 값·수동 참고값 비교 요약은 기본적으로 `generated/wh3/`에 생성되며 Git에서 제외합니다. 실행 준비, 확인한 테이블과 관계, 실제 추출 결과 및 별도 통합 테스트는 [extractor README](tools/wh3-importer/README.md)에 설명합니다. `npm test`의 작은 synthetic fixture 테스트는 게임이나 RPFM 없이 실행되며, 실제 pack 테스트는 `npm run test:wh3-integration`으로 명시적으로 실행합니다.

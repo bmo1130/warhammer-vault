@@ -1,0 +1,22 @@
+{
+  "sourceKind": "manual-reference",
+  "source": "User-provided wiki values; comparison only, never CA extraction input",
+  "values": {
+    "tier": 4, "customBattleCost": 1050, "recruitmentCost": 1050, "upkeep": 263,
+    "recruitmentTurns": 2, "engineCount": 4, "armor": 20, "leadership": 50,
+    "meleeAttack": 10, "meleeDefense": 6, "chargeBonus": 5, "baseDamage": 21,
+    "apDamage": 3, "attackInterval": 4.3, "weaponLength": 0,
+    "range": 480, "calibrationDistance": 300, "calibrationArea": 220,
+    "penetrationBudget": 2, "penetrationStopSize": "small",
+    "directBaseDamage": 30, "directApDamage": 70,
+    "explosionBaseDamage": 22, "explosionApDamage": 51, "explosionRadius": 6,
+    "shotsPerVolley": 3, "baseReloadTime": 17
+  },
+  "notDirectlyComparable": {
+    "unitScale": "소형", "displayedEntityCount": 4, "ammunition": 22,
+    "accuracy": 20, "reloadSkill": 10, "mass": 3100, "entitySize": "매우 큼",
+    "totalHealth": 4356, "displaySpeed": 20, "missileStrength": 339,
+    "currentReloadTime": 15.3, "shieldInteraction": "방패 무시",
+    "attributes": ["공성 공격자", "질주 불가", "산병전 불가"]
+  }
+}

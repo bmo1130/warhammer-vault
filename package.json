@@ -8,6 +8,7 @@
     "build": "tsc -b && vite build",
     "test": "node scripts/test.mjs",
     "extract:grail-knights": "node tools/wh3-importer/cli.mjs",
+    "extract:wh3-unit": "node tools/wh3-importer/cli.mjs",
     "test:wh3-integration": "node --test tools/wh3-importer/integration.test.mjs",
     "preview": "vite preview --host 0.0.0.0"
   },

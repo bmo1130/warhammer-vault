@@ -1,6 +1,6 @@
-# WH3 Grail Knights raw extractor
+# WH3 single-unit raw extractor
 
-This is a development tool, separate from React. It reads **one Grail Knights root** from directly opened CA packs through an installed RPFM server. It does not parse the Pack binary format, normalize into Vault `Unit`, modify `src/data/units.json`, merge mods, apply modifiers, or change UI.
+This is a development tool, separate from React. It reads **one selected unit root** (Grail Knights, Helstorm Rocket Battery or Bloodthirster) from directly opened CA packs through an installed RPFM server. It does not parse the Pack binary format, normalize into Vault `Unit`, modify `src/data/units.json`, merge mods, apply modifiers, or change UI.
 
 ## Verified interface and local investigation
 
@@ -42,6 +42,9 @@ Or pass the path explicitly:
 ```powershell
 npm run extract:grail-knights -- --game-path 'YOUR_WH3_INSTALLATION_ROOT'
 npm run extract:grail-knights -- --game-path 'YOUR_WH3_INSTALLATION_ROOT' --output-dir '.\generated\wh3'
+npm run extract:wh3-unit -- grail-knights --game-path 'YOUR_WH3_INSTALLATION_ROOT'
+npm run extract:wh3-unit -- helstorm --game-path 'YOUR_WH3_INSTALLATION_ROOT'
+npm run extract:wh3-unit -- bloodthirster --game-path 'YOUR_WH3_INSTALLATION_ROOT'
 ```
 
 Optional flags: `--rpfm-url`, `--output-dir`, `--config`. `RPFM_MCP_URL` is also supported. Endpoints must use loopback. The default is the installed server's verified `/mcp` address.
@@ -63,6 +66,8 @@ Default outputs (ignored by Git):
 
 - `generated/wh3/grail-knights.raw.json`
 - `generated/wh3/grail-knights.summary.md`
+- `generated/wh3/helstorm.raw.json` and `helstorm.summary.md`
+- `generated/wh3/bloodthirster.raw.json` and `bloodthirster.summary.md`
 
 JSON contains `sourceKind: "ca-pack"`, the discovered canonical key, extraction time, executable ProductVersion (or `unknown`), RPFM version, schema format/hash, table versions, source pack metadata and SHA-256 hashes. The Windows game version is read from `Warhammer3.exe`'s version resource; it is not inferred from a wiki or Steam build number.
 
@@ -70,9 +75,15 @@ JSON contains `sourceKind: "ca-pack"`, the discovered canonical key, extraction 
 
 RPFM's transport serializes cells as arrays of typed values. The adapter pairs them with the **actual `fields_processed` names**, checks row width and duplicate names, then creates named records. No semantic lookup or join uses hardcoded column offsets. Raw types/keys, sentinel values, empty strings, false, zero and float values are retained; no rounding or unknown-to-zero conversion is applied.
 
-The canonical key is discovered by exact English `Grail Knights` localisation, the verified `land_units_onscreen_name_<key>` convention plus schema `localised_fields`, and the actual `main_units.land_unit → land_units.key` reference. Missing/ambiguous roots fail; there is no hardcoded CA unit key in extraction logic.
+The canonical key is discovered by the profile's exact English display name, the verified `land_units_onscreen_name_<key>` convention plus schema `localised_fields`, and the actual `main_units.land_unit → land_units.key` reference. Missing/ambiguous roots fail; there is no hardcoded CA unit key in extraction logic. `discovery` records all root candidates, costs and explicit policy results.
 
-Forward joins follow processed `is_reference` metadata. Bounded reverse joins trace only this unit's recruitment, ability membership, attribute-group membership, ground effects, and special-ability flags. In particular, a shared building does **not** pull other recruitable units into the artifact. Mod/Movie pack types are refused, no pack precedence is inferred, and the traversal fails above 250 rows rather than broadening into a DB dump.
+`profiles.mjs` holds display name, output slug, trace scopes and selection policy only. The existing `traceUnit(..., metadata)` API defaults to Grail Knights; an optional fifth argument supplies the profile. `extractUnit(options, profileName)` shares pack loading, root discovery, tracing and output; `extractGrailKnights(options, log)` remains a compatibility wrapper. Unknown CLI profiles fail before opening RPFM.
+
+Grail Knights requires a unique root without a qualifier. Actual Helstorm localisation has two main roots for one land row: ordinary recruitment and Imperial Supply (`recruitment_cost=0`). Actual Bloodthirster has ordinary and summoned land/main roots with the same display name; the summoned root also costs zero. Those two profiles explicitly require a numeric positive `recruitment_cost` (`paid-recruitment` policy), which selects one ordinary root in the inspected CA version. This is not a general WH3 rule. All candidates remain in discovery metadata; if zero or multiple candidates survive, extraction fails with their keys instead of silently choosing the first. No key substring or expected wiki cost is used.
+
+Forward joins follow processed `is_reference` metadata. Bounded reverse joins trace only this unit's recruitment, ability membership, attribute-group membership, ground effects, and special-ability flags. The Bloodthirster scope additionally traces ability phase/behaviour membership and phase stat/attribute effects. Reverse joins have explicit target tables: shared attributes, phases, entities, artillery engines or buildings never become a starting point for finding unrelated units/abilities. Mod/Movie pack types are refused, no pack precedence is inferred, and the traversal fails above 250 rows rather than broadening into a DB dump.
+
+Only Bloodthirster's scope supplies supplementary `unit_abilities__.loc` names/tooltips. Child Loc rows are attached only by a matching declared `localised_fields` convention and row key; the whole localisation table is never saved. Grail's original rows, schemas, joins, skipped references and observations were compared against its prior actual artifact and remained identical (52 rows, 21 table names).
 
 ## Confirmed local extraction
 
@@ -152,7 +163,7 @@ Unknowns remain explicit:
 - Active/passive membership is traced; detailed ability effects, runtime/campaign balance overrides and localisation of every child row are not applied.
 - Why reference values differ requires version/semantics investigation. CA raw values are retained regardless of reference values.
 
-`manual-reference.json` is explicitly **manual comparison input**. Report code cannot overwrite raw rows with those numbers. Raw extraction logic does not import that file.
+`manual-reference.json` and `manual-references/*.json` are explicitly **manual comparison input**. Report code cannot overwrite raw rows with those numbers. Raw trace logic does not import them.
 
 ## Tests
 
@@ -161,9 +172,9 @@ npm test
 npm run build
 ```
 
-The original 11 app tests remain intact. Ten extractor unit tests cover named-field adaptation, synthetic root discovery, schema-backed forward/reverse joins, source provenance, shared-building isolation, missing/ambiguous rows, unknowns, manual-data isolation, path configuration and rejected non-CA packs. These tests need no game, RPFM executable or network.
+The original 11 app tests and 10 extractor tests remain intact. Twelve additional tests cover three-profile discovery, Grail compatibility, the engine/missile/projectile/explosion/penetration chain, independent reload/accuracy/ammo fields, shared-artillery isolation, flight/entity/attribute data, base resistance versus phase effects, child Loc provenance, manual-reference isolation, profile separation and ambiguous root/invalid CLI failures. **33 tests passed**. They need no game, RPFM executable or network.
 
-The fixture dataset is in `fixtures/tables.mjs` with **synthetic keys/numbers and schema version 99**. It is not a real Pack reader and is never an extraction CLI fallback. Existing `tests/fixtures/units.ts` also remains a separate, manually supplied Unit-schema fixture.
+The fixture datasets are in `fixtures/tables.mjs` and `fixtures/profiles.mjs`, with **synthetic keys/numbers and schema version 99**. They are not a real Pack reader and are never an extraction CLI fallback. Existing `tests/fixtures/units.ts` also remains a separate, manually supplied Unit-schema fixture. Real-pack keys appear in integration expectations only, not in profile/discovery logic.
 
 Opt-in real-Pack integration test:
 
@@ -176,8 +187,11 @@ $env:WH3_INTEGRATION_CONFIG = 'tools/wh3-importer/.local/config.json'
 npm run test:wh3-integration
 ```
 
-Without either variable the integration test clearly **skips**. With one configured, absence of the game/server/schema fails honestly; it never substitutes fixtures. Its output is isolated under `.local/integration/` and asserts one actual CA root, source pack types and persisted provenance. The local opt-in integration test passed against the actual installation.
+Without either variable all three integration tests clearly **skip**. With one configured, absence of the game/server/schema fails honestly; it never substitutes fixtures. Output is isolated under `.local/integration/`. Tests assert one actual CA root per profile, source pack types, persisted provenance, Grail regression, Helstorm missile/explosion/crew data and Bloodthirster flight/resistance/phase/Loc data. All three local opt-in integration tests passed against the actual installation.
 
 ## Next step
 
-Before adding Helstorm/Bloodthirster, discover their actual localisation and root keys, extend the bounded profile only after checking this schema's missile/projectile/explosion/reload/flight/entity relations, and add synthetic join fixtures plus real opt-in integration coverage. Health/scale, speed display units, building eligibility, artillery entity/crew counts and reload/penetration meanings still require source investigation. Full data import and Vault normalization remain separate future work.
+See [three-unit investigation findings](FINDINGS.md) for the discovered keys/variants, new tables and joins, Helstorm crew/missile data, Bloodthirster flight/resistance/phase data, manual discrepancies and side-by-side HP/speed evidence.
+
+
+Before normalization, verify health/unit-scale formulas, displayed speed units, artillery crew allocation, ammunition/volley UI conventions, reload/accuracy rules, effective recruitment/building tier semantics, spell-versus-magical resistance, ability activation and runtime/campaign balance overrides. Projectile penetration is a points budget according to the schema; do not turn it into a number of pierced entities. Full data import, Vault normalization and derived damage/health/speed calculations remain separate future work.

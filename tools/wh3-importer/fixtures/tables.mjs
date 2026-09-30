@@ -1,7 +1,7 @@
 // Synthetic data for join tests. None of these keys or numbers are CA data,
 // user-provided wiki values, or real extraction results.
-const field = (name, is_key = false, is_reference = null) => ({ name, is_key, is_reference, field_type: 'StringU8' });
-const table = (name, fields, rows) => ({ table: name, path: `db/${name}/synthetic_fixture`, sourcePack: 'synthetic-fixture.pack', sourcePackPath: 'fixture-only', tableVersion: 99, fields, rows });
+export const field = (name, is_key = false, is_reference = null) => ({ name, is_key, is_reference, field_type: 'StringU8' });
+export const table = (name, fields, rows) => ({ table: name, path: `db/${name}/synthetic_fixture`, sourcePack: 'synthetic-fixture.pack', sourcePackPath: 'fixture-only', tableVersion: 99, fields, rows });
 
 export function fixtureDataset() {
   const tables = [
