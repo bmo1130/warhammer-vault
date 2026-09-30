@@ -1,0 +1,7 @@
+[
+  {"id":"zombies","name":"좀비","factionId":"vampire_counts","category":"보병","summary":"기본 보병. 전투 수치와 비용은 검증 후 추가합니다.","stats":{},"gameVersion":"sample","source":"구조 검증용 샘플 · 수치 미입력","tags":["언데드","보병"]},
+  {"id":"grave_guard","name":"그레이브 가드","factionId":"vampire_counts","category":"보병","summary":"중장 보병. 전투 수치와 비용은 검증 후 추가합니다.","stats":{},"gameVersion":"sample","source":"구조 검증용 샘플 · 수치 미입력","tags":["언데드","보병","중장갑"]},
+  {"id":"hexwraiths","name":"헥스레이스","factionId":"vampire_counts","category":"기병","summary":"영체 기병. 전투 수치와 비용은 검증 후 추가합니다.","stats":{},"gameVersion":"sample","source":"구조 검증용 샘플 · 수치 미입력","tags":["언데드","영체","기병"]},
+  {"id":"blood_knights","name":"블러드 나이트","factionId":"vampire_counts","category":"기병","summary":"중장 기병. 전투 수치와 비용은 검증 후 추가합니다.","stats":{},"gameVersion":"sample","source":"구조 검증용 샘플 · 수치 미입력","tags":["뱀파이어","기병","중장갑"]},
+  {"id":"varghulf","name":"바르굴프","factionId":"vampire_counts","category":"괴수","summary":"단일 괴수. 전투 수치와 비용은 검증 후 추가합니다.","stats":{},"gameVersion":"sample","source":"구조 검증용 샘플 · 수치 미입력","tags":["언데드","괴수"]}
+]

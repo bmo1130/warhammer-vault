@@ -1,0 +1,4 @@
+[
+  {"id":"heinrich_kemmler","name":"하인리히 케믈러","factionId":"vampire_counts","title":"리치마스터","summary":"언데드 군세를 지휘하는 전설 군주. 상세 효과와 스킬은 아직 입력하지 않았습니다.","unitIds":[],"gameVersion":"sample","source":"구조 검증용 샘플","tags":["전설 군주","마법"]},
+  {"id":"vlad_von_carstein","name":"블라드 폰 칼슈타인","factionId":"vampire_counts","title":"폰 칼슈타인 가문의 군주","summary":"뱀파이어 카운트의 전설 군주. 상세 효과와 스킬은 아직 입력하지 않았습니다.","unitIds":[],"gameVersion":"sample","source":"구조 검증용 샘플","tags":["전설 군주","뱀파이어"]}
+]

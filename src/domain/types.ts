@@ -1,0 +1,27 @@
+export type EntityType = 'faction' | 'lord' | 'hero' | 'unit' | 'research' | 'building' | 'landmark';
+export type SourceInfo = { gameVersion: string; source: string; tags: string[]; updatedAt?: string };
+export type Faction = SourceInfo & { id: string; name: string; subtitle: string; description: string; lordIds: string[]; unitIds: string[]; researchIds: string[]; buildingIds: string[]; landmarkIds: string[] };
+export type UnitStats = { meleeAttack?: number; meleeDefense?: number; speed?: number; armor?: number; leadership?: number; health?: number; chargeBonus?: number };
+export type Unit = SourceInfo & { id: string; name: string; factionId: string; category: string; tier?: number; summary: string; stats: UnitStats; recruitmentCost?: number; upkeep?: number };
+export type Lord = SourceInfo & { id: string; name: string; factionId: string; title: string; summary: string; unitIds: string[] };
+export type Hero = SourceInfo & { id: string; name: string; factionId: string; category: string };
+export type Research = SourceInfo & { id: string; name: string; factionId: string; description: string; modifierIds: string[] };
+export type Building = SourceInfo & { id: string; name: string; factionId: string; tier?: number; description: string; modifierIds: string[] };
+export type Landmark = Building & { region?: string };
+
+export type ArticleTarget = { entityType: EntityType; entityId: string };
+export type WikiArticle = ArticleTarget & { id: string; evaluation: string; tactics: string; strengths: string; weaknesses: string; updatedAt: string; createdAt: string };
+export type UserNote = { id: string; title: string; body: string; entity?: ArticleTarget; createdAt: string; updatedAt: string };
+export type Bookmark = ArticleTarget & { id: string; createdAt: string };
+export type RecentView = ArticleTarget & { id: string; viewedAt: string };
+
+export type ModifierSourceType = 'research' | 'lord_skill' | 'faction_effect' | 'landmark' | 'building' | 'rank' | 'mod_override';
+export type Modifier = SourceInfo & { id: string; sourceType: ModifierSourceType; sourceId: string; targetType: 'unit' | 'lord' | 'tag'; targetId?: string; targetTags?: string[]; stat: keyof UnitStats; operation: 'add' | 'multiply' | 'set'; value: number; scope: 'global' | 'faction' | 'lord_army' | 'unit'; conditions?: Record<string, string | number | boolean> };
+export type ModOverride = { id: string; profileId: string; entityType: EntityType; entityId: string; field: string; operation: 'set' | 'add' | 'multiply'; value: string | number; gameVersion: string };
+export type ModProfile = { id: string; name: string; description?: string; gameVersion: string; overrideIds: string[]; createdAt: string; updatedAt: string };
+export type CampaignLord = { lordId: string; level: number; selectedSkillIds: string[] };
+export type CampaignArmy = { lordId: string; units: { unitId: string; rank: number }[] };
+export type CampaignProfile = { id: string; name: string; gameVersion: string; factionId: string; turn: number; modProfileIds: string[]; completedResearchIds: string[]; ownedBuildingIds: string[]; activeLandmarkIds: string[]; lords: CampaignLord[]; armies: CampaignArmy[]; createdAt: string; updatedAt: string };
+export type RosterEntry = { entityId: string; entityType: 'unit' | 'hero'; count: number };
+export type Roster = { id: string; name: string; lordId: string; entries: RosterEntry[]; createdAt: string; updatedAt: string };
+export type UserBackup = { format: 'hammer-archive-backup'; version: 1; exportedAt: string; articles: WikiArticle[]; notes: UserNote[]; bookmarks: Bookmark[]; recentViews: RecentView[] };
