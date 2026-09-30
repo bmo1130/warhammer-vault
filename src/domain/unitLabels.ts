@@ -17,7 +17,7 @@ export const unitAttributeLabels: Readonly<Record<UnitAttributeId, string>> = {
   cannot_run: '질주 불가',
 };
 export const attackAttributeLabels: Readonly<Record<AttackAttributeId, string>> = { magical: '마법 공격', flaming: '화염 공격' };
-export const unitAbilityLabels: Readonly<Record<UnitAbilityId, string>> = { lance: '랜스', blessing_of_the_lady: '여제의 축복', wounds: '부상' };
+export const unitAbilityLabels: Readonly<Record<UnitAbilityId, string>> = { lance: '랜스', blessing_of_the_lady: '여제의 축복', wounds: '부상', daemonic_instability: '악마의 불안정성', banished: '추방됨' };
 
 export const getUnitAttributeLabel = (id: UnitAttributeId) => unitAttributeLabels[id] ?? id;
 export const getAttackAttributeLabel = (id: AttackAttributeId) => attackAttributeLabels[id] ?? id;

@@ -1,0 +1,30 @@
+[
+  {
+    "table": "main_units_tables",
+    "where": [
+      {
+        "field": "unit",
+        "op": "oneOf",
+        "value": [
+          "wh_main_brt_cav_grail_knights",
+          "wh_main_emp_art_helstorm_rocket_battery",
+          "wh3_main_kho_mon_bloodthirster_0"
+        ]
+      }
+    ]
+  },
+  {
+    "table": "units_to_groupings_military_permissions_tables",
+    "where": [
+      {
+        "field": "unit",
+        "op": "oneOf",
+        "value": [
+          "wh_main_brt_cav_grail_knights",
+          "wh_main_emp_art_helstorm_rocket_battery",
+          "wh3_main_kho_mon_bloodthirster_0"
+        ]
+      }
+    ]
+  }
+]

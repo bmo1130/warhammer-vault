@@ -1,6 +1,6 @@
-# WH3 single-unit raw extractor
+# WH3 raw extractor and conservative normalizer
 
-This is a development tool, separate from React. It reads **one selected unit root** (Grail Knights, Helstorm Rocket Battery or Bloodthirster) from directly opened CA packs through an installed RPFM server. It does not parse the Pack binary format, normalize into Vault `Unit`, modify `src/data/units.json`, merge mods, apply modifiers, or change UI.
+This is a development tool, separate from React. It reads **one selected unit root** (Grail Knights, Helstorm Rocket Battery or Bloodthirster) from directly opened CA packs through an installed RPFM server. The extractor does not parse the Pack binary format or normalize into Vault `Unit`. A separate offline conservative normalizer maps the three core saved traces; see [NORMALIZATION.md](NORMALIZATION.md). Neither pipeline modifies `src/data/units.json`, merges mods, applies modifiers, or changes UI.
 
 ## Verified interface and local investigation
 
@@ -174,7 +174,7 @@ npm run build
 
 The original 11 app tests and 10 extractor tests remain intact. Twelve additional tests cover three-profile discovery, Grail compatibility, the engine/missile/projectile/explosion/penetration chain, independent reload/accuracy/ammo fields, shared-artillery isolation, flight/entity/attribute data, base resistance versus phase effects, child Loc provenance, manual-reference isolation, profile separation and ambiguous root/invalid CLI failures. **33 tests passed**. They need no game, RPFM executable or network.
 
-The fixture datasets are in `fixtures/tables.mjs` and `fixtures/profiles.mjs`, with **synthetic keys/numbers and schema version 99**. They are not a real Pack reader and are never an extraction CLI fallback. Existing `tests/fixtures/units.ts` also remains a separate, manually supplied Unit-schema fixture. Real-pack keys appear in integration expectations only, not in profile/discovery logic.
+The fixture datasets are in `fixtures/tables.mjs` and `fixtures/profiles.mjs`, with **synthetic keys/numbers and schema version 99**. They are not a real Pack reader and are never an extraction CLI fallback. Existing `tests/fixtures/units.ts` also remains a separate, manually supplied Unit-schema fixture. Observed real-pack keys appear in integration expectations and the bounded permission evidence query, not in profile/discovery logic.
 
 Opt-in real-Pack integration test:
 
@@ -187,7 +187,7 @@ $env:WH3_INTEGRATION_CONFIG = 'tools/wh3-importer/.local/config.json'
 npm run test:wh3-integration
 ```
 
-Without either variable all three integration tests clearly **skip**. With one configured, absence of the game/server/schema fails honestly; it never substitutes fixtures. Output is isolated under `.local/integration/`. Tests assert one actual CA root per profile, source pack types, persisted provenance, Grail regression, Helstorm missile/explosion/crew data and Bloodthirster flight/resistance/phase/Loc data. All three local opt-in integration tests passed against the actual installation.
+Without either variable all four integration tests clearly **skip**. With one configured, absence of the game/server/schema fails honestly; it never substitutes fixtures. Output is isolated under `.local/integration/`. Tests assert one actual CA root per profile, source pack types, persisted provenance, Grail regression, Helstorm missile/explosion/crew data and Bloodthirster flight/resistance/phase/Loc data. They now also normalize all three units with fresh bounded permission evidence and run the existing validator. All four local opt-in integration tests passed against the actual installation.
 
 ## Next step
 
@@ -203,4 +203,4 @@ Research profiles live separately in `research-profiles.mjs` and reuse `extractP
 
 This investigation passed **43 default tests**, **4 opt-in actual CA integration tests**, and `npm run build`. Default tests include unknown/fractional hypothesis handling, manual isolation, bounded inspection, scoped policy and streaming-hash equality. Integration additionally verifies current Spell Resistance localisation, schema/Loc joins and the separate reload experience row. The default tests remain synthetic/app checks; they do not confirm game formulas or current campaign UI values.
 
-Before normalization, verify health/unit-scale formulas, displayed speed units, artillery crew allocation, ammunition/volley UI conventions, reload/accuracy rules, effective recruitment/building tier semantics, spell-versus-magical resistance, ability activation and runtime/campaign balance overrides. Projectile penetration is a points budget according to the schema; do not turn it into a number of pierced entities. Full data import, Vault normalization and derived damage/health/speed calculations remain separate future work.
+Before normalization, verify health/unit-scale formulas, displayed speed units, artillery crew allocation, ammunition/volley UI conventions, reload/accuracy rules, effective recruitment/building tier semantics, spell-versus-magical resistance, ability activation and runtime/campaign balance overrides. Projectile penetration is a points budget according to the schema; do not turn it into a number of pierced entities. Whole-data import and unverified derived health/speed/reload calculations remain future work. The first restricted direct-value normalizer is described in [NORMALIZATION.md](NORMALIZATION.md); it preserves the production sample catalog and writes ignored staging artifacts only. The current default suite passes 62 tests (43 existing + 19 normalizer), actual integration passes 4, and the build passes.

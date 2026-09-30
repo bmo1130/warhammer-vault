@@ -82,7 +82,7 @@ npm run build
 
 ## WH3 원본 데이터 추적 도구
 
-`tools/wh3-importer/`는 설치된 RPFM server의 검증된 MCP 인터페이스로 실제 CA `db.pack`과 `local_en.pack`을 직접 읽어 성배기사, Helstorm, Bloodthirster 중 선택한 한 유닛의 원본 row와 schema 기반 join을 추적하는 개발 도구입니다. `Unit` 정규화, 전체 DB dump, 모드 병합, 앱 데이터·UI 변경은 하지 않습니다.
+`tools/wh3-importer/`는 설치된 RPFM server의 검증된 MCP 인터페이스로 실제 CA `db.pack`과 `local_en.pack`을 직접 읽어 성배기사, Helstorm, Bloodthirster 중 선택한 한 유닛의 원본 row와 schema 기반 join을 추적하는 개발 도구입니다. 전체 DB dump, 모드 병합, 앱 데이터·UI 변경은 하지 않습니다. 별도 보수적 normalizer는 저장된 핵심 3종 raw trace의 검증된 직접값만 `Unit`으로 옮겨 staging 결과를 생성합니다.
 
 ```powershell
 npm run extract:grail-knights -- --game-path 'YOUR_WH3_INSTALLATION_ROOT'
@@ -94,7 +94,9 @@ npm run extract:wh3-unit -- bloodthirster --game-path 'YOUR_WH3_INSTALLATION_ROO
 
 ## 현재 범위
 
-원본값의 의미 조사와 다음 정규화 단계의 제한은 [SEMANTICS.md](tools/wh3-importer/SEMANTICS.md)에 정리했습니다. 보병·단발 사격·추가 다발 포병 표본과 UI 통계·경험·캠페인 효과 경로를 실제 CA pack에서 확인했으며, 미확인 공식은 조사 가설로만 보관합니다. 이 파일과 기계 판독용 findings는 앱 데이터에 반영하지 않습니다.
+원본값의 의미 조사와 다음 정규화 단계의 제한은 [SEMANTICS.md](tools/wh3-importer/SEMANTICS.md)에 정리했습니다. 보병·단발 사격·추가 다발 포병 표본과 UI 통계·경험·캠페인 효과 경로를 실제 CA pack에서 확인했으며, 미확인 공식은 조사 가설로만 보관합니다. 이 파일과 기계 판독용 findings는 앱 데이터에 반영하지 않습니다. Normalizer의 gate가 findings의 조사 상태와 검토된 게임 버전을 읽으며, 승인된 파생 공식은 아직 없습니다.
+
+보수적 normalizer의 구조·출처·생략 정책과 재현 명령은 [NORMALIZATION.md](tools/wh3-importer/NORMALIZATION.md)에 정리했습니다. `npm run normalize:wh3-unit -- grail-knights` (또는 `helstorm`, `bloodthirster`)는 `generated/wh3/normalized/`에 result JSON과 비교 요약을 생성합니다. 실제 앱의 `src/data/units.json`은 유지하며, 수동 참고값은 결과 비교에만 사용합니다. 기본 테스트 62개와 실제 CA 통합 테스트 4개가 통과했습니다.
 
 팩션, 군주, 유닛 검색과 상세 조회, 개인 서술 및 메모의 생성·수정·삭제, 즐겨찾기, 최근 본 항목, JSON 백업·복원을 지원합니다. 게임 원본 데이터는 UI에서 수정할 수 없습니다.
 

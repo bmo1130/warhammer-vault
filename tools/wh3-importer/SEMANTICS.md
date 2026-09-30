@@ -1,13 +1,13 @@
 # WH3 stat semantics investigation
 
-Research before normalization; **no production Unit normalizer or modifier application**.
+Research findings preceding the first conservative normalizer. **No production app-data import or modifier application.** The bounded direct-value staging pipeline is described in [NORMALIZATION.md](NORMALIZATION.md).
 Environment: installed RPFM **5.1.0**, WH3 executable ProductVersion **9.0.1.0**, schema format **5**, directly opened CA `db.pack` / `local_en.pack`. These are not mod-merged or current campaign-session values.
 
 `CONFIRMED` requires a direct definition, raw relationship or current localisation for the stated fact. `STRONGLY SUPPORTED` means consistent evidence with missing executable/runtime validation. `UNRESOLVED` means the proposed interpretation/formula lacks sufficient proof. Subfindings may be confirmed while a topic's formula remains unresolved. Confidence describes the stated scope, not a guarantee about related systems.
 
 ## Evidence and reproduction
 
-All paths below are relative to `generated/wh3/`. Raw artifacts are intentionally Git-ignored. Each contains pack/hash/version provenance, original keyed rows, processed schema version/fields, and schema-backed joins. [semantics-findings.json](semantics-findings.json) is the small tracked interpretation record; `research/semantics-evidence.json` holds offline arithmetic inputs with row IDs, fields and source pointers. Neither is consumed by React or a production normalizer.
+All paths below are relative to `generated/wh3/`. Raw artifacts are intentionally Git-ignored. Each contains pack/hash/version provenance, original keyed rows, processed schema version/fields, and schema-backed joins. [semantics-findings.json](semantics-findings.json) is the small tracked interpretation record; `research/semantics-evidence.json` holds offline arithmetic inputs with row IDs, fields and source pointers. Neither is consumed by React. The conservative normalizer gate reads the findings topic statuses and reviewed game version; it does not read arithmetic hypotheses or apply a formula from the research evidence.
 
 | Sample | Localisation-discovered main key | Purpose | Rows / table names |
 | --- | --- | --- | --- |
@@ -247,7 +247,7 @@ The schema exposes `unit_stat_modifiers` / class-stat-modifier references, but b
 
 Pack SHA-256 uses `createReadStream → hash.update(chunk) → digest`; test buffers cover empty, UTF-8 and multiple stream chunks. Actual baseline pack digests are compared separately. No entire pack is loaded for hashing. RPFM still decodes individual explicitly requested tables; that is separate from hash memory use.
 
-Start a **restricted raw-field mapping** design with provenance/unknown handling after reviewing these distinctions. Do not start a complete Unit normalizer with inferred HP, display speed/ammo/accuracy, effective recruitment or campaign costs. Current UI label mapping and independently sourced raw armor/damage/cost fields are candidates for narrowly defined mappings; entity selection, percentages and role/context contracts still need field-by-field review. This work neither writes app Unit data nor changes UI.
+Start a **restricted raw-field mapping** design with provenance/unknown handling after reviewing these distinctions. Do not start a complete Unit normalizer with inferred HP, display speed/ammo/accuracy, effective recruitment or campaign costs. Current UI label mapping and independently sourced raw armor/damage/cost fields are candidates for narrowly defined mappings; entity selection, percentages and role/context contracts still need field-by-field review. The subsequent conservative normalizer maps reviewed direct facts into ignored staging outputs only; this research does not authorize formulas or production app-data changes.
 
 | Topic | Status | Confidence | Evidence | Safe to normalize? |
 | --- | --- | --- | --- | --- |

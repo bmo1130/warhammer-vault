@@ -49,6 +49,9 @@ export function validateUnits(units: readonly Unit[], factionIds: Iterable<strin
     stableIds('abilities', unit.abilities);
     stableIds('passiveAbilities', unit.passiveAbilities);
     stableIds('attributes', unit.attributes);
+    unit.attributes?.forEach((attribute, index) => {
+      if (['can_fly', 'cannot_run', 'can_run', 'can_skirmish', 'cannot_skirmish'].includes(attribute)) issue(`attributes.${index}`, '이동 상태는 movement의 구조화 필드에만 저장해야 합니다.');
+    });
     stableIds('melee.attackAttributes', unit.melee.attackAttributes);
     unit.campaign?.recruitmentRequirements?.forEach((requirement, index) => {
       const field = `campaign.recruitmentRequirements.${index}`;

@@ -32,7 +32,7 @@ export const helstormFixture: Unit = {
     reload: { baseTime: 17, reloadSkill: 10 },
   },
   terrainModifiers: [{ terrainId: 'shallow_water', speedPercent: -20, meleeAttackPercent: -20 }],
-  attributes: ['siege_attacker', 'cannot_run'],
+  attributes: ['siege_attacker'],
   campaign: { recruitmentCost: 1050, upkeep: 263, recruitmentTurns: 2, recruitmentRequirements: [{ buildingId: 'forge', buildingTier: 4 }] },
   customBattle: { cost: 1050 },
 };
@@ -45,7 +45,7 @@ export const bloodthirsterFixture: Unit = {
   defense: { armor: 70, leadership: 80, meleeDefense: 44, resistances: { physical: 20, spell: 35 } },
   melee: { meleeAttack: 60, chargeBonus: 55, damage: { base: 160, armorPiercing: 380, bonusVsLarge: 35 }, attackInterval: 4, weaponLength: 9, splash: { maxTargets: 5, maxTargetSize: 'large' }, attackAttributes: ['flaming', 'magical'] },
   terrainModifiers: [{ terrainId: 'forest', speedPercent: -20, meleeAttackPercent: -20 }],
-  passiveAbilities: ['wounds'], attributes: ['causes_fear', 'causes_terror', 'can_fly', 'daemon', 'daemonic_instability', 'banishment', 'siege_attacker'],
+  passiveAbilities: ['wounds', 'daemonic_instability', 'banished'], attributes: ['causes_fear', 'causes_terror', 'daemon', 'siege_attacker'],
   campaign: {
     recruitmentCost: 4600, upkeep: 575, recruitmentTurns: 3,
     recruitmentRequirements: [

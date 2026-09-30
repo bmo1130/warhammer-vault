@@ -1,11 +1,16 @@
 // Follow only the recorded forward schema joins; ambiguity stays unknown.
-export function observationContext(dump) {
+export function traceSelectors(dump) {
   const byId = new Map(dump.rows.map((record) => [record.id, record]));
   const root = byId.get(dump.rootRow);
   const follow = (record, field) => {
     const targets = dump.relationships.filter((edge) => edge.from === record?.id && edge.field === field && edge.direction === 'forward').map((edge) => byId.get(edge.to));
     return targets.length === 1 ? targets[0] : undefined;
   };
+  return { byId, root, follow };
+}
+
+export function observationContext(dump, selectors = traceSelectors(dump)) {
+  const { root, follow } = selectors;
   const land = follow(root, 'land_unit');
   const weapon = follow(land, 'primary_melee_weapon');
   const armor = follow(land, 'armour');

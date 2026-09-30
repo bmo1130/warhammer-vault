@@ -23,6 +23,8 @@ export type UnitEntities = {
   splashTargetingClass?: string;
   receivesSplashAlone?: boolean;
 };
+// Structured movement state is the source of truth. Do not also emit
+// can_fly/cannot_run/can_skirmish as generic attribute IDs.
 export type UnitMovement = {
   speed?: number;
   groundSpeed?: number;
@@ -116,6 +118,8 @@ export type UnitCampaignData = {
 };
 export type UnitCustomBattleData = { cost?: number };
 export type UnitStrengthWeakness = { kind: 'strength' | 'weakness'; text: string };
+// source is the entity-wide fallback; sources contains group-specific
+// descriptions. Exact importer field provenance stays outside Unit.
 export type UnitDataSources = { publicStats?: string; hiddenStats?: string; campaign?: string };
 
 export type Unit = SourceInfo & {
