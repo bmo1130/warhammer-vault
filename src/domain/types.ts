@@ -1,10 +1,10 @@
 import type { BACKUP_FORMAT } from './appIdentity';
 export type { EntityType } from './entities';
 import type { EntityType } from './entities';
+import type { UnitStatPath } from './unit';
+export type * from './unit';
 export type SourceInfo = { gameVersion: string; source: string; tags: string[]; updatedAt?: string };
 export type Faction = SourceInfo & { id: string; name: string; subtitle: string; description: string };
-export type UnitStats = { meleeAttack?: number; meleeDefense?: number; speed?: number; armor?: number; leadership?: number; health?: number; chargeBonus?: number };
-export type Unit = SourceInfo & { id: string; name: string; factionId: string; category: string; tier?: number; summary: string; stats: UnitStats; recruitmentCost?: number; upkeep?: number };
 export type Lord = SourceInfo & { id: string; name: string; factionId: string; title: string; summary: string; unitIds: string[] };
 export type Hero = SourceInfo & { id: string; name: string; factionId: string; category: string };
 export type Research = SourceInfo & { id: string; name: string; factionId: string; description: string; modifierIds: string[] };
@@ -18,7 +18,7 @@ export type Bookmark = ArticleTarget & { id: string; createdAt: string };
 export type RecentView = ArticleTarget & { id: string; viewedAt: string };
 
 export type ModifierSourceType = 'research' | 'lord_skill' | 'faction_effect' | 'landmark' | 'building' | 'rank' | 'mod_override';
-export type Modifier = SourceInfo & { id: string; sourceType: ModifierSourceType; sourceId: string; targetType: 'unit' | 'lord' | 'tag'; targetId?: string; targetTags?: string[]; stat: keyof UnitStats; operation: 'add' | 'multiply' | 'set'; value: number; scope: 'global' | 'faction' | 'lord_army' | 'unit'; conditions?: Record<string, string | number | boolean> };
+export type Modifier = SourceInfo & { id: string; sourceType: ModifierSourceType; sourceId: string; targetType: 'unit' | 'lord' | 'tag'; targetId?: string; targetTags?: string[]; stat: UnitStatPath; operation: 'add' | 'multiply' | 'set'; value: number; scope: 'global' | 'faction' | 'lord_army' | 'unit'; conditions?: Record<string, string | number | boolean> };
 export type ModOverride = { id: string; profileId: string; entityType: EntityType; entityId: string; field: string; operation: 'set' | 'add' | 'multiply'; value: string | number; gameVersion: string };
 export type ModProfile = { id: string; name: string; description?: string; gameVersion: string; overrideIds: string[]; createdAt: string; updatedAt: string };
 export type CampaignLord = { lordId: string; level: number; selectedSkillIds: string[] };

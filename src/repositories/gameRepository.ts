@@ -45,7 +45,7 @@ export const gameRepository = {
     return [
       ...factions.map((item) => ({ type: 'faction' as const, id: item.id, name: item.name, detail: item.subtitle })),
       ...lords.map((item) => ({ type: 'lord' as const, id: item.id, name: item.name, detail: '군주' })),
-      ...units.map((item) => ({ type: 'unit' as const, id: item.id, name: item.name, detail: item.category })),
+      ...units.map((item) => ({ type: 'unit' as const, id: item.id, name: item.name, detail: item.classification.category })),
     ].filter((item) => `${item.name} ${item.id} ${item.detail}`.toLocaleLowerCase().includes(term));
   },
 };

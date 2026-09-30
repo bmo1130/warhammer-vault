@@ -1,0 +1,13 @@
+{
+  "extends": "./tsconfig.app.json",
+  "compilerOptions": {
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "allowImportingTsExtensions": false,
+    "esModuleInterop": true,
+    "noEmit": false,
+    "rootDir": ".",
+    "outDir": ".test-build"
+  },
+  "include": ["src", "tests/fixtures"]
+}
