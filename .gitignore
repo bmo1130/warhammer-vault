@@ -3,3 +3,5 @@ dist/
 *.tsbuildinfo
 .DS_Store
 .test-build/
+tools/wh3-importer/.local/
+generated/wh3/

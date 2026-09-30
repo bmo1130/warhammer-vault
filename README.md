@@ -80,6 +80,16 @@ npm run build
 - 기본 장전 시간·장전 스킬의 정확한 공식, 포병의 발사 수와 직격·폭발 피해 적용 대상. 현재 장전 시간과 DPS는 공식 검증 후 별도로 계산해야 합니다.
 - 팩션별 모집 조건의 OR/AND 구성, 건물·능력·속성의 실제 DB ID, 각 수치의 출처와 게임 버전.
 
+## WH3 원본 데이터 추적 도구
+
+`tools/wh3-importer/`는 설치된 RPFM server의 검증된 MCP 인터페이스로 실제 CA `db.pack`과 `local_en.pack`을 직접 읽어 성배기사 한 유닛의 원본 row와 schema 기반 join을 추적하는 개발 도구입니다. `Unit` 정규화, 전체 DB dump, 모드 병합, 앱 데이터·UI 변경은 하지 않습니다.
+
+```powershell
+npm run extract:grail-knights -- --game-path 'YOUR_WH3_INSTALLATION_ROOT'
+```
+
+게임 경로는 CLI, `WH3_GAME_PATH`, Git에서 제외한 로컬 설정으로 입력합니다. 원본 JSON과 출처·미확인 값·수동 참고값 비교 요약은 기본적으로 `generated/wh3/`에 생성되며 Git에서 제외합니다. 실행 준비, 확인한 테이블과 관계, 실제 추출 결과 및 별도 통합 테스트는 [extractor README](tools/wh3-importer/README.md)에 설명합니다. `npm test`의 작은 synthetic fixture 테스트는 게임이나 RPFM 없이 실행되며, 실제 pack 테스트는 `npm run test:wh3-integration`으로 명시적으로 실행합니다.
+
 ## 현재 범위
 
 팩션, 군주, 유닛 검색과 상세 조회, 개인 서술 및 메모의 생성·수정·삭제, 즐겨찾기, 최근 본 항목, JSON 백업·복원을 지원합니다. 게임 원본 데이터는 UI에서 수정할 수 없습니다.

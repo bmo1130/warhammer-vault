@@ -1,0 +1,33 @@
+{
+  "sourceKind": "manual-reference",
+  "source": "User-provided wiki reference values; not CA pack extraction output",
+  "values": {
+    "tier": 4,
+    "entityCount": 48,
+    "customBattleCost": 1850,
+    "recruitmentCost": 1700,
+    "upkeep": 462,
+    "recruitmentTurns": 2,
+    "armor": 120,
+    "shield": 35,
+    "leadership": 80,
+    "meleeAttack": 38,
+    "meleeDefense": 34,
+    "chargeBonus": 78,
+    "baseDamage": 18,
+    "apDamage": 30,
+    "bonusLarge": 18,
+    "attackInterval": 5.1,
+    "weaponLength": 1,
+    "splashMaxTargets": 2,
+    "splashTargetSize": "중간"
+  },
+  "notDirectlyComparable": {
+    "totalHealth": 7296,
+    "displaySpeed": 84,
+    "unitScale": "대형",
+    "forestSpeedPercent": -20,
+    "forestMeleeAttackPercent": -20,
+    "buildingTier": 4
+  }
+}
