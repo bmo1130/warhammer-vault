@@ -89,7 +89,7 @@ No runtime observation changes static provenance or normalized Unit. No producti
 
 ## Phase 2 boundary
 
-First collect the CCO observations. Component HP contribution, independent casualty/targetability and exact same-projectile weapon-source attribution can still be unresolved after CCO; no diagnostic pack is claimed necessary before those results exist. Generated jobs contain a deferred test plan only: one candidate intervention per test, unique `zz_runtime_probe_*` clones, repoint only the candidate edge, explicit HP delta or range/reload/projectile fingerprint, identical baseline setup and disable/remove-pack rollback. No vanilla shared records are modified and no pack is built.
+CCO observations have been captured for the batch below. Component HP contribution, independent casualty/targetability and exact same-projectile weapon-source attribution can still be unresolved after CCO; no diagnostic pack is claimed necessary before those results exist. Generated jobs contain a deferred test plan only: one candidate intervention per test, unique `zz_runtime_probe_*` clones, repoint only the candidate edge, explicit HP delta or range/reload/projectile fingerprint, identical baseline setup and disable/remove-pack rollback. No vanilla shared records are modified and no pack is built.
 
 ## Captured batch: 2026-10-01 / 9.0.2.0
 
@@ -133,10 +133,10 @@ The batch adapter reuses the prefix parser, P0 manifest, explicitly named review
 static-index sidecars, canonical evidence format and existing validator/triage. No
 extraction, game execution or production writer is used. The bounded declaration file
 is [batch-2026-10-01.json](runtime-evidence/cco-probe/batch-2026-10-01.json). To reproduce
-into a **new** local directory (replace the two input directories if needed):
+into a **new** local directory (replace both input-directory placeholders):
 
 ```powershell
-node tools/wh3-importer/runtime-evidence/cco-probe/cli.mjs ingest-batch --bundle-dir generated/wh3/runtime-evidence/cco-p0-9.0.2 --declarations tools/wh3-importer/runtime-evidence/cco-probe/batch-2026-10-01.json --log-dirs 'game=C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III|desktop=C:/Users/lsh12/OneDrive/Desktop' --out generated/wh3/runtime-evidence/runtime-2026-10-01-replay
+node tools/wh3-importer/runtime-evidence/cco-probe/cli.mjs ingest-batch --bundle-dir generated/wh3/runtime-evidence/cco-p0-9.0.2 --declarations tools/wh3-importer/runtime-evidence/cco-probe/batch-2026-10-01.json --log-dirs 'game=<game-runtime-log-directory>|desktop=<preserved-runtime-log-directory>' --out generated/wh3/runtime-evidence/runtime-2026-10-01-replay
 ```
 
 Outputs retain existing raw/comparison/runtime/validated/proposal/triage formats plus
@@ -146,6 +146,8 @@ not a malformed unit capture. Original Lua compatibility/cursor fixes are preser
 
 ## Verification
 
-Offline tests execute the canonical Lua with a Fengari mock CCO/battle-manager (Lua 5.3 implementation, source uses Lua 5.1-compatible syntax). This validates pcall failures, cursor, list/path preservation, timer cancellation, changes and hot reload; it does **not** certify the installed game's bindings. Node tests cover graph construction, parser partial/malformed inputs, repeated ingestion, conflicts, identity/version drift, raw-count semantics and production/static non-mutation. Saved CA integration replays the P0 manifest alongside previous pilot/materialization/entity/missile/runtime regressions. Actual field availability, hotkeys/log delivery and collected gameplay values still require the first in-game run.
+Offline tests execute the canonical Lua with a Fengari mock CCO/battle-manager (Lua 5.3 implementation, source uses Lua 5.1-compatible syntax). This validates pcall failures, cursor, list/path preservation, timer cancellation, changes and hot reload; it does **not** certify the installed game's bindings. Node tests cover graph construction, parser partial/malformed inputs, repeated ingestion, conflicts, identity/version drift, raw-count semantics and production/static non-mutation. Saved CA artifact regressions replay the P0 manifest alongside previous pilot/materialization/entity/missile/runtime regressions. The completed batch above supplies actual runtime captures; unsupported fields, partial captures and unresolved attribution remain preserved fail-closed.
 
-Verified for this change: basic tests 210/210 (including 21 CCO tests), saved CA regressions 41/41 (including two P0 graph tests), actual CA integration 5/5, build and runtime contract TypeScript check PASS. Helper install/update/uninstall and refusal of an unowned Lua file were checked in a temporary workspace path with game-directory logging writes disabled. Existing five user changes retain their SHA256 values. Production/UI diff is empty. Name pilot stays 1/14/9; 19 context results stay MATERIALIZED/PARTIAL with zero diagnostic validation failures and unchanged Unit field provenance. Actual runtime observations: zero; jobs are PENDING.
+Verified for the completed 2026-10-01 runtime batch: basic tests **222/222**, saved CA artifact regressions **41/41** (including two P0 graph tests), and runtime contract/type check PASS. Ingestion preserved **42 input logs, 5,200 parsed events, 51 captures and 316 canonical observations**, with zero validation errors, conflicts or missing inputs. `productionEligible=false`; production UI/data and `src/data/units.json` are unchanged. Required manual in-game work for this batch: **NONE**. No push was performed.
+
+Earlier probe verification also covered actual CA integration (5/5), build, and helper install/update/uninstall and refusal of an unowned Lua file in a temporary workspace with game-directory logging writes disabled. These are historical checks, not additional runs for this batch. Static name-pilot results remain 1/14/9; the 19 context results remain MATERIALIZED/PARTIAL with zero diagnostic validation failures and unchanged Unit field provenance. Deferred jobs do not negate the completed runtime observations above.
