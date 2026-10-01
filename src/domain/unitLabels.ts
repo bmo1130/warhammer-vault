@@ -15,9 +15,14 @@ export const unitAttributeLabels: Readonly<Record<UnitAttributeId, string>> = {
   banishment: '추방',
   siege_attacker: '공성 공격자',
   cannot_run: '질주 불가',
+  // Exact saved CA localisation; candidate-scoped aliases, no effect formulas.
+  charge_defense_vs_large: 'Charge Defence vs. Large',
+  charge_reflection: 'Charge Reflection',
+  charge_defense: 'Expert Charge Defence',
+  undead: 'Undead',
 };
 export const attackAttributeLabels: Readonly<Record<AttackAttributeId, string>> = { magical: '마법 공격', flaming: '화염 공격' };
-export const unitAbilityLabels: Readonly<Record<UnitAbilityId, string>> = { lance: '랜스', blessing_of_the_lady: '여제의 축복', wounds: '부상', daemonic_instability: '악마의 불안정성', banished: '추방됨' };
+export const unitAbilityLabels: Readonly<Record<UnitAbilityId, string>> = { lance: '랜스', blessing_of_the_lady: '여제의 축복', wounds: '부상', daemonic_instability: '악마의 불안정성', banished: '추방됨', regeneration: 'Regeneration', crumbling: 'Crumbling', disintegrating: 'Disintegrating' };
 
 export const getUnitAttributeLabel = (id: UnitAttributeId) => unitAttributeLabels[id] ?? id;
 export const getAttackAttributeLabel = (id: AttackAttributeId) => attackAttributeLabels[id] ?? id;

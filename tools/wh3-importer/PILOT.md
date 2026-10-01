@@ -1,5 +1,7 @@
 # Representative WH3 batch pilot
 
+현재 승격 판단은 [PARTIAL 필드 그룹 review](promotion/PARTIAL_REVIEW.md)를 사용합니다. 아래 9.0.1 기록과 저장된 pilot 상태는 역사 자료입니다. PARTIAL 자체는 유닛 전체의 production 거부 조건이 아니며, 검증된 부분집합을 생략·provenance gate로 별도 승인할 수 있습니다. BLOCKED 9개는 이번 review에서 제외했습니다.
+
 2026-10-01 (Asia/Seoul). 기준 HEAD: ae721cf. 실제 CA WH3 9.0.1.0, RPFM 5.1.0, schema format 5.
 
 전체 import 안전성이 입증되지 않았다. 24개 이름 중 9개에서 identity가 결정되지 않고, 유일 root 15개에서도 14개가 새로운 ID/구조 생략을 갖는다. 모든 결과는 staging 진단 자료이며 production Unit catalog로 승격하지 않는다. 앱 UI, src/data/units.json, faction 데이터와 Unit 타입은 수정하지 않았다. 승인 derived formula는 0개다.

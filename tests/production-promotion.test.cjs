@@ -38,8 +38,8 @@ test('first static production source replays exactly and promotion is idempotent
   fromSamples.units = units.filter(unit => unit.gameVersion === 'sample');
   fromSamples.factions = factions.filter(faction => faction.gameVersion === 'sample');
   const appended = buildFirstProductionBatch(fromSamples);
-  assert.deepEqual(appended.units, units);
-  assert.deepEqual(appended.factions, factions);
+  assert.deepEqual(appended.units, [...fromSamples.units, batch.unit]);
+  assert.deepEqual(appended.factions, factions.filter(faction => ['vampire_counts','warriors_of_chaos'].includes(faction.id)));
   assert.deepEqual(appended.added, { units: 1, factions: 1 });
 });
 
@@ -144,9 +144,9 @@ test('first batch preserves sample records, diagnostic bytes and primary roster 
   assert.equal(sha(JSON.stringify(units.filter(unit => unit.gameVersion === 'sample'))), '892b95c759ff9a69d82fb8c5db2914e00701cc989d59d39c6e34a0cf2d56f856');
   assert.equal(sha(JSON.stringify(factions.filter(faction => faction.gameVersion === 'sample'))), '6c6a2b29bc9655347fa7091d0d706e0be85c8c7d52310ebb21a29bfbc5bba664');
   assert.equal(sha(readFileSync('src/data/unitDiagnostics.json')), '1abbe4b8251320e86dbe7470bf3cf3729b7759c7c71af2af2b5b9f4ce680bb1f');
-  assert.equal(game.getFactionUnits('vampire_counts').length, 5);
+  assert.equal(game.getFactionUnits('vampire_counts').filter(unit => unit.gameVersion === 'sample').length, 5);
   assert.deepEqual(game.getFactionUnits(review.factionId).map(unit => unit.id), [review.id]);
-  assert.equal(catalog.list().filter(entry => !entry.isSample && entry.hasProduction).length, 1);
+  assert.equal(catalog.list().filter(entry => !entry.isSample && entry.hasProduction && entry.id === review.id).length, 1);
   const entry = catalog.get(review.id);
   assert(entry.hasProduction && !entry.isSample && !entry.hasDiagnostic && entry.kind === 'unit');
   for (const item of diagnostics.list()) assert(!game.getUnit(item.id) && item.productionEligible === false);
@@ -158,7 +158,7 @@ test('first batch preserves sample records, diagnostic bytes and primary roster 
 test('production, sample and diagnostic detail screens keep their distinct boundaries and personal controls', async () => {
   const { firstProductionReview: review } = await gate();
   const list = render('/units');
-  for (const label of ['Production', 'Sample · 일반 Unit', 'Diagnostic-only', '11개 항목']) assert(list.includes(label));
+  for (const label of ['Production', 'Sample · 일반 Unit', 'Diagnostic-only', `${catalog.list().length}개 항목`]) assert(list.includes(label));
   const html = render(`/units/${review.id}`);
   for (const label of ['Dragon Ogres', 'Production', '60', '40', '72', '32', '42', '1550', '근접 피해', '110', '9.0.2.0', '미입력', '출처·버전·생략 범위', '즐겨찾기 추가', '내 기록']) assert(html.includes(label), label);
   assert(!html.includes('Production data unavailable') && !html.includes('Diagnostic-only') && !html.includes('>Sample<'));

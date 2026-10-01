@@ -13,7 +13,7 @@ npm run dev
 
 ## 구조
 
-- `src/data`: 읽기 전용 WH3 Unit JSON과 별도의 diagnostic 표시 자료. 구조 검증용 샘플 수치는 비워 두고, 검토된 첫 production 유닛만 실제 기본값을 포함합니다.
+- `src/data`: 읽기 전용 WH3 Unit JSON과 별도의 diagnostic 표시 자료. 구조 검증용 샘플 수치는 비워 두고, 검토된 production 부분집합만 실제 기본값을 포함합니다.
 - `src/domain/types.ts`: WH3 엔티티와 향후 Modifier, ModProfile, CampaignProfile, Roster 타입. 팩션 소속 관계는 각 엔티티의 `factionId`만 사용합니다.
 - `src/domain/unit.ts`: 의미별 유닛 스키마와 원본 숫자 필드의 `UnitStatPath` 타입.
 - `src/domain/unitCalculations.ts`: 확인된 기본·관통 피해 합계를 계산하는 순수 함수.
@@ -63,7 +63,7 @@ ID, 이름, `factionId`, 설명과 출처 메타데이터는 최상위에 유지
 
 ### 유닛 상세 화면의 diagnostic 자료
 
-홈의 **유닛 탐색**과 데스크톱·모바일의 **유닛** 메뉴에서 `/units`를 엽니다. 현재 Production 1개, Sample 5개, diagnostic-only 5개를 검색하고 전체 / 일반 Unit / Diagnostic evidence 있음 / Diagnostic-only로 필터링할 수 있습니다. 일반 Unit 필터에는 Production과 Sample이 함께 포함되며 각 행의 배지로 구분합니다. 검색어와 필터는 URL에 유지됩니다. 홈 검색도 팩션·군주·일반 유닛에 더해 diagnostic 이름·ID·source key를 찾습니다. 이 목록은 표시용 catalog이며 diagnostic 자료는 production 검색 API나 팩션 roster에 들어가지 않습니다.
+홈의 **유닛 탐색**과 데스크톱·모바일의 **유닛** 메뉴에서 `/units`를 엽니다. 현재 Production 5개, Sample 5개, diagnostic-only 5개를 검색하고 전체 / 일반 Unit / Diagnostic evidence 있음 / Diagnostic-only로 필터링할 수 있습니다. 일반 Unit 필터에는 Production과 Sample이 함께 포함되며 각 행의 배지로 구분합니다. 검색어와 필터는 URL에 유지됩니다. 홈 검색도 팩션·군주·일반 유닛에 더해 diagnostic 이름·ID·source key를 찾습니다. 이 목록은 표시용 catalog이며 diagnostic 자료는 production 검색 API나 팩션 roster에 들어가지 않습니다.
 
 Black Coach, Skeleton Chariots, Dread Saurian, Necrofex Colossus, Free Company Militia는 **diagnostic-only**입니다. 기존 `/units/:id`와 `UnitPage`를 재사용하되 Production Unit이나 가짜 기본 스탯을 생성하지 않고 `Production data unavailable`을 표시합니다. Sample은 미확인 수치를 비워 둔 구조 검증용 예시라는 점을 목록과 상세 배지에 명시합니다. Diagnostic 상세의 짧은 자료 범위 요약은 저장된 path·case 건수일 뿐 신뢰도 점수나 실제 개체·발사 수가 아닙니다.
 
@@ -95,6 +95,12 @@ npm run build
 ## 실제 WH3 데이터 입력 전 확인할 사항
 
 첫 production batch는 **Dragon Ogres / WH3 9.0.2.0** 한 개입니다. exact CA main/land `wh_dlc01_chs_mon_dragon_ogre`에서 기존 conservative normalizer가 확인한 직접값 25개와 검토된 identity/attribute alias를 반영했습니다. 미확인 count·HP·속도·저항 변환은 생략합니다. Warriors of Chaos는 기존 permission alias에 근거한 최소 catalog 분류이며 전체 모집 가능 roster를 뜻하지 않습니다. 기존 Sample 5개와 diagnostic projection, runtime/precedence 자료, v1 개인 백업은 유지합니다.
+
+후속 [PARTIAL 14개 필드 그룹 검토](tools/wh3-importer/promotion/PARTIAL_REVIEW.md)는 안전한 필드와 불확실한 그룹을 분리합니다. **Swordsmen, Spearmen (Shields), The Sternsmen, Doom-Flayers** 4개를 명시적 allowlist로 추가했습니다. Doom-Flayers의 entities는 빈 필수 그룹이며 count·대표 mass/size·HP·속도는 생략합니다. 미매핑 passive ability 2개는 review에 원본 ID/근거로 남기고 해당 그룹을 완전히 생략했습니다. Spearmen/Sternsmen의 7개 alias는 정확한 CA localisation/flags를 검토한 candidate 범위에만 적용하며 기존 normalizer의 전역 mapping은 바꾸지 않습니다.
+
+실제 적용된 필드·gate·보류 사유·검증 결과는 [PARTIAL admission](tools/wh3-importer/promotion/PARTIAL_ADMISSION.md)에 정리했습니다.
+
+`node scripts/review-partial-units.mjs --check`는 pinned source에서 JSON/Markdown 검토표를 재현하고, `node scripts/promote-partial-units.mjs --check`는 4개 production record의 일치를 검증합니다. 각각의 `--write`는 검토표 재생성 또는 승인된 4개 append만 수행합니다. PARTIAL 자체를 전체 거부 사유로 사용하지 않습니다. 진단 ID 5개의 core 후보와 Necrofex 주포의 direct 값도 검토표에 보존하지만, shared catalog 연결이나 여러 missile source의 표현을 자동 해결하지 않습니다. BLOCKED 9개는 이번 검토·승격 대상이 아닙니다. Unit/composition schema, 저장된 evidence와 개인 백업 형식은 유지합니다.
 
 선정·승격 gate·source snapshot·생략 범위·후속 blocker는 [첫 production 검토](tools/wh3-importer/promotion/PROMOTION.md)에 있습니다. 재현 입력은 실제 저장된 CA trace에서 투영한 자료이며 synthetic fixture가 아닙니다. 게임이나 로컬 generated 파일 없이 `node scripts/promote-first-unit.mjs --check`로 normalizer 재실행과 production 일치를 검사할 수 있습니다. `--write`는 이 한 유닛과 최소 faction만 추가하고 source drift·충돌·기존 값 덮어쓰기를 거부합니다. Production 상세는 검증된 기본 스탯과 기존 함수의 근접 피해 합을 표시하며, 출처·버전·생략 범위는 접힌 영역에서 확인합니다.
 

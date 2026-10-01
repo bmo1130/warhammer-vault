@@ -1,6 +1,9 @@
 # First static production batch
 
 Review date: 2026-10-02. One Unit: **Dragon Ogres**, WH3 **9.0.2.0**.
+This is the first-batch historical approval. Subsequent PARTIAL field-group
+eligibility and four explicit additions are reviewed in [PARTIAL_REVIEW.md](PARTIAL_REVIEW.md).
+The first source remains pinned; CLEAN is not a universal production requirement.
 This approval is for the verified base fields of this exact saved source, not a
 complete battle profile, runtime generalization or automatic admission rule.
 

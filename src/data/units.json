@@ -167,5 +167,244 @@
       "hiddenStats": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; hidden fields: unambiguous battle_entity properties, weapon splash, projectile calibration/reload/penetration",
       "campaign": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; main_units recruitment_cost/upkeep_cost/create_time and multiplayer_cost are base values only"
     }
+  },
+  {
+    "id": "ca_unit_wh_main_emp_inf_swordsmen",
+    "name": "Swordsmen",
+    "factionId": "empire",
+    "summary": "",
+    "gameVersion": "9.0.2.0",
+    "source": "CA base DB · WH3 9.0.2.0 · reviewed field subset · tools/wh3-importer/promotion/PARTIAL_REVIEW.md#sample-04",
+    "tags": [],
+    "classification": {
+      "category": "Melee Infantry",
+      "tier": 1
+    },
+    "entities": {
+      "entitySize": "small",
+      "mass": 100
+    },
+    "movement": {
+      "canSkirmish": false
+    },
+    "defense": {
+      "armor": 30,
+      "meleeDefense": 32,
+      "leadership": 60,
+      "shieldBlockChance": 35,
+      "projectilePenetrationResistance": 1
+    },
+    "melee": {
+      "damage": {
+        "base": 21,
+        "armorPiercing": 7,
+        "bonusVsLarge": 0,
+        "bonusVsInfantry": 0
+      },
+      "meleeAttack": 32,
+      "chargeBonus": 14,
+      "attackInterval": 4.3,
+      "weaponLength": 1,
+      "splash": {
+        "maxTargets": 1
+      }
+    },
+    "customBattle": {
+      "cost": 375
+    },
+    "campaign": {
+      "recruitmentCost": 375,
+      "upkeep": 100,
+      "recruitmentTurns": 1
+    },
+    "attributes": [
+      "stalk_in_forest"
+    ],
+    "sources": {
+      "publicStats": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; public fields: land_units, armour/shield, melee_weapons and verified projectile/explosion rows; pinned PARTIAL source SHA256 9f4dd0f3890d6d07804ff6e075e02c346178f316b0c5d388e0e82c4e935a2b65; original generated/wh3/refresh-9.0.2/pilot/units/sample-04.result.json SHA256 2e4c6b3145360da8b3cc0470ce1dce1bf5d0612b3a92d92b2c9fd6e287f7ee4d; omissions reviewed separately; incomplete optional ID groups omitted, not absent in-game",
+      "hiddenStats": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; hidden fields: unambiguous battle_entity properties, weapon splash, projectile calibration/reload/penetration",
+      "campaign": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; main_units recruitment_cost/upkeep_cost/create_time and multiplayer_cost are base values only"
+    }
+  },
+  {
+    "id": "ca_unit_wh_main_emp_inf_spearmen_1",
+    "name": "Spearmen (Shields)",
+    "factionId": "empire",
+    "summary": "",
+    "gameVersion": "9.0.2.0",
+    "source": "CA base DB · WH3 9.0.2.0 · reviewed field subset · tools/wh3-importer/promotion/PARTIAL_REVIEW.md#sample-05",
+    "tags": [],
+    "classification": {
+      "category": "Melee Infantry",
+      "tier": 1
+    },
+    "entities": {
+      "entitySize": "small",
+      "mass": 100
+    },
+    "movement": {
+      "canSkirmish": false
+    },
+    "defense": {
+      "armor": 30,
+      "meleeDefense": 42,
+      "leadership": 60,
+      "shieldBlockChance": 35,
+      "projectilePenetrationResistance": 1
+    },
+    "melee": {
+      "damage": {
+        "base": 19,
+        "armorPiercing": 6,
+        "bonusVsLarge": 15,
+        "bonusVsInfantry": 0
+      },
+      "meleeAttack": 20,
+      "chargeBonus": 4,
+      "attackInterval": 4.4,
+      "weaponLength": 1,
+      "splash": {
+        "maxTargets": 1
+      }
+    },
+    "customBattle": {
+      "cost": 350
+    },
+    "campaign": {
+      "recruitmentCost": 350,
+      "upkeep": 94,
+      "recruitmentTurns": 1
+    },
+    "attributes": [
+      "charge_defense_vs_large",
+      "charge_reflection",
+      "stalk_in_forest"
+    ],
+    "sources": {
+      "publicStats": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; public fields: land_units, armour/shield, melee_weapons and verified projectile/explosion rows; pinned PARTIAL source SHA256 9f4dd0f3890d6d07804ff6e075e02c346178f316b0c5d388e0e82c4e935a2b65; original generated/wh3/refresh-9.0.2/pilot/units/sample-05.result.json SHA256 c029f22ce509ac465ab2da71bb81aa72a2486c8b09e2cceffd68454e9bb2b2c3; omissions reviewed separately; incomplete optional ID groups omitted, not absent in-game",
+      "hiddenStats": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; hidden fields: unambiguous battle_entity properties, weapon splash, projectile calibration/reload/penetration",
+      "campaign": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; main_units recruitment_cost/upkeep_cost/create_time and multiplayer_cost are base values only"
+    }
+  },
+  {
+    "id": "ca_unit_wh2_dlc12_skv_veh_doom_flayer_0",
+    "name": "Doom-Flayers",
+    "factionId": "skaven",
+    "summary": "",
+    "gameVersion": "9.0.2.0",
+    "source": "CA base DB · WH3 9.0.2.0 · reviewed field subset · tools/wh3-importer/promotion/PARTIAL_REVIEW.md#sample-17",
+    "tags": [],
+    "classification": {
+      "category": "War Machine",
+      "tier": 3
+    },
+    "entities": {},
+    "movement": {
+      "canSkirmish": false
+    },
+    "defense": {
+      "armor": 90,
+      "meleeDefense": 26,
+      "leadership": 60,
+      "shieldBlockChance": 0
+    },
+    "melee": {
+      "damage": {
+        "base": 15,
+        "armorPiercing": 45,
+        "bonusVsLarge": 0,
+        "bonusVsInfantry": 35
+      },
+      "meleeAttack": 25,
+      "chargeBonus": 40,
+      "attackInterval": 4,
+      "weaponLength": 5,
+      "splash": {
+        "maxTargets": 2,
+        "maxTargetSize": "very_large"
+      }
+    },
+    "customBattle": {
+      "cost": 1050
+    },
+    "campaign": {
+      "recruitmentCost": 1100,
+      "upkeep": 300,
+      "recruitmentTurns": 2
+    },
+    "attributes": [
+      "causes_fear"
+    ],
+    "sources": {
+      "publicStats": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; public fields: land_units, armour/shield, melee_weapons and verified projectile/explosion rows; pinned PARTIAL source SHA256 9f4dd0f3890d6d07804ff6e075e02c346178f316b0c5d388e0e82c4e935a2b65; original generated/wh3/refresh-9.0.2/pilot/units/sample-17.result.json SHA256 a7d880bb91c7f6900c6b781cab349d98d3f22da1efed6a51e1555943feeae1f5; omissions reviewed separately; incomplete optional ID groups omitted, not absent in-game",
+      "hiddenStats": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; hidden fields: unambiguous battle_entity properties, weapon splash, projectile calibration/reload/penetration",
+      "campaign": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; main_units recruitment_cost/upkeep_cost/create_time and multiplayer_cost are base values only"
+    }
+  },
+  {
+    "id": "ca_unit_wh_dlc04_vmp_inf_sternsmen_0",
+    "name": "The Sternsmen (Grave Guard)",
+    "factionId": "vampire_counts",
+    "summary": "",
+    "gameVersion": "9.0.2.0",
+    "source": "CA base DB · WH3 9.0.2.0 · reviewed field subset · tools/wh3-importer/promotion/PARTIAL_REVIEW.md#sample-22",
+    "tags": [],
+    "classification": {
+      "category": "Melee Infantry",
+      "tier": 3
+    },
+    "entities": {
+      "entitySize": "small",
+      "mass": 100
+    },
+    "movement": {
+      "canSkirmish": false
+    },
+    "defense": {
+      "armor": 90,
+      "meleeDefense": 45,
+      "leadership": 60,
+      "shieldBlockChance": 55,
+      "projectilePenetrationResistance": 1
+    },
+    "melee": {
+      "damage": {
+        "base": 28,
+        "armorPiercing": 12,
+        "bonusVsLarge": 0,
+        "bonusVsInfantry": 8
+      },
+      "meleeAttack": 34,
+      "chargeBonus": 8,
+      "attackInterval": 4.4,
+      "weaponLength": 1,
+      "splash": {
+        "maxTargets": 1
+      }
+    },
+    "customBattle": {
+      "cost": 1150
+    },
+    "campaign": {
+      "recruitmentCost": 1150,
+      "upkeep": 288,
+      "recruitmentTurns": 2
+    },
+    "attributes": [
+      "causes_fear",
+      "charge_defense",
+      "stalk_in_forest",
+      "undead"
+    ],
+    "passiveAbilities": [
+      "regeneration",
+      "crumbling",
+      "disintegrating"
+    ],
+    "sources": {
+      "publicStats": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; public fields: land_units, armour/shield, melee_weapons and verified projectile/explosion rows; pinned PARTIAL source SHA256 9f4dd0f3890d6d07804ff6e075e02c346178f316b0c5d388e0e82c4e935a2b65; original generated/wh3/refresh-9.0.2/pilot/units/sample-22.result.json SHA256 d09a02c146a8e4722dff08a2e78b179fafc3b2563ab40f0d29b188fbf4a4b056; omissions reviewed separately; incomplete optional ID groups omitted, not absent in-game",
+      "hiddenStats": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; hidden fields: unambiguous battle_entity properties, weapon splash, projectile calibration/reload/penetration",
+      "campaign": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; main_units recruitment_cost/upkeep_cost/create_time and multiplayer_cost are base values only"
+    }
   }
 ]

@@ -20,5 +20,23 @@
     "gameVersion": "9.0.2.0",
     "source": "Reviewed primary catalog alias: wh_main_group_chaos → warriors_of_chaos; promotion/PROMOTION.md",
     "tags": []
+  },
+  {
+    "id": "empire",
+    "name": "Empire",
+    "subtitle": "Primary catalog · wh_main_group_empire",
+    "description": "검토된 military permission의 기본 catalog 분류입니다. 승인된 production 부분집합만 포함하며, 전체 roster나 캠페인 모집 가능성을 뜻하지 않습니다.",
+    "gameVersion": "9.0.2.0",
+    "source": "Reviewed primary catalog alias: wh_main_group_empire → empire; promotion/PARTIAL_REVIEW.md",
+    "tags": []
+  },
+  {
+    "id": "skaven",
+    "name": "Skaven",
+    "subtitle": "Primary catalog · wh2_main_skv",
+    "description": "검토된 military permission의 기본 catalog 분류입니다. 승인된 production 부분집합만 포함하며, 전체 roster나 캠페인 모집 가능성을 뜻하지 않습니다.",
+    "gameVersion": "9.0.2.0",
+    "source": "Reviewed primary catalog alias: wh2_main_skv → skaven; promotion/PARTIAL_REVIEW.md",
+    "tags": []
   }
 ]

@@ -24,14 +24,17 @@ function leaves(value, prefix = '') {
 
 // Check the normalizer result again at the production boundary. Uncertainty
 // records stay in the source/review; their Unit paths must remain absent.
-export function assertFirstProductionResult(result, validate, factionIds) {
-  const review = firstProductionReview, unit = result?.unit, identity = result?.provenance?.identity;
+export function assertReviewedProductionResult(result, validate, factionIds, review, unmappedPolicy = null) {
+  const unit = result?.unit, identity = result?.provenance?.identity;
   requireGate(result?.format === 'warhammer-vault-normalized-unit-v1' && result.mode === 'conservative' && result.sourceKind === 'ca-pack', 'not a conservative CA static result');
   requireGate(identity?.caMainUnitKey === review.mainKey && identity.caLandUnitKey === review.landKey && identity.internalId === review.id, 'exact source identity mismatch');
   requireGate(unit?.id === review.id && unit.name === review.name && unit.factionId === review.factionId, 'presentation identity mismatch');
   requireGate(identity.primaryCatalogGroup === review.militaryGroup && !result.provenance.catalog, 'not the reviewed primary static catalog affiliation');
   requireGate(unit.gameVersion === hotfixSnapshot.gameVersion && isReviewedSource(result.provenance.rawTrace, '') && isReviewedSource(result.provenance.affiliationEvidence, ''), 'unreviewed game/schema/pack snapshot');
-  requireGate(result.provenance.baseValuesOnly === true && result.unmapped.length === 0, 'non-base values or unmapped IDs');
+  requireGate(result.provenance.baseValuesOnly === true, 'non-base values');
+  requireGate(unmappedPolicy ? isDeepStrictEqual(result.unmapped, unmappedPolicy.expected) &&
+    (result.unmapped.length === 0 || (unmappedPolicy.omittedGroups.length > 0 && unmappedPolicy.omittedGroups.every(field => get(unit, field) === undefined))) :
+    result.unmapped.length === 0, 'unmapped IDs need exact retained review and complete group omission');
   requireGate(!unit.missile, 'missile promotion is outside this first batch');
   for (const group of ['classification', 'entities', 'movement', 'defense', 'melee']) requireGate(object(unit[group]), `missing required ${group} group`);
   requireGate(object(unit.melee.damage) && unit.classification.category.length > 0 && typeof unit.source === 'string' && unit.source.length > 0, 'missing damage/category/source');
@@ -57,6 +60,10 @@ export function assertFirstProductionResult(result, validate, factionIds) {
     requireGate(value === undefined || (Number.isInteger(value) && value > 0), `invalid positive integer at ${field}`);
   }
   requireGate(validate([unit], factionIds).length === 0, 'app Unit validator rejected the production record');
+}
+
+export function assertFirstProductionResult(result, validate, factionIds) {
+  return assertReviewedProductionResult(result, validate, factionIds, firstProductionReview);
 }
 
 const productionFaction = () => ({

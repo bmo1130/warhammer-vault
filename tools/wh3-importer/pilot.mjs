@@ -104,7 +104,7 @@ export function renderPilotSummary(manifest, report, results) {
     `Source: ${manifest.sourceKind}; WH3 ${manifest.provenance.gameVersion}; RPFM ${manifest.provenance.rpfmVersion}; schema ${manifest.provenance.schemaFormatVersion}.`,
     `Attempted ${results.length}; validated ${manifest.unitsCompleted}; CLEAN ${report.counts.CLEAN}, PARTIAL ${report.counts.PARTIAL}, BLOCKED ${report.counts.BLOCKED}.`,
     `Elapsed ${manifest.elapsedMs} ms; traced ${manifest.rowsTraced} rows; ${report.coverage.raw.tables.length} selected table names; ${manifest.decodedTableFiles} cached decoded files.`,
-    '', 'Partial results are diagnostic artifacts, never production-ready Units. Identity ambiguity is retained; core paid policies run only in separate regression integration.', '',
+    '', 'Pilot outputs are staging diagnostics, not automatic production admission. PARTIAL does not veto verified field subsets: production requires a separate pinned field-group review and omission gate. Identity ambiguity is retained; core paid policies run only in separate regression integration.', '',
     '| Sample | Discovered roots | Outcome | Reason |', '| --- | --- | --- | --- |',
     ...results.map(r => `| ${r.sample.displayName} | ${r.discovery?.candidates.map(c => c.mainKey).join('; ') ?? 'unavailable'} | ${r.status} | ${r.sample.reason} |`),
     '', '| Exception category | Count | Severity | Common cause | Required before full import? |', '| --- | ---: | --- | --- | --- |',

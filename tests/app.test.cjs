@@ -27,7 +27,7 @@ test('searches, ID lookups and faction indexes use migrated unit classification'
   assert(gameRepository.search('케믈러').some((item) => item.type === 'lord'));
   assert.deepEqual(gameRepository.search('  '), []);
   assert.equal(gameRepository.getUnit('missing'), undefined);
-  assert.equal(gameRepository.getFactionUnits('vampire_counts').length, 5);
+  assert.equal(gameRepository.getFactionUnits('vampire_counts').filter(unit => unit.gameVersion === 'sample').length, 5);
   assert.deepEqual(gameRepository.getFactionUnits('missing'), []);
 });
 
