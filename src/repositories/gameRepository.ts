@@ -31,6 +31,7 @@ export const gameRepository = {
   getFaction: (id: string) => factionById.get(id),
   getLord: (id: string) => lordById.get(id),
   getUnit: (id: string) => unitById.get(id),
+  listUnits: (): readonly Unit[] => units,
   getFactionLords: (id: string) => lordsByFaction.get(id) ?? [],
   getFactionUnits: (id: string) => unitsByFaction.get(id) ?? [],
   getEntityName: (type: EntityType, id: string) => {

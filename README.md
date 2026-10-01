@@ -22,6 +22,8 @@ npm run dev
 - `src/domain/entities.ts`: 엔티티 타입과 명시적 URL 매핑, 경로 생성 및 표시 이름.
 - `src/domain/appIdentity.ts`: 내부 앱 이름과 백업 식별자.
 - `src/repositories/gameRepository.ts`: ID 및 팩션별 Map 인덱스로 게임 원본 조회, 이름 검색.
+- `src/repositories/unitCatalogRepository.ts`: 원본과 diagnostic 저장소에서 이름·ID·출처 종류만 가져오는 읽기 전용 UI 목록. 같은 ID가 충돌하면 명시적으로 오류를 내며 이름으로 합치지 않습니다.
+- `src/repositories/archivePresentation.ts`: 홈 검색과 개인 기록의 표시 이름을 연결하는 작은 adapter.
 - `src/repositories/wikiRepository.ts`: IndexedDB에 개인 서술, 메모, 즐겨찾기, 최근 항목 저장. 백업 검증 및 복원.
 - `src/App.tsx`: 앱 셸과 라우팅.
 - `src/pages`: 홈, 팩션 목록 및 상세, 군주·유닛 상세, 메모, 백업, 없는 항목 화면.
@@ -61,13 +63,21 @@ ID, 이름, `factionId`, 설명과 출처 메타데이터는 최상위에 유지
 
 ### 유닛 상세 화면의 diagnostic 자료
 
-홈 하단의 접힌 **관찰 자료가 있는 유닛**에서 Black Coach, Skeleton Chariots, Dread Saurian, Necrofex Colossus, Free Company Militia를 엽니다. 기존 `/units/:id`와 `UnitPage`를 재사용하며, 이 5개 항목은 **diagnostic-only**입니다. Production Unit을 생성하지 않고 기본 스탯 표 대신 `Production data unavailable`을 표시합니다. 기존 production 검색·팩션 목록·샘플 데이터는 그대로입니다. Diagnostic-only 항목의 즐겨찾기·개인 기록은 이번 범위에 포함하지 않습니다.
+홈의 **유닛 탐색**과 데스크톱·모바일의 **유닛** 메뉴에서 `/units`를 엽니다. 현재 일반 샘플 5개와 diagnostic-only 5개를 검색하고 전체 / 일반 Unit / Diagnostic evidence 있음 / Diagnostic-only로 필터링할 수 있습니다. 검색어와 필터는 URL에 유지됩니다. 홈 검색도 팩션·군주·일반 유닛에 더해 diagnostic 이름·ID·source key를 찾습니다. 이 목록은 표시용 catalog이며 production 검색 API와 팩션 roster는 그대로입니다.
+
+Black Coach, Skeleton Chariots, Dread Saurian, Necrofex Colossus, Free Company Militia는 **diagnostic-only**입니다. 기존 `/units/:id`와 `UnitPage`를 재사용하되 Production Unit이나 가짜 기본 스탯을 생성하지 않고 `Production data unavailable`을 표시합니다. 일반 Unit도 현재는 미확인 수치를 비워 둔 샘플이라는 점을 목록에 명시합니다. Diagnostic 상세의 짧은 자료 범위 요약은 저장된 path·case 건수일 뿐 신뢰도 점수나 실제 개체·발사 수가 아닙니다.
+
+Diagnostic-only도 기존 `unit:<id>` 개인 기록 대상으로 즐겨찾기, 최근 본 항목, 평가·운용 메모의 작성·수정·삭제를 지원합니다. 홈은 catalog의 정확한 ID로 이름과 route를 찾습니다. 현재 목록에서 사라진 과거 ID는 연결 없는 안내 행으로 표시하고 저장 내용은 삭제하지 않습니다. 개인 기록은 evidence와 별도 영역·IndexedDB에만 저장됩니다. 기존 v1 JSON 백업에 diagnostic 기록도 그대로 포함되며, 백업 schema나 parser 변경 없이 복원합니다. 백업에는 production 데이터와 diagnostic evidence가 포함되지 않습니다. 같은 브라우저라도 접속 origin이 다르면 개인 저장소는 별개입니다.
 
 `UnitDiagnosticSection`은 기본적으로 접힌 **데이터 해석 근거**에서 정적 entity/weapon/projectile 후보, runtime context view와 논리적 수·HP, 조건별 ActiveProjectileContext, 기존 scoped precedence를 구분해 표시합니다. `OBSERVED_RUNTIME`은 record key 관찰이고 배치 확정이 아닙니다. `OBSERVED_ONCE`도 전체 게임 규칙 검증을 뜻하지 않습니다. `UNVERIFIED / INCONCLUSIVE`, capture 보류·불완전, 미검토 정적 구성은 유지합니다. 연결 수와 context view 수는 모델/발사 수로 합산하지 않습니다. 출처·snapshot·schema·pack hash·관찰 참조는 별도로 펼칩니다.
 
 `unitDiagnosticRepository`는 정확한 diagnostic catalog ID로 `src/data/unitDiagnostics.json`만 읽습니다. 표시용 JSON은 완료된 **2026-10-01 / 9.0.2.0 batch**의 최소 projection이며, 새 checkout에서도 UI를 볼 수 있도록 커밋했습니다. 개인 절대 경로와 raw debug 객체는 포함하지 않습니다. `node scripts/project-unit-diagnostics.mjs`는 명시된 로컬 완료 batch, 검증 결과, 기존 static index/candidates가 있을 때만 이 표시 파일을 재생성합니다. 원본 SHA256도 보존합니다. 이 명령은 extraction/ingestion/normalization이나 precedence 재추론을 수행하지 않습니다. 현재 batch의 5개 항목만 지원하며 자동 최신 자료 선택이나 production 승격은 없습니다.
 
 `tests/unit-diagnostics.test.cjs`는 기존 화면·목록의 유지, diagnostic-only route, 복합 구성·복수 missile source, static-only/projectile 관찰 구분, 불확실성과 provenance 표시를 검증합니다. 로컬 완료 자료가 있을 때는 원본 hash·identity·모든 candidate path·관찰값의 일치도 검사합니다.
+
+`tests/unit-catalog.test.cjs`는 catalog 분리·ID 충돌, 검색과 필터, 상세·홈·내비게이션 렌더링, stale target 표시를 검증합니다. `tests/wiki-workflow.test.cjs`는 작은 IndexedDB 계약 double로 개인 기록 CRUD와 diagnostic·샘플·과거 ID의 v1 백업 왕복을 검사합니다. 이 double은 실제 브라우저 저장소 구현을 대체하지 않습니다.
+
+2026-10-02 브라우저 확인: 별도 localhost origin에서 홈 검색 → Dread Saurian 상세 → 근거·provenance 열람 → 즐겨찾기·기록 저장/수정 → 홈 재진입 → JSON 내보내기/복원 → 동일 이름·route·원래 기록 복구를 확인했습니다. 일반 유닛 상세와 키보드 필터도 확인했으며, 1280px·768px·320px 화면을 점검했습니다. 320px의 기존 body 최소 너비로 생기던 가로 넘침을 제거했습니다. 실제 휴대폰·터치 키보드와 브라우저 간 동기화는 검증 범위가 아닙니다.
 
 ### 실행할 검사
 

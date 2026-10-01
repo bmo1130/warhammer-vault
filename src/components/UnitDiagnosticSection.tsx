@@ -73,6 +73,7 @@ export default function UnitDiagnosticSection({ evidence }: { evidence?: UnitDia
       <summary>데이터 해석 근거 <span>정적 구성과 실제 관찰 · {snapshot.gameVersion}</span></summary>
       <div className="diagnostic-content">
         <p className="diagnostic-note">확보된 diagnostic evidence입니다. 기본 스탯이나 production 값으로 승격되지 않았으며, 관찰된 설정과 snapshot 범위에만 해당합니다.</p>
+        <p className="diagnostic-note diagnostic-legend">상태 안내 · OBSERVED_RUNTIME: 해당 record key의 런타임 관찰 · OBSERVED_ONCE: 해당 범위의 관찰 · INCONCLUSIVE: 결론 불가 · UNVERIFIED: 미검증. 전체 유닛의 종합 판정이 아닙니다.</p>
         <h3>정적 entity 구성</h3>
         {entities.length ? <div className="diagnostic-rows">{entities.map(({ row, paths }, index) => <div className="diagnostic-row" key={index}>
           <strong>{roleLabels[row.role] ?? row.role}</strong><div><Keys values={[row.entityKey]}/>
