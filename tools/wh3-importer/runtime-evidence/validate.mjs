@@ -6,6 +6,11 @@ const number = x => typeof x === 'number' && Number.isFinite(x) && x >= 0 && x <
 const uniqueStrings = x => Array.isArray(x) && x.every(text) && new Set(x).size === x.length;
 const entityTypes = new Set(['VISIBLE_COMPONENT_COUNT', 'TARGETABLE_COMPONENT', 'COMPONENT_CASUALTY', 'COMPONENT_DEATH', 'COMPONENT_WEAPON_DISABLE']);
 const missileTypes = new Set(['PROJECTILE_PROFILE_ACTIVE', 'WEAPON_PATH_ACTIVE', 'WEAPON_REPLACEMENT', 'WEAPON_COEXISTENCE', 'OVERRIDE_PRECEDENCE', 'AMMO_POOL_CONSUMPTION', 'AMMO_POOL_SHARING', 'FIRE_IN_MELEE', 'RIDER_LOSS_WEAPON_DISABLE']);
+const ccoFields = {
+  CCO_NUM_ENTITIES: ['NumEntities'], CCO_NUM_ENTITIES_INITIAL: ['NumEntitiesInitial'], CCO_HEALTH_VALUE: ['HealthValue'], CCO_HEALTH_MAX: ['HealthMax'],
+  CCO_COMPONENT_LIST_COUNT: ['ManList.Size', 'MountList.Size', 'EngineList.Size', 'EntityList.Size'], CCO_ACTIVE_PROJECTILE_CONTEXT: ['ActiveProjectileContext.Key'],
+  CCO_CURSOR_ENTITY: ['EntityContext.EntityRecordContext.Key'], CCO_AMMO_PERCENT_CHANGE: ['PrimaryAmmoPercent', 'SecondaryAmmoPercent'],
+};
 export function validateRuntimeEvidence(document, index) {
   const errors = [], records = [], ids = new Set();
   if (document?.format !== FORMAT || !Array.isArray(document.observations) || document.observations.length > 10000) return { status: 'REJECTED', errors: ['Invalid format/observations or recording limit exceeded.'], records: [], conflicts: [] };
@@ -48,18 +53,25 @@ export function validateRuntimeEvidence(document, index) {
     if (o.pathBinding === 'EXACT_PATH_OBSERVED' && !(o.entityPathIds?.length || o.missilePathIds?.length)) fail('Exact path binding requires a path.');
     if (o.pathBinding === 'EXACT_PATH_OBSERVED' && entityTypes.has(o.observationType) && !o.entityPathIds?.length) fail('Entity observation needs an exact entity path.');
     if (o.pathBinding === 'EXACT_PATH_OBSERVED' && missileTypes.has(o.observationType) && !o.missilePathIds?.length) fail('Weapon observation needs an exact missile path.');
-    if (o.provenance?.kind !== 'RUNTIME_MANUAL' || !text(o.provenance?.observer) || !Array.isArray(o.provenance?.references) || o.provenance.references.some(x => !text(x)) || !(o.provenance.observedAt === null || (text(o.provenance.observedAt) && Number.isFinite(Date.parse(o.provenance.observedAt))))) fail('Invalid separate runtime provenance.');
+    if (!['RUNTIME_MANUAL', 'RUNTIME_CCO'].includes(o.provenance?.kind) || !text(o.provenance?.observer) || !Array.isArray(o.provenance?.references) || o.provenance.references.some(x => !text(x)) || !(o.provenance.observedAt === null || (text(o.provenance.observedAt) && Number.isFinite(Date.parse(o.provenance.observedAt))))) fail('Invalid separate runtime provenance.');
+    if (o.provenance?.kind === 'RUNTIME_CCO' && (!text(o.provenance.captureId) || !text(o.provenance.ccoField) || typeof o.observationType !== 'string' || !o.observationType.startsWith('CCO_') || !Array.isArray(o.provenance.references) || !o.provenance.references.length)) fail('CCO observations require a raw capture reference and a CCO observation type.');
+    if (o.provenance?.kind === 'RUNTIME_CCO' && !(typeof o.observationType === 'string' && Object.hasOwn(ccoFields, o.observationType) && ccoFields[o.observationType].includes(o.provenance.ccoField))) fail('CCO field/type mismatch.');
     const v = o.observation;
     if (!v || !['CONCLUSIVE', 'INCONCLUSIVE'].includes(v.result)) fail('Observation result required.');
     if (v?.result === 'CONCLUSIVE') {
       if (o.confidence === 'INCONCLUSIVE') fail('Conclusive result cannot have inconclusive confidence.');
       if (shape === 'number') {
         if (!number(v.value) || !text(v.unit) || (['CARD_MODEL_COUNT', 'VISIBLE_COMPONENT_COUNT'].includes(o.observationType) && (!Number.isInteger(v.value) || v.unit !== 'models')) || (o.observationType === 'CARD_HEALTH' && v.unit !== 'hp') || (o.observationType === 'SUMMONED_DURATION' && v.unit !== 'seconds')) fail('Invalid numeric value/unit.');
+        if (['CCO_NUM_ENTITIES', 'CCO_NUM_ENTITIES_INITIAL', 'CCO_COMPONENT_LIST_COUNT'].includes(o.observationType) && (!Number.isInteger(v.value) || v.unit !== 'runtime_entities')) fail('CCO counts are runtime entities, not displayed models.');
+        if (['CCO_HEALTH_VALUE', 'CCO_HEALTH_MAX'].includes(o.observationType) && v.unit !== 'runtime_hp') fail('CCO health is separate from card HP.');
       } else if (shape === 'state' && !['ACTIVE', 'INACTIVE', 'YES', 'NO', 'OBSERVED', 'NOT_OBSERVED'].includes(v.state)) fail('Invalid observed state.');
       else if (shape === 'description' && !text(v.description)) fail('Observed description required.');
       else if (shape === 'relationship' && !['REPLACES', 'COEXISTS', 'PRECEDES', 'SHARES', 'SEPARATE', 'DISABLES', 'UNCHANGED'].includes(v.relationship)) fail('Invalid relationship.');
       else if (shape === 'ammo' && (!number(v.before) || !number(v.after) || !text(v.poolLabel))) fail('Record raw before/after ammo and visible pool label; do not aggregate.');
       else if (shape === 'comparison' && (!Array.isArray(v.settings) || v.settings.length < 2 || v.settings.some(x => !x || !UNIT_SIZES.slice(0, 4).includes(x.unitSize) || !number(x.value)) || new Set(v.settings.map(x => x.unitSize)).size !== v.settings.length)) fail('Record distinct settings, without a scaling formula.');
+      if (o.observationType === 'CCO_AMMO_PERCENT_CHANGE' && (!number(v.before) || !number(v.after) || v.before > 1 || v.after > 1 || !['PrimaryAmmoPercent', 'SecondaryAmmoPercent'].includes(v.poolLabel))) fail('CCO ammo percent must be 0..1 in its own named pool.');
+      if (o.observationType === 'CCO_ACTIVE_PROJECTILE_CONTEXT' && !s?.missile?.paths?.some(p => p.projectilePaths?.some(q => q.key === v.description))) fail('CCO projectile key absent from the exact source sidecar.');
+      if (o.observationType === 'CCO_CURSOR_ENTITY' && !s?.entity?.paths?.some(p => p.entityKey === v.description)) fail('CCO entity key absent from the exact source sidecar.');
     }
     // Unexpected payload fields cannot smuggle derived formulas or unvalidated path references.
     const shapeKeys = { number: ['value', 'unit'], state: ['state'], description: ['description'], relationship: ['relationship'], ammo: ['before', 'after', 'poolLabel'], comparison: ['settings'] };

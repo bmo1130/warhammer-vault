@@ -1,6 +1,7 @@
 /** Runtime observations never belong to CA DIRECT/GENERATED/CURATED field provenance. */
 export type UnitSize = 'SMALL' | 'MEDIUM' | 'LARGE' | 'ULTRA' | 'NOT_RECORDED';
 export type ObservationType = 'CARD_MODEL_COUNT' | 'CARD_HEALTH' | 'VISIBLE_COMPONENT_COUNT' | 'TARGETABLE_COMPONENT' | 'COMPONENT_CASUALTY' | 'COMPONENT_DEATH' | 'COMPONENT_WEAPON_DISABLE' | 'UNIT_SIZE_COMPARISON'
+  | 'CCO_NUM_ENTITIES' | 'CCO_NUM_ENTITIES_INITIAL' | 'CCO_HEALTH_VALUE' | 'CCO_HEALTH_MAX' | 'CCO_COMPONENT_LIST_COUNT' | 'CCO_ACTIVE_PROJECTILE_CONTEXT' | 'CCO_CURSOR_ENTITY' | 'CCO_AMMO_PERCENT_CHANGE'
   | 'PROJECTILE_PROFILE_ACTIVE' | 'WEAPON_PATH_ACTIVE' | 'WEAPON_REPLACEMENT' | 'WEAPON_COEXISTENCE' | 'OVERRIDE_PRECEDENCE' | 'AMMO_POOL_CONSUMPTION' | 'AMMO_POOL_SHARING' | 'FIRE_IN_MELEE' | 'RIDER_LOSS_WEAPON_DISABLE'
   | 'RECRUITMENT_AVAILABLE' | 'SUMMONED_MAIN_IDENTITY' | 'SUMMONED_DURATION' | 'SUPPLY_VARIANT_AVAILABILITY' | 'ARKHAN_VARIANT_AVAILABILITY' | 'NONSTANDARD_SCENARIO_AVAILABILITY';
 export interface ConditionState { status: 'KNOWN' | 'NOT_RECORDED'; activeKeys: string[]; labels: string[] }
@@ -11,7 +12,7 @@ export interface RuntimeSetup {
   mods: { status: 'NONE' | 'ENABLED' | 'NOT_RECORDED'; ids: string[] }; rank: number | null; saveReference: string; sessionPhase: string;
 }
 export type RuntimeResult = { result: 'INCONCLUSIVE'; notes?: string } | ({ result: 'CONCLUSIVE'; notes?: string } & (
-  { value: number; unit: 'models' | 'hp' | 'seconds' } | { state: 'ACTIVE' | 'INACTIVE' | 'YES' | 'NO' | 'OBSERVED' | 'NOT_OBSERVED' } |
+  { value: number; unit: 'models' | 'hp' | 'seconds' | 'runtime_entities' | 'runtime_hp' } | { state: 'ACTIVE' | 'INACTIVE' | 'YES' | 'NO' | 'OBSERVED' | 'NOT_OBSERVED' } |
   { description: string } | { relationship: 'REPLACES' | 'COEXISTS' | 'PRECEDES' | 'SHARES' | 'SEPARATE' | 'DISABLES' | 'UNCHANGED' } |
   { before: number; after: number; poolLabel: string } | { settings: { unitSize: UnitSize; value: number }[] }));
 export interface RuntimeObservation {
@@ -20,7 +21,7 @@ export interface RuntimeObservation {
   entityPathIds: string[]; missilePathIds: string[]; identityVerification: { level: 'EXACT_SOURCE_OBSERVED' | 'CONTEXT_ONLY' | 'NOT_RECORDED'; reference: string | null };
   pathBinding: 'EXACT_PATH_OBSERVED' | 'COMPONENT_ROLE_ONLY' | 'NOT_RECORDED'; observation: RuntimeResult;
   confidence: 'OBSERVED_ONCE' | 'REPEATED' | 'CROSS_SETTING_CONFIRMED' | 'INCONCLUSIVE'; repetitions: number;
-  provenance: { kind: 'RUNTIME_MANUAL'; observer: string; observedAt: string | null; references: string[]; notes?: string };
+  provenance: { kind: 'RUNTIME_MANUAL' | 'RUNTIME_CCO'; observer: string; observedAt: string | null; references: string[]; notes?: string; captureId?: string; ccoField?: string };
 }
 export interface RuntimeEvidence { format: 'warhammer-vault-runtime-evidence-v1'; observations: RuntimeObservation[] }
 export const FORMAT: RuntimeEvidence['format'];

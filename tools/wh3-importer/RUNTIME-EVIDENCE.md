@@ -6,11 +6,11 @@ This pipeline prepares observations; it does not run WH3 or import production Un
 
 `runtime-evidence/contract.mjs` and `contract.d.mts` define `warhammer-vault-runtime-evidence-v1`. `validate.mjs` provides bounded JSON loading, validation, conflict detection and scoped resolution proposals. `static-index.mjs` replays saved entity/missile contracts against their schema evidence and traces, re-evaluates curated catalog decisions, and requires a common game/schema/named-pack fingerprint before preparing the index.
 
-Static evidence contains exact main/land identities, curated contexts, CA rows, localisation and sidecars. Runtime evidence has separate `RUNTIME_MANUAL` provenance, observer/time/references, actual setup and observations. No runtime function calls a Unit writer or changes static provenance. An index digest detects accidental changes; it is not a cryptographic signature proving an untrusted artifact genuine. Prepare only from trusted reviewed artifacts.
+Static evidence contains exact main/land identities, curated contexts, CA rows, localisation and sidecars. Runtime evidence has separate `RUNTIME_MANUAL` or `RUNTIME_CCO` provenance, observer/time/references, setup and observations. No runtime function calls a Unit writer or changes static provenance. An index digest detects accidental changes; it is not a cryptographic signature proving an untrusted artifact genuine. Prepare only from trusted reviewed artifacts.
 
 Every observation includes exact `sourceMainKey`, `sourceLandKey`, `contextId` (explicit null only for a preserved pilot diagnostic source), `catalogEntryId`, actual `gameVersion`, static snapshot ID, scenario/trial IDs, Unit Size, setup, sample point, subject/component label and typed result. The catalog ID and CA main key are different identities. A display name cannot connect evidence. The prepared index includes 19 reviewed contexts and 8 diagnostic comparison sources; null is not a new roster context or production identity.
 
-**Expected identity is not observed identity.** Jobs prefill the source being investigated. Card name/faction alone do not prove the live main key, or which DB weapon path is active. Record these observations as `CONTEXT_ONLY`; validation preserves them as `VALIDATED_IDENTITY_PENDING`. Mark `EXACT_SOURCE_OBSERVED` only with a trustworthy reference exposing that identity. No known repo console/mod command supplies it. Availability and name collisions must not be settled by inventing a command or guessing the key. Component/weapon observations likewise distinguish `COMPONENT_ROLE_ONLY` from `EXACT_PATH_OBSERVED`. Static path IDs are candidate anchors, not activation proof.
+**Expected identity is not observed identity.** Jobs prefill the source being investigated. Card name/faction alone do not prove the live main key, or which DB weapon path is active. Record these observations as `CONTEXT_ONLY`; validation preserves them as `VALIDATED_IDENTITY_PENDING`. Mark `EXACT_SOURCE_OBSERVED` only with a trustworthy reference exposing that identity. The read-only [battle CCO probe](CCO-RUNTIME-PROBE.md) can collect live main/land keys for P0 sources; unsupported identity fields remain pending. Availability and name collisions must not be settled by inventing a command or guessing the key. Component/weapon observations likewise distinguish `COMPONENT_ROLE_ONLY` from `EXACT_PATH_OBSERVED`. Static path IDs are candidate anchors, not activation proof.
 
 ## Observation taxonomy
 
@@ -139,3 +139,11 @@ Total 6449 overlapping events, not unique blockers. Exact-ID backlog has 25 abil
 | Production eligible | 0 | 0 |
 
 Preparation reads/replays preserved runs rather than rerunning the 24/19 importer modes; no normalized Unit values or omissions change. Saved CA regressions and installed CA integration separately check the existing pipeline. Entity evidence is inspected for 25 subjects, missile evidence for 27; Free Company and Ratling comparison subjects have no new entity inspection here. The draft marks missing entity review as NOT ready, rather than interpreting it as a broken graph or silently complete.
+
+## Battle CCO collection for P0
+
+For automated exact-source snapshots, cursor component identities and missile
+traces, follow [CCO-RUNTIME-PROBE.md](CCO-RUNTIME-PROBE.md). The CCO adapter emits
+the same runtime evidence bundle format with separate `RUNTIME_CCO` provenance
+and CCO-specific logical-count/health types. Manual jobs and admission gates
+remain unchanged; raw CCO fields are not automatically card/display semantics.

@@ -161,6 +161,13 @@ firing/activation/pool semantics; this entity checklist does not resolve them.
 
 # Prepared recording workflow
 
+P0 composite-unit collection can now use the read-only
+[battle CCO probe](../CCO-RUNTIME-PROBE.md): F9 snapshot/cursor, then F10 missile
+trace. Prefer its direct list/identity/health/projectile/pool observations before
+attempting visual inference. Independent targetability, component HP allocation
+and simultaneous weapon attribution remain unresolved unless the observations
+actually distinguish them. No diagnostic DB pack has been generated.
+
 Follow [RUNTIME-EVIDENCE.md](../RUNTIME-EVIDENCE.md) for the interactive recorder,
 exact source/context contract, P0/P1/P2/P3 jobs and ingestion. The local bundle is
 `generated/wh3/runtime-evidence/evening-final-v2/`; 35 jobs/182 observation slots

@@ -3,6 +3,8 @@ import { createHash } from 'node:crypto';
 export const FORMAT = 'warhammer-vault-runtime-evidence-v1';
 export const UNIT_SIZES = Object.freeze(['SMALL', 'MEDIUM', 'LARGE', 'ULTRA', 'NOT_RECORDED']);
 export const OBSERVATION_TYPES = Object.freeze({
+  CCO_NUM_ENTITIES: 'number', CCO_NUM_ENTITIES_INITIAL: 'number', CCO_HEALTH_VALUE: 'number', CCO_HEALTH_MAX: 'number',
+  CCO_COMPONENT_LIST_COUNT: 'number', CCO_ACTIVE_PROJECTILE_CONTEXT: 'description', CCO_CURSOR_ENTITY: 'description', CCO_AMMO_PERCENT_CHANGE: 'ammo',
   CARD_MODEL_COUNT: 'number', CARD_HEALTH: 'number', VISIBLE_COMPONENT_COUNT: 'number',
   TARGETABLE_COMPONENT: 'state', COMPONENT_CASUALTY: 'state', COMPONENT_DEATH: 'state', COMPONENT_WEAPON_DISABLE: 'state', UNIT_SIZE_COMPARISON: 'comparison',
   PROJECTILE_PROFILE_ACTIVE: 'description', WEAPON_PATH_ACTIVE: 'state', WEAPON_REPLACEMENT: 'relationship', WEAPON_COEXISTENCE: 'relationship', OVERRIDE_PRECEDENCE: 'relationship',
