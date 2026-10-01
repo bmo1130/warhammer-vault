@@ -6,6 +6,7 @@ import { idMappings } from './ids.mjs';
 import { approvedCatalogContext, assertCatalogSnapshot } from '../catalog-identity/normalization-context.mjs';
 import { verifyMissileInspection } from '../missile-semantics/contract.mjs';
 import { verifyEntityInspection } from '../entity-semantics/contract.mjs';
+import { isReviewedSource } from '../reviewed-snapshots.mjs';
 
 const sizes = new Set(['tiny', 'small', 'medium', 'large', 'very_large']);
 const valid = (value, type) => type === 'boolean' ? typeof value === 'boolean' : type === 'size' ? sizes.has(value) : type === 'string' ? typeof value === 'string' && value.length > 0 : typeof value === 'number' && Number.isFinite(value) && (type !== 'integer' || Number.isInteger(value));
@@ -18,7 +19,7 @@ const set = (object, field, value) => {
 /** @returns {import('./normalizer.mjs').NormalizedUnitResult} */
 export function normalizeUnit(dump, context) {
   if (dump.format !== 'warhammer-vault-wh3-raw-v1' || !['ca-pack', 'fixture'].includes(dump.sourceKind)) throw new Error('Normalizer accepts CA raw traces or explicitly synthetic fixtures, never manual references.');
-  if (dump.sourceKind === 'ca-pack' && dump.unit.gameVersion !== supportedGameVersion) throw new Error('Game version is outside the reviewed normalization policy; review semantics before mapping.');
+  if (dump.sourceKind === 'ca-pack' && dump.unit.gameVersion !== supportedGameVersion && (dump.unit.gameVersion !== dump.provenance?.gameVersion || !isReviewedSource(dump.provenance, supportedGameVersion))) throw new Error('Game version/source snapshot is outside the reviewed normalization policy; review semantics before mapping.');
   const selectors = factSelectors(dump);
   const c = observationContext(dump, selectors), { fact } = selectors;
   const mainKey = fact(c.root, 'unit'), landKey = fact(c.land, 'key');

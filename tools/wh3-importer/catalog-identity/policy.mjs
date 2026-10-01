@@ -1,5 +1,6 @@
 import { connected, rawFact } from '../blocker-review/evidence.mjs';
 import { curatedDecisions, reviewedGameVersion } from './decisions.mjs';
+import { isReviewedSource } from '../reviewed-snapshots.mjs';
 
 export const catalogPolicy = Object.freeze({ id: 'warhammer-vault-faction-roster-v1',
   defaultScope: 'Explicitly reviewed player faction-roster contexts, including independent cross-faction equivalents.',
@@ -47,7 +48,7 @@ export function classifyCatalogCandidates(candidates, evidence, decisions = cura
     if (!sourceValid) reasons.push('SOURCE_IDENTITY_INCOMPLETE_OR_DUPLICATED');
     if (!decision) reasons.push('NO_EXACT_KEY_CURATED_DECISION');
     if (evidence.issues?.length) reasons.push('INCOMPLETE_DB_EVIDENCE');
-    if (evidence.sourceKind === 'ca-pack' && evidence.provenance?.gameVersion !== reviewedGameVersion) reasons.push('UNREVIEWED_GAME_VERSION');
+    if (evidence.sourceKind === 'ca-pack' && !isReviewedSource(evidence.provenance, reviewedGameVersion)) reasons.push('UNREVIEWED_GAME_VERSION');
     if (decision && (decision.expectedLandKey !== candidate.landKey || decision.expectedLocalisationKey !== candidate.localisation?.key)) reasons.push('CURATED_IDENTITY_DRIFT');
     const checkedEvidence = [];
     if (sourceValid && decision) for (const check of decision.checks) {

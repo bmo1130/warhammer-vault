@@ -26,6 +26,17 @@ async function fixture() {
 }
 const classify = async (f) => (await modules)[0].classifyCatalogCandidates(f.candidates, f.evidence, f.decisions);
 
+test('catalog hotfix review still requires the exact reviewed schema/pack snapshot', async () => {
+  const { hotfixSnapshot } = await import('../tools/wh3-importer/reviewed-snapshots.mjs');
+  const f = await fixture(); f.evidence.sourceKind = 'ca-pack';
+  f.evidence.provenance = { gameVersion: hotfixSnapshot.gameVersion, schemaSha256: hotfixSnapshot.schemaSha256,
+    packs: Object.entries(hotfixSnapshot.packs).map(([file_name, sha256]) => ({ file_name, sha256 })) };
+  assert.equal((await classify(f)).resolvedCandidates, 2);
+  f.evidence.provenance.packs[0].sha256 = 'unreviewed-hotfix-pack';
+  const blocked = await classify(f); assert.equal(blocked.resolvedCandidates, 0);
+  assert(blocked.candidates.every(c => c.reasons.includes('UNREVIEWED_GAME_VERSION')));
+});
+
 test('catalog preserves identical names, distinct source keys and full original evidence', async () => {
   const f = await fixture(), before = JSON.stringify(f), r = await classify(f);
   assert.equal(r.candidates.length, 2);

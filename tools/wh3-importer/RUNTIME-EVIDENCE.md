@@ -34,7 +34,7 @@ Conflict scope is exact snapshot + source/context/catalog + observation type + U
 
 ## 집에 가서 할 일
 
-준비된 bundle: `generated/wh3/runtime-evidence/evening-final-v2/`. 실측값은 0건이며 모든 jobs는 PENDING입니다. game version 기준은 **9.0.1.0**입니다. 실제 게임이 업데이트됐다면 기존 기준과 다르다고 기록하고 ingestion을 중단합니다. static snapshot을 다시 검토해야 합니다.
+현재 준비된 bundle: `generated/wh3/runtime-evidence/evening-9.0.2/`. 실측값은 0건이며 모든 jobs는 PENDING입니다. 실행 파일 ProductVersion 기준은 **9.0.2.0**입니다. [bounded refresh 결과](SNAPSHOT-9.0.2.md)는 동일 범위의 새 추출을 검증했습니다. 기존 9.0.1.0 `evening-final-v2`는 역사적 자료로 보존합니다. 다시 업데이트되면 ingestion을 중단하고 static snapshot을 재검토합니다.
 
 1. WH3를 실행하고 실제 version, mods, Unit Size를 확인합니다. 첫 관찰은 Medium입니다. 가능하면 mods를 끄고, 조건을 모르면 UNKNOWN으로 기록합니다.
 2. Custom Battle에서 아래 faction/unit을 찾습니다. 선택 목록에 없으면 같은 이름의 다른 source를 대신 고르지 말고 manual campaign setup으로 보류합니다. faction 이름은 diagnostic registry ID이며 실제 번역 이름과 다를 수 있습니다.
@@ -45,7 +45,7 @@ Conflict scope is exact snapshot + source/context/catalog + observation type + U
 
 ```powershell
 Set-Location C:\codex\totalwar
-node tools/wh3-importer/runtime-evidence/record.mjs --bundle-dir generated/wh3/runtime-evidence/evening-final-v2
+node tools/wh3-importer/runtime-evidence/record.mjs --bundle-dir generated/wh3/runtime-evidence/evening-9.0.2
 ```
 
 번호를 선택하고 숫자만 입력해도 기록할 수 있습니다. 모르면 빈칸으로 INCONCLUSIVE를 남깁니다. 다른 component, 손실 후 또는 독립 repetition은 같은 job을 다시 고르고 subject/sample point/trial을 구별합니다. snapshot의 path를 실제로 보여주는 도구가 있는 경우에만 exact path 질문에 y를 답합니다. Recorder는 답변마다 새 `recording-<session>-<count>.json`을 저장합니다. 마지막 파일에 그 session의 모든 관찰이 있습니다. 예전 파일은 덮어쓰지 않습니다.
@@ -90,13 +90,13 @@ P3: summoned Bloodthirster/Crypt Horrors/Zombies의 실제 key 확인 가능 여
 기록 후 recorder가 출력한 마지막 파일을 다음처럼 검증합니다 (파일 경로를 실제 것으로 대체):
 
 ```powershell
-node tools/wh3-importer/runtime-evidence/cli.mjs ingest --bundle-dir generated/wh3/runtime-evidence/evening-final-v2 --evidence "<마지막 recording JSON의 경로>"
+node tools/wh3-importer/runtime-evidence/cli.mjs ingest --bundle-dir generated/wh3/runtime-evidence/evening-9.0.2 --evidence "<마지막 recording JSON의 경로>"
 ```
 
 여러 session/trial을 함께 검증하려면 다음 명령으로 합집합에서 충돌을 검사합니다. 각 session의 **마지막 누적 파일만** 입력합니다. 중복 ID는 거절되며 관찰을 자동 삭제하지 않습니다. 한 session씩 검사한 결과는 서로 모순이 없다는 증거가 아닙니다.
 
 ```powershell
-node tools/wh3-importer/runtime-evidence/cli.mjs ingest --bundle-dir generated/wh3/runtime-evidence/evening-final-v2 --inputs "<session1 마지막 파일>|<session2 마지막 파일>"
+node tools/wh3-importer/runtime-evidence/cli.mjs ingest --bundle-dir generated/wh3/runtime-evidence/evening-9.0.2 --inputs "<session1 마지막 파일>|<session2 마지막 파일>"
 ```
 
 ## Preparing another trusted bundle
@@ -113,9 +113,9 @@ Buckets are RUNTIME_REQUIRED, STATIC_DB_FOLLOWUP, POLICY_REQUIRED, MAPPING_REQUI
 
 Full import remains forbidden: whole-catalog exact-context coverage, production faction readiness, complete required graphs, approved complex presentation/runtime policy and production validator/admission readiness are not established by 19 bounded diagnostics.
 
-## Prepared snapshot results (2026-10-01)
+## Historical 9.0.1.0 prepared snapshot results (2026-10-01)
 
-All 35 jobs and 182 recording slots are pending; **0 actual runtime observations**. Static index: 27 exact source/context subjects, including 19 catalog presentations. The current schema, db.pack and local_en.pack fingerprint is `aed0652f3c20ddbef26ec99511823ba44ba5c097519bb47f13081281450df2b5`.
+All 35 jobs and 182 recording slots are pending; **0 actual runtime observations**. Static index: 27 exact source/context subjects, including 19 catalog presentations. That historical schema, db.pack and local_en.pack fingerprint is `aed0652f3c20ddbef26ec99511823ba44ba5c097519bb47f13081281450df2b5`.
 
 | Triage bucket | Events | Examples / next action |
 | --- | ---: | --- |

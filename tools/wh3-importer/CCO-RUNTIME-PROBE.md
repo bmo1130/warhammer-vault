@@ -9,7 +9,7 @@ This adds read-only runtime collection to the existing runtime-evidence pipeline
 게임 실행 **전**, 저장소 루트 PowerShell에서:
 
 ```powershell
-./tools/wh3-importer/runtime-evidence/cco-probe/install.ps1 -BundleDirectory ./generated/wh3/runtime-evidence/cco-p0-v2 -UnitSize MEDIUM
+./tools/wh3-importer/runtime-evidence/cco-probe/install.ps1 -BundleDirectory ./generated/wh3/runtime-evidence/cco-p0-9.0.2 -UnitSize MEDIUM
 ```
 
 게임 경로는 기존 ignored importer config에서 읽는다. 없으면 `-GamePath '실제 게임 폴더'`를 붙인다. 기본 설치 위치는 게임의 `exec/exec_battle.lua`이다. 다른 working directory를 쓰는 mod manager에서는 `-ExecDirectory '실제 실행 기준 폴더/exec'`로 지정한다. 기존 외부 Lua 파일이나 root 파일이 probe를 가리는 경우 helper가 중단하며 그 파일은 보존한다. 기존 파일을 자동 덮어쓰지 않는다.
@@ -29,7 +29,7 @@ Helper는 실행 파일의 ProductVersion과 static snapshot 버전을 비교한
 로그를 가져온 뒤:
 
 ```powershell
-node tools/wh3-importer/runtime-evidence/cco-probe/cli.mjs ingest --bundle-dir generated/wh3/runtime-evidence/cco-p0-v2 --logs 'C:/path/medium_script_log.txt|C:/path/ultra_script_log.txt'
+node tools/wh3-importer/runtime-evidence/cco-probe/cli.mjs ingest --bundle-dir generated/wh3/runtime-evidence/cco-p0-9.0.2 --logs 'C:/path/medium_script_log.txt|C:/path/ultra_script_log.txt'
 ```
 
 출력 directory에는 raw-probe-events, comparison-report(JSON/Markdown), runtime-evidence, validated-evidence, resolution-proposals, capture-triage가 생긴다. `runtime-evidence.json`은 기존 `runtime-evidence/cli.mjs ingest --bundle-dir ... --evidence ...`에서도 읽힌다. 기존 manual recorder/jobs와 unresolved-triage를 그대로 유지하며 CCO capture triage를 별도로 추가한다.
@@ -56,7 +56,7 @@ F10은 선택된 unit context를 고정한다. 100ms real callback을 최대 50�
 
 Manifest views: ManEntityContext, MountRecordContext(원본 owner/연결 entity 포함), EngineRecordContext, ExtraEnginesList 전체, ArticulatedRecordContext, attachments, primary/engine missile sources, 전체 weapon/projectile paths, Precursor, UseSecondaryAmmoPool, PrimaryAmmo/SecondaryAmmo. 원본 row, schema edges, stats owner, flags와 provenance가 subject/extraEvidence에 남는다. CCO record view와 DB origin은 동일 provenance로 합치지 않는다.
 
-현재 실제 CA 9.0.1.0 snapshot:
+9.0.1.0 역사적 snapshot의 아래 구조는 9.0.2.0에서 재추출·비교해 동일함을 확인했다. 현재 bundle은 `cco-p0-9.0.2`이며 fingerprint와 검증 결과는 [9.0.2 refresh](SNAPSHOT-9.0.2.md)에 기록했다. 기존 `cco-p0-v2`는 보존하며 새 게임에 설치하지 않는다.
 
 | Subject | Entity paths | Missile paths | Extra-engine rows |
 | --- | ---: | ---: | ---: |
@@ -70,7 +70,7 @@ Manifest views: ManEntityContext, MountRecordContext(원본 owner/연결 entity 
 재생성:
 
 ```powershell
-node tools/wh3-importer/runtime-evidence/cco-probe/cli.mjs prepare --bundle-dir generated/wh3/runtime-evidence/evening-final-v2 --out generated/wh3/runtime-evidence/cco-p0-new
+node tools/wh3-importer/runtime-evidence/cco-probe/cli.mjs prepare --bundle-dir generated/wh3/runtime-evidence/evening-9.0.2 --out generated/wh3/runtime-evidence/cco-p0-9.0.2-new
 ```
 
 Ignored generated bundles are local diagnostic artifacts. A fresh checkout first needs the existing CA extraction/materialization/runtime preparation workflow and local RPFM/game packs described in RUNTIME-EVIDENCE.md. The new code contains no hidden local module dependencies.
