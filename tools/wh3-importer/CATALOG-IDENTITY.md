@@ -6,6 +6,10 @@ does not choose a global canonical root by name, merge candidates, materialize n
 Units, or approve full import. The source-level B decisions and nine BLOCKED pilot
 samples remain intact even though their editorial classifications are now recorded.
 
+The subsequent [diagnostic materialization contract](MATERIALIZATION.md) now
+connects explicit ready plans to exact-root traces and separately validated Units.
+The name-based discovery mode described here remains unchanged.
+
 ## Current app and minimum model
 
 `Unit.id` is the global record/route/reference identifier: gameRepository indexes
@@ -181,10 +185,11 @@ total, of which these 19 belong to the nine ambiguous groups.
 
 All nine **name-based imports** remain BLOCKED because they lack an explicit
 source/context request; Crypt Horrors, Hexwraiths and Warhounds also deliberately
-have multiple legitimate default roster contexts. A context-aware materialization
-adapter is not implemented here, and the current single-faction Unit model cannot
-silently reuse one ID for multiple presentation entries. These are import-interface
-limitations, not unresolved editorial classification or automatic runtime tasks.
+have multiple legitimate default roster contexts. The subsequent diagnostic
+adapter requires an explicit request; it cannot silently reuse one ID for multiple
+presentation entries or turn a name-only discovery into a canonical selection.
+Those missing requests are import-interface limitations, not unresolved editorial
+classification or automatic runtime tasks.
 Unregistered/drifted future candidates remain POLICY_STILL_UNRESOLVED and cannot
 obtain a plan. Expanding the exact-key registry requires reviewed evidence.
 
@@ -225,7 +230,7 @@ convert those observations into a global name selector.
 
 See [RUNTIME-CHECKLIST.md](blocker-review/RUNTIME-CHECKLIST.md), including the existing
 composite counts, Dread/Necrofex ammo and Free Company override checks. Full import
-is **not approved**: it still needs reviewed context-aware materialization and
-faction registration, composite/multiweapon representation, runtime evidence where
-needed, and the existing semantics gates. This implementation establishes safe
-identity metadata and planning; it does not certify complete Unit coverage.
+is **not approved**: the diagnostic adapter does not approve production faction
+registration, composite/multiweapon representation, runtime evidence where needed,
+or changes to the existing semantics gates. Identity planning and diagnostic
+materialization do not certify complete Unit coverage.

@@ -49,3 +49,17 @@ recruitment/availability; see `../CATALOG-IDENTITY.md`.
 No runtime action is needed to approve displaying both Beastmen/Chaos Warhounds or
 the Arkhan entries: that editorial policy is already explicit. Record availability
 as a separate sourced fact, without redefining the catalog identity.
+
+The explicit-context diagnostic materialization run adds three main-specific
+missile-junction observations without establishing activation conditions:
+
+- [ ] **Ordinary Empire alternate weapons:** for Helstorm and Handgunners, compare
+  the base chain with `wh_main_emp_rocket_battery_upgraded` and
+  `wh_main_emp_rifle_upgraded` under recorded active effects. For Steam Tank,
+  inspect `wh3_dlc25_emp_steam_tank_cannon_ball_exploding` and its accompanying
+  `wh3_dlc25_emp_veh_steam_tank_cannon` raw stats override. Record activation,
+  replacement and persistence; DB junctions alone do not prove when they apply.
+  Keep Imperial Supply roots separate even when the land row is shared.
+
+Successful diagnostic Unit validation does not verify runtime behavior or
+production eligibility. See `../MATERIALIZATION.md` for the separate contract.

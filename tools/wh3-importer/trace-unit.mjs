@@ -46,18 +46,43 @@ export async function discoverRoots(reader, schema, localisation, displayName) {
   return { candidates, mainTables, landTables };
 }
 
+// Exact source seed: no display-name search, cost policy or candidate ordering.
+export async function discoverExactRoot(reader, schema, localisation, identity) {
+  const fail = reason => { throw Object.assign(new Error(reason), { category: 'SOURCE_IDENTITY_DRIFT' }); };
+  if (!identity?.mainKey || !identity.landKey || !identity.localisationKey) fail('Exact main/land/localisation identity is required.');
+  const mainTables = await reader.tables('main_units_tables'), landTables = await reader.tables('land_units_tables');
+  const roots = mainTables.flatMap(table => table.rows.filter(row => row.unit === identity.mainKey).map(row => ({ table, row })));
+  if (roots.length !== 1) fail(`Exact main key has ${roots.length} source rows; no pack precedence selected.`);
+  const root = roots[0], ref = root.table.fields.find(f => f.name === 'land_unit')?.is_reference;
+  if (!root.table.fields.some(f => f.name === 'unit' && f.is_key) || !ref || resolveReferenceTable(ref[0], schema) !== 'land_units_tables' || ref[1] !== 'key' || root.row.land_unit !== identity.landKey) fail('Exact main/land key or processed schema reference drift.');
+  const lands = landTables.flatMap(table => table.rows.filter(row => row.key === identity.landKey).map(row => ({ table, row })));
+  if (lands.length !== 1) fail(`Expected one exact land row; found ${lands.length}.`);
+  const land = lands[0];
+  if (!land.table.fields.some(f => f.name === 'key' && f.is_key) || !schema.definitions[land.table.table]?.some(d => d.version === land.table.tableVersion && d.localised_fields?.some(f => f.name === 'onscreen_name'))) fail('Land key/localised_fields schema drift.');
+  if (identity.localisationKey !== `land_units_onscreen_name_${identity.landKey}`) fail('Expected localisation identity drift.');
+  const locs = localisation.rows.filter(row => row.key === identity.localisationKey);
+  if (locs.length !== 1 || typeof locs[0].text !== 'string' || !locs[0].text || (identity.displayName !== undefined && locs[0].text !== identity.displayName)) fail('Exact localisation is missing, duplicated or changed.');
+  return { candidates: [{ ...root, landTable: land.table, landRow: land.row, loc: locs[0] }], mainTables, landTables };
+}
+
+export async function traceUnitByMainKey(reader, schema, localisation, metadata, identity, scopes = [], supplementalLocalisations = []) {
+  return traceUnit(reader, schema, localisation, metadata, { displayName: identity.displayName, slug: 'exact-source', scopes, rootSelection: 'exact-main', sourceIdentity: identity }, supplementalLocalisations);
+}
+
 export async function traceUnit(reader, schema, localisation, metadata = {}, profile = unitProfiles['grail-knights'], supplementalLocalisations = []) {
   const { displayName } = profile;
   const allowedTables = tablesForProfile(profile);
-  if (!['unique', 'paid-recruitment'].includes(profile.rootSelection)) throw new Error(`Unsupported root selection: ${profile.rootSelection}`);
+  if (!['unique', 'paid-recruitment', 'exact-main'].includes(profile.rootSelection)) throw new Error(`Unsupported root selection: ${profile.rootSelection}`);
   const unresolved = [];
   const problem = (field, reason) => unresolved.push({ field, reason });
-  const { candidates, mainTables, landTables } = await discoverRoots(reader, schema, localisation, displayName);
+  const { candidates, mainTables, landTables } = profile.rootSelection === 'exact-main'
+    ? await discoverExactRoot(reader, schema, localisation, profile.sourceIdentity)
+    : await discoverRoots(reader, schema, localisation, displayName);
   const candidateEvidence = candidates.map((candidate) => ({
     mainKey: candidate.row.unit, landKey: candidate.landRow.key, localisationKey: candidate.loc.key,
     sourcePack: candidate.table.sourcePack, path: candidate.table.path,
     recruitmentCost: Object.hasOwn(candidate.row, 'recruitment_cost') ? candidate.row.recruitment_cost : null,
-    selectedByPolicy: profile.rootSelection === 'unique' || (typeof candidate.row.recruitment_cost === 'number' && candidate.row.recruitment_cost > 0),
+    selectedByPolicy: ['unique', 'exact-main'].includes(profile.rootSelection) || (typeof candidate.row.recruitment_cost === 'number' && candidate.row.recruitment_cost > 0),
   }));
   const eligible = candidates.filter((_, index) => candidateEvidence[index].selectedByPolicy);
   if (eligible.length !== 1) throw new Error(`Expected one localisation-confirmed ${displayName} root, found ${eligible.length} after ${profile.rootSelection} policy. Candidates: ${JSON.stringify(candidateEvidence)}. Check localisation, CA DB pack/schema, or duplicate roots; no guessed key is used.`);

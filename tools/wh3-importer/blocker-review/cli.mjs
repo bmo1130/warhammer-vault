@@ -8,11 +8,11 @@ import { requireSameSource } from './evidence.mjs';
 import { pilotMetrics, comparePilots, renderReview } from './report.mjs';
 import { applyReviewOverlay } from './overlay.mjs';
 
-// Companion to the user's preserved, not-yet-committed representative pilot.
-// This turn must not stage or edit that earlier work.
+// Companion to the committed representative pilot baseline. The run artifacts
+// and installed CA/RPFM environment remain separate from repository code.
 async function main() {
   const { resolveOptions, openRawSource } = await import('../extract.mjs');
-  if (typeof openRawSource !== 'function') throw new Error('Requires the preserved representative-pilot working tree (openRawSource and pilot.mjs); prior work is intentionally not included in this commit.');
+  if (typeof openRawSource !== 'function') throw new Error('Representative pilot baseline API is unavailable (openRawSource).');
   const { runPilot, summarize } = await import('../pilot.mjs');
   const { coverageFor } = await import('../pilot-analysis.mjs');
   const options = await resolveOptions(process.argv.slice(2));
@@ -62,7 +62,7 @@ async function main() {
     await save('review.json', report);
     await save('comparison.json', report.comparison);
     await writeFile(path.join(output, 'summary.md'), renderReview(report));
-    await save('manifest.json', { status: 'COMPLETE', sourceKind: 'ca-pack', provenance: source.metadata, baseline, output, pilot: 'pilot/manifest.json', review: 'review.json', comparison: 'comparison.json', derivedFormulasAdded: 0, canonicalMappingsAdded: 0, catalogIdentity: report.comparison.catalogIdentity, fullImport: false });
+    await save('manifest.json', { status: 'COMPLETE', sourceKind: 'ca-pack', provenance: source.metadata, baseline, output, pilot: 'pilot/manifest.json', review: 'review.json', comparison: 'comparison.json', derivedFormulasAdded: 0, unitCanonicalMappingsAdded: 0, catalogDecisionsApplied: report.comparison.catalogIdentity.resolvedCandidates, catalogIdentity: report.comparison.catalogIdentity, fullImport: false });
     console.log(`Blocker review: ${output}`);
   } catch (error) { await save('manifest.json', { status: 'FAILED', baseline, output, error: error.message }); throw error; }
   finally { await source?.client.close().catch(() => {}); }

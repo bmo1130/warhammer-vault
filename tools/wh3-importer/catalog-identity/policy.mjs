@@ -71,7 +71,7 @@ export function classifyCatalogCandidates(candidates, evidence, decisions = cura
   return { format: 'warhammer-vault-catalog-identity-v1', policy: catalogPolicy, candidates: records,
     evidence, provenance: evidence.provenance, policyResolution: resolved ? 'RESOLVED' : 'POLICY_STILL_UNRESOLVED',
     resolvedCandidates: records.filter(r => r.policyStatus === 'RESOLVED').length, unresolvedCandidates: records.filter(r => r.policyStatus !== 'RESOLVED').length,
-    importStatus: 'BLOCKED', selectedKey: null, reason: 'No explicit source/context request and no context-aware Unit materialization. Name ambiguity is preserved independently of editorial classification.' };
+    importStatus: 'BLOCKED', selectedKey: null, reason: 'Name-only discovery has no explicit source/context request. Separate diagnostic materialization does not select a global name root.' };
 }
 
 // Explicit context planning only; does not trace, normalize, or alter candidates.

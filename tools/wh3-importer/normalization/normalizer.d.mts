@@ -1,4 +1,5 @@
 import type { Unit } from '../../../src/domain/unit';
+import type { CatalogDecision, CatalogIdentityReview, CatalogPresentation, SourceIdentity } from '../catalog-identity/policy.mjs';
 
 export type MappingKind = 'DIRECT' | 'GENERATED' | 'CURATED' | 'DERIVED_CONFIRMED' | 'UNRESOLVED';
 export type RawRow = { id: string; table: string; key: Record<string, unknown>; sourcePack: string; sourcePackPath: string; path: string; tableVersion: number; row: Record<string, unknown> };
@@ -20,7 +21,9 @@ export type FieldProvenance = { field: string; value: unknown; rawValue: unknown
 export type NormalizedUnitResult = {
   format: 'warhammer-vault-normalized-unit-v1'; mode: 'conservative'; sourceKind: RawTrace['sourceKind']; unit: Unit;
   provenance: {
-    identity: { internalId: string; caMainUnitKey: string; caLandUnitKey: string; primaryCatalogGroup: string; candidateMilitaryGroups: string[] };
+    identity: { internalId: string; caMainUnitKey: string; caLandUnitKey: string; primaryCatalogGroup: string | null; candidateMilitaryGroups: string[] };
+    catalog?: { sourceMainKey: string; sourceLandKey: string; contextId: string; presentationId: string; factionId: string;
+      classification: CatalogPresentation['classification']; defaultVisible: boolean; kind: 'CURATED'; idKind: 'GENERATED'; source: SourceIdentity; decision: unknown };
     rawTrace: Record<string, unknown>; affiliationEvidence: Record<string, unknown>;
     fields: FieldProvenance[]; generatedMetadata: { field: string; value: unknown; origin: string }[]; baseValuesOnly: true;
   };
@@ -29,8 +32,12 @@ export type NormalizedUnitResult = {
   warnings: { code: string; reason: string }[];
   unmapped: { kind: 'ability' | 'attribute'; caId: string; reason: string; source: FieldSource }[];
 };
-export type NormalizationContext = {
-  factionId: string; militaryGroup: string; permissionTrace: RawInspection;
+export type NormalizationContext = ({
+  factionId: string; militaryGroup: string; permissionTrace: RawInspection; catalog?: never;
+} | {
+  catalog: { review: CatalogIdentityReview; request: { mainKey: string; contextId: string }; decisions?: CatalogDecision[] };
+  factionId?: never; militaryGroup?: never; permissionTrace?: never;
+}) & {
   idMappings?: { abilities: Record<string, string>; attributes: Record<string, string>; movement: Record<string, { field: string; value: boolean }> };
 };
 export function normalizeUnit(dump: RawTrace, context: NormalizationContext): NormalizedUnitResult;

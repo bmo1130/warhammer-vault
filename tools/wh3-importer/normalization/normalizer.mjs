@@ -3,6 +3,7 @@ import { factSelectors } from '../observations/facts.mjs';
 import { observations } from '../observations/index.mjs';
 import { directMappings, blockedMappings, topicStatus, normalizationMode, supportedGameVersion } from './policy.mjs';
 import { idMappings } from './ids.mjs';
+import { approvedCatalogContext, assertCatalogSnapshot } from '../catalog-identity/normalization-context.mjs';
 
 const sizes = new Set(['tiny', 'small', 'medium', 'large', 'very_large']);
 const valid = (value, type) => type === 'boolean' ? typeof value === 'boolean' : type === 'size' ? sizes.has(value) : type === 'string' ? typeof value === 'string' && value.length > 0 : typeof value === 'number' && Number.isFinite(value) && (type !== 'integer' || Number.isInteger(value));
@@ -21,41 +22,51 @@ export function normalizeUnit(dump, context) {
   const mainKey = fact(c.root, 'unit'), landKey = fact(c.land, 'key');
   if (!valid(mainKey?.value, 'string') || !valid(landKey?.value, 'string') || mainKey.value !== dump.unit.caKey || c.root.table !== 'main_units_tables' || c.land.table !== 'land_units_tables') throw new Error('A unique schema-connected main/land identity is required.');
 
-  const permissions = context.permissionTrace;
+  const catalog = context.catalog ? approvedCatalogContext(context.catalog.review, context.catalog.request, context.catalog.decisions) : null;
+  if (catalog) {
+    assertCatalogSnapshot(dump.sourceKind, dump.provenance, catalog.review.provenance, catalog.review.evidence.sourceKind);
+    if (catalog.plan.source.mainKey !== mainKey.value || catalog.plan.source.landKey !== landKey.value) throw new Error('Catalog source identity differs from normalization root.');
+  }
+  const factionId = catalog?.plan.presentation.factionId ?? context.factionId;
+  const permissions = catalog?.review.evidence ?? context.permissionTrace;
   if (!permissions || permissions.sourceKind !== dump.sourceKind) throw new Error('Matching raw military permission evidence is required for the explicit catalog affiliation.');
   if (dump.sourceKind === 'ca-pack') {
     const packHashes = (data) => JSON.stringify(data.provenance.packs.map((pack) => [pack.file_name, pack.sha256]).sort());
     if (permissions.provenance.gameVersion !== dump.unit.gameVersion || permissions.provenance.schemaSha256 !== dump.provenance.schemaSha256 || packHashes(permissions) !== packHashes(dump)) throw new Error('Identity evidence and unit trace differ in game/schema/pack version. Re-extract both.');
   }
   const roots = permissions.rows.filter((row) => row.table === 'main_units_tables' && row.row.unit === mainKey.value);
-  if (roots.length !== 1 || !/^[a-z][a-z0-9_]*$/.test(context.factionId)) throw new Error('Unique permission root and an explicit internal faction ID are required.');
+  if (roots.length !== 1 || !/^[a-z][a-z0-9_]*$/.test(factionId)) throw new Error('Unique permission root and an explicit internal faction ID are required.');
   const permissionSelectors = factSelectors({ ...permissions, rootRow: roots[0].id });
   const candidates = permissions.rows.filter((row) => row.table === 'units_to_groupings_military_permissions_tables' && permissionSelectors.reachable(row) && row.row.unit === mainKey.value);
   const affiliations = candidates.filter((row) => row.row.military_group === context.militaryGroup);
-  if (affiliations.length !== 1) throw new Error('The curated primary catalog group has no unique verified permission relation for this unit.');
-  const affiliation = permissionSelectors.fact(affiliations[0], 'military_group');
+  if (!catalog && affiliations.length !== 1) throw new Error('The curated primary catalog group has no unique verified permission relation for this unit.');
+  const affiliation = catalog ? permissionSelectors.fact(roots[0], 'unit') : permissionSelectors.fact(affiliations[0], 'military_group');
   if (!affiliation) throw new Error('Military affiliation lacks processed schema evidence.');
 
   const unit = {
-    id: `ca_unit_${mainKey.value}`, name: '', factionId: context.factionId, summary: '',
+    id: catalog?.plan.presentation.id ?? `ca_unit_${mainKey.value}`, name: '', factionId, summary: '',
     gameVersion: dump.unit.gameVersion, source: `${dump.sourceKind === 'ca-pack' ? 'Current CA base DB' : 'Synthetic fixture'} via verified raw trace; no runtime/campaign effects applied`, tags: [],
     classification: { category: '' }, entities: {}, movement: {}, defense: {}, melee: { damage: {} },
   };
   const result = {
     format: 'warhammer-vault-normalized-unit-v1', mode: normalizationMode, sourceKind: dump.sourceKind, unit,
-    provenance: { identity: { internalId: unit.id, caMainUnitKey: mainKey.value, caLandUnitKey: landKey.value, primaryCatalogGroup: context.militaryGroup, candidateMilitaryGroups: candidates.map((row) => row.row.military_group) }, rawTrace: dump.provenance, affiliationEvidence: permissions.provenance, fields: [], generatedMetadata: [], baseValuesOnly: true },
-    facts: [], omitted: [], warnings: [{ code: 'base-values-only', reason: 'Mapped costs/stats are CA base DB values, never effective campaign or battle-session values.' }, { code: 'primary-catalog-affiliation', reason: 'factionId is an explicit primary catalog alias of one verified military group; other permissions are retained. It is not exclusive ownership/effective recruitment.' }], unmapped: [],
+    provenance: { identity: { internalId: unit.id, caMainUnitKey: mainKey.value, caLandUnitKey: landKey.value, primaryCatalogGroup: catalog ? null : context.militaryGroup, candidateMilitaryGroups: candidates.map((row) => row.row.military_group) }, rawTrace: dump.provenance, affiliationEvidence: permissions.provenance, fields: [], generatedMetadata: [], baseValuesOnly: true },
+    facts: [], omitted: [], warnings: [{ code: 'base-values-only', reason: 'Mapped costs/stats are CA base DB values, never effective campaign or battle-session values.' }, { code: 'primary-catalog-affiliation', reason: catalog ? 'factionId is an explicit reviewed source/context presentation. All DB guards and other permissions are retained; effective availability is not established.' : 'factionId is an explicit primary catalog alias of one verified military group; other permissions are retained. It is not exclusive ownership/effective recruitment.' }], unmapped: [],
   };
   const omit = (field, reason, semanticsStatus = 'UNRESOLVED') => result.omitted.push({ field, kind: 'UNRESOLVED', semanticsStatus, reason });
   const mapped = (field, value, input, note, evidence = [], kind = 'DIRECT') => {
     set(unit, field, value);
     result.provenance.fields.push({ field, value, kind, source: input.source, rawValue: input.value, note, evidence });
   };
-  mapped('id', unit.id, mainKey, 'Stable internal namespace alias ca_unit_<exact CA main key>; not the CA key itself.', [], 'GENERATED');
-  mapped('factionId', context.factionId, affiliation, 'Explicit primary catalog alias; validated military permission membership.', [], 'CURATED');
+  mapped('id', unit.id, mainKey, catalog ? 'Losslessly encoded exact source/context tuple; source main key is preserved separately.' : 'Stable internal namespace alias ca_unit_<exact CA main key>; not the CA key itself.', [], 'GENERATED');
+  mapped('factionId', factionId, affiliation, catalog ? 'Explicit exact-key catalog context; checked DB guards are preserved in separate catalog provenance.' : 'Explicit primary catalog alias; validated military permission membership.', [], 'CURATED');
+  if (catalog) result.provenance.catalog = { sourceMainKey: mainKey.value, sourceLandKey: landKey.value, contextId: catalog.plan.presentation.contextId, presentationId: unit.id,
+    factionId, classification: catalog.plan.presentation.classification, defaultVisible: catalog.plan.presentation.defaultVisible,
+    kind: 'CURATED', idKind: 'GENERATED', source: catalog.plan.source, decision: catalog.record.decision };
   const locRows = dump.rows.filter((row) => row.table === 'Loc' && row.row.key === `land_units_onscreen_name_${landKey.value}` && selectors.reachable(row));
   const name = locRows.length === 1 ? fact(locRows[0], 'text') : undefined;
   if (!valid(name?.value, 'string')) throw new Error('Unique raw onscreen_name localisation is required; profile/manual names are not substitutes.');
+  if (catalog && (locRows[0].row.key !== catalog.plan.source.localisationKey || name.value !== catalog.plan.source.displayName)) throw new Error('Catalog localisation identity differs from normalized source.');
   mapped('name', name.value, name, 'Actual CA localisation.');
   const category = fact(selectors.follow(c.land, 'category'), 'localised_name') ?? fact(c.land, 'category');
   if (valid(category?.value, 'string')) mapped('classification.category', category.value, category, 'CA DB category, not an inferred role/monster classification.');
