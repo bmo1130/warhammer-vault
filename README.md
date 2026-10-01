@@ -13,7 +13,7 @@ npm run dev
 
 ## 구조
 
-- `src/data`: 읽기 전용 WH3 샘플 JSON과 별도의 diagnostic 표시 자료. Production 샘플 수치는 비워 뒀습니다.
+- `src/data`: 읽기 전용 WH3 Unit JSON과 별도의 diagnostic 표시 자료. 구조 검증용 샘플 수치는 비워 두고, 검토된 첫 production 유닛만 실제 기본값을 포함합니다.
 - `src/domain/types.ts`: WH3 엔티티와 향후 Modifier, ModProfile, CampaignProfile, Roster 타입. 팩션 소속 관계는 각 엔티티의 `factionId`만 사용합니다.
 - `src/domain/unit.ts`: 의미별 유닛 스키마와 원본 숫자 필드의 `UnitStatPath` 타입.
 - `src/domain/unitCalculations.ts`: 확인된 기본·관통 피해 합계를 계산하는 순수 함수.
@@ -63,9 +63,9 @@ ID, 이름, `factionId`, 설명과 출처 메타데이터는 최상위에 유지
 
 ### 유닛 상세 화면의 diagnostic 자료
 
-홈의 **유닛 탐색**과 데스크톱·모바일의 **유닛** 메뉴에서 `/units`를 엽니다. 현재 일반 샘플 5개와 diagnostic-only 5개를 검색하고 전체 / 일반 Unit / Diagnostic evidence 있음 / Diagnostic-only로 필터링할 수 있습니다. 검색어와 필터는 URL에 유지됩니다. 홈 검색도 팩션·군주·일반 유닛에 더해 diagnostic 이름·ID·source key를 찾습니다. 이 목록은 표시용 catalog이며 production 검색 API와 팩션 roster는 그대로입니다.
+홈의 **유닛 탐색**과 데스크톱·모바일의 **유닛** 메뉴에서 `/units`를 엽니다. 현재 Production 1개, Sample 5개, diagnostic-only 5개를 검색하고 전체 / 일반 Unit / Diagnostic evidence 있음 / Diagnostic-only로 필터링할 수 있습니다. 일반 Unit 필터에는 Production과 Sample이 함께 포함되며 각 행의 배지로 구분합니다. 검색어와 필터는 URL에 유지됩니다. 홈 검색도 팩션·군주·일반 유닛에 더해 diagnostic 이름·ID·source key를 찾습니다. 이 목록은 표시용 catalog이며 diagnostic 자료는 production 검색 API나 팩션 roster에 들어가지 않습니다.
 
-Black Coach, Skeleton Chariots, Dread Saurian, Necrofex Colossus, Free Company Militia는 **diagnostic-only**입니다. 기존 `/units/:id`와 `UnitPage`를 재사용하되 Production Unit이나 가짜 기본 스탯을 생성하지 않고 `Production data unavailable`을 표시합니다. 일반 Unit도 현재는 미확인 수치를 비워 둔 샘플이라는 점을 목록에 명시합니다. Diagnostic 상세의 짧은 자료 범위 요약은 저장된 path·case 건수일 뿐 신뢰도 점수나 실제 개체·발사 수가 아닙니다.
+Black Coach, Skeleton Chariots, Dread Saurian, Necrofex Colossus, Free Company Militia는 **diagnostic-only**입니다. 기존 `/units/:id`와 `UnitPage`를 재사용하되 Production Unit이나 가짜 기본 스탯을 생성하지 않고 `Production data unavailable`을 표시합니다. Sample은 미확인 수치를 비워 둔 구조 검증용 예시라는 점을 목록과 상세 배지에 명시합니다. Diagnostic 상세의 짧은 자료 범위 요약은 저장된 path·case 건수일 뿐 신뢰도 점수나 실제 개체·발사 수가 아닙니다.
 
 Diagnostic-only도 기존 `unit:<id>` 개인 기록 대상으로 즐겨찾기, 최근 본 항목, 평가·운용 메모의 작성·수정·삭제를 지원합니다. 홈은 catalog의 정확한 ID로 이름과 route를 찾습니다. 현재 목록에서 사라진 과거 ID는 연결 없는 안내 행으로 표시하고 저장 내용은 삭제하지 않습니다. 개인 기록은 evidence와 별도 영역·IndexedDB에만 저장됩니다. 기존 v1 JSON 백업에 diagnostic 기록도 그대로 포함되며, 백업 schema나 parser 변경 없이 복원합니다. 백업에는 production 데이터와 diagnostic evidence가 포함되지 않습니다. 같은 브라우저라도 접속 origin이 다르면 개인 저장소는 별개입니다.
 
@@ -93,6 +93,10 @@ npm run build
 `validateUnits(units, factionIds)`는 오류의 유닛 ID·필드 경로·메시지를 반환합니다. 개체 수, 비용·생명력의 음수/비유한 값, 개체 크기, 팩션 참조, ID 중복과 구조화된 속성 ID 등을 검사합니다. 현재 샘플과 fixture는 자동 테스트에서 이 검사를 실행합니다. 임의의 외부 JSON을 파싱하거나 모든 게임 규칙을 검증하는 함수는 아니므로 향후 importer에는 별도의 런타임 구조 검증이 필요합니다.
 
 ## 실제 WH3 데이터 입력 전 확인할 사항
+
+첫 production batch는 **Dragon Ogres / WH3 9.0.2.0** 한 개입니다. exact CA main/land `wh_dlc01_chs_mon_dragon_ogre`에서 기존 conservative normalizer가 확인한 직접값 25개와 검토된 identity/attribute alias를 반영했습니다. 미확인 count·HP·속도·저항 변환은 생략합니다. Warriors of Chaos는 기존 permission alias에 근거한 최소 catalog 분류이며 전체 모집 가능 roster를 뜻하지 않습니다. 기존 Sample 5개와 diagnostic projection, runtime/precedence 자료, v1 개인 백업은 유지합니다.
+
+선정·승격 gate·source snapshot·생략 범위·후속 blocker는 [첫 production 검토](tools/wh3-importer/promotion/PROMOTION.md)에 있습니다. 재현 입력은 실제 저장된 CA trace에서 투영한 자료이며 synthetic fixture가 아닙니다. 게임이나 로컬 generated 파일 없이 `node scripts/promote-first-unit.mjs --check`로 normalizer 재실행과 production 일치를 검사할 수 있습니다. `--write`는 이 한 유닛과 최소 faction만 추가하고 source drift·충돌·기존 값 덮어쓰기를 거부합니다. Production 상세는 검증된 기본 스탯과 기존 함수의 근접 피해 합을 표시하며, 출처·버전·생략 범위는 접힌 영역에서 확인합니다.
 
 - 버전·부대 크기 설정에 따른 개체 수와 총 생명력, 포병의 장비·승무원 구분 및 개체당 생명력의 기준.
 - 화면의 부대 규모와 실제 DB의 개체 크기 열거값 사이 매핑.

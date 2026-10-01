@@ -106,5 +106,66 @@
     "melee": {
       "damage": {}
     }
+  },
+  {
+    "id": "ca_unit_wh_dlc01_chs_mon_dragon_ogre",
+    "name": "Dragon Ogres",
+    "factionId": "warriors_of_chaos",
+    "summary": "",
+    "gameVersion": "9.0.2.0",
+    "source": "CA base DB · WH3 9.0.2.0 · reviewed static source · tools/wh3-importer/promotion/PROMOTION.md",
+    "tags": [],
+    "classification": {
+      "category": "Melee Infantry",
+      "tier": 4
+    },
+    "entities": {
+      "entitySize": "large",
+      "mass": 1700
+    },
+    "movement": {
+      "canSkirmish": false
+    },
+    "defense": {
+      "armor": 60,
+      "meleeDefense": 40,
+      "leadership": 72,
+      "shieldBlockChance": 0,
+      "projectilePenetrationResistance": 4
+    },
+    "melee": {
+      "damage": {
+        "base": 33,
+        "armorPiercing": 77,
+        "bonusVsLarge": 26,
+        "bonusVsInfantry": 0
+      },
+      "meleeAttack": 32,
+      "chargeBonus": 42,
+      "attackInterval": 4,
+      "weaponLength": 2,
+      "splash": {
+        "maxTargets": 4,
+        "maxTargetSize": "medium"
+      }
+    },
+    "customBattle": {
+      "cost": 1550
+    },
+    "campaign": {
+      "recruitmentCost": 1550,
+      "upkeep": 387,
+      "recruitmentTurns": 2
+    },
+    "attributes": [
+      "causes_fear",
+      "stalk_in_forest",
+      "siege_attacker"
+    ],
+    "sources": {
+      "publicStats": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; public fields: land_units, armour/shield, melee_weapons and verified projectile/explosion rows; reviewed snapshot c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5; schema 5d628a0167b34a096752c5c21acd16493834a987c80dc9f02364617f796ba2a4; db.pack d0fafac984b3985ec47cec0ea957591424f1077e52ef61941dbf2dc46e6cf723; local_en.pack f979527a5aaecf293a4e66afc25ed6c760e4107ef4920b73bd56e10e2652fd6a; source input SHA256 40329e1e26ca6e946c9fe1f911406211dbd9ec840c097229cf7104d4fa614ba9",
+      "hiddenStats": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; hidden fields: unambiguous battle_entity properties, weapon splash, projectile calibration/reload/penetration",
+      "campaign": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; main_units recruitment_cost/upkeep_cost/create_time and multiplayer_cost are base values only"
+    }
   }
 ]

@@ -54,7 +54,7 @@ export default function HomePage() {
         </section>
       </div>
       {error && <p className="message error" role="status">{error}</p>}
-      <section className="section"><SectionTitle title="팩션 탐색" count={gameRepository.listFactions().length}/>
+      <section className="section"><SectionTitle title="팩션 탐색" count={gameRepository.listFactions().length} to="/factions" action="전체 팩션"/>
         <div className="feature-card"><div className="feature-top"><span className="feature-label">샘플 팩션</span><span className="feature-symbol">☾</span></div><h3>뱀파이어 카운트</h3><p>죽음의 군세와 전설 군주, 유닛 기록을 둘러보세요.</p><Link className="button button-primary" to={pathFor('faction', 'vampire_counts')}>팩션 보기 <Icon name="arrow"/></Link></div>
       </section>
     </>}

@@ -5,7 +5,9 @@ import type { EntityType, Faction, Lord, Unit } from '../domain/types';
 
 const factions: Faction[] = factionsJson;
 const lords: Lord[] = lordsJson;
-const units: Unit[] = unitsJson;
+// JSON imports widen enum strings. The promotion gate and dataset tests run the
+// actual Unit validator; this assertion only restores the declared enum types.
+const units: Unit[] = unitsJson as Unit[];
 
 const factionById = new Map(factions.map((item) => [item.id, item]));
 const lordById = new Map(lords.map((item) => [item.id, item]));

@@ -115,10 +115,19 @@ test('actual roster values agree with legacy normalization except explicitly wit
 test('actual validation uses a diagnostic registry without altering or bypassing production faction registration', options, async () => {
   const { manifest, results } = await actual(), validate = await loadUnitValidator();
   const factions = JSON.parse(await readFile(new URL('../../../src/data/factions.json', import.meta.url), 'utf8'));
-  assert.deepEqual(factions.map(f => f.id), ['vampire_counts']);
+  const currentIds = factions.map(f => f.id);
+  assert(currentIds.includes('vampire_counts'));
   assert.deepEqual(validate(results.map(r => r.unit), diagnosticFactionIds), []);
   assert.equal(manifest.metrics.productionValidationRejections, 14);
-  for (const r of results) assert.deepEqual(r.validation.production.issues, validate([r.unit], factions.map(f => f.id)));
+  for (const r of results) {
+    // Saved validation belongs to its recorded registry. A separately reviewed
+    // production batch may add factions without rewriting historical evidence.
+    assert.deepEqual(r.validation.production.registryIds, ['vampire_counts']);
+    assert.deepEqual(r.validation.production.issues, validate([r.unit], r.validation.production.registryIds));
+    const currentIssues = validate([r.unit], currentIds);
+    assert.equal(currentIssues.length === 0, currentIds.includes(r.unit.factionId));
+    assert.equal(r.productionEligible, false);
+  }
 });
 test('actual saved plan refuses changed game/schema/pack snapshots before any reader access', options, async () => {
   const { manifest, results: [first] } = await actual(), validate = await loadUnitValidator();

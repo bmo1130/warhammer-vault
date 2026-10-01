@@ -5,6 +5,7 @@ const { validateUnits } = require('../.test-build/src/domain/unitValidation.js')
 const { getUnitAttributeLabel, getUnitAbilityLabel, getAttackAttributeLabel } = require('../.test-build/src/domain/unitLabels.js');
 const { schemaFixtures, fixtureFactionIds, grailKnightsFixture, helstormFixture, bloodthirsterFixture } = require('../.test-build/tests/fixtures/units.js');
 const units = require('../.test-build/src/data/units.json');
+const samples = units.filter(unit => unit.gameVersion === 'sample');
 const factions = require('../.test-build/src/data/factions.json');
 
 test('known base and AP damage are summed without conditional bonuses', () => {
@@ -19,7 +20,7 @@ test('unknown damage is not converted to zero, but confirmed zeros are preserved
   assert.equal(getTotalDamage({ base: 0, armorPiercing: 0 }), 0);
   assert.equal(getTotalDamage({ base: 18, armorPiercing: 0 }), 18);
   assert.equal(getTotalDamage({ base: 0, armorPiercing: 30 }), 30);
-  for (const unit of units) {
+  for (const unit of samples) {
     assert.equal(getMeleeWeaponDamage(unit), undefined);
     assert.equal(getMissileDirectDamage(unit), undefined);
     assert.equal(getExplosionDamage(unit.missile?.explosion), undefined);
@@ -50,10 +51,10 @@ test('three distinct schema fixtures are valid and stay outside production data'
 });
 
 test('migrated samples preserve IDs and metadata without fabricated numbers', () => {
-  assert.deepEqual(units.map((unit) => unit.id), ['zombies', 'grave_guard', 'hexwraiths', 'blood_knights', 'varghulf']);
-  assert.deepEqual(units.map((unit) => unit.classification.category), ['보병', '보병', '기병', '기병', '괴수']);
+  assert.deepEqual(samples.map((unit) => unit.id), ['zombies', 'grave_guard', 'hexwraiths', 'blood_knights', 'varghulf']);
+  assert.deepEqual(samples.map((unit) => unit.classification.category), ['보병', '보병', '기병', '기병', '괴수']);
   assert.deepEqual(validateUnits(units, factions.map((faction) => faction.id)), []);
-  for (const unit of units) {
+  for (const unit of samples) {
     assert.equal(unit.gameVersion, 'sample');
     assert(unit.source.includes('미입력'));
     for (const key of ['entities', 'movement', 'defense']) assert.deepEqual(unit[key], {});

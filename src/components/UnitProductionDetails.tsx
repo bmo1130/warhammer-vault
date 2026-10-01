@@ -1,0 +1,29 @@
+import type { Unit } from '../domain/unit';
+import { getMeleeWeaponDamage } from '../domain/unitCalculations';
+import SectionTitle from './SectionTitle';
+
+// Read stored fields only; the optional total uses the existing approved sum.
+export default function UnitProductionDetails({ unit }: { unit: Unit }) {
+  const total = getMeleeWeaponDamage(unit);
+  const damage = [
+    ['기본 피해', unit.melee.damage.base], ['관통 피해', unit.melee.damage.armorPiercing],
+    ['총 무기 피해', total], ['대형 보너스', unit.melee.damage.bonusVsLarge],
+    ['보병 보너스', unit.melee.damage.bonusVsInfantry], ['공격 주기 (초)', unit.melee.attackInterval],
+  ] as const;
+  return <>
+    {damage.some(([, value]) => value !== undefined) && <section className="section">
+      <SectionTitle title="근접 피해"/>
+      <div className="stats-card">{damage.map(([label, value]) => <div className="stat" key={label}><span>{label}</span><strong>{value ?? '미입력'}</strong></div>)}</div>
+      <p className="data-note">총 무기 피해는 기본 + 관통의 합입니다. 조건부 보너스와 전투·캠페인 효과는 포함하지 않습니다.</p>
+    </section>}
+    <details className="production-source panel">
+      <summary>출처·버전·생략 범위</summary>
+      <div><p>WH3 {unit.gameVersion} · 검토된 정적 source의 기본값입니다. 현재 전투나 캠페인에서의 최종 수치가 아닙니다.</p>
+        <p>팩션은 검토된 기본 catalog 분류입니다. 다른 permission을 배제하거나 전체 roster·캠페인 모집 가능성을 확정하지 않습니다.</p>
+        <p>{unit.source}</p>
+        <p>{unit.sources?.publicStats}</p>
+        <p>미입력은 미확인입니다. 개체 수·HP·속도·저항 변환·모집 조건 등 미확인 값은 생략했습니다. 사격 자료가 없다는 사실만으로 사격 불가능을 확정하지 않습니다.</p>
+      </div>
+    </details>
+  </>;
+}

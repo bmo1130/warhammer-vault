@@ -22,7 +22,7 @@ export default function UnitsPage() {
     <div className="catalog-filters" role="group" aria-label="유닛 유형 필터">
       {unitCatalogFilters.map(item => <button key={item.id} type="button" aria-pressed={filter === item.id} onClick={() => update('filter', item.id)}>{item.label}</button>)}
     </div>
-    <p className="data-note">일반 Unit의 현재 데이터는 구조 검증용 샘플입니다. Diagnostic-only는 production 스탯이 없는 관찰 자료이며, 개인 기록을 동일하게 사용할 수 있습니다.</p>
+    <p className="data-note">Production은 검토된 source의 기본값입니다. Sample은 구조 검증용 예시이며 수치는 미검증입니다. Diagnostic-only는 production 스탯이 없는 관찰 자료입니다. 모두 개인 기록을 사용할 수 있습니다.</p>
     <section className="section" aria-label="유닛 검색 결과">
       <div className="section-head"><h2>유닛 목록</h2><span className="catalog-count" role="status" aria-live="polite">{entries.length}개 항목</span></div>
       {entries.length ? <div className="list-card">{entries.map(entry => <UnitCatalogRow key={entry.id} entry={entry}/>)}</div>

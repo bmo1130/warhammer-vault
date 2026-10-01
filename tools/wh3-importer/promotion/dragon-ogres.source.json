@@ -1,0 +1,5278 @@
+{
+  "format": "warhammer-vault-first-production-source-v1",
+  "reviewedSource": {
+    "reference": "generated/wh3/refresh-9.0.2/pilot/units/sample-11.result.json",
+    "sha256": "32bce1e14962c0c9658ab134181e8af73b02191994175bd8902d6bcf3cdcefa4",
+    "pilotStatus": "CLEAN",
+    "candidateCount": 1,
+    "note": "Actual saved CA source; schema projection retains named types, keys and references used by normalizer. Pack paths reduced to filenames."
+  },
+  "affiliation": {
+    "militaryGroup": "wh_main_group_chaos",
+    "factionId": "warriors_of_chaos",
+    "kind": "CURATED"
+  },
+  "dump": {
+    "format": "warhammer-vault-wh3-raw-v1",
+    "unit": {
+      "displayName": "Dragon Ogres",
+      "caKey": "wh_dlc01_chs_mon_dragon_ogre",
+      "gameVersion": "9.0.2.0",
+      "extractedAt": "2026-10-01T10:24:26.738Z"
+    },
+    "discovery": {
+      "profile": "sample-11",
+      "policy": "unique",
+      "candidates": [
+        {
+          "mainKey": "wh_dlc01_chs_mon_dragon_ogre",
+          "landKey": "wh_dlc01_chs_mon_dragon_ogre",
+          "localisationKey": "land_units_onscreen_name_wh_dlc01_chs_mon_dragon_ogre",
+          "sourcePack": "db.pack",
+          "path": "db/main_units_tables/data__",
+          "recruitmentCost": 1550,
+          "selectedByPolicy": true
+        }
+      ]
+    },
+    "rootRow": "main_units_tables:dae651953f0ac16d7c56",
+    "sourceKind": "ca-pack",
+    "provenance": {
+      "sourceKind": "ca-pack",
+      "gameVersion": "9.0.2.0",
+      "gameVersionSource": "Warhammer3.exe ProductVersion resource (not inferred from a wiki/Steam build)",
+      "rpfmVersion": "5.1.0",
+      "mcpServerInfo": {
+        "name": "rmcp",
+        "version": "3.1.0"
+      },
+      "schemaFormatVersion": 5,
+      "schemaSha256": "5d628a0167b34a096752c5c21acd16493834a987c80dc9f02364617f796ba2a4",
+      "packs": [
+        {
+          "file_name": "db.pack",
+          "file_path": "db.pack",
+          "pfh_version": "PFH5",
+          "pfh_file_type": "Release",
+          "bitmask": "",
+          "compress": "Zstd",
+          "timestamp": 0,
+          "sizeBytes": 8663017,
+          "filesystemModifiedAt": "2026-10-01T10:08:40.330Z",
+          "sha256": "d0fafac984b3985ec47cec0ea957591424f1077e52ef61941dbf2dc46e6cf723"
+        },
+        {
+          "file_name": "local_en.pack",
+          "file_path": "local_en.pack",
+          "pfh_version": "PFH5",
+          "pfh_file_type": "Release",
+          "bitmask": "",
+          "compress": "Zstd",
+          "timestamp": 1645478083,
+          "sizeBytes": 33435496,
+          "filesystemModifiedAt": "2026-10-01T10:08:40.330Z",
+          "sha256": "f979527a5aaecf293a4e66afc25ed6c760e4107ef4920b73bd56e10e2652fd6a"
+        }
+      ],
+      "accessMethod": "RPFM MCP / decode_packed_file source=PackFile, directly opened CA Release/Patch packs",
+      "extractionSource": "Direct PackFile decode; no dependency-cache rows, no mod merge, no Unit normalization"
+    },
+    "schemas": [
+      {
+        "table": "main_units_tables",
+        "version": 7,
+        "fields": [
+          {
+            "name": "additional_building_requirement",
+            "field_type": "OptionalStringU8",
+            "is_key": false,
+            "is_reference": [
+              "building_levels",
+              "level_name"
+            ]
+          },
+          {
+            "name": "campaign_cap",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "caste",
+            "field_type": "StringU8",
+            "is_key": false,
+            "is_reference": [
+              "unit_castes",
+              "caste"
+            ]
+          },
+          {
+            "name": "create_time",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "is_naval",
+            "field_type": "Boolean",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "land_unit",
+            "field_type": "StringU8",
+            "is_key": false,
+            "is_reference": [
+              "land_units",
+              "key"
+            ]
+          },
+          {
+            "name": "num_men",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "multiplayer_cap",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "multiplayer_cost",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "naval_unit",
+            "field_type": "OptionalStringU8",
+            "is_key": false,
+            "is_reference": [
+              "naval_units",
+              "key"
+            ]
+          },
+          {
+            "name": "num_ships",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "min_men_per_ship",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "max_men_per_ship",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "recruitment_cost",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "unit",
+            "field_type": "StringU8",
+            "is_key": true,
+            "is_reference": null
+          },
+          {
+            "name": "upkeep_cost",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "weight",
+            "field_type": "OptionalStringU8",
+            "is_key": false,
+            "is_reference": [
+              "unit_weights",
+              "key"
+            ]
+          },
+          {
+            "name": "resource_requirement",
+            "field_type": "OptionalStringU8",
+            "is_key": false,
+            "is_reference": [
+              "resources",
+              "key"
+            ]
+          },
+          {
+            "name": "special_edition_mask",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "in_encyclopedia",
+            "field_type": "Boolean",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "audio_voiceover_culture",
+            "field_type": "StringU8",
+            "is_key": false,
+            "is_reference": [
+              "audio_voiceover_cultures",
+              "name"
+            ]
+          },
+          {
+            "name": "ui_unit_group_land",
+            "field_type": "StringU8",
+            "is_key": false,
+            "is_reference": [
+              "ui_unit_groupings",
+              "key"
+            ]
+          },
+          {
+            "name": "tier",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "is_high_threat",
+            "field_type": "Boolean",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "porthole_camera",
+            "field_type": "StringU8",
+            "is_key": false,
+            "is_reference": [
+              "unit_porthole_camera_settings",
+              "key"
+            ]
+          },
+          {
+            "name": "mount",
+            "field_type": "OptionalStringU8",
+            "is_key": false,
+            "is_reference": [
+              "campaign_mounts",
+              "model"
+            ]
+          },
+          {
+            "name": "use_hitpoints_in_campaign",
+            "field_type": "Boolean",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "porthole_composite_scene",
+            "field_type": "OptionalStringU8",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "melee_cp",
+            "field_type": "F32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "missile_cp",
+            "field_type": "F32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "can_siege",
+            "field_type": "Boolean",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "audio_voiceover_culture_override",
+            "field_type": "StringU8",
+            "is_key": false,
+            "is_reference": [
+              "audio_voiceover_cultures",
+              "name"
+            ]
+          },
+          {
+            "name": "restrict_xp_gain_in_campaign",
+            "field_type": "Boolean",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "audio_voiceover_actor_group",
+            "field_type": "StringU8",
+            "is_key": false,
+            "is_reference": [
+              "audio_vo_actor_groups",
+              "name"
+            ]
+          },
+          {
+            "name": "food_cost",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "has_spoken_vo",
+            "field_type": "Boolean",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "is_monstrous",
+            "field_type": "Boolean",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "multiplayer_qb_cap",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "vo_is_dragon",
+            "field_type": "Boolean",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "vo_is_dinosaur",
+            "field_type": "Boolean",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "optional_ui_element",
+            "field_type": "OptionalStringU8",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "barrier_health",
+            "field_type": "F32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "can_be_bribed",
+            "field_type": "Boolean",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "point_allowance_weight",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "is_renown",
+            "field_type": "Boolean",
+            "is_key": false,
+            "is_reference": null
+          }
+        ]
+      },
+      {
+        "table": "Loc",
+        "version": 1,
+        "fields": [
+          {
+            "name": "key",
+            "field_type": "StringU16",
+            "is_key": true,
+            "is_reference": null
+          },
+          {
+            "name": "text",
+            "field_type": "StringU16",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "tooltip",
+            "field_type": "Boolean",
+            "is_key": false,
+            "is_reference": null
+          }
+        ]
+      },
+      {
+        "table": "land_units_tables",
+        "version": 54,
+        "fields": [
+          {
+            "name": "accuracy",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "armour",
+            "field_type": "StringU8",
+            "is_key": false,
+            "is_reference": [
+              "unit_armour_types",
+              "key"
+            ]
+          },
+          {
+            "name": "campaign_action_points",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "category",
+            "field_type": "StringU8",
+            "is_key": false,
+            "is_reference": [
+              "unit_category",
+              "key"
+            ]
+          },
+          {
+            "name": "charge_bonus",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "class",
+            "field_type": "StringU8",
+            "is_key": false,
+            "is_reference": [
+              "unit_class",
+              "key"
+            ]
+          },
+          {
+            "name": "historical_description_text",
+            "field_type": "StringU8",
+            "is_key": false,
+            "is_reference": [
+              "unit_description_historical_texts",
+              "key"
+            ]
+          },
+          {
+            "name": "key",
+            "field_type": "StringU8",
+            "is_key": true,
+            "is_reference": null
+          },
+          {
+            "name": "man_animation",
+            "field_type": "OptionalStringU8",
+            "is_key": false,
+            "is_reference": [
+              "battle_animations_table",
+              "key"
+            ]
+          },
+          {
+            "name": "man_entity",
+            "field_type": "StringU8",
+            "is_key": false,
+            "is_reference": [
+              "battle_entities",
+              "key"
+            ]
+          },
+          {
+            "name": "melee_attack",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "melee_defence",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "morale",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "bonus_hit_points",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "mount",
+            "field_type": "OptionalStringU8",
+            "is_key": false,
+            "is_reference": [
+              "mounts",
+              "key"
+            ]
+          },
+          {
+            "name": "num_mounts",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "primary_melee_weapon",
+            "field_type": "StringU8",
+            "is_key": false,
+            "is_reference": [
+              "melee_weapons",
+              "key"
+            ]
+          },
+          {
+            "name": "primary_missile_weapon",
+            "field_type": "OptionalStringU8",
+            "is_key": false,
+            "is_reference": [
+              "missile_weapons",
+              "key"
+            ]
+          },
+          {
+            "name": "rank_depth",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "shield",
+            "field_type": "StringU8",
+            "is_key": false,
+            "is_reference": [
+              "unit_shield_types",
+              "key"
+            ]
+          },
+          {
+            "name": "short_description_text",
+            "field_type": "StringU8",
+            "is_key": false,
+            "is_reference": [
+              "unit_description_short_texts",
+              "key"
+            ]
+          },
+          {
+            "name": "spacing",
+            "field_type": "StringU8",
+            "is_key": false,
+            "is_reference": [
+              "unit_spacings",
+              "key"
+            ]
+          },
+          {
+            "name": "training_level",
+            "field_type": "StringU8",
+            "is_key": false,
+            "is_reference": [
+              "unit_training_level_enum",
+              "key"
+            ]
+          },
+          {
+            "name": "articulated_record",
+            "field_type": "OptionalStringU8",
+            "is_key": false,
+            "is_reference": [
+              "land_unit_articulated_vehicles",
+              "key"
+            ]
+          },
+          {
+            "name": "engine",
+            "field_type": "OptionalStringU8",
+            "is_key": false,
+            "is_reference": [
+              "battlefield_engines",
+              "key"
+            ]
+          },
+          {
+            "name": "is_male",
+            "field_type": "Boolean",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "visibility_spotting_range_min",
+            "field_type": "F32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "visibility_spotting_range_max",
+            "field_type": "F32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "attribute_group",
+            "field_type": "OptionalStringU8",
+            "is_key": false,
+            "is_reference": [
+              "unit_attributes_groups",
+              "group_name"
+            ]
+          },
+          {
+            "name": "spot_dist_tree",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "spot_dist_scrub",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "reload",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "selection_vo",
+            "field_type": "StringU8",
+            "is_key": false,
+            "is_reference": [
+              "audio_vo_selected_switches",
+              "key"
+            ]
+          },
+          {
+            "name": "selected_vo_secondary",
+            "field_type": "StringU8",
+            "is_key": false,
+            "is_reference": [
+              "audio_vo_selected_switches",
+              "key"
+            ]
+          },
+          {
+            "name": "selected_vo_tertiary",
+            "field_type": "StringU8",
+            "is_key": false,
+            "is_reference": [
+              "audio_vo_selected_switches",
+              "key"
+            ]
+          },
+          {
+            "name": "hiding_scalar",
+            "field_type": "F32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "ground_stat_effect_group",
+            "field_type": "OptionalStringU8",
+            "is_key": false,
+            "is_reference": [
+              "ground_type_stat_effect_groups",
+              "group_name"
+            ]
+          },
+          {
+            "name": "secondary_ammo",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "primary_ammo",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "damage_mod_flame",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "damage_mod_magic",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "num_engines",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "damage_mod_physical",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "damage_mod_missile",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "damage_mod_all",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "ai_usage_group",
+            "field_type": "StringU8",
+            "is_key": false,
+            "is_reference": [
+              "ai_usage_groups",
+              "key"
+            ]
+          },
+          {
+            "name": "can_skirmish",
+            "field_type": "Boolean",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "can_brace",
+            "field_type": "Boolean",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "mounted_draughts",
+            "field_type": "Boolean",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "sync_locomotion",
+            "field_type": "Boolean",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "capture_tier",
+            "field_type": "StringU8",
+            "is_key": false,
+            "is_reference": [
+              "capture_tier_to_power",
+              "key"
+            ]
+          },
+          {
+            "name": "key_building_capture_tier",
+            "field_type": "StringU8",
+            "is_key": false,
+            "is_reference": [
+              "capture_tier_to_power",
+              "key"
+            ]
+          },
+          {
+            "name": "score_capture_tier",
+            "field_type": "StringU8",
+            "is_key": false,
+            "is_reference": [
+              "capture_tier_to_power",
+              "key"
+            ]
+          },
+          {
+            "name": "harmony_amplification_type",
+            "field_type": "OptionalStringU8",
+            "is_key": false,
+            "is_reference": [
+              "harmony_amplification_types",
+              "key"
+            ]
+          },
+          {
+            "name": "first_person",
+            "field_type": "OptionalStringU8",
+            "is_key": false,
+            "is_reference": [
+              "first_person_engines",
+              "key"
+            ]
+          },
+          {
+            "name": "ar_unit_category",
+            "field_type": "OptionalStringU8",
+            "is_key": false,
+            "is_reference": [
+              "autoresolver_unit_group_categories_enums",
+              "key"
+            ]
+          },
+          {
+            "name": "healing_power",
+            "field_type": "F32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "spell_mastery",
+            "field_type": "F32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "infinite_secondary_ammo",
+            "field_type": "Boolean",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "default_guard_mode",
+            "field_type": "Boolean",
+            "is_key": false,
+            "is_reference": null
+          }
+        ]
+      },
+      {
+        "table": "building_units_allowed_tables",
+        "version": 4,
+        "fields": [
+          {
+            "name": "building",
+            "field_type": "StringU8",
+            "is_key": false,
+            "is_reference": [
+              "building_levels",
+              "level_name"
+            ]
+          },
+          {
+            "name": "unit",
+            "field_type": "StringU8",
+            "is_key": false,
+            "is_reference": [
+              "main_units",
+              "unit"
+            ]
+          },
+          {
+            "name": "XP",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "key",
+            "field_type": "I32",
+            "is_key": true,
+            "is_reference": null
+          },
+          {
+            "name": "conditions",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "faction",
+            "field_type": "OptionalStringU8",
+            "is_key": false,
+            "is_reference": [
+              "factions",
+              "key"
+            ]
+          },
+          {
+            "name": "enabled",
+            "field_type": "Boolean",
+            "is_key": false,
+            "is_reference": null
+          }
+        ]
+      },
+      {
+        "table": "unit_armour_types_tables",
+        "version": 6,
+        "fields": [
+          {
+            "name": "armour_value",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "key",
+            "field_type": "StringU8",
+            "is_key": true,
+            "is_reference": null
+          },
+          {
+            "name": "audio_type",
+            "field_type": "OptionalStringU8",
+            "is_key": false,
+            "is_reference": [
+              "audio_armour_types",
+              "key"
+            ]
+          }
+        ]
+      },
+      {
+        "table": "unit_category_tables",
+        "version": 3,
+        "fields": [
+          {
+            "name": "key",
+            "field_type": "StringU8",
+            "is_key": true,
+            "is_reference": null
+          },
+          {
+            "name": "localised_name",
+            "field_type": "OptionalStringU8",
+            "is_key": false,
+            "is_reference": null
+          }
+        ]
+      },
+      {
+        "table": "unit_class_tables",
+        "version": 5,
+        "fields": [
+          {
+            "name": "key",
+            "field_type": "StringU8",
+            "is_key": true,
+            "is_reference": null
+          },
+          {
+            "name": "onscreen",
+            "field_type": "StringU8",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "sort_priority",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          }
+        ]
+      },
+      {
+        "table": "battle_entities_tables",
+        "version": 39,
+        "fields": [
+          {
+            "name": "key",
+            "field_type": "StringU8",
+            "is_key": true,
+            "is_reference": null
+          },
+          {
+            "name": "type",
+            "field_type": "StringU8",
+            "is_key": false,
+            "is_reference": [
+              "battle_entities_types_enum",
+              "key"
+            ]
+          },
+          {
+            "name": "walk_speed",
+            "field_type": "F32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "run_speed",
+            "field_type": "F32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "acceleration",
+            "field_type": "F32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "deceleration",
+            "field_type": "F32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "charge_speed",
+            "field_type": "F32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "charge_distance_commence_run",
+            "field_type": "F32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "charge_distance_adopt_charge_pose",
+            "field_type": "F32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "charge_distance_pick_target",
+            "field_type": "F32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "radius",
+            "field_type": "F32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "shape",
+            "field_type": "StringU8",
+            "is_key": false,
+            "is_reference": [
+              "battle_entities_shape_enum",
+              "key"
+            ]
+          },
+          {
+            "name": "radii_ratio",
+            "field_type": "F32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "mass",
+            "field_type": "F32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "height",
+            "field_type": "F32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "fire_arc_close",
+            "field_type": "F32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "turn_speed",
+            "field_type": "F32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "hit_points",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "allow_turn_to_move_anim",
+            "field_type": "Boolean",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "allow_static_turn_anim",
+            "field_type": "Boolean",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "min_turning_speed",
+            "field_type": "F32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "fly_speed",
+            "field_type": "F32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "flying_charge_speed",
+            "field_type": "F32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "size",
+            "field_type": "StringU8",
+            "is_key": false,
+            "is_reference": [
+              "battle_entities_size_enums",
+              "key"
+            ]
+          },
+          {
+            "name": "strafe_speed",
+            "field_type": "F32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "gradient_strategy",
+            "field_type": "StringU8",
+            "is_key": false,
+            "is_reference": [
+              "battle_entities_gradient_strategy_enums",
+              "key"
+            ]
+          },
+          {
+            "name": "audio_entity_type",
+            "field_type": "StringU8",
+            "is_key": false,
+            "is_reference": [
+              "audio_entity_types",
+              "key"
+            ]
+          },
+          {
+            "name": "combat_reaction_radius",
+            "field_type": "F32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "entity_effects",
+            "field_type": "StringU8",
+            "is_key": false,
+            "is_reference": [
+              "battle_entity_effects_junctions",
+              "key"
+            ]
+          },
+          {
+            "name": "hit_reactions_ignore_chance",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "knock_interrupts_ignore_chance",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "soft_collision_offset_z",
+            "field_type": "F32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "can_climb_ladder_and_stair_pipes",
+            "field_type": "Boolean",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "projectile_intersection_radius_ratio",
+            "field_type": "F32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "projectile_penetration_speed_change",
+            "field_type": "F32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "projectile_penetration_resistance",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "aura_vfx",
+            "field_type": "OptionalStringU8",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "porthole_camera",
+            "field_type": "OptionalStringU8",
+            "is_key": false,
+            "is_reference": [
+              "unit_porthole_camera_settings",
+              "key"
+            ]
+          },
+          {
+            "name": "min_tracking_ratio",
+            "field_type": "F32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "max_tracking_ratio",
+            "field_type": "F32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "vfx_filter_id",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "can_cast_projectile",
+            "field_type": "Boolean",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "porthole_composite_scene",
+            "field_type": "OptionalStringU8",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "has_blood",
+            "field_type": "Boolean",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "can_dismember",
+            "field_type": "Boolean",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "combat_camera_shake",
+            "field_type": "OptionalStringU8",
+            "is_key": false,
+            "is_reference": [
+              "battle_camera_shake_parameters",
+              "key"
+            ]
+          },
+          {
+            "name": "dismember_head_alive_hp_ratio",
+            "field_type": "F32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "dismember_arms_alive_hp_ratio",
+            "field_type": "F32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "jump_attack_chance",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "locomotion_constants",
+            "field_type": "StringU8",
+            "is_key": false,
+            "is_reference": [
+              "battle_entity_locomotion_constants",
+              "key"
+            ]
+          },
+          {
+            "name": "enable_engine_crew_turn_in_movement_direction",
+            "field_type": "Boolean",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "dealt_collision_knocked_flying_threshold_multiplier",
+            "field_type": "F32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "dealt_collision_knocked_down_threshold_multiplier",
+            "field_type": "F32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "dealt_collision_knocked_back_threshold_multiplier",
+            "field_type": "F32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "anim_lod_distance_multiplier",
+            "field_type": "F32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "size_for_animation_lod",
+            "field_type": "OptionalStringU8",
+            "is_key": false,
+            "is_reference": [
+              "battle_entities_size_enums",
+              "key"
+            ]
+          },
+          {
+            "name": "leaves_collision_when_dies",
+            "field_type": "Boolean",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "stop_before_turn",
+            "field_type": "Boolean",
+            "is_key": false,
+            "is_reference": null
+          }
+        ]
+      },
+      {
+        "table": "melee_weapons_tables",
+        "version": 25,
+        "fields": [
+          {
+            "name": "bonus_v_large",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "bonus_v_infantry",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "key",
+            "field_type": "StringU8",
+            "is_key": true,
+            "is_reference": null
+          },
+          {
+            "name": "damage",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "ap_damage",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "weapon_length",
+            "field_type": "F32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "melee_weapon_type",
+            "field_type": "StringU8",
+            "is_key": false,
+            "is_reference": [
+              "unit_melee_weapons_enum",
+              "key"
+            ]
+          },
+          {
+            "name": "audio_type",
+            "field_type": "OptionalStringU8",
+            "is_key": false,
+            "is_reference": [
+              "audio_melee_weapon_types",
+              "key"
+            ]
+          },
+          {
+            "name": "splash_attack_target_size",
+            "field_type": "OptionalStringU8",
+            "is_key": false,
+            "is_reference": [
+              "battle_entities_size_enums",
+              "key"
+            ]
+          },
+          {
+            "name": "splash_attack_max_attacks",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "splash_attack_power_multiplier",
+            "field_type": "F32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "building_damage_multiplier",
+            "field_type": "F32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "ignition_amount",
+            "field_type": "F32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "is_magical",
+            "field_type": "Boolean",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "contact_phase",
+            "field_type": "OptionalStringU8",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "collision_attack_max_targets",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "collision_attack_max_targets_cooldown",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "melee_attack_interval",
+            "field_type": "F32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "scaling_damage",
+            "field_type": "OptionalStringU8",
+            "is_key": false,
+            "is_reference": [
+              "projectiles_scaling_damages",
+              "key"
+            ]
+          },
+          {
+            "name": "is_spell",
+            "field_type": "Boolean",
+            "is_key": false,
+            "is_reference": null
+          }
+        ]
+      },
+      {
+        "table": "unit_shield_types_tables",
+        "version": 6,
+        "fields": [
+          {
+            "name": "key",
+            "field_type": "StringU8",
+            "is_key": true,
+            "is_reference": null
+          },
+          {
+            "name": "shield_defence_value",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "shield_armour_value",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "missile_block_chance",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "audio_type",
+            "field_type": "OptionalStringU8",
+            "is_key": false,
+            "is_reference": [
+              "audio_shield_types",
+              "key"
+            ]
+          }
+        ]
+      },
+      {
+        "table": "unit_attributes_groups_tables",
+        "version": 0,
+        "fields": [
+          {
+            "name": "group_name",
+            "field_type": "StringU8",
+            "is_key": true,
+            "is_reference": null
+          }
+        ]
+      },
+      {
+        "table": "ground_type_stat_effect_groups_tables",
+        "version": 1,
+        "fields": [
+          {
+            "name": "group_name",
+            "field_type": "StringU8",
+            "is_key": true,
+            "is_reference": null
+          }
+        ]
+      },
+      {
+        "table": "building_levels_tables",
+        "version": 3,
+        "fields": [
+          {
+            "name": "level_name",
+            "field_type": "StringU8",
+            "is_key": true,
+            "is_reference": null
+          },
+          {
+            "name": "chain",
+            "field_type": "StringU8",
+            "is_key": false,
+            "is_reference": [
+              "building_chains",
+              "key"
+            ]
+          },
+          {
+            "name": "level",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "create_time",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "create_cost",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "upkeep_cost",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "commodity",
+            "field_type": "OptionalStringU8",
+            "is_key": false,
+            "is_reference": [
+              "commodities",
+              "key"
+            ]
+          },
+          {
+            "name": "only_in_capital",
+            "field_type": "Boolean",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "faction_unique",
+            "field_type": "Boolean",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "first_in_world_bundle",
+            "field_type": "OptionalStringU8",
+            "is_key": false,
+            "is_reference": [
+              "effect_bundles",
+              "key"
+            ]
+          },
+          {
+            "name": "resource_requirement",
+            "field_type": "OptionalStringU8",
+            "is_key": false,
+            "is_reference": [
+              "resources",
+              "key"
+            ]
+          },
+          {
+            "name": "can_convert",
+            "field_type": "Boolean",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "building_instance_key",
+            "field_type": "OptionalStringU8",
+            "is_key": false,
+            "is_reference": [
+              "building_instances",
+              "key"
+            ]
+          },
+          {
+            "name": "should_show_building_level_in_ui_for_technology",
+            "field_type": "Boolean",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "health_override",
+            "field_type": "F32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "development_point_cost",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "can_be_damaged",
+            "field_type": "Boolean",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "primary_slot_building_building_level_requirement",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "audio_building_type",
+            "field_type": "OptionalStringU8",
+            "is_key": false,
+            "is_reference": [
+              "audio_campaign_buildings",
+              "key"
+            ]
+          },
+          {
+            "name": "visible_in_ui",
+            "field_type": "Boolean",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "food_cost",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "slave_cap_contribution",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "resource_cost",
+            "field_type": "OptionalStringU8",
+            "is_key": false,
+            "is_reference": [
+              "resource_costs",
+              "id"
+            ]
+          },
+          {
+            "name": "additional_loot_value",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "resource_transaction_on_complete",
+            "field_type": "OptionalStringU8",
+            "is_key": false,
+            "is_reference": [
+              "scoped_resource_costs",
+              "key"
+            ]
+          },
+          {
+            "name": "split_chain_sort_order",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "override_startpos_settlement_display_building",
+            "field_type": "Boolean",
+            "is_key": false,
+            "is_reference": null
+          }
+        ]
+      },
+      {
+        "table": "battle_entities_size_enums_tables",
+        "version": 0,
+        "fields": [
+          {
+            "name": "key",
+            "field_type": "StringU8",
+            "is_key": true,
+            "is_reference": null
+          }
+        ]
+      },
+      {
+        "table": "unit_attributes_to_groups_junctions_tables",
+        "version": 2,
+        "fields": [
+          {
+            "name": "attribute",
+            "field_type": "StringU8",
+            "is_key": true,
+            "is_reference": [
+              "unit_attributes",
+              "key"
+            ]
+          },
+          {
+            "name": "attribute_group",
+            "field_type": "OptionalStringU8",
+            "is_key": true,
+            "is_reference": [
+              "unit_attributes_groups",
+              "group_name"
+            ]
+          }
+        ]
+      },
+      {
+        "table": "ground_type_to_stat_effects_tables",
+        "version": 4,
+        "fields": [
+          {
+            "name": "affected_stat",
+            "field_type": "StringU8",
+            "is_key": true,
+            "is_reference": [
+              "modifiable_unit_stats",
+              "stat_key"
+            ]
+          },
+          {
+            "name": "ground_type",
+            "field_type": "StringU8",
+            "is_key": true,
+            "is_reference": [
+              "ground_types",
+              "type"
+            ]
+          },
+          {
+            "name": "multiplier",
+            "field_type": "F32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "affected_group",
+            "field_type": "OptionalStringU8",
+            "is_key": true,
+            "is_reference": [
+              "ground_type_stat_effect_groups",
+              "group_name"
+            ]
+          }
+        ]
+      },
+      {
+        "table": "unit_attributes_tables",
+        "version": 5,
+        "fields": [
+          {
+            "name": "key",
+            "field_type": "StringU8",
+            "is_key": true,
+            "is_reference": null
+          }
+        ]
+      }
+    ],
+    "rows": [
+      {
+        "id": "main_units_tables:dae651953f0ac16d7c56",
+        "table": "main_units_tables",
+        "key": {
+          "unit": "wh_dlc01_chs_mon_dragon_ogre"
+        },
+        "sourcePack": "db.pack",
+        "sourcePackPath": "db.pack",
+        "path": "db/main_units_tables/data__",
+        "tableVersion": 7,
+        "row": {
+          "additional_building_requirement": "",
+          "campaign_cap": -1,
+          "caste": "monstrous_infantry",
+          "create_time": 2,
+          "is_naval": false,
+          "land_unit": "wh_dlc01_chs_mon_dragon_ogre",
+          "num_men": 16,
+          "multiplayer_cap": 0,
+          "multiplayer_cost": 1550,
+          "naval_unit": "wh_main_shp_transport",
+          "num_ships": 1,
+          "min_men_per_ship": 1,
+          "max_men_per_ship": 16,
+          "recruitment_cost": 1550,
+          "unit": "wh_dlc01_chs_mon_dragon_ogre",
+          "upkeep_cost": 387,
+          "weight": "heavy",
+          "resource_requirement": "",
+          "special_edition_mask": 0,
+          "in_encyclopedia": true,
+          "audio_voiceover_culture": "wh_dlc01_vo_culture_Dragon_Ogre",
+          "ui_unit_group_land": "chs_dragon_ogres",
+          "tier": 4,
+          "is_high_threat": false,
+          "porthole_camera": "chaos_dragon_ogre",
+          "mount": "",
+          "use_hitpoints_in_campaign": false,
+          "porthole_composite_scene": "",
+          "melee_cp": 1550,
+          "missile_cp": 0,
+          "can_siege": true,
+          "audio_voiceover_culture_override": "vo_culture_None",
+          "restrict_xp_gain_in_campaign": false,
+          "audio_voiceover_actor_group": "wh_main_vo_actor_default",
+          "food_cost": 0,
+          "has_spoken_vo": false,
+          "is_monstrous": true,
+          "multiplayer_qb_cap": 6,
+          "vo_is_dragon": false,
+          "vo_is_dinosaur": false,
+          "optional_ui_element": "",
+          "barrier_health": 0,
+          "can_be_bribed": true,
+          "point_allowance_weight": 1,
+          "is_renown": false
+        }
+      },
+      {
+        "id": "Loc:aa162e3f788a7f7528af",
+        "table": "Loc",
+        "key": {
+          "key": "land_units_onscreen_name_wh_dlc01_chs_mon_dragon_ogre"
+        },
+        "sourcePack": "local_en.pack",
+        "sourcePackPath": "local_en.pack",
+        "path": "text/db/land_units__.loc",
+        "tableVersion": 1,
+        "row": {
+          "key": "land_units_onscreen_name_wh_dlc01_chs_mon_dragon_ogre",
+          "text": "Dragon Ogres",
+          "tooltip": false
+        }
+      },
+      {
+        "id": "land_units_tables:9b5d0c475c754e2dd101",
+        "table": "land_units_tables",
+        "key": {
+          "key": "wh_dlc01_chs_mon_dragon_ogre"
+        },
+        "sourcePack": "db.pack",
+        "sourcePackPath": "db.pack",
+        "path": "db/land_units_tables/data__",
+        "tableVersion": 54,
+        "row": {
+          "accuracy": 10,
+          "armour": "wh2_main_body_60",
+          "campaign_action_points": 2100,
+          "category": "inf_melee",
+          "charge_bonus": 42,
+          "class": "inf_mel",
+          "historical_description_text": "wh_main_unit_long_text_chs_dragon_ogre",
+          "key": "wh_dlc01_chs_mon_dragon_ogre",
+          "man_animation": "ce2_dragon_ogre_2handed_axe",
+          "man_entity": "wh_dlc01_chs_dragon_ogre_blood",
+          "melee_attack": 32,
+          "melee_defence": 40,
+          "morale": 72,
+          "bonus_hit_points": 608,
+          "mount": "",
+          "num_mounts": 0,
+          "primary_melee_weapon": "wh_dlc01_chs_dragon_ogre",
+          "primary_missile_weapon": "",
+          "rank_depth": 2,
+          "shield": "none",
+          "short_description_text": "wh_dlc01_unit_short_text_chs_dragon_ogre",
+          "spacing": "wh_main_monstrous_infantry",
+          "training_level": "trained",
+          "articulated_record": "",
+          "engine": "",
+          "is_male": true,
+          "visibility_spotting_range_min": 40,
+          "visibility_spotting_range_max": 1500,
+          "attribute_group": "wh_dlc01_chs_mon_dragon_ogre",
+          "spot_dist_tree": 60,
+          "spot_dist_scrub": 80,
+          "reload": 0,
+          "selection_vo": "vo_sel_default",
+          "selected_vo_secondary": "vo_sel_melee",
+          "selected_vo_tertiary": "vo_sel_culture",
+          "hiding_scalar": 1,
+          "ground_stat_effect_group": "large",
+          "secondary_ammo": 0,
+          "primary_ammo": 0,
+          "damage_mod_flame": 0,
+          "damage_mod_magic": 0,
+          "num_engines": 0,
+          "damage_mod_physical": 0,
+          "damage_mod_missile": 25,
+          "damage_mod_all": 0,
+          "ai_usage_group": "melee_gatecrusher",
+          "can_skirmish": false,
+          "can_brace": true,
+          "mounted_draughts": false,
+          "sync_locomotion": false,
+          "capture_tier": "medium",
+          "key_building_capture_tier": "medium",
+          "score_capture_tier": "domination_monsters",
+          "harmony_amplification_type": "",
+          "first_person": "",
+          "ar_unit_category": "melee",
+          "healing_power": 1,
+          "spell_mastery": 1,
+          "infinite_secondary_ammo": false,
+          "default_guard_mode": false
+        }
+      },
+      {
+        "id": "building_units_allowed_tables:9fe0b0f48d64e3702b2c",
+        "table": "building_units_allowed_tables",
+        "key": {
+          "key": 1049611211
+        },
+        "sourcePack": "db.pack",
+        "sourcePackPath": "db.pack",
+        "path": "db/building_units_allowed_tables/data__",
+        "tableVersion": 4,
+        "row": {
+          "building": "wh2_main_rogue_settlement_minor_1",
+          "unit": "wh_dlc01_chs_mon_dragon_ogre",
+          "XP": 0,
+          "key": 1049611211,
+          "conditions": 0,
+          "faction": "",
+          "enabled": false
+        }
+      },
+      {
+        "id": "building_units_allowed_tables:e0b6023b2a3e3dff1629",
+        "table": "building_units_allowed_tables",
+        "key": {
+          "key": 1267367692
+        },
+        "sourcePack": "db.pack",
+        "sourcePackPath": "db.pack",
+        "path": "db/building_units_allowed_tables/data__",
+        "tableVersion": 4,
+        "row": {
+          "building": "wh2_main_rogue_settlement_major_1",
+          "unit": "wh_dlc01_chs_mon_dragon_ogre",
+          "XP": 0,
+          "key": 1267367692,
+          "conditions": 0,
+          "faction": "",
+          "enabled": false
+        }
+      },
+      {
+        "id": "building_units_allowed_tables:4fd2b0ca43c9deb98ec2",
+        "table": "building_units_allowed_tables",
+        "key": {
+          "key": 1422953817
+        },
+        "sourcePack": "db.pack",
+        "sourcePackPath": "db.pack",
+        "path": "db/building_units_allowed_tables/data__",
+        "tableVersion": 4,
+        "row": {
+          "building": "wh2_main_rogue_settlement_major_3",
+          "unit": "wh_dlc01_chs_mon_dragon_ogre",
+          "XP": 0,
+          "key": 1422953817,
+          "conditions": 0,
+          "faction": "",
+          "enabled": false
+        }
+      },
+      {
+        "id": "building_units_allowed_tables:acd2b67e6b8f57622b8b",
+        "table": "building_units_allowed_tables",
+        "key": {
+          "key": 1658798465
+        },
+        "sourcePack": "db.pack",
+        "sourcePackPath": "db.pack",
+        "path": "db/building_units_allowed_tables/data__",
+        "tableVersion": 4,
+        "row": {
+          "building": "wh2_main_rogue_settlement_minor_2",
+          "unit": "wh_dlc01_chs_mon_dragon_ogre",
+          "XP": 0,
+          "key": 1658798465,
+          "conditions": 0,
+          "faction": "",
+          "enabled": false
+        }
+      },
+      {
+        "id": "building_units_allowed_tables:1f5b96f95ad1157f0345",
+        "table": "building_units_allowed_tables",
+        "key": {
+          "key": 2058481544
+        },
+        "sourcePack": "db.pack",
+        "sourcePackPath": "db.pack",
+        "path": "db/building_units_allowed_tables/data__",
+        "tableVersion": 4,
+        "row": {
+          "building": "wh2_main_rogue_settlement_major_2",
+          "unit": "wh_dlc01_chs_mon_dragon_ogre",
+          "XP": 0,
+          "key": 2058481544,
+          "conditions": 0,
+          "faction": "",
+          "enabled": false
+        }
+      },
+      {
+        "id": "building_units_allowed_tables:ce49843e7ddcb04716fe",
+        "table": "building_units_allowed_tables",
+        "key": {
+          "key": 62187
+        },
+        "sourcePack": "db.pack",
+        "sourcePackPath": "db.pack",
+        "path": "db/building_units_allowed_tables/data__",
+        "tableVersion": 4,
+        "row": {
+          "building": "wh_main_horde_chaos_dragon_ogres_1",
+          "unit": "wh_dlc01_chs_mon_dragon_ogre",
+          "XP": 0,
+          "key": 62187,
+          "conditions": 0,
+          "faction": "",
+          "enabled": false
+        }
+      },
+      {
+        "id": "building_units_allowed_tables:80b25139900815dad38d",
+        "table": "building_units_allowed_tables",
+        "key": {
+          "key": 62191
+        },
+        "sourcePack": "db.pack",
+        "sourcePackPath": "db.pack",
+        "path": "db/building_units_allowed_tables/data__",
+        "tableVersion": 4,
+        "row": {
+          "building": "wh_main_horde_chaos_dragon_ogres_2",
+          "unit": "wh_dlc01_chs_mon_dragon_ogre",
+          "XP": 0,
+          "key": 62191,
+          "conditions": 0,
+          "faction": "",
+          "enabled": false
+        }
+      },
+      {
+        "id": "building_units_allowed_tables:e533879d5855c1d96344",
+        "table": "building_units_allowed_tables",
+        "key": {
+          "key": 709333822
+        },
+        "sourcePack": "db.pack",
+        "sourcePackPath": "db.pack",
+        "path": "db/building_units_allowed_tables/data__",
+        "tableVersion": 4,
+        "row": {
+          "building": "wh2_main_horde_rogue_settlement_1",
+          "unit": "wh_dlc01_chs_mon_dragon_ogre",
+          "XP": 0,
+          "key": 709333822,
+          "conditions": 0,
+          "faction": "",
+          "enabled": false
+        }
+      },
+      {
+        "id": "building_units_allowed_tables:cda5af56da521cf56cc0",
+        "table": "building_units_allowed_tables",
+        "key": {
+          "key": 73496555
+        },
+        "sourcePack": "db.pack",
+        "sourcePackPath": "db.pack",
+        "path": "db/building_units_allowed_tables/data__",
+        "tableVersion": 4,
+        "row": {
+          "building": "wh2_main_horde_rogue_settlement_2",
+          "unit": "wh_dlc01_chs_mon_dragon_ogre",
+          "XP": 0,
+          "key": 73496555,
+          "conditions": 0,
+          "faction": "",
+          "enabled": false
+        }
+      },
+      {
+        "id": "building_units_allowed_tables:534adb4598b3036d0a19",
+        "table": "building_units_allowed_tables",
+        "key": {
+          "key": 985331383
+        },
+        "sourcePack": "db.pack",
+        "sourcePackPath": "db.pack",
+        "path": "db/building_units_allowed_tables/data__",
+        "tableVersion": 4,
+        "row": {
+          "building": "wh2_main_rogue_settlement_minor_3",
+          "unit": "wh_dlc01_chs_mon_dragon_ogre",
+          "XP": 0,
+          "key": 985331383,
+          "conditions": 0,
+          "faction": "",
+          "enabled": false
+        }
+      },
+      {
+        "id": "unit_armour_types_tables:71a3cc8da0422b7b37f4",
+        "table": "unit_armour_types_tables",
+        "key": {
+          "key": "wh2_main_body_60"
+        },
+        "sourcePack": "db.pack",
+        "sourcePackPath": "db.pack",
+        "path": "db/unit_armour_types_tables/data__",
+        "tableVersion": 6,
+        "row": {
+          "armour_value": 60,
+          "key": "wh2_main_body_60",
+          "audio_type": "body"
+        }
+      },
+      {
+        "id": "unit_category_tables:ab8fb584b9bdd71bc90b",
+        "table": "unit_category_tables",
+        "key": {
+          "key": "inf_melee"
+        },
+        "sourcePack": "db.pack",
+        "sourcePackPath": "db.pack",
+        "path": "db/unit_category_tables/data__",
+        "tableVersion": 3,
+        "row": {
+          "key": "inf_melee",
+          "localised_name": "Melee Infantry"
+        }
+      },
+      {
+        "id": "unit_class_tables:e66c0d9a8b3280058006",
+        "table": "unit_class_tables",
+        "key": {
+          "key": "inf_mel"
+        },
+        "sourcePack": "db.pack",
+        "sourcePackPath": "db.pack",
+        "path": "db/unit_class_tables/data__",
+        "tableVersion": 5,
+        "row": {
+          "key": "inf_mel",
+          "onscreen": "Melee Infantry",
+          "sort_priority": 7
+        }
+      },
+      {
+        "id": "battle_entities_tables:f965f17d95d4c7ed30da",
+        "table": "battle_entities_tables",
+        "key": {
+          "key": "wh_dlc01_chs_dragon_ogre_blood"
+        },
+        "sourcePack": "db.pack",
+        "sourcePackPath": "db.pack",
+        "path": "db/battle_entities_tables/data__",
+        "tableVersion": 39,
+        "row": {
+          "key": "wh_dlc01_chs_dragon_ogre_blood",
+          "type": "giant",
+          "walk_speed": 1.6,
+          "run_speed": 6.4,
+          "acceleration": 3,
+          "deceleration": 4,
+          "charge_speed": 8,
+          "charge_distance_commence_run": 40,
+          "charge_distance_adopt_charge_pose": 35,
+          "charge_distance_pick_target": 35,
+          "radius": 1.75,
+          "shape": "capsule",
+          "radii_ratio": 0.62,
+          "mass": 1700,
+          "height": 3.5,
+          "fire_arc_close": 60,
+          "turn_speed": 80,
+          "hit_points": 8,
+          "allow_turn_to_move_anim": true,
+          "allow_static_turn_anim": true,
+          "min_turning_speed": 0,
+          "fly_speed": 0,
+          "flying_charge_speed": 0,
+          "size": "large",
+          "strafe_speed": 1,
+          "gradient_strategy": "ignore",
+          "audio_entity_type": "wh_dlc_dragon_ogre_small",
+          "combat_reaction_radius": 4,
+          "entity_effects": "monstrous_infantry_effects",
+          "hit_reactions_ignore_chance": 50,
+          "knock_interrupts_ignore_chance": 30,
+          "soft_collision_offset_z": 0,
+          "can_climb_ladder_and_stair_pipes": false,
+          "projectile_intersection_radius_ratio": 0.8999999,
+          "projectile_penetration_speed_change": 0.75,
+          "projectile_penetration_resistance": 4,
+          "aura_vfx": "",
+          "porthole_camera": "",
+          "min_tracking_ratio": 0.5,
+          "max_tracking_ratio": 1.4499999,
+          "vfx_filter_id": 1,
+          "can_cast_projectile": false,
+          "porthole_composite_scene": "",
+          "has_blood": true,
+          "can_dismember": false,
+          "combat_camera_shake": "wh_main_unit_combat",
+          "dismember_head_alive_hp_ratio": -1,
+          "dismember_arms_alive_hp_ratio": -1,
+          "jump_attack_chance": 40,
+          "locomotion_constants": "large_entity",
+          "enable_engine_crew_turn_in_movement_direction": false,
+          "dealt_collision_knocked_flying_threshold_multiplier": 1,
+          "dealt_collision_knocked_down_threshold_multiplier": 1,
+          "dealt_collision_knocked_back_threshold_multiplier": 1,
+          "anim_lod_distance_multiplier": 1,
+          "size_for_animation_lod": "",
+          "leaves_collision_when_dies": false,
+          "stop_before_turn": false
+        }
+      },
+      {
+        "id": "melee_weapons_tables:99323c7944012c48ba24",
+        "table": "melee_weapons_tables",
+        "key": {
+          "key": "wh_dlc01_chs_dragon_ogre"
+        },
+        "sourcePack": "db.pack",
+        "sourcePackPath": "db.pack",
+        "path": "db/melee_weapons_tables/data__",
+        "tableVersion": 25,
+        "row": {
+          "bonus_v_large": 26,
+          "bonus_v_infantry": 0,
+          "key": "wh_dlc01_chs_dragon_ogre",
+          "damage": 33,
+          "ap_damage": 77,
+          "weapon_length": 2,
+          "melee_weapon_type": "axe",
+          "audio_type": "axe",
+          "splash_attack_target_size": "medium",
+          "splash_attack_max_attacks": 4,
+          "splash_attack_power_multiplier": 1,
+          "building_damage_multiplier": 1,
+          "ignition_amount": 0,
+          "is_magical": false,
+          "contact_phase": "",
+          "collision_attack_max_targets": 0,
+          "collision_attack_max_targets_cooldown": 10,
+          "melee_attack_interval": 4,
+          "scaling_damage": "",
+          "is_spell": false
+        }
+      },
+      {
+        "id": "unit_shield_types_tables:8b387d46b21833be3ae6",
+        "table": "unit_shield_types_tables",
+        "key": {
+          "key": "none"
+        },
+        "sourcePack": "db.pack",
+        "sourcePackPath": "db.pack",
+        "path": "db/unit_shield_types_tables/data__",
+        "tableVersion": 6,
+        "row": {
+          "key": "none",
+          "shield_defence_value": 0,
+          "shield_armour_value": 0,
+          "missile_block_chance": 0,
+          "audio_type": ""
+        }
+      },
+      {
+        "id": "unit_attributes_groups_tables:e814f035ee154706b12b",
+        "table": "unit_attributes_groups_tables",
+        "key": {
+          "group_name": "wh_dlc01_chs_mon_dragon_ogre"
+        },
+        "sourcePack": "db.pack",
+        "sourcePackPath": "db.pack",
+        "path": "db/unit_attributes_groups_tables/data__",
+        "tableVersion": 0,
+        "row": {
+          "group_name": "wh_dlc01_chs_mon_dragon_ogre"
+        }
+      },
+      {
+        "id": "ground_type_stat_effect_groups_tables:9af8a0ced765d0dd8398",
+        "table": "ground_type_stat_effect_groups_tables",
+        "key": {
+          "group_name": "large"
+        },
+        "sourcePack": "db.pack",
+        "sourcePackPath": "db.pack",
+        "path": "db/ground_type_stat_effect_groups_tables/data__",
+        "tableVersion": 1,
+        "row": {
+          "group_name": "large"
+        }
+      },
+      {
+        "id": "building_levels_tables:086ad9638937e5443a4d",
+        "table": "building_levels_tables",
+        "key": {
+          "level_name": "wh2_main_rogue_settlement_minor_1"
+        },
+        "sourcePack": "db.pack",
+        "sourcePackPath": "db.pack",
+        "path": "db/building_levels_tables/data__",
+        "tableVersion": 3,
+        "row": {
+          "level_name": "wh2_main_rogue_settlement_minor_1",
+          "chain": "wh2_main_rogue_settlement_minor",
+          "level": 1,
+          "create_time": 1,
+          "create_cost": 1,
+          "upkeep_cost": 0,
+          "commodity": "",
+          "only_in_capital": false,
+          "faction_unique": false,
+          "first_in_world_bundle": "",
+          "resource_requirement": "",
+          "can_convert": true,
+          "building_instance_key": "wh_main_HUMAN_settlement_minor",
+          "should_show_building_level_in_ui_for_technology": false,
+          "health_override": 0,
+          "development_point_cost": 0,
+          "can_be_damaged": true,
+          "primary_slot_building_building_level_requirement": 0,
+          "audio_building_type": "wh_cam_settlement_minor_rogue",
+          "visible_in_ui": true,
+          "food_cost": 0,
+          "slave_cap_contribution": 0,
+          "resource_cost": "",
+          "additional_loot_value": 0,
+          "resource_transaction_on_complete": "",
+          "split_chain_sort_order": -1,
+          "override_startpos_settlement_display_building": false
+        }
+      },
+      {
+        "id": "building_levels_tables:7445e0c52d05e2c5abe0",
+        "table": "building_levels_tables",
+        "key": {
+          "level_name": "wh2_main_rogue_settlement_major_1"
+        },
+        "sourcePack": "db.pack",
+        "sourcePackPath": "db.pack",
+        "path": "db/building_levels_tables/data__",
+        "tableVersion": 3,
+        "row": {
+          "level_name": "wh2_main_rogue_settlement_major_1",
+          "chain": "wh2_main_rogue_settlement_major",
+          "level": 1,
+          "create_time": 1,
+          "create_cost": 1,
+          "upkeep_cost": 0,
+          "commodity": "",
+          "only_in_capital": false,
+          "faction_unique": false,
+          "first_in_world_bundle": "",
+          "resource_requirement": "",
+          "can_convert": true,
+          "building_instance_key": "wh_main_HUMAN_settlement_major_coast",
+          "should_show_building_level_in_ui_for_technology": false,
+          "health_override": 0,
+          "development_point_cost": 0,
+          "can_be_damaged": false,
+          "primary_slot_building_building_level_requirement": 0,
+          "audio_building_type": "wh_cam_settlement_major_rogue",
+          "visible_in_ui": true,
+          "food_cost": 0,
+          "slave_cap_contribution": 0,
+          "resource_cost": "",
+          "additional_loot_value": 0,
+          "resource_transaction_on_complete": "",
+          "split_chain_sort_order": -1,
+          "override_startpos_settlement_display_building": false
+        }
+      },
+      {
+        "id": "building_levels_tables:ac0ed559f1be7fa14a21",
+        "table": "building_levels_tables",
+        "key": {
+          "level_name": "wh2_main_rogue_settlement_major_3"
+        },
+        "sourcePack": "db.pack",
+        "sourcePackPath": "db.pack",
+        "path": "db/building_levels_tables/data__",
+        "tableVersion": 3,
+        "row": {
+          "level_name": "wh2_main_rogue_settlement_major_3",
+          "chain": "wh2_main_rogue_settlement_major",
+          "level": 3,
+          "create_time": 1,
+          "create_cost": 1,
+          "upkeep_cost": 0,
+          "commodity": "",
+          "only_in_capital": false,
+          "faction_unique": false,
+          "first_in_world_bundle": "",
+          "resource_requirement": "",
+          "can_convert": true,
+          "building_instance_key": "wh_main_HUMAN_settlement_major_coast",
+          "should_show_building_level_in_ui_for_technology": false,
+          "health_override": 0,
+          "development_point_cost": 2,
+          "can_be_damaged": false,
+          "primary_slot_building_building_level_requirement": 0,
+          "audio_building_type": "wh_cam_settlement_major_rogue",
+          "visible_in_ui": true,
+          "food_cost": 0,
+          "slave_cap_contribution": 0,
+          "resource_cost": "",
+          "additional_loot_value": 0,
+          "resource_transaction_on_complete": "",
+          "split_chain_sort_order": -1,
+          "override_startpos_settlement_display_building": false
+        }
+      },
+      {
+        "id": "building_levels_tables:2e8e5661645fcb574720",
+        "table": "building_levels_tables",
+        "key": {
+          "level_name": "wh2_main_rogue_settlement_minor_2"
+        },
+        "sourcePack": "db.pack",
+        "sourcePackPath": "db.pack",
+        "path": "db/building_levels_tables/data__",
+        "tableVersion": 3,
+        "row": {
+          "level_name": "wh2_main_rogue_settlement_minor_2",
+          "chain": "wh2_main_rogue_settlement_minor",
+          "level": 2,
+          "create_time": 1,
+          "create_cost": 1,
+          "upkeep_cost": 0,
+          "commodity": "",
+          "only_in_capital": false,
+          "faction_unique": false,
+          "first_in_world_bundle": "",
+          "resource_requirement": "",
+          "can_convert": true,
+          "building_instance_key": "wh_main_HUMAN_settlement_minor",
+          "should_show_building_level_in_ui_for_technology": false,
+          "health_override": 0,
+          "development_point_cost": 0,
+          "can_be_damaged": true,
+          "primary_slot_building_building_level_requirement": 0,
+          "audio_building_type": "wh_cam_settlement_minor_rogue",
+          "visible_in_ui": true,
+          "food_cost": 0,
+          "slave_cap_contribution": 0,
+          "resource_cost": "",
+          "additional_loot_value": 0,
+          "resource_transaction_on_complete": "",
+          "split_chain_sort_order": -1,
+          "override_startpos_settlement_display_building": false
+        }
+      },
+      {
+        "id": "building_levels_tables:3023b6434be617cb9283",
+        "table": "building_levels_tables",
+        "key": {
+          "level_name": "wh2_main_rogue_settlement_major_2"
+        },
+        "sourcePack": "db.pack",
+        "sourcePackPath": "db.pack",
+        "path": "db/building_levels_tables/data__",
+        "tableVersion": 3,
+        "row": {
+          "level_name": "wh2_main_rogue_settlement_major_2",
+          "chain": "wh2_main_rogue_settlement_major",
+          "level": 2,
+          "create_time": 1,
+          "create_cost": 1,
+          "upkeep_cost": 0,
+          "commodity": "",
+          "only_in_capital": false,
+          "faction_unique": false,
+          "first_in_world_bundle": "",
+          "resource_requirement": "",
+          "can_convert": true,
+          "building_instance_key": "wh_main_HUMAN_settlement_major_coast",
+          "should_show_building_level_in_ui_for_technology": false,
+          "health_override": 0,
+          "development_point_cost": 1,
+          "can_be_damaged": false,
+          "primary_slot_building_building_level_requirement": 0,
+          "audio_building_type": "wh_cam_settlement_major_rogue",
+          "visible_in_ui": true,
+          "food_cost": 0,
+          "slave_cap_contribution": 0,
+          "resource_cost": "",
+          "additional_loot_value": 0,
+          "resource_transaction_on_complete": "",
+          "split_chain_sort_order": -1,
+          "override_startpos_settlement_display_building": false
+        }
+      },
+      {
+        "id": "building_levels_tables:c24a024b33e0ee82363b",
+        "table": "building_levels_tables",
+        "key": {
+          "level_name": "wh_main_horde_chaos_dragon_ogres_1"
+        },
+        "sourcePack": "db.pack",
+        "sourcePackPath": "db.pack",
+        "path": "db/building_levels_tables/data__",
+        "tableVersion": 3,
+        "row": {
+          "level_name": "wh_main_horde_chaos_dragon_ogres_1",
+          "chain": "wh_main_horde_chaos_dragon_ogres",
+          "level": 0,
+          "create_time": 2,
+          "create_cost": 8000,
+          "upkeep_cost": 0,
+          "commodity": "",
+          "only_in_capital": false,
+          "faction_unique": false,
+          "first_in_world_bundle": "",
+          "resource_requirement": "",
+          "can_convert": true,
+          "building_instance_key": "wh_main_horde_chaos_dragon_ogres",
+          "should_show_building_level_in_ui_for_technology": false,
+          "health_override": 0,
+          "development_point_cost": 0,
+          "can_be_damaged": true,
+          "primary_slot_building_building_level_requirement": 4,
+          "audio_building_type": "",
+          "visible_in_ui": true,
+          "food_cost": 0,
+          "slave_cap_contribution": 0,
+          "resource_cost": "",
+          "additional_loot_value": 0,
+          "resource_transaction_on_complete": "",
+          "split_chain_sort_order": -1,
+          "override_startpos_settlement_display_building": false
+        }
+      },
+      {
+        "id": "building_levels_tables:c702e3e3a3324238d61c",
+        "table": "building_levels_tables",
+        "key": {
+          "level_name": "wh_main_horde_chaos_dragon_ogres_2"
+        },
+        "sourcePack": "db.pack",
+        "sourcePackPath": "db.pack",
+        "path": "db/building_levels_tables/data__",
+        "tableVersion": 3,
+        "row": {
+          "level_name": "wh_main_horde_chaos_dragon_ogres_2",
+          "chain": "wh_main_horde_chaos_dragon_ogres",
+          "level": 1,
+          "create_time": 3,
+          "create_cost": 12000,
+          "upkeep_cost": 0,
+          "commodity": "",
+          "only_in_capital": false,
+          "faction_unique": false,
+          "first_in_world_bundle": "",
+          "resource_requirement": "",
+          "can_convert": true,
+          "building_instance_key": "wh_main_horde_chaos_dragon_ogres",
+          "should_show_building_level_in_ui_for_technology": false,
+          "health_override": 0,
+          "development_point_cost": 0,
+          "can_be_damaged": true,
+          "primary_slot_building_building_level_requirement": 5,
+          "audio_building_type": "",
+          "visible_in_ui": true,
+          "food_cost": 0,
+          "slave_cap_contribution": 0,
+          "resource_cost": "",
+          "additional_loot_value": 0,
+          "resource_transaction_on_complete": "",
+          "split_chain_sort_order": -1,
+          "override_startpos_settlement_display_building": false
+        }
+      },
+      {
+        "id": "building_levels_tables:e8c646911d0c0bcbd608",
+        "table": "building_levels_tables",
+        "key": {
+          "level_name": "wh2_main_horde_rogue_settlement_1"
+        },
+        "sourcePack": "db.pack",
+        "sourcePackPath": "db.pack",
+        "path": "db/building_levels_tables/data__",
+        "tableVersion": 3,
+        "row": {
+          "level_name": "wh2_main_horde_rogue_settlement_1",
+          "chain": "wh2_main_horde_rogue_settlement",
+          "level": 0,
+          "create_time": 1,
+          "create_cost": 1,
+          "upkeep_cost": 0,
+          "commodity": "",
+          "only_in_capital": false,
+          "faction_unique": false,
+          "first_in_world_bundle": "",
+          "resource_requirement": "",
+          "can_convert": true,
+          "building_instance_key": "",
+          "should_show_building_level_in_ui_for_technology": false,
+          "health_override": 0,
+          "development_point_cost": 0,
+          "can_be_damaged": false,
+          "primary_slot_building_building_level_requirement": 0,
+          "audio_building_type": "wh_cam_settlement_minor_rogue",
+          "visible_in_ui": true,
+          "food_cost": 0,
+          "slave_cap_contribution": 0,
+          "resource_cost": "",
+          "additional_loot_value": 0,
+          "resource_transaction_on_complete": "",
+          "split_chain_sort_order": -1,
+          "override_startpos_settlement_display_building": false
+        }
+      },
+      {
+        "id": "building_levels_tables:9d701477f29b7e8cefc7",
+        "table": "building_levels_tables",
+        "key": {
+          "level_name": "wh2_main_horde_rogue_settlement_2"
+        },
+        "sourcePack": "db.pack",
+        "sourcePackPath": "db.pack",
+        "path": "db/building_levels_tables/data__",
+        "tableVersion": 3,
+        "row": {
+          "level_name": "wh2_main_horde_rogue_settlement_2",
+          "chain": "wh2_main_horde_rogue_settlement",
+          "level": 1,
+          "create_time": 1,
+          "create_cost": 1,
+          "upkeep_cost": 0,
+          "commodity": "",
+          "only_in_capital": false,
+          "faction_unique": false,
+          "first_in_world_bundle": "",
+          "resource_requirement": "",
+          "can_convert": true,
+          "building_instance_key": "",
+          "should_show_building_level_in_ui_for_technology": false,
+          "health_override": 0,
+          "development_point_cost": 1,
+          "can_be_damaged": false,
+          "primary_slot_building_building_level_requirement": 0,
+          "audio_building_type": "wh_cam_settlement_minor_rogue",
+          "visible_in_ui": true,
+          "food_cost": 0,
+          "slave_cap_contribution": 0,
+          "resource_cost": "",
+          "additional_loot_value": 0,
+          "resource_transaction_on_complete": "",
+          "split_chain_sort_order": -1,
+          "override_startpos_settlement_display_building": false
+        }
+      },
+      {
+        "id": "building_levels_tables:9929535cccd9549545c0",
+        "table": "building_levels_tables",
+        "key": {
+          "level_name": "wh2_main_rogue_settlement_minor_3"
+        },
+        "sourcePack": "db.pack",
+        "sourcePackPath": "db.pack",
+        "path": "db/building_levels_tables/data__",
+        "tableVersion": 3,
+        "row": {
+          "level_name": "wh2_main_rogue_settlement_minor_3",
+          "chain": "wh2_main_rogue_settlement_minor",
+          "level": 3,
+          "create_time": 1,
+          "create_cost": 1,
+          "upkeep_cost": 0,
+          "commodity": "",
+          "only_in_capital": false,
+          "faction_unique": false,
+          "first_in_world_bundle": "",
+          "resource_requirement": "",
+          "can_convert": true,
+          "building_instance_key": "wh_main_HUMAN_settlement_minor",
+          "should_show_building_level_in_ui_for_technology": false,
+          "health_override": 0,
+          "development_point_cost": 0,
+          "can_be_damaged": true,
+          "primary_slot_building_building_level_requirement": 0,
+          "audio_building_type": "wh_cam_settlement_minor_rogue",
+          "visible_in_ui": true,
+          "food_cost": 0,
+          "slave_cap_contribution": 0,
+          "resource_cost": "",
+          "additional_loot_value": 0,
+          "resource_transaction_on_complete": "",
+          "split_chain_sort_order": -1,
+          "override_startpos_settlement_display_building": false
+        }
+      },
+      {
+        "id": "battle_entities_size_enums_tables:57f6912d61e5f16fcc73",
+        "table": "battle_entities_size_enums_tables",
+        "key": {
+          "key": "large"
+        },
+        "sourcePack": "db.pack",
+        "sourcePackPath": "db.pack",
+        "path": "db/battle_entities_size_enums_tables/data__",
+        "tableVersion": 0,
+        "row": {
+          "key": "large"
+        }
+      },
+      {
+        "id": "battle_entities_size_enums_tables:776179a657c703d987d9",
+        "table": "battle_entities_size_enums_tables",
+        "key": {
+          "key": "medium"
+        },
+        "sourcePack": "db.pack",
+        "sourcePackPath": "db.pack",
+        "path": "db/battle_entities_size_enums_tables/data__",
+        "tableVersion": 0,
+        "row": {
+          "key": "medium"
+        }
+      },
+      {
+        "id": "unit_attributes_to_groups_junctions_tables:34e9cf9c101292271142",
+        "table": "unit_attributes_to_groups_junctions_tables",
+        "key": {
+          "attribute": "causes_fear",
+          "attribute_group": "wh_dlc01_chs_mon_dragon_ogre"
+        },
+        "sourcePack": "db.pack",
+        "sourcePackPath": "db.pack",
+        "path": "db/unit_attributes_to_groups_junctions_tables/data__",
+        "tableVersion": 2,
+        "row": {
+          "attribute": "causes_fear",
+          "attribute_group": "wh_dlc01_chs_mon_dragon_ogre"
+        }
+      },
+      {
+        "id": "unit_attributes_to_groups_junctions_tables:2d861bedbe636c736718",
+        "table": "unit_attributes_to_groups_junctions_tables",
+        "key": {
+          "attribute": "hide_forest",
+          "attribute_group": "wh_dlc01_chs_mon_dragon_ogre"
+        },
+        "sourcePack": "db.pack",
+        "sourcePackPath": "db.pack",
+        "path": "db/unit_attributes_to_groups_junctions_tables/data__",
+        "tableVersion": 2,
+        "row": {
+          "attribute": "hide_forest",
+          "attribute_group": "wh_dlc01_chs_mon_dragon_ogre"
+        }
+      },
+      {
+        "id": "ground_type_to_stat_effects_tables:35d188c20d970c1a5e07",
+        "table": "ground_type_to_stat_effects_tables",
+        "key": {
+          "affected_stat": "scalar_speed",
+          "ground_type": "forest",
+          "affected_group": "large"
+        },
+        "sourcePack": "db.pack",
+        "sourcePackPath": "db.pack",
+        "path": "db/ground_type_to_stat_effects_tables/data__",
+        "tableVersion": 4,
+        "row": {
+          "affected_stat": "scalar_speed",
+          "ground_type": "forest",
+          "multiplier": 0.8,
+          "affected_group": "large"
+        }
+      },
+      {
+        "id": "ground_type_to_stat_effects_tables:397f62ff7229144fc95d",
+        "table": "ground_type_to_stat_effects_tables",
+        "key": {
+          "affected_stat": "stat_melee_attack",
+          "ground_type": "forest",
+          "affected_group": "large"
+        },
+        "sourcePack": "db.pack",
+        "sourcePackPath": "db.pack",
+        "path": "db/ground_type_to_stat_effects_tables/data__",
+        "tableVersion": 4,
+        "row": {
+          "affected_stat": "stat_melee_attack",
+          "ground_type": "forest",
+          "multiplier": 0.8,
+          "affected_group": "large"
+        }
+      },
+      {
+        "id": "ground_type_to_stat_effects_tables:9931c2336512296512cb",
+        "table": "ground_type_to_stat_effects_tables",
+        "key": {
+          "affected_stat": "scalar_speed",
+          "ground_type": "sharp_stones",
+          "affected_group": "large"
+        },
+        "sourcePack": "db.pack",
+        "sourcePackPath": "db.pack",
+        "path": "db/ground_type_to_stat_effects_tables/data__",
+        "tableVersion": 4,
+        "row": {
+          "affected_stat": "scalar_speed",
+          "ground_type": "sharp_stones",
+          "multiplier": 1,
+          "affected_group": "large"
+        }
+      },
+      {
+        "id": "unit_attributes_tables:fa4416d4f451b4f716a7",
+        "table": "unit_attributes_tables",
+        "key": {
+          "key": "causes_fear"
+        },
+        "sourcePack": "db.pack",
+        "sourcePackPath": "db.pack",
+        "path": "db/unit_attributes_tables/data__",
+        "tableVersion": 5,
+        "row": {
+          "key": "causes_fear"
+        }
+      },
+      {
+        "id": "Loc:26a6b2edbe040a93cc35",
+        "table": "Loc",
+        "key": {
+          "key": "unit_attributes_bullet_text_causes_fear"
+        },
+        "sourcePack": "local_en.pack",
+        "sourcePackPath": "local_en.pack",
+        "path": "text/db/unit_attributes__.loc",
+        "tableVersion": 1,
+        "row": {
+          "key": "unit_attributes_bullet_text_causes_fear",
+          "text": "Causes Fear||This unit frightens all enemy units, reducing their [[img:icon_morale]][[/img]]leadership when nearby. It is also immune to fear. Fear penalties do not stack.",
+          "tooltip": false
+        }
+      },
+      {
+        "id": "Loc:deaea042e375a2b0a7d6",
+        "table": "Loc",
+        "key": {
+          "key": "unit_attributes_imued_effect_text_causes_fear"
+        },
+        "sourcePack": "local_en.pack",
+        "sourcePackPath": "local_en.pack",
+        "path": "text/db/unit_attributes__.loc",
+        "tableVersion": 1,
+        "row": {
+          "key": "unit_attributes_imued_effect_text_causes_fear",
+          "text": "[[img:ui/battle ui/ability_icons/causes_fear.png]][[/img]] Can Cause Fear",
+          "tooltip": false
+        }
+      },
+      {
+        "id": "Loc:b94e729fe524851c5c67",
+        "table": "Loc",
+        "key": {
+          "key": "unit_attributes_removed_effect_text_causes_fear"
+        },
+        "sourcePack": "local_en.pack",
+        "sourcePackPath": "local_en.pack",
+        "path": "text/db/unit_attributes__.loc",
+        "tableVersion": 1,
+        "row": {
+          "key": "unit_attributes_removed_effect_text_causes_fear",
+          "text": "Removes Fear",
+          "tooltip": false
+        }
+      },
+      {
+        "id": "unit_attributes_tables:0868019d6fbf5f120ec6",
+        "table": "unit_attributes_tables",
+        "key": {
+          "key": "hide_forest"
+        },
+        "sourcePack": "db.pack",
+        "sourcePackPath": "db.pack",
+        "path": "db/unit_attributes_tables/data__",
+        "tableVersion": 5,
+        "row": {
+          "key": "hide_forest"
+        }
+      },
+      {
+        "id": "Loc:d59df34247939accadfa",
+        "table": "Loc",
+        "key": {
+          "key": "unit_attributes_bullet_text_hide_forest"
+        },
+        "sourcePack": "local_en.pack",
+        "sourcePackPath": "local_en.pack",
+        "path": "text/db/unit_attributes__.loc",
+        "tableVersion": 1,
+        "row": {
+          "key": "unit_attributes_bullet_text_hide_forest",
+          "text": "Hide (forest)||This unit can hide in forests until enemy units get too close.",
+          "tooltip": false
+        }
+      },
+      {
+        "id": "Loc:e80c799ba8efe7586123",
+        "table": "Loc",
+        "key": {
+          "key": "unit_attributes_imued_effect_text_hide_forest"
+        },
+        "sourcePack": "local_en.pack",
+        "sourcePackPath": "local_en.pack",
+        "path": "text/db/unit_attributes__.loc",
+        "tableVersion": 1,
+        "row": {
+          "key": "unit_attributes_imued_effect_text_hide_forest",
+          "text": "Hide (forest)",
+          "tooltip": false
+        }
+      },
+      {
+        "id": "Loc:23f750f564af4990e863",
+        "table": "Loc",
+        "key": {
+          "key": "unit_attributes_removed_effect_text_hide_forest"
+        },
+        "sourcePack": "local_en.pack",
+        "sourcePackPath": "local_en.pack",
+        "path": "text/db/unit_attributes__.loc",
+        "tableVersion": 1,
+        "row": {
+          "key": "unit_attributes_removed_effect_text_hide_forest",
+          "text": "",
+          "tooltip": false
+        }
+      }
+    ],
+    "relationships": [
+      {
+        "from": "Loc:aa162e3f788a7f7528af",
+        "field": "key",
+        "to": "land_units_tables:9b5d0c475c754e2dd101",
+        "targetField": "key",
+        "value": "wh_dlc01_chs_mon_dragon_ogre",
+        "direction": "localisation",
+        "evidence": "Exact onscreen_name Loc key + matching schema localised_fields + land_units.key"
+      },
+      {
+        "from": "main_units_tables:dae651953f0ac16d7c56",
+        "field": "land_unit",
+        "to": "land_units_tables:9b5d0c475c754e2dd101",
+        "targetField": "key",
+        "value": "wh_dlc01_chs_mon_dragon_ogre",
+        "direction": "forward",
+        "evidence": "RPFM processed schema is_reference"
+      },
+      {
+        "from": "building_units_allowed_tables:9fe0b0f48d64e3702b2c",
+        "field": "unit",
+        "to": "main_units_tables:dae651953f0ac16d7c56",
+        "targetField": "unit",
+        "value": "wh_dlc01_chs_mon_dragon_ogre",
+        "direction": "reverse",
+        "evidence": "RPFM processed schema is_reference"
+      },
+      {
+        "from": "building_units_allowed_tables:e0b6023b2a3e3dff1629",
+        "field": "unit",
+        "to": "main_units_tables:dae651953f0ac16d7c56",
+        "targetField": "unit",
+        "value": "wh_dlc01_chs_mon_dragon_ogre",
+        "direction": "reverse",
+        "evidence": "RPFM processed schema is_reference"
+      },
+      {
+        "from": "building_units_allowed_tables:4fd2b0ca43c9deb98ec2",
+        "field": "unit",
+        "to": "main_units_tables:dae651953f0ac16d7c56",
+        "targetField": "unit",
+        "value": "wh_dlc01_chs_mon_dragon_ogre",
+        "direction": "reverse",
+        "evidence": "RPFM processed schema is_reference"
+      },
+      {
+        "from": "building_units_allowed_tables:acd2b67e6b8f57622b8b",
+        "field": "unit",
+        "to": "main_units_tables:dae651953f0ac16d7c56",
+        "targetField": "unit",
+        "value": "wh_dlc01_chs_mon_dragon_ogre",
+        "direction": "reverse",
+        "evidence": "RPFM processed schema is_reference"
+      },
+      {
+        "from": "building_units_allowed_tables:1f5b96f95ad1157f0345",
+        "field": "unit",
+        "to": "main_units_tables:dae651953f0ac16d7c56",
+        "targetField": "unit",
+        "value": "wh_dlc01_chs_mon_dragon_ogre",
+        "direction": "reverse",
+        "evidence": "RPFM processed schema is_reference"
+      },
+      {
+        "from": "building_units_allowed_tables:ce49843e7ddcb04716fe",
+        "field": "unit",
+        "to": "main_units_tables:dae651953f0ac16d7c56",
+        "targetField": "unit",
+        "value": "wh_dlc01_chs_mon_dragon_ogre",
+        "direction": "reverse",
+        "evidence": "RPFM processed schema is_reference"
+      },
+      {
+        "from": "building_units_allowed_tables:80b25139900815dad38d",
+        "field": "unit",
+        "to": "main_units_tables:dae651953f0ac16d7c56",
+        "targetField": "unit",
+        "value": "wh_dlc01_chs_mon_dragon_ogre",
+        "direction": "reverse",
+        "evidence": "RPFM processed schema is_reference"
+      },
+      {
+        "from": "building_units_allowed_tables:e533879d5855c1d96344",
+        "field": "unit",
+        "to": "main_units_tables:dae651953f0ac16d7c56",
+        "targetField": "unit",
+        "value": "wh_dlc01_chs_mon_dragon_ogre",
+        "direction": "reverse",
+        "evidence": "RPFM processed schema is_reference"
+      },
+      {
+        "from": "building_units_allowed_tables:cda5af56da521cf56cc0",
+        "field": "unit",
+        "to": "main_units_tables:dae651953f0ac16d7c56",
+        "targetField": "unit",
+        "value": "wh_dlc01_chs_mon_dragon_ogre",
+        "direction": "reverse",
+        "evidence": "RPFM processed schema is_reference"
+      },
+      {
+        "from": "building_units_allowed_tables:534adb4598b3036d0a19",
+        "field": "unit",
+        "to": "main_units_tables:dae651953f0ac16d7c56",
+        "targetField": "unit",
+        "value": "wh_dlc01_chs_mon_dragon_ogre",
+        "direction": "reverse",
+        "evidence": "RPFM processed schema is_reference"
+      },
+      {
+        "from": "land_units_tables:9b5d0c475c754e2dd101",
+        "field": "armour",
+        "to": "unit_armour_types_tables:71a3cc8da0422b7b37f4",
+        "targetField": "key",
+        "value": "wh2_main_body_60",
+        "direction": "forward",
+        "evidence": "RPFM processed schema is_reference"
+      },
+      {
+        "from": "land_units_tables:9b5d0c475c754e2dd101",
+        "field": "category",
+        "to": "unit_category_tables:ab8fb584b9bdd71bc90b",
+        "targetField": "key",
+        "value": "inf_melee",
+        "direction": "forward",
+        "evidence": "RPFM processed schema is_reference"
+      },
+      {
+        "from": "land_units_tables:9b5d0c475c754e2dd101",
+        "field": "class",
+        "to": "unit_class_tables:e66c0d9a8b3280058006",
+        "targetField": "key",
+        "value": "inf_mel",
+        "direction": "forward",
+        "evidence": "RPFM processed schema is_reference"
+      },
+      {
+        "from": "land_units_tables:9b5d0c475c754e2dd101",
+        "field": "man_entity",
+        "to": "battle_entities_tables:f965f17d95d4c7ed30da",
+        "targetField": "key",
+        "value": "wh_dlc01_chs_dragon_ogre_blood",
+        "direction": "forward",
+        "evidence": "RPFM processed schema is_reference"
+      },
+      {
+        "from": "land_units_tables:9b5d0c475c754e2dd101",
+        "field": "primary_melee_weapon",
+        "to": "melee_weapons_tables:99323c7944012c48ba24",
+        "targetField": "key",
+        "value": "wh_dlc01_chs_dragon_ogre",
+        "direction": "forward",
+        "evidence": "RPFM processed schema is_reference"
+      },
+      {
+        "from": "land_units_tables:9b5d0c475c754e2dd101",
+        "field": "shield",
+        "to": "unit_shield_types_tables:8b387d46b21833be3ae6",
+        "targetField": "key",
+        "value": "none",
+        "direction": "forward",
+        "evidence": "RPFM processed schema is_reference"
+      },
+      {
+        "from": "land_units_tables:9b5d0c475c754e2dd101",
+        "field": "attribute_group",
+        "to": "unit_attributes_groups_tables:e814f035ee154706b12b",
+        "targetField": "group_name",
+        "value": "wh_dlc01_chs_mon_dragon_ogre",
+        "direction": "forward",
+        "evidence": "RPFM processed schema is_reference"
+      },
+      {
+        "from": "land_units_tables:9b5d0c475c754e2dd101",
+        "field": "ground_stat_effect_group",
+        "to": "ground_type_stat_effect_groups_tables:9af8a0ced765d0dd8398",
+        "targetField": "group_name",
+        "value": "large",
+        "direction": "forward",
+        "evidence": "RPFM processed schema is_reference"
+      },
+      {
+        "from": "building_units_allowed_tables:9fe0b0f48d64e3702b2c",
+        "field": "building",
+        "to": "building_levels_tables:086ad9638937e5443a4d",
+        "targetField": "level_name",
+        "value": "wh2_main_rogue_settlement_minor_1",
+        "direction": "forward",
+        "evidence": "RPFM processed schema is_reference"
+      },
+      {
+        "from": "building_units_allowed_tables:9fe0b0f48d64e3702b2c",
+        "field": "unit",
+        "to": "main_units_tables:dae651953f0ac16d7c56",
+        "targetField": "unit",
+        "value": "wh_dlc01_chs_mon_dragon_ogre",
+        "direction": "forward",
+        "evidence": "RPFM processed schema is_reference"
+      },
+      {
+        "from": "building_units_allowed_tables:e0b6023b2a3e3dff1629",
+        "field": "building",
+        "to": "building_levels_tables:7445e0c52d05e2c5abe0",
+        "targetField": "level_name",
+        "value": "wh2_main_rogue_settlement_major_1",
+        "direction": "forward",
+        "evidence": "RPFM processed schema is_reference"
+      },
+      {
+        "from": "building_units_allowed_tables:e0b6023b2a3e3dff1629",
+        "field": "unit",
+        "to": "main_units_tables:dae651953f0ac16d7c56",
+        "targetField": "unit",
+        "value": "wh_dlc01_chs_mon_dragon_ogre",
+        "direction": "forward",
+        "evidence": "RPFM processed schema is_reference"
+      },
+      {
+        "from": "building_units_allowed_tables:4fd2b0ca43c9deb98ec2",
+        "field": "building",
+        "to": "building_levels_tables:ac0ed559f1be7fa14a21",
+        "targetField": "level_name",
+        "value": "wh2_main_rogue_settlement_major_3",
+        "direction": "forward",
+        "evidence": "RPFM processed schema is_reference"
+      },
+      {
+        "from": "building_units_allowed_tables:4fd2b0ca43c9deb98ec2",
+        "field": "unit",
+        "to": "main_units_tables:dae651953f0ac16d7c56",
+        "targetField": "unit",
+        "value": "wh_dlc01_chs_mon_dragon_ogre",
+        "direction": "forward",
+        "evidence": "RPFM processed schema is_reference"
+      },
+      {
+        "from": "building_units_allowed_tables:acd2b67e6b8f57622b8b",
+        "field": "building",
+        "to": "building_levels_tables:2e8e5661645fcb574720",
+        "targetField": "level_name",
+        "value": "wh2_main_rogue_settlement_minor_2",
+        "direction": "forward",
+        "evidence": "RPFM processed schema is_reference"
+      },
+      {
+        "from": "building_units_allowed_tables:acd2b67e6b8f57622b8b",
+        "field": "unit",
+        "to": "main_units_tables:dae651953f0ac16d7c56",
+        "targetField": "unit",
+        "value": "wh_dlc01_chs_mon_dragon_ogre",
+        "direction": "forward",
+        "evidence": "RPFM processed schema is_reference"
+      },
+      {
+        "from": "building_units_allowed_tables:1f5b96f95ad1157f0345",
+        "field": "building",
+        "to": "building_levels_tables:3023b6434be617cb9283",
+        "targetField": "level_name",
+        "value": "wh2_main_rogue_settlement_major_2",
+        "direction": "forward",
+        "evidence": "RPFM processed schema is_reference"
+      },
+      {
+        "from": "building_units_allowed_tables:1f5b96f95ad1157f0345",
+        "field": "unit",
+        "to": "main_units_tables:dae651953f0ac16d7c56",
+        "targetField": "unit",
+        "value": "wh_dlc01_chs_mon_dragon_ogre",
+        "direction": "forward",
+        "evidence": "RPFM processed schema is_reference"
+      },
+      {
+        "from": "building_units_allowed_tables:ce49843e7ddcb04716fe",
+        "field": "building",
+        "to": "building_levels_tables:c24a024b33e0ee82363b",
+        "targetField": "level_name",
+        "value": "wh_main_horde_chaos_dragon_ogres_1",
+        "direction": "forward",
+        "evidence": "RPFM processed schema is_reference"
+      },
+      {
+        "from": "building_units_allowed_tables:ce49843e7ddcb04716fe",
+        "field": "unit",
+        "to": "main_units_tables:dae651953f0ac16d7c56",
+        "targetField": "unit",
+        "value": "wh_dlc01_chs_mon_dragon_ogre",
+        "direction": "forward",
+        "evidence": "RPFM processed schema is_reference"
+      },
+      {
+        "from": "building_units_allowed_tables:80b25139900815dad38d",
+        "field": "building",
+        "to": "building_levels_tables:c702e3e3a3324238d61c",
+        "targetField": "level_name",
+        "value": "wh_main_horde_chaos_dragon_ogres_2",
+        "direction": "forward",
+        "evidence": "RPFM processed schema is_reference"
+      },
+      {
+        "from": "building_units_allowed_tables:80b25139900815dad38d",
+        "field": "unit",
+        "to": "main_units_tables:dae651953f0ac16d7c56",
+        "targetField": "unit",
+        "value": "wh_dlc01_chs_mon_dragon_ogre",
+        "direction": "forward",
+        "evidence": "RPFM processed schema is_reference"
+      },
+      {
+        "from": "building_units_allowed_tables:e533879d5855c1d96344",
+        "field": "building",
+        "to": "building_levels_tables:e8c646911d0c0bcbd608",
+        "targetField": "level_name",
+        "value": "wh2_main_horde_rogue_settlement_1",
+        "direction": "forward",
+        "evidence": "RPFM processed schema is_reference"
+      },
+      {
+        "from": "building_units_allowed_tables:e533879d5855c1d96344",
+        "field": "unit",
+        "to": "main_units_tables:dae651953f0ac16d7c56",
+        "targetField": "unit",
+        "value": "wh_dlc01_chs_mon_dragon_ogre",
+        "direction": "forward",
+        "evidence": "RPFM processed schema is_reference"
+      },
+      {
+        "from": "building_units_allowed_tables:cda5af56da521cf56cc0",
+        "field": "building",
+        "to": "building_levels_tables:9d701477f29b7e8cefc7",
+        "targetField": "level_name",
+        "value": "wh2_main_horde_rogue_settlement_2",
+        "direction": "forward",
+        "evidence": "RPFM processed schema is_reference"
+      },
+      {
+        "from": "building_units_allowed_tables:cda5af56da521cf56cc0",
+        "field": "unit",
+        "to": "main_units_tables:dae651953f0ac16d7c56",
+        "targetField": "unit",
+        "value": "wh_dlc01_chs_mon_dragon_ogre",
+        "direction": "forward",
+        "evidence": "RPFM processed schema is_reference"
+      },
+      {
+        "from": "building_units_allowed_tables:534adb4598b3036d0a19",
+        "field": "building",
+        "to": "building_levels_tables:9929535cccd9549545c0",
+        "targetField": "level_name",
+        "value": "wh2_main_rogue_settlement_minor_3",
+        "direction": "forward",
+        "evidence": "RPFM processed schema is_reference"
+      },
+      {
+        "from": "building_units_allowed_tables:534adb4598b3036d0a19",
+        "field": "unit",
+        "to": "main_units_tables:dae651953f0ac16d7c56",
+        "targetField": "unit",
+        "value": "wh_dlc01_chs_mon_dragon_ogre",
+        "direction": "forward",
+        "evidence": "RPFM processed schema is_reference"
+      },
+      {
+        "from": "battle_entities_tables:f965f17d95d4c7ed30da",
+        "field": "size",
+        "to": "battle_entities_size_enums_tables:57f6912d61e5f16fcc73",
+        "targetField": "key",
+        "value": "large",
+        "direction": "forward",
+        "evidence": "RPFM processed schema is_reference"
+      },
+      {
+        "from": "melee_weapons_tables:99323c7944012c48ba24",
+        "field": "splash_attack_target_size",
+        "to": "battle_entities_size_enums_tables:776179a657c703d987d9",
+        "targetField": "key",
+        "value": "medium",
+        "direction": "forward",
+        "evidence": "RPFM processed schema is_reference"
+      },
+      {
+        "from": "unit_attributes_to_groups_junctions_tables:34e9cf9c101292271142",
+        "field": "attribute_group",
+        "to": "unit_attributes_groups_tables:e814f035ee154706b12b",
+        "targetField": "group_name",
+        "value": "wh_dlc01_chs_mon_dragon_ogre",
+        "direction": "reverse",
+        "evidence": "RPFM processed schema is_reference"
+      },
+      {
+        "from": "unit_attributes_to_groups_junctions_tables:2d861bedbe636c736718",
+        "field": "attribute_group",
+        "to": "unit_attributes_groups_tables:e814f035ee154706b12b",
+        "targetField": "group_name",
+        "value": "wh_dlc01_chs_mon_dragon_ogre",
+        "direction": "reverse",
+        "evidence": "RPFM processed schema is_reference"
+      },
+      {
+        "from": "ground_type_to_stat_effects_tables:35d188c20d970c1a5e07",
+        "field": "affected_group",
+        "to": "ground_type_stat_effect_groups_tables:9af8a0ced765d0dd8398",
+        "targetField": "group_name",
+        "value": "large",
+        "direction": "reverse",
+        "evidence": "RPFM processed schema is_reference"
+      },
+      {
+        "from": "ground_type_to_stat_effects_tables:397f62ff7229144fc95d",
+        "field": "affected_group",
+        "to": "ground_type_stat_effect_groups_tables:9af8a0ced765d0dd8398",
+        "targetField": "group_name",
+        "value": "large",
+        "direction": "reverse",
+        "evidence": "RPFM processed schema is_reference"
+      },
+      {
+        "from": "ground_type_to_stat_effects_tables:9931c2336512296512cb",
+        "field": "affected_group",
+        "to": "ground_type_stat_effect_groups_tables:9af8a0ced765d0dd8398",
+        "targetField": "group_name",
+        "value": "large",
+        "direction": "reverse",
+        "evidence": "RPFM processed schema is_reference"
+      },
+      {
+        "from": "Loc:26a6b2edbe040a93cc35",
+        "field": "key",
+        "to": "unit_attributes_tables:fa4416d4f451b4f716a7",
+        "targetField": "key",
+        "value": "causes_fear",
+        "direction": "localisation",
+        "evidence": "Exact child Loc key + matching schema localised_fields + declared row key"
+      },
+      {
+        "from": "Loc:deaea042e375a2b0a7d6",
+        "field": "key",
+        "to": "unit_attributes_tables:fa4416d4f451b4f716a7",
+        "targetField": "key",
+        "value": "causes_fear",
+        "direction": "localisation",
+        "evidence": "Exact child Loc key + matching schema localised_fields + declared row key"
+      },
+      {
+        "from": "Loc:b94e729fe524851c5c67",
+        "field": "key",
+        "to": "unit_attributes_tables:fa4416d4f451b4f716a7",
+        "targetField": "key",
+        "value": "causes_fear",
+        "direction": "localisation",
+        "evidence": "Exact child Loc key + matching schema localised_fields + declared row key"
+      },
+      {
+        "from": "unit_attributes_to_groups_junctions_tables:34e9cf9c101292271142",
+        "field": "attribute",
+        "to": "unit_attributes_tables:fa4416d4f451b4f716a7",
+        "targetField": "key",
+        "value": "causes_fear",
+        "direction": "forward",
+        "evidence": "RPFM processed schema is_reference"
+      },
+      {
+        "from": "unit_attributes_to_groups_junctions_tables:34e9cf9c101292271142",
+        "field": "attribute_group",
+        "to": "unit_attributes_groups_tables:e814f035ee154706b12b",
+        "targetField": "group_name",
+        "value": "wh_dlc01_chs_mon_dragon_ogre",
+        "direction": "forward",
+        "evidence": "RPFM processed schema is_reference"
+      },
+      {
+        "from": "Loc:d59df34247939accadfa",
+        "field": "key",
+        "to": "unit_attributes_tables:0868019d6fbf5f120ec6",
+        "targetField": "key",
+        "value": "hide_forest",
+        "direction": "localisation",
+        "evidence": "Exact child Loc key + matching schema localised_fields + declared row key"
+      },
+      {
+        "from": "Loc:e80c799ba8efe7586123",
+        "field": "key",
+        "to": "unit_attributes_tables:0868019d6fbf5f120ec6",
+        "targetField": "key",
+        "value": "hide_forest",
+        "direction": "localisation",
+        "evidence": "Exact child Loc key + matching schema localised_fields + declared row key"
+      },
+      {
+        "from": "Loc:23f750f564af4990e863",
+        "field": "key",
+        "to": "unit_attributes_tables:0868019d6fbf5f120ec6",
+        "targetField": "key",
+        "value": "hide_forest",
+        "direction": "localisation",
+        "evidence": "Exact child Loc key + matching schema localised_fields + declared row key"
+      },
+      {
+        "from": "unit_attributes_to_groups_junctions_tables:2d861bedbe636c736718",
+        "field": "attribute",
+        "to": "unit_attributes_tables:0868019d6fbf5f120ec6",
+        "targetField": "key",
+        "value": "hide_forest",
+        "direction": "forward",
+        "evidence": "RPFM processed schema is_reference"
+      },
+      {
+        "from": "unit_attributes_to_groups_junctions_tables:2d861bedbe636c736718",
+        "field": "attribute_group",
+        "to": "unit_attributes_groups_tables:e814f035ee154706b12b",
+        "targetField": "group_name",
+        "value": "wh_dlc01_chs_mon_dragon_ogre",
+        "direction": "forward",
+        "evidence": "RPFM processed schema is_reference"
+      },
+      {
+        "from": "ground_type_to_stat_effects_tables:35d188c20d970c1a5e07",
+        "field": "affected_group",
+        "to": "ground_type_stat_effect_groups_tables:9af8a0ced765d0dd8398",
+        "targetField": "group_name",
+        "value": "large",
+        "direction": "forward",
+        "evidence": "RPFM processed schema is_reference"
+      },
+      {
+        "from": "ground_type_to_stat_effects_tables:397f62ff7229144fc95d",
+        "field": "affected_group",
+        "to": "ground_type_stat_effect_groups_tables:9af8a0ced765d0dd8398",
+        "targetField": "group_name",
+        "value": "large",
+        "direction": "forward",
+        "evidence": "RPFM processed schema is_reference"
+      },
+      {
+        "from": "ground_type_to_stat_effects_tables:9931c2336512296512cb",
+        "field": "affected_group",
+        "to": "ground_type_stat_effect_groups_tables:9af8a0ced765d0dd8398",
+        "targetField": "group_name",
+        "value": "large",
+        "direction": "forward",
+        "evidence": "RPFM processed schema is_reference"
+      }
+    ]
+  },
+  "permissionTrace": {
+    "sourceKind": "ca-pack",
+    "provenance": {
+      "sourceKind": "ca-pack",
+      "gameVersion": "9.0.2.0",
+      "gameVersionSource": "Warhammer3.exe ProductVersion resource (not inferred from a wiki/Steam build)",
+      "rpfmVersion": "5.1.0",
+      "mcpServerInfo": {
+        "name": "rmcp",
+        "version": "3.1.0"
+      },
+      "schemaFormatVersion": 5,
+      "schemaSha256": "5d628a0167b34a096752c5c21acd16493834a987c80dc9f02364617f796ba2a4",
+      "packs": [
+        {
+          "file_name": "db.pack",
+          "file_path": "db.pack",
+          "pfh_version": "PFH5",
+          "pfh_file_type": "Release",
+          "bitmask": "",
+          "compress": "Zstd",
+          "timestamp": 0,
+          "sizeBytes": 8663017,
+          "filesystemModifiedAt": "2026-10-01T10:08:40.330Z",
+          "sha256": "d0fafac984b3985ec47cec0ea957591424f1077e52ef61941dbf2dc46e6cf723"
+        },
+        {
+          "file_name": "local_en.pack",
+          "file_path": "local_en.pack",
+          "pfh_version": "PFH5",
+          "pfh_file_type": "Release",
+          "bitmask": "",
+          "compress": "Zstd",
+          "timestamp": 1645478083,
+          "sizeBytes": 33435496,
+          "filesystemModifiedAt": "2026-10-01T10:08:40.330Z",
+          "sha256": "f979527a5aaecf293a4e66afc25ed6c760e4107ef4920b73bd56e10e2652fd6a"
+        }
+      ],
+      "accessMethod": "RPFM MCP / decode_packed_file source=PackFile, directly opened CA Release/Patch packs"
+    },
+    "schemas": [
+      {
+        "table": "main_units_tables",
+        "version": 7,
+        "fields": [
+          {
+            "name": "additional_building_requirement",
+            "field_type": "OptionalStringU8",
+            "is_key": false,
+            "is_reference": [
+              "building_levels",
+              "level_name"
+            ]
+          },
+          {
+            "name": "campaign_cap",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "caste",
+            "field_type": "StringU8",
+            "is_key": false,
+            "is_reference": [
+              "unit_castes",
+              "caste"
+            ]
+          },
+          {
+            "name": "create_time",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "is_naval",
+            "field_type": "Boolean",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "land_unit",
+            "field_type": "StringU8",
+            "is_key": false,
+            "is_reference": [
+              "land_units",
+              "key"
+            ]
+          },
+          {
+            "name": "num_men",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "multiplayer_cap",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "multiplayer_cost",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "naval_unit",
+            "field_type": "OptionalStringU8",
+            "is_key": false,
+            "is_reference": [
+              "naval_units",
+              "key"
+            ]
+          },
+          {
+            "name": "num_ships",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "min_men_per_ship",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "max_men_per_ship",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "recruitment_cost",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "unit",
+            "field_type": "StringU8",
+            "is_key": true,
+            "is_reference": null
+          },
+          {
+            "name": "upkeep_cost",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "weight",
+            "field_type": "OptionalStringU8",
+            "is_key": false,
+            "is_reference": [
+              "unit_weights",
+              "key"
+            ]
+          },
+          {
+            "name": "resource_requirement",
+            "field_type": "OptionalStringU8",
+            "is_key": false,
+            "is_reference": [
+              "resources",
+              "key"
+            ]
+          },
+          {
+            "name": "special_edition_mask",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "in_encyclopedia",
+            "field_type": "Boolean",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "audio_voiceover_culture",
+            "field_type": "StringU8",
+            "is_key": false,
+            "is_reference": [
+              "audio_voiceover_cultures",
+              "name"
+            ]
+          },
+          {
+            "name": "ui_unit_group_land",
+            "field_type": "StringU8",
+            "is_key": false,
+            "is_reference": [
+              "ui_unit_groupings",
+              "key"
+            ]
+          },
+          {
+            "name": "tier",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "is_high_threat",
+            "field_type": "Boolean",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "porthole_camera",
+            "field_type": "StringU8",
+            "is_key": false,
+            "is_reference": [
+              "unit_porthole_camera_settings",
+              "key"
+            ]
+          },
+          {
+            "name": "mount",
+            "field_type": "OptionalStringU8",
+            "is_key": false,
+            "is_reference": [
+              "campaign_mounts",
+              "model"
+            ]
+          },
+          {
+            "name": "use_hitpoints_in_campaign",
+            "field_type": "Boolean",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "porthole_composite_scene",
+            "field_type": "OptionalStringU8",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "melee_cp",
+            "field_type": "F32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "missile_cp",
+            "field_type": "F32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "can_siege",
+            "field_type": "Boolean",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "audio_voiceover_culture_override",
+            "field_type": "StringU8",
+            "is_key": false,
+            "is_reference": [
+              "audio_voiceover_cultures",
+              "name"
+            ]
+          },
+          {
+            "name": "restrict_xp_gain_in_campaign",
+            "field_type": "Boolean",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "audio_voiceover_actor_group",
+            "field_type": "StringU8",
+            "is_key": false,
+            "is_reference": [
+              "audio_vo_actor_groups",
+              "name"
+            ]
+          },
+          {
+            "name": "food_cost",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "has_spoken_vo",
+            "field_type": "Boolean",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "is_monstrous",
+            "field_type": "Boolean",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "multiplayer_qb_cap",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "vo_is_dragon",
+            "field_type": "Boolean",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "vo_is_dinosaur",
+            "field_type": "Boolean",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "optional_ui_element",
+            "field_type": "OptionalStringU8",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "barrier_health",
+            "field_type": "F32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "can_be_bribed",
+            "field_type": "Boolean",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "point_allowance_weight",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "is_renown",
+            "field_type": "Boolean",
+            "is_key": false,
+            "is_reference": null
+          }
+        ]
+      },
+      {
+        "table": "land_units_tables",
+        "version": 54,
+        "fields": [
+          {
+            "name": "accuracy",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "armour",
+            "field_type": "StringU8",
+            "is_key": false,
+            "is_reference": [
+              "unit_armour_types",
+              "key"
+            ]
+          },
+          {
+            "name": "campaign_action_points",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "category",
+            "field_type": "StringU8",
+            "is_key": false,
+            "is_reference": [
+              "unit_category",
+              "key"
+            ]
+          },
+          {
+            "name": "charge_bonus",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "class",
+            "field_type": "StringU8",
+            "is_key": false,
+            "is_reference": [
+              "unit_class",
+              "key"
+            ]
+          },
+          {
+            "name": "historical_description_text",
+            "field_type": "StringU8",
+            "is_key": false,
+            "is_reference": [
+              "unit_description_historical_texts",
+              "key"
+            ]
+          },
+          {
+            "name": "key",
+            "field_type": "StringU8",
+            "is_key": true,
+            "is_reference": null
+          },
+          {
+            "name": "man_animation",
+            "field_type": "OptionalStringU8",
+            "is_key": false,
+            "is_reference": [
+              "battle_animations_table",
+              "key"
+            ]
+          },
+          {
+            "name": "man_entity",
+            "field_type": "StringU8",
+            "is_key": false,
+            "is_reference": [
+              "battle_entities",
+              "key"
+            ]
+          },
+          {
+            "name": "melee_attack",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "melee_defence",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "morale",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "bonus_hit_points",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "mount",
+            "field_type": "OptionalStringU8",
+            "is_key": false,
+            "is_reference": [
+              "mounts",
+              "key"
+            ]
+          },
+          {
+            "name": "num_mounts",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "primary_melee_weapon",
+            "field_type": "StringU8",
+            "is_key": false,
+            "is_reference": [
+              "melee_weapons",
+              "key"
+            ]
+          },
+          {
+            "name": "primary_missile_weapon",
+            "field_type": "OptionalStringU8",
+            "is_key": false,
+            "is_reference": [
+              "missile_weapons",
+              "key"
+            ]
+          },
+          {
+            "name": "rank_depth",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "shield",
+            "field_type": "StringU8",
+            "is_key": false,
+            "is_reference": [
+              "unit_shield_types",
+              "key"
+            ]
+          },
+          {
+            "name": "short_description_text",
+            "field_type": "StringU8",
+            "is_key": false,
+            "is_reference": [
+              "unit_description_short_texts",
+              "key"
+            ]
+          },
+          {
+            "name": "spacing",
+            "field_type": "StringU8",
+            "is_key": false,
+            "is_reference": [
+              "unit_spacings",
+              "key"
+            ]
+          },
+          {
+            "name": "training_level",
+            "field_type": "StringU8",
+            "is_key": false,
+            "is_reference": [
+              "unit_training_level_enum",
+              "key"
+            ]
+          },
+          {
+            "name": "articulated_record",
+            "field_type": "OptionalStringU8",
+            "is_key": false,
+            "is_reference": [
+              "land_unit_articulated_vehicles",
+              "key"
+            ]
+          },
+          {
+            "name": "engine",
+            "field_type": "OptionalStringU8",
+            "is_key": false,
+            "is_reference": [
+              "battlefield_engines",
+              "key"
+            ]
+          },
+          {
+            "name": "is_male",
+            "field_type": "Boolean",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "visibility_spotting_range_min",
+            "field_type": "F32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "visibility_spotting_range_max",
+            "field_type": "F32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "attribute_group",
+            "field_type": "OptionalStringU8",
+            "is_key": false,
+            "is_reference": [
+              "unit_attributes_groups",
+              "group_name"
+            ]
+          },
+          {
+            "name": "spot_dist_tree",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "spot_dist_scrub",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "reload",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "selection_vo",
+            "field_type": "StringU8",
+            "is_key": false,
+            "is_reference": [
+              "audio_vo_selected_switches",
+              "key"
+            ]
+          },
+          {
+            "name": "selected_vo_secondary",
+            "field_type": "StringU8",
+            "is_key": false,
+            "is_reference": [
+              "audio_vo_selected_switches",
+              "key"
+            ]
+          },
+          {
+            "name": "selected_vo_tertiary",
+            "field_type": "StringU8",
+            "is_key": false,
+            "is_reference": [
+              "audio_vo_selected_switches",
+              "key"
+            ]
+          },
+          {
+            "name": "hiding_scalar",
+            "field_type": "F32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "ground_stat_effect_group",
+            "field_type": "OptionalStringU8",
+            "is_key": false,
+            "is_reference": [
+              "ground_type_stat_effect_groups",
+              "group_name"
+            ]
+          },
+          {
+            "name": "secondary_ammo",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "primary_ammo",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "damage_mod_flame",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "damage_mod_magic",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "num_engines",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "damage_mod_physical",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "damage_mod_missile",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "damage_mod_all",
+            "field_type": "I32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "ai_usage_group",
+            "field_type": "StringU8",
+            "is_key": false,
+            "is_reference": [
+              "ai_usage_groups",
+              "key"
+            ]
+          },
+          {
+            "name": "can_skirmish",
+            "field_type": "Boolean",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "can_brace",
+            "field_type": "Boolean",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "mounted_draughts",
+            "field_type": "Boolean",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "sync_locomotion",
+            "field_type": "Boolean",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "capture_tier",
+            "field_type": "StringU8",
+            "is_key": false,
+            "is_reference": [
+              "capture_tier_to_power",
+              "key"
+            ]
+          },
+          {
+            "name": "key_building_capture_tier",
+            "field_type": "StringU8",
+            "is_key": false,
+            "is_reference": [
+              "capture_tier_to_power",
+              "key"
+            ]
+          },
+          {
+            "name": "score_capture_tier",
+            "field_type": "StringU8",
+            "is_key": false,
+            "is_reference": [
+              "capture_tier_to_power",
+              "key"
+            ]
+          },
+          {
+            "name": "harmony_amplification_type",
+            "field_type": "OptionalStringU8",
+            "is_key": false,
+            "is_reference": [
+              "harmony_amplification_types",
+              "key"
+            ]
+          },
+          {
+            "name": "first_person",
+            "field_type": "OptionalStringU8",
+            "is_key": false,
+            "is_reference": [
+              "first_person_engines",
+              "key"
+            ]
+          },
+          {
+            "name": "ar_unit_category",
+            "field_type": "OptionalStringU8",
+            "is_key": false,
+            "is_reference": [
+              "autoresolver_unit_group_categories_enums",
+              "key"
+            ]
+          },
+          {
+            "name": "healing_power",
+            "field_type": "F32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "spell_mastery",
+            "field_type": "F32",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "infinite_secondary_ammo",
+            "field_type": "Boolean",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "default_guard_mode",
+            "field_type": "Boolean",
+            "is_key": false,
+            "is_reference": null
+          }
+        ]
+      },
+      {
+        "table": "units_to_groupings_military_permissions_tables",
+        "version": 0,
+        "fields": [
+          {
+            "name": "unit",
+            "field_type": "StringU8",
+            "is_key": true,
+            "is_reference": [
+              "main_units",
+              "unit"
+            ]
+          },
+          {
+            "name": "military_group",
+            "field_type": "StringU8",
+            "is_key": true,
+            "is_reference": [
+              "groupings_military",
+              "military_group"
+            ]
+          }
+        ]
+      },
+      {
+        "table": "unit_set_to_unit_junctions_tables",
+        "version": 1,
+        "fields": [
+          {
+            "name": "exclude",
+            "field_type": "Boolean",
+            "is_key": false,
+            "is_reference": null
+          },
+          {
+            "name": "unit_caste",
+            "field_type": "OptionalStringU8",
+            "is_key": true,
+            "is_reference": [
+              "unit_castes",
+              "caste"
+            ]
+          },
+          {
+            "name": "unit_category",
+            "field_type": "OptionalStringU8",
+            "is_key": true,
+            "is_reference": [
+              "unit_category",
+              "key"
+            ]
+          },
+          {
+            "name": "unit_class",
+            "field_type": "OptionalStringU8",
+            "is_key": true,
+            "is_reference": [
+              "unit_class",
+              "key"
+            ]
+          },
+          {
+            "name": "unit_record",
+            "field_type": "OptionalStringU8",
+            "is_key": true,
+            "is_reference": [
+              "main_units",
+              "unit"
+            ]
+          },
+          {
+            "name": "unit_set",
+            "field_type": "StringU8",
+            "is_key": true,
+            "is_reference": [
+              "unit_sets",
+              "key"
+            ]
+          }
+        ]
+      },
+      {
+        "table": "unit_recruitment_source_overrides_tables",
+        "version": 0,
+        "fields": [
+          {
+            "name": "cost",
+            "field_type": "OptionalStringU8",
+            "is_key": false,
+            "is_reference": [
+              "resource_costs",
+              "id"
+            ]
+          },
+          {
+            "name": "unit",
+            "field_type": "StringU8",
+            "is_key": true,
+            "is_reference": [
+              "main_units",
+              "unit"
+            ]
+          },
+          {
+            "name": "source",
+            "field_type": "StringU8",
+            "is_key": true,
+            "is_reference": [
+              "recruitment_sources",
+              "key"
+            ]
+          }
+        ]
+      },
+      {
+        "table": "unit_missile_weapon_junctions_tables",
+        "version": 1,
+        "fields": [
+          {
+            "name": "missile_weapon",
+            "field_type": "StringU8",
+            "is_key": false,
+            "is_reference": [
+              "missile_weapons",
+              "key"
+            ]
+          },
+          {
+            "name": "unit",
+            "field_type": "StringU8",
+            "is_key": false,
+            "is_reference": [
+              "main_units",
+              "unit"
+            ]
+          },
+          {
+            "name": "id",
+            "field_type": "I64",
+            "is_key": true,
+            "is_reference": null
+          },
+          {
+            "name": "battle_entity_stats_override",
+            "field_type": "OptionalStringU8",
+            "is_key": false,
+            "is_reference": [
+              "battle_entity_stats",
+              "key"
+            ]
+          }
+        ]
+      },
+      {
+        "table": "land_units_to_unit_abilites_junctions_tables",
+        "version": 1,
+        "fields": [
+          {
+            "name": "ability",
+            "field_type": "StringU8",
+            "is_key": true,
+            "is_reference": [
+              "unit_abilities",
+              "key"
+            ]
+          },
+          {
+            "name": "land_unit",
+            "field_type": "StringU8",
+            "is_key": true,
+            "is_reference": [
+              "land_units",
+              "key"
+            ]
+          },
+          {
+            "name": "culture",
+            "field_type": "StringU8",
+            "is_key": false,
+            "is_reference": [
+              "cultures",
+              "key"
+            ]
+          }
+        ]
+      }
+    ],
+    "rows": [
+      {
+        "id": "main_units_tables:7ddfb7ae20d020a311a0",
+        "table": "main_units_tables",
+        "key": {
+          "unit": "wh_dlc01_chs_mon_dragon_ogre"
+        },
+        "sourcePack": "db.pack",
+        "sourcePackPath": "db.pack",
+        "path": "db/main_units_tables/data__",
+        "tableVersion": 7,
+        "row": {
+          "additional_building_requirement": "",
+          "campaign_cap": -1,
+          "caste": "monstrous_infantry",
+          "create_time": 2,
+          "is_naval": false,
+          "land_unit": "wh_dlc01_chs_mon_dragon_ogre",
+          "num_men": 16,
+          "multiplayer_cap": 0,
+          "multiplayer_cost": 1550,
+          "naval_unit": "wh_main_shp_transport",
+          "num_ships": 1,
+          "min_men_per_ship": 1,
+          "max_men_per_ship": 16,
+          "recruitment_cost": 1550,
+          "unit": "wh_dlc01_chs_mon_dragon_ogre",
+          "upkeep_cost": 387,
+          "weight": "heavy",
+          "resource_requirement": "",
+          "special_edition_mask": 0,
+          "in_encyclopedia": true,
+          "audio_voiceover_culture": "wh_dlc01_vo_culture_Dragon_Ogre",
+          "ui_unit_group_land": "chs_dragon_ogres",
+          "tier": 4,
+          "is_high_threat": false,
+          "porthole_camera": "chaos_dragon_ogre",
+          "mount": "",
+          "use_hitpoints_in_campaign": false,
+          "porthole_composite_scene": "",
+          "melee_cp": 1550,
+          "missile_cp": 0,
+          "can_siege": true,
+          "audio_voiceover_culture_override": "vo_culture_None",
+          "restrict_xp_gain_in_campaign": false,
+          "audio_voiceover_actor_group": "wh_main_vo_actor_default",
+          "food_cost": 0,
+          "has_spoken_vo": false,
+          "is_monstrous": true,
+          "multiplayer_qb_cap": 6,
+          "vo_is_dragon": false,
+          "vo_is_dinosaur": false,
+          "optional_ui_element": "",
+          "barrier_health": 0,
+          "can_be_bribed": true,
+          "point_allowance_weight": 1,
+          "is_renown": false
+        }
+      },
+      {
+        "id": "land_units_tables:687164288722c3f4561f",
+        "table": "land_units_tables",
+        "key": {
+          "key": "wh_dlc01_chs_mon_dragon_ogre"
+        },
+        "sourcePack": "db.pack",
+        "sourcePackPath": "db.pack",
+        "path": "db/land_units_tables/data__",
+        "tableVersion": 54,
+        "row": {
+          "accuracy": 10,
+          "armour": "wh2_main_body_60",
+          "campaign_action_points": 2100,
+          "category": "inf_melee",
+          "charge_bonus": 42,
+          "class": "inf_mel",
+          "historical_description_text": "wh_main_unit_long_text_chs_dragon_ogre",
+          "key": "wh_dlc01_chs_mon_dragon_ogre",
+          "man_animation": "ce2_dragon_ogre_2handed_axe",
+          "man_entity": "wh_dlc01_chs_dragon_ogre_blood",
+          "melee_attack": 32,
+          "melee_defence": 40,
+          "morale": 72,
+          "bonus_hit_points": 608,
+          "mount": "",
+          "num_mounts": 0,
+          "primary_melee_weapon": "wh_dlc01_chs_dragon_ogre",
+          "primary_missile_weapon": "",
+          "rank_depth": 2,
+          "shield": "none",
+          "short_description_text": "wh_dlc01_unit_short_text_chs_dragon_ogre",
+          "spacing": "wh_main_monstrous_infantry",
+          "training_level": "trained",
+          "articulated_record": "",
+          "engine": "",
+          "is_male": true,
+          "visibility_spotting_range_min": 40,
+          "visibility_spotting_range_max": 1500,
+          "attribute_group": "wh_dlc01_chs_mon_dragon_ogre",
+          "spot_dist_tree": 60,
+          "spot_dist_scrub": 80,
+          "reload": 0,
+          "selection_vo": "vo_sel_default",
+          "selected_vo_secondary": "vo_sel_melee",
+          "selected_vo_tertiary": "vo_sel_culture",
+          "hiding_scalar": 1,
+          "ground_stat_effect_group": "large",
+          "secondary_ammo": 0,
+          "primary_ammo": 0,
+          "damage_mod_flame": 0,
+          "damage_mod_magic": 0,
+          "num_engines": 0,
+          "damage_mod_physical": 0,
+          "damage_mod_missile": 25,
+          "damage_mod_all": 0,
+          "ai_usage_group": "melee_gatecrusher",
+          "can_skirmish": false,
+          "can_brace": true,
+          "mounted_draughts": false,
+          "sync_locomotion": false,
+          "capture_tier": "medium",
+          "key_building_capture_tier": "medium",
+          "score_capture_tier": "domination_monsters",
+          "harmony_amplification_type": "",
+          "first_person": "",
+          "ar_unit_category": "melee",
+          "healing_power": 1,
+          "spell_mastery": 1,
+          "infinite_secondary_ammo": false,
+          "default_guard_mode": false
+        }
+      },
+      {
+        "id": "units_to_groupings_military_permissions_tables:91bf18fc4276521b536b",
+        "table": "units_to_groupings_military_permissions_tables",
+        "key": {
+          "unit": "wh_dlc01_chs_mon_dragon_ogre",
+          "military_group": "wh3_dlc29_group_chs_archaon"
+        },
+        "sourcePack": "db.pack",
+        "sourcePackPath": "db.pack",
+        "path": "db/units_to_groupings_military_permissions_tables/data__",
+        "tableVersion": 0,
+        "row": {
+          "unit": "wh_dlc01_chs_mon_dragon_ogre",
+          "military_group": "wh3_dlc29_group_chs_archaon"
+        }
+      },
+      {
+        "id": "units_to_groupings_military_permissions_tables:85c9140f6eae8b2070b4",
+        "table": "units_to_groupings_military_permissions_tables",
+        "key": {
+          "unit": "wh_dlc01_chs_mon_dragon_ogre",
+          "military_group": "wh3_dlc29_group_endgame_chaos"
+        },
+        "sourcePack": "db.pack",
+        "sourcePackPath": "db.pack",
+        "path": "db/units_to_groupings_military_permissions_tables/data__",
+        "tableVersion": 0,
+        "row": {
+          "unit": "wh_dlc01_chs_mon_dragon_ogre",
+          "military_group": "wh3_dlc29_group_endgame_chaos"
+        }
+      },
+      {
+        "id": "units_to_groupings_military_permissions_tables:783330fd5b0bc797a8df",
+        "table": "units_to_groupings_military_permissions_tables",
+        "key": {
+          "unit": "wh_dlc01_chs_mon_dragon_ogre",
+          "military_group": "wh3_main_group_belakor"
+        },
+        "sourcePack": "db.pack",
+        "sourcePackPath": "db.pack",
+        "path": "db/units_to_groupings_military_permissions_tables/data__",
+        "tableVersion": 0,
+        "row": {
+          "unit": "wh_dlc01_chs_mon_dragon_ogre",
+          "military_group": "wh3_main_group_belakor"
+        }
+      },
+      {
+        "id": "units_to_groupings_military_permissions_tables:e05cd9640a8af4c683bf",
+        "table": "units_to_groupings_military_permissions_tables",
+        "key": {
+          "unit": "wh_dlc01_chs_mon_dragon_ogre",
+          "military_group": "wh_main_group_chaos"
+        },
+        "sourcePack": "db.pack",
+        "sourcePackPath": "db.pack",
+        "path": "db/units_to_groupings_military_permissions_tables/data__",
+        "tableVersion": 0,
+        "row": {
+          "unit": "wh_dlc01_chs_mon_dragon_ogre",
+          "military_group": "wh_main_group_chaos"
+        }
+      },
+      {
+        "id": "unit_set_to_unit_junctions_tables:a01c2ff56939e35034d9",
+        "table": "unit_set_to_unit_junctions_tables",
+        "key": {
+          "unit_caste": "",
+          "unit_category": "",
+          "unit_class": "",
+          "unit_record": "wh_dlc01_chs_mon_dragon_ogre",
+          "unit_set": "all_non_chs"
+        },
+        "sourcePack": "db.pack",
+        "sourcePackPath": "db.pack",
+        "path": "db/unit_set_to_unit_junctions_tables/data__",
+        "tableVersion": 1,
+        "row": {
+          "exclude": true,
+          "unit_caste": "",
+          "unit_category": "",
+          "unit_class": "",
+          "unit_record": "wh_dlc01_chs_mon_dragon_ogre",
+          "unit_set": "all_non_chs"
+        }
+      },
+      {
+        "id": "unit_set_to_unit_junctions_tables:8dd8ed509cbe75bf1f36",
+        "table": "unit_set_to_unit_junctions_tables",
+        "key": {
+          "unit_caste": "",
+          "unit_category": "",
+          "unit_class": "",
+          "unit_record": "wh_dlc01_chs_mon_dragon_ogre",
+          "unit_set": "chs_dragon_ogres_rank7"
+        },
+        "sourcePack": "db.pack",
+        "sourcePackPath": "db.pack",
+        "path": "db/unit_set_to_unit_junctions_tables/data__",
+        "tableVersion": 1,
+        "row": {
+          "exclude": false,
+          "unit_caste": "",
+          "unit_category": "",
+          "unit_class": "",
+          "unit_record": "wh_dlc01_chs_mon_dragon_ogre",
+          "unit_set": "chs_dragon_ogres_rank7"
+        }
+      },
+      {
+        "id": "unit_set_to_unit_junctions_tables:194670a37c67a3a613b3",
+        "table": "unit_set_to_unit_junctions_tables",
+        "key": {
+          "unit_caste": "",
+          "unit_category": "",
+          "unit_class": "",
+          "unit_record": "wh_dlc01_chs_mon_dragon_ogre",
+          "unit_set": "chs_dragon_ogres"
+        },
+        "sourcePack": "db.pack",
+        "sourcePackPath": "db.pack",
+        "path": "db/unit_set_to_unit_junctions_tables/data__",
+        "tableVersion": 1,
+        "row": {
+          "exclude": false,
+          "unit_caste": "",
+          "unit_category": "",
+          "unit_class": "",
+          "unit_record": "wh_dlc01_chs_mon_dragon_ogre",
+          "unit_set": "chs_dragon_ogres"
+        }
+      },
+      {
+        "id": "unit_set_to_unit_junctions_tables:813eff9ed436c5a8d21b",
+        "table": "unit_set_to_unit_junctions_tables",
+        "key": {
+          "unit_caste": "",
+          "unit_category": "",
+          "unit_class": "",
+          "unit_record": "wh_dlc01_chs_mon_dragon_ogre",
+          "unit_set": "merc_set_chs_dragon_ogres_basic"
+        },
+        "sourcePack": "db.pack",
+        "sourcePackPath": "db.pack",
+        "path": "db/unit_set_to_unit_junctions_tables/data__",
+        "tableVersion": 1,
+        "row": {
+          "exclude": false,
+          "unit_caste": "",
+          "unit_category": "",
+          "unit_class": "",
+          "unit_record": "wh_dlc01_chs_mon_dragon_ogre",
+          "unit_set": "merc_set_chs_dragon_ogres_basic"
+        }
+      },
+      {
+        "id": "unit_set_to_unit_junctions_tables:5300b4e1646ac2e956a0",
+        "table": "unit_set_to_unit_junctions_tables",
+        "key": {
+          "unit_caste": "",
+          "unit_category": "",
+          "unit_class": "",
+          "unit_record": "wh_dlc01_chs_mon_dragon_ogre",
+          "unit_set": "merc_set_chs_manticore_dragon_ogre_giant_trolls"
+        },
+        "sourcePack": "db.pack",
+        "sourcePackPath": "db.pack",
+        "path": "db/unit_set_to_unit_junctions_tables/data__",
+        "tableVersion": 1,
+        "row": {
+          "exclude": false,
+          "unit_caste": "",
+          "unit_category": "",
+          "unit_class": "",
+          "unit_record": "wh_dlc01_chs_mon_dragon_ogre",
+          "unit_set": "merc_set_chs_manticore_dragon_ogre_giant_trolls"
+        }
+      },
+      {
+        "id": "unit_set_to_unit_junctions_tables:12fc3c6a1f2b5fcf54c9",
+        "table": "unit_set_to_unit_junctions_tables",
+        "key": {
+          "unit_caste": "",
+          "unit_category": "",
+          "unit_class": "",
+          "unit_record": "wh_dlc01_chs_mon_dragon_ogre",
+          "unit_set": "monsters"
+        },
+        "sourcePack": "db.pack",
+        "sourcePackPath": "db.pack",
+        "path": "db/unit_set_to_unit_junctions_tables/data__",
+        "tableVersion": 1,
+        "row": {
+          "exclude": false,
+          "unit_caste": "",
+          "unit_category": "",
+          "unit_class": "",
+          "unit_record": "wh_dlc01_chs_mon_dragon_ogre",
+          "unit_set": "monsters"
+        }
+      },
+      {
+        "id": "unit_set_to_unit_junctions_tables:79c46b7b11c27090ba3d",
+        "table": "unit_set_to_unit_junctions_tables",
+        "key": {
+          "unit_caste": "",
+          "unit_category": "",
+          "unit_class": "",
+          "unit_record": "wh_dlc01_chs_mon_dragon_ogre",
+          "unit_set": "mp_cap_unit_chs_mon_dragon_ogres"
+        },
+        "sourcePack": "db.pack",
+        "sourcePackPath": "db.pack",
+        "path": "db/unit_set_to_unit_junctions_tables/data__",
+        "tableVersion": 1,
+        "row": {
+          "exclude": false,
+          "unit_caste": "",
+          "unit_category": "",
+          "unit_class": "",
+          "unit_record": "wh_dlc01_chs_mon_dragon_ogre",
+          "unit_set": "mp_cap_unit_chs_mon_dragon_ogres"
+        }
+      },
+      {
+        "id": "unit_set_to_unit_junctions_tables:5f806ca7bde8a89eb986",
+        "table": "unit_set_to_unit_junctions_tables",
+        "key": {
+          "unit_caste": "",
+          "unit_category": "",
+          "unit_class": "",
+          "unit_record": "wh_dlc01_chs_mon_dragon_ogre",
+          "unit_set": "wh3_dlc20_chs_und_all"
+        },
+        "sourcePack": "db.pack",
+        "sourcePackPath": "db.pack",
+        "path": "db/unit_set_to_unit_junctions_tables/data__",
+        "tableVersion": 1,
+        "row": {
+          "exclude": false,
+          "unit_caste": "",
+          "unit_category": "",
+          "unit_class": "",
+          "unit_record": "wh_dlc01_chs_mon_dragon_ogre",
+          "unit_set": "wh3_dlc20_chs_und_all"
+        }
+      },
+      {
+        "id": "unit_set_to_unit_junctions_tables:3775734359ffe3f263b3",
+        "table": "unit_set_to_unit_junctions_tables",
+        "key": {
+          "unit_caste": "",
+          "unit_category": "",
+          "unit_class": "",
+          "unit_record": "wh_dlc01_chs_mon_dragon_ogre",
+          "unit_set": "wh3_dlc20_chs_unmarked_units"
+        },
+        "sourcePack": "db.pack",
+        "sourcePackPath": "db.pack",
+        "path": "db/unit_set_to_unit_junctions_tables/data__",
+        "tableVersion": 1,
+        "row": {
+          "exclude": false,
+          "unit_caste": "",
+          "unit_category": "",
+          "unit_class": "",
+          "unit_record": "wh_dlc01_chs_mon_dragon_ogre",
+          "unit_set": "wh3_dlc20_chs_unmarked_units"
+        }
+      },
+      {
+        "id": "unit_set_to_unit_junctions_tables:92091c4bdc1a90477710",
+        "table": "unit_set_to_unit_junctions_tables",
+        "key": {
+          "unit_caste": "",
+          "unit_category": "",
+          "unit_class": "",
+          "unit_record": "wh_dlc01_chs_mon_dragon_ogre",
+          "unit_set": "wh3_dlc29_chs_nur_non_daemonic_r7"
+        },
+        "sourcePack": "db.pack",
+        "sourcePackPath": "db.pack",
+        "path": "db/unit_set_to_unit_junctions_tables/data__",
+        "tableVersion": 1,
+        "row": {
+          "exclude": false,
+          "unit_caste": "",
+          "unit_category": "",
+          "unit_class": "",
+          "unit_record": "wh_dlc01_chs_mon_dragon_ogre",
+          "unit_set": "wh3_dlc29_chs_nur_non_daemonic_r7"
+        }
+      },
+      {
+        "id": "unit_set_to_unit_junctions_tables:4985b55ff05afa4c369c",
+        "table": "unit_set_to_unit_junctions_tables",
+        "key": {
+          "unit_caste": "",
+          "unit_category": "",
+          "unit_class": "",
+          "unit_record": "wh_dlc01_chs_mon_dragon_ogre",
+          "unit_set": "wh3_dlc29_chs_nur_non_daemonic"
+        },
+        "sourcePack": "db.pack",
+        "sourcePackPath": "db.pack",
+        "path": "db/unit_set_to_unit_junctions_tables/data__",
+        "tableVersion": 1,
+        "row": {
+          "exclude": false,
+          "unit_caste": "",
+          "unit_category": "",
+          "unit_class": "",
+          "unit_record": "wh_dlc01_chs_mon_dragon_ogre",
+          "unit_set": "wh3_dlc29_chs_nur_non_daemonic"
+        }
+      },
+      {
+        "id": "unit_set_to_unit_junctions_tables:e16d6e5c5e56447f748f",
+        "table": "unit_set_to_unit_junctions_tables",
+        "key": {
+          "unit_caste": "",
+          "unit_category": "",
+          "unit_class": "",
+          "unit_record": "wh_dlc01_chs_mon_dragon_ogre",
+          "unit_set": "wh3_dlc29_chs_nurgle_mark_monsters_pool_2"
+        },
+        "sourcePack": "db.pack",
+        "sourcePackPath": "db.pack",
+        "path": "db/unit_set_to_unit_junctions_tables/data__",
+        "tableVersion": 1,
+        "row": {
+          "exclude": false,
+          "unit_caste": "",
+          "unit_category": "",
+          "unit_class": "",
+          "unit_record": "wh_dlc01_chs_mon_dragon_ogre",
+          "unit_set": "wh3_dlc29_chs_nurgle_mark_monsters_pool_2"
+        }
+      },
+      {
+        "id": "unit_set_to_unit_junctions_tables:1d277d719160f122e003",
+        "table": "unit_set_to_unit_junctions_tables",
+        "key": {
+          "unit_caste": "",
+          "unit_category": "",
+          "unit_class": "",
+          "unit_record": "wh_dlc01_chs_mon_dragon_ogre",
+          "unit_set": "wh3_dlc29_marks_monsters"
+        },
+        "sourcePack": "db.pack",
+        "sourcePackPath": "db.pack",
+        "path": "db/unit_set_to_unit_junctions_tables/data__",
+        "tableVersion": 1,
+        "row": {
+          "exclude": false,
+          "unit_caste": "",
+          "unit_category": "",
+          "unit_class": "",
+          "unit_record": "wh_dlc01_chs_mon_dragon_ogre",
+          "unit_set": "wh3_dlc29_marks_monsters"
+        }
+      },
+      {
+        "id": "unit_set_to_unit_junctions_tables:761f40680a4189abe4f9",
+        "table": "unit_set_to_unit_junctions_tables",
+        "key": {
+          "unit_caste": "",
+          "unit_category": "",
+          "unit_class": "",
+          "unit_record": "wh_dlc01_chs_mon_dragon_ogre",
+          "unit_set": "wh3_dlc29_woc_dragon_ogres"
+        },
+        "sourcePack": "db.pack",
+        "sourcePackPath": "db.pack",
+        "path": "db/unit_set_to_unit_junctions_tables/data__",
+        "tableVersion": 1,
+        "row": {
+          "exclude": false,
+          "unit_caste": "",
+          "unit_category": "",
+          "unit_class": "",
+          "unit_record": "wh_dlc01_chs_mon_dragon_ogre",
+          "unit_set": "wh3_dlc29_woc_dragon_ogres"
+        }
+      },
+      {
+        "id": "unit_set_to_unit_junctions_tables:de52aca810919e0d9cc6",
+        "table": "unit_set_to_unit_junctions_tables",
+        "key": {
+          "unit_caste": "",
+          "unit_category": "",
+          "unit_class": "",
+          "unit_record": "wh_dlc01_chs_mon_dragon_ogre",
+          "unit_set": "woc_non_daemonic_all"
+        },
+        "sourcePack": "db.pack",
+        "sourcePackPath": "db.pack",
+        "path": "db/unit_set_to_unit_junctions_tables/data__",
+        "tableVersion": 1,
+        "row": {
+          "exclude": false,
+          "unit_caste": "",
+          "unit_category": "",
+          "unit_class": "",
+          "unit_record": "wh_dlc01_chs_mon_dragon_ogre",
+          "unit_set": "woc_non_daemonic_all"
+        }
+      }
+    ],
+    "relationships": [
+      {
+        "from": "main_units_tables:7ddfb7ae20d020a311a0",
+        "field": "land_unit",
+        "to": "land_units_tables:687164288722c3f4561f",
+        "targetField": "key",
+        "value": "wh_dlc01_chs_mon_dragon_ogre",
+        "evidence": "RPFM processed schema is_reference"
+      },
+      {
+        "from": "units_to_groupings_military_permissions_tables:91bf18fc4276521b536b",
+        "field": "unit",
+        "to": "main_units_tables:7ddfb7ae20d020a311a0",
+        "targetField": "unit",
+        "value": "wh_dlc01_chs_mon_dragon_ogre",
+        "evidence": "RPFM processed schema is_reference"
+      },
+      {
+        "from": "units_to_groupings_military_permissions_tables:85c9140f6eae8b2070b4",
+        "field": "unit",
+        "to": "main_units_tables:7ddfb7ae20d020a311a0",
+        "targetField": "unit",
+        "value": "wh_dlc01_chs_mon_dragon_ogre",
+        "evidence": "RPFM processed schema is_reference"
+      },
+      {
+        "from": "units_to_groupings_military_permissions_tables:783330fd5b0bc797a8df",
+        "field": "unit",
+        "to": "main_units_tables:7ddfb7ae20d020a311a0",
+        "targetField": "unit",
+        "value": "wh_dlc01_chs_mon_dragon_ogre",
+        "evidence": "RPFM processed schema is_reference"
+      },
+      {
+        "from": "units_to_groupings_military_permissions_tables:e05cd9640a8af4c683bf",
+        "field": "unit",
+        "to": "main_units_tables:7ddfb7ae20d020a311a0",
+        "targetField": "unit",
+        "value": "wh_dlc01_chs_mon_dragon_ogre",
+        "evidence": "RPFM processed schema is_reference"
+      },
+      {
+        "from": "unit_set_to_unit_junctions_tables:a01c2ff56939e35034d9",
+        "field": "unit_record",
+        "to": "main_units_tables:7ddfb7ae20d020a311a0",
+        "targetField": "unit",
+        "value": "wh_dlc01_chs_mon_dragon_ogre",
+        "evidence": "RPFM processed schema is_reference"
+      },
+      {
+        "from": "unit_set_to_unit_junctions_tables:8dd8ed509cbe75bf1f36",
+        "field": "unit_record",
+        "to": "main_units_tables:7ddfb7ae20d020a311a0",
+        "targetField": "unit",
+        "value": "wh_dlc01_chs_mon_dragon_ogre",
+        "evidence": "RPFM processed schema is_reference"
+      },
+      {
+        "from": "unit_set_to_unit_junctions_tables:194670a37c67a3a613b3",
+        "field": "unit_record",
+        "to": "main_units_tables:7ddfb7ae20d020a311a0",
+        "targetField": "unit",
+        "value": "wh_dlc01_chs_mon_dragon_ogre",
+        "evidence": "RPFM processed schema is_reference"
+      },
+      {
+        "from": "unit_set_to_unit_junctions_tables:813eff9ed436c5a8d21b",
+        "field": "unit_record",
+        "to": "main_units_tables:7ddfb7ae20d020a311a0",
+        "targetField": "unit",
+        "value": "wh_dlc01_chs_mon_dragon_ogre",
+        "evidence": "RPFM processed schema is_reference"
+      },
+      {
+        "from": "unit_set_to_unit_junctions_tables:5300b4e1646ac2e956a0",
+        "field": "unit_record",
+        "to": "main_units_tables:7ddfb7ae20d020a311a0",
+        "targetField": "unit",
+        "value": "wh_dlc01_chs_mon_dragon_ogre",
+        "evidence": "RPFM processed schema is_reference"
+      },
+      {
+        "from": "unit_set_to_unit_junctions_tables:12fc3c6a1f2b5fcf54c9",
+        "field": "unit_record",
+        "to": "main_units_tables:7ddfb7ae20d020a311a0",
+        "targetField": "unit",
+        "value": "wh_dlc01_chs_mon_dragon_ogre",
+        "evidence": "RPFM processed schema is_reference"
+      },
+      {
+        "from": "unit_set_to_unit_junctions_tables:79c46b7b11c27090ba3d",
+        "field": "unit_record",
+        "to": "main_units_tables:7ddfb7ae20d020a311a0",
+        "targetField": "unit",
+        "value": "wh_dlc01_chs_mon_dragon_ogre",
+        "evidence": "RPFM processed schema is_reference"
+      },
+      {
+        "from": "unit_set_to_unit_junctions_tables:5f806ca7bde8a89eb986",
+        "field": "unit_record",
+        "to": "main_units_tables:7ddfb7ae20d020a311a0",
+        "targetField": "unit",
+        "value": "wh_dlc01_chs_mon_dragon_ogre",
+        "evidence": "RPFM processed schema is_reference"
+      },
+      {
+        "from": "unit_set_to_unit_junctions_tables:3775734359ffe3f263b3",
+        "field": "unit_record",
+        "to": "main_units_tables:7ddfb7ae20d020a311a0",
+        "targetField": "unit",
+        "value": "wh_dlc01_chs_mon_dragon_ogre",
+        "evidence": "RPFM processed schema is_reference"
+      },
+      {
+        "from": "unit_set_to_unit_junctions_tables:92091c4bdc1a90477710",
+        "field": "unit_record",
+        "to": "main_units_tables:7ddfb7ae20d020a311a0",
+        "targetField": "unit",
+        "value": "wh_dlc01_chs_mon_dragon_ogre",
+        "evidence": "RPFM processed schema is_reference"
+      },
+      {
+        "from": "unit_set_to_unit_junctions_tables:4985b55ff05afa4c369c",
+        "field": "unit_record",
+        "to": "main_units_tables:7ddfb7ae20d020a311a0",
+        "targetField": "unit",
+        "value": "wh_dlc01_chs_mon_dragon_ogre",
+        "evidence": "RPFM processed schema is_reference"
+      },
+      {
+        "from": "unit_set_to_unit_junctions_tables:e16d6e5c5e56447f748f",
+        "field": "unit_record",
+        "to": "main_units_tables:7ddfb7ae20d020a311a0",
+        "targetField": "unit",
+        "value": "wh_dlc01_chs_mon_dragon_ogre",
+        "evidence": "RPFM processed schema is_reference"
+      },
+      {
+        "from": "unit_set_to_unit_junctions_tables:1d277d719160f122e003",
+        "field": "unit_record",
+        "to": "main_units_tables:7ddfb7ae20d020a311a0",
+        "targetField": "unit",
+        "value": "wh_dlc01_chs_mon_dragon_ogre",
+        "evidence": "RPFM processed schema is_reference"
+      },
+      {
+        "from": "unit_set_to_unit_junctions_tables:761f40680a4189abe4f9",
+        "field": "unit_record",
+        "to": "main_units_tables:7ddfb7ae20d020a311a0",
+        "targetField": "unit",
+        "value": "wh_dlc01_chs_mon_dragon_ogre",
+        "evidence": "RPFM processed schema is_reference"
+      },
+      {
+        "from": "unit_set_to_unit_junctions_tables:de52aca810919e0d9cc6",
+        "field": "unit_record",
+        "to": "main_units_tables:7ddfb7ae20d020a311a0",
+        "targetField": "unit",
+        "value": "wh_dlc01_chs_mon_dragon_ogre",
+        "evidence": "RPFM processed schema is_reference"
+      }
+    ]
+  }
+}
