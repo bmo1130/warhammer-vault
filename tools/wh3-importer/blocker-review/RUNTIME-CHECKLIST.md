@@ -117,3 +117,44 @@ source-key confirmation unavailable.
 The [missile sidecar](../MISSILE-SEMANTICS.md) records existence, placement and raw
 pool/fire flags. These checks establish activation/combination/ammo behavior;
 they do not approve catalog scope, composite count/HP/mass formulas or full import.
+
+## Entity observations after static component collection
+
+No game was launched for this work. Compare **Medium and Ultra** Unit Size (or
+two clearly recorded available settings) by creating a fresh battle after each
+settings change. Keep faction/context, rank, effects, mods and target identical.
+Record the settings screen, pre-damage card model count/HP, close-up component
+appearance and a short casualty recording. Use a repeatable custom battle where
+the unit is available; otherwise use a preserved campaign save and record that
+limitation. No console is required. If an individual component cannot be selected
+or its loss/HP isolated, mark it unverified rather than interpreting an animation
+as an independent target or death. These observations do not authorize arithmetic.
+
+- [ ] **Necrofex:** at both settings record card count and starting HP; distinguish
+  the construct and visible riders. Under controlled enemy fire record card
+  count/HP changes and visible rider losses. Determine whether riders can be
+  targeted/lost independently, whether the main body survives, and whether a
+  distinguishable rider loss disables rifles. If damage cannot be allocated to
+  cannon body vs riders, leave that HP relationship unresolved.
+- [ ] **Dread Saurian:** at both settings record card count/HP and visible rider
+  positions. Observe whether any of the 12 DB attachment paths correspond to
+  independently targetable/casualty riders, whether the creature survives rider
+  loss, and what happens to the single HP bar. Record weapon disablement only
+  when rider loss can be independently distinguished. Do not convert 12 slots
+  into 12 displayed models or shots.
+- [ ] **Black Coach:** at both settings record card count/HP, horses, vehicle and
+  crew. During controlled damage record whether horses/crew can be individually
+  selected or lost while the coach persists, which loss changes the card count,
+  and whether the HP bar identifies a component. Record articulated segment
+  targeting only if distinguishable from the same vehicle's hit volume.
+- [ ] **Skeleton Chariots:** at both settings record card count/HP and visible
+  chariots separately from horses/crew. Observe a chariot casualty and record
+  simultaneous horse/crew disappearance, card count and HP changes; test whether
+  horse/crew loss can occur while a vehicle remains. Compare recorded settings
+  with raw 24/2/12 without presupposing a conversion ratio or HP allocation.
+
+Unit Size scalar rows exist in the DB, but their reviewed stat keys concern
+damage and do not prove these count/HP conversions. See
+[ENTITY-SEMANTICS.md](../ENTITY-SEMANTICS.md) for raw owners/cardinality and the
+separate unresolved runtime facets. The existing missile checklist still governs
+firing/activation/pool semantics; this entity checklist does not resolve them.

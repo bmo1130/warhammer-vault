@@ -5,6 +5,7 @@ import { directMappings, blockedMappings, topicStatus, normalizationMode, suppor
 import { idMappings } from './ids.mjs';
 import { approvedCatalogContext, assertCatalogSnapshot } from '../catalog-identity/normalization-context.mjs';
 import { verifyMissileInspection } from '../missile-semantics/contract.mjs';
+import { verifyEntityInspection } from '../entity-semantics/contract.mjs';
 
 const sizes = new Set(['tiny', 'small', 'medium', 'large', 'very_large']);
 const valid = (value, type) => type === 'boolean' ? typeof value === 'boolean' : type === 'size' ? sizes.has(value) : type === 'string' ? typeof value === 'string' && value.length > 0 : typeof value === 'number' && Number.isFinite(value) && (type !== 'integer' || Number.isInteger(value));
@@ -23,6 +24,7 @@ export function normalizeUnit(dump, context) {
   const mainKey = fact(c.root, 'unit'), landKey = fact(c.land, 'key');
   if (!valid(mainKey?.value, 'string') || !valid(landKey?.value, 'string') || mainKey.value !== dump.unit.caKey || c.root.table !== 'main_units_tables' || c.land.table !== 'land_units_tables') throw new Error('A unique schema-connected main/land identity is required.');
   const missileContract = context.missileInspection ? verifyMissileInspection(context.missileInspection, dump) : null;
+  const entityContract = context.entityInspection ? verifyEntityInspection(context.entityInspection, dump) : null;
 
   const catalog = context.catalog ? approvedCatalogContext(context.catalog.review, context.catalog.request, context.catalog.decisions) : null;
   if (catalog) {
@@ -57,6 +59,7 @@ export function normalizeUnit(dump, context) {
   };
   const omit = (field, reason, semanticsStatus = 'UNRESOLVED') => result.omitted.push({ field, kind: 'UNRESOLVED', semanticsStatus, reason });
   if (missileContract) result.missilePresentation = { completeness: missileContract.completeness, withheldFields: [] };
+  if (entityContract) result.entityPresentation = { completeness: entityContract.completeness, facets: entityContract.presentation, withheldFields: [] };
   const mapped = (field, value, input, note, evidence = [], kind = 'DIRECT') => {
     set(unit, field, value);
     result.provenance.fields.push({ field, value, kind, source: input.source, rawValue: input.value, note, evidence });
@@ -91,12 +94,23 @@ export function normalizeUnit(dump, context) {
     if (valid(input?.value, type) && (!(type === 'number' || type === 'integer') || input.value >= 0)) mapped(field, input.value, input, 'Named raw field copied without arithmetic or runtime effects.');
     else omit(field, input ? `Raw field is not a valid ${type} for this Unit field; no substitute used.` : 'Missing/ambiguous source row, named field or verified join.');
   }
-  // A man-only entity is unambiguous. Mounted/artillery units never choose a
-  // rider, mount, crew or engine as the representative automatically.
+  // Preserve the legacy mount/engine selector in name-based mode. Diagnostic
+  // materialization additionally verifies the bounded attachment/articulated
+  // graph; mount/engine absence alone cannot authorize its presentation.
   const mountKey = fact(c.land, 'mount'), engineKey = fact(c.land, 'engine');
   const manOnly = mountKey?.value === '' && engineKey?.value === '';
   for (const [field, rawField, type] of [['entities.entitySize', 'size', 'size'], ['entities.mass', 'mass', 'number'], ['defense.projectilePenetrationResistance', 'projectile_penetration_resistance', 'number']]) {
     const input = manOnly ? fact(c.rider, rawField) : undefined;
+    const facet = rawField === 'size' ? 'sizeSafe' : rawField === 'mass' ? 'massSafe' : 'penetrationSafe';
+    if (entityContract && !entityContract.presentation[facet]) {
+      const reason = `Entity sidecar ${entityContract.completeness}: no verified single MAN per-entity presentation; count/HP/aggregate properties remain unresolved.`;
+      if (valid(input?.value, type) && (type !== 'number' || input.value >= 0)) result.entityPresentation.withheldFields.push({ field, value: input.value,
+        rawValue: input.value, source: input.source, kind: 'DIRECT', evidence: [],
+        note: 'The verified land unit has a man entity and no mount/engine; per-entity raw property.',
+        sourcePaths: entityContract.paths.filter(p => p.role === 'MAN').map(p => ({ pathId: p.pathId, role: p.role, edges: p.edges })), reason });
+      omit(field, reason, entityContract.structure === 'INCOMPLETE' ? 'ENTITY_STRUCTURE_INCOMPLETE' : 'ENTITY_PRESENTATION_UNRESOLVED');
+      continue;
+    }
     if (valid(input?.value, type) && (type !== 'number' || input.value >= 0)) mapped(field, input.value, input, 'The verified land unit has a man entity and no mount/engine; per-entity raw property.');
     else omit(field, 'Representative entity is ambiguous or its raw property is unavailable; no crew/mount/engine aggregation.');
   }

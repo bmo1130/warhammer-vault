@@ -8,6 +8,8 @@ import { classifyCatalogCandidates } from './policy.mjs';
 import { curatedDecisions } from './decisions.mjs';
 import { inspectMissileSources } from '../missile-semantics/collect.mjs';
 import { summarizeMissileSources } from '../missile-semantics/contract.mjs';
+import { inspectEntityStructure } from '../entity-semantics/collect.mjs';
+import { summarizeEntityStructures } from '../entity-semantics/contract.mjs';
 
 // Diagnostic registry only: never added to the production faction dataset.
 export const diagnosticFactionIds = Object.freeze(['empire', 'khorne', 'vampire_counts', 'tomb_kings', 'beastmen', 'warriors_of_chaos', 'tzeentch']);
@@ -80,11 +82,13 @@ export async function materializeCatalogRequest(source, review, request, validat
     result.stage = 'normalization'; result.status = 'BLOCKED_NORMALIZATION';
     result.missileExtras = await inspectMissileExtras(source, result.discovery, result.dump);
     result.missileInspection = await inspectMissileSources(source, result.dump);
+    result.entityInspection = await inspectEntityStructure(source, result.dump);
     normalized = normalizeUnit(result.dump, { catalog: { review: live, request, decisions }, missileInspection: result.missileInspection,
+      entityInspection: result.entityInspection,
       ...(options.idMappings ? { idMappings: options.idMappings } : {}) });
     result.normalizationCompleted = true;
     result.omissions = normalized.omitted; result.unmapped = normalized.unmapped; result.provenance = normalized.provenance;
-    result.exceptions = analyzeNormalized({ displayName: normalized.unit.name, slug: normalized.unit.id }, result.dump, normalized, result.missileExtras, result.missileInspection);
+    result.exceptions = analyzeNormalized({ displayName: normalized.unit.name, slug: normalized.unit.id }, result.dump, normalized, result.missileExtras, result.missileInspection, result.entityInspection);
     result.stage = 'validation'; result.status = 'BLOCKED_VALIDATION';
     const issues = validate([normalized.unit], registry);
     result.validation.diagnostic = { registryIds: [...registry], issues, passed: issues.length === 0 };
@@ -129,5 +133,7 @@ export function summarizeMaterializations(results) {
     omittedFieldEvents: success.reduce((n, r) => n + r.omissions.length, 0),
     unitFieldProvenance: Object.fromEntries(['DIRECT', 'GENERATED', 'CURATED'].map(kind => [kind, success.reduce((n, r) => n + r.provenance.fields.filter(f => f.kind === kind).length, 0)])),
     blockedReasons: Object.fromEntries([...new Set(results.filter(r => r.status !== 'MATERIALIZED').map(r => r.status))].map(status => [status, results.filter(r => r.status === status).length])),
-    missileSources: summarizeMissileSources(results.flatMap(r => r.missileInspection ? [r.missileInspection.contract] : [])) };
+    missileSources: summarizeMissileSources(results.flatMap(r => r.missileInspection ? [r.missileInspection.contract] : [])),
+    ...(results.some(r => r.entityInspection) ? { entityStructures: { ...summarizeEntityStructures(results.flatMap(r => r.entityInspection ? [r.entityInspection.contract] : [])),
+      withheldFields: success.reduce((n, r) => n + (r.normalized.entityPresentation?.withheldFields.length ?? 0), 0) } } : {}) };
 }

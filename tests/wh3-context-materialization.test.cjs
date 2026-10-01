@@ -153,7 +153,10 @@ test('legacy stat values and field provenance remain identical outside the expli
   const r = await attempt(f);
   const legacy = normalizeUnit(r.dump, { factionId: 'vampire_counts', militaryGroup: 'fixture_group_0', permissionTrace: r.discovery.evidence, idMappings: f.options.idMappings });
   assert.deepEqual({ ...r.unit, id: legacy.unit.id }, legacy.unit);
-  assert.deepEqual(r.omissions, legacy.omitted); assert.deepEqual(r.unmapped, legacy.unmapped);
+  const entityFields = ['entities.entitySize', 'entities.mass', 'defense.projectilePenetrationResistance'];
+  assert.deepEqual(r.omissions.filter(o => !entityFields.includes(o.field)), legacy.omitted.filter(o => !entityFields.includes(o.field)));
+  assert(r.entityInspection); assert.equal(r.normalized.entityPresentation.completeness, 'INCOMPLETE_DB_CHAIN'); // This older fixture omits the attachment/articulated schema.
+  assert.deepEqual(r.unmapped, legacy.unmapped);
   assert.deepEqual(r.provenance.fields.filter(f => !['id', 'factionId'].includes(f.field)), legacy.provenance.fields.filter(f => !['id', 'factionId'].includes(f.field)));
   assert.deepEqual(r.provenance.fields.map(f => f.kind), legacy.provenance.fields.map(f => f.kind));
   assert.equal(legacy.provenance.catalog, undefined);

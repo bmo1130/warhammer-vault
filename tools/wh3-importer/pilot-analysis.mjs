@@ -10,6 +10,7 @@ export const categories = [
   'SEMANTICS_BLOCKED', 'VALIDATION_FAILURE', 'NORMALIZED_WITH_OMISSIONS', 'NORMALIZED_CLEAN',
   'ROOT_NOT_FOUND', 'RESOURCE_LIMIT', 'SOURCE_FAILURE', 'UNMAPPED_FIELD', 'OUTSIDE_TRACE_SCOPE',
   'MISSILE_PRESENTATION_UNRESOLVED', 'INCOMPLETE_MISSILE_SOURCE_GRAPH',
+  'ENTITY_PRESENTATION_UNRESOLVED', 'ENTITY_STRUCTURE_INCOMPLETE',
 ];
 export function exception(sample, category, severity, fieldOrRelation, reason, evidence = [], caKey = null) {
   if (!categories.includes(category) || !['INFO', 'OMISSION', 'BLOCKING'].includes(severity)) throw new Error('Invalid exception taxonomy.');
@@ -45,6 +46,10 @@ export function coverageFor(result) {
   const output = {};
   for (const field of fields) {
     if (!normalized || result.status === 'BLOCKED') { output[field] = { status: 'FAILED', reason: 'No validated trustworthy Unit; applicability not established.', structural: true }; continue; }
+    if (entityFields.includes(field) && normalized.omitted.some(o => o.field === field && o.semanticsStatus.startsWith('ENTITY_'))) {
+      const incomplete = normalized.entityPresentation?.completeness === 'INCOMPLETE_DB_CHAIN';
+      output[field] = { status: 'OMITTED', reason: normalized.omitted.find(o => o.field === field).reason, presentationBlocked: !incomplete, structural: incomplete }; continue;
+    }
     if (field.startsWith('missile.') && missileContract?.completeness === 'STRUCTURE_KNOWN_RUNTIME_UNRESOLVED' && directMappings.some(m => m[0] === field)) {
       output[field] = { status: 'OMITTED', reason: 'Complete source graph has no established single-profile presentation.', presentationBlocked: true }; continue;
     }
@@ -69,7 +74,7 @@ export function coverageFor(result) {
   return output;
 }
 
-export function analyzeNormalized(sample, dump, normalized, extras, missileInspection) {
+export function analyzeNormalized(sample, dump, normalized, extras, missileInspection, entityInspection) {
   const issues = [], c = observationContext(dump), caKey = dump.unit.caKey;
   const add = (category, severity, field, reason, evidence = []) => issues.push(exception(sample, category, severity, field, reason, evidence, caKey));
   const scopedCoverage = coverageFor({ normalized, dump, status: 'CLEAN', missileInspection });
@@ -79,7 +84,9 @@ export function analyzeNormalized(sample, dump, normalized, extras, missileInspe
   if ([c.rider, c.mountEntity, c.engineEntity].filter(Boolean).length > 1) {
     add('MULTI_ENTITY_STRUCTURE', 'INFO', 'entities', 'Multiple role rows cannot be reduced to a representative entity automatically.', [c.rider, c.mountEntity, c.engineEntity].filter(Boolean));
   }
-  if (entityFields.some(field => get(normalized.unit, field) === undefined)) add('UNKNOWN_ENTITY_ROLE', 'OMISSION', 'entities', 'Representative size/mass/penetration resistance is ambiguous or unavailable; roles and missing joins require review.', [c.land]);
+  if (entityInspection?.contract.structure === 'INCOMPLETE') add('ENTITY_STRUCTURE_INCOMPLETE', 'OMISSION', 'entityStructure', 'Bounded entity graph is incomplete; missing evidence is not proof of a single component.', entityInspection.contract.issues);
+  else if (entityInspection && entityFields.some(field => get(normalized.unit, field) === undefined)) add('ENTITY_PRESENTATION_UNRESOLVED', 'OMISSION', 'entities', 'Known DB role paths cannot establish one safe displayed entity property. Raw ownership/cardinality remain in the sidecar.', entityInspection.contract.paths.map(p => ({ pathId: p.pathId, role: p.role })));
+  else if (!entityInspection && entityFields.some(field => get(normalized.unit, field) === undefined)) add('UNKNOWN_ENTITY_ROLE', 'OMISSION', 'entities', 'Representative size/mass/penetration resistance is ambiguous or unavailable; roles and missing joins require review.', [c.land]);
   for (const row of dump.rows.filter(r => r.table === 'battle_entities_tables')) if (!['tiny', 'small', 'medium', 'large', 'very_large'].includes(row.row.size)) add('UNSUPPORTED_SIZE', 'OMISSION', 'battle_entities.size', 'Raw size has no Unit entity-size mapping.', [row]);
   for (const u of normalized.unmapped) add(u.reason.includes('classification') ? 'ABILITY_CLASSIFICATION_CONFLICT' : u.kind === 'ability' ? 'UNKNOWN_ABILITY' : 'UNKNOWN_ATTRIBUTE', 'OMISSION', `${u.kind}:${u.caId}`, u.reason, [u.source]);
   const temporary = { normalized, dump, status: 'CLEAN', discovery: { evidence: { rows: [] } }, missileInspection };

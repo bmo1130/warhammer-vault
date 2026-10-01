@@ -98,7 +98,7 @@ test('actual roster values agree with legacy normalization except explicitly wit
     const decision = curatedDecisions.find(d => d.mainKey === r.request.mainKey);
     const militaryGroup = decision.checks.find(c => c.table === 'units_to_groupings_military_permissions_tables').equals.military_group;
     const legacy = normalizeUnit(r.dump, { militaryGroup, factionId: r.unit.factionId, permissionTrace: r.discovery.evidence });
-    const gated = normalizeUnit(r.dump, { militaryGroup, factionId: r.unit.factionId, permissionTrace: r.discovery.evidence, missileInspection: r.missileInspection });
+    const gated = normalizeUnit(r.dump, { militaryGroup, factionId: r.unit.factionId, permissionTrace: r.discovery.evidence, missileInspection: r.missileInspection, entityInspection: r.entityInspection });
     assert.deepEqual({ ...r.unit, id: gated.unit.id }, gated.unit);
     assert.deepEqual(r.omissions, gated.omitted); assert.deepEqual(r.unmapped, legacy.unmapped);
     const withheld = r.normalized.missilePresentation?.withheldFields ?? [];
