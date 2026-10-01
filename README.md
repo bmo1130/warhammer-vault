@@ -13,7 +13,7 @@ npm run dev
 
 ## 구조
 
-- `src/data`: 읽기 전용 WH3 샘플 JSON. 실제 수치는 아직 검증되지 않아 비워 뒀습니다.
+- `src/data`: 읽기 전용 WH3 샘플 JSON과 별도의 diagnostic 표시 자료. Production 샘플 수치는 비워 뒀습니다.
 - `src/domain/types.ts`: WH3 엔티티와 향후 Modifier, ModProfile, CampaignProfile, Roster 타입. 팩션 소속 관계는 각 엔티티의 `factionId`만 사용합니다.
 - `src/domain/unit.ts`: 의미별 유닛 스키마와 원본 숫자 필드의 `UnitStatPath` 타입.
 - `src/domain/unitCalculations.ts`: 확인된 기본·관통 피해 합계를 계산하는 순수 함수.
@@ -58,6 +58,18 @@ ID, 이름, `factionId`, 설명과 출처 메타데이터는 최상위에 유지
 기존 `UnitStats`는 제거했으며 미래 `Modifier.stat`은 `melee.meleeAttack`, `entities.totalHealth` 등 원본 숫자 필드의 경로인 `UnitStatPath`를 참조합니다. 실제 modifier 적용 시스템은 아직 없습니다. 개인 기록은 유닛 ID로 연결되므로 유닛 JSON 구조 변경에 따른 IndexedDB나 백업 구조 변경은 없습니다.
 
 ## 검증
+
+### 유닛 상세 화면의 diagnostic 자료
+
+홈 하단의 접힌 **관찰 자료가 있는 유닛**에서 Black Coach, Skeleton Chariots, Dread Saurian, Necrofex Colossus, Free Company Militia를 엽니다. 기존 `/units/:id`와 `UnitPage`를 재사용하며, 이 5개 항목은 **diagnostic-only**입니다. Production Unit을 생성하지 않고 기본 스탯 표 대신 `Production data unavailable`을 표시합니다. 기존 production 검색·팩션 목록·샘플 데이터는 그대로입니다. Diagnostic-only 항목의 즐겨찾기·개인 기록은 이번 범위에 포함하지 않습니다.
+
+`UnitDiagnosticSection`은 기본적으로 접힌 **데이터 해석 근거**에서 정적 entity/weapon/projectile 후보, runtime context view와 논리적 수·HP, 조건별 ActiveProjectileContext, 기존 scoped precedence를 구분해 표시합니다. `OBSERVED_RUNTIME`은 record key 관찰이고 배치 확정이 아닙니다. `OBSERVED_ONCE`도 전체 게임 규칙 검증을 뜻하지 않습니다. `UNVERIFIED / INCONCLUSIVE`, capture 보류·불완전, 미검토 정적 구성은 유지합니다. 연결 수와 context view 수는 모델/발사 수로 합산하지 않습니다. 출처·snapshot·schema·pack hash·관찰 참조는 별도로 펼칩니다.
+
+`unitDiagnosticRepository`는 정확한 diagnostic catalog ID로 `src/data/unitDiagnostics.json`만 읽습니다. 표시용 JSON은 완료된 **2026-10-01 / 9.0.2.0 batch**의 최소 projection이며, 새 checkout에서도 UI를 볼 수 있도록 커밋했습니다. 개인 절대 경로와 raw debug 객체는 포함하지 않습니다. `node scripts/project-unit-diagnostics.mjs`는 명시된 로컬 완료 batch, 검증 결과, 기존 static index/candidates가 있을 때만 이 표시 파일을 재생성합니다. 원본 SHA256도 보존합니다. 이 명령은 extraction/ingestion/normalization이나 precedence 재추론을 수행하지 않습니다. 현재 batch의 5개 항목만 지원하며 자동 최신 자료 선택이나 production 승격은 없습니다.
+
+`tests/unit-diagnostics.test.cjs`는 기존 화면·목록의 유지, diagnostic-only route, 복합 구성·복수 missile source, static-only/projectile 관찰 구분, 불확실성과 provenance 표시를 검증합니다. 로컬 완료 자료가 있을 때는 원본 hash·identity·모든 candidate path·관찰값의 일치도 검사합니다.
+
+### 실행할 검사
 
 ```bash
 npm test

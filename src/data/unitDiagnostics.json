@@ -1,0 +1,1459 @@
+{
+  "batchId": "runtime-2026-10-01-9.0.2",
+  "gameVersion": "9.0.2.0",
+  "staticSnapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+  "snapshot": {
+    "gameVersion": "9.0.2.0",
+    "schemaSha256": "5d628a0167b34a096752c5c21acd16493834a987c80dc9f02364617f796ba2a4",
+    "packs": [
+      {
+        "name": "db.pack",
+        "sha256": "d0fafac984b3985ec47cec0ea957591424f1077e52ef61941dbf2dc46e6cf723"
+      },
+      {
+        "name": "local_en.pack",
+        "sha256": "f979527a5aaecf293a4e66afc25ed6c760e4107ef4920b73bd56e10e2652fd6a"
+      }
+    ]
+  },
+  "inputs": [
+    {
+      "file": "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-final/manifest.json",
+      "sha256": "fab727ea667f2b49a7f22b87f868cd1c2a7cfaa693b345619c04f1df7767d3a8"
+    },
+    {
+      "file": "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-final/comparison-report.json",
+      "sha256": "70df843fb034a84eda04564c67a670734b381c95739c42da5b3b4c9c136b8b83"
+    },
+    {
+      "file": "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-final/validated-evidence.json",
+      "sha256": "4348a11159b2c2c539c8cf4c60f9742ee0fd6d7280cdbee208b4c00d3689ef64"
+    },
+    {
+      "file": "generated/wh3/runtime-evidence/cco-p0-9.0.2/static-candidates.json",
+      "sha256": "6bc6b193cdbe652f7b4f93728522e5ca1c54be64923ccc32c3afcd6c494dd05a"
+    },
+    {
+      "file": "generated/wh3/runtime-evidence/cco-p0-9.0.2/static-index.json",
+      "sha256": "2722982e28649bc71d60c20a3d828bd834f2aedf33d2b51119ae8d7fb3dd31c9"
+    }
+  ],
+  "entries": [
+    {
+      "id": "ca_unit_wh_main_vmp_veh_black_coach",
+      "name": "Black Coach",
+      "factionId": "vampire_counts",
+      "sourceMainKey": "wh_main_vmp_veh_black_coach",
+      "sourceLandKey": "wh_main_vmp_veh_black_coach",
+      "contextId": null,
+      "productionEligible": false,
+      "entityReviewStatus": "REVIEWED",
+      "entities": [
+        {
+          "pathId": "[\"wh_main_vmp_veh_black_coach\",\"ARTICULATED\",\"land_unit_articulated_vehicles_tables:0f6eb08bcf70d7ae4b62\",\"articulated_entity\",[[\"main_units_tables:d2123214a9d8b9981bde\",\"land_unit\",\"land_units_tables:1e23db3bdcfffc7101eb\"],[\"land_units_tables:1e23db3bdcfffc7101eb\",\"articulated_record\",\"land_unit_articulated_vehicles_tables:0f6eb08bcf70d7ae4b62\"],[\"land_unit_articulated_vehicles_tables:0f6eb08bcf70d7ae4b62\",\"articulated_entity\",\"battle_entities_tables:0738792739d51f1956d3\"]]]",
+          "role": "ARTICULATED",
+          "entityKey": "wh_main_vehicle_vmp_black_coach_chariot_articulation",
+          "rawCount": null,
+          "statuses": [
+            "OBSERVED_RUNTIME"
+          ]
+        },
+        {
+          "pathId": "[\"wh_main_vmp_veh_black_coach\",\"ENGINE\",\"battlefield_engines_tables:55fdfea130ffa09ae714\",\"battle_entity\",[[\"main_units_tables:d2123214a9d8b9981bde\",\"land_unit\",\"land_units_tables:1e23db3bdcfffc7101eb\"],[\"land_units_tables:1e23db3bdcfffc7101eb\",\"engine\",\"battlefield_engines_tables:55fdfea130ffa09ae714\"],[\"battlefield_engines_tables:55fdfea130ffa09ae714\",\"battle_entity\",\"battle_entities_tables:d38c4aeb2f47c3bab4b9\"]]]",
+          "role": "ENGINE",
+          "entityKey": "wh_main_vehicle_vmp_black_coach_chariot",
+          "rawCount": 1,
+          "statuses": [
+            "OBSERVED_RUNTIME"
+          ]
+        },
+        {
+          "pathId": "[\"wh_main_vmp_veh_black_coach\",\"MAN\",\"land_units_tables:1e23db3bdcfffc7101eb\",\"man_entity\",[[\"main_units_tables:d2123214a9d8b9981bde\",\"land_unit\",\"land_units_tables:1e23db3bdcfffc7101eb\"],[\"land_units_tables:1e23db3bdcfffc7101eb\",\"man_entity\",\"battle_entities_tables:07748f75deddcba44ab0\"]]]",
+          "role": "MAN",
+          "entityKey": "wh_main_infantry_standard_blood_dismembers",
+          "rawCount": 1,
+          "statuses": [
+            "NOT_OBSERVED"
+          ]
+        },
+        {
+          "pathId": "[\"wh_main_vmp_veh_black_coach\",\"MOUNT\",\"mounts_tables:de546799a1d2e887c601\",\"entity\",[[\"main_units_tables:d2123214a9d8b9981bde\",\"land_unit\",\"land_units_tables:1e23db3bdcfffc7101eb\"],[\"land_units_tables:1e23db3bdcfffc7101eb\",\"mount\",\"mounts_tables:de546799a1d2e887c601\"],[\"mounts_tables:de546799a1d2e887c601\",\"entity\",\"battle_entities_tables:5d7cf6528286c3428293\"]]]",
+          "role": "MOUNT",
+          "entityKey": "wh_main_vehicle_vmp_black_coach_chariot_nightmare_draught",
+          "rawCount": 2,
+          "statuses": [
+            "OBSERVED_RUNTIME"
+          ]
+        },
+        {
+          "pathId": "[\"wh_main_vmp_veh_black_coach\",\"PERSONALITY_ATTACHMENT\",\"battle_personalities_tables:a18cb9faebcffa9ff69c\",\"battle_entity\",[[\"main_units_tables:d2123214a9d8b9981bde\",\"land_unit\",\"land_units_tables:1e23db3bdcfffc7101eb\"],[\"land_units_to_battle_personalities_junctions_tables:f26a933d8da5c7164f5b\",\"land_unit\",\"land_units_tables:1e23db3bdcfffc7101eb\"],[\"land_units_to_battle_personalities_junctions_tables:f26a933d8da5c7164f5b\",\"battle_personality\",\"battle_personalities_tables:a18cb9faebcffa9ff69c\"],[\"battle_personalities_tables:a18cb9faebcffa9ff69c\",\"battle_entity\",\"battle_entities_tables:f54d660e3a9694f6ef73\"]]]",
+          "role": "PERSONALITY_ATTACHMENT",
+          "entityKey": "wh_main_infantry_rider",
+          "rawCount": null,
+          "statuses": [
+            "OBSERVED_RUNTIME"
+          ]
+        }
+      ],
+      "missiles": [],
+      "cases": [
+        {
+          "id": "black-coach",
+          "modifiers": null,
+          "fields": {
+            "NumEntities": {
+              "status": "VALUE",
+              "value": 1
+            },
+            "HealthValue": {
+              "status": "VALUE",
+              "value": 5980
+            },
+            "HealthMax": {
+              "status": "VALUE",
+              "value": 5980
+            }
+          },
+          "views": [
+            {
+              "list": "ManList",
+              "size": 1,
+              "records": [
+                {
+                  "key": "wh_main_infantry_rider",
+                  "entries": 1
+                }
+              ]
+            },
+            {
+              "list": "MountList",
+              "size": 2,
+              "records": [
+                {
+                  "key": "wh_main_vehicle_vmp_black_coach_chariot_nightmare_draught",
+                  "entries": 2
+                }
+              ]
+            },
+            {
+              "list": "EngineList",
+              "size": 1,
+              "records": [
+                {
+                  "key": "wh_main_vehicle_vmp_black_coach_chariot",
+                  "entries": 1
+                }
+              ]
+            },
+            {
+              "list": "EntityList",
+              "size": 1,
+              "records": [
+                {
+                  "key": "wh_main_vehicle_vmp_black_coach_chariot_articulation",
+                  "entries": 1
+                }
+              ]
+            }
+          ],
+          "projectileKeys": [],
+          "projectileReferences": [],
+          "interpretation": {
+            "kind": "RUNTIME_MANUAL",
+            "reference": "Human request: WH3 runtime observations, 2026-10-01 (Asia/Seoul)",
+            "text": "Human visually identified rider, two horses, coach body (IsEngine=true), and a physical articulation connecting horse/coach (IsMan=false, IsEngine=false). Scope: this Black Coach capture only; no universal chariot rule.",
+            "status": "HUMAN_INTERPRETATION_OF_CAPTURE"
+          },
+          "entityIndexContinuity": "UNVERIFIED",
+          "simultaneousSources": "INCONCLUSIVE",
+          "scopedCaptures": 11,
+          "completeCaptures": 11,
+          "heldCaptures": 1,
+          "problems": [
+            "SELECTED_PLAYER_UNIT_REQUIRED",
+            "NO_SELECTED_PLAYER_UNIT"
+          ],
+          "unitSizes": [
+            "MEDIUM"
+          ],
+          "confidenceStatuses": [
+            "OBSERVED_ONCE"
+          ],
+          "validationStatuses": [
+            "VALIDATED_SCOPED_OBSERVATION"
+          ],
+          "samplePoints": [
+            "CCO_TIME:5700",
+            "CCO_TIME:83000",
+            "CCO_TIME:83500",
+            "CCO_TIME:83800",
+            "CCO_TIME:84100",
+            "CCO_TIME:84500",
+            "CCO_TIME:85300",
+            "CCO_TIME:21000",
+            "CCO_CURSOR",
+            "CCO_TIME:22100",
+            "CCO_TIME:26500",
+            "CCO_TIME:33500"
+          ],
+          "references": [
+            "game:script_log_011026_2012.txt:93",
+            "game:script_log_011026_2012.txt:117",
+            "game:script_log_011026_2012.txt:131",
+            "game:script_log_011026_2012.txt:145",
+            "game:script_log_011026_2012.txt:159",
+            "game:script_log_011026_2012.txt:173",
+            "game:script_log_011026_2012.txt:187",
+            "game:script_log_011026_2021.txt:100",
+            "game:script_log_011026_2021.txt:114",
+            "game:script_log_011026_2021.txt:128",
+            "game:script_log_011026_2021.txt:154"
+          ]
+        }
+      ],
+      "precedence": null
+    },
+    {
+      "id": "ca_unit_wh2_dlc09_tmb_veh_skeleton_chariot_0",
+      "name": "Skeleton Chariots",
+      "factionId": "tomb_kings",
+      "sourceMainKey": "wh2_dlc09_tmb_veh_skeleton_chariot_0",
+      "sourceLandKey": "wh2_dlc09_tmb_veh_skeleton_chariot_0",
+      "contextId": null,
+      "productionEligible": false,
+      "entityReviewStatus": "REVIEWED",
+      "entities": [
+        {
+          "pathId": "[\"wh2_dlc09_tmb_veh_skeleton_chariot_0\",\"ARTICULATED\",\"land_unit_articulated_vehicles_tables:1525a8c8c832a7c9b603\",\"articulated_entity\",[[\"main_units_tables:e5daef3d4e06e58a2c7b\",\"land_unit\",\"land_units_tables:e13027a425524203055c\"],[\"land_units_tables:e13027a425524203055c\",\"articulated_record\",\"land_unit_articulated_vehicles_tables:1525a8c8c832a7c9b603\"],[\"land_unit_articulated_vehicles_tables:1525a8c8c832a7c9b603\",\"articulated_entity\",\"battle_entities_tables:8ee8886175aba75d1193\"]]]",
+          "role": "ARTICULATED",
+          "entityKey": "wh2_dlc09_tmb_vehicle_chariot_horse_articulation",
+          "rawCount": null,
+          "statuses": [
+            "OBSERVED_RUNTIME"
+          ]
+        },
+        {
+          "pathId": "[\"wh2_dlc09_tmb_veh_skeleton_chariot_0\",\"ENGINE\",\"battlefield_engines_tables:1f4615084925f5c00cca\",\"battle_entity\",[[\"main_units_tables:e5daef3d4e06e58a2c7b\",\"land_unit\",\"land_units_tables:e13027a425524203055c\"],[\"land_units_tables:e13027a425524203055c\",\"engine\",\"battlefield_engines_tables:1f4615084925f5c00cca\"],[\"battlefield_engines_tables:1f4615084925f5c00cca\",\"battle_entity\",\"battle_entities_tables:32ab07eed2c0fe2e591c\"]]]",
+          "role": "ENGINE",
+          "entityKey": "wh2_dlc09_tmb_vehicle_chariot",
+          "rawCount": 12,
+          "statuses": [
+            "OBSERVED_RUNTIME"
+          ]
+        },
+        {
+          "pathId": "[\"wh2_dlc09_tmb_veh_skeleton_chariot_0\",\"MAN\",\"land_units_tables:e13027a425524203055c\",\"man_entity\",[[\"main_units_tables:e5daef3d4e06e58a2c7b\",\"land_unit\",\"land_units_tables:e13027a425524203055c\"],[\"land_units_tables:e13027a425524203055c\",\"man_entity\",\"battle_entities_tables:e83500c150391f70dbfc\"]]]",
+          "role": "MAN",
+          "entityKey": "wh2_dlc09_tmb_skeleton",
+          "rawCount": 24,
+          "statuses": [
+            "OBSERVED_RUNTIME"
+          ]
+        },
+        {
+          "pathId": "[\"wh2_dlc09_tmb_veh_skeleton_chariot_0\",\"MOUNT\",\"mounts_tables:dfa1e979a06dc84c4ac2\",\"entity\",[[\"main_units_tables:e5daef3d4e06e58a2c7b\",\"land_unit\",\"land_units_tables:e13027a425524203055c\"],[\"land_units_tables:e13027a425524203055c\",\"mount\",\"mounts_tables:dfa1e979a06dc84c4ac2\"],[\"mounts_tables:dfa1e979a06dc84c4ac2\",\"entity\",\"battle_entities_tables:ccf1575d6117052bd515\"]]]",
+          "role": "MOUNT",
+          "entityKey": "wh2_dlc09_tmb_cav_skeletal_steed_chariot",
+          "rawCount": 2,
+          "statuses": [
+            "OBSERVED_RUNTIME"
+          ]
+        },
+        {
+          "pathId": "[\"wh2_dlc09_tmb_veh_skeleton_chariot_0\",\"PERSONALITY_ATTACHMENT\",\"battle_personalities_tables:4e40437ffb533dbb363f\",\"battle_entity\",[[\"main_units_tables:e5daef3d4e06e58a2c7b\",\"land_unit\",\"land_units_tables:e13027a425524203055c\"],[\"land_units_to_battle_personalities_junctions_tables:14f2784661a0416dd976\",\"land_unit\",\"land_units_tables:e13027a425524203055c\"],[\"land_units_to_battle_personalities_junctions_tables:14f2784661a0416dd976\",\"battle_personality\",\"battle_personalities_tables:4e40437ffb533dbb363f\"],[\"battle_personalities_tables:4e40437ffb533dbb363f\",\"battle_entity\",\"battle_entities_tables:e83500c150391f70dbfc\"]]]",
+          "role": "PERSONALITY_ATTACHMENT",
+          "entityKey": "wh2_dlc09_tmb_skeleton",
+          "rawCount": null,
+          "statuses": [
+            "OBSERVED_RUNTIME"
+          ]
+        },
+        {
+          "pathId": "[\"wh2_dlc09_tmb_veh_skeleton_chariot_0\",\"PERSONALITY_ATTACHMENT\",\"battle_personalities_tables:86de969ccc00743b24e5\",\"battle_entity\",[[\"main_units_tables:e5daef3d4e06e58a2c7b\",\"land_unit\",\"land_units_tables:e13027a425524203055c\"],[\"land_units_to_battle_personalities_junctions_tables:ebc115110f93b9af920d\",\"land_unit\",\"land_units_tables:e13027a425524203055c\"],[\"land_units_to_battle_personalities_junctions_tables:ebc115110f93b9af920d\",\"battle_personality\",\"battle_personalities_tables:86de969ccc00743b24e5\"],[\"battle_personalities_tables:86de969ccc00743b24e5\",\"battle_entity\",\"battle_entities_tables:e83500c150391f70dbfc\"]]]",
+          "role": "PERSONALITY_ATTACHMENT",
+          "entityKey": "wh2_dlc09_tmb_skeleton",
+          "rawCount": null,
+          "statuses": [
+            "OBSERVED_RUNTIME"
+          ]
+        }
+      ],
+      "missiles": [],
+      "cases": [
+        {
+          "id": "skeleton-chariots",
+          "modifiers": null,
+          "fields": {
+            "NumEntities": {
+              "status": "VALUE",
+              "value": 12
+            },
+            "HealthValue": {
+              "status": "VALUE",
+              "value": 7032
+            },
+            "HealthMax": {
+              "status": "VALUE",
+              "value": 7032
+            }
+          },
+          "views": [
+            {
+              "list": "ManList",
+              "size": 24,
+              "records": [
+                {
+                  "key": "wh2_dlc09_tmb_skeleton",
+                  "entries": 24
+                }
+              ]
+            },
+            {
+              "list": "MountList",
+              "size": 24,
+              "records": [
+                {
+                  "key": "wh2_dlc09_tmb_cav_skeletal_steed_chariot",
+                  "entries": 24
+                }
+              ]
+            },
+            {
+              "list": "EngineList",
+              "size": 12,
+              "records": [
+                {
+                  "key": "wh2_dlc09_tmb_vehicle_chariot",
+                  "entries": 12
+                }
+              ]
+            },
+            {
+              "list": "EntityList",
+              "size": 12,
+              "records": [
+                {
+                  "key": "wh2_dlc09_tmb_vehicle_chariot_horse_articulation",
+                  "entries": 12
+                }
+              ]
+            }
+          ],
+          "projectileKeys": [],
+          "projectileReferences": [],
+          "interpretation": {
+            "kind": "RUNTIME_MANUAL",
+            "reference": "Human request: WH3 runtime observations, 2026-10-01 (Asia/Seoul)",
+            "text": "Observed aggregate composition: body 1, articulation 1, skeleton 2, steed 2 per chariot ratio. No parent/grouping ID; individual parent mapping UNVERIFIED. Visible sword/whip crew sampled with the same skeleton key; separate identity not confirmed.",
+            "status": "HUMAN_INTERPRETATION_OF_CAPTURE"
+          },
+          "entityIndexContinuity": "UNVERIFIED",
+          "simultaneousSources": "INCONCLUSIVE",
+          "scopedCaptures": 1,
+          "completeCaptures": 1,
+          "heldCaptures": 6,
+          "problems": [
+            "SELECTED_PLAYER_UNIT_REQUIRED",
+            "NO_SELECTED_PLAYER_UNIT"
+          ],
+          "unitSizes": [
+            "MEDIUM"
+          ],
+          "confidenceStatuses": [
+            "OBSERVED_ONCE"
+          ],
+          "validationStatuses": [
+            "VALIDATED_SCOPED_OBSERVATION"
+          ],
+          "samplePoints": [
+            "CCO_TIME:235600"
+          ],
+          "references": [
+            "game:script_log_011026_2028.txt:125"
+          ]
+        }
+      ],
+      "precedence": null
+    },
+    {
+      "id": "ca_unit_wh2_dlc13_lzd_mon_dread_saurian_1",
+      "name": "Dread Saurian",
+      "factionId": "lizardmen",
+      "sourceMainKey": "wh2_dlc13_lzd_mon_dread_saurian_1",
+      "sourceLandKey": "wh2_dlc13_lzd_mon_dread_saurian_1",
+      "contextId": null,
+      "productionEligible": false,
+      "entityReviewStatus": "REVIEWED",
+      "entities": [
+        {
+          "pathId": "[\"wh2_dlc13_lzd_mon_dread_saurian_1\",\"MAN\",\"land_units_tables:6a7a08da18c6805a0849\",\"man_entity\",[[\"main_units_tables:9cf311ce6f3a785cfef2\",\"land_unit\",\"land_units_tables:6a7a08da18c6805a0849\"],[\"land_units_tables:6a7a08da18c6805a0849\",\"man_entity\",\"battle_entities_tables:f54d660e3a9694f6ef73\"]]]",
+          "role": "MAN",
+          "entityKey": "wh_main_infantry_rider",
+          "rawCount": 12,
+          "statuses": [
+            "NOT_OBSERVED",
+            "INCONCLUSIVE"
+          ]
+        },
+        {
+          "pathId": "[\"wh2_dlc13_lzd_mon_dread_saurian_1\",\"MOUNT\",\"mounts_tables:87a506b6c37c9d89d96e\",\"entity\",[[\"main_units_tables:9cf311ce6f3a785cfef2\",\"land_unit\",\"land_units_tables:6a7a08da18c6805a0849\"],[\"land_units_tables:6a7a08da18c6805a0849\",\"mount\",\"mounts_tables:87a506b6c37c9d89d96e\"],[\"mounts_tables:87a506b6c37c9d89d96e\",\"entity\",\"battle_entities_tables:da653a65d4478cd00936\"]]]",
+          "role": "MOUNT",
+          "entityKey": "wh2_dlc13_lzd_mon_dread_saurian_blood",
+          "rawCount": 1,
+          "statuses": [
+            "OBSERVED_RUNTIME"
+          ]
+        },
+        {
+          "pathId": "[\"wh2_dlc13_lzd_mon_dread_saurian_1\",\"PERSONALITY_ATTACHMENT\",\"battle_personalities_tables:2a4422fa78c8db3b9bb9\",\"battle_entity\",[[\"main_units_tables:9cf311ce6f3a785cfef2\",\"land_unit\",\"land_units_tables:6a7a08da18c6805a0849\"],[\"land_units_to_battle_personalities_junctions_tables:47d23c287fff632c9ea1\",\"land_unit\",\"land_units_tables:6a7a08da18c6805a0849\"],[\"land_units_to_battle_personalities_junctions_tables:47d23c287fff632c9ea1\",\"battle_personality\",\"battle_personalities_tables:2a4422fa78c8db3b9bb9\"],[\"battle_personalities_tables:2a4422fa78c8db3b9bb9\",\"battle_entity\",\"battle_entities_tables:0ca45194b51dde4990b6\"]]]",
+          "role": "PERSONALITY_ATTACHMENT",
+          "entityKey": "wh2_main_lzd_warbeast_rider_360_blood",
+          "rawCount": null,
+          "statuses": [
+            "OBSERVED_RUNTIME"
+          ]
+        },
+        {
+          "pathId": "[\"wh2_dlc13_lzd_mon_dread_saurian_1\",\"PERSONALITY_ATTACHMENT\",\"battle_personalities_tables:2c17cad6754188e9b77a\",\"battle_entity\",[[\"main_units_tables:9cf311ce6f3a785cfef2\",\"land_unit\",\"land_units_tables:6a7a08da18c6805a0849\"],[\"land_units_to_battle_personalities_junctions_tables:8a4276a912627b4e06c4\",\"land_unit\",\"land_units_tables:6a7a08da18c6805a0849\"],[\"land_units_to_battle_personalities_junctions_tables:8a4276a912627b4e06c4\",\"battle_personality\",\"battle_personalities_tables:2c17cad6754188e9b77a\"],[\"battle_personalities_tables:2c17cad6754188e9b77a\",\"battle_entity\",\"battle_entities_tables:0ca45194b51dde4990b6\"]]]",
+          "role": "PERSONALITY_ATTACHMENT",
+          "entityKey": "wh2_main_lzd_warbeast_rider_360_blood",
+          "rawCount": null,
+          "statuses": [
+            "OBSERVED_RUNTIME"
+          ]
+        },
+        {
+          "pathId": "[\"wh2_dlc13_lzd_mon_dread_saurian_1\",\"PERSONALITY_ATTACHMENT\",\"battle_personalities_tables:355e80e097fc8fa2192d\",\"battle_entity\",[[\"main_units_tables:9cf311ce6f3a785cfef2\",\"land_unit\",\"land_units_tables:6a7a08da18c6805a0849\"],[\"land_units_to_battle_personalities_junctions_tables:d1e6a87d1a2915d2d3fc\",\"land_unit\",\"land_units_tables:6a7a08da18c6805a0849\"],[\"land_units_to_battle_personalities_junctions_tables:d1e6a87d1a2915d2d3fc\",\"battle_personality\",\"battle_personalities_tables:355e80e097fc8fa2192d\"],[\"battle_personalities_tables:355e80e097fc8fa2192d\",\"battle_entity\",\"battle_entities_tables:0ca45194b51dde4990b6\"]]]",
+          "role": "PERSONALITY_ATTACHMENT",
+          "entityKey": "wh2_main_lzd_warbeast_rider_360_blood",
+          "rawCount": null,
+          "statuses": [
+            "OBSERVED_RUNTIME"
+          ]
+        },
+        {
+          "pathId": "[\"wh2_dlc13_lzd_mon_dread_saurian_1\",\"PERSONALITY_ATTACHMENT\",\"battle_personalities_tables:3e237e1ad66a30dfff97\",\"battle_entity\",[[\"main_units_tables:9cf311ce6f3a785cfef2\",\"land_unit\",\"land_units_tables:6a7a08da18c6805a0849\"],[\"land_units_to_battle_personalities_junctions_tables:1c0102a37fb5e638e07b\",\"land_unit\",\"land_units_tables:6a7a08da18c6805a0849\"],[\"land_units_to_battle_personalities_junctions_tables:1c0102a37fb5e638e07b\",\"battle_personality\",\"battle_personalities_tables:3e237e1ad66a30dfff97\"],[\"battle_personalities_tables:3e237e1ad66a30dfff97\",\"battle_entity\",\"battle_entities_tables:69b7664021b2a6d07b59\"]]]",
+          "role": "PERSONALITY_ATTACHMENT",
+          "entityKey": "wh2_main_lzd_inf_skink_stegadon_rider_150_blood_dismembers",
+          "rawCount": null,
+          "statuses": [
+            "OBSERVED_RUNTIME"
+          ]
+        },
+        {
+          "pathId": "[\"wh2_dlc13_lzd_mon_dread_saurian_1\",\"PERSONALITY_ATTACHMENT\",\"battle_personalities_tables:40e6c494719269dd821a\",\"battle_entity\",[[\"main_units_tables:9cf311ce6f3a785cfef2\",\"land_unit\",\"land_units_tables:6a7a08da18c6805a0849\"],[\"land_units_to_battle_personalities_junctions_tables:7da9cdaa3926b1f437e1\",\"land_unit\",\"land_units_tables:6a7a08da18c6805a0849\"],[\"land_units_to_battle_personalities_junctions_tables:7da9cdaa3926b1f437e1\",\"battle_personality\",\"battle_personalities_tables:40e6c494719269dd821a\"],[\"battle_personalities_tables:40e6c494719269dd821a\",\"battle_entity\",\"battle_entities_tables:0ca45194b51dde4990b6\"]]]",
+          "role": "PERSONALITY_ATTACHMENT",
+          "entityKey": "wh2_main_lzd_warbeast_rider_360_blood",
+          "rawCount": null,
+          "statuses": [
+            "OBSERVED_RUNTIME"
+          ]
+        },
+        {
+          "pathId": "[\"wh2_dlc13_lzd_mon_dread_saurian_1\",\"PERSONALITY_ATTACHMENT\",\"battle_personalities_tables:65c363d41ec117cd4d43\",\"battle_entity\",[[\"main_units_tables:9cf311ce6f3a785cfef2\",\"land_unit\",\"land_units_tables:6a7a08da18c6805a0849\"],[\"land_units_to_battle_personalities_junctions_tables:6c6fd38471ff3174b227\",\"land_unit\",\"land_units_tables:6a7a08da18c6805a0849\"],[\"land_units_to_battle_personalities_junctions_tables:6c6fd38471ff3174b227\",\"battle_personality\",\"battle_personalities_tables:65c363d41ec117cd4d43\"],[\"battle_personalities_tables:65c363d41ec117cd4d43\",\"battle_entity\",\"battle_entities_tables:0ca45194b51dde4990b6\"]]]",
+          "role": "PERSONALITY_ATTACHMENT",
+          "entityKey": "wh2_main_lzd_warbeast_rider_360_blood",
+          "rawCount": null,
+          "statuses": [
+            "OBSERVED_RUNTIME"
+          ]
+        },
+        {
+          "pathId": "[\"wh2_dlc13_lzd_mon_dread_saurian_1\",\"PERSONALITY_ATTACHMENT\",\"battle_personalities_tables:6b5f7d4c6904bb88fb9b\",\"battle_entity\",[[\"main_units_tables:9cf311ce6f3a785cfef2\",\"land_unit\",\"land_units_tables:6a7a08da18c6805a0849\"],[\"land_units_to_battle_personalities_junctions_tables:5d6c050b3759bbcc30b4\",\"land_unit\",\"land_units_tables:6a7a08da18c6805a0849\"],[\"land_units_to_battle_personalities_junctions_tables:5d6c050b3759bbcc30b4\",\"battle_personality\",\"battle_personalities_tables:6b5f7d4c6904bb88fb9b\"],[\"battle_personalities_tables:6b5f7d4c6904bb88fb9b\",\"battle_entity\",\"battle_entities_tables:0ca45194b51dde4990b6\"]]]",
+          "role": "PERSONALITY_ATTACHMENT",
+          "entityKey": "wh2_main_lzd_warbeast_rider_360_blood",
+          "rawCount": null,
+          "statuses": [
+            "OBSERVED_RUNTIME"
+          ]
+        },
+        {
+          "pathId": "[\"wh2_dlc13_lzd_mon_dread_saurian_1\",\"PERSONALITY_ATTACHMENT\",\"battle_personalities_tables:c1bed3c493a31165ec68\",\"battle_entity\",[[\"main_units_tables:9cf311ce6f3a785cfef2\",\"land_unit\",\"land_units_tables:6a7a08da18c6805a0849\"],[\"land_units_to_battle_personalities_junctions_tables:1025f9214f6ed5578769\",\"land_unit\",\"land_units_tables:6a7a08da18c6805a0849\"],[\"land_units_to_battle_personalities_junctions_tables:1025f9214f6ed5578769\",\"battle_personality\",\"battle_personalities_tables:c1bed3c493a31165ec68\"],[\"battle_personalities_tables:c1bed3c493a31165ec68\",\"battle_entity\",\"battle_entities_tables:69b7664021b2a6d07b59\"]]]",
+          "role": "PERSONALITY_ATTACHMENT",
+          "entityKey": "wh2_main_lzd_inf_skink_stegadon_rider_150_blood_dismembers",
+          "rawCount": null,
+          "statuses": [
+            "OBSERVED_RUNTIME"
+          ]
+        },
+        {
+          "pathId": "[\"wh2_dlc13_lzd_mon_dread_saurian_1\",\"PERSONALITY_ATTACHMENT\",\"battle_personalities_tables:cb07dc7879252fef97bc\",\"battle_entity\",[[\"main_units_tables:9cf311ce6f3a785cfef2\",\"land_unit\",\"land_units_tables:6a7a08da18c6805a0849\"],[\"land_units_to_battle_personalities_junctions_tables:54c085252e66199d22e6\",\"land_unit\",\"land_units_tables:6a7a08da18c6805a0849\"],[\"land_units_to_battle_personalities_junctions_tables:54c085252e66199d22e6\",\"battle_personality\",\"battle_personalities_tables:cb07dc7879252fef97bc\"],[\"battle_personalities_tables:cb07dc7879252fef97bc\",\"battle_entity\",\"battle_entities_tables:0ca45194b51dde4990b6\"]]]",
+          "role": "PERSONALITY_ATTACHMENT",
+          "entityKey": "wh2_main_lzd_warbeast_rider_360_blood",
+          "rawCount": null,
+          "statuses": [
+            "OBSERVED_RUNTIME"
+          ]
+        },
+        {
+          "pathId": "[\"wh2_dlc13_lzd_mon_dread_saurian_1\",\"PERSONALITY_ATTACHMENT\",\"battle_personalities_tables:d34c4893a362a6455d55\",\"battle_entity\",[[\"main_units_tables:9cf311ce6f3a785cfef2\",\"land_unit\",\"land_units_tables:6a7a08da18c6805a0849\"],[\"land_units_to_battle_personalities_junctions_tables:703d2cddfaa39d19eac9\",\"land_unit\",\"land_units_tables:6a7a08da18c6805a0849\"],[\"land_units_to_battle_personalities_junctions_tables:703d2cddfaa39d19eac9\",\"battle_personality\",\"battle_personalities_tables:d34c4893a362a6455d55\"],[\"battle_personalities_tables:d34c4893a362a6455d55\",\"battle_entity\",\"battle_entities_tables:0ca45194b51dde4990b6\"]]]",
+          "role": "PERSONALITY_ATTACHMENT",
+          "entityKey": "wh2_main_lzd_warbeast_rider_360_blood",
+          "rawCount": null,
+          "statuses": [
+            "OBSERVED_RUNTIME"
+          ]
+        },
+        {
+          "pathId": "[\"wh2_dlc13_lzd_mon_dread_saurian_1\",\"PERSONALITY_ATTACHMENT\",\"battle_personalities_tables:d6c79fd2decaf2adddc9\",\"battle_entity\",[[\"main_units_tables:9cf311ce6f3a785cfef2\",\"land_unit\",\"land_units_tables:6a7a08da18c6805a0849\"],[\"land_units_to_battle_personalities_junctions_tables:6380c736ef23b895a8aa\",\"land_unit\",\"land_units_tables:6a7a08da18c6805a0849\"],[\"land_units_to_battle_personalities_junctions_tables:6380c736ef23b895a8aa\",\"battle_personality\",\"battle_personalities_tables:d6c79fd2decaf2adddc9\"],[\"battle_personalities_tables:d6c79fd2decaf2adddc9\",\"battle_entity\",\"battle_entities_tables:0ca45194b51dde4990b6\"]]]",
+          "role": "PERSONALITY_ATTACHMENT",
+          "entityKey": "wh2_main_lzd_warbeast_rider_360_blood",
+          "rawCount": null,
+          "statuses": [
+            "OBSERVED_RUNTIME"
+          ]
+        },
+        {
+          "pathId": "[\"wh2_dlc13_lzd_mon_dread_saurian_1\",\"PERSONALITY_ATTACHMENT\",\"battle_personalities_tables:e76d5d267a3bd44b988c\",\"battle_entity\",[[\"main_units_tables:9cf311ce6f3a785cfef2\",\"land_unit\",\"land_units_tables:6a7a08da18c6805a0849\"],[\"land_units_to_battle_personalities_junctions_tables:d62bdb88a2828c16677f\",\"land_unit\",\"land_units_tables:6a7a08da18c6805a0849\"],[\"land_units_to_battle_personalities_junctions_tables:d62bdb88a2828c16677f\",\"battle_personality\",\"battle_personalities_tables:e76d5d267a3bd44b988c\"],[\"battle_personalities_tables:e76d5d267a3bd44b988c\",\"battle_entity\",\"battle_entities_tables:0ca45194b51dde4990b6\"]]]",
+          "role": "PERSONALITY_ATTACHMENT",
+          "entityKey": "wh2_main_lzd_warbeast_rider_360_blood",
+          "rawCount": null,
+          "statuses": [
+            "OBSERVED_RUNTIME"
+          ]
+        }
+      ],
+      "missiles": [
+        {
+          "pathId": "[\"wh2_dlc13_lzd_mon_dread_saurian_1\",\"RIDER\",\"battle_entity_stats_tables:7023b7e25ecf6db0e735\",[[\"main_units_tables:9cf311ce6f3a785cfef2\",\"land_unit\",\"land_units_tables:6a7a08da18c6805a0849\"],[\"land_units_to_battle_personalities_junctions_tables:1025f9214f6ed5578769\",\"land_unit\",\"land_units_tables:6a7a08da18c6805a0849\"],[\"land_units_to_battle_personalities_junctions_tables:1025f9214f6ed5578769\",\"battle_personality\",\"battle_personalities_tables:c1bed3c493a31165ec68\"],[\"battle_personalities_tables:c1bed3c493a31165ec68\",\"battle_entity_stats\",\"battle_entity_stats_tables:7023b7e25ecf6db0e735\"],[\"battle_entity_stats_tables:7023b7e25ecf6db0e735\",\"primary_missile_weapon\",\"missile_weapons_tables:55a076af46e58c85fe26\"]]]",
+          "role": "RIDER",
+          "weaponKey": "wh2_main_lzd_mon_stegadon_blowpipe",
+          "projectileKeys": [
+            "wh2_main_lzd_mon_stegadon_giant_blowpipe"
+          ],
+          "placement": "STATIC_COMPONENT",
+          "activationStatuses": [
+            "INCONCLUSIVE"
+          ]
+        },
+        {
+          "pathId": "[\"wh2_dlc13_lzd_mon_dread_saurian_1\",\"RIDER\",\"battle_entity_stats_tables:7023b7e25ecf6db0e735\",[[\"main_units_tables:9cf311ce6f3a785cfef2\",\"land_unit\",\"land_units_tables:6a7a08da18c6805a0849\"],[\"land_units_to_battle_personalities_junctions_tables:1c0102a37fb5e638e07b\",\"land_unit\",\"land_units_tables:6a7a08da18c6805a0849\"],[\"land_units_to_battle_personalities_junctions_tables:1c0102a37fb5e638e07b\",\"battle_personality\",\"battle_personalities_tables:3e237e1ad66a30dfff97\"],[\"battle_personalities_tables:3e237e1ad66a30dfff97\",\"battle_entity_stats\",\"battle_entity_stats_tables:7023b7e25ecf6db0e735\"],[\"battle_entity_stats_tables:7023b7e25ecf6db0e735\",\"primary_missile_weapon\",\"missile_weapons_tables:55a076af46e58c85fe26\"]]]",
+          "role": "RIDER",
+          "weaponKey": "wh2_main_lzd_mon_stegadon_blowpipe",
+          "projectileKeys": [
+            "wh2_main_lzd_mon_stegadon_giant_blowpipe"
+          ],
+          "placement": "STATIC_COMPONENT",
+          "activationStatuses": [
+            "INCONCLUSIVE"
+          ]
+        },
+        {
+          "pathId": "[\"wh2_dlc13_lzd_mon_dread_saurian_1\",\"RIDER\",\"battle_entity_stats_tables:da732c090a9decd06c11\",[[\"main_units_tables:9cf311ce6f3a785cfef2\",\"land_unit\",\"land_units_tables:6a7a08da18c6805a0849\"],[\"land_units_to_battle_personalities_junctions_tables:47d23c287fff632c9ea1\",\"land_unit\",\"land_units_tables:6a7a08da18c6805a0849\"],[\"land_units_to_battle_personalities_junctions_tables:47d23c287fff632c9ea1\",\"battle_personality\",\"battle_personalities_tables:2a4422fa78c8db3b9bb9\"],[\"battle_personalities_tables:2a4422fa78c8db3b9bb9\",\"battle_entity_stats\",\"battle_entity_stats_tables:da732c090a9decd06c11\"],[\"battle_entity_stats_tables:da732c090a9decd06c11\",\"primary_missile_weapon\",\"missile_weapons_tables:4dc0dff871101f853481\"]]]",
+          "role": "RIDER",
+          "weaponKey": "wh2_main_lzd_javelin_rider",
+          "projectileKeys": [
+            "wh2_main_lzd_javelin_mounted"
+          ],
+          "placement": "STATIC_COMPONENT",
+          "activationStatuses": [
+            "INCONCLUSIVE"
+          ]
+        },
+        {
+          "pathId": "[\"wh2_dlc13_lzd_mon_dread_saurian_1\",\"RIDER\",\"battle_entity_stats_tables:da732c090a9decd06c11\",[[\"main_units_tables:9cf311ce6f3a785cfef2\",\"land_unit\",\"land_units_tables:6a7a08da18c6805a0849\"],[\"land_units_to_battle_personalities_junctions_tables:54c085252e66199d22e6\",\"land_unit\",\"land_units_tables:6a7a08da18c6805a0849\"],[\"land_units_to_battle_personalities_junctions_tables:54c085252e66199d22e6\",\"battle_personality\",\"battle_personalities_tables:cb07dc7879252fef97bc\"],[\"battle_personalities_tables:cb07dc7879252fef97bc\",\"battle_entity_stats\",\"battle_entity_stats_tables:da732c090a9decd06c11\"],[\"battle_entity_stats_tables:da732c090a9decd06c11\",\"primary_missile_weapon\",\"missile_weapons_tables:4dc0dff871101f853481\"]]]",
+          "role": "RIDER",
+          "weaponKey": "wh2_main_lzd_javelin_rider",
+          "projectileKeys": [
+            "wh2_main_lzd_javelin_mounted"
+          ],
+          "placement": "STATIC_COMPONENT",
+          "activationStatuses": [
+            "INCONCLUSIVE"
+          ]
+        },
+        {
+          "pathId": "[\"wh2_dlc13_lzd_mon_dread_saurian_1\",\"RIDER\",\"battle_entity_stats_tables:da732c090a9decd06c11\",[[\"main_units_tables:9cf311ce6f3a785cfef2\",\"land_unit\",\"land_units_tables:6a7a08da18c6805a0849\"],[\"land_units_to_battle_personalities_junctions_tables:5d6c050b3759bbcc30b4\",\"land_unit\",\"land_units_tables:6a7a08da18c6805a0849\"],[\"land_units_to_battle_personalities_junctions_tables:5d6c050b3759bbcc30b4\",\"battle_personality\",\"battle_personalities_tables:6b5f7d4c6904bb88fb9b\"],[\"battle_personalities_tables:6b5f7d4c6904bb88fb9b\",\"battle_entity_stats\",\"battle_entity_stats_tables:da732c090a9decd06c11\"],[\"battle_entity_stats_tables:da732c090a9decd06c11\",\"primary_missile_weapon\",\"missile_weapons_tables:4dc0dff871101f853481\"]]]",
+          "role": "RIDER",
+          "weaponKey": "wh2_main_lzd_javelin_rider",
+          "projectileKeys": [
+            "wh2_main_lzd_javelin_mounted"
+          ],
+          "placement": "STATIC_COMPONENT",
+          "activationStatuses": [
+            "INCONCLUSIVE"
+          ]
+        },
+        {
+          "pathId": "[\"wh2_dlc13_lzd_mon_dread_saurian_1\",\"RIDER\",\"battle_entity_stats_tables:da732c090a9decd06c11\",[[\"main_units_tables:9cf311ce6f3a785cfef2\",\"land_unit\",\"land_units_tables:6a7a08da18c6805a0849\"],[\"land_units_to_battle_personalities_junctions_tables:6380c736ef23b895a8aa\",\"land_unit\",\"land_units_tables:6a7a08da18c6805a0849\"],[\"land_units_to_battle_personalities_junctions_tables:6380c736ef23b895a8aa\",\"battle_personality\",\"battle_personalities_tables:d6c79fd2decaf2adddc9\"],[\"battle_personalities_tables:d6c79fd2decaf2adddc9\",\"battle_entity_stats\",\"battle_entity_stats_tables:da732c090a9decd06c11\"],[\"battle_entity_stats_tables:da732c090a9decd06c11\",\"primary_missile_weapon\",\"missile_weapons_tables:4dc0dff871101f853481\"]]]",
+          "role": "RIDER",
+          "weaponKey": "wh2_main_lzd_javelin_rider",
+          "projectileKeys": [
+            "wh2_main_lzd_javelin_mounted"
+          ],
+          "placement": "STATIC_COMPONENT",
+          "activationStatuses": [
+            "INCONCLUSIVE"
+          ]
+        },
+        {
+          "pathId": "[\"wh2_dlc13_lzd_mon_dread_saurian_1\",\"RIDER\",\"battle_entity_stats_tables:da732c090a9decd06c11\",[[\"main_units_tables:9cf311ce6f3a785cfef2\",\"land_unit\",\"land_units_tables:6a7a08da18c6805a0849\"],[\"land_units_to_battle_personalities_junctions_tables:6c6fd38471ff3174b227\",\"land_unit\",\"land_units_tables:6a7a08da18c6805a0849\"],[\"land_units_to_battle_personalities_junctions_tables:6c6fd38471ff3174b227\",\"battle_personality\",\"battle_personalities_tables:65c363d41ec117cd4d43\"],[\"battle_personalities_tables:65c363d41ec117cd4d43\",\"battle_entity_stats\",\"battle_entity_stats_tables:da732c090a9decd06c11\"],[\"battle_entity_stats_tables:da732c090a9decd06c11\",\"primary_missile_weapon\",\"missile_weapons_tables:4dc0dff871101f853481\"]]]",
+          "role": "RIDER",
+          "weaponKey": "wh2_main_lzd_javelin_rider",
+          "projectileKeys": [
+            "wh2_main_lzd_javelin_mounted"
+          ],
+          "placement": "STATIC_COMPONENT",
+          "activationStatuses": [
+            "INCONCLUSIVE"
+          ]
+        },
+        {
+          "pathId": "[\"wh2_dlc13_lzd_mon_dread_saurian_1\",\"RIDER\",\"battle_entity_stats_tables:da732c090a9decd06c11\",[[\"main_units_tables:9cf311ce6f3a785cfef2\",\"land_unit\",\"land_units_tables:6a7a08da18c6805a0849\"],[\"land_units_to_battle_personalities_junctions_tables:703d2cddfaa39d19eac9\",\"land_unit\",\"land_units_tables:6a7a08da18c6805a0849\"],[\"land_units_to_battle_personalities_junctions_tables:703d2cddfaa39d19eac9\",\"battle_personality\",\"battle_personalities_tables:d34c4893a362a6455d55\"],[\"battle_personalities_tables:d34c4893a362a6455d55\",\"battle_entity_stats\",\"battle_entity_stats_tables:da732c090a9decd06c11\"],[\"battle_entity_stats_tables:da732c090a9decd06c11\",\"primary_missile_weapon\",\"missile_weapons_tables:4dc0dff871101f853481\"]]]",
+          "role": "RIDER",
+          "weaponKey": "wh2_main_lzd_javelin_rider",
+          "projectileKeys": [
+            "wh2_main_lzd_javelin_mounted"
+          ],
+          "placement": "STATIC_COMPONENT",
+          "activationStatuses": [
+            "INCONCLUSIVE"
+          ]
+        },
+        {
+          "pathId": "[\"wh2_dlc13_lzd_mon_dread_saurian_1\",\"RIDER\",\"battle_entity_stats_tables:da732c090a9decd06c11\",[[\"main_units_tables:9cf311ce6f3a785cfef2\",\"land_unit\",\"land_units_tables:6a7a08da18c6805a0849\"],[\"land_units_to_battle_personalities_junctions_tables:7da9cdaa3926b1f437e1\",\"land_unit\",\"land_units_tables:6a7a08da18c6805a0849\"],[\"land_units_to_battle_personalities_junctions_tables:7da9cdaa3926b1f437e1\",\"battle_personality\",\"battle_personalities_tables:40e6c494719269dd821a\"],[\"battle_personalities_tables:40e6c494719269dd821a\",\"battle_entity_stats\",\"battle_entity_stats_tables:da732c090a9decd06c11\"],[\"battle_entity_stats_tables:da732c090a9decd06c11\",\"primary_missile_weapon\",\"missile_weapons_tables:4dc0dff871101f853481\"]]]",
+          "role": "RIDER",
+          "weaponKey": "wh2_main_lzd_javelin_rider",
+          "projectileKeys": [
+            "wh2_main_lzd_javelin_mounted"
+          ],
+          "placement": "STATIC_COMPONENT",
+          "activationStatuses": [
+            "INCONCLUSIVE"
+          ]
+        },
+        {
+          "pathId": "[\"wh2_dlc13_lzd_mon_dread_saurian_1\",\"RIDER\",\"battle_entity_stats_tables:da732c090a9decd06c11\",[[\"main_units_tables:9cf311ce6f3a785cfef2\",\"land_unit\",\"land_units_tables:6a7a08da18c6805a0849\"],[\"land_units_to_battle_personalities_junctions_tables:8a4276a912627b4e06c4\",\"land_unit\",\"land_units_tables:6a7a08da18c6805a0849\"],[\"land_units_to_battle_personalities_junctions_tables:8a4276a912627b4e06c4\",\"battle_personality\",\"battle_personalities_tables:2c17cad6754188e9b77a\"],[\"battle_personalities_tables:2c17cad6754188e9b77a\",\"battle_entity_stats\",\"battle_entity_stats_tables:da732c090a9decd06c11\"],[\"battle_entity_stats_tables:da732c090a9decd06c11\",\"primary_missile_weapon\",\"missile_weapons_tables:4dc0dff871101f853481\"]]]",
+          "role": "RIDER",
+          "weaponKey": "wh2_main_lzd_javelin_rider",
+          "projectileKeys": [
+            "wh2_main_lzd_javelin_mounted"
+          ],
+          "placement": "STATIC_COMPONENT",
+          "activationStatuses": [
+            "INCONCLUSIVE"
+          ]
+        },
+        {
+          "pathId": "[\"wh2_dlc13_lzd_mon_dread_saurian_1\",\"RIDER\",\"battle_entity_stats_tables:da732c090a9decd06c11\",[[\"main_units_tables:9cf311ce6f3a785cfef2\",\"land_unit\",\"land_units_tables:6a7a08da18c6805a0849\"],[\"land_units_to_battle_personalities_junctions_tables:d1e6a87d1a2915d2d3fc\",\"land_unit\",\"land_units_tables:6a7a08da18c6805a0849\"],[\"land_units_to_battle_personalities_junctions_tables:d1e6a87d1a2915d2d3fc\",\"battle_personality\",\"battle_personalities_tables:355e80e097fc8fa2192d\"],[\"battle_personalities_tables:355e80e097fc8fa2192d\",\"battle_entity_stats\",\"battle_entity_stats_tables:da732c090a9decd06c11\"],[\"battle_entity_stats_tables:da732c090a9decd06c11\",\"primary_missile_weapon\",\"missile_weapons_tables:4dc0dff871101f853481\"]]]",
+          "role": "RIDER",
+          "weaponKey": "wh2_main_lzd_javelin_rider",
+          "projectileKeys": [
+            "wh2_main_lzd_javelin_mounted"
+          ],
+          "placement": "STATIC_COMPONENT",
+          "activationStatuses": [
+            "INCONCLUSIVE"
+          ]
+        },
+        {
+          "pathId": "[\"wh2_dlc13_lzd_mon_dread_saurian_1\",\"RIDER\",\"battle_entity_stats_tables:da732c090a9decd06c11\",[[\"main_units_tables:9cf311ce6f3a785cfef2\",\"land_unit\",\"land_units_tables:6a7a08da18c6805a0849\"],[\"land_units_to_battle_personalities_junctions_tables:d62bdb88a2828c16677f\",\"land_unit\",\"land_units_tables:6a7a08da18c6805a0849\"],[\"land_units_to_battle_personalities_junctions_tables:d62bdb88a2828c16677f\",\"battle_personality\",\"battle_personalities_tables:e76d5d267a3bd44b988c\"],[\"battle_personalities_tables:e76d5d267a3bd44b988c\",\"battle_entity_stats\",\"battle_entity_stats_tables:da732c090a9decd06c11\"],[\"battle_entity_stats_tables:da732c090a9decd06c11\",\"primary_missile_weapon\",\"missile_weapons_tables:4dc0dff871101f853481\"]]]",
+          "role": "RIDER",
+          "weaponKey": "wh2_main_lzd_javelin_rider",
+          "projectileKeys": [
+            "wh2_main_lzd_javelin_mounted"
+          ],
+          "placement": "STATIC_COMPONENT",
+          "activationStatuses": [
+            "INCONCLUSIVE"
+          ]
+        }
+      ],
+      "cases": [
+        {
+          "id": "dread-saurian",
+          "modifiers": null,
+          "fields": {
+            "NumEntities": {
+              "status": "VALUE",
+              "value": 1
+            },
+            "HealthValue": {
+              "status": "VALUE",
+              "value": 15088
+            },
+            "HealthMax": {
+              "status": "VALUE",
+              "value": 15088
+            }
+          },
+          "views": [
+            {
+              "list": "ManList",
+              "size": 12,
+              "records": [
+                {
+                  "key": "wh2_main_lzd_warbeast_rider_360_blood",
+                  "entries": 10
+                },
+                {
+                  "key": "wh2_main_lzd_inf_skink_stegadon_rider_150_blood_dismembers",
+                  "entries": 2
+                }
+              ]
+            },
+            {
+              "list": "MountList",
+              "size": 1,
+              "records": [
+                {
+                  "key": "wh2_dlc13_lzd_mon_dread_saurian_blood",
+                  "entries": 1
+                }
+              ]
+            },
+            {
+              "list": "EngineList",
+              "size": 0,
+              "records": []
+            },
+            {
+              "list": "EntityList",
+              "size": 1,
+              "records": [
+                {
+                  "key": "wh2_dlc13_lzd_mon_dread_saurian_blood",
+                  "entries": 1
+                }
+              ]
+            }
+          ],
+          "projectileKeys": [],
+          "projectileReferences": [],
+          "interpretation": {
+            "kind": "RUNTIME_MANUAL",
+            "reference": "Human request: WH3 runtime observations, 2026-10-01 (Asia/Seoul)",
+            "text": "Human confirmed the MountList/EntityList body is the same physical body in two context views. Two rider record keys do not establish a special skink role. Twelve Man entries and twelve missile candidates do not establish pairing. entityIndexContinuity UNVERIFIED; simultaneousSources INCONCLUSIVE.",
+            "status": "HUMAN_INTERPRETATION_OF_CAPTURE"
+          },
+          "entityIndexContinuity": "UNVERIFIED",
+          "simultaneousSources": "INCONCLUSIVE",
+          "scopedCaptures": 11,
+          "completeCaptures": 9,
+          "heldCaptures": 6,
+          "problems": [
+            "SELECTED_PLAYER_UNIT_REQUIRED",
+            "NO_SELECTED_PLAYER_UNIT",
+            "TRACE_WINDOW_INTERRUPTED",
+            "TRACE_SAMPLE_COVERAGE_INCOMPLETE"
+          ],
+          "unitSizes": [
+            "MEDIUM"
+          ],
+          "confidenceStatuses": [
+            "OBSERVED_ONCE"
+          ],
+          "validationStatuses": [
+            "VALIDATED_SCOPED_OBSERVATION"
+          ],
+          "samplePoints": [
+            "CCO_TRACE_WINDOW:41200:60400",
+            "CCO_TIME:10700",
+            "CCO_TIME:24100",
+            "CCO_CURSOR",
+            "CCO_TIME:33800",
+            "CCO_TIME:34200",
+            "CCO_TIME:34500",
+            "CCO_TIME:35400",
+            "CCO_TRACE_WINDOW:165400:186100",
+            "CCO_TRACE_WINDOW:249000:269600"
+          ],
+          "references": [
+            "desktop:script_log_011026_2118.txt:113",
+            "game:script_log_011026_2110.txt:83",
+            "game:script_log_011026_2110.txt:106",
+            "game:script_log_011026_2110.txt:139",
+            "game:script_log_011026_2110.txt:162",
+            "game:script_log_011026_2110.txt:185",
+            "game:script_log_011026_2110.txt:208",
+            "game:script_log_011026_2110.txt:278",
+            "game:script_log_011026_2110.txt:500",
+            "game:script_log_011026_2110.txt:1186",
+            "game:script_log_011026_2110.txt:2066"
+          ]
+        }
+      ],
+      "precedence": null
+    },
+    {
+      "id": "ca_unit_wh2_dlc11_cst_mon_necrofex_colossus_0",
+      "name": "Necrofex Colossus",
+      "factionId": "vampire_coast",
+      "sourceMainKey": "wh2_dlc11_cst_mon_necrofex_colossus_0",
+      "sourceLandKey": "wh2_dlc11_cst_mon_necrofex_colossus_0",
+      "contextId": null,
+      "productionEligible": false,
+      "entityReviewStatus": "REVIEWED",
+      "entities": [
+        {
+          "pathId": "[\"wh2_dlc11_cst_mon_necrofex_colossus_0\",\"MAN\",\"land_units_tables:975fc96372ea2e86cc78\",\"man_entity\",[[\"main_units_tables:7cc7bb4b477a752127d6\",\"land_unit\",\"land_units_tables:975fc96372ea2e86cc78\"],[\"land_units_tables:975fc96372ea2e86cc78\",\"man_entity\",\"battle_entities_tables:6ca9821dba3ee0c2cef2\"]]]",
+          "role": "MAN",
+          "entityKey": "wh2_dlc11_cst_mon_necrofex_colossus",
+          "rawCount": 5,
+          "statuses": [
+            "OBSERVED_RUNTIME"
+          ]
+        },
+        {
+          "pathId": "[\"wh2_dlc11_cst_mon_necrofex_colossus_0\",\"MOUNT\",\"mounts_tables:dbdca1edfd220a461419\",\"entity\",[[\"main_units_tables:7cc7bb4b477a752127d6\",\"land_unit\",\"land_units_tables:975fc96372ea2e86cc78\"],[\"land_units_tables:975fc96372ea2e86cc78\",\"mount\",\"mounts_tables:dbdca1edfd220a461419\"],[\"mounts_tables:dbdca1edfd220a461419\",\"entity\",\"battle_entities_tables:6ca9821dba3ee0c2cef2\"]]]",
+          "role": "MOUNT",
+          "entityKey": "wh2_dlc11_cst_mon_necrofex_colossus",
+          "rawCount": 1,
+          "statuses": [
+            "OBSERVED_RUNTIME"
+          ]
+        },
+        {
+          "pathId": "[\"wh2_dlc11_cst_mon_necrofex_colossus_0\",\"PERSONALITY_ATTACHMENT\",\"battle_personalities_tables:27fa2c180ce2feab2b5e\",\"battle_entity\",[[\"main_units_tables:7cc7bb4b477a752127d6\",\"land_unit\",\"land_units_tables:975fc96372ea2e86cc78\"],[\"land_units_to_battle_personalities_junctions_tables:b80cc8d44858f5ae9839\",\"land_unit\",\"land_units_tables:975fc96372ea2e86cc78\"],[\"land_units_to_battle_personalities_junctions_tables:b80cc8d44858f5ae9839\",\"battle_personality\",\"battle_personalities_tables:27fa2c180ce2feab2b5e\"],[\"battle_personalities_tables:27fa2c180ce2feab2b5e\",\"battle_entity\",\"battle_entities_tables:bac50621e2bd8d444f4c\"]]]",
+          "role": "PERSONALITY_ATTACHMENT",
+          "entityKey": "wh2_dlc11_infantry_zombie_blood",
+          "rawCount": null,
+          "statuses": [
+            "OBSERVED_RUNTIME"
+          ]
+        },
+        {
+          "pathId": "[\"wh2_dlc11_cst_mon_necrofex_colossus_0\",\"PERSONALITY_ATTACHMENT\",\"battle_personalities_tables:51ecc02a86cbce3abc49\",\"battle_entity\",[[\"main_units_tables:7cc7bb4b477a752127d6\",\"land_unit\",\"land_units_tables:975fc96372ea2e86cc78\"],[\"land_units_to_battle_personalities_junctions_tables:5ea93cc6f626d2015ae5\",\"land_unit\",\"land_units_tables:975fc96372ea2e86cc78\"],[\"land_units_to_battle_personalities_junctions_tables:5ea93cc6f626d2015ae5\",\"battle_personality\",\"battle_personalities_tables:51ecc02a86cbce3abc49\"],[\"battle_personalities_tables:51ecc02a86cbce3abc49\",\"battle_entity\",\"battle_entities_tables:bac50621e2bd8d444f4c\"]]]",
+          "role": "PERSONALITY_ATTACHMENT",
+          "entityKey": "wh2_dlc11_infantry_zombie_blood",
+          "rawCount": null,
+          "statuses": [
+            "OBSERVED_RUNTIME"
+          ]
+        },
+        {
+          "pathId": "[\"wh2_dlc11_cst_mon_necrofex_colossus_0\",\"PERSONALITY_ATTACHMENT\",\"battle_personalities_tables:5cfb2202732380107058\",\"battle_entity\",[[\"main_units_tables:7cc7bb4b477a752127d6\",\"land_unit\",\"land_units_tables:975fc96372ea2e86cc78\"],[\"land_units_to_battle_personalities_junctions_tables:2232e10db94a3ff3aa94\",\"land_unit\",\"land_units_tables:975fc96372ea2e86cc78\"],[\"land_units_to_battle_personalities_junctions_tables:2232e10db94a3ff3aa94\",\"battle_personality\",\"battle_personalities_tables:5cfb2202732380107058\"],[\"battle_personalities_tables:5cfb2202732380107058\",\"battle_entity\",\"battle_entities_tables:bac50621e2bd8d444f4c\"]]]",
+          "role": "PERSONALITY_ATTACHMENT",
+          "entityKey": "wh2_dlc11_infantry_zombie_blood",
+          "rawCount": null,
+          "statuses": [
+            "OBSERVED_RUNTIME"
+          ]
+        },
+        {
+          "pathId": "[\"wh2_dlc11_cst_mon_necrofex_colossus_0\",\"PERSONALITY_ATTACHMENT\",\"battle_personalities_tables:baf438a5b44be911d0ee\",\"battle_entity\",[[\"main_units_tables:7cc7bb4b477a752127d6\",\"land_unit\",\"land_units_tables:975fc96372ea2e86cc78\"],[\"land_units_to_battle_personalities_junctions_tables:8d769c91e37f4fb9f586\",\"land_unit\",\"land_units_tables:975fc96372ea2e86cc78\"],[\"land_units_to_battle_personalities_junctions_tables:8d769c91e37f4fb9f586\",\"battle_personality\",\"battle_personalities_tables:baf438a5b44be911d0ee\"],[\"battle_personalities_tables:baf438a5b44be911d0ee\",\"battle_entity\",\"battle_entities_tables:bac50621e2bd8d444f4c\"]]]",
+          "role": "PERSONALITY_ATTACHMENT",
+          "entityKey": "wh2_dlc11_infantry_zombie_blood",
+          "rawCount": null,
+          "statuses": [
+            "OBSERVED_RUNTIME"
+          ]
+        },
+        {
+          "pathId": "[\"wh2_dlc11_cst_mon_necrofex_colossus_0\",\"PERSONALITY_ATTACHMENT\",\"battle_personalities_tables:eeff6b105d197ef81743\",\"battle_entity\",[[\"main_units_tables:7cc7bb4b477a752127d6\",\"land_unit\",\"land_units_tables:975fc96372ea2e86cc78\"],[\"land_units_to_battle_personalities_junctions_tables:8a8f7acd2b981eb84aaa\",\"land_unit\",\"land_units_tables:975fc96372ea2e86cc78\"],[\"land_units_to_battle_personalities_junctions_tables:8a8f7acd2b981eb84aaa\",\"battle_personality\",\"battle_personalities_tables:eeff6b105d197ef81743\"],[\"battle_personalities_tables:eeff6b105d197ef81743\",\"battle_entity\",\"battle_entities_tables:bac50621e2bd8d444f4c\"]]]",
+          "role": "PERSONALITY_ATTACHMENT",
+          "entityKey": "wh2_dlc11_infantry_zombie_blood",
+          "rawCount": null,
+          "statuses": [
+            "OBSERVED_RUNTIME"
+          ]
+        }
+      ],
+      "missiles": [
+        {
+          "pathId": "[\"wh2_dlc11_cst_mon_necrofex_colossus_0\",\"LAND_PRIMARY\",\"land_units_tables:975fc96372ea2e86cc78\",[[\"main_units_tables:7cc7bb4b477a752127d6\",\"land_unit\",\"land_units_tables:975fc96372ea2e86cc78\"],[\"land_units_tables:975fc96372ea2e86cc78\",\"primary_missile_weapon\",\"missile_weapons_tables:79820095af7bcd2f1613\"]]]",
+          "role": "LAND_PRIMARY",
+          "weaponKey": "wh2_cst_necrofex_colossus_cannon",
+          "projectileKeys": [
+            "wh2_cst_necrofex_colossus_cannon_ball"
+          ],
+          "placement": "STATIC_PRIMARY",
+          "activationStatuses": [
+            "INCONCLUSIVE"
+          ]
+        },
+        {
+          "pathId": "[\"wh2_dlc11_cst_mon_necrofex_colossus_0\",\"RIDER\",\"battle_entity_stats_tables:259a6214ff0f73fe4713\",[[\"main_units_tables:7cc7bb4b477a752127d6\",\"land_unit\",\"land_units_tables:975fc96372ea2e86cc78\"],[\"land_units_to_battle_personalities_junctions_tables:2232e10db94a3ff3aa94\",\"land_unit\",\"land_units_tables:975fc96372ea2e86cc78\"],[\"land_units_to_battle_personalities_junctions_tables:2232e10db94a3ff3aa94\",\"battle_personality\",\"battle_personalities_tables:5cfb2202732380107058\"],[\"battle_personalities_tables:5cfb2202732380107058\",\"battle_entity_stats\",\"battle_entity_stats_tables:259a6214ff0f73fe4713\"],[\"battle_entity_stats_tables:259a6214ff0f73fe4713\",\"primary_missile_weapon\",\"missile_weapons_tables:202f6c7518f0372f77b1\"]]]",
+          "role": "RIDER",
+          "weaponKey": "wh2_dlc11_cst_rifle_rider",
+          "projectileKeys": [
+            "wh2_cst_rifle_bullet"
+          ],
+          "placement": "STATIC_COMPONENT",
+          "activationStatuses": [
+            "INCONCLUSIVE"
+          ]
+        },
+        {
+          "pathId": "[\"wh2_dlc11_cst_mon_necrofex_colossus_0\",\"RIDER\",\"battle_entity_stats_tables:259a6214ff0f73fe4713\",[[\"main_units_tables:7cc7bb4b477a752127d6\",\"land_unit\",\"land_units_tables:975fc96372ea2e86cc78\"],[\"land_units_to_battle_personalities_junctions_tables:5ea93cc6f626d2015ae5\",\"land_unit\",\"land_units_tables:975fc96372ea2e86cc78\"],[\"land_units_to_battle_personalities_junctions_tables:5ea93cc6f626d2015ae5\",\"battle_personality\",\"battle_personalities_tables:51ecc02a86cbce3abc49\"],[\"battle_personalities_tables:51ecc02a86cbce3abc49\",\"battle_entity_stats\",\"battle_entity_stats_tables:259a6214ff0f73fe4713\"],[\"battle_entity_stats_tables:259a6214ff0f73fe4713\",\"primary_missile_weapon\",\"missile_weapons_tables:202f6c7518f0372f77b1\"]]]",
+          "role": "RIDER",
+          "weaponKey": "wh2_dlc11_cst_rifle_rider",
+          "projectileKeys": [
+            "wh2_cst_rifle_bullet"
+          ],
+          "placement": "STATIC_COMPONENT",
+          "activationStatuses": [
+            "INCONCLUSIVE"
+          ]
+        },
+        {
+          "pathId": "[\"wh2_dlc11_cst_mon_necrofex_colossus_0\",\"RIDER\",\"battle_entity_stats_tables:259a6214ff0f73fe4713\",[[\"main_units_tables:7cc7bb4b477a752127d6\",\"land_unit\",\"land_units_tables:975fc96372ea2e86cc78\"],[\"land_units_to_battle_personalities_junctions_tables:8a8f7acd2b981eb84aaa\",\"land_unit\",\"land_units_tables:975fc96372ea2e86cc78\"],[\"land_units_to_battle_personalities_junctions_tables:8a8f7acd2b981eb84aaa\",\"battle_personality\",\"battle_personalities_tables:eeff6b105d197ef81743\"],[\"battle_personalities_tables:eeff6b105d197ef81743\",\"battle_entity_stats\",\"battle_entity_stats_tables:259a6214ff0f73fe4713\"],[\"battle_entity_stats_tables:259a6214ff0f73fe4713\",\"primary_missile_weapon\",\"missile_weapons_tables:202f6c7518f0372f77b1\"]]]",
+          "role": "RIDER",
+          "weaponKey": "wh2_dlc11_cst_rifle_rider",
+          "projectileKeys": [
+            "wh2_cst_rifle_bullet"
+          ],
+          "placement": "STATIC_COMPONENT",
+          "activationStatuses": [
+            "INCONCLUSIVE"
+          ]
+        },
+        {
+          "pathId": "[\"wh2_dlc11_cst_mon_necrofex_colossus_0\",\"RIDER\",\"battle_entity_stats_tables:259a6214ff0f73fe4713\",[[\"main_units_tables:7cc7bb4b477a752127d6\",\"land_unit\",\"land_units_tables:975fc96372ea2e86cc78\"],[\"land_units_to_battle_personalities_junctions_tables:8d769c91e37f4fb9f586\",\"land_unit\",\"land_units_tables:975fc96372ea2e86cc78\"],[\"land_units_to_battle_personalities_junctions_tables:8d769c91e37f4fb9f586\",\"battle_personality\",\"battle_personalities_tables:baf438a5b44be911d0ee\"],[\"battle_personalities_tables:baf438a5b44be911d0ee\",\"battle_entity_stats\",\"battle_entity_stats_tables:259a6214ff0f73fe4713\"],[\"battle_entity_stats_tables:259a6214ff0f73fe4713\",\"primary_missile_weapon\",\"missile_weapons_tables:202f6c7518f0372f77b1\"]]]",
+          "role": "RIDER",
+          "weaponKey": "wh2_dlc11_cst_rifle_rider",
+          "projectileKeys": [
+            "wh2_cst_rifle_bullet"
+          ],
+          "placement": "STATIC_COMPONENT",
+          "activationStatuses": [
+            "INCONCLUSIVE"
+          ]
+        },
+        {
+          "pathId": "[\"wh2_dlc11_cst_mon_necrofex_colossus_0\",\"RIDER\",\"battle_entity_stats_tables:259a6214ff0f73fe4713\",[[\"main_units_tables:7cc7bb4b477a752127d6\",\"land_unit\",\"land_units_tables:975fc96372ea2e86cc78\"],[\"land_units_to_battle_personalities_junctions_tables:b80cc8d44858f5ae9839\",\"land_unit\",\"land_units_tables:975fc96372ea2e86cc78\"],[\"land_units_to_battle_personalities_junctions_tables:b80cc8d44858f5ae9839\",\"battle_personality\",\"battle_personalities_tables:27fa2c180ce2feab2b5e\"],[\"battle_personalities_tables:27fa2c180ce2feab2b5e\",\"battle_entity_stats\",\"battle_entity_stats_tables:259a6214ff0f73fe4713\"],[\"battle_entity_stats_tables:259a6214ff0f73fe4713\",\"primary_missile_weapon\",\"missile_weapons_tables:202f6c7518f0372f77b1\"]]]",
+          "role": "RIDER",
+          "weaponKey": "wh2_dlc11_cst_rifle_rider",
+          "projectileKeys": [
+            "wh2_cst_rifle_bullet"
+          ],
+          "placement": "STATIC_COMPONENT",
+          "activationStatuses": [
+            "INCONCLUSIVE"
+          ]
+        }
+      ],
+      "cases": [
+        {
+          "id": "necrofex-colossus",
+          "modifiers": null,
+          "fields": {
+            "NumEntities": {
+              "status": "VALUE",
+              "value": 1
+            },
+            "HealthValue": {
+              "status": "VALUE",
+              "value": 9507
+            },
+            "HealthMax": {
+              "status": "VALUE",
+              "value": 9507
+            }
+          },
+          "views": [
+            {
+              "list": "ManList",
+              "size": 5,
+              "records": [
+                {
+                  "key": "wh2_dlc11_infantry_zombie_blood",
+                  "entries": 5
+                }
+              ]
+            },
+            {
+              "list": "MountList",
+              "size": 1,
+              "records": [
+                {
+                  "key": "wh2_dlc11_cst_mon_necrofex_colossus",
+                  "entries": 1
+                }
+              ]
+            },
+            {
+              "list": "EngineList",
+              "size": 0,
+              "records": []
+            },
+            {
+              "list": "EntityList",
+              "size": 1,
+              "records": [
+                {
+                  "key": "wh2_dlc11_cst_mon_necrofex_colossus",
+                  "entries": 1
+                }
+              ]
+            }
+          ],
+          "projectileKeys": [
+            "wh2_cst_necrofex_colossus_cannon_ball"
+          ],
+          "projectileReferences": [
+            "desktop:script_log_011026_2138.txt:88",
+            "desktop:script_log_011026_2138.txt:104",
+            "desktop:script_log_011026_2138.txt:120"
+          ],
+          "interpretation": {
+            "kind": "RUNTIME_MANUAL",
+            "reference": "Human request: WH3 runtime observations, 2026-10-01 (Asia/Seoul)",
+            "text": "Human confirmed one body in MountList/EntityList context views. Some crew reload remaining times decrease between snapshots, supporting crew firing-cycle participation; list-index continuity remains UNVERIFIED. Primary/secondary ammo are below one but no decrease is observed across these three F9 snapshots.",
+            "status": "HUMAN_INTERPRETATION_OF_CAPTURE"
+          },
+          "entityIndexContinuity": "UNVERIFIED",
+          "simultaneousSources": "INCONCLUSIVE",
+          "scopedCaptures": 3,
+          "completeCaptures": 3,
+          "heldCaptures": 0,
+          "problems": [],
+          "unitSizes": [
+            "MEDIUM"
+          ],
+          "confidenceStatuses": [
+            "OBSERVED_ONCE"
+          ],
+          "validationStatuses": [
+            "VALIDATED_SCOPED_OBSERVATION"
+          ],
+          "samplePoints": [
+            "CCO_TIME:31200",
+            "CCO_CURSOR",
+            "CCO_TIME:33900",
+            "CCO_TIME:35700"
+          ],
+          "references": [
+            "desktop:script_log_011026_2138.txt:88",
+            "desktop:script_log_011026_2138.txt:104",
+            "desktop:script_log_011026_2138.txt:120"
+          ]
+        }
+      ],
+      "precedence": null
+    },
+    {
+      "id": "ca_unit_wh_dlc04_emp_inf_free_company_militia_0",
+      "name": "Free Company Militia",
+      "factionId": "empire",
+      "sourceMainKey": "wh_dlc04_emp_inf_free_company_militia_0",
+      "sourceLandKey": "wh_dlc04_emp_inf_free_company_militia_0",
+      "contextId": null,
+      "productionEligible": false,
+      "entityReviewStatus": "NOT_REVIEWED",
+      "entities": [],
+      "missiles": [
+        {
+          "pathId": "[\"wh_dlc04_emp_inf_free_company_militia_0\",\"LAND_PRIMARY\",\"land_units_tables:9de709f308a12970cfe7\",[[\"main_units_tables:5e71a558e0f1e5ced156\",\"land_unit\",\"land_units_tables:9de709f308a12970cfe7\"],[\"land_units_tables:9de709f308a12970cfe7\",\"primary_missile_weapon\",\"missile_weapons_tables:d49fa5226ff1413860f6\"]]]",
+          "role": "LAND_PRIMARY",
+          "weaponKey": "wh_dlc04_emp_free_company_pistol",
+          "projectileKeys": [
+            "wh_dlc04_emp_free_company_pistol_bullet"
+          ],
+          "placement": "STATIC_PRIMARY",
+          "activationStatuses": [
+            "INCONCLUSIVE"
+          ]
+        },
+        {
+          "pathId": "[\"wh_dlc04_emp_inf_free_company_militia_0\",\"MAIN_SPECIFIC_JUNCTION\",\"unit_missile_weapon_junctions_tables:b09cc9bdf6c4b821e268\",[[\"unit_missile_weapon_junctions_tables:b09cc9bdf6c4b821e268\",\"unit\",\"main_units_tables:5e71a558e0f1e5ced156\"],[\"unit_missile_weapon_junctions_tables:b09cc9bdf6c4b821e268\",\"missile_weapon\",\"missile_weapons_tables:004eb310e0be181b28de\"]]]",
+          "role": "MAIN_SPECIFIC_JUNCTION",
+          "weaponKey": "wh2_dlc17_emp_free_company_pistol_blessed",
+          "projectileKeys": [
+            "wh2_dlc17_emp_free_company_pistol_bullet_blessed"
+          ],
+          "placement": "CONDITIONAL",
+          "activationStatuses": [
+            "INCONCLUSIVE"
+          ]
+        },
+        {
+          "pathId": "[\"wh_dlc04_emp_inf_free_company_militia_0\",\"MAIN_SPECIFIC_JUNCTION\",\"unit_missile_weapon_junctions_tables:ce3fc32d2fc759c1e585\",[[\"unit_missile_weapon_junctions_tables:ce3fc32d2fc759c1e585\",\"unit\",\"main_units_tables:5e71a558e0f1e5ced156\"],[\"unit_missile_weapon_junctions_tables:ce3fc32d2fc759c1e585\",\"missile_weapon\",\"missile_weapons_tables:65183a36a7c02b446cba\"]]]",
+          "role": "MAIN_SPECIFIC_JUNCTION",
+          "weaponKey": "wh_dlc04_emp_free_company_pistol_upgraded",
+          "projectileKeys": [
+            "wh_dlc04_emp_free_company_pistol_bullet_exploding"
+          ],
+          "placement": "CONDITIONAL",
+          "activationStatuses": [
+            "INCONCLUSIVE"
+          ]
+        }
+      ],
+      "cases": [
+        {
+          "id": "free-company-baseline",
+          "modifiers": {
+            "blessed": false,
+            "exploding": false
+          },
+          "fields": {
+            "NumEntities": {
+              "status": "VALUE",
+              "value": 60
+            },
+            "HealthValue": {
+              "status": "VALUE",
+              "value": 3660
+            },
+            "HealthMax": {
+              "status": "VALUE",
+              "value": 3660
+            }
+          },
+          "views": [
+            {
+              "list": "ManList",
+              "size": 60,
+              "records": [
+                {
+                  "key": "wh_dlc04_infantry_free_company_blood_dismembers",
+                  "entries": 60
+                }
+              ]
+            },
+            {
+              "list": "MountList",
+              "size": 0,
+              "records": []
+            },
+            {
+              "list": "EngineList",
+              "size": 0,
+              "records": []
+            },
+            {
+              "list": "EntityList",
+              "size": 60,
+              "records": [
+                {
+                  "key": "wh_dlc04_infantry_free_company_blood_dismembers",
+                  "entries": 60
+                }
+              ]
+            }
+          ],
+          "projectileKeys": [
+            "wh_dlc04_emp_free_company_pistol_bullet"
+          ],
+          "projectileReferences": [
+            "game:script_log_011026_2146.txt:261",
+            "game:script_log_011026_2146.txt:390",
+            "game:script_log_011026_2146.txt:519",
+            "desktop:script_log_011026_2157.txt:270",
+            "desktop:script_log_011026_2157.txt:376"
+          ],
+          "interpretation": {
+            "kind": "RUNTIME_MANUAL",
+            "reference": "Human request: WH3 runtime observations, 2026-10-01 (Asia/Seoul)",
+            "text": "Baseline logs identified by exact main/land and baseline projectile, matched to the human-declared no-override case. Modifier absence is a human setup declaration, not inferred runtime proof.",
+            "status": "HUMAN_INTERPRETATION_OF_CAPTURE"
+          },
+          "entityIndexContinuity": "UNVERIFIED",
+          "simultaneousSources": "INCONCLUSIVE",
+          "scopedCaptures": 5,
+          "completeCaptures": 5,
+          "heldCaptures": 0,
+          "problems": [],
+          "unitSizes": [
+            "MEDIUM"
+          ],
+          "confidenceStatuses": [
+            "OBSERVED_ONCE"
+          ],
+          "validationStatuses": [
+            "VALIDATED_SCOPED_OBSERVATION"
+          ],
+          "samplePoints": [
+            "CCO_TIME:22300",
+            "CCO_TIME:22900",
+            "CCO_TIME:23400",
+            "CCO_TIME:23800",
+            "CCO_TIME:34200"
+          ],
+          "references": [
+            "game:script_log_011026_2146.txt:261",
+            "game:script_log_011026_2146.txt:390",
+            "game:script_log_011026_2146.txt:519",
+            "desktop:script_log_011026_2157.txt:270",
+            "desktop:script_log_011026_2157.txt:376"
+          ]
+        },
+        {
+          "id": "free-company-blessed",
+          "modifiers": {
+            "blessed": true,
+            "exploding": false
+          },
+          "fields": {
+            "NumEntities": {
+              "status": "VALUE",
+              "value": 53
+            },
+            "HealthValue": {
+              "status": "VALUE",
+              "value": 3233
+            },
+            "HealthMax": {
+              "status": "VALUE",
+              "value": 3660
+            }
+          },
+          "views": [
+            {
+              "list": "ManList",
+              "size": 53,
+              "records": [
+                {
+                  "key": "wh_dlc04_infantry_free_company_blood_dismembers",
+                  "entries": 53
+                }
+              ]
+            },
+            {
+              "list": "MountList",
+              "size": 0,
+              "records": []
+            },
+            {
+              "list": "EngineList",
+              "size": 0,
+              "records": []
+            },
+            {
+              "list": "EntityList",
+              "size": 53,
+              "records": [
+                {
+                  "key": "wh_dlc04_infantry_free_company_blood_dismembers",
+                  "entries": 53
+                }
+              ]
+            }
+          ],
+          "projectileKeys": [
+            "wh2_dlc17_emp_free_company_pistol_bullet_blessed"
+          ],
+          "projectileReferences": [
+            "desktop:script_log_011026_2151.txt:266",
+            "desktop:script_log_011026_2151.txt:381"
+          ],
+          "interpretation": {
+            "kind": "RUNTIME_MANUAL",
+            "reference": "Human request: WH3 runtime observations, 2026-10-01 (Asia/Seoul)",
+            "text": "Human-declared Volkmar Mere Mortal Men!/Blessed Bullets only; Exploding Bullets not applied.",
+            "status": "HUMAN_INTERPRETATION_OF_CAPTURE"
+          },
+          "entityIndexContinuity": "UNVERIFIED",
+          "simultaneousSources": "INCONCLUSIVE",
+          "scopedCaptures": 2,
+          "completeCaptures": 2,
+          "heldCaptures": 0,
+          "problems": [],
+          "unitSizes": [
+            "MEDIUM"
+          ],
+          "confidenceStatuses": [
+            "OBSERVED_ONCE"
+          ],
+          "validationStatuses": [
+            "VALIDATED_SCOPED_OBSERVATION"
+          ],
+          "samplePoints": [
+            "CCO_TIME:38100",
+            "CCO_TIME:40700"
+          ],
+          "references": [
+            "desktop:script_log_011026_2151.txt:266",
+            "desktop:script_log_011026_2151.txt:381"
+          ]
+        },
+        {
+          "id": "free-company-exploding",
+          "modifiers": {
+            "blessed": false,
+            "exploding": true
+          },
+          "fields": {
+            "NumEntities": {
+              "status": "VALUE",
+              "value": 48
+            },
+            "HealthValue": {
+              "status": "VALUE",
+              "value": 2928
+            },
+            "HealthMax": {
+              "status": "VALUE",
+              "value": 3660
+            }
+          },
+          "views": [
+            {
+              "list": "ManList",
+              "size": 48,
+              "records": [
+                {
+                  "key": "wh_dlc04_infantry_free_company_blood_dismembers",
+                  "entries": 48
+                }
+              ]
+            },
+            {
+              "list": "MountList",
+              "size": 0,
+              "records": []
+            },
+            {
+              "list": "EngineList",
+              "size": 0,
+              "records": []
+            },
+            {
+              "list": "EntityList",
+              "size": 48,
+              "records": [
+                {
+                  "key": "wh_dlc04_infantry_free_company_blood_dismembers",
+                  "entries": 48
+                }
+              ]
+            }
+          ],
+          "projectileKeys": [
+            "wh_dlc04_emp_free_company_pistol_bullet_exploding"
+          ],
+          "projectileReferences": [
+            "desktop:script_log_011026_2223.txt:260",
+            "desktop:script_log_011026_2223.txt:366"
+          ],
+          "interpretation": {
+            "kind": "RUNTIME_MANUAL",
+            "reference": "Human request: WH3 runtime observations, 2026-10-01 (Asia/Seoul)",
+            "text": "Human-declared Imperial Gunnery School Exploding Bullets only; Mere Mortal Men! not applied.",
+            "status": "HUMAN_INTERPRETATION_OF_CAPTURE"
+          },
+          "entityIndexContinuity": "UNVERIFIED",
+          "simultaneousSources": "INCONCLUSIVE",
+          "scopedCaptures": 2,
+          "completeCaptures": 2,
+          "heldCaptures": 0,
+          "problems": [],
+          "unitSizes": [
+            "MEDIUM"
+          ],
+          "confidenceStatuses": [
+            "OBSERVED_ONCE"
+          ],
+          "validationStatuses": [
+            "VALIDATED_SCOPED_OBSERVATION"
+          ],
+          "samplePoints": [
+            "CCO_TIME:21200",
+            "CCO_TIME:30200"
+          ],
+          "references": [
+            "desktop:script_log_011026_2223.txt:260",
+            "desktop:script_log_011026_2223.txt:366"
+          ]
+        },
+        {
+          "id": "free-company-both",
+          "modifiers": {
+            "blessed": true,
+            "exploding": true
+          },
+          "fields": {
+            "NumEntities": {
+              "status": "VALUE",
+              "value": 60
+            },
+            "HealthValue": {
+              "status": "VALUE",
+              "value": 3339
+            },
+            "HealthMax": {
+              "status": "VALUE",
+              "value": 3660
+            }
+          },
+          "views": [
+            {
+              "list": "ManList",
+              "size": 60,
+              "records": [
+                {
+                  "key": "wh_dlc04_infantry_free_company_blood_dismembers",
+                  "entries": 60
+                }
+              ]
+            },
+            {
+              "list": "MountList",
+              "size": 0,
+              "records": []
+            },
+            {
+              "list": "EngineList",
+              "size": 0,
+              "records": []
+            },
+            {
+              "list": "EntityList",
+              "size": 60,
+              "records": [
+                {
+                  "key": "wh_dlc04_infantry_free_company_blood_dismembers",
+                  "entries": 60
+                }
+              ]
+            }
+          ],
+          "projectileKeys": [
+            "wh_dlc04_emp_free_company_pistol_bullet_exploding"
+          ],
+          "projectileReferences": [
+            "desktop:script_log_011026_2225.txt:261",
+            "desktop:script_log_011026_2225.txt:390",
+            "desktop:script_log_011026_2225.txt:519"
+          ],
+          "interpretation": {
+            "kind": "RUNTIME_MANUAL",
+            "reference": "Human request: WH3 runtime observations, 2026-10-01 (Asia/Seoul)",
+            "text": "Human-declared both modifiers applicable in this campaign setup. Scope is Free Company Militia, WH3 9.0.2.0, this setup and these two modifiers only.",
+            "status": "HUMAN_INTERPRETATION_OF_CAPTURE"
+          },
+          "entityIndexContinuity": "UNVERIFIED",
+          "simultaneousSources": "INCONCLUSIVE",
+          "scopedCaptures": 3,
+          "completeCaptures": 3,
+          "heldCaptures": 0,
+          "problems": [],
+          "unitSizes": [
+            "MEDIUM"
+          ],
+          "confidenceStatuses": [
+            "OBSERVED_ONCE"
+          ],
+          "validationStatuses": [
+            "VALIDATED_SCOPED_OBSERVATION"
+          ],
+          "samplePoints": [
+            "CCO_TIME:17300",
+            "CCO_TIME:19700",
+            "CCO_TIME:24200"
+          ],
+          "references": [
+            "desktop:script_log_011026_2225.txt:261",
+            "desktop:script_log_011026_2225.txt:390",
+            "desktop:script_log_011026_2225.txt:519"
+          ]
+        }
+      ],
+      "precedence": {
+        "status": "OBSERVED_ONCE",
+        "scope": "EXACT_SOURCE_GAME_DECLARED_CAMPAIGN_SETUP_ONLY",
+        "winner": "Imperial Gunnery School / Exploding Bullets",
+        "loser": "Mere Mortal Men! / Blessed Bullets",
+        "observedProjectile": "wh_dlc04_emp_free_company_pistol_bullet_exploding",
+        "observation": "runtime-2026-10-01-9.0.2:free-company:OVERRIDE_PRECEDENCE",
+        "productionEligible": false,
+        "relationship": "PRECEDES",
+        "kind": "RUNTIME_MANUAL",
+        "validationStatus": "VALIDATED_SCOPED_OBSERVATION",
+        "subjectLabel": "Exploding Bullets > Blessed Bullets",
+        "samplePoint": "OBSERVED_OVERLAP_SETUP"
+      }
+    }
+  ]
+}
