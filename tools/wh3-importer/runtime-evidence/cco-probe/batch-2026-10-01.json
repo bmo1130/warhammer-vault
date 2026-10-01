@@ -1,0 +1,64 @@
+{
+  "batchId": "runtime-2026-10-01-9.0.2",
+  "logFilenamePrefix": "script_log_011026_",
+  "gameVersion": "9.0.2.0",
+  "staticSnapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+  "declarationReference": "Human request: WH3 runtime observations, 2026-10-01 (Asia/Seoul)",
+  "cases": [
+    {
+      "id": "black-coach",
+      "sourceMainKey": "wh_main_vmp_veh_black_coach",
+      "sourceLogs": ["game:script_log_011026_2012.txt", "game:script_log_011026_2021.txt"],
+      "interpretation": "Human visually identified rider, two horses, coach body (IsEngine=true), and a physical articulation connecting horse/coach (IsMan=false, IsEngine=false). Scope: this Black Coach capture only; no universal chariot rule."
+    },
+    {
+      "id": "skeleton-chariots",
+      "sourceMainKey": "wh2_dlc09_tmb_veh_skeleton_chariot_0",
+      "sourceLogs": ["game:script_log_011026_2028.txt"],
+      "interpretation": "Observed aggregate composition: body 1, articulation 1, skeleton 2, steed 2 per chariot ratio. No parent/grouping ID; individual parent mapping UNVERIFIED. Visible sword/whip crew sampled with the same skeleton key; separate identity not confirmed."
+    },
+    {
+      "id": "dread-saurian",
+      "sourceMainKey": "wh2_dlc13_lzd_mon_dread_saurian_1",
+      "sourceLogs": ["game:script_log_011026_2110.txt", "desktop:script_log_011026_2118.txt"],
+      "interpretation": "Human confirmed the MountList/EntityList body is the same physical body in two context views. Two rider record keys do not establish a special skink role. Twelve Man entries and twelve missile candidates do not establish pairing. entityIndexContinuity UNVERIFIED; simultaneousSources INCONCLUSIVE."
+    },
+    {
+      "id": "necrofex-colossus",
+      "sourceMainKey": "wh2_dlc11_cst_mon_necrofex_colossus_0",
+      "sourceLogs": ["desktop:script_log_011026_2138.txt"],
+      "interpretation": "Human confirmed one body in MountList/EntityList context views. Some crew reload remaining times decrease between snapshots, supporting crew firing-cycle participation; list-index continuity remains UNVERIFIED. Primary/secondary ammo are below one but no decrease is observed across these three F9 snapshots."
+    },
+    {
+      "id": "free-company-baseline",
+      "sourceMainKey": "wh_dlc04_emp_inf_free_company_militia_0",
+      "sourceLogs": ["game:script_log_011026_2146.txt", "desktop:script_log_011026_2157.txt"],
+      "modifiers": {"blessed": false, "exploding": false},
+      "interpretation": "Baseline logs identified by exact main/land and baseline projectile, matched to the human-declared no-override case. Modifier absence is a human setup declaration, not inferred runtime proof."
+    },
+    {
+      "id": "free-company-blessed",
+      "battleMode": "CAMPAIGN_BATTLE",
+      "sourceMainKey": "wh_dlc04_emp_inf_free_company_militia_0",
+      "sourceLogs": ["desktop:script_log_011026_2151.txt"],
+      "modifiers": {"blessed": true, "exploding": false},
+      "interpretation": "Human-declared Volkmar Mere Mortal Men!/Blessed Bullets only; Exploding Bullets not applied."
+    },
+    {
+      "id": "free-company-exploding",
+      "battleMode": "CAMPAIGN_BATTLE",
+      "sourceMainKey": "wh_dlc04_emp_inf_free_company_militia_0",
+      "sourceLogs": ["desktop:script_log_011026_2223.txt"],
+      "modifiers": {"blessed": false, "exploding": true},
+      "interpretation": "Human-declared Imperial Gunnery School Exploding Bullets only; Mere Mortal Men! not applied."
+    },
+    {
+      "id": "free-company-both",
+      "battleMode": "CAMPAIGN_BATTLE",
+      "sourceMainKey": "wh_dlc04_emp_inf_free_company_militia_0",
+      "sourceLogs": ["desktop:script_log_011026_2225.txt"],
+      "modifiers": {"blessed": true, "exploding": true},
+      "interpretation": "Human-declared both modifiers applicable in this campaign setup. Scope is Free Company Militia, WH3 9.0.2.0, this setup and these two modifiers only."
+    }
+  ]
+}

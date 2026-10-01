@@ -91,6 +91,59 @@ No runtime observation changes static provenance or normalized Unit. No producti
 
 First collect the CCO observations. Component HP contribution, independent casualty/targetability and exact same-projectile weapon-source attribution can still be unresolved after CCO; no diagnostic pack is claimed necessary before those results exist. Generated jobs contain a deferred test plan only: one candidate intervention per test, unique `zz_runtime_probe_*` clones, repoint only the candidate edge, explicit HP delta or range/reload/projectile fingerprint, identical baseline setup and disable/remove-pack rollback. No vanilla shared records are modified and no pack is built.
 
+## Captured batch: 2026-10-01 / 9.0.2.0
+
+The local [batch summary](../../generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-final/comparison-report.md)
+and manifest preserve 42 input logs (including logs with no probe events), 5,200 parsed
+events, 51 capture attempts and 316 canonical observations. Parse problems, validation
+errors, raw/validated conflicts and missing declared inputs are zero. The original
+bytes are copied under `inputs/` with source paths and SHA256 in the manifest. Steam's
+2118/2138/2225 files contain only later UI output; the full captures were preserved on
+the OneDrive Desktop. Neither file names nor projectile keys alone prove modifier setup.
+
+| Case | Static entity / missile paths | Runtime capture facts |
+| --- | --- | --- |
+| Black Coach | 5 / 0 | Man 1, Mount 2, Engine 1, articulation context 1; human visual roles retained separately |
+| Skeleton Chariots | 6 / 0 | NumEntities 12, HP 7032/7032; Man/Mount/Engine/Entity views 24/24/12/12 |
+| Dread Saurian | 14 / 12 | NumEntities 1, HP 15088/15088; 10+2 rider keys; complete 51-sample traces show both rider keys reloading and both ammo pools decreasing |
+| Necrofex | 7 / 6 | NumEntities 1, HP 9507/9507; five crew; cannon projectile; crew reload remaining time changes; both ammo endpoints unchanged across three F9 snapshots |
+| Free Company | entity NOT_REVIEWED / 3 | Four independent setup observations: baseline, blessed, exploding, both |
+
+Free Company active projectile contexts are respectively
+`wh_dlc04_emp_free_company_pistol_bullet`,
+`wh2_dlc17_emp_free_company_pistol_bullet_blessed`,
+`wh_dlc04_emp_free_company_pistol_bullet_exploding`, and the same exploding key for both.
+The existing `OVERRIDE_PRECEDENCE` relationship stores **Exploding Bullets > Blessed
+Bullets**, scoped to this unit, 9.0.2.0, the human-declared campaign setup and these two
+modifiers. Applicability/setup is `RUNTIME_MANUAL`; active contexts/counters are
+`RUNTIME_CCO`. Static baseline/override candidates and observed values remain separate
+in the matrix. Weapon-path activation is still INCONCLUSIVE. No universal resolution
+rule is added. Unknown rank, difficulty, save, mod coverage and other conditions stay unknown.
+
+Component lists are context views: MountList + EntityList overlap does not establish
+additional bodies. The human-confirmed same physical body interpretation for Dread
+and Necrofex is separate from raw record-key overlap, which alone cannot prove identity.
+Equal runtime crew/static candidate counts never prove index pairing. Skeleton's
+1:1:2:2 aggregate composition ratio supplies no individual parent mapping. Snapshot
+captures from one probe battle session share a trial ID, rather than becoming
+independent repetitions. `entityIndexContinuity=UNVERIFIED`,
+`simultaneousSources=INCONCLUSIVE`, proposals=0 and `productionEligible=false` remain.
+
+The batch adapter reuses the prefix parser, P0 manifest, explicitly named reviewed
+static-index sidecars, canonical evidence format and existing validator/triage. No
+extraction, game execution or production writer is used. The bounded declaration file
+is [batch-2026-10-01.json](runtime-evidence/cco-probe/batch-2026-10-01.json). To reproduce
+into a **new** local directory (replace the two input directories if needed):
+
+```powershell
+node tools/wh3-importer/runtime-evidence/cco-probe/cli.mjs ingest-batch --bundle-dir generated/wh3/runtime-evidence/cco-p0-9.0.2 --declarations tools/wh3-importer/runtime-evidence/cco-probe/batch-2026-10-01.json --log-dirs 'game=C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III|desktop=C:/Users/lsh12/OneDrive/Desktop' --out generated/wh3/runtime-evidence/runtime-2026-10-01-replay
+```
+
+Outputs retain existing raw/comparison/runtime/validated/proposal/triage formats plus
+a batch manifest and declared-setup copy. Missing/partial captures retain their gaps;
+no missing state is filled. An empty cursor intersection is an INCONCLUSIVE event,
+not a malformed unit capture. Original Lua compatibility/cursor fixes are preserved.
+
 ## Verification
 
 Offline tests execute the canonical Lua with a Fengari mock CCO/battle-manager (Lua 5.3 implementation, source uses Lua 5.1-compatible syntax). This validates pcall failures, cursor, list/path preservation, timer cancellation, changes and hot reload; it does **not** certify the installed game's bindings. Node tests cover graph construction, parser partial/malformed inputs, repeated ingestion, conflicts, identity/version drift, raw-count semantics and production/static non-mutation. Saved CA integration replays the P0 manifest alongside previous pilot/materialization/entity/missile/runtime regressions. Actual field availability, hotkeys/log delivery and collected gameplay values still require the first in-game run.

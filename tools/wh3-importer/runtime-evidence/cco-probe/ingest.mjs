@@ -1,6 +1,7 @@
 import { FORMAT, digest, stable, observationTemplate } from '../contract.mjs';
 import { validateRuntimeEvidence, proposeResolutions } from '../validate.mjs';
 import { verifyCandidates } from './candidates.mjs';
+import { verifyIndex } from '../static-index.mjs';
 
 export const PREFIX = 'WH3_RUNTIME_PROBE|';
 const lists = ['ManList', 'MountList', 'EngineList', 'EntityList'];
@@ -26,7 +27,10 @@ function validateEvent(e) {
   if (['COMPONENT_LIST', 'ENTITY'].includes(e.kind) && !lists.includes(e.data.list)) throw new Error('Unknown component list.');
   if (e.kind === 'ENTITY' && (!e.data.fields || !Number.isInteger(e.data.index) || e.data.index < 0 || e.data.index >= 512)) throw new Error('Invalid entity index/fields.');
   if (e.kind === 'COMPONENT_LIST' && (!cells.has(e.data.size?.status) || typeof e.data.complete !== 'boolean' || (e.data.complete && (!Number.isInteger(value(e.data.size)) || value(e.data.size) < 0 || value(e.data.size) > 512)))) throw new Error('Invalid list cardinality.');
-  if (['SNAPSHOT_UNIT', 'TRACE_UNIT', 'CURSOR'].includes(e.kind) && !e.data.fields && !(e.kind === 'TRACE_UNIT' && e.data.unchanged === true)) throw new Error('Missing CCO fields.');
+  // The probe intentionally emits an empty cursor intersection as a diagnostic.
+  // It is not an entity observation and must not manufacture an identity.
+  const emptyCursor = e.kind === 'CURSOR' && e.data.status === 'INCONCLUSIVE' && e.data.reason === 'NO_ENTITY_UNDER_CURSOR';
+  if (['SNAPSHOT_UNIT', 'TRACE_UNIT', 'CURSOR'].includes(e.kind) && !e.data.fields && !(e.kind === 'TRACE_UNIT' && e.data.unchanged === true) && !emptyCursor) throw new Error('Missing CCO fields.');
   if (['COMPONENT_LIST', 'ENTITY', 'SAMPLE_END'].includes(e.kind) && !['SNAPSHOT', 'TRACE'].includes(e.data.mode)) throw new Error('Invalid sample mode.');
   return e;
 }
@@ -100,11 +104,29 @@ export function reconstructRuns(parsed) {
     delete r.state; delete r.pending; delete r.previousUnit; return r;
   });
 }
-export function compareRuns(parsed, manifest) {
+export function compareRuns(parsed, manifest, { index, additionalMainKeys = [] } = {}) {
   verifyCandidates(manifest);
+  const units = [...manifest.units];
+  // Read only explicitly requested, already reviewed sidecars. No CA extraction,
+  // supplemental graph, display-name matching or production identity is created.
+  if (additionalMainKeys.length) {
+    verifyIndex(index);
+    if (index.snapshotId !== manifest.snapshotId) throw new Error('Candidate/index snapshot drift.');
+    for (const main of new Set(additionalMainKeys)) {
+      if (units.some(u => u.sourceMainKey === main)) continue;
+      const matches = index.subjects.filter(s => s.sourceMainKey === main && s.contextId === null);
+      if (matches.length !== 1 || !matches[0].missile) throw new Error(`Missing reviewed missile subject ${main}.`);
+      const s = matches[0];
+      units.push({ sourceMainKey: s.sourceMainKey, sourceLandKey: s.sourceLandKey, contextId: s.contextId, subject: s,
+        status: s.missile.completeness === 'INCOMPLETE_DB_CHAIN' ? 'INCOMPLETE_DB_CHAIN' : 'STATIC_CANDIDATES_PRESERVED',
+        entityReviewStatus: s.entity ? 'REVIEWED' : 'NOT_REVIEWED', views: { AllEntitySources: s.entity?.paths ?? [],
+          AllMissileSources: s.missile.paths.map(p => ({ ...p, ProjectileContextList: p.projectilePaths,
+            Precursor: p.rawWeaponFlags.precursor, UseSecondaryAmmoPool: p.rawWeaponFlags.use_secondary_ammo_pool })) } });
+    }
+  }
   const reports = reconstructRuns(parsed).map(run => {
     const f = run.frames[0]?.fields, main = value(f?.['UnitRecordContext.Key']) ?? value(run.cursor[0]?.fields?.['UnitContext.UnitRecordContext.Key']);
-    const unit = manifest.units.find(u => u.sourceMainKey === main);
+    const unit = units.find(u => u.sourceMainKey === main);
     const lands = run.frames.map(f => value(f.fields['UnitRecordContext.UnitLandRecordContext.Key']));
     const mains = run.frames.map(f => value(f.fields['UnitRecordContext.Key']));
     const uids = run.frames.map(f => value(f.fields.UniqueUiId));
@@ -114,7 +136,8 @@ export function compareRuns(parsed, manifest) {
     const status = run.problems.includes('CONFLICTING_RUNTIME_EVIDENCE') ? 'CONFLICTING_RUNTIME_EVIDENCE' : !identityOK || run.problems.includes('METADATA_DRIFT') ? 'IDENTITY_PENDING' : 'SCOPED_RUNTIME_CAPTURE';
     const observedEntities = run.frames.flatMap(f => lists.flatMap(list => Object.values(f.lists[list]?.entries ?? {}).map(row => ({ list, sample: f.sample,
       recordKey: value(row.fields['EntityRecordContext.Key']), key: value(row.fields.Key), isMan: value(row.fields.IsMan), isEngine: value(row.fields.IsEngine),
-      reloading: value(row.fields.IsReloading), reloadPercent: value(row.fields.ReloadPercent), ownerUiId: value(row.fields['UnitContext.UniqueUiId']), reference: row.reference }))));
+      reloading: value(row.fields.IsReloading), reloadPercent: value(row.fields.ReloadPercent), reloadRemainingTime: value(row.fields.ReloadRemainingTime),
+      ownerUiId: value(row.fields['UnitContext.UniqueUiId']), reference: row.reference }))));
     const allComplete = run.completed && unit?.status === 'STATIC_CANDIDATES_PRESERVED' && !run.problems.length && !parsed.problems.length && run.frames.every(f => !f.partial && lists.every(n => f.lists[n]?.complete));
     const classify = (observed, observable = true) => status !== 'SCOPED_RUNTIME_CAPTURE' ? status : observed ? 'OBSERVED_RUNTIME' : allComplete && observable ? 'NOT_OBSERVED' : 'INCONCLUSIVE';
     const entities = (unit?.views.AllEntitySources ?? []).map(p => {
@@ -139,34 +162,50 @@ export function compareRuns(parsed, manifest) {
         causalWeaponAttribution: 'INCONCLUSIVE', note: 'Raw pool flag comparison only; no ammo count, sharing, or multiplier formula.' };
     });
     const cursors = run.cursor.map(c => {
+      if (!c.fields) return { ...c, status: 'INCONCLUSIVE', matchingPathIds: [] };
       const main = value(c.fields['UnitContext.UnitRecordContext.Key']), land = value(c.fields['UnitContext.UnitRecordContext.UnitLandRecordContext.Key']), key = value(c.fields['EntityRecordContext.Key']);
-      const target = manifest.units.find(u => u.sourceMainKey === main && u.sourceLandKey === land);
+      const target = units.find(u => u.sourceMainKey === main && u.sourceLandKey === land);
       return { fields: c.fields, reference: c.reference, sourceMainKey: main, sourceLandKey: land,
         status: !target || !identityOK || value(c.fields['UnitContext.UniqueUiId']) !== uids[0] ? 'IDENTITY_PENDING' : key ? 'OBSERVED_RUNTIME' : 'INCONCLUSIVE',
         matchingPathIds: target?.views.AllEntitySources.filter(p => p.entityKey === key).map(p => p.pathId) ?? [] };
     });
-    const unexpectedEntityKeys = [...new Set(observedEntities.filter(e => e.recordKey && !entities.some(p => p.entityKeys.includes(e.recordKey))).map(e => e.recordKey))].sort();
+    const unexpectedEntityKeys = unit?.entityReviewStatus === 'NOT_REVIEWED' ? [] : [...new Set(observedEntities.filter(e => e.recordKey && !entities.some(p => p.entityKeys.includes(e.recordKey))).map(e => e.recordKey))].sort();
     const unexpectedProjectileKeys = [...new Set(projectiles.filter(p => p.key && !missileSources.some(s => s.projectileKeys.includes(p.key))).map(p => p.key))].sort();
     const reloadStateChanges = [];
     for (let i = 1; i < run.frames.length; i++) for (const list of lists) {
       const previous = run.frames[i - 1].lists[list]?.entries ?? {}, current = run.frames[i].lists[list]?.entries ?? {};
       for (const [slot, row] of Object.entries(current)) {
         const old = previous[slot]; if (!old) continue;
-        const before = [value(old.fields.IsReloading), value(old.fields.ReloadPercent)], after = [value(row.fields.IsReloading), value(row.fields.ReloadPercent)];
+        const before = [value(old.fields.IsReloading), value(old.fields.ReloadPercent), value(old.fields.ReloadRemainingTime)],
+          after = [value(row.fields.IsReloading), value(row.fields.ReloadPercent), value(row.fields.ReloadRemainingTime)];
         if (stable(before) !== stable(after)) reloadStateChanges.push({ list, index: Number(slot), sample: run.frames[i].sample,
-          entityRecordKey: value(row.fields['EntityRecordContext.Key']) ?? null, before, after, reference: row.reference, entityContinuity: 'UNVERIFIED_LIST_INDEX' });
+          entityRecordKey: value(row.fields['EntityRecordContext.Key']) ?? null, before, after, beforeReference: old.reference,
+          reference: row.reference, entityContinuity: 'UNVERIFIED_LIST_INDEX' });
       }
     }
     return { runId: run.id, status, sourceMainKey: main ?? null, sourceLandKey: unit?.sourceLandKey ?? null, contextId: run.metadata.contextId ?? null,
+      sourceLogs: [...new Set(run.events.flatMap(e => e.references.map(ref => ref.slice(0, ref.lastIndexOf(':')))))].sort(),
       unitSize: run.metadata.unitSize ?? 'NOT_RECORDED', metadata: run.metadata, complete: allComplete, problems: run.problems,
       frames: run.frames, entities, missileSources, projectiles, ammo, cursors, unexpectedEntityKeys, unexpectedProjectileKeys,
+      entityReviewStatus: unit?.entityReviewStatus ?? (unit ? 'REVIEWED' : 'IDENTITY_PENDING'),
+      componentCountMeaning: 'CONTEXT_VIEWS_ONLY; do not sum lists into a physical object count',
+      sharedRecordViews: run.frames.flatMap(f => {
+        const keys = new Map();
+        for (const list of lists) for (const row of Object.values(f.lists[list]?.entries ?? {})) {
+          const key = value(row.fields['EntityRecordContext.Key']); if (!key) continue;
+          if (!keys.has(key)) keys.set(key, new Set()); keys.get(key).add(list);
+        }
+        return [...keys].filter(([, names]) => names.size > 1).map(([recordKey, names]) => ({ sample: f.sample, recordKey,
+          lists: [...names].sort(), physicalIdentity: 'UNVERIFIED', reference: f.reference,
+          meaning: 'Overlapping context views are not evidence of additional physical bodies.' }));
+      }),
       reloadingEntities: observedEntities.filter(x => x.reloading === true && x.ownerUiId === uids[0]), reloadStateChanges,
       firingProjectileContexts: projectiles.filter(p => p.firing === true && p.key),
       distinctObservedProjectileKeys: [...new Set(projectiles.map(p => p.key).filter(Boolean))].sort(),
       projectileContextTransitions: projectiles.slice(1).filter((p, i) => p.key !== undefined && projectiles[i].key !== undefined && p.key !== projectiles[i].key),
       simultaneousSources: 'INCONCLUSIVE', entityIndexContinuity: 'UNVERIFIED', productionEligible: false };
   });
-  const settingComparisons = manifest.units.map(u => ({ sourceMainKey: u.sourceMainKey, contextId: u.contextId,
+  const settingComparisons = units.map(u => ({ sourceMainKey: u.sourceMainKey, contextId: u.contextId,
     settings: ['MEDIUM', 'ULTRA'].map(unitSize => ({ unitSize, captures: reports.filter(r => r.sourceMainKey === u.sourceMainKey && r.status === 'SCOPED_RUNTIME_CAPTURE' && r.unitSize === unitSize && r.runId.includes('snapshot-')).flatMap(r => r.frames.map(f => ({
       reference: f.reference, NumEntities: f.fields.NumEntities, NumEntitiesInitial: f.fields.NumEntitiesInitial, HealthValue: f.fields.HealthValue, HealthMax: f.fields.HealthMax,
       lists: Object.fromEntries(lists.map(name => [name, f.lists[name]?.size ?? { status: 'NULL' }])),
@@ -182,13 +221,15 @@ export function toRuntimeEvidence(report, index) {
     if (r.status !== 'SCOPED_RUNTIME_CAPTURE' || !s) { held.push({ runId: r.runId, status: r.status }); continue; }
     function add(type, ccoField, payload, reference, samplePoint, label = 'whole unit') {
       const o = observationTemplate(s, { id: `cco:${digest([r.runId, type, ccoField, reference]).slice(0, 32)}`, unitSize: r.unitSize }, type);
-      o.scenarioId = r.metadata.scenarioId ?? 'CCO_P0'; o.trialId = r.runId; o.subjectLabel = label; o.samplePoint = samplePoint;
+      o.scenarioId = r.metadata.scenarioId ?? 'CCO_P0'; o.trialId = JSON.parse(r.runId)[0]; o.subjectLabel = label; o.samplePoint = samplePoint;
       // Setup facts not exposed by CCO stay NOT_RECORDED. Never infer no mods/effects.
       if (r.metadata.setup) o.setup = structuredClone(r.metadata.setup);
+      if (r.declaredSetup) o.setup = structuredClone(r.declaredSetup.setup);
       o.identityVerification = { level: 'EXACT_SOURCE_OBSERVED', reference };
       o.observation = { result: 'CONCLUSIVE', ...payload }; o.confidence = 'OBSERVED_ONCE';
       o.provenance = { kind: 'RUNTIME_CCO', observer: 'WH3 battle CCO probe', observedAt: null, references: [reference],
-        captureId: r.runId, ccoField, notes: 'Direct runtime CCO value. Runtime executable/pack consistency and missing setup fields still require confirmation.' };
+        captureId: r.runId, ccoField, notes: 'Direct runtime CCO value. Runtime executable/pack consistency and missing setup fields still require confirmation.' +
+          (r.declaredSetup ? ` Setup is human-declared (${r.declaredSetup.reference}); not queried by CCO.` : '') };
       observations.push(o);
     }
     if (r.runId.includes('snapshot-')) for (const frame of r.frames.filter(f => !f.partial)) {

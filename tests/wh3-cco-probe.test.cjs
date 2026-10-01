@@ -8,10 +8,11 @@ const modules = Promise.all([
   import('../tools/wh3-importer/runtime-evidence/contract.mjs'),
   import('../tools/wh3-importer/runtime-evidence/cco-probe/jobs.mjs'),
   import('../tools/wh3-importer/runtime-evidence/validate.mjs'),
+  import('../tools/wh3-importer/runtime-evidence/cco-probe/batch.mjs'),
 ]);
 const V = value => ({ status: 'VALUE', value });
 async function fixture() {
-  const [c, i, contract, jobs, validator] = await modules;
+  const [c, i, contract, jobs, validator, batch] = await modules;
   const snapshot = { gameVersion: 'test-v1', schemaSha256: 'schema', packs: [{ name: 'db.pack', sha256: 'pack' }] }, snapshotId = contract.digest(snapshot);
   const subjects = c.P0.map(main => ({ sourceMainKey: main, sourceLandKey: `land:${main}`, contextId: null, catalogEntryId: `diag:${main}`, displayName: 'Same display name', factionId: 'fixture', gameVersion: snapshot.gameVersion, staticSnapshotId: snapshotId,
     entity: { paths: [{ pathId: `${main}:man`, role: 'MAN', entityKey: 'crew', edges: [] }, { pathId: `${main}:rider`, role: 'PERSONALITY_ATTACHMENT', entityKey: 'crew', edges: [] }] },
@@ -34,7 +35,7 @@ async function fixture() {
     event('COMPONENT_LIST', { mode, sample, list, size: V(1), complete: true }, run), event('ENTITY', { mode, sample, list, index: 0, fields: { Key: V('crew'), 'EntityRecordContext.Key': V('crew'), 'UnitContext.UniqueUiId': V(123), IsMan: V(true), IsEngine: V(false), IsAlive: V(true), IsReloading: V(true), ReloadPercent: V(0.25) } }, run)]), event('SAMPLE_END', { mode, sample }, run)];
   const events = () => [event('SNAPSHOT_START', {}), ...frame(0), event('SNAPSHOT_END', {})];
   const parse = events => i.parseProbeLogs([{ name: 'synthetic.log', text: events.map(e => `log prefix WH3_RUNTIME_PROBE|${JSON.stringify(e)}`).join('\n') }]);
-  return { c, i, contract, jobs, validator, snapshot, index, evidence, manifest, subject, metadata, unitFields, event, frame, events, parse };
+  return { c, i, contract, jobs, validator, batch, snapshot, index, evidence, manifest, subject, metadata, unitFields, event, frame, events, parse };
 }
 test('candidate graph preserves exact main/land, repeated entity paths, weapon paths and raw flags', async () => {
   const f = await fixture(); assert.equal(f.manifest.units.length, 4);
@@ -153,7 +154,9 @@ test('P0 jobs require no DB inference and phase 2 remains an ungenerated plan', 
   assert(j.phase2.every(x => !x.packGenerated && x.policy.candidateChangesPerTest === 1 && !x.policy.sharedVanillaEdits));
 });
 test('Lua source executes with real interpreter: safe fields, cursor, trace changes, hot reload, single listener/timer', async () => {
-  const f = await fixture(), code = await fs.readFile('tools/wh3-importer/runtime-evidence/cco-probe/exec_battle.lua', 'utf8');
+  // luaL_dostring is a string loader; unlike the external-file loader it does
+  // not skip a UTF-8 BOM. Preserve the canonical file bytes on disk.
+  const f = await fixture(), code = (await fs.readFile('tools/wh3-importer/runtime-evidence/cco-probe/exec_battle.lua', 'utf8')).replace(/^\uFEFF/, '');
   const mock = `
 LOG = {}; NOW=0; CALLBACKS={}; LISTENERS={}; SHOTS=0
 function out(line) LOG[#LOG+1]=line end
@@ -180,6 +183,7 @@ end
 function cco(kind, id)
  if kind=='CcoBattleSelection' then return {Call=function(self,q) assert(q=='FirstUnitContext');return unit end} end
  if kind=='CcoBattleCursorContext' then return {Call=function(self,q) assert(q=='EntityContext');return entity end} end
+ if kind=='CcoBattleRoot' then return {Call=function(self,q) assert(q=='CursorContextContext');return {Call=function(self,q) assert(q=='EntityContext');return entity end} end} end
  error('unknown context')
 end
 WV_CCO_CONFIG={sessionId='lua-test',gameVersion='test-v1',staticSnapshotId=${JSON.stringify(f.snapshotId ?? f.index.snapshotId)},unitSize='MEDIUM'}
@@ -197,4 +201,136 @@ WV_CCO_CONFIG={sessionId='lua-test',gameVersion='test-v1',staticSnapshotId=${JSO
   assert(trace); assert.equal(trace.ammo[0].decreaseObserved, true); assert.equal(trace.projectileContextTransitions.length, 1); assert(trace.reloadingEntities.length > 0);
   const cursor = comparison.reports[0].cursors[0]; assert.equal(cursor.status, 'OBSERVED_RUNTIME'); assert.equal(cursor.fields.ReloadRemainingTime.status, 'UNSUPPORTED');
   assert.equal(cursor.fields.Position.value.length, 4);
+});
+
+test('actual empty-cursor diagnostic is preserved without dropping sequence or inventing identity', async () => {
+  const f = await fixture(), events = f.events();
+  events.splice(events.length - 1, 0, f.event('CURSOR', { status: 'INCONCLUSIVE', reason: 'NO_ENTITY_UNDER_CURSOR', cursor: { HasIntersections: V(true) } }));
+  // Event creation order determines sequence, so restore source order for this fixture.
+  events.forEach((e, i) => { e.sequence = i + 1; });
+  const parsed = f.parse(events), r = f.i.compareRuns(parsed, f.manifest).reports[0];
+  assert.equal(parsed.problems.length, 0); assert.equal(r.complete, true);
+  assert.equal(r.cursors[0].status, 'INCONCLUSIVE'); assert.deepEqual(r.cursors[0].matchingPathIds, []);
+  assert(!f.i.toRuntimeEvidence(f.i.compareRuns(parsed, f.manifest), f.index).evidence.observations.some(o => o.observationType === 'CCO_CURSOR_ENTITY'));
+  const unknown = structuredClone(events); unknown.find(e => e.kind === 'CURSOR').data.reason = 'UNKNOWN_CURSOR_FAILURE';
+  assert.equal(f.parse(unknown).problems.length, 1);
+});
+
+test('same body in MountList and EntityList remains overlapping context views without a physical sum', async () => {
+  const f = await fixture(), r = f.i.compareRuns(f.parse(f.events()), f.manifest).reports[0];
+  assert(r.sharedRecordViews.some(v => v.lists.includes('MountList') && v.lists.includes('EntityList')));
+  assert(r.sharedRecordViews.every(v => v.physicalIdentity === 'UNVERIFIED'));
+  assert.match(r.componentCountMeaning, /do not sum/); assert.equal(r.physicalComponentCount, undefined);
+});
+
+test('12 runtime crew and 12 missile candidates never establish index pairing or simultaneous sources', async () => {
+  const f = await fixture(), s = f.index.subjects[2];
+  s.missile.paths = Array.from({ length: 12 }, (_, i) => ({ ...structuredClone(s.missile.paths[0]), pathId: `weapon:${i}` }));
+  const { integrity, ...body } = f.index; f.index.integrity = f.contract.digest(body);
+  const m = f.c.buildCandidateManifest(f.index, f.evidence), fields = structuredClone(f.unitFields);
+  fields['UnitRecordContext.Key'] = V(s.sourceMainKey); fields['UnitRecordContext.UnitLandRecordContext.Key'] = V(s.sourceLandKey);
+  const events = [f.event('SNAPSHOT_START', {}), ...f.frame(0, fields), f.event('SNAPSHOT_END', {})];
+  const list = events.find(e => e.kind === 'COMPONENT_LIST' && e.data.list === 'ManList'); list.data.size = V(12);
+  const row = events.find(e => e.kind === 'ENTITY' && e.data.list === 'ManList');
+  events.splice(events.indexOf(row) + 1, 0, ...Array.from({ length: 11 }, (_, i) => ({ ...structuredClone(row), data: { ...structuredClone(row.data), index: i + 1 } })));
+  events.forEach((e, i) => { e.sequence = i + 1; });
+  const r = f.i.compareRuns(f.parse(events), m).reports[0];
+  assert.equal(r.frames[0].lists.ManList.size.value, 12); assert.equal(r.missileSources.length, 12);
+  assert.equal(r.entityIndexContinuity, 'UNVERIFIED'); assert.equal(r.simultaneousSources, 'INCONCLUSIVE');
+  assert(r.missileSources.every(p => p.weaponActivationStatus === 'INCONCLUSIVE'));
+  assert.equal(f.i.toRuntimeEvidence(f.i.compareRuns(f.parse(events), m), f.index).resolutions.proposals.length, 0);
+});
+
+// Synthetic envelopes, not gameplay evidence. Their shape exercises today's
+// four separately declared setups against reviewed-sidecar fixture candidates.
+async function batchFixture() {
+  const f = await fixture(), s = { ...structuredClone(f.subject), sourceMainKey: f.batch.FREE_COMPANY, sourceLandKey: 'free-company-land', catalogEntryId: 'diag:free-company' };
+  delete s.entity;
+  s.missile.paths = ['baseline', 'blessed', 'exploding'].map((key, i) => ({ ...structuredClone(f.subject.missile.paths[0]),
+    pathId: `free-company:${key}`, role: i ? 'MAIN_SPECIFIC_JUNCTION' : 'LAND_PRIMARY', weaponKey: `weapon:${key}`, projectilePaths: [{ key }],
+    activation: { active: 'UNKNOWN', precedence: 'UNRESOLVED' } }));
+  f.index.subjects.push(s); const { integrity, ...body } = f.index; f.index.integrity = f.contract.digest(body);
+  f.manifest = f.c.buildCandidateManifest(f.index, f.evidence);
+  const cases = ['baseline', 'blessed', 'exploding', 'both'].map((id, i) => ({ id, sourceMainKey: s.sourceMainKey, sourceLogs: [`saved:${id}.txt`],
+    modifiers: { blessed: i === 1 || i === 3, exploding: i === 2 || i === 3 }, interpretation: `Human-declared ${id}` }));
+  const inputs = cases.map((c, i) => {
+    const fields = structuredClone(f.unitFields); fields['UnitRecordContext.Key'] = V(s.sourceMainKey);
+    fields['UnitRecordContext.UnitLandRecordContext.Key'] = V(s.sourceLandKey); fields['ActiveProjectileContext.Key'] = V(i === 3 ? 'exploding' : c.id);
+    const events = [f.event('SNAPSHOT_START', {}), ...f.frame(0, fields), f.event('SNAPSHOT_END', {})];
+    events.forEach((e, n) => { e.sessionId = `battle:${c.id}`; e.sequence = n + 1; });
+    return { name: c.sourceLogs[0], text: events.map(e => `WH3_RUNTIME_PROBE|${JSON.stringify(e)}`).join('\n') };
+  });
+  const declaration = { batchId: 'fixture-batch', gameVersion: f.index.snapshot.gameVersion, staticSnapshotId: f.index.snapshotId,
+    declarationReference: 'Human fixture setup declaration', cases };
+  const build = (ins = inputs, d = declaration) => f.batch.buildRuntimeBatch(ins, f.index, f.manifest, d);
+  return { ...f, inputs, declaration, build };
+}
+
+test('Free Company four conditions remain separate observations with scoped overlap precedence', async () => {
+  const f = await batchFixture(), raw = JSON.stringify(f.inputs), staticBefore = JSON.stringify(f.index), result = f.build();
+  assert.equal(result.validation.status, 'VALIDATED'); assert.equal(result.validation.conflicts.length, 0);
+  const active = result.evidence.observations.filter(o => o.observationType === 'CCO_ACTIVE_PROJECTILE_CONTEXT');
+  assert.equal(active.length, 4); assert.equal(new Set(active.map(o => JSON.stringify(o.setup))).size, 4);
+  assert.deepEqual(active.map(o => o.observation.description).sort(), ['baseline', 'blessed', 'exploding', 'exploding']);
+  const precedence = result.evidence.observations.find(o => o.observationType === 'OVERRIDE_PRECEDENCE');
+  assert(precedence); assert.equal(precedence.provenance.kind, 'RUNTIME_MANUAL'); assert.equal(precedence.observation.relationship, 'PRECEDES');
+  assert.equal(precedence.pathBinding, 'COMPONENT_ROLE_ONLY'); assert.match(precedence.observation.notes, /this human-declared campaign setup/);
+  assert.equal(result.manifest.precedence.observedProjectile, 'exploding');
+  assert.equal(result.manifest.freeCompanyMatrix[0].baselineProjectile, 'baseline');
+  assert.equal(result.manifest.freeCompanyMatrix[0].candidateOverrides.length, 2);
+  assert.equal(result.resolutions.proposals.length, 0); assert.equal(result.manifest.productionEligible, false);
+  assert.equal(JSON.stringify(f.inputs), raw); assert.equal(JSON.stringify(f.index), staticBefore);
+  assert(result.comparison.reports.every(r => r.entityReviewStatus === 'NOT_REVIEWED' && r.entities.length === 0));
+  assert(result.parsed.events.every(e => e.event.metadata.setup === undefined));
+});
+
+test('missing and partial inputs retain gaps and cannot manufacture a fourth state or precedence', async () => {
+  const f = await batchFixture(), missing = f.build(f.inputs.slice(0, 3));
+  assert.deepEqual(missing.manifest.missingInputs, ['saved:both.txt']); assert.equal(missing.manifest.precedence.status, 'INCONCLUSIVE');
+  assert(!missing.evidence.observations.some(o => o.observationType === 'OVERRIDE_PRECEDENCE'));
+  assert.equal(missing.manifest.freeCompanyMatrix[3].observedActiveProjectiles.length, 0);
+  const partial = structuredClone(f.inputs); partial[3].text = partial[3].text.split('\n').slice(0, 3).join('\n');
+  const result = f.build(partial); assert.equal(result.manifest.precedence.status, 'INCONCLUSIVE');
+  assert.equal(result.manifest.freeCompanyMatrix[3].status, 'INCONCLUSIVE');
+  assert(result.comparison.reports.find(r => r.declaredCaseId === 'both').problems.includes('MISSING_RUN_END'));
+  assert.equal(result.resolutions.productionEligible, false);
+});
+
+test('identity/setup mismatch and conflicting replays remain held with no precedence winner', async () => {
+  const f = await batchFixture(), declarations = structuredClone(f.declaration);
+  declarations.cases[3].sourceMainKey = f.subject.sourceMainKey;
+  delete declarations.cases[3].modifiers;
+  const mismatch = f.build(f.inputs, declarations); assert.equal(mismatch.manifest.declarationProblems.length, 1);
+  assert.equal(mismatch.manifest.precedence.status, 'INCONCLUSIVE');
+  const inputs = structuredClone(f.inputs), events = inputs[3].text.split('\n'), altered = JSON.parse(events[1].split('WH3_RUNTIME_PROBE|')[1]);
+  altered.data.fields['ActiveProjectileContext.Key'] = V('blessed');
+  inputs[3].text += '\nWH3_RUNTIME_PROBE|' + JSON.stringify(altered);
+  const conflict = f.build(inputs); assert.equal(conflict.parsed.conflictKeys.length, 1);
+  assert(conflict.comparison.reports.some(r => r.status === 'CONFLICTING_RUNTIME_EVIDENCE'));
+  assert.equal(conflict.manifest.precedence.status, 'INCONCLUSIVE'); assert.equal(conflict.resolutions.proposals.length, 0);
+});
+
+test('wrong or ambiguous overlap projectile does not prove precedence even with both declared modifiers', async () => {
+  const f = await batchFixture(), inputs = structuredClone(f.inputs);
+  inputs[3].text = inputs[3].text.replaceAll('"value":"exploding"', '"value":"blessed"');
+  const r = f.build(inputs); assert.equal(r.manifest.precedence.status, 'INCONCLUSIVE');
+  assert(!r.evidence.observations.some(o => o.observationType === 'OVERRIDE_PRECEDENCE'));
+});
+
+test('multiple F9 captures in one session are one trial and equal Necrofex pool endpoints are not decreases', async () => {
+  const f = await fixture(), fields = structuredClone(f.unitFields);
+  fields.PrimaryAmmoPercent = V(0.95); fields.SecondaryAmmoPercent = V(0.99);
+  const events = ['snapshot-1', 'snapshot-2', 'snapshot-3'].flatMap((run, i) => {
+    const e = [f.event('SNAPSHOT_START', {}, run), ...f.frame(0, fields, run), f.event('SNAPSHOT_END', {}, run)];
+    e.forEach(x => { x.timestamp = V(i * 2000); });
+    e.filter(x => x.kind === 'ENTITY' && x.data.list === 'ManList').forEach(x => { x.data.fields.ReloadRemainingTime = V(7 - i); });
+    return e;
+  });
+  const input = { name: 'saved:necrofex.txt', text: events.map(e => `WH3_RUNTIME_PROBE|${JSON.stringify(e)}`).join('\n') };
+  const r = f.batch.buildRuntimeBatch([input], f.index, f.manifest, { batchId: 'fixture', gameVersion: f.index.snapshot.gameVersion,
+    staticSnapshotId: f.index.snapshotId, declarationReference: 'human fixture', cases: [{ id: 'necrofex', sourceMainKey: f.subject.sourceMainKey, sourceLogs: [input.name], interpretation: 'fixture' }] });
+  const series = r.manifest.cases[0].snapshotSeries[0]; assert(series.ammo.every(a => a.first < 1 && a.last < 1 && !a.decreaseObserved));
+  assert.equal(series.reloadRemainingTimeChanges.length, 2); assert(series.reloadRemainingTimeChanges.every(c => c.decreaseObserved && c.entityContinuity === 'UNVERIFIED_LIST_INDEX'));
+  assert.equal(new Set(r.evidence.observations.map(o => o.trialId)).size, 1);
+  assert.equal(r.resolutions.proposals.length, 0);
 });

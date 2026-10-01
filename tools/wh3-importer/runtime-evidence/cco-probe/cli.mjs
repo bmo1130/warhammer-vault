@@ -1,4 +1,5 @@
-import { mkdir, readFile, writeFile, stat } from 'node:fs/promises';
+import { mkdir, readFile, writeFile, stat, readdir } from 'node:fs/promises';
+import { createHash } from 'node:crypto';
 import { resolve } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { args, saveJSON } from '../cli.mjs';
@@ -7,6 +8,7 @@ import { openRawSource, resolveOptions } from '../../extract.mjs';
 import { inspectExtraComponents, buildCandidateManifest, verifyCandidates } from './candidates.mjs';
 import { generateProbeJobs, jobsMarkdown } from './jobs.mjs';
 import { parseProbeLogs, compareRuns, toRuntimeEvidence } from './ingest.mjs';
+import { buildRuntimeBatch, batchMarkdown } from './batch.mjs';
 
 export async function main(argv = process.argv.slice(2)) {
   const { command, options: o } = args(argv);
@@ -28,6 +30,37 @@ export async function main(argv = process.argv.slice(2)) {
       await saveJSON(out, 'manifest.json', summary); console.log(JSON.stringify({ output: out, ...summary }, null, 2)); return summary;
     } finally { await source.client.close(); }
   }
+  if (command === 'ingest-batch') {
+    if (!o.declarations || !o['log-dirs']) throw new Error('Required --declarations <batch JSON> --log-dirs "game=<directory>|desktop=<directory>".');
+    const declaration = await json(resolve(o.declarations));
+    if (!/^script_log_\d{6}_$/.test(declaration.logFilenamePrefix)) throw new Error('Required bounded script_log date prefix.');
+    const manifest = verifyCandidates(await json(resolve(o['bundle-dir'], 'static-candidates.json')));
+    const inputs = [], aliases = new Set();
+    for (const specification of o['log-dirs'].split('|')) {
+      const separator = specification.indexOf('='), alias = specification.slice(0, separator), directory = resolve(specification.slice(separator + 1));
+      if (separator < 1 || !/^[a-z][a-z0-9-]*$/.test(alias) || aliases.has(alias)) throw new Error('Invalid/duplicate log directory alias.');
+      aliases.add(alias);
+      for (const filename of (await readdir(directory)).filter(n => n.startsWith(declaration.logFilenamePrefix) && n.endsWith('.txt')).sort()) {
+        const sourcePath = resolve(directory, filename);
+        if ((await stat(sourcePath)).size > 50_000_000) throw new Error('Probe log exceeds 50 MB.');
+        const bytes = await readFile(sourcePath);
+        inputs.push({ name: `${alias}:${filename}`, sourcePath, bytes, text: bytes.toString('utf8'), sha256: createHash('sha256').update(bytes).digest('hex') });
+      }
+    }
+    const result = buildRuntimeBatch(inputs, index, manifest, declaration);
+    await mkdir(resolve(out, 'inputs'), { recursive: true });
+    for (const input of inputs) await writeFile(resolve(out, 'inputs', input.name.replace(':', '__')), input.bytes, { flag: 'wx' });
+    for (const [filename, document] of Object.entries({ 'raw-probe-events.json': result.parsed, 'comparison-report.json': result.comparison,
+      'runtime-evidence.json': result.evidence, 'validated-evidence.json': result.validation, 'resolution-proposals.json': result.resolutions,
+      'capture-triage.json': { held: result.held, ...result.triage, declarationProblems: result.manifest.declarationProblems },
+      'manifest.json': result.manifest, 'declared-setups.json': declaration })) await saveJSON(out, filename, document);
+    await writeFile(resolve(out, 'comparison-report.md'), batchMarkdown(result.manifest), { flag: 'wx' });
+    console.log(JSON.stringify({ output: out, parsedEvents: result.manifest.parsedEvents, captures: result.manifest.captures,
+      observations: result.manifest.observations, validation: result.validation.status, missingInputs: result.manifest.missingInputs,
+      declarationProblems: result.manifest.declarationProblems, precedence: result.manifest.precedence, productionEligible: false }, null, 2));
+    if (result.validation.status === 'REJECTED') process.exitCode = 1;
+    return result;
+  }
   if (command === 'ingest') {
     if (!o.logs) throw new Error('Required --logs "script_log_1.txt|script_log_2.txt".');
     const manifest = verifyCandidates(await json(resolve(o['bundle-dir'], 'static-candidates.json')));
@@ -48,6 +81,6 @@ export async function main(argv = process.argv.slice(2)) {
     if (result.validation.status === 'REJECTED') process.exitCode = 1;
     return { parsed, comparison, ...result };
   }
-  throw new Error('Commands: prepare --bundle-dir <preserved bundle> [--config <local config>] [--out <new directory>]; ingest --bundle-dir <CCO prepared bundle> --logs "one.txt|two.txt" [--out <new directory>].');
+  throw new Error('Commands: prepare; ingest --logs "one.txt|two.txt"; ingest-batch --declarations <JSON> --log-dirs "game=<dir>|desktop=<dir>". All require --bundle-dir <preserved CCO bundle>; optional --out <new directory>.');
 }
 if (process.argv[1] && import.meta.url === pathToFileURL(resolve(process.argv[1])).href) main().catch(e => { console.error(e.message); process.exitCode = 1; });
