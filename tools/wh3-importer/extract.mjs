@@ -53,7 +53,7 @@ export async function extractUnit(options, profileName = 'grail-knights', log = 
   return extractProfile(options, getProfile(profileName), log);
 }
 
-export async function extractProfile(options, profile, log = console.log) {
+export async function openRawSource(options, log = console.log) {
   const client = new RpfmClient(options.rpfmUrl);
   try {
     log('Connecting to installed RPFM and discovering its tools...');
@@ -72,7 +72,7 @@ export async function extractProfile(options, profile, log = console.log) {
     const localisation = await reader.decode(local, locFiles[0].path);
     const supplementalLocalisations = [];
     let supplementalLocalisationIssue;
-    if (profile.scopes.includes('abilityPhases')) {
+    {
       // This file and unit_abilities.onscreen_name were verified in the CA pack.
       const names = local.files.filter((file) => file.file_type === 'Loc' && file.path === 'text/db/unit_abilities__.loc');
       if (names.length === 1) supplementalLocalisations.push(await reader.decode(local, names[0].path));
@@ -93,6 +93,18 @@ export async function extractProfile(options, profile, log = console.log) {
       })),
       accessMethod: 'RPFM MCP / decode_packed_file source=PackFile, directly opened CA Release/Patch packs',
     };
+    return { client, reader, schema, localisation, supplementalLocalisations, supplementalLocalisationIssue, metadata, local };
+  } catch (error) {
+    await client.close().catch(() => undefined);
+    throw error;
+  }
+}
+
+export async function extractProfile(options, profile, log = console.log) {
+  const source = await openRawSource(options, log);
+  const { client, reader, schema, localisation, metadata, supplementalLocalisationIssue } = source;
+  const supplementalLocalisations = profile.scopes.includes('abilityPhases') ? source.supplementalLocalisations : [];
+  try {
     log(`Tracing localisation-confirmed ${profile.displayName} and bounded schema references...`);
     const dump = await traceUnit(reader, schema, localisation, metadata, profile, supplementalLocalisations);
     if (supplementalLocalisationIssue) dump.unresolved.push({ field: 'abilityLocalisation', reason: supplementalLocalisationIssue });

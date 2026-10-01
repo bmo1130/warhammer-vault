@@ -1,6 +1,6 @@
 import type { Unit } from '../../../src/domain/unit';
 
-export type MappingKind = 'DIRECT' | 'DERIVED_CONFIRMED' | 'UNRESOLVED';
+export type MappingKind = 'DIRECT' | 'GENERATED' | 'CURATED' | 'DERIVED_CONFIRMED' | 'UNRESOLVED';
 export type RawRow = { id: string; table: string; key: Record<string, unknown>; sourcePack: string; sourcePackPath: string; path: string; tableVersion: number; row: Record<string, unknown> };
 export type RawSchema = { table: string; version: number; fields: { name: string; is_key?: boolean; is_reference?: [string, string] | null }[] };
 export type RawJoin = { from: string; field: string; to: string; targetField: string; value: unknown; direction?: string; evidence: string; traversal?: string };

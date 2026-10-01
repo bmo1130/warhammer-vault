@@ -47,12 +47,12 @@ export function normalizeUnit(dump, context) {
     facts: [], omitted: [], warnings: [{ code: 'base-values-only', reason: 'Mapped costs/stats are CA base DB values, never effective campaign or battle-session values.' }, { code: 'primary-catalog-affiliation', reason: 'factionId is an explicit primary catalog alias of one verified military group; other permissions are retained. It is not exclusive ownership/effective recruitment.' }], unmapped: [],
   };
   const omit = (field, reason, semanticsStatus = 'UNRESOLVED') => result.omitted.push({ field, kind: 'UNRESOLVED', semanticsStatus, reason });
-  const mapped = (field, value, input, note, evidence = []) => {
+  const mapped = (field, value, input, note, evidence = [], kind = 'DIRECT') => {
     set(unit, field, value);
-    result.provenance.fields.push({ field, value, kind: 'DIRECT', source: input.source, rawValue: input.value, note, evidence });
+    result.provenance.fields.push({ field, value, kind, source: input.source, rawValue: input.value, note, evidence });
   };
-  mapped('id', unit.id, mainKey, 'Stable internal namespace alias ca_unit_<exact CA main key>; not the CA key itself.');
-  mapped('factionId', context.factionId, affiliation, 'Explicit primary catalog alias; validated military permission membership.');
+  mapped('id', unit.id, mainKey, 'Stable internal namespace alias ca_unit_<exact CA main key>; not the CA key itself.', [], 'GENERATED');
+  mapped('factionId', context.factionId, affiliation, 'Explicit primary catalog alias; validated military permission membership.', [], 'CURATED');
   const locRows = dump.rows.filter((row) => row.table === 'Loc' && row.row.key === `land_units_onscreen_name_${landKey.value}` && selectors.reachable(row));
   const name = locRows.length === 1 ? fact(locRows[0], 'text') : undefined;
   if (!valid(name?.value, 'string')) throw new Error('Unique raw onscreen_name localisation is required; profile/manual names are not substitutes.');
@@ -89,7 +89,7 @@ export function normalizeUnit(dump, context) {
     const existing = field.split('.').reduce((object, key) => object?.[key], unit) ?? [];
     if (existing.includes(id)) return;
     const values = [...existing, id];
-    mapped(`${field}.${existing.length}`, id, input, note, evidence);
+    mapped(`${field}.${existing.length}`, id, input, note, evidence, 'CURATED');
     // Numeric paths use arrays, not objects, for Unit's list properties.
     set(unit, field, values);
   };
@@ -100,7 +100,7 @@ export function normalizeUnit(dump, context) {
   for (const record of dump.rows.filter((row) => row.table === 'unit_attributes_tables' && attributeIds.has(row.id))) {
     const input = fact(record, 'key'); if (!input) continue;
     const movement = aliases.movement[input.value];
-    if (movement && ['movement.canFly', 'movement.canRun', 'movement.canSkirmish'].includes(movement.field) && typeof movement.value === 'boolean') mapped(movement.field, movement.value, input, 'Explicit attribute-to-structured-state mapping; no duplicate generic attribute.');
+    if (movement && ['movement.canFly', 'movement.canRun', 'movement.canSkirmish'].includes(movement.field) && typeof movement.value === 'boolean') mapped(movement.field, movement.value, input, 'Explicit attribute-to-structured-state mapping; no duplicate generic attribute.', [], 'CURATED');
     else if (aliases.attributes[input.value]) append('attributes', aliases.attributes[input.value], input, 'Explicit CA attribute alias.');
     else unknown('attribute', input, 'No reviewed CA-to-internal attribute mapping.');
   }

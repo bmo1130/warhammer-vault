@@ -7,6 +7,9 @@ import { inspectSource } from './inspect.mjs';
 import { normalizeUnit } from './normalization/normalizer.mjs';
 import { normalizationTargets } from './normalization/catalog.mjs';
 import { loadUnitValidator } from './normalization/validation.mjs';
+import { openRawSource } from './extract.mjs';
+import { attemptSample } from './pilot.mjs';
+import { representativeCatalog } from './pilot-catalog.mjs';
 
 // Expected keys were discovered in CA localisation/DB, never used for discovery.
 for (const [profile, expectedKey] of Object.entries({
@@ -39,7 +42,9 @@ for (const [profile, expectedKey] of Object.entries({
   const validateUnits = await loadUnitValidator();
   assert.deepEqual(validateUnits([normalized.unit], Object.values(normalizationTargets).map((target) => target.factionId)), []);
   assert.equal(normalized.sourceKind, 'ca-pack');
-  assert(normalized.provenance.fields.every((entry) => entry.kind === 'DIRECT' && entry.source.sourcePack !== 'synthetic-fixture.pack'));
+  assert(normalized.provenance.fields.every((entry) => ['DIRECT', 'GENERATED', 'CURATED'].includes(entry.kind) && entry.source.sourcePack !== 'synthetic-fixture.pack'));
+  assert.equal(normalized.provenance.fields.find(entry => entry.field === 'id').kind, 'GENERATED');
+  assert.equal(normalized.provenance.fields.find(entry => entry.field === 'factionId').kind, 'CURATED');
   assert.equal(normalized.unit.entities.totalHealth, undefined);
   assert.equal(normalized.unit.entities.count, undefined);
   assert.equal(normalized.unit.movement.speed, undefined);
@@ -105,4 +110,25 @@ test('opt-in: representative current stat label and experience evidence exists i
   assert(result.relationships.some((edge) => edge.field === 'localisation' && edge.evidence.includes('is_reference')));
   assert(result.relationships.some((edge) => edge.field === 'onscreen_name' && edge.evidence.includes('localised_fields')));
   assert(result.provenance.packs.every((pack) => /^[a-f0-9]{64}$/.test(pack.sha256)));
+});
+
+test('opt-in: generic pilot subset preserves ambiguity, untraced missile evidence and reader cache', { skip: !process.env.WH3_GAME_PATH && !process.env.WH3_INTEGRATION_CONFIG ? 'Set WH3_GAME_PATH or WH3_INTEGRATION_CONFIG and start RPFM to opt in.' : false }, async () => {
+  const args = process.env.WH3_INTEGRATION_CONFIG ? ['--config', process.env.WH3_INTEGRATION_CONFIG] : [];
+  const source = await openRawSource(await resolveOptions(args), () => {});
+  try {
+    const validate = await loadUnitValidator();
+    const results = [];
+    for (const displayName of ['Dragon Ogres', 'Handgunners', 'Dread Saurian']) results.push(await attemptSample(source, representativeCatalog.find(s => s.displayName === displayName), validate));
+    assert.deepEqual(results.map(r => r.status), ['CLEAN', 'BLOCKED', 'PARTIAL']);
+    assert.equal(results[0].dump.sourceKind, 'ca-pack');
+    assert(results[1].discovery.candidates.length > 1);
+    assert.equal(results[1].normalized, null);
+    assert(results[2].exceptions.some(e => e.category === 'UNKNOWN_MISSILE_CHAIN'));
+    assert.notEqual(results[2].coverage['missile.range'].status, 'NOT_APPLICABLE');
+    const before = source.reader.cache.size;
+    const first = await source.reader.tables('land_units_tables');
+    const second = await source.reader.tables('land_units_tables');
+    assert.equal(source.reader.cache.size, before);
+    assert.equal(first[0], second[0]);
+  } finally { await source.client.close(); }
 });

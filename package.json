@@ -14,7 +14,8 @@
     "research:wh3-report": "node tools/wh3-importer/research-report.mjs",
     "test:wh3-integration": "node --test tools/wh3-importer/integration.test.mjs",
     "preview": "vite preview --host 0.0.0.0",
-    "normalize:wh3-unit": "node tools/wh3-importer/normalize-cli.mjs"
+    "normalize:wh3-unit": "node tools/wh3-importer/normalize-cli.mjs",
+    "pilot:wh3-units": "node tools/wh3-importer/pilot-cli.mjs"
   },
   "dependencies": {
     "react": "^19.1.0",

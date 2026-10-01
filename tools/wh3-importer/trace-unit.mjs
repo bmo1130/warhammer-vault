@@ -22,12 +22,7 @@ export function resolveReferenceTable(referenceName, schema) {
   return matches.length === 1 ? matches[0] : undefined;
 }
 
-export async function traceUnit(reader, schema, localisation, metadata = {}, profile = unitProfiles['grail-knights'], supplementalLocalisations = []) {
-  const { displayName } = profile;
-  const allowedTables = tablesForProfile(profile);
-  if (!['unique', 'paid-recruitment'].includes(profile.rootSelection)) throw new Error(`Unsupported root selection: ${profile.rootSelection}`);
-  const unresolved = [];
-  const problem = (field, reason) => unresolved.push({ field, reason });
+export async function discoverRoots(reader, schema, localisation, displayName) {
   const mainTables = await reader.tables('main_units_tables');
   const landTables = await reader.tables('land_units_tables');
   if (!mainTables.length || !landTables.length) throw new Error('CA DB root tables are not exposed. Check loaded CA pack inventory and WH3 schema; do not infer that the unit is absent.');
@@ -48,6 +43,16 @@ export async function traceUnit(reader, schema, localisation, metadata = {}, pro
       }
     }
   }
+  return { candidates, mainTables, landTables };
+}
+
+export async function traceUnit(reader, schema, localisation, metadata = {}, profile = unitProfiles['grail-knights'], supplementalLocalisations = []) {
+  const { displayName } = profile;
+  const allowedTables = tablesForProfile(profile);
+  if (!['unique', 'paid-recruitment'].includes(profile.rootSelection)) throw new Error(`Unsupported root selection: ${profile.rootSelection}`);
+  const unresolved = [];
+  const problem = (field, reason) => unresolved.push({ field, reason });
+  const { candidates, mainTables, landTables } = await discoverRoots(reader, schema, localisation, displayName);
   const candidateEvidence = candidates.map((candidate) => ({
     mainKey: candidate.row.unit, landKey: candidate.landRow.key, localisationKey: candidate.loc.key,
     sourcePack: candidate.table.sourcePack, path: candidate.table.path,
