@@ -1,5 +1,13 @@
 # Conservative raw → Unit normalization
 
+The subsequent [24-name representative pilot](PILOT.md) exercises the same normalizer with schema-discovered scopes and explicit staging affiliation aliases. Its CLEAN/PARTIAL/BLOCKED wrapper is required when interpreting generic results. It does not authorize whole-WH3 import.
+
+Provenance now distinguishes **DIRECT** (raw value copied), **GENERATED** (deterministic internal unit ID), and **CURATED** (explicit faction/ability/attribute/state alias). Existing Unit values, omission policy, rawValue and source pointers are unchanged. The historical DIRECT totals below counted all aliases together; the core breakdowns are now Grail 22/1/8, Helstorm 35/1/3, Bloodthirster 25/1/10 in DIRECT/GENERATED/CURATED order. No derived formula was approved.
+
+The subsequent [24-name representative pilot](PILOT.md) exercises the same normalizer with schema-discovered scopes and explicit staging affiliation aliases. Its CLEAN/PARTIAL/BLOCKED wrapper is required when interpreting generic results. It does not authorize whole-WH3 import.
+
+Provenance now distinguishes **DIRECT** (raw value copied), **GENERATED** (deterministic internal unit ID), and **CURATED** (explicit faction/ability/attribute/state alias). Existing Unit values, omission policy, rawValue and source pointers are unchanged. The historical DIRECT totals below counted all aliases together; the core breakdowns are now Grail 22/1/8, Helstorm 35/1/3, Bloodthirster 25/1/10 in DIRECT/GENERATED/CURATED order. No derived formula was approved.
+
 The first normalizer maps only reviewed direct facts for Grail Knights, Helstorm Rocket Battery and Bloodthirster. It is an offline staging pipeline, separate from React and the production catalog. `src/data/units.json` is unchanged; generated artifacts remain Git-ignored. No HP/speed/ammo calculator, mod merging, save parsing or whole-unit import is implemented.
 
 ## Architecture and files

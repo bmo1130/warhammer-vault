@@ -82,6 +82,8 @@ npm run build
 
 ## WH3 원본 데이터 추적 도구
 
+대표 24개 이름을 대상으로 실제 CA root discovery, bounded trace, conservative normalize, validation과 예외 집계를 실행하는 `npm run pilot:wh3-units`를 추가했습니다. 실제 결과는 CLEAN 1 / PARTIAL 14 / BLOCKED 9이며, 전체 import 없이 위험 구조를 기록합니다. 선정 근거·발견 key·coverage·재현 방법은 [PILOT.md](tools/wh3-importer/PILOT.md)에 있습니다. 기본 테스트 78개와 실제 통합 테스트 5개가 통과했습니다.
+
 `tools/wh3-importer/`는 설치된 RPFM server의 검증된 MCP 인터페이스로 실제 CA `db.pack`과 `local_en.pack`을 직접 읽어 성배기사, Helstorm, Bloodthirster 중 선택한 한 유닛의 원본 row와 schema 기반 join을 추적하는 개발 도구입니다. 전체 DB dump, 모드 병합, 앱 데이터·UI 변경은 하지 않습니다. 별도 보수적 normalizer는 저장된 핵심 3종 raw trace의 검증된 직접값만 `Unit`으로 옮겨 staging 결과를 생성합니다.
 
 ```powershell

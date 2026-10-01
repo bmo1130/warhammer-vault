@@ -1,4 +1,4 @@
--- Canonical external-file battle probe. Read-only CCO queries; no DB/game writes.
+﻿-- Canonical external-file battle probe. Read-only CCO queries; no DB/game writes.
 -- install.ps1 prepends WV_CCO_CONFIG. F9 snapshots/cursor; then F10 traces.
 WV_CCO_PROBE = WV_CCO_PROBE or {serial = 0, sequence = 0}
 local P = WV_CCO_PROBE
@@ -16,12 +16,18 @@ if not P.battleToken then
 end
 local timer_name, listener_name = "wv_cco_trace", "wv_cco_f10"
 local function array(t) return setmetatable(t or {}, {__json_array = true}) end
+
+local function invalid_number(v)
+    if v ~= v then return true end
+    local huge = math and math.huge
+    return huge ~= nil and (v == huge or v == -huge)
+end
 local function json(v)
     local t = type(v)
     if t == "nil" then return "null" end
     if t == "boolean" then return v and "true" or "false" end
     if t == "number" then
-        if v ~= v or v == math.huge or v == -math.huge then return "null" end
+        if invalid_number(v) then return "null" end
         return tostring(v)
     end
     if t == "string" then
@@ -50,7 +56,7 @@ local function safe(fn)
     if t ~= "string" and t ~= "boolean" and t ~= "number" and t ~= "table" then
         return {status = "UNSERIALIZABLE", valueType = t}
     end
-    if t == "number" and (value ~= value or value == math.huge or value == -math.huge) then return {status = "INVALID_NUMBER"} end
+    if t == "number" and invalid_number(value) then return {status = "INVALID_NUMBER"} end
     return {status = "VALUE", value = value}
 end
 local function query(ctx, expression) return safe(function() return ctx:Call(expression) end) end
@@ -143,12 +149,45 @@ local function capture(unit, mode, sample)
     return state
 end
 local function cursor()
-    local ok, ctx = pcall(function() return cco("CcoBattleCursorContext", "") end)
-    local e = ok and context(ctx, "EntityContext") or nil
+    local ok, root = pcall(function()
+        return cco("CcoBattleRoot", "")
+    end)
+
+    local cursor_ctx = ok and root and context(root, "CursorContextContext") or nil
+
+    if not cursor_ctx then
+        emit("CURSOR", {
+            status = "INCONCLUSIVE",
+            reason = "BATTLE_CURSOR_CONTEXT_UNAVAILABLE"
+        })
+        return
+    end
+
+    local e = context(cursor_ctx, "EntityContext")
+
+    if not e then
+        emit("CURSOR", {
+            status = "INCONCLUSIVE",
+            reason = "NO_ENTITY_UNDER_CURSOR",
+            cursor = {
+                HasIntersections = query(cursor_ctx, "HasIntersections"),
+                IsContextSelectable = query(cursor_ctx, "IsContextSelectable"),
+                CurrentCursorKey = query(cursor_ctx, "CurrentCursorKey")
+            }
+        })
+        return
+    end
+
     local f = entity(e, true)
-    f["UnitContext.UnitRecordContext.Key"] = query(e, "UnitContext.UnitRecordContext.Key")
-    f["UnitContext.UnitRecordContext.UnitLandRecordContext.Key"] = query(e, "UnitContext.UnitRecordContext.UnitLandRecordContext.Key")
-    emit("CURSOR", {fields = f, status = e and "OBSERVED" or "INCONCLUSIVE"})
+    f["UnitContext.UnitRecordContext.Key"] =
+        query(e, "UnitContext.UnitRecordContext.Key")
+    f["UnitContext.UnitRecordContext.UnitLandRecordContext.Key"] =
+        query(e, "UnitContext.UnitRecordContext.UnitLandRecordContext.Key")
+
+    emit("CURSOR", {
+        fields = f,
+        status = "OBSERVED"
+    })
 end
 local function stop(reason)
     P.generation = (P.generation or 0) + 1
@@ -193,3 +232,4 @@ local unit = selected()
 if unit then capture(unit, "SNAPSHOT", 0) else emit("ERROR", {reason = "NO_SELECTED_PLAYER_UNIT"}) end
 cursor()
 emit("SNAPSHOT_END", {})
+

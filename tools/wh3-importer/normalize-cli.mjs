@@ -33,5 +33,6 @@ try {
   await mkdir(outputDir, { recursive: true });
   await writeFile(path.join(outputDir, `${profile.slug}.result.json`), JSON.stringify(result, null, 2) + '\n');
   await writeFile(path.join(outputDir, `${profile.slug}.summary.md`), renderNormalizationSummary(result, manual));
-  console.log(`${profile.displayName}: ${result.provenance.fields.length} DIRECT mappings; ${result.omitted.length} omitted; ${result.unmapped.length} unmapped. Validation passed.\n${path.join(outputDir, `${profile.slug}.result.json`)}`);
+  const kinds = Object.fromEntries(['DIRECT', 'GENERATED', 'CURATED'].map(kind => [kind, result.provenance.fields.filter(entry => entry.kind === kind).length]));
+  console.log(`${profile.displayName}: ${JSON.stringify(kinds)} mappings; ${result.omitted.length} omitted; ${result.unmapped.length} unmapped. Validation passed.\n${path.join(outputDir, `${profile.slug}.result.json`)}`);
 } catch (error) { console.error(`WH3 normalization failed: ${error.message}`); process.exitCode = 1; }

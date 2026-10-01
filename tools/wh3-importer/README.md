@@ -1,5 +1,9 @@
 # WH3 raw extractor and conservative normalizer
 
+The representative 24-name CA batch pilot is now available as `npm run pilot:wh3-units`. It shares this reader/tracer/normalizer, uses generic schema-backed scope discovery, preserves ambiguous roots without applying the core paid policy, and writes ignored diagnostic artifacts only. See [PILOT.md](PILOT.md) for actual results, limitations, taxonomy and reproduction. The original three core profiles below retain their separate regression contract.
+
+The representative 24-name CA batch pilot is now available as `npm run pilot:wh3-units`. It shares this reader/tracer/normalizer, uses generic schema-backed scope discovery, preserves ambiguous roots without applying the core paid policy, and writes ignored diagnostic artifacts only. See [PILOT.md](PILOT.md) for actual results, limitations, taxonomy and reproduction. The original three core profiles below retain their separate regression contract.
+
 This is a development tool, separate from React. It reads **one selected unit root** (Grail Knights, Helstorm Rocket Battery or Bloodthirster) from directly opened CA packs through an installed RPFM server. The extractor does not parse the Pack binary format or normalize into Vault `Unit`. A separate offline conservative normalizer maps the three core saved traces; see [NORMALIZATION.md](NORMALIZATION.md). Neither pipeline modifies `src/data/units.json`, merges mods, applies modifiers, or changes UI.
 
 ## Verified interface and local investigation
