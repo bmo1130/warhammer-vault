@@ -28,6 +28,24 @@ Capture the unit card and a short firing/casualty recording where relevant.
   alone cannot identify the candidate. Do not infer actual availability from a
   permission/building row alone.
 
-Separately decide the **editorial catalog scope** and canonical key mappings.
-Runtime observations cannot decide whether the catalog should include campaign,
-custom-battle, supply, cross-faction or summoned variants; that is a product policy.
+Maintain **editorial catalog scope** and exact-key decisions separately from
+runtime observations. Runtime cannot decide whether the catalog should include
+campaign, custom-battle, supply, cross-faction or summoned variants.
+
+The current editorial default is explicit faction-roster entries. Arkhan Crypt
+Horrors/Hexwraiths and both faction Warhounds are retained as separate roster
+contexts. Imperial Supply, ability-spawn and nonstandard Flamers roots remain
+addressable contexts outside that default. These decisions do not establish live
+recruitment/availability; see `../CATALOG-IDENTITY.md`.
+
+- [ ] **Ability-spawn identity:** in Greater Gate of Khorne, the upgraded Strigoi
+  Raise Dead and standard Raise Dead cases, record the spawned unit's trustworthy
+  main/land key if exposed, duration and restrictions. DB `spawned_unit` identifies
+  a land record; it does not specify a universal main-root runtime selection rule.
+- [ ] **Nonstandard Flamers:** identify which prologue/scenario actually uses
+  `wh3_main_pro_tze_mon_flamers_0`. Do not treat its pro-group permission or key
+  spelling as proof of scenario activation.
+
+No runtime action is needed to approve displaying both Beastmen/Chaos Warhounds or
+the Arkhan entries: that editorial policy is already explicit. Record availability
+as a separate sourced fact, without redefining the catalog identity.

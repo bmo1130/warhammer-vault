@@ -37,7 +37,7 @@ async function main() {
     for (const result of pilot.results.filter(r => r.exceptions.some(e => e.category === 'IDENTITY_AMBIGUITY'))) {
       const identity = await inspectIdentity(source, result);
       report.identities.push(identity); await save(`${result.sample.slug}.identity.json`, identity);
-      console.log(`${result.sample.displayName}: identity ${identity.classification}, ${identity.candidates.length} roots retained`);
+      console.log(`${result.sample.displayName}: identity ${identity.classification}, ${identity.candidates.length} roots retained; catalog ${identity.catalogIdentity.policyResolution}`);
     }
     for (const name of ['Necrofex Colossus', 'Dread Saurian', 'Black Coach', 'Skeleton Chariots']) {
       const result = pilot.results.find(r => r.sample.displayName === name);
@@ -62,7 +62,7 @@ async function main() {
     await save('review.json', report);
     await save('comparison.json', report.comparison);
     await writeFile(path.join(output, 'summary.md'), renderReview(report));
-    await save('manifest.json', { status: 'COMPLETE', sourceKind: 'ca-pack', provenance: source.metadata, baseline, output, pilot: 'pilot/manifest.json', review: 'review.json', comparison: 'comparison.json', derivedFormulasAdded: 0, canonicalMappingsAdded: 0, fullImport: false });
+    await save('manifest.json', { status: 'COMPLETE', sourceKind: 'ca-pack', provenance: source.metadata, baseline, output, pilot: 'pilot/manifest.json', review: 'review.json', comparison: 'comparison.json', derivedFormulasAdded: 0, canonicalMappingsAdded: 0, catalogIdentity: report.comparison.catalogIdentity, fullImport: false });
     console.log(`Blocker review: ${output}`);
   } catch (error) { await save('manifest.json', { status: 'FAILED', baseline, output, error: error.message }); throw error; }
   finally { await source?.client.close().catch(() => {}); }

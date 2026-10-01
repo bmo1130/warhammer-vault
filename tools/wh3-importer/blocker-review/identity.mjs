@@ -1,4 +1,5 @@
 import { EvidenceProbe, requireSameSource, rawFact } from './evidence.mjs';
+import { classifyCatalogCandidates } from '../catalog-identity/policy.mjs';
 
 export async function inspectIdentity(source, result) {
   requireSameSource(source.metadata, result.discovery.evidence.provenance);
@@ -15,6 +16,9 @@ export async function inspectIdentity(source, result) {
     ['unit_variants_tables', 'unit', 'land_units_tables'],
   ]) await p.reverse(table, field, target);
   await p.forward('units_custom_battle_permissions_tables', 'faction', 'factions_tables');
+  // Bounded context evidence: spawning references point to land identity, not
+  // automatically to a canonical main root. Preserve raw spawn conditions.
+  await p.reverse('unit_special_abilities_tables', 'spawned_unit', 'land_units_tables');
   // No reverse traversal from a group to all factions: only explicitly selected
   // custom-battle faction records are inspected.
   const evidence = p.artifact();
@@ -31,7 +35,8 @@ export async function inspectIdentity(source, result) {
     };
   });
   return { sample: result.sample, ...assessIdentity(candidates, evidence.issues), candidates, evidence,
-    catalogDecision: 'No canonical mapping inserted. A display name is not a global identity; retain every candidate main key.',
+    catalogIdentity: classifyCatalogCandidates(candidates, evidence),
+    catalogDecision: 'Exact-key editorial contexts classified separately; no name-based canonical root selected and no Unit materialized.',
     runtimeBoundary: 'Effective recruitment, scripted grants and in-session availability are not established by static memberships.' };
 }
 
