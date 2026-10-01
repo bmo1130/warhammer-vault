@@ -13,6 +13,13 @@ export async function inspectOverrides(source, result) {
   await p.reverse('missile_weapons_to_projectiles_tables', 'missile_weapon', 'missile_weapons_tables');
   await p.forward('missile_weapons_to_projectiles_tables', 'projectile', 'projectiles_tables');
   await p.forward('projectiles_tables', 'explosion_type', 'projectiles_explosions_tables');
+  await collectEffectConditions(p, source);
+  const evidence = p.artifact();
+  return { sample: result.sample, evidence, contract: overrideContract(evidence) };
+}
+
+// Shared finite condition traversal. Existence of these edges is not activation.
+export async function collectEffectConditions(p, source) {
   await p.reverse('effect_bonus_value_missile_weapon_junctions_tables', 'missile_weapon_junction', 'unit_missile_weapon_junctions_tables');
   await p.forward('effect_bonus_value_missile_weapon_junctions_tables', 'effect', 'effects_tables');
   for (const [table, field] of [
@@ -35,20 +42,27 @@ export async function inspectOverrides(source, result) {
   await p.forward('character_skill_node_sets_tables', 'agent_subtype_key', 'agent_subtypes_tables');
   await p.forward('effect_bundles_to_effects_junctions_tables', 'effect_bundle_key', 'effect_bundles_tables');
   await p.forward('effect_bundles_to_effects_junctions_tables', 'effect_scope', 'campaign_effect_scopes_tables');
+  await p.forward('technology_effects_junction_tables', 'technology', 'technologies_tables');
+  await p.forward('technology_effects_junction_tables', 'effect_scope', 'campaign_effect_scopes_tables');
+  await p.forward('building_effects_junction_tables', 'building', 'building_levels_tables');
+  await p.forward('building_effects_junction_tables', 'effect_scope', 'campaign_effect_scopes_tables');
+  await p.forward('building_effects_junction_tables', 'context_requirement', 'building_effect_context_expressions_tables');
   await p.reverse('ritual_payload_effect_bundles_tables', 'effect_bundle', 'effect_bundles_tables');
   await p.forward('ritual_payload_effect_bundles_tables', 'payload', 'ritual_payloads_tables');
   for (const field of ['completion_payload', 'start_payload', 'self_payload']) await p.reverse('rituals_tables', field, 'ritual_payloads_tables');
-  const evidence = p.artifact();
-  return { sample: result.sample, evidence, contract: overrideContract(evidence) };
 }
 
 export function overrideContract(evidence) {
+  const conditionEffects = condition => {
+    const fields = evidence.schemas.find(s => s.table === condition.table && s.version === condition.tableVersion)?.fields.filter(f => f.is_reference?.[0]?.replace(/_tables$/, '') === 'effects') ?? [];
+    return fields.length === 1 ? connected(evidence, condition, fields[0].name, 'effects_tables') : [];
+  };
   const overrides = evidence.rows.filter(r => r.table === 'unit_missile_weapon_junctions_tables');
   const entries = overrides.map(row => ({
     junctionId: rawFact(evidence, row, 'id'), weapon: connected(evidence, row, 'missile_weapon', 'missile_weapons_tables').map(x => ({ key: x.row.row.key, rowId: x.row.id, edge: x.edge })),
     entityStatsOverride: rawFact(evidence, row, 'battle_entity_stats_override'),
     enablingEffects: evidence.rows.filter(r => r.table === 'effect_bonus_value_missile_weapon_junctions_tables' && connected(evidence, r, 'missile_weapon_junction', 'unit_missile_weapon_junctions_tables').some(x => x.row.id === row.id)).map(r => ({ rowId: r.id, raw: r.row,
-      conditions: evidence.rows.filter(condition => ['character_skill_level_to_effects_junctions_tables', 'effect_bundles_to_effects_junctions_tables', 'technology_effects_junction_tables', 'building_effects_junction_tables', 'frontend_faction_effect_junctions_tables'].includes(condition.table) && connected(evidence, condition, Object.hasOwn(condition.row, 'effect_key') ? 'effect_key' : 'effect', 'effects_tables').some(x => connected(evidence, r, 'effect', 'effects_tables').some(y => y.row.id === x.row.id))).map(condition => ({ rowId: condition.id, table: condition.table, raw: condition.row })) })),
+      conditions: evidence.rows.filter(condition => ['character_skill_level_to_effects_junctions_tables', 'effect_bundles_to_effects_junctions_tables', 'technology_effects_junction_tables', 'building_effects_junction_tables', 'frontend_faction_effect_junctions_tables'].includes(condition.table) && conditionEffects(condition).some(x => connected(evidence, r, 'effect', 'effects_tables').some(y => y.row.id === x.row.id))).map(condition => ({ rowId: condition.id, table: condition.table, raw: condition.row })) })),
     active: 'UNKNOWN', precedence: 'UNRESOLVED',
   }));
   return { format: 'warhammer-vault-missile-overrides-v1', entries, unitMissileComplete: false,

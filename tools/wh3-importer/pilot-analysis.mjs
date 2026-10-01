@@ -9,6 +9,7 @@ export const categories = [
   'MULTI_FACTION_PERMISSION', 'NO_PRIMARY_CATALOG_MAPPING', 'MISSING_REQUIRED_JOIN', 'MULTIPLE_REQUIRED_JOIN',
   'SEMANTICS_BLOCKED', 'VALIDATION_FAILURE', 'NORMALIZED_WITH_OMISSIONS', 'NORMALIZED_CLEAN',
   'ROOT_NOT_FOUND', 'RESOURCE_LIMIT', 'SOURCE_FAILURE', 'UNMAPPED_FIELD', 'OUTSIDE_TRACE_SCOPE',
+  'MISSILE_PRESENTATION_UNRESOLVED', 'INCOMPLETE_MISSILE_SOURCE_GRAPH',
 ];
 export function exception(sample, category, severity, fieldOrRelation, reason, evidence = [], caKey = null) {
   if (!categories.includes(category) || !['INFO', 'OMISSION', 'BLOCKING'].includes(severity)) throw new Error('Invalid exception taxonomy.');
@@ -39,13 +40,20 @@ export const get = (obj, field) => field.split('.').reduce((value, key) => value
 export function coverageFor(result) {
   const { normalized, dump } = result;
   const c = dump ? observationContext(dump) : undefined;
-  const missileRequired = !!(c?.land?.row.primary_missile_weapon || c?.engine?.row.missile_weapon || result.discovery?.evidence?.rows.some(r => r.table === 'unit_missile_weapon_junctions_tables') || c?.land?.row.primary_ammo > 0 || c?.land?.row.secondary_ammo > 0);
+  const missileContract = result.missileInspection?.contract;
+  const missileRequired = !!(c?.land?.row.primary_missile_weapon || c?.engine?.row.missile_weapon || result.discovery?.evidence?.rows.some(r => r.table === 'unit_missile_weapon_junctions_tables') || c?.land?.row.primary_ammo > 0 || c?.land?.row.secondary_ammo > 0 || missileContract?.paths.length || (missileContract && missileContract.completeness !== 'NO_MISSILE_PATH'));
   const output = {};
   for (const field of fields) {
     if (!normalized || result.status === 'BLOCKED') { output[field] = { status: 'FAILED', reason: 'No validated trustworthy Unit; applicability not established.', structural: true }; continue; }
+    if (field.startsWith('missile.') && missileContract?.completeness === 'STRUCTURE_KNOWN_RUNTIME_UNRESOLVED' && directMappings.some(m => m[0] === field)) {
+      output[field] = { status: 'OMITTED', reason: 'Complete source graph has no established single-profile presentation.', presentationBlocked: true }; continue;
+    }
+    if (field.startsWith('missile.') && normalized.omitted.some(o => o.field === field && o.semanticsStatus === 'MISSILE_PRESENTATION_UNRESOLVED')) {
+      output[field] = { status: 'OMITTED', reason: 'Raw source graph retained; single-profile presentation/activation unresolved.', presentationBlocked: true }; continue;
+    }
     if (field.startsWith('missile.') && !missileRequired) { output[field] = { status: 'NOT_APPLICABLE', reason: 'No primary/engine/junction missile in inspected base scope; not a global runtime absence claim.' }; continue; }
-    if (field.startsWith('missile.explosion.') && c?.projectile?.row.explosion_type === '') { output[field] = { status: 'NOT_APPLICABLE', reason: 'Verified projectile explosion reference is empty.' }; continue; }
-    if (field.startsWith('missile.projectile.penetration.') && c?.projectile?.row.projectile_penetration === '') { output[field] = { status: 'NOT_APPLICABLE', reason: 'Verified projectile penetration reference is empty.' }; continue; }
+    if (field.startsWith('missile.explosion.') && c?.projectile?.row.explosion_type === '' && (!missileContract || missileContract.presentation.singleBlockSafe)) { output[field] = { status: 'NOT_APPLICABLE', reason: 'Verified projectile explosion reference is empty.' }; continue; }
+    if (field.startsWith('missile.projectile.penetration.') && c?.projectile?.row.projectile_penetration === '' && (!missileContract || missileContract.presentation.singleBlockSafe)) { output[field] = { status: 'NOT_APPLICABLE', reason: 'Verified projectile penetration reference is empty.' }; continue; }
     const semantic = semanticFields.has(field) || ['defense.resistances.', 'terrainModifiers.', 'campaign.recruitmentRequirements.'].some(prefix => field.startsWith(prefix));
     const uncertainList = (field === 'attributes' && normalized.unmapped.some(x => x.kind === 'attribute')) || (['abilities', 'passiveAbilities'].includes(field) && normalized.unmapped.some(x => x.kind === 'ability'));
     if (uncertainList) output[field] = { status: 'UNMAPPED', reason: 'List is incomplete because CA IDs/classification are unreviewed.', structural: true };
@@ -61,10 +69,10 @@ export function coverageFor(result) {
   return output;
 }
 
-export function analyzeNormalized(sample, dump, normalized, extras) {
+export function analyzeNormalized(sample, dump, normalized, extras, missileInspection) {
   const issues = [], c = observationContext(dump), caKey = dump.unit.caKey;
   const add = (category, severity, field, reason, evidence = []) => issues.push(exception(sample, category, severity, field, reason, evidence, caKey));
-  const scopedCoverage = coverageFor({ normalized, dump, status: 'CLEAN' });
+  const scopedCoverage = coverageFor({ normalized, dump, status: 'CLEAN', missileInspection });
   for (const omitted of normalized.omitted) if (semanticFields.has(omitted.field) && scopedCoverage[omitted.field]?.semanticsBlocked) add('SEMANTICS_BLOCKED', 'OMISSION', omitted.field, omitted.reason, [{ semanticsStatus: omitted.semanticsStatus }]);
   if (c.land.row.mount) add('MOUNT_STRUCTURE', 'INFO', 'land_units.mount', 'Separate mount/rider roles retained; no aggregate chosen.', [c.land, c.mountEntity].filter(Boolean));
   if (c.land.row.engine) add('ARTILLERY_STRUCTURE', 'INFO', 'land_units.engine', 'Engine structure also occurs in melee chariots; this category is not proof of artillery firing.', [c.land, c.engine].filter(Boolean));
@@ -74,15 +82,18 @@ export function analyzeNormalized(sample, dump, normalized, extras) {
   if (entityFields.some(field => get(normalized.unit, field) === undefined)) add('UNKNOWN_ENTITY_ROLE', 'OMISSION', 'entities', 'Representative size/mass/penetration resistance is ambiguous or unavailable; roles and missing joins require review.', [c.land]);
   for (const row of dump.rows.filter(r => r.table === 'battle_entities_tables')) if (!['tiny', 'small', 'medium', 'large', 'very_large'].includes(row.row.size)) add('UNSUPPORTED_SIZE', 'OMISSION', 'battle_entities.size', 'Raw size has no Unit entity-size mapping.', [row]);
   for (const u of normalized.unmapped) add(u.reason.includes('classification') ? 'ABILITY_CLASSIFICATION_CONFLICT' : u.kind === 'ability' ? 'UNKNOWN_ABILITY' : 'UNKNOWN_ATTRIBUTE', 'OMISSION', `${u.kind}:${u.caId}`, u.reason, [u.source]);
-  const temporary = { normalized, dump, status: 'CLEAN', discovery: { evidence: { rows: [] } } };
+  const temporary = { normalized, dump, status: 'CLEAN', discovery: { evidence: { rows: [] } }, missileInspection };
   for (const [field, value] of Object.entries(coverageFor(temporary))) {
-    if (value.structural && directMappings.some(x => x[0] === field)) {
+    const invalidRaw = normalized.omitted.find(o => o.field === field && o.reason.startsWith('Raw field is not a valid'));
+    if ((value.structural || (value.presentationBlocked && invalidRaw)) && directMappings.some(x => x[0] === field)) {
       const mapping = directMappings.find(x => x[0] === field), raw = c[mapping[1]]?.row[mapping[2]];
-      add(mapping[3] === 'size' && raw !== undefined ? 'UNKNOWN_ENUM_VALUE' : 'UNSUPPORTED_RAW_SHAPE', 'OMISSION', field, value.reason, [{ rawValue: raw ?? null, sourceRow: c[mapping[1]]?.id ?? null }]);
+      add(mapping[3] === 'size' && raw !== undefined ? 'UNKNOWN_ENUM_VALUE' : 'UNSUPPORTED_RAW_SHAPE', 'OMISSION', field, invalidRaw?.reason ?? value.reason, [{ rawValue: raw ?? null, sourceRow: c[mapping[1]]?.id ?? null }]);
     }
   }
   for (const issue of dump.unresolved) add(issue.reason.includes('Multiple raw rows') ? 'MULTIPLE_REQUIRED_JOIN' : issue.reason.includes('No source row') ? 'MISSING_REQUIRED_JOIN' : 'UNSUPPORTED_RAW_SHAPE', 'OMISSION', issue.field, issue.reason);
   const missileRows = extras.rows.filter(r => r.table === 'missile_weapons_tables');
+  if (missileInspection?.contract.completeness === 'STRUCTURE_KNOWN_RUNTIME_UNRESOLVED' || normalized.missilePresentation?.withheldFields.length) add('MISSILE_PRESENTATION_UNRESOLVED', 'OMISSION', 'missile', 'Source paths remain in the semantic sidecar; no representative active weapon was chosen. Any previously mapped base-chain facts are preserved separately.', normalized.missilePresentation?.withheldFields ?? []);
+  if (missileInspection?.contract.completeness === 'INCOMPLETE_DB_CHAIN') add('INCOMPLETE_MISSILE_SOURCE_GRAPH', 'OMISSION', 'missileSources', 'Bounded missile traversal has incomplete schema edges; not evidence of no weapon.', missileInspection.contract.issues);
   if (new Set(missileRows.map(r => r.row.key)).size > 1) add('MULTIPLE_MISSILE_WEAPONS', 'OMISSION', 'missile', 'Unit has one missile profile; raw primary/engine/override weapons are not merged. Any normalized missile values describe only the current selector.', missileRows);
   const alternates = extras.rows.filter(r => r.table === 'missile_weapons_to_projectiles_tables');
   if (alternates.length) add('UNKNOWN_PROJECTILE_STRUCTURE', 'OMISSION', 'missile_weapons_to_projectiles', 'Alternate projectile modes cannot fit one default projectile safely.', alternates);

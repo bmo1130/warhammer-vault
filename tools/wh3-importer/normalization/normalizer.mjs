@@ -4,6 +4,7 @@ import { observations } from '../observations/index.mjs';
 import { directMappings, blockedMappings, topicStatus, normalizationMode, supportedGameVersion } from './policy.mjs';
 import { idMappings } from './ids.mjs';
 import { approvedCatalogContext, assertCatalogSnapshot } from '../catalog-identity/normalization-context.mjs';
+import { verifyMissileInspection } from '../missile-semantics/contract.mjs';
 
 const sizes = new Set(['tiny', 'small', 'medium', 'large', 'very_large']);
 const valid = (value, type) => type === 'boolean' ? typeof value === 'boolean' : type === 'size' ? sizes.has(value) : type === 'string' ? typeof value === 'string' && value.length > 0 : typeof value === 'number' && Number.isFinite(value) && (type !== 'integer' || Number.isInteger(value));
@@ -21,6 +22,7 @@ export function normalizeUnit(dump, context) {
   const c = observationContext(dump, selectors), { fact } = selectors;
   const mainKey = fact(c.root, 'unit'), landKey = fact(c.land, 'key');
   if (!valid(mainKey?.value, 'string') || !valid(landKey?.value, 'string') || mainKey.value !== dump.unit.caKey || c.root.table !== 'main_units_tables' || c.land.table !== 'land_units_tables') throw new Error('A unique schema-connected main/land identity is required.');
+  const missileContract = context.missileInspection ? verifyMissileInspection(context.missileInspection, dump) : null;
 
   const catalog = context.catalog ? approvedCatalogContext(context.catalog.review, context.catalog.request, context.catalog.decisions) : null;
   if (catalog) {
@@ -54,6 +56,7 @@ export function normalizeUnit(dump, context) {
     facts: [], omitted: [], warnings: [{ code: 'base-values-only', reason: 'Mapped costs/stats are CA base DB values, never effective campaign or battle-session values.' }, { code: 'primary-catalog-affiliation', reason: catalog ? 'factionId is an explicit reviewed source/context presentation. All DB guards and other permissions are retained; effective availability is not established.' : 'factionId is an explicit primary catalog alias of one verified military group; other permissions are retained. It is not exclusive ownership/effective recruitment.' }], unmapped: [],
   };
   const omit = (field, reason, semanticsStatus = 'UNRESOLVED') => result.omitted.push({ field, kind: 'UNRESOLVED', semanticsStatus, reason });
+  if (missileContract) result.missilePresentation = { completeness: missileContract.completeness, withheldFields: [] };
   const mapped = (field, value, input, note, evidence = [], kind = 'DIRECT') => {
     set(unit, field, value);
     result.provenance.fields.push({ field, value, kind, source: input.source, rawValue: input.value, note, evidence });
@@ -80,6 +83,11 @@ export function normalizeUnit(dump, context) {
   for (const observation of observations(dump)) if (observation.source) fact(selectors.byId.get(observation.source.rowId), observation.source.field);
   for (const [field, recordName, rawField, type] of directMappings) {
     const input = fact(c[recordName], rawField);
+    if (field.startsWith('missile.') && missileContract && !missileContract.presentation.singleBlockSafe && valid(input?.value, type) && (!(type === 'number' || type === 'integer') || input.value >= 0)) {
+      result.missilePresentation.withheldFields.push({ field, value: input.value, source: input.source, kind: 'DIRECT' });
+      omit(field, `Missile sidecar ${missileContract.completeness}: a single active/representative profile is not established.`, 'MISSILE_PRESENTATION_UNRESOLVED');
+      continue;
+    }
     if (valid(input?.value, type) && (!(type === 'number' || type === 'integer') || input.value >= 0)) mapped(field, input.value, input, 'Named raw field copied without arithmetic or runtime effects.');
     else omit(field, input ? `Raw field is not a valid ${type} for this Unit field; no substitute used.` : 'Missing/ambiguous source row, named field or verified join.');
   }

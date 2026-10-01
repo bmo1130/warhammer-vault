@@ -20,6 +20,7 @@ export type MaterializationResult = {
   planEvidence?: { candidate: CatalogCandidate['candidate']; decision: CatalogCandidate['decision']; evidence: CatalogEvidence; provenance: Record<string, unknown> };
   tracedIdentity: (Pick<SourceIdentity, 'mainKey' | 'landKey' | 'localisationKey' | 'mainFact' | 'landFact' | 'mainToLand'> & { localisationFact: IdentityFact | null }) | null;
   traced: boolean; normalizationCompleted: boolean; dump?: RawTrace;
+  missileInspection?: import('../missile-semantics/contract.mjs').MissileInspection;
   normalized: NormalizedUnitResult | null; unit: Unit | null; rejectedNormalization?: NormalizedUnitResult;
   omissions: NormalizedUnitResult['omitted']; unmapped: NormalizedUnitResult['unmapped']; provenance: NormalizedUnitResult['provenance'] | null;
   validation: { diagnostic: DiagnosticValidation | null; production: DiagnosticValidation | null };

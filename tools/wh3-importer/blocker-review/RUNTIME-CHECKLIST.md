@@ -63,3 +63,57 @@ missile-junction observations without establishing activation conditions:
 
 Successful diagnostic Unit validation does not verify runtime behavior or
 production eligibility. See `../MATERIALIZATION.md` for the separate contract.
+
+## Missile observations after static source collection
+
+These are manual observations for a later session; this task did not launch the
+game. No console or unknown diagnostic command is required. Keep a clean save
+before each intervention; record patch, mods, unit-size setting, faction/context,
+commander, ranks, technologies, active effect icons and battle type. Use the same
+stationary target, distance and firing interval, with camera close enough to
+identify firing components. Record the card and a short video before/after.
+Do not identify an exact source key from its display name alone. If the game does
+not expose a trustworthy key, label the faction/recruitment context and mark
+source-key confirmation unavailable.
+
+- [ ] **Empire baseline and effects:** in the relevant campaign, save before
+  acquiring a Gunnery School upgrade, then compare ordinary Helstorm, Handgunners
+  and Steam Tank before/after the available upgrade. Record effect icon/tooltip
+  and the actual projectile/explosion, range, reload and ammo display. Do not
+  equate an effect's DB key with proven activation. Helstorm's effect has no
+  enabling skill/bundle/ritual row in the bounded source investigation: first
+  identify a reproducible in-game intervention, or leave its trigger unresolved.
+- [ ] **Empire timing and Supply control:** compare campaign card, next battle,
+  turn transition and removal/expiry of an effect when removal is actually possible.
+  Repeat with Imperial Supply recruitment in its faction campaign as a separate
+  control. Never assume ordinary-only junctions apply to Supply. Steam Tank has
+  cannon, steam-gun and engineer-pistol attachment paths in both contexts: record
+  each firing component as well as ordinary exploding-cannon activation and
+  any companion stats change. Observe replacement vs simultaneous fire; do not
+  infer either from row order or a shared weapon key.
+- [ ] **Free Company four states:** save before Volkmar's Mere Mortal Men skill
+  and before the applicable Gunnery School upgrade. Where the campaign legitimately
+  permits it, compare neither, skill only, ritual only, and both. Record effects,
+  projectile appearance/explosions and firing behavior against the same target.
+  If both cannot be obtained together, record that limitation instead of inventing
+  a combined result. Determine replacement, coexistence/stacking and precedence
+  from observations, without summing damage.
+- [ ] **Free Company transitions:** for each attainable state compare campaign
+  card, entering the first battle, commander transfer and a turn transition.
+  Compare loss/expiry only when reproducible. Record the exact point behavior
+  changes; absence of an expiry observation does not prove persistence.
+- [ ] **Dread Saurian:** in a repeatable custom battle/campaign battle, film
+  stationary ranged fire, then melee with a target in rider range. Distinguish
+  blowpipe vs javelin shots and simultaneous fire. Track visible ammo counters
+  during fixed time intervals; do not multiply by the 2/10 attachment counts.
+  If rider casualties/disablement can be observed independently, record the
+  change in firing; otherwise mark rider-loss semantics unverified.
+- [ ] **Necrofex:** use the same ranged/melee observation sequence for cannon and
+  rider rifles. Record simultaneous fire and which displayed ammo counter changes.
+  Observe rider disablement only if distinguishable from death/damage of the
+  entire Necrofex. Do not translate five attachment paths into five models or a
+  volley multiplier.
+
+The [missile sidecar](../MISSILE-SEMANTICS.md) records existence, placement and raw
+pool/fire flags. These checks establish activation/combination/ammo behavior;
+they do not approve catalog scope, composite count/HP/mass formulas or full import.

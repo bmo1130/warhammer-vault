@@ -28,6 +28,8 @@ export type NormalizedUnitResult = {
     fields: FieldProvenance[]; generatedMetadata: { field: string; value: unknown; origin: string }[]; baseValuesOnly: true;
   };
   facts: RawFact[];
+  missilePresentation?: { completeness: import('../missile-semantics/contract.mjs').MissileCompleteness;
+    withheldFields: { field: string; value: unknown; source: FieldSource; kind: 'DIRECT' }[] };
   omitted: { field: string; kind: 'UNRESOLVED'; semanticsStatus: string; reason: string }[];
   warnings: { code: string; reason: string }[];
   unmapped: { kind: 'ability' | 'attribute'; caId: string; reason: string; source: FieldSource }[];
@@ -38,6 +40,7 @@ export type NormalizationContext = ({
   catalog: { review: CatalogIdentityReview; request: { mainKey: string; contextId: string }; decisions?: CatalogDecision[] };
   factionId?: never; militaryGroup?: never; permissionTrace?: never;
 }) & {
+  missileInspection?: import('../missile-semantics/contract.mjs').MissileInspection;
   idMappings?: { abilities: Record<string, string>; attributes: Record<string, string>; movement: Record<string, { field: string; value: boolean }> };
 };
 export function normalizeUnit(dump: RawTrace, context: NormalizationContext): NormalizedUnitResult;

@@ -35,9 +35,11 @@ reports CLEAN 1 / PARTIAL 14 / BLOCKED 9; no canonical root is selected by name.
    Inspection and tracer artifact row IDs have different hash formats; compare
    stable table/key/pack/path/schema pointers, not those incidental IDs.
 6. `normalizeUnit` receives the fresh reviewed catalog context and revalidates it.
-   All existing stat selectors, mappings, omissions, aliases and semantics gates
-   are reused. A main-specific missile probe preserves default/alternate chains
-   separately, without merging weapons or applying overrides.
+   Existing stat selectors, aliases and formula gates are reused. The bounded
+   [missile semantic sidecar](MISSILE-SEMANTICS.md) is replayed against schema
+   evidence and the exact source snapshot. Only a complete static single path
+   permits existing missile base-field copies. Complex/incomplete sources retain
+   their graph and withheld base-field provenance outside `Unit.missile`.
 7. Run the actual app validator with the explicit diagnostic faction registry.
    Separately record validation against the actual production registry. Check
    presentation-ID collisions against supplied IDs and earlier successful results.
@@ -84,10 +86,17 @@ own main-specific rows and creates a separate Unit object. Different contexts fo
 one main likewise require distinct tuple IDs and an explicit registered context.
 
 Unit field kinds retain their meanings: raw copies DIRECT, generated ID GENERATED,
-explicit faction/ability/attribute mapping CURATED. In the new path only the identity
-mapping changes: ID is the source/context tuple; factionId is an exact reviewed
+explicit faction/ability/attribute mapping CURATED. In the context identity mapping,
+ID is the source/context tuple; factionId is an exact reviewed
 presentation decision rather than a primary military-group alias. The legacy
 normalization path is unchanged.
+
+The missile-sidecar extension additionally withholds direct missile fields for
+complex sources in diagnostic materialization. It does not replace a weapon or
+change nonmissile values. `normalized.missilePresentation.withheldFields` preserves
+each former raw value/source separately; the semantic graph is stored in
+`result.missileInspection`. These records are excluded from Unit field counters.
+The pre-sidecar results below remain a historical baseline, not current counters.
 
 `provenance.identity` retains main/land keys and candidate military groups; its
 primaryCatalogGroup is null for this path because no universal group is selected.

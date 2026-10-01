@@ -92,15 +92,24 @@ test('actual mapped fields resolve back to raw rows without mixing catalog metad
     assert.equal(r.unit.movement.speed, undefined); assert.equal(r.unit.missile?.ammunition, undefined);
   }
 });
-test('actual roster stat values and nonidentity field provenance agree with legacy normalization on the same traces', options, async () => {
+test('actual roster values agree with legacy normalization except explicitly withheld missile fields retained in sidecar provenance', options, async () => {
   const { results } = await actual();
   for (const r of results.filter(r => r.plan.presentation.defaultVisible)) {
     const decision = curatedDecisions.find(d => d.mainKey === r.request.mainKey);
     const militaryGroup = decision.checks.find(c => c.table === 'units_to_groupings_military_permissions_tables').equals.military_group;
     const legacy = normalizeUnit(r.dump, { militaryGroup, factionId: r.unit.factionId, permissionTrace: r.discovery.evidence });
-    assert.deepEqual({ ...r.unit, id: legacy.unit.id }, legacy.unit);
-    assert.deepEqual(r.omissions, legacy.omitted); assert.deepEqual(r.unmapped, legacy.unmapped);
-    assert.deepEqual(r.provenance.fields.filter(f => !['id', 'factionId'].includes(f.field)), legacy.provenance.fields.filter(f => !['id', 'factionId'].includes(f.field)));
+    const gated = normalizeUnit(r.dump, { militaryGroup, factionId: r.unit.factionId, permissionTrace: r.discovery.evidence, missileInspection: r.missileInspection });
+    assert.deepEqual({ ...r.unit, id: gated.unit.id }, gated.unit);
+    assert.deepEqual(r.omissions, gated.omitted); assert.deepEqual(r.unmapped, legacy.unmapped);
+    const withheld = r.normalized.missilePresentation?.withheldFields ?? [];
+    const without = unit => { const { missile, ...rest } = unit; return rest; };
+    assert.deepEqual(without({ ...r.unit, id: legacy.unit.id }), without(legacy.unit));
+    assert.deepEqual(r.provenance.fields.filter(f => !['id', 'factionId'].includes(f.field) && !f.field.startsWith('missile.')),
+      legacy.provenance.fields.filter(f => !['id', 'factionId'].includes(f.field) && !f.field.startsWith('missile.')));
+    if (withheld.length) {
+      assert.equal(r.unit.missile, undefined);
+      assert.deepEqual(withheld.map(f => [f.field, f.value, f.source]), legacy.provenance.fields.filter(f => f.field.startsWith('missile.')).map(f => [f.field, f.value, f.source]));
+    } else assert.deepEqual(r.unit.missile, legacy.unit.missile);
   }
 });
 test('actual validation uses a diagnostic registry without altering or bypassing production faction registration', options, async () => {
