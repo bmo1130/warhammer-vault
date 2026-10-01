@@ -158,3 +158,13 @@ damage and do not prove these count/HP conversions. See
 [ENTITY-SEMANTICS.md](../ENTITY-SEMANTICS.md) for raw owners/cardinality and the
 separate unresolved runtime facets. The existing missile checklist still governs
 firing/activation/pool semantics; this entity checklist does not resolve them.
+
+# Prepared recording workflow
+
+Follow [RUNTIME-EVIDENCE.md](../RUNTIME-EVIDENCE.md) for the interactive recorder,
+exact source/context contract, P0/P1/P2/P3 jobs and ingestion. The local bundle is
+`generated/wh3/runtime-evidence/evening-final-v2/`; 35 jobs/182 observation slots
+start PENDING. Expected static identity/path does not prove observed runtime
+identity/activation. Record CONTEXT_ONLY/INCONCLUSIVE when exact confirmation is
+unavailable; no console command is invented. Preserve screenshots, setup and
+independent trial IDs. Medium/Ultra and pre/post-loss are separate observations.
