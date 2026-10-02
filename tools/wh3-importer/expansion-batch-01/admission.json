@@ -2,6 +2,10 @@
   "format": "warhammer-vault-expansion-01-admission-v1",
   "sourceSha256": "e10f3727bf00af27f69a0a623247275db62f4137137f1f416baf39fd7754b4e1",
   "reviewSha256": "2a1f6203c07bba010ae3cbe862dbd01c0eb1597ac04333f7281a2e7fe47919b0",
+  "storageProof": {
+    "sourceCompactSha256": "6dbaadd32eaad3c908c5f690872ff21d52f7235b81ef23573f4b1d013c577799",
+    "reviewCompactSha256": "95753b14285985e009380f9dbc1fdea312dd34cc80d7c8409d6df79e5935d7a0"
+  },
   "preservedBaseline": {
     "units": "75e7c3ea866b774c6d8856079e438f151a9183b55b84cb65ab411984d1fa949d",
     "factions": "1bde13f1cf3a25026d55d6385102f3c2912e644c8e035ea578d5bcea66ca20ac",

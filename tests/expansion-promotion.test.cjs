@@ -10,7 +10,7 @@ const units=read('src/data/units.json'),factions=read('src/data/factions.json'),
 const options=()=>({bundle:read(base+'sources.json'),committedReview:read(base+'review.json'),units:structuredClone(units),
   factions:structuredClone(factions),diagnosticIds:diagnostics.entries.map(d=>d.id),validate:validateUnits});
 const modules=async()=>({...await import('../tools/wh3-importer/expansion-batch-01/review.mjs'),
-  ...await import('../tools/wh3-importer/expansion-batch-01/admission.mjs'),...await import('../tools/wh3-importer/promotion/first-batch.mjs')});
+  ...await import('../tools/wh3-importer/expansion-batch-01/admission.mjs'),...await import('../tools/wh3-importer/expansion-batch-01/compact.mjs'),...await import('../tools/wh3-importer/promotion/first-batch.mjs')});
 
 test('expansion exact-name catalog is bounded to 24 and cannot inject keys, paid policies or aliases',async()=>{
   const {expansionCatalog,validateExpansionCatalog}=await import('../tools/wh3-importer/expansion-batch-01/catalog.mjs');
@@ -18,14 +18,14 @@ test('expansion exact-name catalog is bounded to 24 and cannot inject keys, paid
   assert.equal(representativeCatalog.length,24);assert.equal(expansionCatalog.length,24);validateExpansionCatalog(expansionCatalog);
   for(const input of [[],[...expansionCatalog,expansionCatalog[0]],expansionCatalog.map((c,i)=>i===0?{...c,mainKey:'guessed'}:c),
     expansionCatalog.map((c,i)=>i===0?{...c,rootSelection:'paid-recruitment'}:c)])assert.throws(()=>validateExpansionCatalog(input));
-  const source=read(base+'sources.json');assert.deepEqual(source.catalog,expansionCatalog);
+  const {decodeSource}=await modules();const source=decodeSource(read(base+'sources.json'));assert.deepEqual(source.catalog,expansionCatalog);
   assert(!/[A-Z]:[\\/]/.test(JSON.stringify(source)));assert(source.schemas.length<40);
   for(const e of source.preflight)if(e.permissionTrace)assert(e.permissionTrace.rows.length<=400);
   for(const c of source.candidates)assert(c.dump.rows.length<=250);
 });
 
 test('all 24 preflights retain zero/multiple roots and exact primary alias conflicts without selection',async()=>{
-  const source=read(base+'sources.json'),preflight=source.preflight;
+  const {decodeSource}=await modules();const source=decodeSource(read(base+'sources.json')),preflight=source.preflight;
   assert.equal(preflight.length,24);assert.equal(preflight.filter(e=>e.roots.length===1).length,16);
   assert.equal(preflight.filter(e=>e.roots.length>1).length,6);assert.equal(preflight.filter(e=>!e.roots.length).length,2);
   for(const e of preflight){
@@ -46,14 +46,14 @@ test('all 24 preflights retain zero/multiple roots and exact primary alias confl
 });
 
 test('review replays exact field subsets, original candidate hashes, all unknown IDs and no new mappings',async()=>{
-  const {reviewExpansion,expansionReviewArtifact,expansionAllowlist}=await modules(),input=options();
+  const {reviewExpansion,expansionReviewArtifact,expansionAllowlist,decodeSource}=await modules(),input=options();
   const reviews=reviewExpansion(input.bundle);
   assert.deepEqual(expansionReviewArtifact(input.bundle,reviews),input.committedReview);
   assert.equal(reviews.length,14);assert.deepEqual(reviews.map(r=>r.slug),expansionAllowlist.map(r=>r.slug));
   assert.deepEqual(input.committedReview.counts,{uniqueRoot:16,ambiguous:6,rootNotFound:2,CLEAN:0,PARTIAL:14,BLOCKED:10});
   for(const [i,r] of reviews.entries()) {
     assert.equal(r.source.sha256,expansionAllowlist[i].sha256);assert.deepEqual(r.scopedMappings,[]);
-    assert.deepEqual(r.remainingUnmapped,input.bundle.candidates[i].originalUnmapped);
+    assert.deepEqual(r.remainingUnmapped,decodeSource(input.bundle).candidates[i].originalUnmapped);
     for(const group of ['identity','affiliation/catalog','classification','movement','defense','melee','campaign','customBattle'])assert.equal(r.groups[group].status,'PROMOTABLE');
     for(const group of ['abilities','passiveAbilities','attributes'])if(r.groups[group].status==='NEEDS_MAPPING') {
       assert(!Object.hasOwn(r.normalized.unit,group));assert(r.withdrawals.some(w=>w.field===group));
@@ -93,11 +93,11 @@ test('explicit admission appends 14, preserves previous 20 values/order and is i
 test('gate refuses source/review/identity/hash/unknown/snapshot/affiliation drift, collisions and overwrites',async()=>{
   const {buildExpansionBatch}=await modules();
   for(const mutate of [
-    x=>{x.bundle.catalog[0].displayName='guess';},x=>{x.bundle.candidates[0].identity.caMainUnitKey='other';},
-    x=>{x.bundle.candidates[0].identity.caLandUnitKey='other';},x=>{x.bundle.candidates[0].source.sha256='wrong';},
-    x=>{x.bundle.candidates[0].originalUnmapped=[];},x=>{x.bundle.provenance.gameVersion='9.1';},
-    x=>{x.bundle.candidates[0].affiliation.factionId='empire';},x=>{x.bundle.preflight[2].roots.push(x.bundle.preflight[2].roots[0]);},
-    x=>{x.committedReview.candidates[0].productionProjection.entities.count=120;},x=>{x.committedReview.candidates[0].remainingUnmapped=[];},
+    x=>{x.bundle.data.catalog[0].displayName='guess';},x=>{x.bundle.data.candidates[0].identity.caMainUnitKey='other';},
+    x=>{x.bundle.data.candidates[0].identity.caLandUnitKey='other';},x=>{x.bundle.data.candidates[0].source.sha256='wrong';},
+    x=>{x.bundle.data.candidates[0].originalUnmapped=[];},x=>{x.bundle.provenance.gameVersion='9.1';},
+    x=>{x.bundle.data.candidates[0].affiliation.factionId='empire';},x=>{x.bundle.data.preflight[2].roots.push(x.bundle.data.preflight[2].roots[0]);},
+    x=>{x.committedReview.candidates[0].productionProjectionSha256='wrong';},x=>{x.committedReview.candidates[0].unknownIds=[];},
     x=>{x.units.push(x.units[0]);},x=>{x.units[20].defense.armor=999;},x=>{x.units[6].defense.armor=999;},
     x=>{x.factions[0].description='changed';},x=>{x.diagnosticIds.push(x.units[20].id);},x=>{x.validate=()=>['invalid'];},
   ]){const x=options();mutate(x);assert.throws(()=>buildExpansionBatch(x));}

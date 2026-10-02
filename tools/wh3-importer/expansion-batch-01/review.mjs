@@ -7,6 +7,7 @@ import { evidenceHash } from '../promotion/first-batch.mjs';
 import { isReviewedSource } from '../reviewed-snapshots.mjs';
 import { expansionCatalog, validateExpansionCatalog } from './catalog.mjs';
 import { portable } from './projection.mjs';
+import { decodeSource } from './compact.mjs';
 
 export const expansionSourceHash='e10f3727bf00af27f69a0a623247275db62f4137137f1f416baf39fd7754b4e1';
 // Discovered first, then independently admitted. Never root-selection inputs.
@@ -30,7 +31,8 @@ const prefixes=g=>g==='identity'?['id','name']:g==='affiliation/catalog'?['facti
 const inGroup=(field,g)=>prefixes(g).some(p=>field===p || field.startsWith(`${p}.`));
 const requireReview=(ok,reason)=>{if(!ok)throw new Error(`Expansion review refused: ${reason}`);};
 
-export function reviewExpansion(bundle) {
+export function reviewExpansion(compactBundle) {
+  const bundle=decodeSource(compactBundle);
   requireReview(evidenceHash(bundle)===expansionSourceHash,'pinned source hash differs');
   requireReview(bundle.format==='warhammer-vault-expansion-01-source-v1' && bundle.gameExecuted===false && isReviewedSource(bundle.provenance,''),'source snapshot differs');
   validateExpansionCatalog(bundle.catalog);
@@ -83,7 +85,8 @@ export function reviewExpansion(bundle) {
   });
 }
 
-export function expansionReviewArtifact(bundle,reviews) {
+export function expandedReviewArtifact(compactBundle,reviews) {
+  const bundle=decodeSource(compactBundle);
   const compact=value=>JSON.parse(JSON.stringify(value,(key,item)=>{
     if(key!=='source' || !item?.rowId)return item;
     const {rowId,table,rowKey,field,sourcePack,path,schemaVersion}=item;return {rowId,table,rowKey,field,sourcePack,path,schemaVersion};
@@ -92,6 +95,35 @@ export function expansionReviewArtifact(bundle,reviews) {
     counts:{uniqueRoot:16,ambiguous:6,rootNotFound:2,CLEAN:0,PARTIAL:14,BLOCKED:10},
     preflight:bundle.preflight.map(({permissionTrace,...entry})=>entry),
     candidates:reviews.map(({normalized,...review})=>compact({...review,productionProjection:normalized.unit}))};
+}
+export function expansionReviewArtifact(bundle,reviews) {
+  const expanded=expandedReviewArtifact(bundle,reviews),reasons={},omissions={};
+  const reason=text=> {
+    const id=`reason-${evidenceHash(text).slice(0,16)}`;
+    if (Object.hasOwn(reasons,id) && reasons[id]!==text) throw new Error('Review reason hash collision');
+    reasons[id]=text; return id;
+  };
+  const pointer=source=>source?.rowId?{rowId:source.rowId,field:source.field}:null;
+  const omission=o=> {
+    const record={field:o.field,kind:o.kind,semanticsStatus:o.semanticsStatus,reason:reason(o.reason)};
+    const id=`${o.field}:${evidenceHash(record).slice(0,16)}`;
+    if (Object.hasOwn(omissions,id) && !isDeepStrictEqual(omissions[id],record)) throw new Error('Review omission hash collision');
+    omissions[id]=record; return id;
+  };
+  return {format:'warhammer-vault-expansion-01-review-v2',reviewDate:expanded.reviewDate,
+    sourceCompactSha256:evidenceHash(bundle),sourceExpandedSha256:expansionSourceHash,
+    expandedReviewSha256:evidenceHash(expanded),counts:expanded.counts,
+    preflight:expanded.preflight.map((e,i)=>({slug:e.sample.slug,sourcePointer:`data.preflight.${i}`,
+      status:e.status,roots:e.roots.map(r=>({mainKey:r.mainKey,landKey:r.landKey})),
+      blockers:e.blockers.map(b=>({category:b.category,reason:reason(b.reason)}))})),
+    candidates:expanded.candidates.map((c,i)=>({slug:c.slug,sourcePointer:`data.candidates.${i}`,
+      originalStatus:c.originalStatus,overall:c.overall,composite:c.composite,
+      groups:Object.fromEntries(Object.entries(c.groups).map(([name,g])=>[name,{status:g.status,note:reason(g.note),
+        ...(g.promotableFields?{admittedFields:g.promotableFields.map(f=>f.field)}:{}),
+        ...(g.omitted?{omitted:g.omitted.map(omission)}:{})}])),
+      unknownIds:c.remainingUnmapped.map(u=>({kind:u.kind,caId:u.caId,source:pointer(u.source)})),
+      withdrawals:c.withdrawals.map(w=>({field:w.field,reason:reason(w.reason)})),
+      productionProjectionSha256:evidenceHash(c.productionProjection)})),omissions,reasons};
 }
 export function renderExpansionReview(artifact) {
   return ['# Expansion batch 01','',
@@ -117,5 +149,6 @@ export function renderExpansionReview(artifact) {
     '', '## Preservation and replay','',
     'Previous 15 Production + 5 Sample records preserved with exact value/order equality. Diagnostic and shared identity artifacts unchanged. Personal target IDs/backup v1, faction registry, schema and UI unchanged.',
     'Replay: `node scripts/review-expansion-batch-01.mjs --check`; `node scripts/promote-expansion-batch-01.mjs --check`. Both work without local packs. `project-expansion-batch-01.mjs --check` additionally checks ignored original staging bytes. Live static integration: `node --test tools/wh3-importer/expansion-batch-01/static.integration.test.mjs` with `WH3_RUN_INTEGRATION=1`.',
+    'Storage: `sources.json` is the lossless v2 dictionary bundle; `review.json` contains decisions and source pointers, shared omission definitions and reason vocabulary. Expanded source/review hashes above remain verified. `node scripts/review-expansion-batch-01.mjs --verbose` writes the full historical review to ignored `generated/wh3/expansion-batch-01/review.verbose.json`; production replay never reads it. Measurements, format details and future batch estimates: [COMPACT_FORMAT.md](COMPACT_FORMAT.md).',
     'Final collection: Production 29 / Sample 5 / diagnostic evidence 5 / diagnostic-only 0 / unique catalog 34.', ''].join('\n');
 }

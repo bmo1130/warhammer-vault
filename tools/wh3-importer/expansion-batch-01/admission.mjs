@@ -1,8 +1,9 @@
 import { isDeepStrictEqual } from 'node:util';
 import { evidenceHash,assertReviewedProductionResult } from '../promotion/first-batch.mjs';
-import { reviewExpansion,expansionReviewArtifact,expansionSourceHash } from './review.mjs';
+import { reviewExpansion,expansionReviewArtifact,expandedReviewArtifact,expansionSourceHash } from './review.mjs';
 
 export const expansionReviewHash='2a1f6203c07bba010ae3cbe862dbd01c0eb1597ac04333f7281a2e7fe47919b0';
+export const compactReviewHash='95753b14285985e009380f9dbc1fdea312dd34cc80d7c8409d6df79e5935d7a0';
 export const baselineUnitsHash='75e7c3ea866b774c6d8856079e438f151a9183b55b84cb65ab411984d1fa949d';
 export const baselineFactionsHash='1bde13f1cf3a25026d55d6385102f3c2912e644c8e035ea578d5bcea66ca20ac';
 export const preservedBytes={
@@ -16,8 +17,9 @@ export const preservedBytes={
 const gate=(ok,reason)=>{if(!ok)throw new Error(`Expansion admission refused: ${reason}`);};
 
 export function buildExpansionBatch({bundle,committedReview,units,factions,diagnosticIds,validate}) {
-  gate(evidenceHash(committedReview)===expansionReviewHash,'pinned committed review hash differs');
+  gate(evidenceHash(committedReview)===compactReviewHash,'pinned committed review hash differs');
   const reviews=reviewExpansion(bundle);
+  gate(evidenceHash(expandedReviewArtifact(bundle,reviews))===expansionReviewHash,'historical expanded review hash differs');
   gate(isDeepStrictEqual(expansionReviewArtifact(bundle,reviews),committedReview),'review replay differs');
   gate(evidenceHash(units.slice(0,20))===baselineUnitsHash,'existing Production 15 / Sample 5 changed');
   gate(evidenceHash(factions)===baselineFactionsHash,'existing faction catalog changed');
@@ -44,10 +46,11 @@ export function buildExpansionBatch({bundle,committedReview,units,factions,diagn
   }
   gate(new Set(next.map(u=>u.id)).size===next.length,'duplicate resulting identity');
   gate(validate(next,factions.map(f=>f.id)).length===0,'app collection validator rejected output');
-  return {units:next,added:next.length-units.length,admitted};
+  return {units:next,added:next.length-units.length,admitted,storageProof:{sourceCompactSha256:evidenceHash(bundle),reviewCompactSha256:compactReviewHash}};
 }
 export function expansionAdmissionReport(batch) {
   return {format:'warhammer-vault-expansion-01-admission-v1',sourceSha256:expansionSourceHash,reviewSha256:expansionReviewHash,
+    storageProof:batch.storageProof,
     preservedBaseline:{units:baselineUnitsHash,factions:baselineFactionsHash,bytes:preservedBytes},
     admitted:batch.admitted.map(({unit,...entry})=>entry),
     note:'Explicit 14-ID admission. Existing records require exact equality. No diagnostic data, runtime, migration, new mapping, faction, schema or UI change.'};

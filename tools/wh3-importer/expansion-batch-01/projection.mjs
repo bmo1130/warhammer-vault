@@ -1,6 +1,7 @@
 import { createHash } from 'node:crypto';
 import { pilotAffiliations } from '../pilot-catalog.mjs';
 import { expansionCatalog, validateExpansionCatalog } from './catalog.mjs';
+import { encodeSource } from './compact.mjs';
 
 export const byteHash = bytes => createHash('sha256').update(bytes).digest('hex');
 export const portable = value => JSON.parse(JSON.stringify(value, (key, item) =>
@@ -49,6 +50,6 @@ export function projectExpansion(preflight, results) {
     source:{reference:`generated/wh3/expansion-batch-01/units/${result.sample.slug}.result.json`,sha256:byteHash(bytes)},
     dump:trace(result.dump),missileExtras:trace(result.missileExtras),
   }));
-  return {format:'warhammer-vault-expansion-01-source-v1',gameExecuted:false,provenance:portable(preflight.provenance),
-    catalog:expansionCatalog,preflight:entries,candidates,schemas:[...schemas.values()]};
+  return encodeSource({format:'warhammer-vault-expansion-01-source-v1',gameExecuted:false,provenance:portable(preflight.provenance),
+    catalog:expansionCatalog,preflight:entries,candidates,schemas:[...schemas.values()]});
 }

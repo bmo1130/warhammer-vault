@@ -9,6 +9,7 @@ import { normalizeUnit } from '../normalization/normalizer.mjs';
 import { restoreTrace } from '../promotion/partial-review.mjs';
 import { expansionCatalog } from './catalog.mjs';
 import { portable } from './projection.mjs';
+import { decodeSource } from './compact.mjs';
 import { isReviewedSource } from '../reviewed-snapshots.mjs';
 
 const enabled=process.env.WH3_RUN_INTEGRATION==='1',options={skip:enabled?false:'Set WH3_RUN_INTEGRATION=1 with local static pack config.'};
@@ -22,7 +23,7 @@ async function actualSource(){
     return source;
   })();
 }
-const bundle=JSON.parse(await readFile(new URL('./sources.json',import.meta.url),'utf8'));
+const bundle=decodeSource(JSON.parse(await readFile(new URL('./sources.json',import.meta.url),'utf8')));
 after(async()=>{await source?.client.close();});
 test('actual static packs match pinned game/schema/pack snapshot without game execution',options,async()=>{
   const s=await actualSource();assert(isReviewedSource(s.metadata,''));
