@@ -24,7 +24,7 @@ function leaves(value, prefix = '') {
 
 // Check the normalizer result again at the production boundary. Uncertainty
 // records stay in the source/review; their Unit paths must remain absent.
-export function assertReviewedProductionResult(result, validate, factionIds, review, unmappedPolicy = null) {
+export function assertReviewedProductionResult(result, validate, factionIds, review, unmappedPolicy = null, missileFields = null) {
   const unit = result?.unit, identity = result?.provenance?.identity;
   requireGate(result?.format === 'warhammer-vault-normalized-unit-v1' && result.mode === 'conservative' && result.sourceKind === 'ca-pack', 'not a conservative CA static result');
   requireGate(identity?.caMainUnitKey === review.mainKey && identity.caLandUnitKey === review.landKey && identity.internalId === review.id, 'exact source identity mismatch');
@@ -35,7 +35,12 @@ export function assertReviewedProductionResult(result, validate, factionIds, rev
   requireGate(unmappedPolicy ? isDeepStrictEqual(result.unmapped, unmappedPolicy.expected) &&
     (result.unmapped.length === 0 || (unmappedPolicy.omittedGroups.length > 0 && unmappedPolicy.omittedGroups.every(field => get(unit, field) === undefined))) :
     result.unmapped.length === 0, 'unmapped IDs need exact retained review and complete group omission');
-  requireGate(!unit.missile, 'missile promotion is outside this first batch');
+  if (missileFields) {
+    const actual = leaves(unit.missile, 'missile').map(([field]) => field).sort();
+    requireGate(isDeepStrictEqual(actual, [...missileFields].sort()), 'missile fields differ from the explicit reviewed subset');
+    requireGate(result.provenance.fields.filter(entry => entry.field.startsWith('missile.')).every(entry =>
+      entry.kind === 'DIRECT' && missileFields.includes(entry.field)), 'missile subset requires direct static provenance');
+  } else requireGate(!unit.missile, 'missile promotion is outside this first batch');
   for (const group of ['classification', 'entities', 'movement', 'defense', 'melee']) requireGate(object(unit[group]), `missing required ${group} group`);
   requireGate(object(unit.melee.damage) && unit.classification.category.length > 0 && typeof unit.source === 'string' && unit.source.length > 0, 'missing damage/category/source');
   const fields = new Map(result.provenance.fields.map(entry => [entry.field, entry]));

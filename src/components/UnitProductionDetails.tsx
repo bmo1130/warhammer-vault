@@ -10,11 +10,29 @@ export default function UnitProductionDetails({ unit }: { unit: Unit }) {
     ['총 무기 피해', total], ['대형 보너스', unit.melee.damage.bonusVsLarge],
     ['보병 보너스', unit.melee.damage.bonusVsInfantry], ['공격 주기 (초)', unit.melee.attackInterval],
   ] as const;
+  const missile = unit.missile;
+  const missileStats = ([
+    ['사거리', missile?.range],
+    ['발사체 기본 피해', missile?.projectile.baseDamage],
+    ['발사체 관통 피해 (AP)', missile?.projectile.armorPiercingDamage],
+    ['발사체 대대형 보너스', missile?.projectile.bonusVsLarge],
+    ['발사체 대보병 보너스', missile?.projectile.bonusVsInfantry],
+    ['일제 사격당 발사 수 (shots per volley, raw)', missile?.projectile.shotsPerVolley],
+    ['보정 거리 (calibration distance)', missile?.accuracy?.calibrationDistance],
+    ['보정 영역 (calibration area)', missile?.accuracy?.calibrationArea],
+    ['기본 재장전 시간 (초, raw/base)', missile?.reload?.baseTime],
+    ['관통 저항 예산 (resistance budget)', missile?.projectile.penetration?.resistanceBudget],
+  ] as const).filter(([, value]) => value !== undefined);
   return <>
     {damage.some(([, value]) => value !== undefined) && <section className="section">
       <SectionTitle title="근접 피해"/>
       <div className="stats-card">{damage.map(([label, value]) => <div className="stat" key={label}><span>{label}</span><strong>{value ?? '미입력'}</strong></div>)}</div>
       <p className="data-note">총 무기 피해는 기본 + 관통의 합입니다. 조건부 보너스와 전투·캠페인 효과는 포함하지 않습니다.</p>
+    </section>}
+    {missileStats.length > 0 && <section className="section">
+      <SectionTitle title="사격 · 검증된 정적 필드"/>
+      <div className="stats-card">{missileStats.map(([label, value]) => <div className="stat" key={label}><span>{label}</span><strong>{value}</strong></div>)}</div>
+      <p className="data-note">저장된 기본값입니다. 실제 장전시간·발사 간격·DPS로 환산하지 않습니다. 관통 저항 예산은 관통 개체 수가 아닙니다.</p>
     </section>}
     <details className="production-source panel">
       <summary>출처·버전·생략 범위</summary>

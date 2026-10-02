@@ -406,5 +406,306 @@
       "hiddenStats": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; hidden fields: unambiguous battle_entity properties, weapon splash, projectile calibration/reload/penetration",
       "campaign": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; main_units recruitment_cost/upkeep_cost/create_time and multiplayer_cost are base values only"
     }
+  },
+  {
+    "id": "ca_unit_wh_main_brt_cav_grail_knights",
+    "name": "Grail Knights",
+    "factionId": "bretonnia",
+    "summary": "",
+    "gameVersion": "9.0.2.0",
+    "source": "CA base DB · WH3 9.0.2.0 · reviewed field subset · tools/wh3-importer/promotion/PARTIAL_REVIEW.md#sample-01",
+    "tags": [],
+    "classification": {
+      "category": "Cavalry",
+      "tier": 4
+    },
+    "entities": {},
+    "movement": {
+      "canSkirmish": false
+    },
+    "defense": {
+      "armor": 120,
+      "meleeDefense": 34,
+      "leadership": 80,
+      "shieldBlockChance": 35
+    },
+    "melee": {
+      "damage": {
+        "base": 18,
+        "armorPiercing": 28,
+        "bonusVsLarge": 18,
+        "bonusVsInfantry": 0
+      },
+      "meleeAttack": 38,
+      "chargeBonus": 75,
+      "attackInterval": 5.1,
+      "weaponLength": 2,
+      "splash": {
+        "maxTargets": 2,
+        "maxTargetSize": "small"
+      },
+      "attackAttributes": [
+        "magical"
+      ]
+    },
+    "customBattle": {
+      "cost": 1850
+    },
+    "campaign": {
+      "recruitmentCost": 1850,
+      "upkeep": 462,
+      "recruitmentTurns": 2
+    },
+    "attributes": [
+      "perfect_vigour",
+      "stalk_in_forest",
+      "immune_to_psychology",
+      "knight"
+    ],
+    "abilities": [
+      "lance"
+    ],
+    "passiveAbilities": [
+      "blessing_of_the_lady"
+    ],
+    "sources": {
+      "publicStats": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; public fields: land_units, armour/shield, melee_weapons and verified projectile/explosion rows; pinned PARTIAL source SHA256 9f4dd0f3890d6d07804ff6e075e02c346178f316b0c5d388e0e82c4e935a2b65; original generated/wh3/refresh-9.0.2/pilot/units/sample-01.result.json SHA256 57873b9a53e7bfc608aecd52da062cb67f937ecea0f297a7ce12fead245ea3a2; omissions reviewed separately; incomplete optional ID groups omitted, not absent in-game",
+      "hiddenStats": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; hidden fields: unambiguous battle_entity properties, weapon splash, projectile calibration/reload/penetration",
+      "campaign": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; main_units recruitment_cost/upkeep_cost/create_time and multiplayer_cost are base values only"
+    }
+  },
+  {
+    "id": "ca_unit_wh_main_brt_cav_mounted_yeomen_0",
+    "name": "Mounted Yeomen",
+    "factionId": "bretonnia",
+    "summary": "",
+    "gameVersion": "9.0.2.0",
+    "source": "CA base DB · WH3 9.0.2.0 · reviewed field subset · tools/wh3-importer/promotion/PARTIAL_REVIEW.md#sample-08",
+    "tags": [],
+    "classification": {
+      "category": "Cavalry",
+      "tier": 1
+    },
+    "entities": {},
+    "movement": {
+      "canSkirmish": false
+    },
+    "defense": {
+      "armor": 30,
+      "meleeDefense": 26,
+      "leadership": 50,
+      "shieldBlockChance": 35
+    },
+    "melee": {
+      "damage": {
+        "base": 21,
+        "armorPiercing": 7,
+        "bonusVsLarge": 0,
+        "bonusVsInfantry": 0
+      },
+      "meleeAttack": 26,
+      "chargeBonus": 36,
+      "attackInterval": 5,
+      "weaponLength": 2,
+      "splash": {
+        "maxTargets": 1
+      }
+    },
+    "customBattle": {
+      "cost": 400
+    },
+    "campaign": {
+      "recruitmentCost": 400,
+      "upkeep": 100,
+      "recruitmentTurns": 1
+    },
+    "sources": {
+      "publicStats": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; public fields: land_units, armour/shield, melee_weapons and verified projectile/explosion rows; pinned PARTIAL source SHA256 9f4dd0f3890d6d07804ff6e075e02c346178f316b0c5d388e0e82c4e935a2b65; original generated/wh3/refresh-9.0.2/pilot/units/sample-08.result.json SHA256 f268c6be6c35cee41d666b78ab1c3ece6101e6f50ee40dfff9fa4b809fdab681; omissions reviewed separately; incomplete optional ID groups omitted, not absent in-game",
+      "hiddenStats": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; hidden fields: unambiguous battle_entity properties, weapon splash, projectile calibration/reload/penetration",
+      "campaign": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; main_units recruitment_cost/upkeep_cost/create_time and multiplayer_cost are base values only"
+    }
+  },
+  {
+    "id": "ca_unit_wh_main_brt_cav_pegasus_knights",
+    "name": "Pegasus Knights",
+    "factionId": "bretonnia",
+    "summary": "",
+    "gameVersion": "9.0.2.0",
+    "source": "CA base DB · WH3 9.0.2.0 · reviewed field subset · tools/wh3-importer/promotion/PARTIAL_REVIEW.md#sample-09",
+    "tags": [],
+    "classification": {
+      "category": "Cavalry",
+      "tier": 3
+    },
+    "entities": {},
+    "movement": {
+      "canSkirmish": false,
+      "canFly": true
+    },
+    "defense": {
+      "armor": 80,
+      "meleeDefense": 32,
+      "leadership": 75,
+      "shieldBlockChance": 35
+    },
+    "melee": {
+      "damage": {
+        "base": 42,
+        "armorPiercing": 14,
+        "bonusVsLarge": 15,
+        "bonusVsInfantry": 0
+      },
+      "meleeAttack": 36,
+      "chargeBonus": 75,
+      "attackInterval": 4.7,
+      "weaponLength": 1,
+      "splash": {
+        "maxTargets": 2,
+        "maxTargetSize": "medium"
+      }
+    },
+    "customBattle": {
+      "cost": 1100
+    },
+    "campaign": {
+      "recruitmentCost": 1100,
+      "upkeep": 275,
+      "recruitmentTurns": 2
+    },
+    "sources": {
+      "publicStats": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; public fields: land_units, armour/shield, melee_weapons and verified projectile/explosion rows; pinned PARTIAL source SHA256 9f4dd0f3890d6d07804ff6e075e02c346178f316b0c5d388e0e82c4e935a2b65; original generated/wh3/refresh-9.0.2/pilot/units/sample-09.result.json SHA256 34250111f164503ef1250f53d37ba7fae4fd17c05e368b8a7991865ea6a8da2f; omissions reviewed separately; incomplete optional ID groups omitted, not absent in-game",
+      "hiddenStats": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; hidden fields: unambiguous battle_entity properties, weapon splash, projectile calibration/reload/penetration",
+      "campaign": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; main_units recruitment_cost/upkeep_cost/create_time and multiplayer_cost are base values only"
+    }
+  },
+  {
+    "id": "ca_unit_wh_dlc04_emp_cav_royal_altdorf_gryphites_0",
+    "name": "The Royal Altdorf Gryphites (Demigryph Knights)",
+    "factionId": "empire",
+    "summary": "",
+    "gameVersion": "9.0.2.0",
+    "source": "CA base DB · WH3 9.0.2.0 · reviewed field subset · tools/wh3-importer/promotion/PARTIAL_REVIEW.md#sample-21",
+    "tags": [],
+    "classification": {
+      "category": "Cavalry",
+      "tier": 4
+    },
+    "entities": {},
+    "movement": {
+      "canSkirmish": false
+    },
+    "defense": {
+      "armor": 125,
+      "meleeDefense": 45,
+      "leadership": 90,
+      "shieldBlockChance": 0
+    },
+    "melee": {
+      "damage": {
+        "base": 18,
+        "armorPiercing": 38,
+        "bonusVsLarge": 25,
+        "bonusVsInfantry": 0
+      },
+      "meleeAttack": 43,
+      "chargeBonus": 60,
+      "attackInterval": 4.8,
+      "weaponLength": 1,
+      "splash": {
+        "maxTargets": 2,
+        "maxTargetSize": "small"
+      }
+    },
+    "customBattle": {
+      "cost": 1850
+    },
+    "campaign": {
+      "recruitmentCost": 1850,
+      "upkeep": 463,
+      "recruitmentTurns": 2
+    },
+    "sources": {
+      "publicStats": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; public fields: land_units, armour/shield, melee_weapons and verified projectile/explosion rows; pinned PARTIAL source SHA256 9f4dd0f3890d6d07804ff6e075e02c346178f316b0c5d388e0e82c4e935a2b65; original generated/wh3/refresh-9.0.2/pilot/units/sample-21.result.json SHA256 91ce7d542e6089c24d1fa9db340469f9289a7ffc0d87df9c78c202e1e056b551; omissions reviewed separately; incomplete optional ID groups omitted, not absent in-game",
+      "hiddenStats": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; hidden fields: unambiguous battle_entity properties, weapon splash, projectile calibration/reload/penetration",
+      "campaign": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; main_units recruitment_cost/upkeep_cost/create_time and multiplayer_cost are base values only"
+    }
+  },
+  {
+    "id": "ca_unit_wh2_dlc12_skv_inf_ratling_gun_0",
+    "name": "Ratling Guns",
+    "factionId": "skaven",
+    "summary": "",
+    "gameVersion": "9.0.2.0",
+    "source": "CA base DB · WH3 9.0.2.0 · reviewed field subset · tools/wh3-importer/promotion/PARTIAL_REVIEW.md#sample-16",
+    "tags": [],
+    "classification": {
+      "category": "Missile Infantry",
+      "tier": 2
+    },
+    "entities": {
+      "entitySize": "small",
+      "mass": 150
+    },
+    "movement": {
+      "canSkirmish": true
+    },
+    "defense": {
+      "armor": 70,
+      "meleeDefense": 16,
+      "leadership": 50,
+      "shieldBlockChance": 0,
+      "projectilePenetrationResistance": 1
+    },
+    "melee": {
+      "damage": {
+        "base": 20,
+        "armorPiercing": 6,
+        "bonusVsLarge": 0,
+        "bonusVsInfantry": 0
+      },
+      "meleeAttack": 16,
+      "chargeBonus": 2,
+      "attackInterval": 4.3,
+      "weaponLength": 1,
+      "splash": {
+        "maxTargets": 1
+      }
+    },
+    "missile": {
+      "projectile": {
+        "baseDamage": 2,
+        "armorPiercingDamage": 6,
+        "bonusVsLarge": 0,
+        "bonusVsInfantry": 0,
+        "shotsPerVolley": 18,
+        "penetration": {
+          "resistanceBudget": 0
+        }
+      },
+      "range": 145,
+      "accuracy": {
+        "calibrationDistance": 70,
+        "calibrationArea": 2.7
+      },
+      "reload": {
+        "baseTime": 5
+      }
+    },
+    "customBattle": {
+      "cost": 800
+    },
+    "campaign": {
+      "recruitmentCost": 800,
+      "upkeep": 200,
+      "recruitmentTurns": 1
+    },
+    "attributes": [
+      "stalk_in_forest"
+    ],
+    "sources": {
+      "publicStats": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; public fields: land_units, armour/shield, melee_weapons and verified projectile/explosion rows; pinned PARTIAL source SHA256 9f4dd0f3890d6d07804ff6e075e02c346178f316b0c5d388e0e82c4e935a2b65; original generated/wh3/refresh-9.0.2/pilot/units/sample-16.result.json SHA256 d3bbcd833812879adc9fa99f6ddce6af23741eb120c4e287b5111ae479e3ae87; omissions reviewed separately; incomplete optional ID groups omitted, not absent in-game",
+      "hiddenStats": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; hidden fields: unambiguous battle_entity properties, weapon splash, projectile calibration/reload/penetration",
+      "campaign": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; main_units recruitment_cost/upkeep_cost/create_time and multiplayer_cost are base values only"
+    }
   }
 ]

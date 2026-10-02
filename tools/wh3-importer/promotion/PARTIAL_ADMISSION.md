@@ -1,5 +1,11 @@
 # Bounded admission after the PARTIAL review
 
+This records the first four PARTIAL admissions at `bd16d93`. The subsequent
+explicit five-candidate batch is documented in [DEFERRED_ADMISSION.md](DEFERRED_ADMISSION.md).
+Its pinned review/source remain unchanged; the historical deferred wording below
+describes the first admission only. Current catalog: 10 Production / 5 Sample /
+5 Diagnostic-only.
+
 2026-10-02, WH3 9.0.2.0. The complete [14-candidate field review](PARTIAL_REVIEW.md)
 and `partial-review.json` separate source quality from production admission.
 PARTIAL is not a whole-Unit veto. PROMOTABLE means the explicitly listed fields,

@@ -117,10 +117,10 @@ test('bounded partial production appends only four reviewed identities and is id
   const fromFirst=options();fromFirst.units=units.slice(0,6);fromFirst.factions=factions.slice(0,2);
   assert.equal(sha(JSON.stringify(fromFirst.units)),'867a8839d09887a87d68d018dd8819f122773749a7313fdd623ecbe73d8ed71f');
   assert.equal(sha(JSON.stringify(fromFirst.factions)),'5c0aed29c4109ae75409680686bb4ecbdcaecd6bc805556d1eeb84d6b695d43c');
-  assert.deepEqual(buildPartialProductionBatch(fromFirst).units,units);assert.deepEqual(buildPartialProductionBatch(fromFirst).added,{units:4,factions:2});
+  assert.deepEqual(buildPartialProductionBatch(fromFirst).units,units.slice(0,10));assert.deepEqual(buildPartialProductionBatch(fromFirst).added,{units:4,factions:2});
   assert.equal(sha(readFileSync('src/data/unitDiagnostics.json')),(await reviewModule()).diagnosticSha256);
-  assert.equal(units.filter(u=>u.gameVersion==='sample').length,5);assert.equal(catalog.list().filter(e=>e.hasProduction&&!e.isSample).length,5);
-  assert.equal(game.getFactionUnits('empire').length,2);assert.equal(game.getFactionUnits('skaven').length,1);
+  assert.equal(units.filter(u=>u.gameVersion==='sample').length,5);assert.equal(catalog.list().filter(e=>e.hasProduction&&!e.isSample).length,10);
+  assert.equal(game.getFactionUnits('empire').length,3);assert.equal(game.getFactionUnits('skaven').length,2);
   assert.equal(game.getFactionUnits('vampire_counts').filter(u=>u.gameVersion!=='sample').length,1);
   for(const d of diagnostics.entries)assert(!game.getUnit(d.id) && d.productionEligible===false);
 });
@@ -153,7 +153,7 @@ test('production, sample and diagnostic personal targets round-trip through the 
   const {memoryIndexedDb}=require('./fixtures/memoryIndexedDb.cjs');
   const {wikiRepository:wiki,parseBackup}=require('../.test-build/src/repositories/wikiRepository.js');
   global.indexedDB=memoryIndexedDb();
-  const ids=[...units.slice(6).map(u=>u.id),'zombies',diagnostics.entries[0].id];
+  const ids=[...units.slice(6,10).map(u=>u.id),'zombies',diagnostics.entries[0].id];
   for(const id of ids){const target={entityType:'unit',entityId:id};await wiki.setBookmark(target,true);await wiki.recordView(target);
     await wiki.saveArticle(target,{evaluation:`personal:${id}`,tactics:'개인 기록',strengths:'',weaknesses:''});}
   const backup=await wiki.exportBackup();assert.equal(backup.version,1);assert.equal(backup.articles.length,6);
