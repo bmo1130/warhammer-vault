@@ -115,3 +115,26 @@ test('shared identity accepts only the two exact HP projections and keeps diagno
       const changed=structuredClone(unit);mutate(changed);assert.throws(()=>assertSharedUnitIdentity(changed,diagnostic),/collision/);}
   }
 });
+
+test('three reported ULTRA totals remain withheld without matching raw records; existing HP and Production bytes are unchanged',async()=>{
+  const {replayHP,byteHash}=await modules(),report=replayHP(manifest),units=read('src/data/units.json');
+  const expected=[['wh_main_emp_inf_swordsmen',8280,120],['wh_main_brt_cav_mounted_yeomen_0',5520,60],['wh_dlc01_chs_mon_dragon_ogre',9856,16]];
+  const fixtures=read(base+'semantic-fixtures.json');
+  for(const [main,hp,count] of expected){
+    const fixture=fixtures.cases.find(c=>c.mainKey===main);assert.equal(fixture.HealthMax,hp);assert.equal(fixture.NumEntitiesInitial,count);
+    const review=report.review.find(r=>r.staticChain.sourceMainKey===main);
+    assert.equal(review.status,'WITHHELD');assert.deepEqual(review.held,[{reason:'NO_MATCHING_ULTRA_RECORD'}]);
+    assert.deepEqual(review.candidates,[]);assert.equal(review.approved,false);assert.equal(review.totalHealth,undefined);
+    assert(!report.admitted.some(a=>a.sourceMainKey===main));
+    assert(!Object.hasOwn(units.find(u=>u.id==='ca_unit_'+main).entities,'totalHealth'));
+    const forced=structuredClone(manifest);forced.subjects.find(s=>s.mainKey===main).approved=true;
+    assert.throws(()=>replayHP(forced),/approved HP failed replay/);
+  }
+  assert.equal(units.find(u=>u.name==='Dread Saurian').entities.totalHealth,15088);
+  assert.equal(units.find(u=>u.name==='Skeleton Chariots').entities.totalHealth,7032);
+  // Exact file anchor for this admission attempt: even unrelated whitespace or
+  // non-HP values must remain unchanged when no additional source exists.
+  assert.equal(byteHash(readFileSync('src/data/units.json')),'077fc0ca25e6926817ed57d5e7e9e0c37ea1abbef31ec5b38c8445b2e1eb5bfa');
+  assert.equal(byteHash(readFileSync(base+'manifest.json')),'e6438e1fd16eb64ce597f46aa33cd7c49d16c305ee0e085d80131e76c331ff46');
+  assert.equal(byteHash(readFileSync(base+'review.json')),'ca7464c158ca4711cf8e95ab2ffccf46b6754cc0def1ef22ce02ee46c80dd5b0');
+});
