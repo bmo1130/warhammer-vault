@@ -973,5 +973,792 @@
       "hiddenStats": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; hidden fields: unambiguous battle_entity properties, weapon splash, projectile calibration/reload/penetration",
       "campaign": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; main_units recruitment_cost/upkeep_cost/create_time and multiplayer_cost are base values only"
     }
+  },
+  {
+    "id": "ca_unit_wh_main_brt_inf_men_at_arms",
+    "name": "Men-at-Arms (Polearms)",
+    "factionId": "bretonnia",
+    "summary": "",
+    "gameVersion": "9.0.2.0",
+    "source": "CA base DB · WH3 9.0.2.0 · reviewed expansion batch 01 · tools/wh3-importer/expansion-batch-01/EXPANSION_BATCH_01.md#expansion-01-03",
+    "tags": [],
+    "classification": {
+      "category": "Melee Infantry",
+      "tier": 1
+    },
+    "entities": {
+      "entitySize": "small",
+      "mass": 100
+    },
+    "movement": {
+      "canSkirmish": false
+    },
+    "defense": {
+      "armor": 30,
+      "meleeDefense": 40,
+      "leadership": 50,
+      "shieldBlockChance": 0,
+      "projectilePenetrationResistance": 1
+    },
+    "melee": {
+      "damage": {
+        "base": 7,
+        "armorPiercing": 18,
+        "bonusVsLarge": 18,
+        "bonusVsInfantry": 0
+      },
+      "meleeAttack": 22,
+      "chargeBonus": 6,
+      "attackInterval": 5.5,
+      "weaponLength": 1,
+      "splash": {
+        "maxTargets": 1
+      }
+    },
+    "customBattle": {
+      "cost": 450
+    },
+    "campaign": {
+      "recruitmentCost": 450,
+      "upkeep": 113,
+      "recruitmentTurns": 1
+    },
+    "sources": {
+      "publicStats": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; public fields: land_units, armour/shield, melee_weapons and verified projectile/explosion rows; reviewed source SHA256 e10f3727bf00af27f69a0a623247275db62f4137137f1f416baf39fd7754b4e1; original candidate SHA256 53126b60c8df9787a4320ba293c2021c9e09f580fdc807c84bea3b3c9ef26d09; committed review SHA256 2a1f6203c07bba010ae3cbe862dbd01c0eb1597ac04333f7281a2e7fe47919b0",
+      "hiddenStats": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; hidden fields: unambiguous battle_entity properties, weapon splash, projectile calibration/reload/penetration",
+      "campaign": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; main_units recruitment_cost/upkeep_cost/create_time and multiplayer_cost are base values only"
+    }
+  },
+  {
+    "id": "ca_unit_wh_main_brt_cav_knights_of_the_realm",
+    "name": "Knights of the Realm",
+    "factionId": "bretonnia",
+    "summary": "",
+    "gameVersion": "9.0.2.0",
+    "source": "CA base DB · WH3 9.0.2.0 · reviewed expansion batch 01 · tools/wh3-importer/expansion-batch-01/EXPANSION_BATCH_01.md#expansion-01-04",
+    "tags": [],
+    "classification": {
+      "category": "Cavalry",
+      "tier": 2
+    },
+    "entities": {},
+    "movement": {
+      "canSkirmish": false
+    },
+    "defense": {
+      "armor": 100,
+      "meleeDefense": 28,
+      "leadership": 75,
+      "shieldBlockChance": 35
+    },
+    "melee": {
+      "damage": {
+        "base": 30,
+        "armorPiercing": 10,
+        "bonusVsLarge": 12,
+        "bonusVsInfantry": 0
+      },
+      "meleeAttack": 32,
+      "chargeBonus": 65,
+      "attackInterval": 5.1,
+      "weaponLength": 1,
+      "splash": {
+        "maxTargets": 1
+      }
+    },
+    "customBattle": {
+      "cost": 950
+    },
+    "campaign": {
+      "recruitmentCost": 950,
+      "upkeep": 238,
+      "recruitmentTurns": 1
+    },
+    "attributes": [
+      "stalk_in_forest",
+      "knight"
+    ],
+    "abilities": [
+      "lance"
+    ],
+    "sources": {
+      "publicStats": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; public fields: land_units, armour/shield, melee_weapons and verified projectile/explosion rows; reviewed source SHA256 e10f3727bf00af27f69a0a623247275db62f4137137f1f416baf39fd7754b4e1; original candidate SHA256 71f41e4bf28d7352e45b45e887b079929101116f2b2bac8d8b21ae0579da6afa; committed review SHA256 2a1f6203c07bba010ae3cbe862dbd01c0eb1597ac04333f7281a2e7fe47919b0",
+      "hiddenStats": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; hidden fields: unambiguous battle_entity properties, weapon splash, projectile calibration/reload/penetration",
+      "campaign": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; main_units recruitment_cost/upkeep_cost/create_time and multiplayer_cost are base values only"
+    }
+  },
+  {
+    "id": "ca_unit_wh_dlc07_brt_cav_questing_knights_0",
+    "name": "Questing Knights",
+    "factionId": "bretonnia",
+    "summary": "",
+    "gameVersion": "9.0.2.0",
+    "source": "CA base DB · WH3 9.0.2.0 · reviewed expansion batch 01 · tools/wh3-importer/expansion-batch-01/EXPANSION_BATCH_01.md#expansion-01-05",
+    "tags": [],
+    "classification": {
+      "category": "Cavalry",
+      "tier": 3
+    },
+    "entities": {},
+    "movement": {
+      "canSkirmish": false
+    },
+    "defense": {
+      "armor": 90,
+      "meleeDefense": 39,
+      "leadership": 75,
+      "shieldBlockChance": 0
+    },
+    "melee": {
+      "damage": {
+        "base": 14,
+        "armorPiercing": 38,
+        "bonusVsLarge": 0,
+        "bonusVsInfantry": 0
+      },
+      "meleeAttack": 40,
+      "chargeBonus": 40,
+      "attackInterval": 4.3,
+      "weaponLength": 1,
+      "splash": {
+        "maxTargets": 1
+      }
+    },
+    "customBattle": {
+      "cost": 1100
+    },
+    "campaign": {
+      "recruitmentCost": 1100,
+      "upkeep": 275,
+      "recruitmentTurns": 2
+    },
+    "attributes": [
+      "stalk_in_forest",
+      "immune_to_psychology",
+      "knight"
+    ],
+    "abilities": [
+      "lance"
+    ],
+    "sources": {
+      "publicStats": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; public fields: land_units, armour/shield, melee_weapons and verified projectile/explosion rows; reviewed source SHA256 e10f3727bf00af27f69a0a623247275db62f4137137f1f416baf39fd7754b4e1; original candidate SHA256 c7ad50660dae6e7b60fd3d5cdcc308d274ac859b83aa77535ca562d99ff4d41e; committed review SHA256 2a1f6203c07bba010ae3cbe862dbd01c0eb1597ac04333f7281a2e7fe47919b0",
+      "hiddenStats": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; hidden fields: unambiguous battle_entity properties, weapon splash, projectile calibration/reload/penetration",
+      "campaign": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; main_units recruitment_cost/upkeep_cost/create_time and multiplayer_cost are base values only"
+    }
+  },
+  {
+    "id": "ca_unit_wh_dlc07_brt_inf_foot_squires_0",
+    "name": "Foot Squires",
+    "factionId": "bretonnia",
+    "summary": "",
+    "gameVersion": "9.0.2.0",
+    "source": "CA base DB · WH3 9.0.2.0 · reviewed expansion batch 01 · tools/wh3-importer/expansion-batch-01/EXPANSION_BATCH_01.md#expansion-01-06",
+    "tags": [],
+    "classification": {
+      "category": "Melee Infantry",
+      "tier": 2
+    },
+    "entities": {
+      "entitySize": "small",
+      "mass": 120
+    },
+    "movement": {
+      "canSkirmish": false
+    },
+    "defense": {
+      "armor": 70,
+      "meleeDefense": 26,
+      "leadership": 70,
+      "shieldBlockChance": 0,
+      "projectilePenetrationResistance": 1
+    },
+    "melee": {
+      "damage": {
+        "base": 9,
+        "armorPiercing": 26,
+        "bonusVsLarge": 0,
+        "bonusVsInfantry": 12
+      },
+      "meleeAttack": 28,
+      "chargeBonus": 18,
+      "attackInterval": 4.3,
+      "weaponLength": 1,
+      "splash": {
+        "maxTargets": 1
+      }
+    },
+    "customBattle": {
+      "cost": 725
+    },
+    "campaign": {
+      "recruitmentCost": 750,
+      "upkeep": 188,
+      "recruitmentTurns": 1
+    },
+    "sources": {
+      "publicStats": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; public fields: land_units, armour/shield, melee_weapons and verified projectile/explosion rows; reviewed source SHA256 e10f3727bf00af27f69a0a623247275db62f4137137f1f416baf39fd7754b4e1; original candidate SHA256 4dcbd67a0617e51617852228aa5789c6e857208702cd6a8c7407ae10852eba06; committed review SHA256 2a1f6203c07bba010ae3cbe862dbd01c0eb1597ac04333f7281a2e7fe47919b0",
+      "hiddenStats": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; hidden fields: unambiguous battle_entity properties, weapon splash, projectile calibration/reload/penetration",
+      "campaign": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; main_units recruitment_cost/upkeep_cost/create_time and multiplayer_cost are base values only"
+    }
+  },
+  {
+    "id": "ca_unit_wh2_main_skv_inf_clanrats_1",
+    "name": "Clanrats (Shields)",
+    "factionId": "skaven",
+    "summary": "",
+    "gameVersion": "9.0.2.0",
+    "source": "CA base DB · WH3 9.0.2.0 · reviewed expansion batch 01 · tools/wh3-importer/expansion-batch-01/EXPANSION_BATCH_01.md#expansion-01-07",
+    "tags": [],
+    "classification": {
+      "category": "Melee Infantry",
+      "tier": 1
+    },
+    "entities": {
+      "entitySize": "small",
+      "mass": 100
+    },
+    "movement": {
+      "canSkirmish": false
+    },
+    "defense": {
+      "armor": 25,
+      "meleeDefense": 22,
+      "leadership": 45,
+      "shieldBlockChance": 35,
+      "projectilePenetrationResistance": 1
+    },
+    "melee": {
+      "damage": {
+        "base": 20,
+        "armorPiercing": 6,
+        "bonusVsLarge": 0,
+        "bonusVsInfantry": 0
+      },
+      "meleeAttack": 24,
+      "chargeBonus": 10,
+      "attackInterval": 4.3,
+      "weaponLength": 1,
+      "splash": {
+        "maxTargets": 1
+      }
+    },
+    "customBattle": {
+      "cost": 350
+    },
+    "campaign": {
+      "recruitmentCost": 350,
+      "upkeep": 88,
+      "recruitmentTurns": 1
+    },
+    "attributes": [
+      "stalk_in_forest"
+    ],
+    "sources": {
+      "publicStats": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; public fields: land_units, armour/shield, melee_weapons and verified projectile/explosion rows; reviewed source SHA256 e10f3727bf00af27f69a0a623247275db62f4137137f1f416baf39fd7754b4e1; original candidate SHA256 b5541190406e620f97818ccef6e9568b5bb3dedfeb01c2a125a6b38aca0cb16d; committed review SHA256 2a1f6203c07bba010ae3cbe862dbd01c0eb1597ac04333f7281a2e7fe47919b0",
+      "hiddenStats": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; hidden fields: unambiguous battle_entity properties, weapon splash, projectile calibration/reload/penetration",
+      "campaign": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; main_units recruitment_cost/upkeep_cost/create_time and multiplayer_cost are base values only"
+    }
+  },
+  {
+    "id": "ca_unit_wh_main_vmp_inf_grave_guard_1",
+    "name": "Grave Guard (Great Weapons)",
+    "factionId": "vampire_counts",
+    "summary": "",
+    "gameVersion": "9.0.2.0",
+    "source": "CA base DB · WH3 9.0.2.0 · reviewed expansion batch 01 · tools/wh3-importer/expansion-batch-01/EXPANSION_BATCH_01.md#expansion-01-11",
+    "tags": [],
+    "classification": {
+      "category": "Melee Infantry",
+      "tier": 2
+    },
+    "entities": {
+      "entitySize": "small",
+      "mass": 100
+    },
+    "movement": {
+      "canSkirmish": false
+    },
+    "defense": {
+      "armor": 90,
+      "meleeDefense": 26,
+      "leadership": 50,
+      "shieldBlockChance": 0,
+      "projectilePenetrationResistance": 1
+    },
+    "melee": {
+      "damage": {
+        "base": 13,
+        "armorPiercing": 29,
+        "bonusVsLarge": 0,
+        "bonusVsInfantry": 13
+      },
+      "meleeAttack": 26,
+      "chargeBonus": 12,
+      "attackInterval": 4.3,
+      "weaponLength": 1,
+      "splash": {
+        "maxTargets": 1
+      }
+    },
+    "customBattle": {
+      "cost": 950
+    },
+    "campaign": {
+      "recruitmentCost": 950,
+      "upkeep": 225,
+      "recruitmentTurns": 1
+    },
+    "sources": {
+      "publicStats": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; public fields: land_units, armour/shield, melee_weapons and verified projectile/explosion rows; reviewed source SHA256 e10f3727bf00af27f69a0a623247275db62f4137137f1f416baf39fd7754b4e1; original candidate SHA256 40ab5d7fbd68c08bc70363feb011ea17bbb77bb4739c35a7d88602f786c4736d; committed review SHA256 2a1f6203c07bba010ae3cbe862dbd01c0eb1597ac04333f7281a2e7fe47919b0",
+      "hiddenStats": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; hidden fields: unambiguous battle_entity properties, weapon splash, projectile calibration/reload/penetration",
+      "campaign": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; main_units recruitment_cost/upkeep_cost/create_time and multiplayer_cost are base values only"
+    }
+  },
+  {
+    "id": "ca_unit_wh_main_vmp_cav_black_knights_3",
+    "name": "Black Knights (Lances & Barding)",
+    "factionId": "vampire_counts",
+    "summary": "",
+    "gameVersion": "9.0.2.0",
+    "source": "CA base DB · WH3 9.0.2.0 · reviewed expansion batch 01 · tools/wh3-importer/expansion-batch-01/EXPANSION_BATCH_01.md#expansion-01-12",
+    "tags": [],
+    "classification": {
+      "category": "Cavalry",
+      "tier": 3
+    },
+    "entities": {},
+    "movement": {
+      "canSkirmish": false
+    },
+    "defense": {
+      "armor": 110,
+      "meleeDefense": 28,
+      "leadership": 50,
+      "shieldBlockChance": 30
+    },
+    "melee": {
+      "damage": {
+        "base": 30,
+        "armorPiercing": 12,
+        "bonusVsLarge": 0,
+        "bonusVsInfantry": 0
+      },
+      "meleeAttack": 30,
+      "chargeBonus": 75,
+      "attackInterval": 5.1,
+      "weaponLength": 1,
+      "splash": {
+        "maxTargets": 1
+      }
+    },
+    "customBattle": {
+      "cost": 1050
+    },
+    "campaign": {
+      "recruitmentCost": 1050,
+      "upkeep": 263,
+      "recruitmentTurns": 2
+    },
+    "sources": {
+      "publicStats": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; public fields: land_units, armour/shield, melee_weapons and verified projectile/explosion rows; reviewed source SHA256 e10f3727bf00af27f69a0a623247275db62f4137137f1f416baf39fd7754b4e1; original candidate SHA256 e03f2eef1fb0c201da0e0ab8102c38375b9f6ae87c75d5332a512ad0d6c895ac; committed review SHA256 2a1f6203c07bba010ae3cbe862dbd01c0eb1597ac04333f7281a2e7fe47919b0",
+      "hiddenStats": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; hidden fields: unambiguous battle_entity properties, weapon splash, projectile calibration/reload/penetration",
+      "campaign": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; main_units recruitment_cost/upkeep_cost/create_time and multiplayer_cost are base values only"
+    }
+  },
+  {
+    "id": "ca_unit_wh_main_vmp_mon_vargheists",
+    "name": "Vargheists",
+    "factionId": "vampire_counts",
+    "summary": "",
+    "gameVersion": "9.0.2.0",
+    "source": "CA base DB · WH3 9.0.2.0 · reviewed expansion batch 01 · tools/wh3-importer/expansion-batch-01/EXPANSION_BATCH_01.md#expansion-01-13",
+    "tags": [],
+    "classification": {
+      "category": "Melee Infantry",
+      "tier": 3
+    },
+    "entities": {
+      "entitySize": "large",
+      "mass": 1300
+    },
+    "movement": {
+      "canSkirmish": false,
+      "canFly": true
+    },
+    "defense": {
+      "armor": 10,
+      "meleeDefense": 25,
+      "leadership": 62,
+      "shieldBlockChance": 0,
+      "projectilePenetrationResistance": 3
+    },
+    "melee": {
+      "damage": {
+        "base": 30,
+        "armorPiercing": 70,
+        "bonusVsLarge": 0,
+        "bonusVsInfantry": 0
+      },
+      "meleeAttack": 40,
+      "chargeBonus": 26,
+      "attackInterval": 4,
+      "weaponLength": 2,
+      "splash": {
+        "maxTargets": 3,
+        "maxTargetSize": "medium"
+      }
+    },
+    "customBattle": {
+      "cost": 1050
+    },
+    "campaign": {
+      "recruitmentCost": 1000,
+      "upkeep": 250,
+      "recruitmentTurns": 2
+    },
+    "sources": {
+      "publicStats": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; public fields: land_units, armour/shield, melee_weapons and verified projectile/explosion rows; reviewed source SHA256 e10f3727bf00af27f69a0a623247275db62f4137137f1f416baf39fd7754b4e1; original candidate SHA256 e00cb7bcfcb4aa4ffec86d021d4e715ccfae5f1f4a75eca491c981abd05efb84; committed review SHA256 2a1f6203c07bba010ae3cbe862dbd01c0eb1597ac04333f7281a2e7fe47919b0",
+      "hiddenStats": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; hidden fields: unambiguous battle_entity properties, weapon splash, projectile calibration/reload/penetration",
+      "campaign": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; main_units recruitment_cost/upkeep_cost/create_time and multiplayer_cost are base values only"
+    }
+  },
+  {
+    "id": "ca_unit_wh2_main_lzd_inf_saurus_warriors_1",
+    "name": "Saurus Warriors (Shields)",
+    "factionId": "lizardmen",
+    "summary": "",
+    "gameVersion": "9.0.2.0",
+    "source": "CA base DB · WH3 9.0.2.0 · reviewed expansion batch 01 · tools/wh3-importer/expansion-batch-01/EXPANSION_BATCH_01.md#expansion-01-17",
+    "tags": [],
+    "classification": {
+      "category": "Melee Infantry",
+      "tier": 2
+    },
+    "entities": {
+      "entitySize": "small",
+      "mass": 190
+    },
+    "movement": {
+      "canSkirmish": false
+    },
+    "defense": {
+      "armor": 60,
+      "meleeDefense": 34,
+      "leadership": 75,
+      "shieldBlockChance": 35,
+      "projectilePenetrationResistance": 1
+    },
+    "melee": {
+      "damage": {
+        "base": 34,
+        "armorPiercing": 18,
+        "bonusVsLarge": 0,
+        "bonusVsInfantry": 0
+      },
+      "meleeAttack": 32,
+      "chargeBonus": 16,
+      "attackInterval": 3.7,
+      "weaponLength": 2,
+      "splash": {
+        "maxTargets": 1
+      }
+    },
+    "customBattle": {
+      "cost": 800
+    },
+    "campaign": {
+      "recruitmentCost": 800,
+      "upkeep": 200,
+      "recruitmentTurns": 1
+    },
+    "attributes": [
+      "stalk_in_forest"
+    ],
+    "sources": {
+      "publicStats": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; public fields: land_units, armour/shield, melee_weapons and verified projectile/explosion rows; reviewed source SHA256 e10f3727bf00af27f69a0a623247275db62f4137137f1f416baf39fd7754b4e1; original candidate SHA256 38e6232b76cac76cb07ef03788ad80c9c1e6ff98c75122c0ce27e52aaec46eec; committed review SHA256 2a1f6203c07bba010ae3cbe862dbd01c0eb1597ac04333f7281a2e7fe47919b0",
+      "hiddenStats": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; hidden fields: unambiguous battle_entity properties, weapon splash, projectile calibration/reload/penetration",
+      "campaign": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; main_units recruitment_cost/upkeep_cost/create_time and multiplayer_cost are base values only"
+    }
+  },
+  {
+    "id": "ca_unit_wh2_dlc11_cst_inf_depth_guard_0",
+    "name": "Depth Guard",
+    "factionId": "vampire_coast",
+    "summary": "",
+    "gameVersion": "9.0.2.0",
+    "source": "CA base DB · WH3 9.0.2.0 · reviewed expansion batch 01 · tools/wh3-importer/expansion-batch-01/EXPANSION_BATCH_01.md#expansion-01-20",
+    "tags": [],
+    "classification": {
+      "category": "Melee Infantry",
+      "tier": 3
+    },
+    "entities": {
+      "entitySize": "small",
+      "mass": 160
+    },
+    "movement": {
+      "canSkirmish": false
+    },
+    "defense": {
+      "armor": 90,
+      "meleeDefense": 36,
+      "leadership": 60,
+      "shieldBlockChance": 0,
+      "projectilePenetrationResistance": 1
+    },
+    "melee": {
+      "damage": {
+        "base": 46,
+        "armorPiercing": 18,
+        "bonusVsLarge": 0,
+        "bonusVsInfantry": 5
+      },
+      "meleeAttack": 50,
+      "chargeBonus": 30,
+      "attackInterval": 3.8,
+      "weaponLength": 1,
+      "splash": {
+        "maxTargets": 1
+      }
+    },
+    "customBattle": {
+      "cost": 1100
+    },
+    "campaign": {
+      "recruitmentCost": 1200,
+      "upkeep": 300,
+      "recruitmentTurns": 2
+    },
+    "sources": {
+      "publicStats": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; public fields: land_units, armour/shield, melee_weapons and verified projectile/explosion rows; reviewed source SHA256 e10f3727bf00af27f69a0a623247275db62f4137137f1f416baf39fd7754b4e1; original candidate SHA256 310c446d665fcd00d659b7adff9d633d8d549efba7f959acd8b23e07bbaefe08; committed review SHA256 2a1f6203c07bba010ae3cbe862dbd01c0eb1597ac04333f7281a2e7fe47919b0",
+      "hiddenStats": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; hidden fields: unambiguous battle_entity properties, weapon splash, projectile calibration/reload/penetration",
+      "campaign": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; main_units recruitment_cost/upkeep_cost/create_time and multiplayer_cost are base values only"
+    }
+  },
+  {
+    "id": "ca_unit_wh2_dlc11_cst_inf_depth_guard_1",
+    "name": "Depth Guard (Polearms)",
+    "factionId": "vampire_coast",
+    "summary": "",
+    "gameVersion": "9.0.2.0",
+    "source": "CA base DB · WH3 9.0.2.0 · reviewed expansion batch 01 · tools/wh3-importer/expansion-batch-01/EXPANSION_BATCH_01.md#expansion-01-21",
+    "tags": [],
+    "classification": {
+      "category": "Melee Infantry",
+      "tier": 3
+    },
+    "entities": {
+      "entitySize": "small",
+      "mass": 160
+    },
+    "movement": {
+      "canSkirmish": false
+    },
+    "defense": {
+      "armor": 90,
+      "meleeDefense": 44,
+      "leadership": 60,
+      "shieldBlockChance": 0,
+      "projectilePenetrationResistance": 1
+    },
+    "melee": {
+      "damage": {
+        "base": 14,
+        "armorPiercing": 30,
+        "bonusVsLarge": 28,
+        "bonusVsInfantry": 0
+      },
+      "meleeAttack": 42,
+      "chargeBonus": 20,
+      "attackInterval": 4.4,
+      "weaponLength": 2,
+      "splash": {
+        "maxTargets": 1
+      }
+    },
+    "customBattle": {
+      "cost": 1200
+    },
+    "campaign": {
+      "recruitmentCost": 1300,
+      "upkeep": 325,
+      "recruitmentTurns": 2
+    },
+    "sources": {
+      "publicStats": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; public fields: land_units, armour/shield, melee_weapons and verified projectile/explosion rows; reviewed source SHA256 e10f3727bf00af27f69a0a623247275db62f4137137f1f416baf39fd7754b4e1; original candidate SHA256 87bb7714f0777b17d11236cdc29ded73cdf208c39db9d843bfb2c0c0f189aa70; committed review SHA256 2a1f6203c07bba010ae3cbe862dbd01c0eb1597ac04333f7281a2e7fe47919b0",
+      "hiddenStats": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; hidden fields: unambiguous battle_entity properties, weapon splash, projectile calibration/reload/penetration",
+      "campaign": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; main_units recruitment_cost/upkeep_cost/create_time and multiplayer_cost are base values only"
+    }
+  },
+  {
+    "id": "ca_unit_wh_main_chs_inf_chosen_0",
+    "name": "Chosen",
+    "factionId": "warriors_of_chaos",
+    "summary": "",
+    "gameVersion": "9.0.2.0",
+    "source": "CA base DB · WH3 9.0.2.0 · reviewed expansion batch 01 · tools/wh3-importer/expansion-batch-01/EXPANSION_BATCH_01.md#expansion-01-22",
+    "tags": [],
+    "classification": {
+      "category": "Melee Infantry",
+      "tier": 3
+    },
+    "entities": {
+      "entitySize": "small",
+      "mass": 160
+    },
+    "movement": {
+      "canSkirmish": false
+    },
+    "defense": {
+      "armor": 120,
+      "meleeDefense": 60,
+      "leadership": 85,
+      "shieldBlockChance": 60,
+      "projectilePenetrationResistance": 1
+    },
+    "melee": {
+      "damage": {
+        "base": 34,
+        "armorPiercing": 14,
+        "bonusVsLarge": 0,
+        "bonusVsInfantry": 0
+      },
+      "meleeAttack": 46,
+      "chargeBonus": 26,
+      "attackInterval": 3.8,
+      "weaponLength": 1,
+      "splash": {
+        "maxTargets": 1
+      }
+    },
+    "customBattle": {
+      "cost": 1250
+    },
+    "campaign": {
+      "recruitmentCost": 1250,
+      "upkeep": 313,
+      "recruitmentTurns": 2
+    },
+    "attributes": [
+      "stalk_in_forest"
+    ],
+    "sources": {
+      "publicStats": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; public fields: land_units, armour/shield, melee_weapons and verified projectile/explosion rows; reviewed source SHA256 e10f3727bf00af27f69a0a623247275db62f4137137f1f416baf39fd7754b4e1; original candidate SHA256 2168e604cdf2897bcbaf330c23c898600999c2b1398dd806e2f67350fc98b5b8; committed review SHA256 2a1f6203c07bba010ae3cbe862dbd01c0eb1597ac04333f7281a2e7fe47919b0",
+      "hiddenStats": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; hidden fields: unambiguous battle_entity properties, weapon splash, projectile calibration/reload/penetration",
+      "campaign": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; main_units recruitment_cost/upkeep_cost/create_time and multiplayer_cost are base values only"
+    }
+  },
+  {
+    "id": "ca_unit_wh_main_chs_inf_chosen_1",
+    "name": "Chosen (Great Weapons)",
+    "factionId": "warriors_of_chaos",
+    "summary": "",
+    "gameVersion": "9.0.2.0",
+    "source": "CA base DB · WH3 9.0.2.0 · reviewed expansion batch 01 · tools/wh3-importer/expansion-batch-01/EXPANSION_BATCH_01.md#expansion-01-23",
+    "tags": [],
+    "classification": {
+      "category": "Melee Infantry",
+      "tier": 3
+    },
+    "entities": {
+      "entitySize": "small",
+      "mass": 160
+    },
+    "movement": {
+      "canSkirmish": false
+    },
+    "defense": {
+      "armor": 120,
+      "meleeDefense": 46,
+      "leadership": 85,
+      "shieldBlockChance": 0,
+      "projectilePenetrationResistance": 1
+    },
+    "melee": {
+      "damage": {
+        "base": 12,
+        "armorPiercing": 38,
+        "bonusVsLarge": 0,
+        "bonusVsInfantry": 0
+      },
+      "meleeAttack": 48,
+      "chargeBonus": 32,
+      "attackInterval": 4.1,
+      "weaponLength": 1,
+      "splash": {
+        "maxTargets": 1
+      }
+    },
+    "customBattle": {
+      "cost": 1350
+    },
+    "campaign": {
+      "recruitmentCost": 1350,
+      "upkeep": 338,
+      "recruitmentTurns": 2
+    },
+    "attributes": [
+      "stalk_in_forest"
+    ],
+    "sources": {
+      "publicStats": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; public fields: land_units, armour/shield, melee_weapons and verified projectile/explosion rows; reviewed source SHA256 e10f3727bf00af27f69a0a623247275db62f4137137f1f416baf39fd7754b4e1; original candidate SHA256 cb26449c739405c3712149a2741831926c3fe4bbb6c558246a612fbc98cec90f; committed review SHA256 2a1f6203c07bba010ae3cbe862dbd01c0eb1597ac04333f7281a2e7fe47919b0",
+      "hiddenStats": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; hidden fields: unambiguous battle_entity properties, weapon splash, projectile calibration/reload/penetration",
+      "campaign": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; main_units recruitment_cost/upkeep_cost/create_time and multiplayer_cost are base values only"
+    }
+  },
+  {
+    "id": "ca_unit_wh_main_chs_cav_chaos_knights_1",
+    "name": "Chaos Knights (Lances)",
+    "factionId": "warriors_of_chaos",
+    "summary": "",
+    "gameVersion": "9.0.2.0",
+    "source": "CA base DB · WH3 9.0.2.0 · reviewed expansion batch 01 · tools/wh3-importer/expansion-batch-01/EXPANSION_BATCH_01.md#expansion-01-24",
+    "tags": [],
+    "classification": {
+      "category": "War Beast",
+      "tier": 3
+    },
+    "entities": {},
+    "movement": {
+      "canSkirmish": false
+    },
+    "defense": {
+      "armor": 120,
+      "meleeDefense": 38,
+      "leadership": 75,
+      "shieldBlockChance": 30
+    },
+    "melee": {
+      "damage": {
+        "base": 36,
+        "armorPiercing": 17,
+        "bonusVsLarge": 0,
+        "bonusVsInfantry": 0
+      },
+      "meleeAttack": 42,
+      "chargeBonus": 80,
+      "attackInterval": 5,
+      "weaponLength": 2,
+      "splash": {
+        "maxTargets": 1
+      }
+    },
+    "customBattle": {
+      "cost": 1300
+    },
+    "campaign": {
+      "recruitmentCost": 1500,
+      "upkeep": 375,
+      "recruitmentTurns": 2
+    },
+    "attributes": [
+      "causes_fear",
+      "stalk_in_forest"
+    ],
+    "sources": {
+      "publicStats": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; public fields: land_units, armour/shield, melee_weapons and verified projectile/explosion rows; reviewed source SHA256 e10f3727bf00af27f69a0a623247275db62f4137137f1f416baf39fd7754b4e1; original candidate SHA256 b4c889422a5279bafd73d294b18c2e518c13d7afb04f972bb3881f72d8473076; committed review SHA256 2a1f6203c07bba010ae3cbe862dbd01c0eb1597ac04333f7281a2e7fe47919b0",
+      "hiddenStats": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; hidden fields: unambiguous battle_entity properties, weapon splash, projectile calibration/reload/penetration",
+      "campaign": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; main_units recruitment_cost/upkeep_cost/create_time and multiplayer_cost are base values only"
+    }
   }
 ]

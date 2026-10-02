@@ -32,7 +32,7 @@ test('ordinary unit pages remain intact with no empty diagnostic area', () => {
   const before = readFileSync('src/data/units.json', 'utf8');
   for (const unit of JSON.parse(before)) {
     const html = render(unit.id);
-    for (const text of [unit.name, '기본 스탯', '기본 정보', '내 기록']) assert(html.includes(text));
+    for (const text of [unit.name.replaceAll('&','&amp;'), '기본 스탯', '기본 정보', '내 기록']) assert(html.includes(text));
     assert.equal(html.includes('데이터 해석 근거'), Boolean(diagnostics.get(unit.id)));
     assert(!html.includes('Production data unavailable'));
   }

@@ -145,7 +145,8 @@ test('first batch preserves sample records, diagnostic bytes and primary roster 
   assert.equal(sha(JSON.stringify(factions.filter(faction => faction.gameVersion === 'sample'))), '6c6a2b29bc9655347fa7091d0d706e0be85c8c7d52310ebb21a29bfbc5bba664');
   assert.equal(sha(readFileSync('src/data/unitDiagnostics.json')), '1abbe4b8251320e86dbe7470bf3cf3729b7759c7c71af2af2b5b9f4ce680bb1f');
   assert.equal(game.getFactionUnits('vampire_counts').filter(unit => unit.gameVersion === 'sample').length, 5);
-  assert.deepEqual(game.getFactionUnits(review.factionId).map(unit => unit.id), [review.id]);
+  assert.deepEqual(game.getFactionUnits(review.factionId).map(unit => unit.id), units.filter(unit => unit.factionId===review.factionId).map(unit=>unit.id));
+  assert(game.getFactionUnits(review.factionId).some(unit=>unit.id===review.id));
   assert.equal(catalog.list().filter(entry => !entry.isSample && entry.hasProduction && entry.id === review.id).length, 1);
   const entry = catalog.get(review.id);
   assert(entry.hasProduction && !entry.isSample && !entry.hasDiagnostic && entry.kind === 'unit');

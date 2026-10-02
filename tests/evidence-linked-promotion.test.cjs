@@ -19,7 +19,7 @@ test('five bounded admissions replay exact records, registry, omissions, hashes 
   assert.deepEqual(batch.registry,registry);assert.deepEqual(batch.added,{units:0,factions:0});
   input.units=units.slice(0,15);input.factions=factions.slice(0,5);
   const first=buildEvidenceLinkedBatch(input);
-  assert.deepEqual(first.added,{units:5,factions:3});assert.deepEqual(first.units,units);assert.deepEqual(first.factions,factions);
+  assert.deepEqual(first.added,{units:5,factions:3});assert.deepEqual(first.units,units.slice(0,20));assert.deepEqual(first.factions,factions);
   assert.equal(createHash('sha256').update(readFileSync('src/data/unitDiagnostics.json')).digest('hex'),registry.diagnosticSha256);
   const {reviewPartialCandidates}=await import('../tools/wh3-importer/promotion/partial-review.mjs');
   const replay=reviewPartialCandidates(before.evidence,before.diagnostics);
@@ -52,7 +52,7 @@ test('admission refuses source, candidate identity/hash, review, unknown, snapsh
     x=>{x.diagnostics.batchId='other';},
     x=>{x.diagnostics.staticSnapshotId='wrong';},
     x=>{x.diagnostics.snapshot.packs[0].sha256='wrong';},
-    x=>{x.units.at(-1).entities.totalHealth=5980;},
+    x=>{x.units.find(u=>u.id===registry.links.at(-1).productionId).entities.totalHealth=5980;},
     x=>{x.factions.at(-1).description='whole roster';},
     x=>{x.diagnostics.entries.push({...x.diagnostics.entries[0],id:'zombies'});},
     x=>{x.units.push(x.units[0]);},
@@ -62,7 +62,7 @@ test('admission refuses source, candidate identity/hash, review, unknown, snapsh
 });
 
 test('only exact reviewed shared collisions pass; identity, provenance and snapshot mismatch fail closed',()=>{
-  assert.equal(createUnitCatalog(units,diagnostics.entries).length,20);
+  assert.equal(createUnitCatalog(units,diagnostics.entries).length,34);
   for(const link of registry.links){
     const u=units.find(u=>u.id===link.productionId),d=diagnostics.entries.find(d=>d.id===link.diagnosticId);
     assert.equal(createUnitCatalog([u],[d]).length,1);
@@ -79,7 +79,7 @@ test('only exact reviewed shared collisions pass; identity, provenance and snaps
     }
   }
   assert.throws(()=>createUnitCatalog([units[0]],[{...diagnostics.entries[0],id:units[0].id}]),/ID collision/);
-  assert.equal(catalog.list().filter(e=>e.hasProduction&&!e.isSample).length,15);
+  assert.equal(catalog.list().filter(e=>e.hasProduction&&!e.isSample).length,29);
   assert.equal(catalog.list().filter(e=>e.isSample).length,5);
   assert.equal(catalog.list().filter(e=>e.hasProduction&&e.hasDiagnostic).length,5);
   assert.equal(catalog.search('','diagnostic-only').length,0);assert.equal(catalog.search('','evidence').length,5);

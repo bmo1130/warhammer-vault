@@ -63,9 +63,9 @@ ID, 이름, `factionId`, 설명과 출처 메타데이터는 최상위에 유지
 
 ### 유닛 상세 화면의 diagnostic 자료
 
-홈의 **유닛 탐색**과 데스크톱·모바일의 **유닛** 메뉴에서 `/units`를 엽니다. 현재 Production 10개, Sample 5개, diagnostic-only 5개를 검색하고 전체 / 일반 Unit / Diagnostic evidence 있음 / Diagnostic-only로 필터링할 수 있습니다. 일반 Unit 필터에는 Production과 Sample이 함께 포함되며 각 행의 배지로 구분합니다. 검색어와 필터는 URL에 유지됩니다. 홈 검색도 팩션·군주·일반 유닛에 더해 diagnostic 이름·ID·source key를 찾습니다. 이 목록은 표시용 catalog이며 diagnostic 자료는 production 검색 API나 팩션 roster에 들어가지 않습니다.
+홈의 **유닛 탐색**과 데스크톱·모바일의 **유닛** 메뉴에서 `/units`를 엽니다. 현재 Production 29개, Sample 5개, diagnostic evidence 5개, diagnostic-only 0개이며 unique catalog는 34개입니다. 전체 / 일반 Unit / Diagnostic evidence 있음 / Diagnostic-only로 필터링할 수 있습니다. 일반 Unit 필터에는 Production과 Sample이 함께 포함되며 각 행의 배지로 구분합니다. 검색어와 필터는 URL에 유지됩니다. 홈 검색도 팩션·군주·일반 유닛에 더해 diagnostic 이름·ID·source key를 찾습니다. Production은 기존 검색 API와 팩션 catalog에 포함되고 diagnostic evidence는 별도 repository에 유지됩니다.
 
-Black Coach, Skeleton Chariots, Dread Saurian, Necrofex Colossus, Free Company Militia는 **diagnostic-only**입니다. 기존 `/units/:id`와 `UnitPage`를 재사용하되 Production Unit이나 가짜 기본 스탯을 생성하지 않고 `Production data unavailable`을 표시합니다. Sample은 미확인 수치를 비워 둔 구조 검증용 예시라는 점을 목록과 상세 배지에 명시합니다. Diagnostic 상세의 짧은 자료 범위 요약은 저장된 path·case 건수일 뿐 신뢰도 점수나 실제 개체·발사 수가 아닙니다.
+Black Coach, Skeleton Chariots, Dread Saurian, Necrofex Colossus, Free Company Militia는 **Production · Evidence** shared entry입니다. 검토된 exact ID/main/land/source/snapshot allowlist만 같은 `/units/:id`에 연결하며 다른 collision은 계속 거부합니다. Production static 스탯을 먼저 표시하고 별도 diagnostic 요약·접힌 상세 evidence를 이어서 표시합니다. Runtime HP/count/missile은 production에 합치지 않습니다. Sample은 미확인 수치를 비워 둔 구조 검증용 예시라는 점을 목록과 상세 배지에 명시합니다. Diagnostic 요약의 path·case 건수는 신뢰도 점수나 실제 개체·발사 수가 아닙니다.
 
 Diagnostic-only도 기존 `unit:<id>` 개인 기록 대상으로 즐겨찾기, 최근 본 항목, 평가·운용 메모의 작성·수정·삭제를 지원합니다. 홈은 catalog의 정확한 ID로 이름과 route를 찾습니다. 현재 목록에서 사라진 과거 ID는 연결 없는 안내 행으로 표시하고 저장 내용은 삭제하지 않습니다. 개인 기록은 evidence와 별도 영역·IndexedDB에만 저장됩니다. 기존 v1 JSON 백업에 diagnostic 기록도 그대로 포함되며, 백업 schema나 parser 변경 없이 복원합니다. 백업에는 production 데이터와 diagnostic evidence가 포함되지 않습니다. 같은 브라우저라도 접속 origin이 다르면 개인 저장소는 별개입니다.
 
@@ -73,7 +73,7 @@ Diagnostic-only도 기존 `unit:<id>` 개인 기록 대상으로 즐겨찾기, �
 
 `unitDiagnosticRepository`는 정확한 diagnostic catalog ID로 `src/data/unitDiagnostics.json`만 읽습니다. 표시용 JSON은 완료된 **2026-10-01 / 9.0.2.0 batch**의 최소 projection이며, 새 checkout에서도 UI를 볼 수 있도록 커밋했습니다. 개인 절대 경로와 raw debug 객체는 포함하지 않습니다. `node scripts/project-unit-diagnostics.mjs`는 명시된 로컬 완료 batch, 검증 결과, 기존 static index/candidates가 있을 때만 이 표시 파일을 재생성합니다. 원본 SHA256도 보존합니다. 이 명령은 extraction/ingestion/normalization이나 precedence 재추론을 수행하지 않습니다. 현재 batch의 5개 항목만 지원하며 자동 최신 자료 선택이나 production 승격은 없습니다.
 
-`tests/unit-diagnostics.test.cjs`는 기존 화면·목록의 유지, diagnostic-only route, 복합 구성·복수 missile source, static-only/projectile 관찰 구분, 불확실성과 provenance 표시를 검증합니다. 로컬 완료 자료가 있을 때는 원본 hash·identity·모든 candidate path·관찰값의 일치도 검사합니다.
+`tests/unit-diagnostics.test.cjs`는 기존 화면·목록의 유지, shared evidence route와 diagnostic-only fallback, 복합 구성·복수 missile source, static-only/projectile 관찰 구분, 불확실성과 provenance 표시를 검증합니다. 로컬 완료 자료가 있을 때는 원본 hash·identity·모든 candidate path·관찰값의 일치도 검사합니다.
 
 `tests/unit-catalog.test.cjs`는 catalog 분리·ID 충돌, 검색과 필터, 상세·홈·내비게이션 렌더링, stale target 표시를 검증합니다. `tests/wiki-workflow.test.cjs`는 작은 IndexedDB 계약 double로 개인 기록 CRUD와 diagnostic·샘플·과거 ID의 v1 백업 왕복을 검사합니다. 이 double은 실제 브라우저 저장소 구현을 대체하지 않습니다.
 
@@ -101,6 +101,10 @@ npm run build
 실제 적용된 필드·gate·보류 사유·검증 결과는 [PARTIAL admission](tools/wh3-importer/promotion/PARTIAL_ADMISSION.md)에 정리했습니다.
 
 기존 review에서 승인한 [deferred 5개 batch](tools/wh3-importer/promotion/DEFERRED_ADMISSION.md)로 Grail Knights, Mounted Yeomen, Pegasus Knights, Royal Altdorf Gryphites, Ratling Guns를 추가했습니다. 네 mounted 유닛의 entities는 비워 두고, Ratling만 검증된 MAN size/mass와 정적 missile 10개 필드를 저장합니다. 상세의 사격 영역은 raw/base 의미를 유지하며 실제 장전시간·DPS·관통 개체 수로 환산하지 않습니다. `node scripts/promote-deferred-units.mjs --check`로 committed review/source와 production 일치를 검사합니다. 새 mapping, schema, runtime evidence는 없습니다.
+
+[Evidence-linked 5개 admission](tools/wh3-importer/promotion/EVIDENCE_LINKED_ADMISSION.md)은 exact shared identity registry로 기존 diagnostic 5개를 검토된 production core와 연결했습니다. `node scripts/promote-evidence-linked-units.mjs --check`로 재현하며 기존 diagnostic artifact와 `productionEligible=false`, personal target/v1 backup은 유지합니다.
+
+[Expansion batch 01](tools/wh3-importer/expansion-batch-01/EXPANSION_BATCH_01.md)은 별도 24-name catalog에서 실제 pack localisation을 조사했습니다. Unique root 16개 중 faction alias 충돌 2개를 보류하고 14개 core static subset을 추가했습니다. 다중 root 6개·정확한 이름 미발견 2개는 자동 선택/대체하지 않습니다. 기존 15개 Production과 Sample 5개는 동일하며 mounted entity 대표값, count/HP/speed와 불완전 optional ID group은 생략했습니다. 새 mapping/faction/schema/UI/runtime 작업은 없습니다. Committed bounded source/review/admission은 `node scripts/review-expansion-batch-01.mjs --check` 및 `node scripts/promote-expansion-batch-01.mjs --check`로 로컬 게임 파일 없이 재현합니다. 원본 extraction은 ignored `generated/wh3/expansion-batch-01/`에 남습니다. 기존 representative pilot의 CLEAN 1 / PARTIAL 14 / BLOCKED 9 기록은 변경하지 않았습니다.
 
 `node scripts/review-partial-units.mjs --check`는 pinned source에서 JSON/Markdown 검토표를 재현하고, `node scripts/promote-partial-units.mjs --check`는 4개 production record의 일치를 검증합니다. 각각의 `--write`는 검토표 재생성 또는 승인된 4개 append만 수행합니다. PARTIAL 자체를 전체 거부 사유로 사용하지 않습니다. 진단 ID 5개의 core 후보와 Necrofex 주포의 direct 값도 검토표에 보존하지만, shared catalog 연결이나 여러 missile source의 표현을 자동 해결하지 않습니다. BLOCKED 9개는 이번 검토·승격 대상이 아닙니다. Unit/composition schema, 저장된 evidence와 개인 백업 형식은 유지합니다.
 

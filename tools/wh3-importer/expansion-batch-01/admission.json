@@ -1,0 +1,407 @@
+{
+  "format": "warhammer-vault-expansion-01-admission-v1",
+  "sourceSha256": "e10f3727bf00af27f69a0a623247275db62f4137137f1f416baf39fd7754b4e1",
+  "reviewSha256": "2a1f6203c07bba010ae3cbe862dbd01c0eb1597ac04333f7281a2e7fe47919b0",
+  "preservedBaseline": {
+    "units": "75e7c3ea866b774c6d8856079e438f151a9183b55b84cb65ab411984d1fa949d",
+    "factions": "1bde13f1cf3a25026d55d6385102f3c2912e644c8e035ea578d5bcea66ca20ac",
+    "bytes": {
+      "src/data/unitDiagnostics.json": "1abbe4b8251320e86dbe7470bf3cf3729b7759c7c71af2af2b5b9f4ce680bb1f",
+      "src/data/unitSharedIdentities.json": "3e256bf5c850df65e70a539062a5109a36c75757f8f3a34bc75d8b492aa9d13e",
+      "src/data/factions.json": "a0868547e7a96b69649e470bb024eaa9bb55813139df04d3ff01d5d94e8d650e",
+      "tools/wh3-importer/pilot-catalog.mjs": "5e78204136b74d7bb112f394e5bce9601162f16c0f30048229e6c0d16e0162fb",
+      "tools/wh3-importer/PILOT.md": "1179b33824005a3a45af1cf84af10c94c1704fc48db47ddce9061d2bfd96bb79",
+      "tools/wh3-importer/promotion/partial-review.json": "b4fd68d50e031b77567e01547a3eccbb8d094339bec6f6d3085d58e01130afef"
+    }
+  },
+  "admitted": [
+    {
+      "id": "ca_unit_wh_main_brt_inf_men_at_arms",
+      "name": "Men-at-Arms (Polearms)",
+      "mainKey": "wh_main_brt_inf_men_at_arms",
+      "landKey": "wh_main_brt_inf_men_at_arms",
+      "factionId": "bretonnia",
+      "militaryGroup": "wh_main_group_bretonnia",
+      "source": {
+        "reference": "generated/wh3/expansion-batch-01/units/expansion-01-03.result.json",
+        "sha256": "53126b60c8df9787a4320ba293c2021c9e09f580fdc807c84bea3b3c9ef26d09"
+      },
+      "admittedGroups": [
+        "identity",
+        "affiliation/catalog",
+        "classification",
+        "entities",
+        "movement",
+        "defense",
+        "melee",
+        "campaign",
+        "customBattle"
+      ],
+      "withheldGroups": [
+        "passiveAbilities",
+        "attributes",
+        "missile"
+      ]
+    },
+    {
+      "id": "ca_unit_wh_main_brt_cav_knights_of_the_realm",
+      "name": "Knights of the Realm",
+      "mainKey": "wh_main_brt_cav_knights_of_the_realm",
+      "landKey": "wh_main_brt_cav_knights_of_the_realm",
+      "factionId": "bretonnia",
+      "militaryGroup": "wh_main_group_bretonnia",
+      "source": {
+        "reference": "generated/wh3/expansion-batch-01/units/expansion-01-04.result.json",
+        "sha256": "71f41e4bf28d7352e45b45e887b079929101116f2b2bac8d8b21ae0579da6afa"
+      },
+      "admittedGroups": [
+        "identity",
+        "affiliation/catalog",
+        "classification",
+        "movement",
+        "defense",
+        "melee",
+        "campaign",
+        "customBattle",
+        "abilities",
+        "attributes"
+      ],
+      "withheldGroups": [
+        "passiveAbilities",
+        "missile"
+      ]
+    },
+    {
+      "id": "ca_unit_wh_dlc07_brt_cav_questing_knights_0",
+      "name": "Questing Knights",
+      "mainKey": "wh_dlc07_brt_cav_questing_knights_0",
+      "landKey": "wh_dlc07_brt_cav_questing_knights_0",
+      "factionId": "bretonnia",
+      "militaryGroup": "wh_main_group_bretonnia",
+      "source": {
+        "reference": "generated/wh3/expansion-batch-01/units/expansion-01-05.result.json",
+        "sha256": "c7ad50660dae6e7b60fd3d5cdcc308d274ac859b83aa77535ca562d99ff4d41e"
+      },
+      "admittedGroups": [
+        "identity",
+        "affiliation/catalog",
+        "classification",
+        "movement",
+        "defense",
+        "melee",
+        "campaign",
+        "customBattle",
+        "abilities",
+        "attributes"
+      ],
+      "withheldGroups": [
+        "passiveAbilities",
+        "missile"
+      ]
+    },
+    {
+      "id": "ca_unit_wh_dlc07_brt_inf_foot_squires_0",
+      "name": "Foot Squires",
+      "mainKey": "wh_dlc07_brt_inf_foot_squires_0",
+      "landKey": "wh_dlc07_brt_inf_foot_squires_0",
+      "factionId": "bretonnia",
+      "militaryGroup": "wh_main_group_bretonnia",
+      "source": {
+        "reference": "generated/wh3/expansion-batch-01/units/expansion-01-06.result.json",
+        "sha256": "4dcbd67a0617e51617852228aa5789c6e857208702cd6a8c7407ae10852eba06"
+      },
+      "admittedGroups": [
+        "identity",
+        "affiliation/catalog",
+        "classification",
+        "entities",
+        "movement",
+        "defense",
+        "melee",
+        "campaign",
+        "customBattle"
+      ],
+      "withheldGroups": [
+        "passiveAbilities",
+        "attributes",
+        "missile"
+      ]
+    },
+    {
+      "id": "ca_unit_wh2_main_skv_inf_clanrats_1",
+      "name": "Clanrats (Shields)",
+      "mainKey": "wh2_main_skv_inf_clanrats_1",
+      "landKey": "wh2_main_skv_inf_clanrats_1",
+      "factionId": "skaven",
+      "militaryGroup": "wh2_main_skv",
+      "source": {
+        "reference": "generated/wh3/expansion-batch-01/units/expansion-01-07.result.json",
+        "sha256": "b5541190406e620f97818ccef6e9568b5bb3dedfeb01c2a125a6b38aca0cb16d"
+      },
+      "admittedGroups": [
+        "identity",
+        "affiliation/catalog",
+        "classification",
+        "entities",
+        "movement",
+        "defense",
+        "melee",
+        "campaign",
+        "customBattle",
+        "attributes"
+      ],
+      "withheldGroups": [
+        "passiveAbilities",
+        "missile"
+      ]
+    },
+    {
+      "id": "ca_unit_wh_main_vmp_inf_grave_guard_1",
+      "name": "Grave Guard (Great Weapons)",
+      "mainKey": "wh_main_vmp_inf_grave_guard_1",
+      "landKey": "wh_main_vmp_inf_grave_guard_1",
+      "factionId": "vampire_counts",
+      "militaryGroup": "wh_main_group_vampire_counts",
+      "source": {
+        "reference": "generated/wh3/expansion-batch-01/units/expansion-01-11.result.json",
+        "sha256": "40ab5d7fbd68c08bc70363feb011ea17bbb77bb4739c35a7d88602f786c4736d"
+      },
+      "admittedGroups": [
+        "identity",
+        "affiliation/catalog",
+        "classification",
+        "entities",
+        "movement",
+        "defense",
+        "melee",
+        "campaign",
+        "customBattle"
+      ],
+      "withheldGroups": [
+        "passiveAbilities",
+        "attributes",
+        "missile"
+      ]
+    },
+    {
+      "id": "ca_unit_wh_main_vmp_cav_black_knights_3",
+      "name": "Black Knights (Lances & Barding)",
+      "mainKey": "wh_main_vmp_cav_black_knights_3",
+      "landKey": "wh_main_vmp_cav_black_knights_3",
+      "factionId": "vampire_counts",
+      "militaryGroup": "wh_main_group_vampire_counts",
+      "source": {
+        "reference": "generated/wh3/expansion-batch-01/units/expansion-01-12.result.json",
+        "sha256": "e03f2eef1fb0c201da0e0ab8102c38375b9f6ae87c75d5332a512ad0d6c895ac"
+      },
+      "admittedGroups": [
+        "identity",
+        "affiliation/catalog",
+        "classification",
+        "movement",
+        "defense",
+        "melee",
+        "campaign",
+        "customBattle"
+      ],
+      "withheldGroups": [
+        "passiveAbilities",
+        "attributes",
+        "missile"
+      ]
+    },
+    {
+      "id": "ca_unit_wh_main_vmp_mon_vargheists",
+      "name": "Vargheists",
+      "mainKey": "wh_main_vmp_mon_vargheists",
+      "landKey": "wh_main_vmp_mon_vargheists",
+      "factionId": "vampire_counts",
+      "militaryGroup": "wh_main_group_vampire_counts",
+      "source": {
+        "reference": "generated/wh3/expansion-batch-01/units/expansion-01-13.result.json",
+        "sha256": "e00cb7bcfcb4aa4ffec86d021d4e715ccfae5f1f4a75eca491c981abd05efb84"
+      },
+      "admittedGroups": [
+        "identity",
+        "affiliation/catalog",
+        "classification",
+        "entities",
+        "movement",
+        "defense",
+        "melee",
+        "campaign",
+        "customBattle"
+      ],
+      "withheldGroups": [
+        "passiveAbilities",
+        "attributes",
+        "missile"
+      ]
+    },
+    {
+      "id": "ca_unit_wh2_main_lzd_inf_saurus_warriors_1",
+      "name": "Saurus Warriors (Shields)",
+      "mainKey": "wh2_main_lzd_inf_saurus_warriors_1",
+      "landKey": "wh2_main_lzd_inf_saurus_warriors_1",
+      "factionId": "lizardmen",
+      "militaryGroup": "wh2_main_lzd",
+      "source": {
+        "reference": "generated/wh3/expansion-batch-01/units/expansion-01-17.result.json",
+        "sha256": "38e6232b76cac76cb07ef03788ad80c9c1e6ff98c75122c0ce27e52aaec46eec"
+      },
+      "admittedGroups": [
+        "identity",
+        "affiliation/catalog",
+        "classification",
+        "entities",
+        "movement",
+        "defense",
+        "melee",
+        "campaign",
+        "customBattle",
+        "attributes"
+      ],
+      "withheldGroups": [
+        "passiveAbilities",
+        "missile"
+      ]
+    },
+    {
+      "id": "ca_unit_wh2_dlc11_cst_inf_depth_guard_0",
+      "name": "Depth Guard",
+      "mainKey": "wh2_dlc11_cst_inf_depth_guard_0",
+      "landKey": "wh2_dlc11_cst_inf_depth_guard_0",
+      "factionId": "vampire_coast",
+      "militaryGroup": "wh2_dlc11_group_vampire_coast",
+      "source": {
+        "reference": "generated/wh3/expansion-batch-01/units/expansion-01-20.result.json",
+        "sha256": "310c446d665fcd00d659b7adff9d633d8d549efba7f959acd8b23e07bbaefe08"
+      },
+      "admittedGroups": [
+        "identity",
+        "affiliation/catalog",
+        "classification",
+        "entities",
+        "movement",
+        "defense",
+        "melee",
+        "campaign",
+        "customBattle"
+      ],
+      "withheldGroups": [
+        "passiveAbilities",
+        "attributes",
+        "missile"
+      ]
+    },
+    {
+      "id": "ca_unit_wh2_dlc11_cst_inf_depth_guard_1",
+      "name": "Depth Guard (Polearms)",
+      "mainKey": "wh2_dlc11_cst_inf_depth_guard_1",
+      "landKey": "wh2_dlc11_cst_inf_depth_guard_1",
+      "factionId": "vampire_coast",
+      "militaryGroup": "wh2_dlc11_group_vampire_coast",
+      "source": {
+        "reference": "generated/wh3/expansion-batch-01/units/expansion-01-21.result.json",
+        "sha256": "87bb7714f0777b17d11236cdc29ded73cdf208c39db9d843bfb2c0c0f189aa70"
+      },
+      "admittedGroups": [
+        "identity",
+        "affiliation/catalog",
+        "classification",
+        "entities",
+        "movement",
+        "defense",
+        "melee",
+        "campaign",
+        "customBattle"
+      ],
+      "withheldGroups": [
+        "passiveAbilities",
+        "attributes",
+        "missile"
+      ]
+    },
+    {
+      "id": "ca_unit_wh_main_chs_inf_chosen_0",
+      "name": "Chosen",
+      "mainKey": "wh_main_chs_inf_chosen_0",
+      "landKey": "wh_main_chs_inf_chosen_0",
+      "factionId": "warriors_of_chaos",
+      "militaryGroup": "wh_main_group_chaos",
+      "source": {
+        "reference": "generated/wh3/expansion-batch-01/units/expansion-01-22.result.json",
+        "sha256": "2168e604cdf2897bcbaf330c23c898600999c2b1398dd806e2f67350fc98b5b8"
+      },
+      "admittedGroups": [
+        "identity",
+        "affiliation/catalog",
+        "classification",
+        "entities",
+        "movement",
+        "defense",
+        "melee",
+        "campaign",
+        "customBattle",
+        "attributes"
+      ],
+      "withheldGroups": [
+        "missile"
+      ]
+    },
+    {
+      "id": "ca_unit_wh_main_chs_inf_chosen_1",
+      "name": "Chosen (Great Weapons)",
+      "mainKey": "wh_main_chs_inf_chosen_1",
+      "landKey": "wh_main_chs_inf_chosen_1",
+      "factionId": "warriors_of_chaos",
+      "militaryGroup": "wh_main_group_chaos",
+      "source": {
+        "reference": "generated/wh3/expansion-batch-01/units/expansion-01-23.result.json",
+        "sha256": "cb26449c739405c3712149a2741831926c3fe4bbb6c558246a612fbc98cec90f"
+      },
+      "admittedGroups": [
+        "identity",
+        "affiliation/catalog",
+        "classification",
+        "entities",
+        "movement",
+        "defense",
+        "melee",
+        "campaign",
+        "customBattle",
+        "attributes"
+      ],
+      "withheldGroups": [
+        "missile"
+      ]
+    },
+    {
+      "id": "ca_unit_wh_main_chs_cav_chaos_knights_1",
+      "name": "Chaos Knights (Lances)",
+      "mainKey": "wh_main_chs_cav_chaos_knights_1",
+      "landKey": "wh_main_chs_cav_chaos_knights_1",
+      "factionId": "warriors_of_chaos",
+      "militaryGroup": "wh_main_group_chaos",
+      "source": {
+        "reference": "generated/wh3/expansion-batch-01/units/expansion-01-24.result.json",
+        "sha256": "b4c889422a5279bafd73d294b18c2e518c13d7afb04f972bb3881f72d8473076"
+      },
+      "admittedGroups": [
+        "identity",
+        "affiliation/catalog",
+        "classification",
+        "movement",
+        "defense",
+        "melee",
+        "campaign",
+        "customBattle",
+        "attributes"
+      ],
+      "withheldGroups": [
+        "missile"
+      ]
+    }
+  ],
+  "note": "Explicit 14-ID admission. Existing records require exact equality. No diagnostic data, runtime, migration, new mapping, faction, schema or UI change."
+}
