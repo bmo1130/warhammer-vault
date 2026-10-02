@@ -1,6 +1,6 @@
 import { FORMAT, digest, stable, observationTemplate } from '../contract.mjs';
 import { validateRuntimeEvidence, proposeResolutions } from '../validate.mjs';
-import { verifyCandidates } from './candidates.mjs';
+import { verifyCandidates, UNIT_SIZES } from './candidates.mjs';
 import { verifyIndex } from '../static-index.mjs';
 
 export const PREFIX = 'WH3_RUNTIME_PROBE|';
@@ -125,6 +125,11 @@ export function compareRuns(parsed, manifest, { index, additionalMainKeys = [] }
     }
   }
   const reports = reconstructRuns(parsed).map(run => {
+    // Check every event, including start/end, cursor and ERROR envelopes.
+    // Unbound historical manifests retain their original replay semantics.
+    const sizeFailures = manifest.expectedUnitSize ? run.events.filter(({event}) =>
+      event.metadata.unitSize !== manifest.expectedUnitSize || event.metadata.unitSizeSource !== 'DECLARED_SETUP') : [];
+    if (sizeFailures.length) run.problems.push('UNIT_SIZE_MISMATCH');
     const f = run.frames[0]?.fields, main = value(f?.['UnitRecordContext.Key']) ?? value(run.cursor[0]?.fields?.['UnitContext.UnitRecordContext.Key']);
     const unit = units.find(u => u.sourceMainKey === main);
     const lands = run.frames.map(f => value(f.fields['UnitRecordContext.UnitLandRecordContext.Key']));
@@ -133,7 +138,7 @@ export function compareRuns(parsed, manifest, { index, additionalMainKeys = [] }
     const identityOK = unit && run.metadata.gameVersion === manifest.snapshot.gameVersion && run.metadata.staticSnapshotId === manifest.snapshotId &&
       (run.metadata.contextId ?? null) === unit.contextId && lands.length && lands.every(k => k === unit.sourceLandKey) && mains.every(k => k === main) &&
       uids.every(k => k !== undefined && k === uids[0]) && run.frames.every(f => value(f.fields.IsPlayerUnit) === true);
-    const status = run.problems.includes('CONFLICTING_RUNTIME_EVIDENCE') ? 'CONFLICTING_RUNTIME_EVIDENCE' : !identityOK || run.problems.includes('METADATA_DRIFT') ? 'IDENTITY_PENDING' : 'SCOPED_RUNTIME_CAPTURE';
+    const status = sizeFailures.length ? 'QUARANTINED_UNIT_SIZE' : manifest.expectedUnitSize && parsed.problems.length ? 'QUARANTINED_PROBE_INPUT' : run.problems.includes('CONFLICTING_RUNTIME_EVIDENCE') ? 'CONFLICTING_RUNTIME_EVIDENCE' : !identityOK || run.problems.includes('METADATA_DRIFT') ? 'IDENTITY_PENDING' : 'SCOPED_RUNTIME_CAPTURE';
     const observedEntities = run.frames.flatMap(f => lists.flatMap(list => Object.values(f.lists[list]?.entries ?? {}).map(row => ({ list, sample: f.sample,
       recordKey: value(row.fields['EntityRecordContext.Key']), key: value(row.fields.Key), isMan: value(row.fields.IsMan), isEngine: value(row.fields.IsEngine),
       reloading: value(row.fields.IsReloading), reloadPercent: value(row.fields.ReloadPercent), reloadRemainingTime: value(row.fields.ReloadRemainingTime),
@@ -186,6 +191,9 @@ export function compareRuns(parsed, manifest, { index, additionalMainKeys = [] }
     return { runId: run.id, status, sourceMainKey: main ?? null, sourceLandKey: unit?.sourceLandKey ?? null, contextId: run.metadata.contextId ?? null,
       sourceLogs: [...new Set(run.events.flatMap(e => e.references.map(ref => ref.slice(0, ref.lastIndexOf(':')))))].sort(),
       unitSize: run.metadata.unitSize ?? 'NOT_RECORDED', metadata: run.metadata, complete: allComplete, problems: run.problems,
+      ...(manifest.expectedUnitSize ? {expectedUnitSize:manifest.expectedUnitSize, unitSizeFailures:sizeFailures.map(e=>({
+        reference:e.references[0],kind:e.event.kind,expected:manifest.expectedUnitSize,
+        observed:e.event.metadata.unitSize??null,unitSizeSource:e.event.metadata.unitSizeSource??null}))} : {}),
       frames: run.frames, entities, missileSources, projectiles, ammo, cursors, unexpectedEntityKeys, unexpectedProjectileKeys,
       entityReviewStatus: unit?.entityReviewStatus ?? (unit ? 'REVIEWED' : 'IDENTITY_PENDING'),
       componentCountMeaning: 'CONTEXT_VIEWS_ONLY; do not sum lists into a physical object count',
@@ -206,11 +214,12 @@ export function compareRuns(parsed, manifest, { index, additionalMainKeys = [] }
       simultaneousSources: 'INCONCLUSIVE', entityIndexContinuity: 'UNVERIFIED', productionEligible: false };
   });
   const settingComparisons = units.map(u => ({ sourceMainKey: u.sourceMainKey, contextId: u.contextId,
-    settings: ['MEDIUM', 'ULTRA'].map(unitSize => ({ unitSize, captures: reports.filter(r => r.sourceMainKey === u.sourceMainKey && r.status === 'SCOPED_RUNTIME_CAPTURE' && r.unitSize === unitSize && r.runId.includes('snapshot-')).flatMap(r => r.frames.map(f => ({
+    settings: (manifest.expectedUnitSize ? UNIT_SIZES : ['MEDIUM', 'ULTRA']).map(unitSize => ({ unitSize, captures: reports.filter(r => r.sourceMainKey === u.sourceMainKey && r.status === 'SCOPED_RUNTIME_CAPTURE' && r.unitSize === unitSize && r.runId.includes('snapshot-')).flatMap(r => r.frames.map(f => ({
       reference: f.reference, NumEntities: f.fields.NumEntities, NumEntitiesInitial: f.fields.NumEntitiesInitial, HealthValue: f.fields.HealthValue, HealthMax: f.fields.HealthMax,
       lists: Object.fromEntries(lists.map(name => [name, f.lists[name]?.size ?? { status: 'NULL' }])),
     }))) })), scalingMeaning: 'UNRESOLVED', formula: null, setupComparability: 'REQUIRES_REVIEW', productionEligible: false }));
-  return { format: 'warhammer-vault-cco-comparison-v1', status: reports.length ? 'CAPTURES_PRESERVED' : 'NO_PROBE_EVENTS', reports, settingComparisons, parseProblems: parsed.problems,
+  return { format: 'warhammer-vault-cco-comparison-v1', status: reports.some(r=>r.unitSizeFailures?.length) ? 'QUARANTINED_UNIT_SIZE' : manifest.expectedUnitSize && parsed.problems.length ? 'QUARANTINED_PROBE_INPUT' : reports.length ? 'CAPTURES_PRESERVED' : 'NO_PROBE_EVENTS', reports, settingComparisons, parseProblems: parsed.problems,
+    ...(manifest.expectedUnitSize ? {expectedUnitSize:manifest.expectedUnitSize} : {}),
     repeatedEventsCollapsed: parsed.repeats, staticModified: false, productionModified: false, productionEligible: false };
 }
 
@@ -218,7 +227,8 @@ export function toRuntimeEvidence(report, index) {
   const observations = [], held = [];
   for (const r of report.reports) {
     const s = index.subjects.find(s => s.sourceMainKey === r.sourceMainKey && s.contextId === r.contextId);
-    if (r.status !== 'SCOPED_RUNTIME_CAPTURE' || !s) { held.push({ runId: r.runId, status: r.status }); continue; }
+    if (r.status !== 'SCOPED_RUNTIME_CAPTURE' || !s) { held.push({ runId: r.runId, status: r.status,
+      ...(r.unitSizeFailures?.length ? {reason:'UNIT_SIZE_MISMATCH',failures:r.unitSizeFailures} : {}) }); continue; }
     function add(type, ccoField, payload, reference, samplePoint, label = 'whole unit') {
       const o = observationTemplate(s, { id: `cco:${digest([r.runId, type, ccoField, reference]).slice(0, 32)}`, unitSize: r.unitSize }, type);
       o.scenarioId = r.metadata.scenarioId ?? 'CCO_P0'; o.trialId = JSON.parse(r.runId)[0]; o.subjectLabel = label; o.samplePoint = samplePoint;

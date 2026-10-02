@@ -1,3 +1,4 @@
+import hpOverlay from '../tools/wh3-importer/hp-policy/overlay.cjs';
 import { readFile, writeFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import { buildDeferredProductionBatch } from '../tools/wh3-importer/promotion/partial-batch.mjs';
@@ -6,13 +7,14 @@ import { loadUnitValidator } from '../tools/wh3-importer/normalization/validatio
 const args=process.argv.slice(2);
 if(args.length!==1 || !['--check','--write'].includes(args[0])) throw new Error('Use --check or --write. Five explicit deferred identities only; committed review must match source replay.');
 const root=new URL('../',import.meta.url), paths=['src/data/units.json','src/data/factions.json'];
-const originals=await Promise.all(paths.map(p=>readFile(new URL(p,root),'utf8'))), [units,factions]=originals.map(JSON.parse);
+const originals=await Promise.all(paths.map(p=>readFile(new URL(p,root),'utf8'))), [currentUnits,factions]=originals.map(JSON.parse);
+const units=hpOverlay.staticProductionView(currentUnits);
 const evidence=JSON.parse(await readFile(new URL('tools/wh3-importer/promotion/partial-sources.json',root),'utf8'));
 const committedReview=JSON.parse(await readFile(new URL('tools/wh3-importer/promotion/partial-review.json',root),'utf8'));
 const bytes=await readFile(new URL('src/data/unitDiagnostics.json',root));
 if(createHash('sha256').update(bytes).digest('hex')!==diagnosticSha256) throw new Error('Diagnostic evidence changed; admission refused.');
 const batch=buildDeferredProductionBatch({evidence,committedReview,diagnostics:JSON.parse(bytes),units,factions,validate:await loadUnitValidator()});
-const outputs=[batch.units,batch.factions].map(value=>JSON.stringify(value,null,2)+'\n');
+const outputs=[hpOverlay.applyProductionHP(batch.units),batch.factions].map(value=>JSON.stringify(value,null,2)+'\n');
 if(args[0]==='--write') {
   try {for(let i=0;i<paths.length;i++) if(outputs[i]!==originals[i]) await writeFile(new URL(paths[i],root),outputs[i]);}
   catch(error) {for(let i=0;i<paths.length;i++) await writeFile(new URL(paths[i],root),originals[i]);throw error;}

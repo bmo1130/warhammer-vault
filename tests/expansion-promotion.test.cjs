@@ -1,3 +1,4 @@
+const hpOverlay=require('../tools/wh3-importer/hp-policy/overlay.cjs');
 const {test}=require('node:test');
 const assert=require('node:assert/strict');
 const {readFileSync}=require('node:fs');
@@ -6,7 +7,7 @@ const {validateUnits}=require('../.test-build/src/domain/unitValidation.js');
 const {unitCatalogRepository:catalog}=require('../.test-build/src/repositories/unitCatalogRepository.js');
 const read=p=>JSON.parse(readFileSync(p,'utf8'));
 const base='tools/wh3-importer/expansion-batch-01/';
-const units=read('src/data/units.json'),factions=read('src/data/factions.json'),diagnostics=read('src/data/unitDiagnostics.json');
+const units=hpOverlay.staticProductionView(read('src/data/units.json')),factions=read('src/data/factions.json'),diagnostics=read('src/data/unitDiagnostics.json');
 const options=()=>({bundle:read(base+'sources.json'),committedReview:read(base+'review.json'),units:structuredClone(units),
   factions:structuredClone(factions),diagnosticIds:diagnostics.entries.map(d=>d.id),validate:validateUnits});
 const modules=async()=>({...await import('../tools/wh3-importer/expansion-batch-01/review.mjs'),

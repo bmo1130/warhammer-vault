@@ -882,7 +882,9 @@
       "category": "War Machine",
       "tier": 2
     },
-    "entities": {},
+    "entities": {
+      "totalHealth": 7032
+    },
     "movement": {
       "canSkirmish": false
     },
@@ -934,7 +936,9 @@
       "category": "War Beast",
       "tier": 5
     },
-    "entities": {},
+    "entities": {
+      "totalHealth": 15088
+    },
     "movement": {
       "canSkirmish": false
     },

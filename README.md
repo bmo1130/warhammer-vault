@@ -65,7 +65,7 @@ ID, 이름, `factionId`, 설명과 출처 메타데이터는 최상위에 유지
 
 홈의 **유닛 탐색**과 데스크톱·모바일의 **유닛** 메뉴에서 `/units`를 엽니다. 현재 Production 101개, Sample 5개, diagnostic evidence 5개, diagnostic-only 0개이며 unique catalog는 106개입니다. 전체 / 일반 Unit / Diagnostic evidence 있음 / Diagnostic-only로 필터링할 수 있습니다. 일반 Unit 필터에는 Production과 Sample이 함께 포함되며 각 행의 배지로 구분합니다. 검색어와 필터는 URL에 유지됩니다. 홈 검색도 팩션·군주·일반 유닛에 더해 diagnostic 이름·ID·source key를 찾습니다. Production은 기존 검색 API와 팩션 catalog에 포함되고 diagnostic evidence는 별도 repository에 유지됩니다.
 
-Black Coach, Skeleton Chariots, Dread Saurian, Necrofex Colossus, Free Company Militia는 **Production · Evidence** shared entry입니다. 검토된 exact ID/main/land/source/snapshot allowlist만 같은 `/units/:id`에 연결하며 다른 collision은 계속 거부합니다. Production static 스탯을 먼저 표시하고 별도 diagnostic 요약·접힌 상세 evidence를 이어서 표시합니다. Runtime HP/count/missile은 production에 합치지 않습니다. Sample은 미확인 수치를 비워 둔 구조 검증용 예시라는 점을 목록과 상세 배지에 명시합니다. Diagnostic 요약의 path·case 건수는 신뢰도 점수나 실제 개체·발사 수가 아닙니다.
+Black Coach, Skeleton Chariots, Dread Saurian, Necrofex Colossus, Free Company Militia는 **Production · Evidence** shared entry입니다. 검토된 exact ID/main/land/source/snapshot allowlist만 같은 `/units/:id`에 연결하며 다른 collision은 계속 거부합니다. Production static 스탯을 먼저 표시하고 별도 diagnostic 요약·접힌 상세 evidence를 이어서 표시합니다. Runtime count/missile은 production에 합치지 않습니다. HP는 [ULTRA HP 정책](tools/wh3-importer/hp-policy/HP_POLICY.md)의 명시적 field admission만 허용합니다. Sample은 미확인 수치를 비워 둔 구조 검증용 예시라는 점을 목록과 상세 배지에 명시합니다. Diagnostic 요약의 path·case 건수는 신뢰도 점수나 실제 개체·발사 수가 아닙니다.
 
 Diagnostic-only도 기존 `unit:<id>` 개인 기록 대상으로 즐겨찾기, 최근 본 항목, 평가·운용 메모의 작성·수정·삭제를 지원합니다. 홈은 catalog의 정확한 ID로 이름과 route를 찾습니다. 현재 목록에서 사라진 과거 ID는 연결 없는 안내 행으로 표시하고 저장 내용은 삭제하지 않습니다. 개인 기록은 evidence와 별도 영역·IndexedDB에만 저장됩니다. 기존 v1 JSON 백업에 diagnostic 기록도 그대로 포함되며, 백업 schema나 parser 변경 없이 복원합니다. 백업에는 production 데이터와 diagnostic evidence가 포함되지 않습니다. 같은 브라우저라도 접속 origin이 다르면 개인 저장소는 별개입니다.
 
@@ -145,3 +145,5 @@ npm run extract:wh3-unit -- bloodthirster --game-path 'YOUR_WH3_INSTALLATION_ROO
 팩션, 군주, 유닛 검색과 상세 조회, 개인 서술 및 메모의 생성·수정·삭제, 즐겨찾기, 최근 본 항목, JSON 백업·복원을 지원합니다. 게임 원본 데이터는 UI에서 수정할 수 없습니다.
 
 세이브 파싱, 계산기, 비교기, 모드 오버라이드 편집, 동기화, APK는 아직 구현하지 않았습니다. 향후 계산기는 `Modifier` 타입을 바탕으로 별도 계산 모듈을 만들고 `gameRepository`가 제공하는 기본 스탯과 선택한 캠페인·모드 문맥을 입력으로 받도록 확장할 수 있습니다.
+
+[ULTRA HP admission](tools/wh3-importer/hp-policy/HP_POLICY.md)은 exact main/land 및 snapshot, 모든 record의 ULTRA/DECLARED_SETUP, VALUE HealthMax/NumEntitiesInitial을 검증합니다. 현재 원본 로그가 확인된 Dread Saurian(15,088)과 Skeleton Chariots(7,032)의 totalHealth만 채웠습니다. 나머지 Production 99개와 static-derived HP는 의미가 증명되지 않아 비워 둡니다. Component list 개수는 HP multiplier로 쓰지 않으며 기존 MEDIUM evidence/속도/다른 스탯은 유지합니다. `node scripts/promote-ultra-hp.mjs --check`로 원본 log hash → static identity → HP review → 명시적 admission → Production/projection equality를 clean checkout에서 재현합니다. 기존 static promotion commands는 승인된 두 HP overlay만 분리해 원래 static gates를 확인하고 보존합니다.

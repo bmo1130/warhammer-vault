@@ -1,3 +1,4 @@
+import hpOverlay from '../tools/wh3-importer/hp-policy/overlay.cjs';
 import { readFile,writeFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import { buildEvidenceLinkedBatch } from '../tools/wh3-importer/promotion/evidence-linked-batch.mjs';
@@ -10,8 +11,8 @@ const bytes=await readFile(new URL('src/data/unitDiagnostics.json',root));
 if(createHash('sha256').update(bytes).digest('hex')!==diagnosticSha256) throw new Error('Diagnostic bytes changed');
 const batch=buildEvidenceLinkedBatch({evidence:await read('tools/wh3-importer/promotion/partial-sources.json'),
   committedReview:await read('tools/wh3-importer/promotion/partial-review.json'),diagnostics:JSON.parse(bytes),
-  units:await read('src/data/units.json'),factions:await read('src/data/factions.json'),validate:await loadUnitValidator()});
-for(const [path,value] of [['src/data/units.json',batch.units],['src/data/factions.json',batch.factions],['src/data/unitSharedIdentities.json',batch.registry]]) {
+  units:hpOverlay.staticProductionView(await read('src/data/units.json')),factions:await read('src/data/factions.json'),validate:await loadUnitValidator()});
+for(const [path,value] of [['src/data/units.json',hpOverlay.applyProductionHP(batch.units)],['src/data/factions.json',batch.factions],['src/data/unitSharedIdentities.json',batch.registry]]) {
   const output=JSON.stringify(value,null,2)+'\n';
   if(mode[0]==='--write') await writeFile(new URL(path,root),output);
   else if(await readFile(new URL(path,root),'utf8')!==output) throw new Error(`Replay differs: ${path}`);

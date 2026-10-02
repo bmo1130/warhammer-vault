@@ -153,7 +153,131 @@ test('P0 jobs require no DB inference and phase 2 remains an ungenerated plan', 
   const f = await fixture(), j = f.jobs.generateProbeJobs(f.manifest); assert.equal(j.jobs.length, 8); assert(j.jobs.every(x => x.status === 'PENDING'));
   assert(j.phase2.every(x => !x.packGenerated && x.policy.candidateChangesPerTest === 1 && !x.policy.sharedVanillaEdits));
 });
-test('Lua source executes with real interpreter: safe fields, cursor, trace changes, hot reload, single listener/timer', async () => {
+
+test('explicit size-bound manifests preserve static evidence and generate only their declared jobs',async()=>{
+  const f=await fixture(),before=structuredClone(f.manifest);
+  for(const size of ['SMALL','MEDIUM','LARGE','ULTRA']){
+    const bound=f.c.bindUnitSize(f.manifest,size);assert.equal(f.c.verifyCandidates(bound).expectedUnitSize,size);
+    assert.deepEqual(bound.units,before.units);assert.deepEqual(bound.extraEvidence,before.extraEvidence);
+    const jobs=f.jobs.generateProbeJobs(bound);assert.equal(jobs.jobs.length,4);assert(jobs.jobs.every(j=>j.unitSize===size));
+  }
+  assert.deepEqual(f.manifest,before);
+  for(const size of [undefined,'MAXIMUM',''])assert.throws(()=>f.c.bindUnitSize(f.manifest,size),/Explicit Unit Size/);
+});
+
+test('size-bound ingest quarantines either mismatch direction and metadata drift on any event',async()=>{
+  const f=await fixture();
+  for(const [expected,observed] of [['ULTRA','MEDIUM'],['MEDIUM','ULTRA']]){
+    const manifest=f.c.bindUnitSize(f.manifest,expected),events=structuredClone(f.events());
+    events.forEach(e=>{e.metadata.unitSize=observed;e.metadata.unitSizeSource='DECLARED_SETUP';});
+    const before=structuredClone(events),report=f.i.compareRuns(f.parse(events),manifest),r=f.i.toRuntimeEvidence(report,f.index);
+    assert.equal(report.status,'QUARANTINED_UNIT_SIZE');assert.equal(report.reports[0].complete,false);
+    assert.equal(r.evidence.observations.length,0);assert.equal(r.resolutions.proposals.length,0);
+    assert.equal(r.held[0].reason,'UNIT_SIZE_MISMATCH');assert.equal(r.held[0].failures[0].expected,expected);
+    assert.equal(r.held[0].failures[0].observed,observed);assert.deepEqual(events,before);
+    const batched=f.batch.buildRuntimeBatch([{name:'synthetic.log',text:events.map(e=>'WH3_RUNTIME_PROBE|'+JSON.stringify(e)).join('\n')}],f.index,manifest,
+      {batchId:'size-mismatch',gameVersion:f.index.snapshot.gameVersion,staticSnapshotId:f.index.snapshotId,declarationReference:'fixture',
+        cases:[{id:'fixture',sourceMainKey:f.subject.sourceMainKey,sourceLogs:['synthetic.log'],interpretation:'fixture'}]});
+    assert.equal(batched.manifest.expectedUnitSize,expected);assert.equal(batched.manifest.unitSizeQuarantines,1);
+    assert.equal(batched.evidence.observations.length,0);assert.equal(batched.manifest.cases[0].scopedCaptures,0);
+  }
+  for(const kind of ['SNAPSHOT_START','SNAPSHOT_UNIT','COMPONENT_LIST','ENTITY','SAMPLE_END','SNAPSHOT_END','ERROR']){
+    const events=structuredClone(f.events());events.forEach(e=>{e.metadata={...e.metadata,unitSize:'ULTRA',unitSizeSource:'DECLARED_SETUP'};});
+    if(kind==='ERROR')events.push({...structuredClone(events.at(-1)),kind:'ERROR',sequence:events.at(-1).sequence+1,data:{reason:'test'}});
+    events.find(e=>e.kind===kind).metadata.unitSize='MEDIUM';
+    const r=f.i.toRuntimeEvidence(f.i.compareRuns(f.parse(events),f.c.bindUnitSize(f.manifest,'ULTRA')),f.index);
+    assert.equal(r.evidence.observations.length,0,kind);assert(r.held.some(h=>h.reason==='UNIT_SIZE_MISMATCH'&&h.failures.length===1),kind);
+  }
+  const malformed=structuredClone(f.events());malformed.forEach(e=>{e.metadata={...e.metadata,unitSize:'ULTRA',unitSizeSource:'DECLARED_SETUP'};});
+  malformed[0].kind='INVALID';malformed[0].metadata.unitSize='MEDIUM';
+  const report=f.i.compareRuns(f.parse(malformed),f.c.bindUnitSize(f.manifest,'ULTRA'));
+  assert.equal(report.status,'QUARANTINED_PROBE_INPUT');assert.equal(f.i.toRuntimeEvidence(report,f.index).evidence.observations.length,0);
+});
+
+test('matching declared Ultra and Medium captures validate without scaling or rewriting historical replay',async()=>{
+  const f=await fixture(),legacy=f.i.toRuntimeEvidence(f.i.compareRuns(f.parse(f.events()),f.manifest),f.index);
+  assert.equal(legacy.validation.status,'VALIDATED');
+  for(const size of ['ULTRA','MEDIUM','SMALL','LARGE']){
+    const events=structuredClone(f.events());events.forEach(e=>{e.metadata.unitSize=size;e.metadata.unitSizeSource='DECLARED_SETUP';});
+    const r=f.i.toRuntimeEvidence(f.i.compareRuns(f.parse(events),f.c.bindUnitSize(f.manifest,size)),f.index);
+    assert.equal(r.validation.status,'VALIDATED');assert(r.evidence.observations.length>0);
+    assert(r.evidence.observations.every(o=>o.unitSize===size));assert.equal(r.resolutions.proposals.length,0);
+    assert.equal(r.evidence.observations.find(o=>o.observationType==='CCO_HEALTH_MAX').observation.value,5000);
+    delete events[0].metadata.unitSizeSource;
+    assert.equal(f.i.compareRuns(f.parse(events),f.c.bindUnitSize(f.manifest,size)).status,'QUARANTINED_UNIT_SIZE');
+  }
+});
+
+test('CLI prepares a separate Ultra bundle without extraction and saves mismatches as quarantine with a failing exit code',async()=>{
+  const f=await fixture(),path=require('node:path'),os=require('node:os'),{spawnSync}=require('node:child_process');
+  const dir=await fs.mkdtemp(path.join(os.tmpdir(),'wh3-size-cli-')),original=path.join(dir,'original'),bundle=path.join(dir,'ultra');
+  const cli=path.resolve('tools/wh3-importer/runtime-evidence/cco-probe/cli.mjs');
+  const run=args=>spawnSync(process.execPath,[cli,...args],{encoding:'utf8',windowsHide:true});
+  try{
+    await fs.mkdir(original);
+    const originals={'static-index.json':JSON.stringify(f.index),'static-candidates.json':JSON.stringify(f.manifest)};
+    for(const [file,bytes]of Object.entries(originals))await fs.writeFile(path.join(original,file),bytes);
+    const prepared=run(['prepare','--bundle-dir',original,'--unit-size','ULTRA','--out',bundle]);assert.equal(prepared.status,0,prepared.stderr);
+    const read=async(dir,file)=>JSON.parse(await fs.readFile(path.join(dir,file),'utf8'));
+    assert.equal((await read(bundle,'manifest.json')).expectedUnitSize,'ULTRA');
+    assert.equal((await read(bundle,'static-candidates.json')).expectedUnitSize,'ULTRA');
+    assert((await read(bundle,'runtime-jobs.json')).jobs.every(j=>j.unitSize==='ULTRA'&&j.status==='PENDING'));
+    const again=run(['prepare','--bundle-dir',original,'--unit-size','ULTRA','--out',bundle]);assert.notEqual(again.status,0);
+    for(const observed of ['MEDIUM','ULTRA']){
+      const events=structuredClone(f.events());events.forEach(e=>{e.metadata.unitSize=observed;e.metadata.unitSizeSource='DECLARED_SETUP';});
+      const log=path.join(dir,observed+'.log'),out=path.join(dir,'ingest-'+observed);
+      await fs.writeFile(log,events.map(e=>'WH3_RUNTIME_PROBE|'+JSON.stringify(e)).join('\n'));
+      const ingested=run(['ingest','--bundle-dir',bundle,'--logs',log,'--out',out]);
+      assert.equal(ingested.status,observed==='ULTRA'?0:1,ingested.stderr);
+      assert.equal((await read(out,'manifest.json')).expectedUnitSize,'ULTRA');
+      const evidence=await read(out,'runtime-evidence.json'),comparison=await read(out,'comparison-report.json');
+      if(observed==='MEDIUM'){assert.equal(evidence.observations.length,0);assert.equal(comparison.status,'QUARANTINED_UNIT_SIZE');
+        assert.equal((await read(out,'capture-triage.json')).held[0].reason,'UNIT_SIZE_MISMATCH');}
+      else {assert(evidence.observations.length>0);assert(evidence.observations.every(o=>o.unitSize==='ULTRA'));}
+    }
+    for(const [file,bytes]of Object.entries(originals))assert.equal(await fs.readFile(path.join(original,file),'utf8'),bytes);
+  }finally{assert(path.resolve(dir).startsWith(path.resolve(os.tmpdir())+path.sep+'wh3-size-cli-'));await fs.rm(dir,{recursive:true,force:true});}
+});
+
+test('PowerShell installer requires an explicit supported size and emits matching Ultra/Medium probe metadata',{skip:process.platform!=='win32'},async()=>{
+  const path=require('node:path'),os=require('node:os'),{spawnSync}=require('node:child_process');
+  const dir=await fs.mkdtemp(path.join(os.tmpdir(),'wh3-unit-size-')),installer=path.resolve('tools/wh3-importer/runtime-evidence/cco-probe/install.ps1');
+  const ps=args=>spawnSync('pwsh',['-NoProfile','-NonInteractive',...args],{encoding:'utf8',windowsHide:true});
+  try{
+    for(const args of [[],['-UnitSize','MAXIMUM']]){
+      const invalid=ps(['-File',installer,...args]);assert.notEqual(invalid.status,0);assert.match(invalid.stderr,/explicit -UnitSize|ValidateSet|validation|parameter/i);
+    }
+    const game=path.join(dir,'game');await fs.mkdir(game);await fs.copyFile(process.execPath,path.join(game,'Warhammer3.exe'));
+    // Use the copied installed Node binary only as a version resource fixture;
+    // it is never executed as a game.
+    const actual=ps(['-Command',`[Diagnostics.FileVersionInfo]::GetVersionInfo('${process.execPath.replaceAll("'","''")}').ProductVersion.Trim()`]);
+    assert.equal(actual.status,0,actual.stderr);
+    for(const size of ['ULTRA','MEDIUM']){
+      const bundle=path.join(dir,size),exec=path.join(dir,size+'-exec');await fs.mkdir(bundle);
+      await fs.writeFile(path.join(bundle,'static-index.json'),JSON.stringify({snapshotId:'a'.repeat(64),snapshot:{gameVersion:actual.stdout.trim()}}));
+      await fs.writeFile(path.join(bundle,'static-candidates.json'),JSON.stringify({snapshotId:'a'.repeat(64),expectedUnitSize:size}));
+      await fs.writeFile(path.join(bundle,'manifest.json'),JSON.stringify({expectedUnitSize:size}));
+      const args=['-File',installer,'-GamePath',game,'-ExecDirectory',exec,'-BundleDirectory',bundle,'-SkipLogging','-UnitSize',size];
+      const installed=ps(args);assert.equal(installed.status,0,installed.stderr);
+      const code=await fs.readFile(path.join(exec,'exec_battle.lua'),'utf8');assert(code.startsWith('WV_CCO_CONFIG = '));
+      assert(code.includes(`unitSize = "${size}"`));assert(code.includes('unitSizeSource = "DECLARED_SETUP"'));
+      const L=lauxlib.luaL_newstate();lualib.luaL_openlibs(L);
+      const mocked=`LOG={};function out(s)LOG[#LOG+1]=s end;bm={};core={};function cco(kind)if kind=='CcoBattleRoot' then return {Call=function()return {Call=function()return nil end}end}end;return nil end;`;
+      assert.equal(lauxlib.luaL_dostring(L,to_luastring(mocked+code+"\nOUTPUT=table.concat(LOG,'\\n')")),lua.LUA_OK);
+      lua.lua_getglobal(L,to_luastring('OUTPUT'));const logs=to_jsstring(lua.lua_tostring(L,-1));
+      const f=await fixture(),parsed=f.i.parseProbeLogs([{name:'installed-fixture.log',text:logs}]);
+      assert(parsed.events.length>0);assert.equal(parsed.problems.length,0,JSON.stringify(parsed.problems));
+      assert(parsed.events.every(e=>e.event.metadata.unitSize===size&&e.event.metadata.unitSizeSource==='DECLARED_SETUP'));
+      const state=JSON.parse(await fs.readFile(path.join(exec,'.wv-cco-install.json'),'utf8'));assert.equal(state.expectedUnitSize,size);
+      const mismatch=ps([...args.slice(0,-1),size==='ULTRA'?'MEDIUM':'ULTRA']);assert.notEqual(mismatch.status,0);assert.match(mismatch.stderr,/expected Unit Size/);
+      assert.equal(await fs.readFile(path.join(exec,'exec_battle.lua'),'utf8'),code);
+    }
+  }finally{
+    assert(path.resolve(dir).startsWith(path.resolve(os.tmpdir())+path.sep+'wh3-unit-size-'));
+    await fs.rm(dir,{recursive:true,force:true});
+  }
+});
+for(const unitSize of ['MEDIUM','ULTRA'])test(`Lua ${unitSize} metadata on every record: safe fields, cursor, trace changes, hot reload, single listener/timer`, async () => {
   // luaL_dostring is a string loader; unlike the external-file loader it does
   // not skip a UTF-8 BOM. Preserve the canonical file bytes on disk.
   const f = await fixture(), code = (await fs.readFile('tools/wh3-importer/runtime-evidence/cco-probe/exec_battle.lua', 'utf8')).replace(/^\uFEFF/, '');
@@ -186,16 +310,18 @@ function cco(kind, id)
  if kind=='CcoBattleRoot' then return {Call=function(self,q) assert(q=='CursorContextContext');return {Call=function(self,q) assert(q=='EntityContext');return entity end} end} end
  error('unknown context')
 end
-WV_CCO_CONFIG={sessionId='lua-test',gameVersion='test-v1',staticSnapshotId=${JSON.stringify(f.snapshotId ?? f.index.snapshotId)},unitSize='MEDIUM'}
+WV_CCO_CONFIG={sessionId='lua-test',gameVersion='test-v1',staticSnapshotId=${JSON.stringify(f.snapshotId ?? f.index.snapshotId)},unitSize='${unitSize}',unitSizeSource='DECLARED_SETUP'}
 `;
   const L = lauxlib.luaL_newstate(); lualib.luaL_openlibs(L);
   function run(s) { const status = lauxlib.luaL_dostring(L, to_luastring(s)); assert.equal(status, lua.LUA_OK, status !== lua.LUA_OK ? to_jsstring(lua.lua_tostring(L, -1)) : ''); }
   run(mock); run(code); run(`WV_CCO_PROBE.trace(); for i=1,50 do NOW=NOW+100;SHOTS=i;local fn=CALLBACKS.wv_cco_trace; if fn then fn() end end;assert(CALLBACKS.wv_cco_trace==nil)`);
   run(code); run(`WV_CCO_PROBE.trace()`); run(code);
   run(`WV_CCO_PROBE=nil; NOW=0; SHOTS=0`); run(code);
-  run(`local n=0;for k in pairs(LISTENERS) do n=n+1 end;assert(n==1);assert(CALLBACKS.wv_cco_trace==nil); OUTPUT=table.concat(LOG,'\\n')`);
+  run(`local n=0;for k in pairs(LISTENERS) do n=n+1 end;assert(n==1);assert(CALLBACKS.wv_cco_trace==nil); cco=function()return nil end; WV_CCO_CONFIG.unitSize='SMALL'; WV_CCO_PROBE.trace(); OUTPUT=table.concat(LOG,'\\n')`);
   lua.lua_getglobal(L, to_luastring('OUTPUT')); const text = to_jsstring(lua.lua_tostring(L, -1));
   const parsed = f.i.parseProbeLogs([{ name: 'real-lua-mock.log', text }]); assert.equal(parsed.problems.length, 0);
+  assert(parsed.events.every(e=>e.event.metadata.unitSize===unitSize&&e.event.metadata.unitSizeSource==='DECLARED_SETUP'));
+  for(const kind of ['SNAPSHOT_START','SNAPSHOT_UNIT','COMPONENT_LIST','ENTITY','CURSOR','TRACE_START','TRACE_UNIT','SAMPLE_END','SNAPSHOT_END','TRACE_END','ERROR'])assert(parsed.events.some(e=>e.event.kind===kind),kind);
   assert.equal(new Set(parsed.events.map(x => x.event.sessionId)).size, 2); assert.equal(parsed.conflictKeys.length, 0);
   const comparison = f.i.compareRuns(parsed, f.manifest), trace = comparison.reports.find(r => r.frames.length === 51);
   assert(trace); assert.equal(trace.ammo[0].decreaseObserved, true); assert.equal(trace.projectileContextTransitions.length, 1); assert(trace.reloadingEntities.length > 0);

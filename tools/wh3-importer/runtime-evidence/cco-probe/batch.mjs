@@ -72,6 +72,8 @@ export function buildRuntimeBatch(inputs, index, candidates, declaration) {
   result.validation = validateRuntimeEvidence(result.evidence, index);
   result.resolutions = proposeResolutions(result.validation);
   const manifest = { batchId: declaration.batchId, gameVersion: index.snapshot.gameVersion, staticSnapshotId: index.snapshotId, snapshot: index.snapshot,
+    ...(candidates.expectedUnitSize ? {expectedUnitSize:candidates.expectedUnitSize, unitSizeSource:'DECLARED_SETUP',
+      unitSizeQuarantines:comparison.reports.filter(r=>r.unitSizeFailures?.length).length} : {}),
     inputs: inputs.map(input => ({ sourceLog: input.name, sourcePath: input.sourcePath ?? null, sha256: input.sha256 ?? null,
       parsedEvents: parsed.events.filter(e => e.references.some(ref => ref.startsWith(input.name + ':'))).length,
       status: parsed.events.some(e => e.references.some(ref => ref.startsWith(input.name + ':'))) ? 'PARSED' : 'NO_PROBE_EVENTS' })),

@@ -1,4 +1,5 @@
 import registry from '../data/unitSharedIdentities.json';
+import hpAdmissions from '../data/unitHpAdmissions.json';
 import type { Unit } from '../domain/unit';
 import { unitDiagnosticRepository, type UnitDiagnostic } from './unitDiagnosticRepository';
 
@@ -12,6 +13,16 @@ const canonical = (value: unknown): string => {
 export function assertSharedUnitIdentity(unit: Unit, diagnostic: UnitDiagnostic, snapshot = unitDiagnosticRepository.snapshot) {
   const link=registry.links.find(link=>link.productionId===unit.id);
   const identity=link?.partialReviewIdentity;
+  // Keep the exact static identity anchor; permit only replay-approved ULTRA HP.
+  const hp=hpAdmissions.admissions.find(admission=>admission.id===unit.id);
+  let staticUnit: Unit=unit;
+  if (hp && unit.entities.totalHealth!==undefined && hpAdmissions.unitSize==='ULTRA' &&
+    hpAdmissions.unitSizeSource==='DECLARED_SETUP' && hp.kind==='DIRECT_ULTRA_RUNTIME' &&
+    hp.field==='entities.totalHealth' && hp.mainKey===link?.mainKey && hp.landKey===link?.landKey &&
+    hp.staticSnapshotId===snapshot.staticSnapshotId && unit.entities.totalHealth===hp.value) {
+    staticUnit={...unit,entities:{...unit.entities}};
+    delete staticUnit.entities.totalHealth;
+  }
   if (!link || link.diagnosticId!==diagnostic.id || link.productionId!==diagnostic.id ||
     link.mainKey!==diagnostic.sourceMainKey || link.landKey!==diagnostic.sourceLandKey ||
     link.diagnosticSourceMainKey!==diagnostic.sourceMainKey || link.diagnosticSourceLandKey!==diagnostic.sourceLandKey ||
@@ -19,7 +30,7 @@ export function assertSharedUnitIdentity(unit: Unit, diagnostic: UnitDiagnostic,
     diagnostic.contextId!==null || diagnostic.productionEligible!==false ||
     unit.gameVersion!==link.gameVersion || snapshot.gameVersion!==link.gameVersion ||
     snapshot.batchId!==registry.diagnosticBatchId || snapshot.staticSnapshotId!==registry.staticSnapshotId ||
-    canonical(snapshot.snapshot)!==canonical(registry.snapshot) || canonical(unit)!==canonical(link.productionRecord)) {
+    canonical(snapshot.snapshot)!==canonical(registry.snapshot) || canonical(staticUnit)!==canonical(link.productionRecord)) {
     throw new Error(`Unit catalog ID collision: ${unit.id}. Explicit reviewed shared identity required.`);
   }
 }

@@ -6,6 +6,17 @@ export const P0 = Object.freeze([
   'wh_main_vmp_veh_black_coach', 'wh2_dlc09_tmb_veh_skeleton_chariot_0',
   'wh2_dlc13_lzd_mon_dread_saurian_1', 'wh2_dlc11_cst_mon_necrofex_colossus_0',
 ]);
+export const UNIT_SIZES = Object.freeze(['SMALL', 'MEDIUM', 'LARGE', 'ULTRA']);
+export function requireUnitSize(size) {
+  if (!UNIT_SIZES.includes(size)) throw new Error('Explicit Unit Size required: SMALL, MEDIUM, LARGE or ULTRA.');
+  return size;
+}
+export function bindUnitSize(manifest, size) {
+  verifyCandidates(manifest); requireUnitSize(size);
+  const { integrity, ...body } = structuredClone(manifest);
+  body.expectedUnitSize = size;
+  return { ...body, integrity: digest(body) };
+}
 // These are processed-schema relationships, not key/suffix matching.
 export async function inspectExtraComponents(source, index) {
   verifyIndex(index);
@@ -95,5 +106,6 @@ export function verifyCandidates(manifest) {
   const { integrity, ...body } = manifest ?? {};
   if (body.format !== 'warhammer-vault-cco-candidates-v1' || digest(body) !== integrity || !Array.isArray(body.units) ||
       body.units.length !== P0.length || new Set(body.units.map(u => u.sourceMainKey)).size !== P0.length || body.units.some(u => !P0.includes(u.sourceMainKey))) throw new Error('Invalid/changed P0 candidate manifest.');
+  if (Object.hasOwn(body, 'expectedUnitSize')) requireUnitSize(body.expectedUnitSize);
   return manifest;
 }

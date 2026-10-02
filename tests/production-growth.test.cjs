@@ -1,9 +1,10 @@
+const hpOverlay=require('../tools/wh3-importer/hp-policy/overlay.cjs');
 const {test}=require('node:test');
 const assert=require('node:assert/strict');
 const {readFileSync}=require('node:fs');
 const {validateUnits}=require('../.test-build/src/domain/unitValidation.js');
 const read=p=>JSON.parse(readFileSync(p,'utf8'));
-const units=read('src/data/units.json'),factions=read('src/data/factions.json');
+const units=hpOverlay.staticProductionView(read('src/data/units.json')),factions=read('src/data/factions.json');
 const names=['expansion-batch-02','expansion-batch-03','expansion-batch-04'];
 const inputs=()=>({batches:names.map(name=>({name,bundle:read(`tools/wh3-importer/${name}/sources.json`),review:read(`tools/wh3-importer/${name}/review.json`)})),
   units:structuredClone(units),factions:structuredClone(factions),diagnosticIds:read('src/data/unitDiagnostics.json').entries.map(e=>e.id),validate:validateUnits});
@@ -43,7 +44,7 @@ test('growth admission preserves caller inputs, canonical order, byte determinis
   const before=structuredClone({...input,validate:undefined}),first=buildProductionGrowth(input);
   assert.deepEqual({...input,validate:undefined},before);assert.equal(first.added,72);assert.deepEqual(first.units,units);
   const reversed=buildProductionGrowth({...input,batches:[...input.batches].reverse()});assert.deepEqual(reversed.units,first.units);
-  assert.equal(JSON.stringify(first.units,null,2)+'\n',readFileSync('src/data/units.json','utf8'));
+  assert.equal(JSON.stringify(first.units,null,2)+'\n',hpOverlay.serialize(hpOverlay.staticProductionView(read('src/data/units.json'))));
   const repeat=buildProductionGrowth({...input,units:first.units});assert.equal(repeat.added,0);assert.deepEqual(repeat.units,first.units);
   for(const name of names)assert.deepEqual(growthAdmissionReport(name,repeat),read(`tools/wh3-importer/${name}/admission.json`));
 });

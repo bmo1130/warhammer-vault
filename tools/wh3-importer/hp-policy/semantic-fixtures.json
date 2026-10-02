@@ -1,0 +1,54 @@
+{
+  "sourceKind": "USER_REPORTED",
+  "reference": "User-confirmed ULTRA observations, 2026-10-02; not original CCO records for the first three identities",
+  "productionEligible": false,
+  "unitSize": "ULTRA",
+  "cases": [
+    {
+      "name": "Swordsmen",
+      "mainKey": "wh_main_emp_inf_swordsmen",
+      "NumEntitiesInitial": 120,
+      "HealthMax": 8280,
+      "observedHealthPerCombatEntity": 69
+    },
+    {
+      "name": "Mounted Yeomen",
+      "mainKey": "wh_main_brt_cav_mounted_yeomen_0",
+      "NumEntitiesInitial": 60,
+      "HealthMax": 5520,
+      "observedHealthPerCombatEntity": 92
+    },
+    {
+      "name": "Dragon Ogres",
+      "mainKey": "wh_dlc01_chs_mon_dragon_ogre",
+      "NumEntitiesInitial": 16,
+      "HealthMax": 9856,
+      "observedHealthPerCombatEntity": 616
+    },
+    {
+      "name": "Dread Saurian",
+      "mainKey": "wh2_dlc13_lzd_mon_dread_saurian_1",
+      "NumEntitiesInitial": 1,
+      "HealthMax": 15088,
+      "observedHealthPerCombatEntity": 15088,
+      "componentCounts": {
+        "ManList": 12,
+        "MountList": 1,
+        "EntityList": 1
+      }
+    },
+    {
+      "name": "Skeleton Chariots",
+      "mainKey": "wh2_dlc09_tmb_veh_skeleton_chariot_0",
+      "NumEntitiesInitial": 12,
+      "HealthMax": 7032,
+      "observedHealthPerCombatEntity": 586,
+      "componentCounts": {
+        "ManList": 24,
+        "MountList": 24,
+        "EngineList": 12,
+        "EntityList": 12
+      }
+    }
+  ]
+}

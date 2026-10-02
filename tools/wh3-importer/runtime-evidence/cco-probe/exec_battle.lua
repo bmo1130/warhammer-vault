@@ -2,7 +2,10 @@
 -- install.ps1 prepends WV_CCO_CONFIG. F9 snapshots/cursor; then F10 traces.
 WV_CCO_PROBE = WV_CCO_PROBE or {serial = 0, sequence = 0}
 local P = WV_CCO_PROBE
-local C = WV_CCO_CONFIG or {}
+local C = {}
+for k, v in pairs(WV_CCO_CONFIG or {}) do C[k] = v end
+local unit_sizes = {SMALL = true, MEDIUM = true, LARGE = true, ULTRA = true}
+assert(unit_sizes[C.unitSize] and C.unitSizeSource == "DECLARED_SETUP", "Explicit declared Unit Size required; no capture default")
 -- A configured session can span several battles, whose Lua counters may reset.
 -- Namespace with an opaque per-VM anchor + available clocks, without RNG calls.
 if not P.battleToken then
@@ -232,4 +235,3 @@ local unit = selected()
 if unit then capture(unit, "SNAPSHOT", 0) else emit("ERROR", {reason = "NO_SELECTED_PLAYER_UNIT"}) end
 cursor()
 emit("SNAPSHOT_END", {})
-

@@ -1,0 +1,27 @@
+{
+  "format": "reviewed-unit-ultra-hp-admissions-v1",
+  "reviewReference": "tools/wh3-importer/hp-policy/review.json",
+  "reviewSha256": "ca7464c158ca4711cf8e95ab2ffccf46b6754cc0def1ef22ce02ee46c80dd5b0",
+  "unitSize": "ULTRA",
+  "unitSizeSource": "DECLARED_SETUP",
+  "admissions": [
+    {
+      "id": "ca_unit_wh2_dlc13_lzd_mon_dread_saurian_1",
+      "mainKey": "wh2_dlc13_lzd_mon_dread_saurian_1",
+      "landKey": "wh2_dlc13_lzd_mon_dread_saurian_1",
+      "staticSnapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+      "kind": "DIRECT_ULTRA_RUNTIME",
+      "field": "entities.totalHealth",
+      "value": 15088
+    },
+    {
+      "id": "ca_unit_wh2_dlc09_tmb_veh_skeleton_chariot_0",
+      "mainKey": "wh2_dlc09_tmb_veh_skeleton_chariot_0",
+      "landKey": "wh2_dlc09_tmb_veh_skeleton_chariot_0",
+      "staticSnapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+      "kind": "DIRECT_ULTRA_RUNTIME",
+      "field": "entities.totalHealth",
+      "value": 7032
+    }
+  ]
+}

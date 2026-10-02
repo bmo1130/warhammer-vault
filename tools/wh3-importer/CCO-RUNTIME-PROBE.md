@@ -2,6 +2,8 @@
 
 This adds read-only runtime collection to the existing runtime-evidence pipeline. It does not change normalization, CA field provenance, production eligibility, Unit JSON, faction registration or UI. The normalizer still withholds unresolved composite presentation values. No diagnostic DB pack is generated.
 
+Separately reviewed ULTRA `totalHealth` field admissions are governed by [HP_POLICY.md](hp-policy/HP_POLICY.md). The collector and generic runtime proposals still do not promote observations automatically; historical MEDIUM observations and static normalization remain unchanged.
+
 `runtime-evidence/cco-probe/exec_battle.lua` is the canonical external-file script. Each field is queried inside `pcall`; VALUE, NULL, UNSUPPORTED, UNSERIALIZABLE and INVALID_NUMBER are distinct. Component rows are emitted separately with `WH3_RUNTIME_PROBE|` JSON lines. Raw log events, comparisons and validated evidence are separate files.
 
 ## 집에서 실행할 순서
@@ -9,28 +11,37 @@ This adds read-only runtime collection to the existing runtime-evidence pipeline
 게임 실행 **전**, 저장소 루트 PowerShell에서:
 
 ```powershell
-./tools/wh3-importer/runtime-evidence/cco-probe/install.ps1 -BundleDirectory ./generated/wh3/runtime-evidence/cco-p0-9.0.2 -UnitSize MEDIUM
+node tools/wh3-importer/runtime-evidence/cco-probe/cli.mjs prepare --bundle-dir ./generated/wh3/runtime-evidence/cco-p0-9.0.2 --unit-size ULTRA --out ./generated/wh3/runtime-evidence/cco-p0-ultra-9.0.2
+./tools/wh3-importer/runtime-evidence/cco-probe/install.ps1 -BundleDirectory ./generated/wh3/runtime-evidence/cco-p0-ultra-9.0.2 -UnitSize ULTRA
 ```
+
+`prepare --unit-size`와 설치의 `-UnitSize`는 **SMALL / MEDIUM / LARGE / ULTRA**를 지원하며 capture 기본값은 없다. 새 bundle의 `static-candidates.json`(integrity 포함)과 `manifest.json`에는 `expectedUnitSize`를 기록한다. 이미 검증된 CCO bundle을 입력하면 static index/candidates만 복사하여 새로운 size-bound bundle을 만들며, game/RPFM 접근이나 runtime evidence 재생성은 하지 않는다. Output은 새 directory여야 하며 기존 파일은 덮어쓰지 않는다. MEDIUM도 별도의 새 bundle에서 `--unit-size MEDIUM` / `-UnitSize MEDIUM`으로 같은 방식으로 사용한다.
 
 게임 경로는 기존 ignored importer config에서 읽는다. 없으면 `-GamePath '실제 게임 폴더'`를 붙인다. 기본 설치 위치는 게임의 `exec/exec_battle.lua`이다. 다른 working directory를 쓰는 mod manager에서는 `-ExecDirectory '실제 실행 기준 폴더/exec'`로 지정한다. 기존 외부 Lua 파일이나 root 파일이 probe를 가리는 경우 helper가 중단하며 그 파일은 보존한다. 기존 파일을 자동 덮어쓰지 않는다.
 
 Helper는 실행 파일의 ProductVersion과 static snapshot 버전을 비교한다. 새 session ID를 만들고 Unit Size **선언값**을 넣는다. 게임의 실제 Unit Size는 별도로 동일하게 설정해야 한다. 필요할 때 release script logging을 위해 `data/script/enable_console_logging` 빈 marker를 만든다. 기존 marker는 그대로 보존한다. 게임 자체를 실행하지 않는다. 이 marker 동작과 log 위치는 [CA scripting output 문서](https://chadvandy.github.io/tw_modding_resources/WH3/index.html)에 따른다.
 
 1. Launcher에서 **Execute External Lua File(Modding Tool)**을 켜고 WH3를 실행한다. 다른 활성 mod도 기록한다. 설치된 mod가 많다는 사실과 이번 battle에서 활성화됐다는 사실은 구별한다.
-2. Unit Size **Medium**으로 설정한다. Custom Battle에서 Black Coach, Skeleton Chariots, Dread Saurian, Necrofex Colossus를 각 해당 진영에서 선택한다. unavailable이면 다른 동명 variant를 대신 골랐다고 가정하지 말고 결과를 보류한다.
+2. Unit Size **Ultra**로 설정한다(위 설치 예시 기준). Custom Battle에서 Black Coach, Skeleton Chariots, Dread Saurian, Necrofex Colossus를 각 해당 진영에서 선택한다. unavailable이면 다른 동명 variant를 대신 골랐다고 가정하지 말고 결과를 보류한다.
 3. 공격받기 전 대상 유닛 하나를 선택하고 **F9**를 누른다. 논리 count, initial count, health와 네 component list가 자동 기록된다.
 4. 카메라를 가까이 옮겨 horse/body/crew/rider 등 각 보이는 부분에 마우스를 올린 채 **F9**를 누른다. DB key나 component 종류를 직접 판정할 필요가 없다. 커서가 지면/UI를 가리키면 INCONCLUSIVE로 남는다.
 5. Dread Saurian/Necrofex는 적에게 사격 명령을 내리고 전투를 재생한 상태에서 **F10**, 약 5초 대기. 필요하면 다시 누른다. F9/F10 재실행은 이 probe의 timer/listener만 교체한다.
 6. 게임 binaries/실행 working directory의 script log를 보존한다. 파일 이름은 환경마다 다를 수 있다. `WH3_RUNTIME_PROBE|`가 들어 있는 log가 입력이다. prefix가 전혀 없으면 관찰 완료로 취급하지 않는다. 로그를 압축하거나 문자열을 편집하지 않아도 된다.
-7. **Ultra**로도 반복한다. helper를 `-UnitSize ULTRA`로 다시 실행한 뒤 실제 게임 설정도 Ultra로 변경한다. 각 설정은 독립 session으로 남으며 변환 공식을 만들지 않는다.
+7. 다른 size를 수집할 때는 그 size 전용 새 bundle을 준비하고 helper에 동일한 `-UnitSize`를 명시한다. 새 전투/session에서 실제 게임 설정도 일치시킨다. 각 설정은 독립 증거이며 변환 공식을 만들지 않는다. 기존 MEDIUM 로그·bundle은 변경하지 않는다.
 
 [모드 작성자 안내](https://steamcommunity.com/sharedfiles/filedetails/?id=2791573994)의 F9는 `View camera bookmark 1`이다. F10은 bookmark 2에 해당한다. 설치된 `pj_loadfile.pack`의 battle script는 F9 (`camera_bookmark_view0`)만 처리한다. 이 probe의 첫 F9가 `camera_bookmark_view1`에 고유 battle F10 listener를 등록한다. campaign의 `exec2.lua`를 battle entrypoint로 오인하지 않는다. Lua 파일을 편집할 필요 없다.
 
 로그를 가져온 뒤:
 
 ```powershell
-node tools/wh3-importer/runtime-evidence/cco-probe/cli.mjs ingest --bundle-dir generated/wh3/runtime-evidence/cco-p0-9.0.2 --logs 'C:/path/medium_script_log.txt|C:/path/ultra_script_log.txt'
+node tools/wh3-importer/runtime-evidence/cco-probe/cli.mjs ingest --bundle-dir generated/wh3/runtime-evidence/cco-p0-ultra-9.0.2 --logs 'C:/path/ultra_script_log.txt' --out generated/wh3/runtime-evidence/cco-ultra-capture-001
 ```
+
+Installer는 bundle의 expected size와 인수가 다르거나 size를 생략하면 쓰기 전에 실패한다. 설치 state에도 expected size/source를 남기며 generated Lua의 `WV_CCO_CONFIG`에 `unitSize="ULTRA"`, `unitSizeSource="DECLARED_SETUP"`을 전달한다. 공통 `emit()`이 SNAPSHOT/TRACE start·unit·end, COMPONENT_LIST, ENTITY, CURSOR, SAMPLE_END와 ERROR 모두에 같은 metadata를 붙인다. Lua는 유효한 명시적 선언 없이는 capture를 시작하지 않는다.
+
+Ingest와 ingest-batch는 **모든 event**의 size 및 DECLARED_SETUP marker를 size-bound manifest와 비교한다. Mismatch는 `QUARANTINED_UNIT_SIZE` / `UNIT_SIZE_MISMATCH`로 comparison-report와 capture-triage에 reference·expected·observed·record kind를 남기며, 해당 run의 canonical observations/proposals는 0개이고 CLI exit code는 1이다. 잘못된 envelope를 건너뛰어 정상 capture로 받아들이지 않도록 새 bound bundle의 malformed input도 `QUARANTINED_PROBE_INPUT`으로 보류한다. Raw input은 변환/보정하지 않는다. 준비 bundle과 ingest 출력 manifest에 expected size가 남으며 summary/candidate size drift도 거부한다.
+
+이전 bundle에는 expected size가 없고 MEDIUM/ULTRA jobs를 함께 계획했으므로, 그 역사적 replay 의미는 유지한다. 새 설치는 explicit size-bound bundle을 요구한다. 기존 MEDIUM 파일은 rewrite·환산·ULTRA 재해석하지 않는다. 선언값 검증은 게임의 실제 설정을 CCO로 자동 확인했다는 뜻이 아니다.
 
 출력 directory에는 raw-probe-events, comparison-report(JSON/Markdown), runtime-evidence, validated-evidence, resolution-proposals, capture-triage가 생긴다. `runtime-evidence.json`은 기존 `runtime-evidence/cli.mjs ingest --bundle-dir ... --evidence ...`에서도 읽힌다. 기존 manual recorder/jobs와 unresolved-triage를 그대로 유지하며 CCO capture triage를 별도로 추가한다.
 
@@ -70,7 +81,7 @@ Manifest views: ManEntityContext, MountRecordContext(원본 owner/연결 entity 
 재생성:
 
 ```powershell
-node tools/wh3-importer/runtime-evidence/cco-probe/cli.mjs prepare --bundle-dir generated/wh3/runtime-evidence/evening-9.0.2 --out generated/wh3/runtime-evidence/cco-p0-9.0.2-new
+node tools/wh3-importer/runtime-evidence/cco-probe/cli.mjs prepare --bundle-dir generated/wh3/runtime-evidence/evening-9.0.2 --unit-size ULTRA --out generated/wh3/runtime-evidence/cco-p0-ultra-9.0.2-new
 ```
 
 Ignored generated bundles are local diagnostic artifacts. A fresh checkout first needs the existing CA extraction/materialization/runtime preparation workflow and local RPFM/game packs described in RUNTIME-EVIDENCE.md. The new code contains no hidden local module dependencies.
@@ -145,6 +156,17 @@ no missing state is filled. An empty cursor intersection is an INCONCLUSIVE even
 not a malformed unit capture. Original Lua compatibility/cursor fixes are preserved.
 
 ## Verification
+
+2026-10-02 Unit Size 변경 검증: 전체 tests **301/301 PASS**, build PASS,
+저장된 context/runtime/CCO 회귀 **16/16 PASS**. PowerShell installer를 임시
+version-resource fixture에 실행하여 ULTRA/MEDIUM generated Lua를 실제 Lua
+interpreter로 검사했다. Missing/invalid installer size, bundle mismatch,
+양방향 ingest size mismatch, event별 metadata drift, matching ULTRA,
+새 bundle 생성/기존 입력 bytes 보존과 CLI quarantine exit code를 검증한다.
+기존 실제 MEDIUM 입력을 읽기 전용 replay해 comparison/runtime/validated/
+proposal JSON 값 hash가 동일함을 확인했다(5,200 events / 51 captures /
+316 observations). 기존 evidence 파일 51개의 bytes는 그대로이다.
+실제 게임 설치 위치의 probe를 교체하거나 게임을 실행하지 않았다.
 
 Offline tests execute the canonical Lua with a Fengari mock CCO/battle-manager (Lua 5.3 implementation, source uses Lua 5.1-compatible syntax). This validates pcall failures, cursor, list/path preservation, timer cancellation, changes and hot reload; it does **not** certify the installed game's bindings. Node tests cover graph construction, parser partial/malformed inputs, repeated ingestion, conflicts, identity/version drift, raw-count semantics and production/static non-mutation. Saved CA artifact regressions replay the P0 manifest alongside previous pilot/materialization/entity/missile/runtime regressions. The completed batch above supplies actual runtime captures; unsupported fields, partial captures and unresolved attribution remain preserved fail-closed.
 

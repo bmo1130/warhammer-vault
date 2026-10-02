@@ -1,7 +1,7 @@
 export function generateProbeJobs(manifest) {
   const factionLabels = { vampire_counts: 'Vampire Counts / 뱀파이어 카운트', tomb_kings: 'Tomb Kings / 툼 킹',
     lizardmen: 'Lizardmen / 리자드맨', vampire_coast: 'Vampire Coast / 뱀파이어 코스트' };
-  const jobs = ['MEDIUM', 'ULTRA'].flatMap(unitSize => manifest.units.map(u => ({
+  const jobs = (manifest.expectedUnitSize ? [manifest.expectedUnitSize] : ['MEDIUM', 'ULTRA']).flatMap(unitSize => manifest.units.map(u => ({
     id: `cco-p0:${u.sourceMainKey}:${unitSize}`, priority: 'P0', status: 'PENDING', sourceMainKey: u.sourceMainKey,
     sourceLandKey: u.sourceLandKey, contextId: u.contextId, subject: u.displayName, unitSize,
     requiredSetup: { battleMode: 'CUSTOM_BATTLE', unitSize, factionId: u.subject.factionId, mods: ['Execute External Lua File'],

@@ -1,3 +1,4 @@
+const hpOverlay=require('../tools/wh3-importer/hp-policy/overlay.cjs');
 const { test } = require('node:test');
 const assert = require('node:assert/strict');
 const { readFileSync, existsSync } = require('node:fs');
@@ -14,7 +15,7 @@ const { resolveSavedTargetName } = require('../.test-build/src/repositories/arch
 const App = require('../.test-build/src/App.js').default;
 const read = path => JSON.parse(readFileSync(path, 'utf8'));
 const input = read('tools/wh3-importer/promotion/dragon-ogres.source.json');
-const units = read('src/data/units.json'), factions = read('src/data/factions.json');
+const units = hpOverlay.staticProductionView(read('src/data/units.json')), factions = read('src/data/factions.json');
 const sha = text => createHash('sha256').update(text).digest('hex');
 const render = url => renderToString(React.createElement(MemoryRouter, { initialEntries: [url] }, React.createElement(App))).replace(/<!--.*?-->/g, '');
 const options = () => ({ evidence: structuredClone(input), units: structuredClone(units), factions: structuredClone(factions),

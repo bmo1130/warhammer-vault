@@ -3,10 +3,11 @@ param(
     [string]$GamePath,
     [string]$ExecDirectory,
     [string]$BundleDirectory,
-    [ValidateSet('SMALL', 'MEDIUM', 'LARGE', 'ULTRA')][string]$UnitSize = 'MEDIUM',
+    [ValidateSet('SMALL', 'MEDIUM', 'LARGE', 'ULTRA')][string]$UnitSize,
     [switch]$SkipLogging
 )
 $ErrorActionPreference = 'Stop'
+if ($Action -eq 'Install' -and -not $PSBoundParameters.ContainsKey('UnitSize')) { throw 'Install requires explicit -UnitSize SMALL|MEDIUM|LARGE|ULTRA. No capture default.' }
 # Resolve from the existing ignored importer config; never embed a Steam path.
 if (-not $GamePath) {
     $configPath = Join-Path $PSScriptRoot '../../.local/config.json'
@@ -39,7 +40,11 @@ if ($Action -eq 'Uninstall') {
 if (-not $BundleDirectory -or -not $GamePath) { throw 'Install requires -BundleDirectory and a game path/config for version verification.' }
 $index = Get-Content -LiteralPath (Join-Path $BundleDirectory 'static-index.json') -Raw | ConvertFrom-Json
 $manifest = Get-Content -LiteralPath (Join-Path $BundleDirectory 'static-candidates.json') -Raw | ConvertFrom-Json
+$bundle = Get-Content -LiteralPath (Join-Path $BundleDirectory 'manifest.json') -Raw | ConvertFrom-Json
 if ($manifest.snapshotId -ne $index.snapshotId) { throw 'Candidate/index snapshot mismatch.' }
+if ($manifest.expectedUnitSize -cne $UnitSize.ToUpperInvariant() -or $bundle.expectedUnitSize -cne $manifest.expectedUnitSize) {
+    throw 'Bundle expected Unit Size differs or is missing. Prepare a new size-bound bundle; preserve historical evidence.'
+}
 $exePath = Join-Path $GamePath 'Warhammer3.exe'
 if (-not (Test-Path -LiteralPath $exePath)) { throw 'Warhammer3.exe missing; no game execution is attempted.' }
 $actualVersion = [Diagnostics.FileVersionInfo]::GetVersionInfo($exePath).ProductVersion.Trim()
@@ -64,6 +69,6 @@ if (-not $SkipLogging -and -not (Test-Path -LiteralPath $loggingFlag)) {
     $loggingOwned = $true
 }
 $hash = (Get-FileHash -LiteralPath $targetFile -Algorithm SHA256).Hash
-$record = @{ target = $targetFile; sha256 = $hash; sessionId = $sessionId; unitSize = $UnitSize.ToUpperInvariant(); gameVersion = $actualVersion; staticSnapshotId = $index.snapshotId; loggingFlag = $loggingFlag; loggingOwned = [bool]$loggingOwned }
+$record = @{ target = $targetFile; sha256 = $hash; sessionId = $sessionId; unitSize = $UnitSize.ToUpperInvariant(); expectedUnitSize = $manifest.expectedUnitSize; unitSizeSource = 'DECLARED_SETUP'; gameVersion = $actualVersion; staticSnapshotId = $index.snapshotId; loggingFlag = $loggingFlag; loggingOwned = [bool]$loggingOwned }
 [IO.File]::WriteAllText($stateFile, ($record | ConvertTo-Json), [Text.UTF8Encoding]::new($false))
 Write-Output "Installed $targetFile; Unit Size declaration $UnitSize; session $sessionId. F9 snapshots; then F10 traces. Set the game's actual Unit Size to match."

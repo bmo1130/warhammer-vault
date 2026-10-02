@@ -1,3 +1,4 @@
+const hpOverlay=require('../tools/wh3-importer/hp-policy/overlay.cjs');
 const {test}=require('node:test');
 const assert=require('node:assert/strict');
 const {readFileSync,existsSync}=require('node:fs');
@@ -12,7 +13,7 @@ const {unitCatalogRepository:catalog}=require('../.test-build/src/repositories/u
 const {getUnitAttributeLabel,getUnitAbilityLabel}=require('../.test-build/src/domain/unitLabels.js');
 const read=p=>JSON.parse(readFileSync(p,'utf8'));
 const evidence=read('tools/wh3-importer/promotion/partial-sources.json'), diagnostics=read('src/data/unitDiagnostics.json');
-const units=read('src/data/units.json'),factions=read('src/data/factions.json');
+const units=hpOverlay.staticProductionView(read('src/data/units.json')),factions=read('src/data/factions.json');
 const sha=bytes=>createHash('sha256').update(bytes).digest('hex');
 const get=(object,path)=>path.split('.').reduce((value,key)=>value?.[key],object);
 const reviewModule=()=>import('../tools/wh3-importer/promotion/partial-review.mjs');

@@ -1,0 +1,80 @@
+{
+  "format": "warhammer-vault-ultra-hp-admission-v1",
+  "expectedUnitSize": "ULTRA",
+  "unitSizeSource": "DECLARED_SETUP",
+  "baselineUnitsSha256": "c6f5d9aa1eb13e8b011d618781691f2627904b5da73657bd50869f6862f3e244",
+  "staticSources": [
+    {
+      "file": "tools/wh3-importer/promotion/partial-sources.json",
+      "sha256": "01da7892494835588d38ee8d116b0d2d556d3888eb638ab793d6dbfc74445a58"
+    },
+    {
+      "file": "tools/wh3-importer/promotion/dragon-ogres.source.json",
+      "sha256": "8aeed488f27999d35dca994584b90556259642486dadd3c6574b0c6429bc7203"
+    }
+  ],
+  "inputs": [
+    {
+      "file": "inputs/dread-saurian-ultra.log",
+      "originalPath": "C:/Users/lsh12/OneDrive/Desktop/script_log_021026_1947.txt",
+      "originalSha256": "ce248957f182f3b9050054adf54bd3e83db3e5d996b335140c8636216f54e358"
+    },
+    {
+      "file": "inputs/skeleton-chariots-ultra.log",
+      "originalPath": "C:/Users/lsh12/OneDrive/Desktop/script_log_021026_1950.txt",
+      "originalSha256": "4d2f91fcd84a09058aaefd39ee6c0fb78b6a69b641af32620394c3fc3dd4e0a3"
+    }
+  ],
+  "subjects": [
+    {
+      "id": "ca_unit_wh_main_emp_inf_swordsmen",
+      "name": "Swordsmen",
+      "mainKey": "wh_main_emp_inf_swordsmen",
+      "landKey": "wh_main_emp_inf_swordsmen",
+      "slug": "sample-04",
+      "staticSource": "tools/wh3-importer/promotion/partial-sources.json",
+      "approved": false,
+      "baseUnitSha256": "26738bd3222bc56bf2a35f9acbde3991c6dfd5fc7065706c2e031df5edaf30e5"
+    },
+    {
+      "id": "ca_unit_wh_main_brt_cav_mounted_yeomen_0",
+      "name": "Mounted Yeomen",
+      "mainKey": "wh_main_brt_cav_mounted_yeomen_0",
+      "landKey": "wh_main_brt_cav_mounted_yeomen_0",
+      "slug": "sample-08",
+      "staticSource": "tools/wh3-importer/promotion/partial-sources.json",
+      "approved": false,
+      "baseUnitSha256": "07f3404951a6637d266e0a1a2988ba7dea5e8dace320ddbf728f37501e81eefa"
+    },
+    {
+      "id": "ca_unit_wh_dlc01_chs_mon_dragon_ogre",
+      "name": "Dragon Ogres",
+      "mainKey": "wh_dlc01_chs_mon_dragon_ogre",
+      "landKey": "wh_dlc01_chs_mon_dragon_ogre",
+      "slug": null,
+      "staticSource": "tools/wh3-importer/promotion/dragon-ogres.source.json",
+      "approved": false,
+      "baseUnitSha256": "1f37c1a0a723652e47aacfdb4e83f92c19f50c2efec3c7ef1e2e10cd623fce96"
+    },
+    {
+      "id": "ca_unit_wh2_dlc13_lzd_mon_dread_saurian_1",
+      "name": "Dread Saurian",
+      "mainKey": "wh2_dlc13_lzd_mon_dread_saurian_1",
+      "landKey": "wh2_dlc13_lzd_mon_dread_saurian_1",
+      "slug": "sample-24",
+      "staticSource": "tools/wh3-importer/promotion/partial-sources.json",
+      "approved": true,
+      "baseUnitSha256": "a730c7ec33ce7242c1926ab687c5b9032bc178651de6073f7fd539b7008aad6b"
+    },
+    {
+      "id": "ca_unit_wh2_dlc09_tmb_veh_skeleton_chariot_0",
+      "name": "Skeleton Chariots",
+      "mainKey": "wh2_dlc09_tmb_veh_skeleton_chariot_0",
+      "landKey": "wh2_dlc09_tmb_veh_skeleton_chariot_0",
+      "slug": "sample-15",
+      "staticSource": "tools/wh3-importer/promotion/partial-sources.json",
+      "approved": true,
+      "baseUnitSha256": "0b8ac7c8ff0cae1de31d4fe9a026c8eed8fc62d567c7143a26bc1ef3a52c39ec"
+    }
+  ]
+}
