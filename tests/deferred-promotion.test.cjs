@@ -48,9 +48,9 @@ test('deferred admission is exactly five pinned identities and appends without c
   assert.equal(evidenceHash(baseline.units),'e335b12183ba1d9aec527f9824a6e3a5c9c1157cfd03cabf35f5e774d8e80832');
   assert.equal(evidenceHash(baseline.factions),'91360117d5fa92752d6919cae95707c7cf89f75b22209873fe2e57d0a41b450a');
   const appended=buildDeferredProductionBatch(baseline);assert.deepEqual(appended.added,{units:5,factions:1});
-  assert.deepEqual(appended.units,units);assert.deepEqual(appended.factions,factions);
-  assert.equal(units.filter(u=>u.gameVersion!=='sample').length,10);assert.equal(units.filter(u=>u.gameVersion==='sample').length,5);
-  assert.equal(catalog.list().filter(c=>c.kind==='diagnostic-only').length,5);assert.equal(catalog.list().length,20);
+  assert.deepEqual(appended.units,units.slice(0,15));assert.deepEqual(appended.factions,factions.slice(0,5));
+  assert.equal(units.filter(u=>u.gameVersion!=='sample').length,15);assert.equal(units.filter(u=>u.gameVersion==='sample').length,5);
+  assert.equal(catalog.list().filter(c=>c.kind==='diagnostic-only').length,0);assert.equal(catalog.list().length,20);
   assert.equal(sha(readFileSync('src/data/unitDiagnostics.json')),committedReview.diagnosticSha256);
 });
 
@@ -101,7 +101,7 @@ test('source, snapshot, identity, original SHA, projection or remaining raw ID d
     s=>{s.committedReview.candidates.find(c=>c.slug==='sample-16').remainingUnmapped.pop();},
     s=>{delete s.committedReview;},
     s=>{s.units[10].defense.armor=999;},
-    s=>{s.factions.at(-1).description='complete roster';},
+    s=>{s.factions.find(f=>f.id==='bretonnia').description='complete roster';},
     s=>{const c=s.committedReview.candidates[0];s.diagnostics.entries.push({id:c.identity.internalId,sourceMainKey:c.identity.caMainUnitKey,sourceLandKey:c.identity.caLandUnitKey,contextId:null,missiles:[],cases:[]});},
   ];
   for(const change of changes){const supplied=options();change(supplied);const before=structuredClone({...supplied,validate:undefined});

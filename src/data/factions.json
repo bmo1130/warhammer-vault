@@ -47,5 +47,32 @@
     "gameVersion": "9.0.2.0",
     "source": "Reviewed primary catalog alias: wh_main_group_bretonnia → bretonnia; promotion/PARTIAL_REVIEW.md",
     "tags": []
+  },
+  {
+    "id": "vampire_coast",
+    "name": "Vampire Coast",
+    "subtitle": "Primary catalog · wh2_dlc11_group_vampire_coast",
+    "description": "검토된 military permission의 기본 catalog 분류입니다. 승인된 production 부분집합만 포함하며, 전체 roster나 캠페인 모집 가능성을 뜻하지 않습니다.",
+    "gameVersion": "9.0.2.0",
+    "source": "Reviewed primary catalog alias: wh2_dlc11_group_vampire_coast → vampire_coast; promotion/EVIDENCE_LINKED_ADMISSION.md",
+    "tags": []
+  },
+  {
+    "id": "tomb_kings",
+    "name": "Tomb Kings",
+    "subtitle": "Primary catalog · wh2_dlc09_tomb_kings",
+    "description": "검토된 military permission의 기본 catalog 분류입니다. 승인된 production 부분집합만 포함하며, 전체 roster나 캠페인 모집 가능성을 뜻하지 않습니다.",
+    "gameVersion": "9.0.2.0",
+    "source": "Reviewed primary catalog alias: wh2_dlc09_tomb_kings → tomb_kings; promotion/EVIDENCE_LINKED_ADMISSION.md",
+    "tags": []
+  },
+  {
+    "id": "lizardmen",
+    "name": "Lizardmen",
+    "subtitle": "Primary catalog · wh2_main_lzd",
+    "description": "검토된 military permission의 기본 catalog 분류입니다. 승인된 production 부분집합만 포함하며, 전체 roster나 캠페인 모집 가능성을 뜻하지 않습니다.",
+    "gameVersion": "9.0.2.0",
+    "source": "Reviewed primary catalog alias: wh2_main_lzd → lizardmen; promotion/EVIDENCE_LINKED_ADMISSION.md",
+    "tags": []
   }
 ]

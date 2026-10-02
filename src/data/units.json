@@ -707,5 +707,271 @@
       "hiddenStats": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; hidden fields: unambiguous battle_entity properties, weapon splash, projectile calibration/reload/penetration",
       "campaign": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; main_units recruitment_cost/upkeep_cost/create_time and multiplayer_cost are base values only"
     }
+  },
+  {
+    "id": "ca_unit_wh_dlc04_emp_inf_free_company_militia_0",
+    "name": "Free Company Militia",
+    "factionId": "empire",
+    "summary": "",
+    "gameVersion": "9.0.2.0",
+    "source": "CA base DB · WH3 9.0.2.0 · reviewed field subset · tools/wh3-importer/promotion/EVIDENCE_LINKED_ADMISSION.md#sample-07",
+    "tags": [],
+    "classification": {
+      "category": "Missile Infantry",
+      "tier": 1
+    },
+    "entities": {
+      "entitySize": "small",
+      "mass": 90
+    },
+    "movement": {
+      "canSkirmish": true
+    },
+    "defense": {
+      "armor": 25,
+      "meleeDefense": 25,
+      "leadership": 55,
+      "shieldBlockChance": 0,
+      "projectilePenetrationResistance": 1
+    },
+    "melee": {
+      "damage": {
+        "base": 21,
+        "armorPiercing": 7,
+        "bonusVsLarge": 0,
+        "bonusVsInfantry": 0
+      },
+      "meleeAttack": 28,
+      "chargeBonus": 14,
+      "attackInterval": 4.2,
+      "weaponLength": 1,
+      "splash": {
+        "maxTargets": 1
+      }
+    },
+    "customBattle": {
+      "cost": 450
+    },
+    "campaign": {
+      "recruitmentCost": 450,
+      "upkeep": 113,
+      "recruitmentTurns": 1
+    },
+    "sources": {
+      "publicStats": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; public fields: land_units, armour/shield, melee_weapons and verified projectile/explosion rows; pinned PARTIAL source SHA256 9f4dd0f3890d6d07804ff6e075e02c346178f316b0c5d388e0e82c4e935a2b65; original generated/wh3/refresh-9.0.2/pilot/units/sample-07.result.json SHA256 cf17d2af56e298224ddfc61e53265142a35508c4a0a6513273703595782244a3; omissions reviewed separately; incomplete optional ID groups omitted, not absent in-game",
+      "hiddenStats": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; hidden fields: unambiguous battle_entity properties, weapon splash, projectile calibration/reload/penetration",
+      "campaign": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; main_units recruitment_cost/upkeep_cost/create_time and multiplayer_cost are base values only"
+    }
+  },
+  {
+    "id": "ca_unit_wh2_dlc11_cst_mon_necrofex_colossus_0",
+    "name": "Necrofex Colossus",
+    "factionId": "vampire_coast",
+    "summary": "",
+    "gameVersion": "9.0.2.0",
+    "source": "CA base DB · WH3 9.0.2.0 · reviewed field subset · tools/wh3-importer/promotion/EVIDENCE_LINKED_ADMISSION.md#sample-12",
+    "tags": [],
+    "classification": {
+      "category": "War Beast",
+      "tier": 4
+    },
+    "entities": {},
+    "movement": {
+      "canSkirmish": false
+    },
+    "defense": {
+      "armor": 75,
+      "meleeDefense": 34,
+      "leadership": 50,
+      "shieldBlockChance": 0
+    },
+    "melee": {
+      "damage": {
+        "base": 125,
+        "armorPiercing": 350,
+        "bonusVsLarge": 0,
+        "bonusVsInfantry": 0
+      },
+      "meleeAttack": 42,
+      "chargeBonus": 20,
+      "attackInterval": 4,
+      "weaponLength": 6,
+      "splash": {
+        "maxTargets": 5,
+        "maxTargetSize": "large"
+      }
+    },
+    "customBattle": {
+      "cost": 1800
+    },
+    "campaign": {
+      "recruitmentCost": 1800,
+      "upkeep": 450,
+      "recruitmentTurns": 2
+    },
+    "sources": {
+      "publicStats": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; public fields: land_units, armour/shield, melee_weapons and verified projectile/explosion rows; pinned PARTIAL source SHA256 9f4dd0f3890d6d07804ff6e075e02c346178f316b0c5d388e0e82c4e935a2b65; original generated/wh3/refresh-9.0.2/pilot/units/sample-12.result.json SHA256 2fc74caa5a32a3beaf903443a61a32f42cab4f8169144092225ee7384f3621e6; omissions reviewed separately; incomplete optional ID groups omitted, not absent in-game",
+      "hiddenStats": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; hidden fields: unambiguous battle_entity properties, weapon splash, projectile calibration/reload/penetration",
+      "campaign": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; main_units recruitment_cost/upkeep_cost/create_time and multiplayer_cost are base values only"
+    }
+  },
+  {
+    "id": "ca_unit_wh_main_vmp_veh_black_coach",
+    "name": "Black Coach",
+    "factionId": "vampire_counts",
+    "summary": "",
+    "gameVersion": "9.0.2.0",
+    "source": "CA base DB · WH3 9.0.2.0 · reviewed field subset · tools/wh3-importer/promotion/EVIDENCE_LINKED_ADMISSION.md#sample-14",
+    "tags": [],
+    "classification": {
+      "category": "War Machine",
+      "tier": 3
+    },
+    "entities": {},
+    "movement": {
+      "canSkirmish": false
+    },
+    "defense": {
+      "armor": 60,
+      "meleeDefense": 25,
+      "leadership": 50,
+      "shieldBlockChance": 0
+    },
+    "melee": {
+      "damage": {
+        "base": 80,
+        "armorPiercing": 200,
+        "bonusVsLarge": 0,
+        "bonusVsInfantry": 20
+      },
+      "meleeAttack": 29,
+      "chargeBonus": 80,
+      "attackInterval": 3.2,
+      "weaponLength": 5,
+      "splash": {
+        "maxTargets": 4,
+        "maxTargetSize": "very_large"
+      },
+      "attackAttributes": [
+        "magical"
+      ]
+    },
+    "customBattle": {
+      "cost": 1100
+    },
+    "campaign": {
+      "recruitmentCost": 1100,
+      "upkeep": 275,
+      "recruitmentTurns": 2
+    },
+    "sources": {
+      "publicStats": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; public fields: land_units, armour/shield, melee_weapons and verified projectile/explosion rows; pinned PARTIAL source SHA256 9f4dd0f3890d6d07804ff6e075e02c346178f316b0c5d388e0e82c4e935a2b65; original generated/wh3/refresh-9.0.2/pilot/units/sample-14.result.json SHA256 480782f497f9fb55ada0b39ffa983cfa50df9291e78ca38267acbd752b3d6ad5; omissions reviewed separately; incomplete optional ID groups omitted, not absent in-game",
+      "hiddenStats": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; hidden fields: unambiguous battle_entity properties, weapon splash, projectile calibration/reload/penetration",
+      "campaign": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; main_units recruitment_cost/upkeep_cost/create_time and multiplayer_cost are base values only"
+    }
+  },
+  {
+    "id": "ca_unit_wh2_dlc09_tmb_veh_skeleton_chariot_0",
+    "name": "Skeleton Chariots",
+    "factionId": "tomb_kings",
+    "summary": "",
+    "gameVersion": "9.0.2.0",
+    "source": "CA base DB · WH3 9.0.2.0 · reviewed field subset · tools/wh3-importer/promotion/EVIDENCE_LINKED_ADMISSION.md#sample-15",
+    "tags": [],
+    "classification": {
+      "category": "War Machine",
+      "tier": 2
+    },
+    "entities": {},
+    "movement": {
+      "canSkirmish": false
+    },
+    "defense": {
+      "armor": 80,
+      "meleeDefense": 24,
+      "leadership": 55,
+      "shieldBlockChance": 0
+    },
+    "melee": {
+      "damage": {
+        "base": 24,
+        "armorPiercing": 10,
+        "bonusVsLarge": 0,
+        "bonusVsInfantry": 12
+      },
+      "meleeAttack": 22,
+      "chargeBonus": 58,
+      "attackInterval": 4,
+      "weaponLength": 5,
+      "splash": {
+        "maxTargets": 3,
+        "maxTargetSize": "very_large"
+      }
+    },
+    "customBattle": {
+      "cost": 850
+    },
+    "campaign": {
+      "recruitmentCost": 0,
+      "upkeep": 0,
+      "recruitmentTurns": 1
+    },
+    "sources": {
+      "publicStats": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; public fields: land_units, armour/shield, melee_weapons and verified projectile/explosion rows; pinned PARTIAL source SHA256 9f4dd0f3890d6d07804ff6e075e02c346178f316b0c5d388e0e82c4e935a2b65; original generated/wh3/refresh-9.0.2/pilot/units/sample-15.result.json SHA256 4effdbbaed9b3da4379cab517fe0fd9a5ba29f2dd67fa32a1fbc85cba1eb3e02; omissions reviewed separately; incomplete optional ID groups omitted, not absent in-game",
+      "hiddenStats": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; hidden fields: unambiguous battle_entity properties, weapon splash, projectile calibration/reload/penetration",
+      "campaign": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; main_units recruitment_cost/upkeep_cost/create_time and multiplayer_cost are base values only"
+    }
+  },
+  {
+    "id": "ca_unit_wh2_dlc13_lzd_mon_dread_saurian_1",
+    "name": "Dread Saurian",
+    "factionId": "lizardmen",
+    "summary": "",
+    "gameVersion": "9.0.2.0",
+    "source": "CA base DB · WH3 9.0.2.0 · reviewed field subset · tools/wh3-importer/promotion/EVIDENCE_LINKED_ADMISSION.md#sample-24",
+    "tags": [],
+    "classification": {
+      "category": "War Beast",
+      "tier": 5
+    },
+    "entities": {},
+    "movement": {
+      "canSkirmish": false
+    },
+    "defense": {
+      "armor": 120,
+      "meleeDefense": 32,
+      "leadership": 75,
+      "shieldBlockChance": 0
+    },
+    "melee": {
+      "damage": {
+        "base": 220,
+        "armorPiercing": 530,
+        "bonusVsLarge": 0,
+        "bonusVsInfantry": 0
+      },
+      "meleeAttack": 52,
+      "chargeBonus": 30,
+      "attackInterval": 4,
+      "weaponLength": 20,
+      "splash": {
+        "maxTargets": 8,
+        "maxTargetSize": "large"
+      }
+    },
+    "customBattle": {
+      "cost": 3100
+    },
+    "campaign": {
+      "recruitmentCost": 3100,
+      "upkeep": 775,
+      "recruitmentTurns": 3
+    },
+    "sources": {
+      "publicStats": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; public fields: land_units, armour/shield, melee_weapons and verified projectile/explosion rows; pinned PARTIAL source SHA256 9f4dd0f3890d6d07804ff6e075e02c346178f316b0c5d388e0e82c4e935a2b65; original generated/wh3/refresh-9.0.2/pilot/units/sample-24.result.json SHA256 2f848887fff0f8caa6a3c9a53f33472c4ef9d6bf2af58429860c74e45ec45a75; omissions reviewed separately; incomplete optional ID groups omitted, not absent in-game",
+      "hiddenStats": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; hidden fields: unambiguous battle_entity properties, weapon splash, projectile calibration/reload/penetration",
+      "campaign": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; main_units recruitment_cost/upkeep_cost/create_time and multiplayer_cost are base values only"
+    }
   }
 ]

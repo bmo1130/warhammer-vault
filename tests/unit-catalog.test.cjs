@@ -20,23 +20,23 @@ test('UI catalog projects both sources without stats, admission, or production c
   const before = paths.map(path => readFileSync(path));
   const units = production.listUnits(), evidence = diagnostics.list();
   const originalUnits = structuredClone(units), originalEvidence = structuredClone(evidence);
-  assert.equal(units.length, 15);
+  assert.equal(units.length, 20);
   assert.equal(catalog.list().length, 20);
   assert.equal(new Set(catalog.list().map(entry => entry.id)).size, 20);
   for (const unit of units) {
     const item = catalog.get(unit.id);
-    assert(item.hasProduction && !item.hasDiagnostic && item.isSample === (unit.gameVersion === 'sample'));
+    assert(item.hasProduction && item.hasDiagnostic === Boolean(diagnostics.get(unit.id)) && item.isSample === (unit.gameVersion === 'sample'));
     assert.equal(item.kind, 'unit');
     assert.equal(item.route, `/units/${unit.id}`);
     assert(!('entities' in item) && !('melee' in item));
   }
   for (const entry of evidence) {
     const item = catalog.get(entry.id);
-    assert(!item.hasProduction && item.hasDiagnostic && !item.isSample);
-    assert.equal(item.kind, 'diagnostic-only');
-    assert.equal(production.getUnit(entry.id), undefined);
-    assert(!production.getFactionUnits(entry.factionId).some(unit => unit.id === entry.id));
-    assert.deepEqual(production.search(entry.id), []);
+    assert(item.hasProduction && item.hasDiagnostic && !item.isSample);
+    assert.equal(item.kind, 'unit');
+    assert(production.getUnit(entry.id));
+    assert(production.getFactionUnits(entry.factionId).some(unit => unit.id === entry.id));
+    assert.equal(production.search(entry.id).length, 1);
     assert.equal(entry.productionEligible, false);
     render(item.route);
   }
@@ -62,13 +62,13 @@ test('colliding or duplicate exact IDs fail explicitly; identical names stay sep
 
 test('catalog filters and trimmed case-insensitive names, IDs and exact source keys intersect', () => {
   assert.equal(catalog.search('', 'all').length, 20);
-  assert.equal(catalog.search('', 'unit').length, 15);
+  assert.equal(catalog.search('', 'unit').length, 20);
   assert.equal(catalog.search('', 'evidence').length, 5);
-  assert.equal(catalog.search('', 'diagnostic-only').length, 5);
+  assert.equal(catalog.search('', 'diagnostic-only').length, 0);
   for (const entry of diagnostics.list()) {
     for (const query of [entry.name, `  ${entry.id.toUpperCase()}  `, entry.sourceMainKey, entry.sourceLandKey]) {
       assert.deepEqual(catalog.search(query).map(item => item.id), [entry.id]);
-      assert.equal(catalog.search(query, 'unit').length, 0);
+      assert.equal(catalog.search(query, 'unit').length, 1);
     }
   }
   assert.equal(catalog.search('좀비', 'unit')[0].id, 'zombies');
@@ -79,16 +79,16 @@ test('catalog filters and trimmed case-insensitive names, IDs and exact source k
 
 test('/units renders labels, availability, accessible filters, counts and exact detail links', () => {
   const html = render('/units');
-  for (const text of ['유닛 탐색', '20개 항목', 'Sample · 일반 Unit', 'Diagnostic-only', 'Production data 없음', 'Diagnostic evidence 있음', 'Diagnostic evidence 없음', '구조 검증용 샘플 · 수치 미검증']) assert(html.includes(text), text);
+  for (const text of ['유닛 탐색', '20개 항목', 'Sample · 일반 Unit', 'Diagnostic-only', 'Production · Evidence', 'Diagnostic evidence 있음', 'Diagnostic evidence 없음', '구조 검증용 샘플 · 수치 미검증']) assert(html.includes(text), text);
   assert.match(html, /aria-label="유닛 이름, ID, source key 검색"/);
   assert.match(html, /role="group" aria-label="유닛 유형 필터"/);
   assert.match(html, /aria-pressed="true"[^>]*>전체/);
   for (const entry of catalog.list()) assert(html.includes(`href="${entry.route}"`));
-  for (const [filter, count] of [['unit', 15], ['diagnostic-only', 5], ['evidence', 5]]) {
+  for (const [filter, count] of [['unit', 20], ['diagnostic-only', 0], ['evidence', 5]]) {
     const filtered = render(`/units?filter=${filter}`);
     assert(filtered.includes(`${count}개 항목`));
     assert.equal(filtered.includes('href="/units/zombies"'), filter === 'unit');
-    assert.equal(filtered.includes(`href="${catalog.list().find(entry => entry.kind === 'diagnostic-only').route}"`), filter !== 'unit');
+    assert.equal(filtered.includes(`href="${catalog.list().find(entry => entry.hasDiagnostic).route}"`), filter !== 'diagnostic-only');
   }
   const searched = render('/units?filter=evidence&q=Dread');
   assert(searched.includes('1개 항목') && searched.includes('Dread Saurian'));
@@ -129,11 +129,12 @@ test('Home search retains faction, lord and sample unit results and adds every d
   assert(!home.includes('href="/units/ca_unit_'));
 });
 
-test('diagnostic details provide personal controls and raw coverage without production stats or fake faction links', () => {
+test('shared details provide production stats, evidence and personal controls', () => {
   for (const entry of diagnostics.list()) {
     const html = render(`/units/${entry.id}`);
-    for (const text of ['Production data unavailable', 'Diagnostic-only entry', '데이터 해석 근거', '즐겨찾기 추가', 'aria-pressed="false"', '내 기록', '정적 entity path', 'Missile 후보 path', 'Runtime case', 'UNVERIFIED', 'INCONCLUSIVE', '상태 안내']) assert(html.includes(text), text);
-    assert(!html.includes('stats-card') && !html.includes('모집비 / 유지비'));
+    for (const text of ['Production', 'Evidence', '데이터 해석 근거', '즐겨찾기 추가', 'aria-pressed="false"', '내 기록', '정적 entity path', 'Missile 후보 path', 'Runtime case', 'UNVERIFIED', 'INCONCLUSIVE', '상태 안내']) assert(html.includes(text), text);
+    assert(html.includes('stats-card') && html.includes('모집비 / 유지비'));
+    assert(!html.includes('Production data unavailable') && !html.includes('Diagnostic-only entry'));
     assert.equal(html.includes(`href="/factions/${entry.factionId}"`), Boolean(production.getFaction(entry.factionId)));
     assert(!html.includes('confidence score'));
   }
@@ -160,7 +161,7 @@ test('saved target rows resolve production and diagnostics by ID, and preserve s
 });
 
 test('desktop and mobile navigation keep the unit link active for list and detail routes', () => {
-  for (const url of ['/units', catalog.list().find(entry => entry.kind === 'diagnostic-only').route]) {
+  for (const url of ['/units', catalog.list().find(entry => entry.hasDiagnostic).route]) {
     const html = render(url);
     assert.match(html, /class="side-link active" href="\/units"/);
     assert.match(html, /class="bottom-link active" href="\/units"/);

@@ -2,6 +2,7 @@ import { pathFor } from '../domain/entities';
 import type { Unit } from '../domain/unit';
 import { gameRepository } from './gameRepository';
 import { unitDiagnosticRepository, type UnitDiagnostic } from './unitDiagnosticRepository';
+import { assertSharedUnitIdentity } from './unitSharedIdentity';
 
 export const unitCatalogFilters = [
   { id: 'all', label: '전체' },
@@ -16,20 +17,32 @@ export type UnitCatalogEntry = Readonly<{
   description: string; searchText: string;
 }>;
 
-// Display metadata only: no Unit stats or evidence objects are merged. A shared
-// ID needs an explicit future policy before it can share a route/personal target.
+// Display metadata only; both source repositories remain independent.
 export function createUnitCatalog(
-  units: readonly Pick<Unit, 'id' | 'name' | 'gameVersion' | 'classification'>[],
-  diagnostics: readonly Pick<UnitDiagnostic, 'id' | 'name' | 'sourceMainKey' | 'sourceLandKey'>[],
+  units: readonly Unit[],
+  diagnostics: readonly UnitDiagnostic[],
+  snapshot = unitDiagnosticRepository.snapshot,
 ): readonly UnitCatalogEntry[] {
+  for (const collection of [units, diagnostics]) {
+    const ids = new Set<string>();
+    for (const item of collection) {
+      if (ids.has(item.id)) throw new Error(`Unit catalog ID collision: ${item.id}`);
+      ids.add(item.id);
+    }
+  }
+  const shared = new Set<string>();
+  for (const unit of units) {
+    const diagnostic = diagnostics.find(entry=>entry.id===unit.id);
+    if (diagnostic) { assertSharedUnitIdentity(unit,diagnostic,snapshot); shared.add(unit.id); }
+  }
   const entries: UnitCatalogEntry[] = [
     ...units.map(unit => ({
       id: unit.id, name: unit.name, kind: 'unit' as const, isSample: unit.gameVersion === 'sample',
-      hasProduction: true, hasDiagnostic: false, route: pathFor('unit', unit.id),
+      hasProduction: true, hasDiagnostic: shared.has(unit.id), route: pathFor('unit', unit.id),
       description: unit.classification.category,
       searchText: `${unit.name} ${unit.id} ${unit.classification.category}`.toLocaleLowerCase(),
     })),
-    ...diagnostics.map(entry => ({
+    ...diagnostics.filter(entry=>!shared.has(entry.id)).map(entry => ({
       id: entry.id, name: entry.name, kind: 'diagnostic-only' as const, isSample: false,
       hasProduction: false, hasDiagnostic: true, route: pathFor('unit', entry.id),
       description: '정적 구성·런타임 관찰 자료',

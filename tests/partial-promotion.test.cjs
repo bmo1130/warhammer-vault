@@ -119,10 +119,10 @@ test('bounded partial production appends only four reviewed identities and is id
   assert.equal(sha(JSON.stringify(fromFirst.factions)),'5c0aed29c4109ae75409680686bb4ecbdcaecd6bc805556d1eeb84d6b695d43c');
   assert.deepEqual(buildPartialProductionBatch(fromFirst).units,units.slice(0,10));assert.deepEqual(buildPartialProductionBatch(fromFirst).added,{units:4,factions:2});
   assert.equal(sha(readFileSync('src/data/unitDiagnostics.json')),(await reviewModule()).diagnosticSha256);
-  assert.equal(units.filter(u=>u.gameVersion==='sample').length,5);assert.equal(catalog.list().filter(e=>e.hasProduction&&!e.isSample).length,10);
-  assert.equal(game.getFactionUnits('empire').length,3);assert.equal(game.getFactionUnits('skaven').length,2);
-  assert.equal(game.getFactionUnits('vampire_counts').filter(u=>u.gameVersion!=='sample').length,1);
-  for(const d of diagnostics.entries)assert(!game.getUnit(d.id) && d.productionEligible===false);
+  assert.equal(units.filter(u=>u.gameVersion==='sample').length,5);assert.equal(catalog.list().filter(e=>e.hasProduction&&!e.isSample).length,15);
+  assert.equal(game.getFactionUnits('empire').length,4);assert.equal(game.getFactionUnits('skaven').length,2);
+  assert.equal(game.getFactionUnits('vampire_counts').filter(u=>u.gameVersion!=='sample').length,2);
+  for(const d of diagnostics.entries)assert(game.getUnit(d.id) && d.productionEligible===false);
 });
 
 test('partial gates refuse source/identity drift, speculative representatives, unknown loss, diagnostic collision and differing records',async()=>{
@@ -146,7 +146,7 @@ test('new production detail routes retain verified stats, omissions and existing
     assert(html.includes(String(unit.melee.meleeAttack))&&html.includes(String(unit.melee.damage.armorPiercing)));
   }
   assert(render('zombies').includes('>Sample<'));
-  assert(render(diagnostics.entries[0].id).includes('Production data unavailable'));
+  assert(render(diagnostics.entries[0].id).includes('>Production<'));
 });
 
 test('production, sample and diagnostic personal targets round-trip through the unchanged version-one backup without Unit stats',async()=>{

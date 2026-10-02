@@ -149,7 +149,7 @@ test('first batch preserves sample records, diagnostic bytes and primary roster 
   assert.equal(catalog.list().filter(entry => !entry.isSample && entry.hasProduction && entry.id === review.id).length, 1);
   const entry = catalog.get(review.id);
   assert(entry.hasProduction && !entry.isSample && !entry.hasDiagnostic && entry.kind === 'unit');
-  for (const item of diagnostics.list()) assert(!game.getUnit(item.id) && item.productionEligible === false);
+  for (const item of diagnostics.list()) assert(game.getUnit(item.id) && item.productionEligible === false);
   assert.deepEqual(validateUnits(units, factions.map(faction => faction.id)), []);
   assert(!/[A-Z]:[\\/]|\/Users\//.test(JSON.stringify(unitSource())));
   function unitSource() { return game.getUnit(review.id); }
@@ -166,5 +166,5 @@ test('production, sample and diagnostic detail screens keep their distinct bound
   const sample = render('/units/zombies');
   assert(sample.includes('>Sample<') && sample.includes('구조 검증용 샘플') && !sample.includes('근접 피해'));
   const diagnostic = render(`/units/${diagnostics.list()[0].id}`);
-  assert(diagnostic.includes('Production data unavailable') && diagnostic.includes('UNVERIFIED') && diagnostic.includes('INCONCLUSIVE'));
+  assert(!diagnostic.includes('Production data unavailable') && diagnostic.includes('>Production<') && diagnostic.includes('UNVERIFIED') && diagnostic.includes('INCONCLUSIVE'));
 });

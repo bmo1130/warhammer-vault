@@ -14,15 +14,15 @@ const render = id => clean(renderToString(React.createElement(MemoryRouter, { in
 const section = evidence => clean(renderToString(React.createElement(Section, { evidence })));
 const find = name => diagnostics.list().find(entry => entry.name === name);
 
-test('diagnostic IDs have exact lookups and never enter production search or faction catalogs', () => {
+test('diagnostic IDs have exact lookups alongside independently admitted production records', () => {
   assert.equal(diagnostics.list().length, 5);
   for (const entry of diagnostics.list()) {
     assert.equal(diagnostics.get(entry.id), entry);
     assert.equal(diagnostics.get(entry.name), undefined);
     assert.equal(diagnostics.get(entry.sourceMainKey), undefined);
-    assert.equal(production.getUnit(entry.id), undefined);
-    assert(!production.search(entry.name).some(result => result.id === entry.id));
-    assert(!production.getFactionUnits(entry.factionId).some(unit => unit.id === entry.id));
+    assert(production.getUnit(entry.id));
+    assert(production.search(entry.name).some(result => result.id === entry.id));
+    assert(production.getFactionUnits(entry.factionId).some(unit => unit.id === entry.id));
     assert.equal(entry.productionEligible, false);
   }
   assert.equal(diagnostics.get('zombies'), undefined);
@@ -33,21 +33,22 @@ test('ordinary unit pages remain intact with no empty diagnostic area', () => {
   for (const unit of JSON.parse(before)) {
     const html = render(unit.id);
     for (const text of [unit.name, '기본 스탯', '기본 정보', '내 기록']) assert(html.includes(text));
-    assert(!html.includes('데이터 해석 근거'));
+    assert.equal(html.includes('데이터 해석 근거'), Boolean(diagnostics.get(unit.id)));
     assert(!html.includes('Production data unavailable'));
   }
   assert.equal(section(undefined), '');
   assert.equal(readFileSync('src/data/units.json', 'utf8'), before);
 });
 
-test('five diagnostic-only entries reuse unit routes with no fabricated production stats', () => {
+test('five shared entries reuse unit routes with independently reviewed production stats', () => {
   for (const entry of diagnostics.list()) {
     const before = JSON.stringify(entry);
     const html = render(entry.id);
-    for (const text of [entry.name, 'DIAGNOSTIC ONLY', 'Production data unavailable', '데이터 해석 근거']) assert(html.includes(text), text);
-    assert(!html.includes('<h2>기본 스탯'));
-    assert(!html.includes('stats-card'));
-    assert(!html.includes('모집비 / 유지비'));
+    for (const text of [entry.name, 'Production', 'Evidence', '데이터 해석 근거']) assert(html.includes(text), text);
+    assert(html.includes('<h2>기본 스탯'));
+    assert(!html.includes('Production data unavailable'));
+    assert(html.includes('stats-card'));
+    assert(html.includes('모집비 / 유지비'));
     assert.match(html, /<details class="panel diagnostic-section">/);
     assert(!html.includes('<details class="panel diagnostic-section" open'));
     assert(!html.includes('<pre'));
