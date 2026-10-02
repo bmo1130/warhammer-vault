@@ -1,0 +1,6 @@
+# Reviewed artifacts and app data use the serialized UTF-8/LF byte contract.
+# Preserve replay hashes when Windows core.autocrlf=true checks out files.
+src/data/*.json text eol=lf
+tools/wh3-importer/**/*.json text eol=lf
+tools/wh3-importer/**/*.md text eol=lf
+tools/wh3-importer/pilot-catalog.mjs text eol=lf

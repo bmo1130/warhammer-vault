@@ -1,0 +1,329 @@
+{
+  "format": "warhammer-vault-expansion-01-admission-v1",
+  "sourceSha256": "96a6d2c5c8ad235561a542cbb2e138eb853de061aa4ebaaa1e49e149026aa55a",
+  "reviewSha256": "c4566b086c2541fc2e1a0402f3ea046ce75d384b8a86f74e47a82e3ec4040da2",
+  "storageProof": {
+    "sourceCompactSha256": "de10c7368101bd1f788536027584897662282ca32b82a1abe96dfd64bfe291ec",
+    "reviewCompactSha256": "c4566b086c2541fc2e1a0402f3ea046ce75d384b8a86f74e47a82e3ec4040da2"
+  },
+  "preservedBaseline": {
+    "units": "ff930ee3ffcf5674e25a4ee7d2731169c109a1dafdb08a8945bab009dcf18ea4",
+    "factions": "1bde13f1cf3a25026d55d6385102f3c2912e644c8e035ea578d5bcea66ca20ac"
+  },
+  "admitted": [
+    {
+      "slug": "expansion-04-01",
+      "id": "ca_unit_wh2_main_lzd_inf_saurus_warriors_0",
+      "name": "Saurus Warriors",
+      "mainKey": "wh2_main_lzd_inf_saurus_warriors_0",
+      "landKey": "wh2_main_lzd_inf_saurus_warriors_0",
+      "factionId": "lizardmen",
+      "militaryGroup": "wh2_main_lzd",
+      "source": {
+        "reference": "generated/wh3/expansion-batch-04/units/expansion-04-01.result.json",
+        "sha256": "18a5e9dcc11004e84194d49be55e07f19dcf9b1f8bd9d2ef645e386c1f672340"
+      }
+    },
+    {
+      "slug": "expansion-04-02",
+      "id": "ca_unit_wh2_main_lzd_inf_saurus_spearmen_0",
+      "name": "Saurus Spears",
+      "mainKey": "wh2_main_lzd_inf_saurus_spearmen_0",
+      "landKey": "wh2_main_lzd_inf_saurus_spearmen_0",
+      "factionId": "lizardmen",
+      "militaryGroup": "wh2_main_lzd",
+      "source": {
+        "reference": "generated/wh3/expansion-batch-04/units/expansion-04-02.result.json",
+        "sha256": "5f932a64bee7b586b633f44d9dec9eede409086d0ae412141695f5e734939f69"
+      }
+    },
+    {
+      "slug": "expansion-04-03",
+      "id": "ca_unit_wh2_main_lzd_inf_saurus_spearmen_1",
+      "name": "Saurus Spears (Shields)",
+      "mainKey": "wh2_main_lzd_inf_saurus_spearmen_1",
+      "landKey": "wh2_main_lzd_inf_saurus_spearmen_1",
+      "factionId": "lizardmen",
+      "militaryGroup": "wh2_main_lzd",
+      "source": {
+        "reference": "generated/wh3/expansion-batch-04/units/expansion-04-03.result.json",
+        "sha256": "b77e2a80b4e0e6dc0724227eb46c967cd3351d14a883d883c12d6ee3e7bfb6e4"
+      }
+    },
+    {
+      "slug": "expansion-04-04",
+      "id": "ca_unit_wh2_dlc12_lzd_inf_skink_red_crested_0",
+      "name": "Red Crested Skinks",
+      "mainKey": "wh2_dlc12_lzd_inf_skink_red_crested_0",
+      "landKey": "wh2_dlc12_lzd_inf_skink_red_crested_0",
+      "factionId": "lizardmen",
+      "militaryGroup": "wh2_main_lzd",
+      "source": {
+        "reference": "generated/wh3/expansion-batch-04/units/expansion-04-04.result.json",
+        "sha256": "03056b32c82d1c4f4a3a028c008fa98c8b733f050ab210fc2632c228ecf11ffd"
+      }
+    },
+    {
+      "slug": "expansion-04-05",
+      "id": "ca_unit_wh2_main_lzd_inf_skink_cohort_0",
+      "name": "Skink Cohort",
+      "mainKey": "wh2_main_lzd_inf_skink_cohort_0",
+      "landKey": "wh2_main_lzd_inf_skink_cohort_0",
+      "factionId": "lizardmen",
+      "militaryGroup": "wh2_main_lzd",
+      "source": {
+        "reference": "generated/wh3/expansion-batch-04/units/expansion-04-05.result.json",
+        "sha256": "acee649652ba8e126e5a0bb92e4926804ab8370fe0cfd519648b88bbb1641122"
+      }
+    },
+    {
+      "slug": "expansion-04-06",
+      "id": "ca_unit_wh2_main_lzd_inf_skink_cohort_1",
+      "name": "Skink Cohort (Javelins)",
+      "mainKey": "wh2_main_lzd_inf_skink_cohort_1",
+      "landKey": "wh2_main_lzd_inf_skink_cohort_1",
+      "factionId": "lizardmen",
+      "militaryGroup": "wh2_main_lzd",
+      "source": {
+        "reference": "generated/wh3/expansion-batch-04/units/expansion-04-06.result.json",
+        "sha256": "0065c27b84cfba61d7ff36e72b89471575d021a23709900f98f6b5a53040f638"
+      }
+    },
+    {
+      "slug": "expansion-04-07",
+      "id": "ca_unit_wh2_main_lzd_inf_chameleon_skinks_0",
+      "name": "Chameleon Skinks",
+      "mainKey": "wh2_main_lzd_inf_chameleon_skinks_0",
+      "landKey": "wh2_main_lzd_inf_chameleon_skinks_0",
+      "factionId": "lizardmen",
+      "militaryGroup": "wh2_main_lzd",
+      "source": {
+        "reference": "generated/wh3/expansion-batch-04/units/expansion-04-07.result.json",
+        "sha256": "162cae853857826114cb76024b7187070b27a97c0c794d831109ec721749c2b5"
+      }
+    },
+    {
+      "slug": "expansion-04-08",
+      "id": "ca_unit_wh2_main_lzd_inf_skink_skirmishers_0",
+      "name": "Skink Skirmishers",
+      "mainKey": "wh2_main_lzd_inf_skink_skirmishers_0",
+      "landKey": "wh2_main_lzd_inf_skink_skirmishers_0",
+      "factionId": "lizardmen",
+      "militaryGroup": "wh2_main_lzd",
+      "source": {
+        "reference": "generated/wh3/expansion-batch-04/units/expansion-04-08.result.json",
+        "sha256": "ac08575533258976f5dc52e41720ac0bb15fb5cabcc69082526c94e603c9f7af"
+      }
+    },
+    {
+      "slug": "expansion-04-09",
+      "id": "ca_unit_wh2_main_lzd_mon_bastiladon_0",
+      "name": "Feral Bastiladon",
+      "mainKey": "wh2_main_lzd_mon_bastiladon_0",
+      "landKey": "wh2_main_lzd_mon_bastiladon_0",
+      "factionId": "lizardmen",
+      "militaryGroup": "wh2_main_lzd",
+      "source": {
+        "reference": "generated/wh3/expansion-batch-04/units/expansion-04-09.result.json",
+        "sha256": "a5e7a454ef01856397853b6cc135b7232c3daf533245ef53df704d7906d20806"
+      }
+    },
+    {
+      "slug": "expansion-04-10",
+      "id": "ca_unit_wh2_main_lzd_mon_stegadon_0",
+      "name": "Feral Stegadon",
+      "mainKey": "wh2_main_lzd_mon_stegadon_0",
+      "landKey": "wh2_main_lzd_mon_stegadon_0",
+      "factionId": "lizardmen",
+      "militaryGroup": "wh2_main_lzd",
+      "source": {
+        "reference": "generated/wh3/expansion-batch-04/units/expansion-04-10.result.json",
+        "sha256": "0fbbeeca22d849b6df984e90a728a66d2af2bc44c035732cc14ccd3b7469b7e6"
+      }
+    },
+    {
+      "slug": "expansion-04-11",
+      "id": "ca_unit_wh2_dlc12_lzd_mon_ancient_salamander_0",
+      "name": "Ancient Salamander",
+      "mainKey": "wh2_dlc12_lzd_mon_ancient_salamander_0",
+      "landKey": "wh2_dlc12_lzd_mon_ancient_salamander_0",
+      "factionId": "lizardmen",
+      "militaryGroup": "wh2_main_lzd",
+      "source": {
+        "reference": "generated/wh3/expansion-batch-04/units/expansion-04-11.result.json",
+        "sha256": "d62920e95c78a8b44ebcef56e25e149512e7b10fc9a1ac73872d4f1c3f8d78ff"
+      }
+    },
+    {
+      "slug": "expansion-04-12",
+      "id": "ca_unit_wh2_main_lzd_cav_cold_ones_1",
+      "name": "Cold One Riders",
+      "mainKey": "wh2_main_lzd_cav_cold_ones_1",
+      "landKey": "wh2_main_lzd_cav_cold_ones_1",
+      "factionId": "lizardmen",
+      "militaryGroup": "wh2_main_lzd",
+      "source": {
+        "reference": "generated/wh3/expansion-batch-04/units/expansion-04-12.result.json",
+        "sha256": "af7d646b22b48476dc06f3f91260a130727627bfc0a5983b4b89407ec870cabf"
+      }
+    },
+    {
+      "slug": "expansion-04-13",
+      "id": "ca_unit_wh2_main_lzd_cav_cold_one_spearmen_1",
+      "name": "Cold One Spear-Riders",
+      "mainKey": "wh2_main_lzd_cav_cold_one_spearmen_1",
+      "landKey": "wh2_main_lzd_cav_cold_one_spearriders_1",
+      "factionId": "lizardmen",
+      "militaryGroup": "wh2_main_lzd",
+      "source": {
+        "reference": "generated/wh3/expansion-batch-04/units/expansion-04-13.result.json",
+        "sha256": "746d7c76290c3d7ae5a8ce084ec222bde2523b4162acf91cd9ca2127c4a5e227"
+      }
+    },
+    {
+      "slug": "expansion-04-14",
+      "id": "ca_unit_wh_main_vmp_cav_black_knights_0",
+      "name": "Black Knights",
+      "mainKey": "wh_main_vmp_cav_black_knights_0",
+      "landKey": "wh_main_vmp_cav_black_knights_0",
+      "factionId": "vampire_counts",
+      "militaryGroup": "wh_main_group_vampire_counts",
+      "source": {
+        "reference": "generated/wh3/expansion-batch-04/units/expansion-04-14.result.json",
+        "sha256": "55154fbe88dfe16db35f7f2dcc227f8eca2fecaacec18786a5a269ede3cdb17e"
+      }
+    },
+    {
+      "slug": "expansion-04-15",
+      "id": "ca_unit_wh3_main_vmp_blood_knights_sword_shield",
+      "name": "Blood Knights",
+      "mainKey": "wh3_main_vmp_blood_knights_sword_shield",
+      "landKey": "wh3_main_vmp_blood_knights_sword_shield",
+      "factionId": "vampire_counts",
+      "militaryGroup": "wh_main_group_vampire_counts",
+      "source": {
+        "reference": "generated/wh3/expansion-batch-04/units/expansion-04-15.result.json",
+        "sha256": "00d8b7e4d61d18c41d2398b4b89d70c997a41c0701636c379a6eaeeb2f004fec"
+      }
+    },
+    {
+      "slug": "expansion-04-16",
+      "id": "ca_unit_wh2_dlc11_cst_inf_syreens",
+      "name": "Syreens",
+      "mainKey": "wh2_dlc11_cst_inf_syreens",
+      "landKey": "wh2_dlc11_cst_inf_syreens",
+      "factionId": "vampire_coast",
+      "militaryGroup": "wh2_dlc11_group_vampire_coast",
+      "source": {
+        "reference": "generated/wh3/expansion-batch-04/units/expansion-04-16.result.json",
+        "sha256": "45b6d5e94acd8bcfe19142ac2ed236657108c48e8286813d5f5bc4f47a586533"
+      }
+    },
+    {
+      "slug": "expansion-04-17",
+      "id": "ca_unit_wh2_dlc11_cst_mon_animated_hulks_0",
+      "name": "Animated Hulks",
+      "mainKey": "wh2_dlc11_cst_mon_animated_hulks_0",
+      "landKey": "wh2_dlc11_cst_mon_animated_hulks_0",
+      "factionId": "vampire_coast",
+      "militaryGroup": "wh2_dlc11_group_vampire_coast",
+      "source": {
+        "reference": "generated/wh3/expansion-batch-04/units/expansion-04-17.result.json",
+        "sha256": "d812657b16c4d3894703197c93ca170599d6e501be59b48724a40f5ecde990c8"
+      }
+    },
+    {
+      "slug": "expansion-04-18",
+      "id": "ca_unit_wh2_dlc11_cst_mon_scurvy_dogs",
+      "name": "Scurvy Dogs",
+      "mainKey": "wh2_dlc11_cst_mon_scurvy_dogs",
+      "landKey": "wh2_dlc11_cst_mon_scurvy_dogs",
+      "factionId": "vampire_coast",
+      "militaryGroup": "wh2_dlc11_group_vampire_coast",
+      "source": {
+        "reference": "generated/wh3/expansion-batch-04/units/expansion-04-18.result.json",
+        "sha256": "8090c7bd4e00e58ea8fdb01ca90015e379c683b0e078125b8904dfc42b1a29d4"
+      }
+    },
+    {
+      "slug": "expansion-04-19",
+      "id": "ca_unit_wh2_dlc11_cst_inf_deck_gunners_0",
+      "name": "Deck Gunners",
+      "mainKey": "wh2_dlc11_cst_inf_deck_gunners_0",
+      "landKey": "wh2_dlc11_cst_inf_deck_gunners_0",
+      "factionId": "vampire_coast",
+      "militaryGroup": "wh2_dlc11_group_vampire_coast",
+      "source": {
+        "reference": "generated/wh3/expansion-batch-04/units/expansion-04-19.result.json",
+        "sha256": "853e5bfe345a44816a93b206523fc1ed0094129fc531f7d5b56357d097c6c290"
+      }
+    },
+    {
+      "slug": "expansion-04-20",
+      "id": "ca_unit_wh2_dlc11_cst_inf_zombie_gunnery_mob_1",
+      "name": "Zombie Pirate Gunnery Mob (Handgunners)",
+      "mainKey": "wh2_dlc11_cst_inf_zombie_gunnery_mob_1",
+      "landKey": "wh2_dlc11_cst_inf_zombie_gunnery_mob_1",
+      "factionId": "vampire_coast",
+      "militaryGroup": "wh2_dlc11_group_vampire_coast",
+      "source": {
+        "reference": "generated/wh3/expansion-batch-04/units/expansion-04-20.result.json",
+        "sha256": "259384eef56c2e4f026a54a051d7ebcba9020010d41c3cb73976ffb5a88f66d8"
+      }
+    },
+    {
+      "slug": "expansion-04-21",
+      "id": "ca_unit_wh2_dlc11_cst_art_carronade",
+      "name": "Carronades",
+      "mainKey": "wh2_dlc11_cst_art_carronade",
+      "landKey": "wh2_dlc11_cst_art_carronade",
+      "factionId": "vampire_coast",
+      "militaryGroup": "wh2_dlc11_group_vampire_coast",
+      "source": {
+        "reference": "generated/wh3/expansion-batch-04/units/expansion-04-21.result.json",
+        "sha256": "fb7f622019293106213e181440c5e53501e9740c843eae35e2b29ff4579f5553"
+      }
+    },
+    {
+      "slug": "expansion-04-22",
+      "id": "ca_unit_wh_dlc01_chs_inf_chosen_2",
+      "name": "Chosen (Halberds)",
+      "mainKey": "wh_dlc01_chs_inf_chosen_2",
+      "landKey": "wh_dlc01_chs_inf_chosen_2",
+      "factionId": "warriors_of_chaos",
+      "militaryGroup": "wh_main_group_chaos",
+      "source": {
+        "reference": "generated/wh3/expansion-batch-04/units/expansion-04-22.result.json",
+        "sha256": "bf2f9397a4bc95589aec1a3204b3f11fce334b664661ccc242594b46e8923fe5"
+      }
+    },
+    {
+      "slug": "expansion-04-23",
+      "id": "ca_unit_wh_dlc01_chs_inf_forsaken_0",
+      "name": "Forsaken",
+      "mainKey": "wh_dlc01_chs_inf_forsaken_0",
+      "landKey": "wh_dlc01_chs_inf_forsaken_0",
+      "factionId": "warriors_of_chaos",
+      "militaryGroup": "wh_main_group_chaos",
+      "source": {
+        "reference": "generated/wh3/expansion-batch-04/units/expansion-04-23.result.json",
+        "sha256": "1fa423ed28d7ed6f387e64374b41416bbcc8cdfd46214a94f9aac4b6c8e95f15"
+      }
+    },
+    {
+      "slug": "expansion-04-24",
+      "id": "ca_unit_wh_main_chs_mon_giant",
+      "name": "Chaos Giant",
+      "mainKey": "wh_main_chs_mon_giant",
+      "landKey": "wh_main_chs_mon_giant",
+      "factionId": "warriors_of_chaos",
+      "militaryGroup": "wh_main_group_chaos",
+      "source": {
+        "reference": "generated/wh3/expansion-batch-04/units/expansion-04-24.result.json",
+        "sha256": "288c56de9b45ab09577b142e0be97ac7114e11615a353e0ab288c09e51d18dbe"
+      }
+    }
+  ],
+  "blocked": [],
+  "note": "Explicit exact identities only. Base static fields; count/HP/scale/speed/ammo and ambiguous missile profiles remain omitted. No runtime evidence admission."
+}

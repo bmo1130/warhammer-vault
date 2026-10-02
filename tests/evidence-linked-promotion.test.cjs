@@ -62,7 +62,7 @@ test('admission refuses source, candidate identity/hash, review, unknown, snapsh
 });
 
 test('only exact reviewed shared collisions pass; identity, provenance and snapshot mismatch fail closed',()=>{
-  assert.equal(createUnitCatalog(units,diagnostics.entries).length,34);
+  assert.equal(createUnitCatalog(units,diagnostics.entries).length,106);
   for(const link of registry.links){
     const u=units.find(u=>u.id===link.productionId),d=diagnostics.entries.find(d=>d.id===link.diagnosticId);
     assert.equal(createUnitCatalog([u],[d]).length,1);
@@ -79,7 +79,7 @@ test('only exact reviewed shared collisions pass; identity, provenance and snaps
     }
   }
   assert.throws(()=>createUnitCatalog([units[0]],[{...diagnostics.entries[0],id:units[0].id}]),/ID collision/);
-  assert.equal(catalog.list().filter(e=>e.hasProduction&&!e.isSample).length,29);
+  assert.equal(catalog.list().filter(e=>e.hasProduction&&!e.isSample).length,101);
   assert.equal(catalog.list().filter(e=>e.isSample).length,5);
   assert.equal(catalog.list().filter(e=>e.hasProduction&&e.hasDiagnostic).length,5);
   assert.equal(catalog.search('','diagnostic-only').length,0);assert.equal(catalog.search('','evidence').length,5);

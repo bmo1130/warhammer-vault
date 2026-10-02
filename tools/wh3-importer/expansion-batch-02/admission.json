@@ -1,0 +1,329 @@
+{
+  "format": "warhammer-vault-expansion-01-admission-v1",
+  "sourceSha256": "27dc903fc231c84f4e9a7bb197ff99a3fc104c84756b8748b597d2ec7a3aadd6",
+  "reviewSha256": "58eedc410ca9243b2f0987f62a6a63a00397764ce4c9f82a7aaed1bc25fbb185",
+  "storageProof": {
+    "sourceCompactSha256": "749983d2749ab17a85bd989245c7919cd5bd9a1478cba235548a699b4f44ab8d",
+    "reviewCompactSha256": "58eedc410ca9243b2f0987f62a6a63a00397764ce4c9f82a7aaed1bc25fbb185"
+  },
+  "preservedBaseline": {
+    "units": "ff930ee3ffcf5674e25a4ee7d2731169c109a1dafdb08a8945bab009dcf18ea4",
+    "factions": "1bde13f1cf3a25026d55d6385102f3c2912e644c8e035ea578d5bcea66ca20ac"
+  },
+  "admitted": [
+    {
+      "slug": "expansion-02-01",
+      "id": "ca_unit_wh_dlc07_brt_peasant_mob_0",
+      "name": "Peasant Mob",
+      "mainKey": "wh_dlc07_brt_peasant_mob_0",
+      "landKey": "wh_dlc07_brt_inf_peasant_mob_0",
+      "factionId": "bretonnia",
+      "militaryGroup": "wh_main_group_bretonnia",
+      "source": {
+        "reference": "generated/wh3/expansion-batch-02/units/expansion-02-01.result.json",
+        "sha256": "165ddcbe4a50629ff0f977c22b21a72a4a172730922b7caf1033d04b71bd301d"
+      }
+    },
+    {
+      "slug": "expansion-02-02",
+      "id": "ca_unit_wh_dlc07_brt_inf_men_at_arms_1",
+      "name": "Men-at-Arms",
+      "mainKey": "wh_dlc07_brt_inf_men_at_arms_1",
+      "landKey": "wh_dlc07_brt_inf_men_at_arms_1",
+      "factionId": "bretonnia",
+      "militaryGroup": "wh_main_group_bretonnia",
+      "source": {
+        "reference": "generated/wh3/expansion-batch-02/units/expansion-02-02.result.json",
+        "sha256": "4e657abf3ec024b2bdf57351c31bce7af64632a178925b1bd946357458b51a5a"
+      }
+    },
+    {
+      "slug": "expansion-02-03",
+      "id": "ca_unit_wh_dlc07_brt_inf_men_at_arms_2",
+      "name": "Men-at-Arms (Shields)",
+      "mainKey": "wh_dlc07_brt_inf_men_at_arms_2",
+      "landKey": "wh_dlc07_brt_inf_men_at_arms_2",
+      "factionId": "bretonnia",
+      "militaryGroup": "wh_main_group_bretonnia",
+      "source": {
+        "reference": "generated/wh3/expansion-batch-02/units/expansion-02-03.result.json",
+        "sha256": "57f482ff20ae845b5153d2bf3a7e16c14044ec1a2bbf00be440c924bd503278a"
+      }
+    },
+    {
+      "slug": "expansion-02-04",
+      "id": "ca_unit_wh_dlc07_brt_inf_spearmen_at_arms_1",
+      "name": "Spearmen-at-Arms",
+      "mainKey": "wh_dlc07_brt_inf_spearmen_at_arms_1",
+      "landKey": "wh_dlc07_brt_inf_spearmen_at_arms_1",
+      "factionId": "bretonnia",
+      "militaryGroup": "wh_main_group_bretonnia",
+      "source": {
+        "reference": "generated/wh3/expansion-batch-02/units/expansion-02-04.result.json",
+        "sha256": "1a8efaadd624837bb0306266ef8d0605dbcb06793b2e6237f940d598fe83cec7"
+      }
+    },
+    {
+      "slug": "expansion-02-05",
+      "id": "ca_unit_wh_main_brt_inf_spearmen_at_arms",
+      "name": "Spearmen-at-Arms (Shields)",
+      "mainKey": "wh_main_brt_inf_spearmen_at_arms",
+      "landKey": "wh_main_brt_inf_spearmen_at_arms",
+      "factionId": "bretonnia",
+      "militaryGroup": "wh_main_group_bretonnia",
+      "source": {
+        "reference": "generated/wh3/expansion-batch-02/units/expansion-02-05.result.json",
+        "sha256": "13ad0f7327173884ce9d60ddbbadabe361fe11f1a25cb41c9ccd8b59b68024a7"
+      }
+    },
+    {
+      "slug": "expansion-02-06",
+      "id": "ca_unit_wh_dlc07_brt_inf_battle_pilgrims_0",
+      "name": "Battle Pilgrims",
+      "mainKey": "wh_dlc07_brt_inf_battle_pilgrims_0",
+      "landKey": "wh_dlc07_brt_inf_battle_pilgrims_0",
+      "factionId": "bretonnia",
+      "militaryGroup": "wh_main_group_bretonnia",
+      "source": {
+        "reference": "generated/wh3/expansion-batch-02/units/expansion-02-06.result.json",
+        "sha256": "f8806674df45aeebcb6ccac8ec120ffdde4c99e49c199d38268c8d045249ece0"
+      }
+    },
+    {
+      "slug": "expansion-02-07",
+      "id": "ca_unit_wh_main_brt_inf_peasant_bowmen",
+      "name": "Peasant Bowmen",
+      "mainKey": "wh_main_brt_inf_peasant_bowmen",
+      "landKey": "wh_main_brt_inf_peasant_bowmen",
+      "factionId": "bretonnia",
+      "militaryGroup": "wh_main_group_bretonnia",
+      "source": {
+        "reference": "generated/wh3/expansion-batch-02/units/expansion-02-07.result.json",
+        "sha256": "0620df522c8b1895782236914b51a7a608050b757162289cf4717280909c5715"
+      }
+    },
+    {
+      "slug": "expansion-02-08",
+      "id": "ca_unit_wh_dlc07_brt_inf_peasant_bowmen_1",
+      "name": "Peasant Bowmen (Fire Arrows)",
+      "mainKey": "wh_dlc07_brt_inf_peasant_bowmen_1",
+      "landKey": "wh_dlc07_brt_inf_peasant_bowmen_1",
+      "factionId": "bretonnia",
+      "militaryGroup": "wh_main_group_bretonnia",
+      "source": {
+        "reference": "generated/wh3/expansion-batch-02/units/expansion-02-08.result.json",
+        "sha256": "025bcd2959d6e709d322ba32de75d15a1ea147f34eb4531f7ea33cfec5e1bac3"
+      }
+    },
+    {
+      "slug": "expansion-02-09",
+      "id": "ca_unit_wh_dlc07_brt_inf_peasant_bowmen_2",
+      "name": "Peasant Bowmen (Pox Arrows)",
+      "mainKey": "wh_dlc07_brt_inf_peasant_bowmen_2",
+      "landKey": "wh_dlc07_brt_inf_peasant_bowmen_2",
+      "factionId": "bretonnia",
+      "militaryGroup": "wh_main_group_bretonnia",
+      "source": {
+        "reference": "generated/wh3/expansion-batch-02/units/expansion-02-09.result.json",
+        "sha256": "21c4a09113563f4cd61d2a388b04d22b0f7fcd022a2c68cf8058a04625fd36cc"
+      }
+    },
+    {
+      "slug": "expansion-02-10",
+      "id": "ca_unit_wh_dlc07_brt_cav_knights_errant_0",
+      "name": "Knights Errant",
+      "mainKey": "wh_dlc07_brt_cav_knights_errant_0",
+      "landKey": "wh_dlc07_brt_cav_knights_errant_0",
+      "factionId": "bretonnia",
+      "militaryGroup": "wh_main_group_bretonnia",
+      "source": {
+        "reference": "generated/wh3/expansion-batch-02/units/expansion-02-10.result.json",
+        "sha256": "6f4d2d424b64f416d5bf1f3c0617c9b5a2495e07e2ae620fe462df0e1a7b7c7c"
+      }
+    },
+    {
+      "slug": "expansion-02-11",
+      "id": "ca_unit_wh_dlc07_brt_cav_grail_guardians_0",
+      "name": "Grail Guardians",
+      "mainKey": "wh_dlc07_brt_cav_grail_guardians_0",
+      "landKey": "wh_dlc07_brt_cav_grail_guardians_0",
+      "factionId": "bretonnia",
+      "militaryGroup": "wh_main_group_bretonnia",
+      "source": {
+        "reference": "generated/wh3/expansion-batch-02/units/expansion-02-11.result.json",
+        "sha256": "260cd5973307f920bd6a215080e24fb1f9379ad84b267121b245fdb9c40cc619"
+      }
+    },
+    {
+      "slug": "expansion-02-12",
+      "id": "ca_unit_wh_main_brt_cav_mounted_yeomen_1",
+      "name": "Mounted Yeomen Archers",
+      "mainKey": "wh_main_brt_cav_mounted_yeomen_1",
+      "landKey": "wh_main_brt_cav_mounted_yeomen_1",
+      "factionId": "bretonnia",
+      "militaryGroup": "wh_main_group_bretonnia",
+      "source": {
+        "reference": "generated/wh3/expansion-batch-02/units/expansion-02-12.result.json",
+        "sha256": "95a3628281d0b3b5ef4710498dd2f424ecf8c21997f55f830c06099c4cb0386a"
+      }
+    },
+    {
+      "slug": "expansion-02-13",
+      "id": "ca_unit_wh_dlc07_brt_cav_royal_pegasus_knights_0",
+      "name": "Royal Pegasus Knights",
+      "mainKey": "wh_dlc07_brt_cav_royal_pegasus_knights_0",
+      "landKey": "wh_dlc07_brt_cav_royal_pegasus_knights_0",
+      "factionId": "bretonnia",
+      "militaryGroup": "wh_main_group_bretonnia",
+      "source": {
+        "reference": "generated/wh3/expansion-batch-02/units/expansion-02-13.result.json",
+        "sha256": "40066742ccb518dc61fe192e14ec7950a5b62f5901d6d077b79f04242c7f4a23"
+      }
+    },
+    {
+      "slug": "expansion-02-14",
+      "id": "ca_unit_wh_main_brt_art_field_trebuchet",
+      "name": "Field Trebuchets",
+      "mainKey": "wh_main_brt_art_field_trebuchet",
+      "landKey": "wh_main_brt_art_field_trebuchet",
+      "factionId": "bretonnia",
+      "militaryGroup": "wh_main_group_bretonnia",
+      "source": {
+        "reference": "generated/wh3/expansion-batch-02/units/expansion-02-14.result.json",
+        "sha256": "50b70171db5cf94c6f512c7a4834a391e1c87551884df39b33548d5883192698"
+      }
+    },
+    {
+      "slug": "expansion-02-15",
+      "id": "ca_unit_wh_dlc07_brt_art_blessed_field_trebuchet_0",
+      "name": "Blessed Field Trebuchets",
+      "mainKey": "wh_dlc07_brt_art_blessed_field_trebuchet_0",
+      "landKey": "wh_dlc07_brt_art_blessed_field_trebuchet_0",
+      "factionId": "bretonnia",
+      "militaryGroup": "wh_main_group_bretonnia",
+      "source": {
+        "reference": "generated/wh3/expansion-batch-02/units/expansion-02-15.result.json",
+        "sha256": "173ed6e1dbd6c904fcd108b4709f5e5f61d9efb9d3176358a5e7a990e313364a"
+      }
+    },
+    {
+      "slug": "expansion-02-16",
+      "id": "ca_unit_wh_dlc04_emp_inf_flagellants_0",
+      "name": "Flagellants",
+      "mainKey": "wh_dlc04_emp_inf_flagellants_0",
+      "landKey": "wh_dlc04_emp_inf_flagellants_0",
+      "factionId": "empire",
+      "militaryGroup": "wh_main_group_empire",
+      "source": {
+        "reference": "generated/wh3/expansion-batch-02/units/expansion-02-16.result.json",
+        "sha256": "a291e72be8bc059976e25b16727ef847f952fe7973fd394e8f84fb90c46794c6"
+      }
+    },
+    {
+      "slug": "expansion-02-17",
+      "id": "ca_unit_wh_main_emp_inf_crossbowmen",
+      "name": "Crossbowmen",
+      "mainKey": "wh_main_emp_inf_crossbowmen",
+      "landKey": "wh_main_emp_inf_crossbowmen",
+      "factionId": "empire",
+      "militaryGroup": "wh_main_group_empire",
+      "source": {
+        "reference": "generated/wh3/expansion-batch-02/units/expansion-02-17.result.json",
+        "sha256": "87b33150de39cb98596b1c1666eef1924954f5e36aaf787ca6e8485597ec7341"
+      }
+    },
+    {
+      "slug": "expansion-02-18",
+      "id": "ca_unit_wh_main_emp_cav_outriders_0",
+      "name": "Outriders",
+      "mainKey": "wh_main_emp_cav_outriders_0",
+      "landKey": "wh_main_emp_cav_outriders_0",
+      "factionId": "empire",
+      "militaryGroup": "wh_main_group_empire",
+      "source": {
+        "reference": "generated/wh3/expansion-batch-02/units/expansion-02-18.result.json",
+        "sha256": "ef66db2d76029a8ee6cfdef1b2bba12a9aac28bf4d643e53d73cca04407ba535"
+      }
+    },
+    {
+      "slug": "expansion-02-19",
+      "id": "ca_unit_wh3_dlc25_emp_inf_hochland_long_rifles",
+      "name": "Hochland Long Rifles",
+      "mainKey": "wh3_dlc25_emp_inf_hochland_long_rifles",
+      "landKey": "wh3_dlc25_emp_inf_hochland_long_rifles",
+      "factionId": "empire",
+      "militaryGroup": "wh_main_group_empire",
+      "source": {
+        "reference": "generated/wh3/expansion-batch-02/units/expansion-02-19.result.json",
+        "sha256": "87df077da11da955041c7599205add496b401d1cb2ffa6bae1effee8c2001b59"
+      }
+    },
+    {
+      "slug": "expansion-02-20",
+      "id": "ca_unit_wh3_dlc25_emp_inf_nuln_ironsides",
+      "name": "Nuln Ironsides",
+      "mainKey": "wh3_dlc25_emp_inf_nuln_ironsides",
+      "landKey": "wh3_dlc25_emp_inf_nuln_ironsides",
+      "factionId": "empire",
+      "militaryGroup": "wh_main_group_empire",
+      "source": {
+        "reference": "generated/wh3/expansion-batch-02/units/expansion-02-20.result.json",
+        "sha256": "2a1f9ced365a93051bbc5ba8a92942198d4325eed0aab931784317db640b3f59"
+      }
+    },
+    {
+      "slug": "expansion-02-21",
+      "id": "ca_unit_wh3_dlc29_emp_inf_teutogen_guard",
+      "name": "Teutogen Guard",
+      "mainKey": "wh3_dlc29_emp_inf_teutogen_guard",
+      "landKey": "wh3_dlc29_emp_inf_teutogen_guard",
+      "factionId": "empire",
+      "militaryGroup": "wh_main_group_empire",
+      "source": {
+        "reference": "generated/wh3/expansion-batch-02/units/expansion-02-21.result.json",
+        "sha256": "79a790e34bb144606ade4fc7b62e491b5ff3fded73cf3f0364d7c4906c98e177"
+      }
+    },
+    {
+      "slug": "expansion-02-22",
+      "id": "ca_unit_wh3_dlc29_emp_inf_warriors_of_ulric",
+      "name": "Warriors of Ulric",
+      "mainKey": "wh3_dlc29_emp_inf_warriors_of_ulric",
+      "landKey": "wh3_dlc29_emp_inf_warriors_of_ulric",
+      "factionId": "empire",
+      "militaryGroup": "wh_main_group_empire",
+      "source": {
+        "reference": "generated/wh3/expansion-batch-02/units/expansion-02-22.result.json",
+        "sha256": "64a00ac25fb29678fbf4f27e36765586d785a0ae0f4c5d700d433b56b073782a"
+      }
+    },
+    {
+      "slug": "expansion-02-23",
+      "id": "ca_unit_wh3_dlc29_emp_inf_wolf_kin",
+      "name": "Wolf-kin",
+      "mainKey": "wh3_dlc29_emp_inf_wolf_kin",
+      "landKey": "wh3_dlc29_emp_inf_wolf_kin",
+      "factionId": "empire",
+      "militaryGroup": "wh_main_group_empire",
+      "source": {
+        "reference": "generated/wh3/expansion-batch-02/units/expansion-02-23.result.json",
+        "sha256": "a3ea0f0f396a348e5164f6f486c3929246cb9fc5ffd91bfed3df9021b4c6fe7b"
+      }
+    },
+    {
+      "slug": "expansion-02-24",
+      "id": "ca_unit_wh3_dlc25_emp_cav_knights_of_the_black_rose",
+      "name": "Knights of the Black Rose",
+      "mainKey": "wh3_dlc25_emp_cav_knights_of_the_black_rose",
+      "landKey": "wh3_dlc25_emp_cav_knights_of_the_black_rose",
+      "factionId": "empire",
+      "militaryGroup": "wh_main_group_empire",
+      "source": {
+        "reference": "generated/wh3/expansion-batch-02/units/expansion-02-24.result.json",
+        "sha256": "1296594a1a45c05756097e15a7e7d787d2086579a5d49137eebd97c59811fbbf"
+      }
+    }
+  ],
+  "blocked": [],
+  "note": "Explicit exact identities only. Base static fields; count/HP/scale/speed/ammo and ambiguous missile profiles remain omitted. No runtime evidence admission."
+}

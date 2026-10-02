@@ -79,7 +79,7 @@ export function encodeSource(expanded) {
     rowMetadata,rows,edgeMetadata,relationships,skippedReferences,reasons,data};
 }
 
-export function decodeSource(compact) {
+export function decodeSource(compact, expectedHash = historicalSourceHash) {
   if (compact.format!==sourceFormat) fail('unsupported format');
   const get=(dictionary,id,kind)=> {
     if (typeof id!=='string' || !Object.hasOwn(dictionary,id)) fail(`missing referenced ${kind} ${id}`);
@@ -132,7 +132,7 @@ export function decodeSource(compact) {
   const expanded={format:'warhammer-vault-expansion-01-source-v1',gameExecuted:body.gameExecuted,
     provenance:compact.provenance,catalog:body.catalog,preflight:body.preflight,candidates:body.candidates,
     schemas:Object.values(compact.schemas)};
-  if (compact.expandedSha256!==historicalSourceHash || evidenceHash(expanded)!==historicalSourceHash) fail('expanded source hash differs (row payload/schema/provenance corruption)');
+  if (!/^[a-f0-9]{64}$/.test(expectedHash) || compact.expandedSha256!==expectedHash || evidenceHash(expanded)!==expectedHash) fail('expanded source hash differs (row payload/schema/provenance corruption)');
   if (!isDeepStrictEqual(encodeSource(expanded),compact)) fail('non-canonical source dictionary or unused evidence');
   return expanded;
 }

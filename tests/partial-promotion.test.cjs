@@ -119,9 +119,10 @@ test('bounded partial production appends only four reviewed identities and is id
   assert.equal(sha(JSON.stringify(fromFirst.factions)),'5c0aed29c4109ae75409680686bb4ecbdcaecd6bc805556d1eeb84d6b695d43c');
   assert.deepEqual(buildPartialProductionBatch(fromFirst).units,units.slice(0,10));assert.deepEqual(buildPartialProductionBatch(fromFirst).added,{units:4,factions:2});
   assert.equal(sha(readFileSync('src/data/unitDiagnostics.json')),(await reviewModule()).diagnosticSha256);
-  assert.equal(units.filter(u=>u.gameVersion==='sample').length,5);assert.equal(catalog.list().filter(e=>e.hasProduction&&!e.isSample).length,29);
-  assert.equal(game.getFactionUnits('empire').length,4);assert.equal(game.getFactionUnits('skaven').length,3);
-  assert.equal(game.getFactionUnits('vampire_counts').filter(u=>u.gameVersion!=='sample').length,5);
+  assert.equal(units.filter(u=>u.gameVersion==='sample').length,5);assert.equal(catalog.list().filter(e=>e.hasProduction&&!e.isSample).length,101);
+  assert.equal(units.slice(0,34).filter(u=>u.factionId==='empire').length,4);assert.equal(units.slice(0,34).filter(u=>u.factionId==='skaven').length,3);
+  assert.equal(units.slice(0,34).filter(u=>u.factionId==='vampire_counts'&&u.gameVersion!=='sample').length,5);
+  for(const id of ['empire','skaven','vampire_counts'])assert.deepEqual(game.getFactionUnits(id),units.filter(u=>u.factionId===id));
   for(const d of diagnostics.entries)assert(game.getUnit(d.id) && d.productionEligible===false);
 });
 

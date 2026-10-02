@@ -49,8 +49,8 @@ test('deferred admission is exactly five pinned identities and appends without c
   assert.equal(evidenceHash(baseline.factions),'91360117d5fa92752d6919cae95707c7cf89f75b22209873fe2e57d0a41b450a');
   const appended=buildDeferredProductionBatch(baseline);assert.deepEqual(appended.added,{units:5,factions:1});
   assert.deepEqual(appended.units,units.slice(0,15));assert.deepEqual(appended.factions,factions.slice(0,5));
-  assert.equal(units.filter(u=>u.gameVersion!=='sample').length,29);assert.equal(units.filter(u=>u.gameVersion==='sample').length,5);
-  assert.equal(catalog.list().filter(c=>c.kind==='diagnostic-only').length,0);assert.equal(catalog.list().length,34);
+  assert.equal(units.filter(u=>u.gameVersion!=='sample').length,101);assert.equal(units.filter(u=>u.gameVersion==='sample').length,5);
+  assert.equal(catalog.list().filter(c=>c.kind==='diagnostic-only').length,0);assert.equal(catalog.list().length,106);
   assert.equal(sha(readFileSync('src/data/unitDiagnostics.json')),committedReview.diagnosticSha256);
 });
 
@@ -142,7 +142,7 @@ test('existing detail UI reads all ten missile fields including zeros without an
   assert(!render('zombies').includes('사격 · 검증된 정적 필드'));
   assert(!render(diagnostics.entries[0].id).includes('사격 · 검증된 정적 필드'));
   const list=renderToString(React.createElement(MemoryRouter,{initialEntries:['/units']},React.createElement(App))).replace(/<!--.*?-->/g,'');
-  assert(list.includes('34개 항목'));
+  assert(list.includes('106개 항목'));
 });
 
 test('new production targets round-trip personal articles, bookmarks and recent views through unchanged backup v1',async()=>{

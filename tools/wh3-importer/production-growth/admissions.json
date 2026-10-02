@@ -1,0 +1,530 @@
+{
+  "expansion-batch-02": {
+    "sourceHash": "27dc903fc231c84f4e9a7bb197ff99a3fc104c84756b8748b597d2ec7a3aadd6",
+    "compactSourceHash": "749983d2749ab17a85bd989245c7919cd5bd9a1478cba235548a699b4f44ab8d",
+    "reviewHash": "58eedc410ca9243b2f0987f62a6a63a00397764ce4c9f82a7aaed1bc25fbb185",
+    "allowlist": [
+      {
+        "slug": "expansion-02-01",
+        "mainKey": "wh_dlc07_brt_peasant_mob_0",
+        "landKey": "wh_dlc07_brt_inf_peasant_mob_0",
+        "id": "ca_unit_wh_dlc07_brt_peasant_mob_0",
+        "sha256": "165ddcbe4a50629ff0f977c22b21a72a4a172730922b7caf1033d04b71bd301d"
+      },
+      {
+        "slug": "expansion-02-02",
+        "mainKey": "wh_dlc07_brt_inf_men_at_arms_1",
+        "landKey": "wh_dlc07_brt_inf_men_at_arms_1",
+        "id": "ca_unit_wh_dlc07_brt_inf_men_at_arms_1",
+        "sha256": "4e657abf3ec024b2bdf57351c31bce7af64632a178925b1bd946357458b51a5a"
+      },
+      {
+        "slug": "expansion-02-03",
+        "mainKey": "wh_dlc07_brt_inf_men_at_arms_2",
+        "landKey": "wh_dlc07_brt_inf_men_at_arms_2",
+        "id": "ca_unit_wh_dlc07_brt_inf_men_at_arms_2",
+        "sha256": "57f482ff20ae845b5153d2bf3a7e16c14044ec1a2bbf00be440c924bd503278a"
+      },
+      {
+        "slug": "expansion-02-04",
+        "mainKey": "wh_dlc07_brt_inf_spearmen_at_arms_1",
+        "landKey": "wh_dlc07_brt_inf_spearmen_at_arms_1",
+        "id": "ca_unit_wh_dlc07_brt_inf_spearmen_at_arms_1",
+        "sha256": "1a8efaadd624837bb0306266ef8d0605dbcb06793b2e6237f940d598fe83cec7"
+      },
+      {
+        "slug": "expansion-02-05",
+        "mainKey": "wh_main_brt_inf_spearmen_at_arms",
+        "landKey": "wh_main_brt_inf_spearmen_at_arms",
+        "id": "ca_unit_wh_main_brt_inf_spearmen_at_arms",
+        "sha256": "13ad0f7327173884ce9d60ddbbadabe361fe11f1a25cb41c9ccd8b59b68024a7"
+      },
+      {
+        "slug": "expansion-02-06",
+        "mainKey": "wh_dlc07_brt_inf_battle_pilgrims_0",
+        "landKey": "wh_dlc07_brt_inf_battle_pilgrims_0",
+        "id": "ca_unit_wh_dlc07_brt_inf_battle_pilgrims_0",
+        "sha256": "f8806674df45aeebcb6ccac8ec120ffdde4c99e49c199d38268c8d045249ece0"
+      },
+      {
+        "slug": "expansion-02-07",
+        "mainKey": "wh_main_brt_inf_peasant_bowmen",
+        "landKey": "wh_main_brt_inf_peasant_bowmen",
+        "id": "ca_unit_wh_main_brt_inf_peasant_bowmen",
+        "sha256": "0620df522c8b1895782236914b51a7a608050b757162289cf4717280909c5715"
+      },
+      {
+        "slug": "expansion-02-08",
+        "mainKey": "wh_dlc07_brt_inf_peasant_bowmen_1",
+        "landKey": "wh_dlc07_brt_inf_peasant_bowmen_1",
+        "id": "ca_unit_wh_dlc07_brt_inf_peasant_bowmen_1",
+        "sha256": "025bcd2959d6e709d322ba32de75d15a1ea147f34eb4531f7ea33cfec5e1bac3"
+      },
+      {
+        "slug": "expansion-02-09",
+        "mainKey": "wh_dlc07_brt_inf_peasant_bowmen_2",
+        "landKey": "wh_dlc07_brt_inf_peasant_bowmen_2",
+        "id": "ca_unit_wh_dlc07_brt_inf_peasant_bowmen_2",
+        "sha256": "21c4a09113563f4cd61d2a388b04d22b0f7fcd022a2c68cf8058a04625fd36cc"
+      },
+      {
+        "slug": "expansion-02-10",
+        "mainKey": "wh_dlc07_brt_cav_knights_errant_0",
+        "landKey": "wh_dlc07_brt_cav_knights_errant_0",
+        "id": "ca_unit_wh_dlc07_brt_cav_knights_errant_0",
+        "sha256": "6f4d2d424b64f416d5bf1f3c0617c9b5a2495e07e2ae620fe462df0e1a7b7c7c"
+      },
+      {
+        "slug": "expansion-02-11",
+        "mainKey": "wh_dlc07_brt_cav_grail_guardians_0",
+        "landKey": "wh_dlc07_brt_cav_grail_guardians_0",
+        "id": "ca_unit_wh_dlc07_brt_cav_grail_guardians_0",
+        "sha256": "260cd5973307f920bd6a215080e24fb1f9379ad84b267121b245fdb9c40cc619"
+      },
+      {
+        "slug": "expansion-02-12",
+        "mainKey": "wh_main_brt_cav_mounted_yeomen_1",
+        "landKey": "wh_main_brt_cav_mounted_yeomen_1",
+        "id": "ca_unit_wh_main_brt_cav_mounted_yeomen_1",
+        "sha256": "95a3628281d0b3b5ef4710498dd2f424ecf8c21997f55f830c06099c4cb0386a"
+      },
+      {
+        "slug": "expansion-02-13",
+        "mainKey": "wh_dlc07_brt_cav_royal_pegasus_knights_0",
+        "landKey": "wh_dlc07_brt_cav_royal_pegasus_knights_0",
+        "id": "ca_unit_wh_dlc07_brt_cav_royal_pegasus_knights_0",
+        "sha256": "40066742ccb518dc61fe192e14ec7950a5b62f5901d6d077b79f04242c7f4a23"
+      },
+      {
+        "slug": "expansion-02-14",
+        "mainKey": "wh_main_brt_art_field_trebuchet",
+        "landKey": "wh_main_brt_art_field_trebuchet",
+        "id": "ca_unit_wh_main_brt_art_field_trebuchet",
+        "sha256": "50b70171db5cf94c6f512c7a4834a391e1c87551884df39b33548d5883192698"
+      },
+      {
+        "slug": "expansion-02-15",
+        "mainKey": "wh_dlc07_brt_art_blessed_field_trebuchet_0",
+        "landKey": "wh_dlc07_brt_art_blessed_field_trebuchet_0",
+        "id": "ca_unit_wh_dlc07_brt_art_blessed_field_trebuchet_0",
+        "sha256": "173ed6e1dbd6c904fcd108b4709f5e5f61d9efb9d3176358a5e7a990e313364a"
+      },
+      {
+        "slug": "expansion-02-16",
+        "mainKey": "wh_dlc04_emp_inf_flagellants_0",
+        "landKey": "wh_dlc04_emp_inf_flagellants_0",
+        "id": "ca_unit_wh_dlc04_emp_inf_flagellants_0",
+        "sha256": "a291e72be8bc059976e25b16727ef847f952fe7973fd394e8f84fb90c46794c6"
+      },
+      {
+        "slug": "expansion-02-17",
+        "mainKey": "wh_main_emp_inf_crossbowmen",
+        "landKey": "wh_main_emp_inf_crossbowmen",
+        "id": "ca_unit_wh_main_emp_inf_crossbowmen",
+        "sha256": "87b33150de39cb98596b1c1666eef1924954f5e36aaf787ca6e8485597ec7341"
+      },
+      {
+        "slug": "expansion-02-18",
+        "mainKey": "wh_main_emp_cav_outriders_0",
+        "landKey": "wh_main_emp_cav_outriders_0",
+        "id": "ca_unit_wh_main_emp_cav_outriders_0",
+        "sha256": "ef66db2d76029a8ee6cfdef1b2bba12a9aac28bf4d643e53d73cca04407ba535"
+      },
+      {
+        "slug": "expansion-02-19",
+        "mainKey": "wh3_dlc25_emp_inf_hochland_long_rifles",
+        "landKey": "wh3_dlc25_emp_inf_hochland_long_rifles",
+        "id": "ca_unit_wh3_dlc25_emp_inf_hochland_long_rifles",
+        "sha256": "87df077da11da955041c7599205add496b401d1cb2ffa6bae1effee8c2001b59"
+      },
+      {
+        "slug": "expansion-02-20",
+        "mainKey": "wh3_dlc25_emp_inf_nuln_ironsides",
+        "landKey": "wh3_dlc25_emp_inf_nuln_ironsides",
+        "id": "ca_unit_wh3_dlc25_emp_inf_nuln_ironsides",
+        "sha256": "2a1f9ced365a93051bbc5ba8a92942198d4325eed0aab931784317db640b3f59"
+      },
+      {
+        "slug": "expansion-02-21",
+        "mainKey": "wh3_dlc29_emp_inf_teutogen_guard",
+        "landKey": "wh3_dlc29_emp_inf_teutogen_guard",
+        "id": "ca_unit_wh3_dlc29_emp_inf_teutogen_guard",
+        "sha256": "79a790e34bb144606ade4fc7b62e491b5ff3fded73cf3f0364d7c4906c98e177"
+      },
+      {
+        "slug": "expansion-02-22",
+        "mainKey": "wh3_dlc29_emp_inf_warriors_of_ulric",
+        "landKey": "wh3_dlc29_emp_inf_warriors_of_ulric",
+        "id": "ca_unit_wh3_dlc29_emp_inf_warriors_of_ulric",
+        "sha256": "64a00ac25fb29678fbf4f27e36765586d785a0ae0f4c5d700d433b56b073782a"
+      },
+      {
+        "slug": "expansion-02-23",
+        "mainKey": "wh3_dlc29_emp_inf_wolf_kin",
+        "landKey": "wh3_dlc29_emp_inf_wolf_kin",
+        "id": "ca_unit_wh3_dlc29_emp_inf_wolf_kin",
+        "sha256": "a3ea0f0f396a348e5164f6f486c3929246cb9fc5ffd91bfed3df9021b4c6fe7b"
+      },
+      {
+        "slug": "expansion-02-24",
+        "mainKey": "wh3_dlc25_emp_cav_knights_of_the_black_rose",
+        "landKey": "wh3_dlc25_emp_cav_knights_of_the_black_rose",
+        "id": "ca_unit_wh3_dlc25_emp_cav_knights_of_the_black_rose",
+        "sha256": "1296594a1a45c05756097e15a7e7d787d2086579a5d49137eebd97c59811fbbf"
+      }
+    ],
+    "blocked": []
+  },
+  "expansion-batch-03": {
+    "sourceHash": "ae5df25d0a9787cf0e2da4a563ba7bf838ace9576b0ae08999841c4850547eb5",
+    "compactSourceHash": "3859702f4598c083291ffa4816c7ca880ddd7909ac20dcc7fc11e88579bcecfe",
+    "reviewHash": "a5e13054e95b206476fe2cdf10b91ec29b0799575b7a925cd1d2f856134d5521",
+    "allowlist": [
+      {
+        "slug": "expansion-03-01",
+        "mainKey": "wh2_main_skv_inf_clanrat_spearmen_0",
+        "landKey": "wh2_main_skv_inf_clanrat_spearmen_0",
+        "id": "ca_unit_wh2_main_skv_inf_clanrat_spearmen_0",
+        "sha256": "aa0a94bc3491e93ce5b17327baf5d94fc26ba935845e8aad68326ffacbb1fed7"
+      },
+      {
+        "slug": "expansion-03-02",
+        "mainKey": "wh2_main_skv_inf_clanrat_spearmen_1",
+        "landKey": "wh2_main_skv_inf_clanrat_spearmen_1",
+        "id": "ca_unit_wh2_main_skv_inf_clanrat_spearmen_1",
+        "sha256": "99360c569aeee47aca6aa70356fdc7adde5181da321dcccbb4e2783665a1108c"
+      },
+      {
+        "slug": "expansion-03-03",
+        "mainKey": "wh2_main_skv_inf_plague_monk_censer_bearer",
+        "landKey": "wh2_main_skv_inf_plague_monk_censer_bearer",
+        "id": "ca_unit_wh2_main_skv_inf_plague_monk_censer_bearer",
+        "sha256": "a87473d8bb2d4b66614fe164d819199f6641f60c2134cf119ac209e63f60aba2"
+      },
+      {
+        "slug": "expansion-03-04",
+        "mainKey": "wh2_dlc14_skv_inf_eshin_triads_0",
+        "landKey": "wh2_dlc14_skv_inf_eshin_triads_0",
+        "id": "ca_unit_wh2_dlc14_skv_inf_eshin_triads_0",
+        "sha256": "490136d98baac1c3340211fccc838adf415531bcb877e802666c6dc78533b1b0"
+      },
+      {
+        "slug": "expansion-03-05",
+        "mainKey": "wh2_dlc14_skv_inf_warp_grinder_0",
+        "landKey": "wh2_dlc14_skv_inf_warp_grinder_0",
+        "id": "ca_unit_wh2_dlc14_skv_inf_warp_grinder_0",
+        "sha256": "6f9404cb15bda0fdfa68cecec324bc50dc52f7f4f3b44995a8045eef0cafa06d"
+      },
+      {
+        "slug": "expansion-03-06",
+        "mainKey": "wh2_main_skv_inf_gutter_runners_0",
+        "landKey": "wh2_main_skv_inf_gutter_runners_0",
+        "id": "ca_unit_wh2_main_skv_inf_gutter_runners_0",
+        "sha256": "4888e40f561a36b19377f5fa88c152de1313b6bf724216683d1ff39a3f5e2d94"
+      },
+      {
+        "slug": "expansion-03-07",
+        "mainKey": "wh2_main_skv_inf_gutter_runners_1",
+        "landKey": "wh2_main_skv_inf_gutter_runners_1",
+        "id": "ca_unit_wh2_main_skv_inf_gutter_runners_1",
+        "sha256": "45a618534dcf073ebd19eb75d362d428fcbeec984e8931170d62ba2939c4e4f6"
+      },
+      {
+        "slug": "expansion-03-08",
+        "mainKey": "wh2_main_skv_inf_night_runners_0",
+        "landKey": "wh2_main_skv_inf_night_runners_0",
+        "id": "ca_unit_wh2_main_skv_inf_night_runners_0",
+        "sha256": "611c5fefb034da1e77dba9add1a59b26be7d9e0464c673749832577657de0494"
+      },
+      {
+        "slug": "expansion-03-09",
+        "mainKey": "wh2_main_skv_inf_night_runners_1",
+        "landKey": "wh2_main_skv_inf_night_runners_1",
+        "id": "ca_unit_wh2_main_skv_inf_night_runners_1",
+        "sha256": "e126d1add3e8afd73568526533b486b4a90b391b64cd2df7eb7540d94e6b2cb7"
+      },
+      {
+        "slug": "expansion-03-10",
+        "mainKey": "wh2_main_skv_inf_gutter_runner_slingers_0",
+        "landKey": "wh2_main_skv_inf_gutter_runner_slingers_0",
+        "id": "ca_unit_wh2_main_skv_inf_gutter_runner_slingers_0",
+        "sha256": "9a59006d8af1a0b75caaf9c56fb828471c56e0c22d9cbccc9637b21c8e25b557"
+      },
+      {
+        "slug": "expansion-03-11",
+        "mainKey": "wh2_main_skv_inf_gutter_runner_slingers_1",
+        "landKey": "wh2_main_skv_inf_gutter_runner_slingers_1",
+        "id": "ca_unit_wh2_main_skv_inf_gutter_runner_slingers_1",
+        "sha256": "7efbb7670cc32ad8267bd9ac04a5b1e4e2fb2ac9fec3c37646323f436c6efd15"
+      },
+      {
+        "slug": "expansion-03-12",
+        "mainKey": "wh2_dlc12_skv_inf_warplock_jezzails_0",
+        "landKey": "wh2_dlc12_skv_inf_warplock_jezzails_0",
+        "id": "ca_unit_wh2_dlc12_skv_inf_warplock_jezzails_0",
+        "sha256": "4da9292dd7850c99685802c922fff238dc1b5e7a00b231b8249b6c99c8ba8f7b"
+      },
+      {
+        "slug": "expansion-03-13",
+        "mainKey": "wh2_main_skv_inf_poison_wind_globadiers",
+        "landKey": "wh2_main_skv_inf_poison_wind_globadiers",
+        "id": "ca_unit_wh2_main_skv_inf_poison_wind_globadiers",
+        "sha256": "5dbdb749b914f8c7d61e253bef34a7945761173841a285d066a139f41c5b8e45"
+      },
+      {
+        "slug": "expansion-03-14",
+        "mainKey": "wh2_main_skv_inf_death_globe_bombardiers",
+        "landKey": "wh2_main_skv_inf_death_globe_bombardiers",
+        "id": "ca_unit_wh2_main_skv_inf_death_globe_bombardiers",
+        "sha256": "899a6eb2a690349e7b5af771d01c917ab4b1ce8125af345f177d4e6abc3e6948"
+      },
+      {
+        "slug": "expansion-03-15",
+        "mainKey": "wh2_dlc14_skv_inf_poison_wind_mortar_0",
+        "landKey": "wh2_dlc14_skv_inf_poison_wind_mortar_0",
+        "id": "ca_unit_wh2_dlc14_skv_inf_poison_wind_mortar_0",
+        "sha256": "483bf90900590bf5cda2e644cc218cd92a5b98f1937f22ca5a5fdc180f5caef1"
+      },
+      {
+        "slug": "expansion-03-16",
+        "mainKey": "wh2_main_skv_inf_skavenslave_slingers_0",
+        "landKey": "wh2_main_skv_inf_skavenslave_slingers_0",
+        "id": "ca_unit_wh2_main_skv_inf_skavenslave_slingers_0",
+        "sha256": "5cd4f6b444914f8821168869674dae9fda67eeced73ef2ee5f306563493b1d10"
+      },
+      {
+        "slug": "expansion-03-17",
+        "mainKey": "wh2_main_skv_inf_warpfire_thrower",
+        "landKey": "wh2_main_skv_inf_warpfire_thrower",
+        "id": "ca_unit_wh2_main_skv_inf_warpfire_thrower",
+        "sha256": "8b490bea5dfc9d59e51cb4adbc0510fe1e59fd93f48e6b529596a4cbbbbb76d7"
+      },
+      {
+        "slug": "expansion-03-18",
+        "mainKey": "wh2_main_skv_art_plagueclaw_catapult",
+        "landKey": "wh2_main_skv_art_plagueclaw_catapult",
+        "id": "ca_unit_wh2_main_skv_art_plagueclaw_catapult",
+        "sha256": "7c1492187b831e22b8bc1ea8b954f888f5f6be59679220819ce193814d318232"
+      },
+      {
+        "slug": "expansion-03-19",
+        "mainKey": "wh2_main_skv_art_warp_lightning_cannon",
+        "landKey": "wh2_main_skv_art_warp_lightning_cannon",
+        "id": "ca_unit_wh2_main_skv_art_warp_lightning_cannon",
+        "sha256": "74a56e0d0c3a619e2aa29a7e80eef9bcebe78f17087885839bf2440491e8554b"
+      },
+      {
+        "slug": "expansion-03-20",
+        "mainKey": "wh2_dlc09_tmb_inf_skeleton_archers_0",
+        "landKey": "wh2_dlc09_tmb_inf_skeleton_archers_0",
+        "id": "ca_unit_wh2_dlc09_tmb_inf_skeleton_archers_0",
+        "sha256": "7a98e8afde2247ff570a3342e83a228d2363398addeba63b664c2d3d5637a6e2"
+      },
+      {
+        "slug": "expansion-03-21",
+        "mainKey": "wh2_dlc09_tmb_mon_ushabti_1",
+        "landKey": "wh2_dlc09_tmb_mon_ushabti_1",
+        "id": "ca_unit_wh2_dlc09_tmb_mon_ushabti_1",
+        "sha256": "d336c3daa986861468f6a67df2a606686bd8dfc3e9a87858e36eac18b732925e"
+      },
+      {
+        "slug": "expansion-03-22",
+        "mainKey": "wh2_dlc09_tmb_inf_nehekhara_warriors_0",
+        "landKey": "wh2_dlc09_tmb_inf_nehekhara_warriors_0",
+        "id": "ca_unit_wh2_dlc09_tmb_inf_nehekhara_warriors_0",
+        "sha256": "71f6853461f2a57669cd8ca430d8ecd5e34f17914f9fddddf186d99ddd0ba88f"
+      },
+      {
+        "slug": "expansion-03-23",
+        "mainKey": "wh2_dlc09_tmb_cav_skeleton_horsemen_0",
+        "landKey": "wh2_dlc09_tmb_cav_skeleton_horsemen_0",
+        "id": "ca_unit_wh2_dlc09_tmb_cav_skeleton_horsemen_0",
+        "sha256": "68148f0a8d390a254977f0c1721b5b8fb64086a0072a2809d04b855837bfae77"
+      },
+      {
+        "slug": "expansion-03-24",
+        "mainKey": "wh2_dlc09_tmb_art_screaming_skull_catapult_0",
+        "landKey": "wh2_dlc09_tmb_art_screaming_skull_catapult_0",
+        "id": "ca_unit_wh2_dlc09_tmb_art_screaming_skull_catapult_0",
+        "sha256": "999f0d2be225f839263122a7059d2b4e567588d8c0db2838b4afacad61f2b6e0"
+      }
+    ],
+    "blocked": []
+  },
+  "expansion-batch-04": {
+    "sourceHash": "96a6d2c5c8ad235561a542cbb2e138eb853de061aa4ebaaa1e49e149026aa55a",
+    "compactSourceHash": "de10c7368101bd1f788536027584897662282ca32b82a1abe96dfd64bfe291ec",
+    "reviewHash": "c4566b086c2541fc2e1a0402f3ea046ce75d384b8a86f74e47a82e3ec4040da2",
+    "allowlist": [
+      {
+        "slug": "expansion-04-01",
+        "mainKey": "wh2_main_lzd_inf_saurus_warriors_0",
+        "landKey": "wh2_main_lzd_inf_saurus_warriors_0",
+        "id": "ca_unit_wh2_main_lzd_inf_saurus_warriors_0",
+        "sha256": "18a5e9dcc11004e84194d49be55e07f19dcf9b1f8bd9d2ef645e386c1f672340"
+      },
+      {
+        "slug": "expansion-04-02",
+        "mainKey": "wh2_main_lzd_inf_saurus_spearmen_0",
+        "landKey": "wh2_main_lzd_inf_saurus_spearmen_0",
+        "id": "ca_unit_wh2_main_lzd_inf_saurus_spearmen_0",
+        "sha256": "5f932a64bee7b586b633f44d9dec9eede409086d0ae412141695f5e734939f69"
+      },
+      {
+        "slug": "expansion-04-03",
+        "mainKey": "wh2_main_lzd_inf_saurus_spearmen_1",
+        "landKey": "wh2_main_lzd_inf_saurus_spearmen_1",
+        "id": "ca_unit_wh2_main_lzd_inf_saurus_spearmen_1",
+        "sha256": "b77e2a80b4e0e6dc0724227eb46c967cd3351d14a883d883c12d6ee3e7bfb6e4"
+      },
+      {
+        "slug": "expansion-04-04",
+        "mainKey": "wh2_dlc12_lzd_inf_skink_red_crested_0",
+        "landKey": "wh2_dlc12_lzd_inf_skink_red_crested_0",
+        "id": "ca_unit_wh2_dlc12_lzd_inf_skink_red_crested_0",
+        "sha256": "03056b32c82d1c4f4a3a028c008fa98c8b733f050ab210fc2632c228ecf11ffd"
+      },
+      {
+        "slug": "expansion-04-05",
+        "mainKey": "wh2_main_lzd_inf_skink_cohort_0",
+        "landKey": "wh2_main_lzd_inf_skink_cohort_0",
+        "id": "ca_unit_wh2_main_lzd_inf_skink_cohort_0",
+        "sha256": "acee649652ba8e126e5a0bb92e4926804ab8370fe0cfd519648b88bbb1641122"
+      },
+      {
+        "slug": "expansion-04-06",
+        "mainKey": "wh2_main_lzd_inf_skink_cohort_1",
+        "landKey": "wh2_main_lzd_inf_skink_cohort_1",
+        "id": "ca_unit_wh2_main_lzd_inf_skink_cohort_1",
+        "sha256": "0065c27b84cfba61d7ff36e72b89471575d021a23709900f98f6b5a53040f638"
+      },
+      {
+        "slug": "expansion-04-07",
+        "mainKey": "wh2_main_lzd_inf_chameleon_skinks_0",
+        "landKey": "wh2_main_lzd_inf_chameleon_skinks_0",
+        "id": "ca_unit_wh2_main_lzd_inf_chameleon_skinks_0",
+        "sha256": "162cae853857826114cb76024b7187070b27a97c0c794d831109ec721749c2b5"
+      },
+      {
+        "slug": "expansion-04-08",
+        "mainKey": "wh2_main_lzd_inf_skink_skirmishers_0",
+        "landKey": "wh2_main_lzd_inf_skink_skirmishers_0",
+        "id": "ca_unit_wh2_main_lzd_inf_skink_skirmishers_0",
+        "sha256": "ac08575533258976f5dc52e41720ac0bb15fb5cabcc69082526c94e603c9f7af"
+      },
+      {
+        "slug": "expansion-04-09",
+        "mainKey": "wh2_main_lzd_mon_bastiladon_0",
+        "landKey": "wh2_main_lzd_mon_bastiladon_0",
+        "id": "ca_unit_wh2_main_lzd_mon_bastiladon_0",
+        "sha256": "a5e7a454ef01856397853b6cc135b7232c3daf533245ef53df704d7906d20806"
+      },
+      {
+        "slug": "expansion-04-10",
+        "mainKey": "wh2_main_lzd_mon_stegadon_0",
+        "landKey": "wh2_main_lzd_mon_stegadon_0",
+        "id": "ca_unit_wh2_main_lzd_mon_stegadon_0",
+        "sha256": "0fbbeeca22d849b6df984e90a728a66d2af2bc44c035732cc14ccd3b7469b7e6"
+      },
+      {
+        "slug": "expansion-04-11",
+        "mainKey": "wh2_dlc12_lzd_mon_ancient_salamander_0",
+        "landKey": "wh2_dlc12_lzd_mon_ancient_salamander_0",
+        "id": "ca_unit_wh2_dlc12_lzd_mon_ancient_salamander_0",
+        "sha256": "d62920e95c78a8b44ebcef56e25e149512e7b10fc9a1ac73872d4f1c3f8d78ff"
+      },
+      {
+        "slug": "expansion-04-12",
+        "mainKey": "wh2_main_lzd_cav_cold_ones_1",
+        "landKey": "wh2_main_lzd_cav_cold_ones_1",
+        "id": "ca_unit_wh2_main_lzd_cav_cold_ones_1",
+        "sha256": "af7d646b22b48476dc06f3f91260a130727627bfc0a5983b4b89407ec870cabf"
+      },
+      {
+        "slug": "expansion-04-13",
+        "mainKey": "wh2_main_lzd_cav_cold_one_spearmen_1",
+        "landKey": "wh2_main_lzd_cav_cold_one_spearriders_1",
+        "id": "ca_unit_wh2_main_lzd_cav_cold_one_spearmen_1",
+        "sha256": "746d7c76290c3d7ae5a8ce084ec222bde2523b4162acf91cd9ca2127c4a5e227"
+      },
+      {
+        "slug": "expansion-04-14",
+        "mainKey": "wh_main_vmp_cav_black_knights_0",
+        "landKey": "wh_main_vmp_cav_black_knights_0",
+        "id": "ca_unit_wh_main_vmp_cav_black_knights_0",
+        "sha256": "55154fbe88dfe16db35f7f2dcc227f8eca2fecaacec18786a5a269ede3cdb17e"
+      },
+      {
+        "slug": "expansion-04-15",
+        "mainKey": "wh3_main_vmp_blood_knights_sword_shield",
+        "landKey": "wh3_main_vmp_blood_knights_sword_shield",
+        "id": "ca_unit_wh3_main_vmp_blood_knights_sword_shield",
+        "sha256": "00d8b7e4d61d18c41d2398b4b89d70c997a41c0701636c379a6eaeeb2f004fec"
+      },
+      {
+        "slug": "expansion-04-16",
+        "mainKey": "wh2_dlc11_cst_inf_syreens",
+        "landKey": "wh2_dlc11_cst_inf_syreens",
+        "id": "ca_unit_wh2_dlc11_cst_inf_syreens",
+        "sha256": "45b6d5e94acd8bcfe19142ac2ed236657108c48e8286813d5f5bc4f47a586533"
+      },
+      {
+        "slug": "expansion-04-17",
+        "mainKey": "wh2_dlc11_cst_mon_animated_hulks_0",
+        "landKey": "wh2_dlc11_cst_mon_animated_hulks_0",
+        "id": "ca_unit_wh2_dlc11_cst_mon_animated_hulks_0",
+        "sha256": "d812657b16c4d3894703197c93ca170599d6e501be59b48724a40f5ecde990c8"
+      },
+      {
+        "slug": "expansion-04-18",
+        "mainKey": "wh2_dlc11_cst_mon_scurvy_dogs",
+        "landKey": "wh2_dlc11_cst_mon_scurvy_dogs",
+        "id": "ca_unit_wh2_dlc11_cst_mon_scurvy_dogs",
+        "sha256": "8090c7bd4e00e58ea8fdb01ca90015e379c683b0e078125b8904dfc42b1a29d4"
+      },
+      {
+        "slug": "expansion-04-19",
+        "mainKey": "wh2_dlc11_cst_inf_deck_gunners_0",
+        "landKey": "wh2_dlc11_cst_inf_deck_gunners_0",
+        "id": "ca_unit_wh2_dlc11_cst_inf_deck_gunners_0",
+        "sha256": "853e5bfe345a44816a93b206523fc1ed0094129fc531f7d5b56357d097c6c290"
+      },
+      {
+        "slug": "expansion-04-20",
+        "mainKey": "wh2_dlc11_cst_inf_zombie_gunnery_mob_1",
+        "landKey": "wh2_dlc11_cst_inf_zombie_gunnery_mob_1",
+        "id": "ca_unit_wh2_dlc11_cst_inf_zombie_gunnery_mob_1",
+        "sha256": "259384eef56c2e4f026a54a051d7ebcba9020010d41c3cb73976ffb5a88f66d8"
+      },
+      {
+        "slug": "expansion-04-21",
+        "mainKey": "wh2_dlc11_cst_art_carronade",
+        "landKey": "wh2_dlc11_cst_art_carronade",
+        "id": "ca_unit_wh2_dlc11_cst_art_carronade",
+        "sha256": "fb7f622019293106213e181440c5e53501e9740c843eae35e2b29ff4579f5553"
+      },
+      {
+        "slug": "expansion-04-22",
+        "mainKey": "wh_dlc01_chs_inf_chosen_2",
+        "landKey": "wh_dlc01_chs_inf_chosen_2",
+        "id": "ca_unit_wh_dlc01_chs_inf_chosen_2",
+        "sha256": "bf2f9397a4bc95589aec1a3204b3f11fce334b664661ccc242594b46e8923fe5"
+      },
+      {
+        "slug": "expansion-04-23",
+        "mainKey": "wh_dlc01_chs_inf_forsaken_0",
+        "landKey": "wh_dlc01_chs_inf_forsaken_0",
+        "id": "ca_unit_wh_dlc01_chs_inf_forsaken_0",
+        "sha256": "1fa423ed28d7ed6f387e64374b41416bbcc8cdfd46214a94f9aac4b6c8e95f15"
+      },
+      {
+        "slug": "expansion-04-24",
+        "mainKey": "wh_main_chs_mon_giant",
+        "landKey": "wh_main_chs_mon_giant",
+        "id": "ca_unit_wh_main_chs_mon_giant",
+        "sha256": "288c56de9b45ab09577b142e0be97ac7114e11615a353e0ab288c09e51d18dbe"
+      }
+    ],
+    "blocked": []
+  }
+}

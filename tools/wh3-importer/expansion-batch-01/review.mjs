@@ -8,6 +8,7 @@ import { isReviewedSource } from '../reviewed-snapshots.mjs';
 import { expansionCatalog, validateExpansionCatalog } from './catalog.mjs';
 import { portable } from './projection.mjs';
 import { decodeSource } from './compact.mjs';
+import { missileSourceContract } from '../missile-semantics/contract.mjs';
 
 export const expansionSourceHash='e10f3727bf00af27f69a0a623247275db62f4137137f1f416baf39fd7754b4e1';
 // Discovered first, then independently admitted. Never root-selection inputs.
@@ -31,15 +32,19 @@ const prefixes=g=>g==='identity'?['id','name']:g==='affiliation/catalog'?['facti
 const inGroup=(field,g)=>prefixes(g).some(p=>field===p || field.startsWith(`${p}.`));
 const requireReview=(ok,reason)=>{if(!ok)throw new Error(`Expansion review refused: ${reason}`);};
 
-export function reviewExpansion(compactBundle) {
-  const bundle=decodeSource(compactBundle);
-  requireReview(evidenceHash(bundle)===expansionSourceHash,'pinned source hash differs');
+export const batch01Policy={sourceHash:expansionSourceHash,catalog:expansionCatalog,validateCatalog:validateExpansionCatalog,allowlist:expansionAllowlist,allowMissile:false};
+export function reviewExpansion(compactBundle, policy=batch01Policy) {
+  const bundle=decodeSource(compactBundle,policy.sourceHash);
+  requireReview(evidenceHash(bundle)===policy.sourceHash,'pinned source hash differs');
   requireReview(bundle.format==='warhammer-vault-expansion-01-source-v1' && bundle.gameExecuted===false && isReviewedSource(bundle.provenance,''),'source snapshot differs');
-  validateExpansionCatalog(bundle.catalog);
-  requireReview(isDeepStrictEqual(bundle.catalog,expansionCatalog) && bundle.preflight.length===24,'exact 24-name catalog differs');
-  requireReview(isDeepStrictEqual(bundle.candidates.map(c=>c.slug),expansionAllowlist.map(c=>c.slug)),'explicit admission allowlist differs');
-  return bundle.candidates.map((candidate,i)=>{
-    const expected=expansionAllowlist[i],entry=bundle.preflight.find(e=>e.sample.slug===candidate.slug);
+  policy.validateCatalog(bundle.catalog);
+  requireReview(isDeepStrictEqual(bundle.catalog,policy.catalog) && bundle.preflight.length===policy.catalog.length,'exact bounded catalog differs');
+  if(!policy.reviewSubset)requireReview(isDeepStrictEqual(bundle.candidates.map(c=>c.slug),policy.allowlist.map(c=>c.slug)),'explicit admission allowlist differs');
+  requireReview(new Set(policy.allowlist.map(c=>c.slug)).size===policy.allowlist.length,'duplicate admission slug');
+  return policy.allowlist.map(expected=>{
+    const candidate=bundle.candidates.find(c=>c.slug===expected.slug);
+    requireReview(candidate && candidate.status!=='BLOCKED','explicit candidate unavailable/blocked');
+    const entry=bundle.preflight.find(e=>e.sample.slug===candidate.slug);
     requireReview(entry.roots.length===1 && entry.localisationMatches.every(l=>l.text===entry.sample.displayName),'non-unique exact localisation root');
     const root=entry.roots[0];
     requireReview(root.mainKey===expected.mainKey && root.landKey===expected.landKey &&
@@ -49,8 +54,13 @@ export function reviewExpansion(compactBundle) {
     requireReview(root.primaryAliases.length===1 && root.primaryAliases[0].factionId===entry.sample.expectedFactionId &&
       candidate.affiliation.factionId===entry.sample.expectedFactionId && candidate.affiliation.militaryGroup===root.primaryAliases[0].militaryGroup,'primary catalog alias differs/conflicts');
     const dump=restoreTrace(bundle,candidate.dump),permissionTrace=restoreTrace(bundle,entry.permissionTrace);
-    const normalized=portable(normalizeUnit(dump,{...candidate.affiliation,permissionTrace}));
-    requireReview(isDeepStrictEqual(normalized.unmapped,candidate.originalUnmapped),'remaining unknown IDs differ');
+    const original=portable(normalizeUnit(dump,{...candidate.affiliation,permissionTrace}));
+    requireReview(isDeepStrictEqual(original.unmapped,candidate.originalUnmapped),'remaining unknown IDs differ');
+    const missileEvidence=policy.allowMissile && candidate.missileInspection?restoreTrace(bundle,candidate.missileInspection):null;
+    const missileInspection=missileEvidence?{evidence:missileEvidence,contract:missileSourceContract(missileEvidence,{mainKey:expected.mainKey,landKey:expected.landKey})}:null;
+    requireReview(!policy.allowMissile || missileInspection,'missing bounded missile source graph');
+    const normalized=missileInspection?portable(normalizeUnit(dump,{...candidate.affiliation,permissionTrace,missileInspection})):original;
+    requireReview(isDeepStrictEqual(normalized.unmapped,candidate.originalUnmapped),'missile inspection changed unknown IDs');
     const selectors=factSelectors(dump),c=observationContext(dump,selectors);
     const composite=['mount','engine','articulated_record'].some(f=>selectors.fact(c.land,f)?.value);
     const unknownGroup=input=>input.kind==='attribute'?'attributes':
@@ -61,15 +71,18 @@ export function reviewExpansion(compactBundle) {
         omitted:normalized.omitted.filter(o=>inGroup(o.field,g)),unmapped:unknown,
         note:'Only listed direct/curated fields; missing values remain unknown.'}];
     }));
-    // This batch has no inspected primary/junction/engine missile profile.
-    // A future missile relation requires a separate review, never flattening.
-    requireReview(!root.missile.primary && !root.missile.junctions.length && !candidate.missileExtras.rows.length && !normalized.unit.missile,'unexpected missile path requires independent review');
-    groups.missile.note='No missile relation in the bounded primary/junction/engine inspection. Unit.missile omitted; absence does not prove inability to shoot.';
+    // Batch 01 has no missile profile; subsequent batches supply the existing
+    // bounded missile graph and contract instead of flattening extra paths.
+    if(!policy.allowMissile)requireReview(!root.missile.primary && !root.missile.junctions.length && !candidate.missileExtras.rows.length && !normalized.unit.missile,'unexpected missile path requires independent review');
+    const missileSafe=missileInspection?.contract.presentation.singleBlockSafe===true &&
+      missileInspection.contract.paths.every(p=>['precursor','use_secondary_ammo_pool','hide_secondary_range_ammo_statistics_ui'].every(f=>p.rawWeaponFlags?.[f]?.value===false)) &&
+      missileInspection.contract.ammo.secondary_ammo?.value===0 && missileInspection.contract.ammo.infinite_secondary_ammo?.value===false;
+    groups.missile.note=policy.allowMissile?`Bounded missile graph: ${missileInspection.contract.completeness}. Only a complete static single profile permits direct base fields; ammo/DPS/runtime precedence remain unresolved.`:'No missile relation in the bounded primary/junction/engine inspection. Unit.missile omitted; absence does not prove inability to shoot.';
     groups['composition/runtime structure']={status:composite?'NEEDS_RUNTIME':'OMIT',
       note:composite?'Mounted representative unresolved: no rider/mount size, mass, resistance or speed selected. Core admission needs no runtime.':'Unique schema-connected MAN supports only direct per-entity size/mass/resistance. No displayed count/HP/speed/scale inference.',
       rawCardinality:{numMen:selectors.fact(c.root,'num_men'),numMounts:selectors.fact(c.land,'num_mounts'),numEngines:selectors.fact(c.land,'num_engines')}};
     const projected=structuredClone(normalized),withdrawals=[];
-    for(const group of ['abilities','passiveAbilities','attributes','missile'])if(group==='missile' || groups[group].status==='NEEDS_MAPPING') {
+    for(const group of ['abilities','passiveAbilities','attributes','missile'])if((group==='missile' && !missileSafe) || groups[group].status==='NEEDS_MAPPING') {
       removeField(projected.unit,group);
       const fields=projected.provenance.fields.filter(f=>inGroup(f.field,group));
       projected.provenance.fields=projected.provenance.fields.filter(f=>!inGroup(f.field,group));
@@ -81,23 +94,28 @@ export function reviewExpansion(compactBundle) {
     requireReview(['identity','affiliation/catalog','classification','movement','defense','melee','campaign','customBattle'].every(g=>groups[g].status==='PROMOTABLE'),'safe core group missing');
     return {slug:candidate.slug,name:candidate.name,identity:normalized.provenance.identity,affiliation:candidate.affiliation,
       originalStatus:candidate.status,overall:'PROMOTABLE_WITH_OMISSIONS',source:candidate.source,
-      groups,scopedMappings:[],remainingUnmapped:normalized.unmapped,withdrawals,composite,normalized:projected};
+      groups,scopedMappings:[],remainingUnmapped:normalized.unmapped,withdrawals,composite,normalized:projected,
+      ...(missileInspection?{missileReview:{completeness:missileInspection.contract.completeness,
+        paths:missileInspection.contract.paths.map(p=>({role:p.role,weaponKey:p.weaponKey,projectiles:p.projectilePaths.map(x=>x.key)})),
+        ammoSemantics:missileInspection.contract.ammoSemantics,
+        admittedFields:missileSafe?projected.provenance.fields.filter(f=>f.field.startsWith('missile.')).map(f=>f.field):[]}}:{})};
   });
 }
 
-export function expandedReviewArtifact(compactBundle,reviews) {
-  const bundle=decodeSource(compactBundle);
+export function expandedReviewArtifact(compactBundle,reviews,policy=batch01Policy) {
+  const bundle=decodeSource(compactBundle,policy.sourceHash);
   const compact=value=>JSON.parse(JSON.stringify(value,(key,item)=>{
     if(key!=='source' || !item?.rowId)return item;
     const {rowId,table,rowKey,field,sourcePack,path,schemaVersion}=item;return {rowId,table,rowKey,field,sourcePack,path,schemaVersion};
   }));
-  return {format:'warhammer-vault-expansion-01-review-v1',reviewDate:'2026-10-02',gameVersion:'9.0.2.0',sourceSha256:expansionSourceHash,
-    counts:{uniqueRoot:16,ambiguous:6,rootNotFound:2,CLEAN:0,PARTIAL:14,BLOCKED:10},
+  return {format:'warhammer-vault-expansion-01-review-v1',reviewDate:'2026-10-02',gameVersion:'9.0.2.0',sourceSha256:policy.sourceHash,
+    counts:{uniqueRoot:bundle.preflight.filter(e=>e.roots.length===1).length,ambiguous:bundle.preflight.filter(e=>e.roots.length>1).length,rootNotFound:bundle.preflight.filter(e=>!e.roots.length).length,
+      CLEAN:bundle.preflight.filter(e=>e.status==='CLEAN').length,PARTIAL:bundle.preflight.filter(e=>e.status==='PARTIAL').length,BLOCKED:bundle.preflight.filter(e=>e.status==='BLOCKED').length},
     preflight:bundle.preflight.map(({permissionTrace,...entry})=>entry),
     candidates:reviews.map(({normalized,...review})=>compact({...review,productionProjection:normalized.unit}))};
 }
-export function expansionReviewArtifact(bundle,reviews) {
-  const expanded=expandedReviewArtifact(bundle,reviews),reasons={},omissions={};
+export function expansionReviewArtifact(bundle,reviews,policy=batch01Policy) {
+  const expanded=expandedReviewArtifact(bundle,reviews,policy),reasons={},omissions={};
   const reason=text=> {
     const id=`reason-${evidenceHash(text).slice(0,16)}`;
     if (Object.hasOwn(reasons,id) && reasons[id]!==text) throw new Error('Review reason hash collision');
@@ -111,19 +129,19 @@ export function expansionReviewArtifact(bundle,reviews) {
     omissions[id]=record; return id;
   };
   return {format:'warhammer-vault-expansion-01-review-v2',reviewDate:expanded.reviewDate,
-    sourceCompactSha256:evidenceHash(bundle),sourceExpandedSha256:expansionSourceHash,
+    sourceCompactSha256:evidenceHash(bundle),sourceExpandedSha256:policy.sourceHash,
     expandedReviewSha256:evidenceHash(expanded),counts:expanded.counts,
     preflight:expanded.preflight.map((e,i)=>({slug:e.sample.slug,sourcePointer:`data.preflight.${i}`,
       status:e.status,roots:e.roots.map(r=>({mainKey:r.mainKey,landKey:r.landKey})),
       blockers:e.blockers.map(b=>({category:b.category,reason:reason(b.reason)}))})),
-    candidates:expanded.candidates.map((c,i)=>({slug:c.slug,sourcePointer:`data.candidates.${i}`,
+    candidates:expanded.candidates.map(c=>({slug:c.slug,sourcePointer:`data.candidates.${bundle.data.candidates.findIndex(s=>s.slug===c.slug)}`,
       originalStatus:c.originalStatus,overall:c.overall,composite:c.composite,
       groups:Object.fromEntries(Object.entries(c.groups).map(([name,g])=>[name,{status:g.status,note:reason(g.note),
         ...(g.promotableFields?{admittedFields:g.promotableFields.map(f=>f.field)}:{}),
         ...(g.omitted?{omitted:g.omitted.map(omission)}:{})}])),
       unknownIds:c.remainingUnmapped.map(u=>({kind:u.kind,caId:u.caId,source:pointer(u.source)})),
       withdrawals:c.withdrawals.map(w=>({field:w.field,reason:reason(w.reason)})),
-      productionProjectionSha256:evidenceHash(c.productionProjection)})),omissions,reasons};
+      productionProjectionSha256:evidenceHash(c.productionProjection),...(c.missileReview?{missileReview:c.missileReview}:{})})),omissions,reasons};
 }
 export function renderExpansionReview(artifact) {
   return ['# Expansion batch 01','',

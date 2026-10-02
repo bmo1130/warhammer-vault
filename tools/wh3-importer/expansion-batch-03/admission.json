@@ -1,0 +1,329 @@
+{
+  "format": "warhammer-vault-expansion-01-admission-v1",
+  "sourceSha256": "ae5df25d0a9787cf0e2da4a563ba7bf838ace9576b0ae08999841c4850547eb5",
+  "reviewSha256": "a5e13054e95b206476fe2cdf10b91ec29b0799575b7a925cd1d2f856134d5521",
+  "storageProof": {
+    "sourceCompactSha256": "3859702f4598c083291ffa4816c7ca880ddd7909ac20dcc7fc11e88579bcecfe",
+    "reviewCompactSha256": "a5e13054e95b206476fe2cdf10b91ec29b0799575b7a925cd1d2f856134d5521"
+  },
+  "preservedBaseline": {
+    "units": "ff930ee3ffcf5674e25a4ee7d2731169c109a1dafdb08a8945bab009dcf18ea4",
+    "factions": "1bde13f1cf3a25026d55d6385102f3c2912e644c8e035ea578d5bcea66ca20ac"
+  },
+  "admitted": [
+    {
+      "slug": "expansion-03-01",
+      "id": "ca_unit_wh2_main_skv_inf_clanrat_spearmen_0",
+      "name": "Clanrat Spears",
+      "mainKey": "wh2_main_skv_inf_clanrat_spearmen_0",
+      "landKey": "wh2_main_skv_inf_clanrat_spearmen_0",
+      "factionId": "skaven",
+      "militaryGroup": "wh2_main_skv",
+      "source": {
+        "reference": "generated/wh3/expansion-batch-03/units/expansion-03-01.result.json",
+        "sha256": "aa0a94bc3491e93ce5b17327baf5d94fc26ba935845e8aad68326ffacbb1fed7"
+      }
+    },
+    {
+      "slug": "expansion-03-02",
+      "id": "ca_unit_wh2_main_skv_inf_clanrat_spearmen_1",
+      "name": "Clanrat Spears (Shields)",
+      "mainKey": "wh2_main_skv_inf_clanrat_spearmen_1",
+      "landKey": "wh2_main_skv_inf_clanrat_spearmen_1",
+      "factionId": "skaven",
+      "militaryGroup": "wh2_main_skv",
+      "source": {
+        "reference": "generated/wh3/expansion-batch-03/units/expansion-03-02.result.json",
+        "sha256": "99360c569aeee47aca6aa70356fdc7adde5181da321dcccbb4e2783665a1108c"
+      }
+    },
+    {
+      "slug": "expansion-03-03",
+      "id": "ca_unit_wh2_main_skv_inf_plague_monk_censer_bearer",
+      "name": "Plague Monk Censer Bearers",
+      "mainKey": "wh2_main_skv_inf_plague_monk_censer_bearer",
+      "landKey": "wh2_main_skv_inf_plague_monk_censer_bearer",
+      "factionId": "skaven",
+      "militaryGroup": "wh2_main_skv",
+      "source": {
+        "reference": "generated/wh3/expansion-batch-03/units/expansion-03-03.result.json",
+        "sha256": "a87473d8bb2d4b66614fe164d819199f6641f60c2134cf119ac209e63f60aba2"
+      }
+    },
+    {
+      "slug": "expansion-03-04",
+      "id": "ca_unit_wh2_dlc14_skv_inf_eshin_triads_0",
+      "name": "Eshin Triads",
+      "mainKey": "wh2_dlc14_skv_inf_eshin_triads_0",
+      "landKey": "wh2_dlc14_skv_inf_eshin_triads_0",
+      "factionId": "skaven",
+      "militaryGroup": "wh2_main_skv",
+      "source": {
+        "reference": "generated/wh3/expansion-batch-03/units/expansion-03-04.result.json",
+        "sha256": "490136d98baac1c3340211fccc838adf415531bcb877e802666c6dc78533b1b0"
+      }
+    },
+    {
+      "slug": "expansion-03-05",
+      "id": "ca_unit_wh2_dlc14_skv_inf_warp_grinder_0",
+      "name": "Warp-Grinders",
+      "mainKey": "wh2_dlc14_skv_inf_warp_grinder_0",
+      "landKey": "wh2_dlc14_skv_inf_warp_grinder_0",
+      "factionId": "skaven",
+      "militaryGroup": "wh2_main_skv",
+      "source": {
+        "reference": "generated/wh3/expansion-batch-03/units/expansion-03-05.result.json",
+        "sha256": "6f9404cb15bda0fdfa68cecec324bc50dc52f7f4f3b44995a8045eef0cafa06d"
+      }
+    },
+    {
+      "slug": "expansion-03-06",
+      "id": "ca_unit_wh2_main_skv_inf_gutter_runners_0",
+      "name": "Gutter Runners",
+      "mainKey": "wh2_main_skv_inf_gutter_runners_0",
+      "landKey": "wh2_main_skv_inf_gutter_runners_0",
+      "factionId": "skaven",
+      "militaryGroup": "wh2_main_skv",
+      "source": {
+        "reference": "generated/wh3/expansion-batch-03/units/expansion-03-06.result.json",
+        "sha256": "4888e40f561a36b19377f5fa88c152de1313b6bf724216683d1ff39a3f5e2d94"
+      }
+    },
+    {
+      "slug": "expansion-03-07",
+      "id": "ca_unit_wh2_main_skv_inf_gutter_runners_1",
+      "name": "Gutter Runners (Poison)",
+      "mainKey": "wh2_main_skv_inf_gutter_runners_1",
+      "landKey": "wh2_main_skv_inf_gutter_runners_1",
+      "factionId": "skaven",
+      "militaryGroup": "wh2_main_skv",
+      "source": {
+        "reference": "generated/wh3/expansion-batch-03/units/expansion-03-07.result.json",
+        "sha256": "45a618534dcf073ebd19eb75d362d428fcbeec984e8931170d62ba2939c4e4f6"
+      }
+    },
+    {
+      "slug": "expansion-03-08",
+      "id": "ca_unit_wh2_main_skv_inf_night_runners_0",
+      "name": "Night Runners",
+      "mainKey": "wh2_main_skv_inf_night_runners_0",
+      "landKey": "wh2_main_skv_inf_night_runners_0",
+      "factionId": "skaven",
+      "militaryGroup": "wh2_main_skv",
+      "source": {
+        "reference": "generated/wh3/expansion-batch-03/units/expansion-03-08.result.json",
+        "sha256": "611c5fefb034da1e77dba9add1a59b26be7d9e0464c673749832577657de0494"
+      }
+    },
+    {
+      "slug": "expansion-03-09",
+      "id": "ca_unit_wh2_main_skv_inf_night_runners_1",
+      "name": "Night Runners (Slings)",
+      "mainKey": "wh2_main_skv_inf_night_runners_1",
+      "landKey": "wh2_main_skv_inf_night_runners_1",
+      "factionId": "skaven",
+      "militaryGroup": "wh2_main_skv",
+      "source": {
+        "reference": "generated/wh3/expansion-batch-03/units/expansion-03-09.result.json",
+        "sha256": "e126d1add3e8afd73568526533b486b4a90b391b64cd2df7eb7540d94e6b2cb7"
+      }
+    },
+    {
+      "slug": "expansion-03-10",
+      "id": "ca_unit_wh2_main_skv_inf_gutter_runner_slingers_0",
+      "name": "Gutter Runner Slingers",
+      "mainKey": "wh2_main_skv_inf_gutter_runner_slingers_0",
+      "landKey": "wh2_main_skv_inf_gutter_runner_slingers_0",
+      "factionId": "skaven",
+      "militaryGroup": "wh2_main_skv",
+      "source": {
+        "reference": "generated/wh3/expansion-batch-03/units/expansion-03-10.result.json",
+        "sha256": "9a59006d8af1a0b75caaf9c56fb828471c56e0c22d9cbccc9637b21c8e25b557"
+      }
+    },
+    {
+      "slug": "expansion-03-11",
+      "id": "ca_unit_wh2_main_skv_inf_gutter_runner_slingers_1",
+      "name": "Gutter Runner Slingers (Poison)",
+      "mainKey": "wh2_main_skv_inf_gutter_runner_slingers_1",
+      "landKey": "wh2_main_skv_inf_gutter_runner_slingers_1",
+      "factionId": "skaven",
+      "militaryGroup": "wh2_main_skv",
+      "source": {
+        "reference": "generated/wh3/expansion-batch-03/units/expansion-03-11.result.json",
+        "sha256": "7efbb7670cc32ad8267bd9ac04a5b1e4e2fb2ac9fec3c37646323f436c6efd15"
+      }
+    },
+    {
+      "slug": "expansion-03-12",
+      "id": "ca_unit_wh2_dlc12_skv_inf_warplock_jezzails_0",
+      "name": "Warplock Jezzails",
+      "mainKey": "wh2_dlc12_skv_inf_warplock_jezzails_0",
+      "landKey": "wh2_dlc12_skv_inf_warplock_jezzails_0",
+      "factionId": "skaven",
+      "militaryGroup": "wh2_main_skv",
+      "source": {
+        "reference": "generated/wh3/expansion-batch-03/units/expansion-03-12.result.json",
+        "sha256": "4da9292dd7850c99685802c922fff238dc1b5e7a00b231b8249b6c99c8ba8f7b"
+      }
+    },
+    {
+      "slug": "expansion-03-13",
+      "id": "ca_unit_wh2_main_skv_inf_poison_wind_globadiers",
+      "name": "Poisoned Wind Globadiers",
+      "mainKey": "wh2_main_skv_inf_poison_wind_globadiers",
+      "landKey": "wh2_main_skv_inf_poison_wind_globadiers",
+      "factionId": "skaven",
+      "militaryGroup": "wh2_main_skv",
+      "source": {
+        "reference": "generated/wh3/expansion-batch-03/units/expansion-03-13.result.json",
+        "sha256": "5dbdb749b914f8c7d61e253bef34a7945761173841a285d066a139f41c5b8e45"
+      }
+    },
+    {
+      "slug": "expansion-03-14",
+      "id": "ca_unit_wh2_main_skv_inf_death_globe_bombardiers",
+      "name": "Death Globe Bombardiers",
+      "mainKey": "wh2_main_skv_inf_death_globe_bombardiers",
+      "landKey": "wh2_main_skv_inf_death_globe_bombardiers",
+      "factionId": "skaven",
+      "militaryGroup": "wh2_main_skv",
+      "source": {
+        "reference": "generated/wh3/expansion-batch-03/units/expansion-03-14.result.json",
+        "sha256": "899a6eb2a690349e7b5af771d01c917ab4b1ce8125af345f177d4e6abc3e6948"
+      }
+    },
+    {
+      "slug": "expansion-03-15",
+      "id": "ca_unit_wh2_dlc14_skv_inf_poison_wind_mortar_0",
+      "name": "Poisoned Wind Mortars",
+      "mainKey": "wh2_dlc14_skv_inf_poison_wind_mortar_0",
+      "landKey": "wh2_dlc14_skv_inf_poison_wind_mortar_0",
+      "factionId": "skaven",
+      "militaryGroup": "wh2_main_skv",
+      "source": {
+        "reference": "generated/wh3/expansion-batch-03/units/expansion-03-15.result.json",
+        "sha256": "483bf90900590bf5cda2e644cc218cd92a5b98f1937f22ca5a5fdc180f5caef1"
+      }
+    },
+    {
+      "slug": "expansion-03-16",
+      "id": "ca_unit_wh2_main_skv_inf_skavenslave_slingers_0",
+      "name": "Skavenslave Slingers",
+      "mainKey": "wh2_main_skv_inf_skavenslave_slingers_0",
+      "landKey": "wh2_main_skv_inf_skavenslave_slingers_0",
+      "factionId": "skaven",
+      "militaryGroup": "wh2_main_skv",
+      "source": {
+        "reference": "generated/wh3/expansion-batch-03/units/expansion-03-16.result.json",
+        "sha256": "5cd4f6b444914f8821168869674dae9fda67eeced73ef2ee5f306563493b1d10"
+      }
+    },
+    {
+      "slug": "expansion-03-17",
+      "id": "ca_unit_wh2_main_skv_inf_warpfire_thrower",
+      "name": "Warpfire Throwers",
+      "mainKey": "wh2_main_skv_inf_warpfire_thrower",
+      "landKey": "wh2_main_skv_inf_warpfire_thrower",
+      "factionId": "skaven",
+      "militaryGroup": "wh2_main_skv",
+      "source": {
+        "reference": "generated/wh3/expansion-batch-03/units/expansion-03-17.result.json",
+        "sha256": "8b490bea5dfc9d59e51cb4adbc0510fe1e59fd93f48e6b529596a4cbbbbb76d7"
+      }
+    },
+    {
+      "slug": "expansion-03-18",
+      "id": "ca_unit_wh2_main_skv_art_plagueclaw_catapult",
+      "name": "Plagueclaw Catapults",
+      "mainKey": "wh2_main_skv_art_plagueclaw_catapult",
+      "landKey": "wh2_main_skv_art_plagueclaw_catapult",
+      "factionId": "skaven",
+      "militaryGroup": "wh2_main_skv",
+      "source": {
+        "reference": "generated/wh3/expansion-batch-03/units/expansion-03-18.result.json",
+        "sha256": "7c1492187b831e22b8bc1ea8b954f888f5f6be59679220819ce193814d318232"
+      }
+    },
+    {
+      "slug": "expansion-03-19",
+      "id": "ca_unit_wh2_main_skv_art_warp_lightning_cannon",
+      "name": "Warp Lightning Cannons",
+      "mainKey": "wh2_main_skv_art_warp_lightning_cannon",
+      "landKey": "wh2_main_skv_art_warp_lightning_cannon",
+      "factionId": "skaven",
+      "militaryGroup": "wh2_main_skv",
+      "source": {
+        "reference": "generated/wh3/expansion-batch-03/units/expansion-03-19.result.json",
+        "sha256": "74a56e0d0c3a619e2aa29a7e80eef9bcebe78f17087885839bf2440491e8554b"
+      }
+    },
+    {
+      "slug": "expansion-03-20",
+      "id": "ca_unit_wh2_dlc09_tmb_inf_skeleton_archers_0",
+      "name": "Skeleton Archers",
+      "mainKey": "wh2_dlc09_tmb_inf_skeleton_archers_0",
+      "landKey": "wh2_dlc09_tmb_inf_skeleton_archers_0",
+      "factionId": "tomb_kings",
+      "militaryGroup": "wh2_dlc09_tomb_kings",
+      "source": {
+        "reference": "generated/wh3/expansion-batch-03/units/expansion-03-20.result.json",
+        "sha256": "7a98e8afde2247ff570a3342e83a228d2363398addeba63b664c2d3d5637a6e2"
+      }
+    },
+    {
+      "slug": "expansion-03-21",
+      "id": "ca_unit_wh2_dlc09_tmb_mon_ushabti_1",
+      "name": "Ushabti (Great Bows)",
+      "mainKey": "wh2_dlc09_tmb_mon_ushabti_1",
+      "landKey": "wh2_dlc09_tmb_mon_ushabti_1",
+      "factionId": "tomb_kings",
+      "militaryGroup": "wh2_dlc09_tomb_kings",
+      "source": {
+        "reference": "generated/wh3/expansion-batch-03/units/expansion-03-21.result.json",
+        "sha256": "d336c3daa986861468f6a67df2a606686bd8dfc3e9a87858e36eac18b732925e"
+      }
+    },
+    {
+      "slug": "expansion-03-22",
+      "id": "ca_unit_wh2_dlc09_tmb_inf_nehekhara_warriors_0",
+      "name": "Nehekharan Warriors",
+      "mainKey": "wh2_dlc09_tmb_inf_nehekhara_warriors_0",
+      "landKey": "wh2_dlc09_tmb_inf_nehekhara_warriors_0",
+      "factionId": "tomb_kings",
+      "militaryGroup": "wh2_dlc09_tomb_kings",
+      "source": {
+        "reference": "generated/wh3/expansion-batch-03/units/expansion-03-22.result.json",
+        "sha256": "71f6853461f2a57669cd8ca430d8ecd5e34f17914f9fddddf186d99ddd0ba88f"
+      }
+    },
+    {
+      "slug": "expansion-03-23",
+      "id": "ca_unit_wh2_dlc09_tmb_cav_skeleton_horsemen_0",
+      "name": "Skeleton Horsemen",
+      "mainKey": "wh2_dlc09_tmb_cav_skeleton_horsemen_0",
+      "landKey": "wh2_dlc09_tmb_cav_skeleton_horsemen_0",
+      "factionId": "tomb_kings",
+      "militaryGroup": "wh2_dlc09_tomb_kings",
+      "source": {
+        "reference": "generated/wh3/expansion-batch-03/units/expansion-03-23.result.json",
+        "sha256": "68148f0a8d390a254977f0c1721b5b8fb64086a0072a2809d04b855837bfae77"
+      }
+    },
+    {
+      "slug": "expansion-03-24",
+      "id": "ca_unit_wh2_dlc09_tmb_art_screaming_skull_catapult_0",
+      "name": "Screaming Skull Catapults",
+      "mainKey": "wh2_dlc09_tmb_art_screaming_skull_catapult_0",
+      "landKey": "wh2_dlc09_tmb_art_screaming_skull_catapult_0",
+      "factionId": "tomb_kings",
+      "militaryGroup": "wh2_dlc09_tomb_kings",
+      "source": {
+        "reference": "generated/wh3/expansion-batch-03/units/expansion-03-24.result.json",
+        "sha256": "999f0d2be225f839263122a7059d2b4e567588d8c0db2838b4afacad61f2b6e0"
+      }
+    }
+  ],
+  "blocked": [],
+  "note": "Explicit exact identities only. Base static fields; count/HP/scale/speed/ammo and ambiguous missile profiles remain omitted. No runtime evidence admission."
+}

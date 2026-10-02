@@ -1,0 +1,5856 @@
+{
+  "format": "warhammer-vault-expansion-01-review-v2",
+  "reviewDate": "2026-10-02",
+  "sourceCompactSha256": "749983d2749ab17a85bd989245c7919cd5bd9a1478cba235548a699b4f44ab8d",
+  "sourceExpandedSha256": "27dc903fc231c84f4e9a7bb197ff99a3fc104c84756b8748b597d2ec7a3aadd6",
+  "expandedReviewSha256": "89b29c17f3ad09df2537b89ebcbb86e8dd577eb7698c60945ea300292e81bd3c",
+  "counts": {
+    "uniqueRoot": 24,
+    "ambiguous": 0,
+    "rootNotFound": 0,
+    "CLEAN": 0,
+    "PARTIAL": 24,
+    "BLOCKED": 0
+  },
+  "preflight": [
+    {
+      "slug": "expansion-02-01",
+      "sourcePointer": "data.preflight.0",
+      "status": "PARTIAL",
+      "roots": [
+        {
+          "mainKey": "wh_dlc07_brt_peasant_mob_0",
+          "landKey": "wh_dlc07_brt_inf_peasant_mob_0"
+        }
+      ],
+      "blockers": []
+    },
+    {
+      "slug": "expansion-02-02",
+      "sourcePointer": "data.preflight.1",
+      "status": "PARTIAL",
+      "roots": [
+        {
+          "mainKey": "wh_dlc07_brt_inf_men_at_arms_1",
+          "landKey": "wh_dlc07_brt_inf_men_at_arms_1"
+        }
+      ],
+      "blockers": []
+    },
+    {
+      "slug": "expansion-02-03",
+      "sourcePointer": "data.preflight.2",
+      "status": "PARTIAL",
+      "roots": [
+        {
+          "mainKey": "wh_dlc07_brt_inf_men_at_arms_2",
+          "landKey": "wh_dlc07_brt_inf_men_at_arms_2"
+        }
+      ],
+      "blockers": []
+    },
+    {
+      "slug": "expansion-02-04",
+      "sourcePointer": "data.preflight.3",
+      "status": "PARTIAL",
+      "roots": [
+        {
+          "mainKey": "wh_dlc07_brt_inf_spearmen_at_arms_1",
+          "landKey": "wh_dlc07_brt_inf_spearmen_at_arms_1"
+        }
+      ],
+      "blockers": []
+    },
+    {
+      "slug": "expansion-02-05",
+      "sourcePointer": "data.preflight.4",
+      "status": "PARTIAL",
+      "roots": [
+        {
+          "mainKey": "wh_main_brt_inf_spearmen_at_arms",
+          "landKey": "wh_main_brt_inf_spearmen_at_arms"
+        }
+      ],
+      "blockers": []
+    },
+    {
+      "slug": "expansion-02-06",
+      "sourcePointer": "data.preflight.5",
+      "status": "PARTIAL",
+      "roots": [
+        {
+          "mainKey": "wh_dlc07_brt_inf_battle_pilgrims_0",
+          "landKey": "wh_dlc07_brt_inf_battle_pilgrims_0"
+        }
+      ],
+      "blockers": []
+    },
+    {
+      "slug": "expansion-02-07",
+      "sourcePointer": "data.preflight.6",
+      "status": "PARTIAL",
+      "roots": [
+        {
+          "mainKey": "wh_main_brt_inf_peasant_bowmen",
+          "landKey": "wh_main_brt_inf_peasant_bowmen"
+        }
+      ],
+      "blockers": []
+    },
+    {
+      "slug": "expansion-02-08",
+      "sourcePointer": "data.preflight.7",
+      "status": "PARTIAL",
+      "roots": [
+        {
+          "mainKey": "wh_dlc07_brt_inf_peasant_bowmen_1",
+          "landKey": "wh_dlc07_brt_inf_peasant_bowmen_1"
+        }
+      ],
+      "blockers": []
+    },
+    {
+      "slug": "expansion-02-09",
+      "sourcePointer": "data.preflight.8",
+      "status": "PARTIAL",
+      "roots": [
+        {
+          "mainKey": "wh_dlc07_brt_inf_peasant_bowmen_2",
+          "landKey": "wh_dlc07_brt_inf_peasant_bowmen_2"
+        }
+      ],
+      "blockers": []
+    },
+    {
+      "slug": "expansion-02-10",
+      "sourcePointer": "data.preflight.9",
+      "status": "PARTIAL",
+      "roots": [
+        {
+          "mainKey": "wh_dlc07_brt_cav_knights_errant_0",
+          "landKey": "wh_dlc07_brt_cav_knights_errant_0"
+        }
+      ],
+      "blockers": []
+    },
+    {
+      "slug": "expansion-02-11",
+      "sourcePointer": "data.preflight.10",
+      "status": "PARTIAL",
+      "roots": [
+        {
+          "mainKey": "wh_dlc07_brt_cav_grail_guardians_0",
+          "landKey": "wh_dlc07_brt_cav_grail_guardians_0"
+        }
+      ],
+      "blockers": []
+    },
+    {
+      "slug": "expansion-02-12",
+      "sourcePointer": "data.preflight.11",
+      "status": "PARTIAL",
+      "roots": [
+        {
+          "mainKey": "wh_main_brt_cav_mounted_yeomen_1",
+          "landKey": "wh_main_brt_cav_mounted_yeomen_1"
+        }
+      ],
+      "blockers": []
+    },
+    {
+      "slug": "expansion-02-13",
+      "sourcePointer": "data.preflight.12",
+      "status": "PARTIAL",
+      "roots": [
+        {
+          "mainKey": "wh_dlc07_brt_cav_royal_pegasus_knights_0",
+          "landKey": "wh_dlc07_brt_cav_royal_pegasus_knights_0"
+        }
+      ],
+      "blockers": []
+    },
+    {
+      "slug": "expansion-02-14",
+      "sourcePointer": "data.preflight.13",
+      "status": "PARTIAL",
+      "roots": [
+        {
+          "mainKey": "wh_main_brt_art_field_trebuchet",
+          "landKey": "wh_main_brt_art_field_trebuchet"
+        }
+      ],
+      "blockers": []
+    },
+    {
+      "slug": "expansion-02-15",
+      "sourcePointer": "data.preflight.14",
+      "status": "PARTIAL",
+      "roots": [
+        {
+          "mainKey": "wh_dlc07_brt_art_blessed_field_trebuchet_0",
+          "landKey": "wh_dlc07_brt_art_blessed_field_trebuchet_0"
+        }
+      ],
+      "blockers": []
+    },
+    {
+      "slug": "expansion-02-16",
+      "sourcePointer": "data.preflight.15",
+      "status": "PARTIAL",
+      "roots": [
+        {
+          "mainKey": "wh_dlc04_emp_inf_flagellants_0",
+          "landKey": "wh_dlc04_emp_inf_flagellants_0"
+        }
+      ],
+      "blockers": []
+    },
+    {
+      "slug": "expansion-02-17",
+      "sourcePointer": "data.preflight.16",
+      "status": "PARTIAL",
+      "roots": [
+        {
+          "mainKey": "wh_main_emp_inf_crossbowmen",
+          "landKey": "wh_main_emp_inf_crossbowmen"
+        }
+      ],
+      "blockers": []
+    },
+    {
+      "slug": "expansion-02-18",
+      "sourcePointer": "data.preflight.17",
+      "status": "PARTIAL",
+      "roots": [
+        {
+          "mainKey": "wh_main_emp_cav_outriders_0",
+          "landKey": "wh_main_emp_cav_outriders_0"
+        }
+      ],
+      "blockers": []
+    },
+    {
+      "slug": "expansion-02-19",
+      "sourcePointer": "data.preflight.18",
+      "status": "PARTIAL",
+      "roots": [
+        {
+          "mainKey": "wh3_dlc25_emp_inf_hochland_long_rifles",
+          "landKey": "wh3_dlc25_emp_inf_hochland_long_rifles"
+        }
+      ],
+      "blockers": []
+    },
+    {
+      "slug": "expansion-02-20",
+      "sourcePointer": "data.preflight.19",
+      "status": "PARTIAL",
+      "roots": [
+        {
+          "mainKey": "wh3_dlc25_emp_inf_nuln_ironsides",
+          "landKey": "wh3_dlc25_emp_inf_nuln_ironsides"
+        }
+      ],
+      "blockers": []
+    },
+    {
+      "slug": "expansion-02-21",
+      "sourcePointer": "data.preflight.20",
+      "status": "PARTIAL",
+      "roots": [
+        {
+          "mainKey": "wh3_dlc29_emp_inf_teutogen_guard",
+          "landKey": "wh3_dlc29_emp_inf_teutogen_guard"
+        }
+      ],
+      "blockers": []
+    },
+    {
+      "slug": "expansion-02-22",
+      "sourcePointer": "data.preflight.21",
+      "status": "PARTIAL",
+      "roots": [
+        {
+          "mainKey": "wh3_dlc29_emp_inf_warriors_of_ulric",
+          "landKey": "wh3_dlc29_emp_inf_warriors_of_ulric"
+        }
+      ],
+      "blockers": []
+    },
+    {
+      "slug": "expansion-02-23",
+      "sourcePointer": "data.preflight.22",
+      "status": "PARTIAL",
+      "roots": [
+        {
+          "mainKey": "wh3_dlc29_emp_inf_wolf_kin",
+          "landKey": "wh3_dlc29_emp_inf_wolf_kin"
+        }
+      ],
+      "blockers": []
+    },
+    {
+      "slug": "expansion-02-24",
+      "sourcePointer": "data.preflight.23",
+      "status": "PARTIAL",
+      "roots": [
+        {
+          "mainKey": "wh3_dlc25_emp_cav_knights_of_the_black_rose",
+          "landKey": "wh3_dlc25_emp_cav_knights_of_the_black_rose"
+        }
+      ],
+      "blockers": []
+    }
+  ],
+  "candidates": [
+    {
+      "slug": "expansion-02-01",
+      "sourcePointer": "data.candidates.0",
+      "originalStatus": "PARTIAL",
+      "overall": "PROMOTABLE_WITH_OMISSIONS",
+      "composite": false,
+      "groups": {
+        "identity": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "id",
+            "name"
+          ],
+          "omitted": []
+        },
+        "affiliation/catalog": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "factionId"
+          ],
+          "omitted": []
+        },
+        "classification": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "classification.category",
+            "classification.tier"
+          ],
+          "omitted": []
+        },
+        "entities": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "entities.entitySize",
+            "entities.mass"
+          ],
+          "omitted": [
+            "entities.totalHealth:ec9e3ab1b921b805",
+            "entities.healthPerEntity:c91e6133a24bb0f7",
+            "entities.count:55307753502d8137",
+            "entities.unitScale:4ce4a888b689c3f7"
+          ]
+        },
+        "movement": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "movement.canSkirmish"
+          ],
+          "omitted": [
+            "movement.speed:b4ce8c8fa87f333e",
+            "movement.groundSpeed:b03bd19b66616947",
+            "movement.chargeSpeed:0d6e0b1966fad87e",
+            "movement.canFly:f181794b5c1fe8af",
+            "movement.canRun:0e84b2d1d5fcad2c"
+          ]
+        },
+        "defense": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "defense.armor",
+            "defense.meleeDefense",
+            "defense.leadership",
+            "defense.shieldBlockChance",
+            "defense.projectilePenetrationResistance"
+          ],
+          "omitted": [
+            "defense.resistances:6b1e1f9c1948d2d6"
+          ]
+        },
+        "melee": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "melee.meleeAttack",
+            "melee.chargeBonus",
+            "melee.damage.base",
+            "melee.damage.armorPiercing",
+            "melee.damage.bonusVsLarge",
+            "melee.damage.bonusVsInfantry",
+            "melee.attackInterval",
+            "melee.weaponLength",
+            "melee.splash.maxTargets"
+          ],
+          "omitted": [
+            "melee.splash.maxTargetSize:21559b20f62293cb",
+            "melee.attackAttributes.flaming:e8b9e17460f0b1cb"
+          ]
+        },
+        "missile": {
+          "status": "OMIT",
+          "note": "reason-783c8e7e1685ccdc",
+          "admittedFields": [],
+          "omitted": [
+            "missile.range:25a1d1b1a0c1bd73",
+            "missile.projectile.baseDamage:bb0a60fa8122cae7",
+            "missile.projectile.armorPiercingDamage:11ad81cd7be7f91b",
+            "missile.projectile.bonusVsLarge:53128b3801d3586e",
+            "missile.projectile.bonusVsInfantry:502db0e8edeeb776",
+            "missile.projectile.shotsPerVolley:fe41fe3003689ab9",
+            "missile.explosion.baseDamage:2c848a5fb2c6ce77",
+            "missile.explosion.armorPiercingDamage:aca77febc2637459",
+            "missile.explosion.radius:20a3dd2d3d19a789",
+            "missile.accuracy.calibrationDistance:78e047185ab252b5",
+            "missile.accuracy.calibrationArea:9746bb572412b4a7",
+            "missile.reload.baseTime:f6eea1a9c2e14aa9",
+            "missile.projectile.penetration.resistanceBudget:51676867260a6807",
+            "missile.projectile.penetration.stopsAtEntitySize:e3bceb930851de2c",
+            "missile.ammunition:ef768cec0aa7a1ff",
+            "missile.accuracy.accuracy:03f7d158534875fb",
+            "missile.reload.reloadSkill:9cad19b2728385d7",
+            "missile.reload.currentTime:26a4460e6c957684",
+            "missile.strength:6ed0987d2f71de37",
+            "missile.projectile.ignoresShields:3e49353cd50747fc",
+            "missile.projectile.penetration.maxPenetrations:d64eacb755035437"
+          ]
+        },
+        "campaign": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "campaign.recruitmentCost",
+            "campaign.upkeep",
+            "campaign.recruitmentTurns"
+          ],
+          "omitted": [
+            "campaign.recruitmentRequirements:2ad429242940f1fd",
+            "campaign.unitCap:aff5935abb2f84fe"
+          ]
+        },
+        "customBattle": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "customBattle.cost"
+          ],
+          "omitted": []
+        },
+        "abilities": {
+          "status": "OMIT",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [],
+          "omitted": []
+        },
+        "passiveAbilities": {
+          "status": "NEEDS_MAPPING",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [],
+          "omitted": []
+        },
+        "attributes": {
+          "status": "NEEDS_MAPPING",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "attributes.0"
+          ],
+          "omitted": []
+        },
+        "composition/runtime structure": {
+          "status": "OMIT",
+          "note": "reason-63f96edfdbb46360"
+        }
+      },
+      "unknownIds": [
+        {
+          "kind": "attribute",
+          "caId": "peasant",
+          "source": {
+            "rowId": "unit_attributes_tables:5a1b0fad7794829bc22f",
+            "field": "key"
+          }
+        },
+        {
+          "kind": "ability",
+          "caId": "wh_dlc07_unit_passive_the_peasants_duty",
+          "source": {
+            "rowId": "unit_abilities_tables:cfc4b4028007de6a294b",
+            "field": "key"
+          }
+        }
+      ],
+      "withdrawals": [
+        {
+          "field": "passiveAbilities",
+          "reason": "reason-d809ce6b39903e8f"
+        },
+        {
+          "field": "attributes",
+          "reason": "reason-d809ce6b39903e8f"
+        },
+        {
+          "field": "missile",
+          "reason": "reason-783c8e7e1685ccdc"
+        }
+      ],
+      "productionProjectionSha256": "edff637eaacdf21d130ebab09fccd8b1ac9f8b9d2b26c815bdace6028d649acb",
+      "missileReview": {
+        "completeness": "NO_MISSILE_PATH",
+        "paths": [],
+        "ammoSemantics": {
+          "displayConversion": "UNRESOLVED",
+          "consumption": "UNRESOLVED",
+          "poolSharing": "UNRESOLVED",
+          "attachmentScaling": "NOT_AUTHORIZED"
+        },
+        "admittedFields": []
+      }
+    },
+    {
+      "slug": "expansion-02-02",
+      "sourcePointer": "data.candidates.1",
+      "originalStatus": "PARTIAL",
+      "overall": "PROMOTABLE_WITH_OMISSIONS",
+      "composite": false,
+      "groups": {
+        "identity": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "id",
+            "name"
+          ],
+          "omitted": []
+        },
+        "affiliation/catalog": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "factionId"
+          ],
+          "omitted": []
+        },
+        "classification": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "classification.category",
+            "classification.tier"
+          ],
+          "omitted": []
+        },
+        "entities": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "entities.entitySize",
+            "entities.mass"
+          ],
+          "omitted": [
+            "entities.totalHealth:ec9e3ab1b921b805",
+            "entities.healthPerEntity:c91e6133a24bb0f7",
+            "entities.count:55307753502d8137",
+            "entities.unitScale:4ce4a888b689c3f7"
+          ]
+        },
+        "movement": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "movement.canSkirmish"
+          ],
+          "omitted": [
+            "movement.speed:b4ce8c8fa87f333e",
+            "movement.groundSpeed:b03bd19b66616947",
+            "movement.chargeSpeed:0d6e0b1966fad87e",
+            "movement.canFly:f181794b5c1fe8af",
+            "movement.canRun:0e84b2d1d5fcad2c"
+          ]
+        },
+        "defense": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "defense.armor",
+            "defense.meleeDefense",
+            "defense.leadership",
+            "defense.shieldBlockChance",
+            "defense.projectilePenetrationResistance"
+          ],
+          "omitted": [
+            "defense.resistances:6b1e1f9c1948d2d6"
+          ]
+        },
+        "melee": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "melee.meleeAttack",
+            "melee.chargeBonus",
+            "melee.damage.base",
+            "melee.damage.armorPiercing",
+            "melee.damage.bonusVsLarge",
+            "melee.damage.bonusVsInfantry",
+            "melee.attackInterval",
+            "melee.weaponLength",
+            "melee.splash.maxTargets"
+          ],
+          "omitted": [
+            "melee.splash.maxTargetSize:21559b20f62293cb",
+            "melee.attackAttributes.flaming:e8b9e17460f0b1cb"
+          ]
+        },
+        "missile": {
+          "status": "OMIT",
+          "note": "reason-783c8e7e1685ccdc",
+          "admittedFields": [],
+          "omitted": [
+            "missile.range:25a1d1b1a0c1bd73",
+            "missile.projectile.baseDamage:bb0a60fa8122cae7",
+            "missile.projectile.armorPiercingDamage:11ad81cd7be7f91b",
+            "missile.projectile.bonusVsLarge:53128b3801d3586e",
+            "missile.projectile.bonusVsInfantry:502db0e8edeeb776",
+            "missile.projectile.shotsPerVolley:fe41fe3003689ab9",
+            "missile.explosion.baseDamage:2c848a5fb2c6ce77",
+            "missile.explosion.armorPiercingDamage:aca77febc2637459",
+            "missile.explosion.radius:20a3dd2d3d19a789",
+            "missile.accuracy.calibrationDistance:78e047185ab252b5",
+            "missile.accuracy.calibrationArea:9746bb572412b4a7",
+            "missile.reload.baseTime:f6eea1a9c2e14aa9",
+            "missile.projectile.penetration.resistanceBudget:51676867260a6807",
+            "missile.projectile.penetration.stopsAtEntitySize:e3bceb930851de2c",
+            "missile.ammunition:ef768cec0aa7a1ff",
+            "missile.accuracy.accuracy:03f7d158534875fb",
+            "missile.reload.reloadSkill:9cad19b2728385d7",
+            "missile.reload.currentTime:26a4460e6c957684",
+            "missile.strength:6ed0987d2f71de37",
+            "missile.projectile.ignoresShields:3e49353cd50747fc",
+            "missile.projectile.penetration.maxPenetrations:d64eacb755035437"
+          ]
+        },
+        "campaign": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "campaign.recruitmentCost",
+            "campaign.upkeep",
+            "campaign.recruitmentTurns"
+          ],
+          "omitted": [
+            "campaign.recruitmentRequirements:2ad429242940f1fd",
+            "campaign.unitCap:aff5935abb2f84fe"
+          ]
+        },
+        "customBattle": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "customBattle.cost"
+          ],
+          "omitted": []
+        },
+        "abilities": {
+          "status": "OMIT",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [],
+          "omitted": []
+        },
+        "passiveAbilities": {
+          "status": "NEEDS_MAPPING",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [],
+          "omitted": []
+        },
+        "attributes": {
+          "status": "NEEDS_MAPPING",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "attributes.0"
+          ],
+          "omitted": []
+        },
+        "composition/runtime structure": {
+          "status": "OMIT",
+          "note": "reason-63f96edfdbb46360"
+        }
+      },
+      "unknownIds": [
+        {
+          "kind": "attribute",
+          "caId": "peasant",
+          "source": {
+            "rowId": "unit_attributes_tables:5a1b0fad7794829bc22f",
+            "field": "key"
+          }
+        },
+        {
+          "kind": "ability",
+          "caId": "wh_dlc07_unit_passive_the_peasants_duty",
+          "source": {
+            "rowId": "unit_abilities_tables:cfc4b4028007de6a294b",
+            "field": "key"
+          }
+        }
+      ],
+      "withdrawals": [
+        {
+          "field": "passiveAbilities",
+          "reason": "reason-d809ce6b39903e8f"
+        },
+        {
+          "field": "attributes",
+          "reason": "reason-d809ce6b39903e8f"
+        },
+        {
+          "field": "missile",
+          "reason": "reason-783c8e7e1685ccdc"
+        }
+      ],
+      "productionProjectionSha256": "728c39a4f3b0ddd2ec8a8ae47efde27a930e304e31d56f4dc9fe48f582a88027",
+      "missileReview": {
+        "completeness": "NO_MISSILE_PATH",
+        "paths": [],
+        "ammoSemantics": {
+          "displayConversion": "UNRESOLVED",
+          "consumption": "UNRESOLVED",
+          "poolSharing": "UNRESOLVED",
+          "attachmentScaling": "NOT_AUTHORIZED"
+        },
+        "admittedFields": []
+      }
+    },
+    {
+      "slug": "expansion-02-03",
+      "sourcePointer": "data.candidates.2",
+      "originalStatus": "PARTIAL",
+      "overall": "PROMOTABLE_WITH_OMISSIONS",
+      "composite": false,
+      "groups": {
+        "identity": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "id",
+            "name"
+          ],
+          "omitted": []
+        },
+        "affiliation/catalog": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "factionId"
+          ],
+          "omitted": []
+        },
+        "classification": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "classification.category",
+            "classification.tier"
+          ],
+          "omitted": []
+        },
+        "entities": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "entities.entitySize",
+            "entities.mass"
+          ],
+          "omitted": [
+            "entities.totalHealth:ec9e3ab1b921b805",
+            "entities.healthPerEntity:c91e6133a24bb0f7",
+            "entities.count:55307753502d8137",
+            "entities.unitScale:4ce4a888b689c3f7"
+          ]
+        },
+        "movement": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "movement.canSkirmish"
+          ],
+          "omitted": [
+            "movement.speed:b4ce8c8fa87f333e",
+            "movement.groundSpeed:b03bd19b66616947",
+            "movement.chargeSpeed:0d6e0b1966fad87e",
+            "movement.canFly:f181794b5c1fe8af",
+            "movement.canRun:0e84b2d1d5fcad2c"
+          ]
+        },
+        "defense": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "defense.armor",
+            "defense.meleeDefense",
+            "defense.leadership",
+            "defense.shieldBlockChance",
+            "defense.projectilePenetrationResistance"
+          ],
+          "omitted": [
+            "defense.resistances:6b1e1f9c1948d2d6"
+          ]
+        },
+        "melee": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "melee.meleeAttack",
+            "melee.chargeBonus",
+            "melee.damage.base",
+            "melee.damage.armorPiercing",
+            "melee.damage.bonusVsLarge",
+            "melee.damage.bonusVsInfantry",
+            "melee.attackInterval",
+            "melee.weaponLength",
+            "melee.splash.maxTargets"
+          ],
+          "omitted": [
+            "melee.splash.maxTargetSize:21559b20f62293cb",
+            "melee.attackAttributes.flaming:e8b9e17460f0b1cb"
+          ]
+        },
+        "missile": {
+          "status": "OMIT",
+          "note": "reason-783c8e7e1685ccdc",
+          "admittedFields": [],
+          "omitted": [
+            "missile.range:25a1d1b1a0c1bd73",
+            "missile.projectile.baseDamage:bb0a60fa8122cae7",
+            "missile.projectile.armorPiercingDamage:11ad81cd7be7f91b",
+            "missile.projectile.bonusVsLarge:53128b3801d3586e",
+            "missile.projectile.bonusVsInfantry:502db0e8edeeb776",
+            "missile.projectile.shotsPerVolley:fe41fe3003689ab9",
+            "missile.explosion.baseDamage:2c848a5fb2c6ce77",
+            "missile.explosion.armorPiercingDamage:aca77febc2637459",
+            "missile.explosion.radius:20a3dd2d3d19a789",
+            "missile.accuracy.calibrationDistance:78e047185ab252b5",
+            "missile.accuracy.calibrationArea:9746bb572412b4a7",
+            "missile.reload.baseTime:f6eea1a9c2e14aa9",
+            "missile.projectile.penetration.resistanceBudget:51676867260a6807",
+            "missile.projectile.penetration.stopsAtEntitySize:e3bceb930851de2c",
+            "missile.ammunition:ef768cec0aa7a1ff",
+            "missile.accuracy.accuracy:03f7d158534875fb",
+            "missile.reload.reloadSkill:9cad19b2728385d7",
+            "missile.reload.currentTime:26a4460e6c957684",
+            "missile.strength:6ed0987d2f71de37",
+            "missile.projectile.ignoresShields:3e49353cd50747fc",
+            "missile.projectile.penetration.maxPenetrations:d64eacb755035437"
+          ]
+        },
+        "campaign": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "campaign.recruitmentCost",
+            "campaign.upkeep",
+            "campaign.recruitmentTurns"
+          ],
+          "omitted": [
+            "campaign.recruitmentRequirements:2ad429242940f1fd",
+            "campaign.unitCap:aff5935abb2f84fe"
+          ]
+        },
+        "customBattle": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "customBattle.cost"
+          ],
+          "omitted": []
+        },
+        "abilities": {
+          "status": "OMIT",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [],
+          "omitted": []
+        },
+        "passiveAbilities": {
+          "status": "NEEDS_MAPPING",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [],
+          "omitted": []
+        },
+        "attributes": {
+          "status": "NEEDS_MAPPING",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "attributes.0"
+          ],
+          "omitted": []
+        },
+        "composition/runtime structure": {
+          "status": "OMIT",
+          "note": "reason-63f96edfdbb46360"
+        }
+      },
+      "unknownIds": [
+        {
+          "kind": "attribute",
+          "caId": "peasant",
+          "source": {
+            "rowId": "unit_attributes_tables:5a1b0fad7794829bc22f",
+            "field": "key"
+          }
+        },
+        {
+          "kind": "ability",
+          "caId": "wh_dlc07_unit_passive_the_peasants_duty",
+          "source": {
+            "rowId": "unit_abilities_tables:cfc4b4028007de6a294b",
+            "field": "key"
+          }
+        }
+      ],
+      "withdrawals": [
+        {
+          "field": "passiveAbilities",
+          "reason": "reason-d809ce6b39903e8f"
+        },
+        {
+          "field": "attributes",
+          "reason": "reason-d809ce6b39903e8f"
+        },
+        {
+          "field": "missile",
+          "reason": "reason-783c8e7e1685ccdc"
+        }
+      ],
+      "productionProjectionSha256": "8cb8a96bf93e460871a5a870274f9b601ce7a11f4d2deaf0f6de8022af8c7585",
+      "missileReview": {
+        "completeness": "NO_MISSILE_PATH",
+        "paths": [],
+        "ammoSemantics": {
+          "displayConversion": "UNRESOLVED",
+          "consumption": "UNRESOLVED",
+          "poolSharing": "UNRESOLVED",
+          "attachmentScaling": "NOT_AUTHORIZED"
+        },
+        "admittedFields": []
+      }
+    },
+    {
+      "slug": "expansion-02-04",
+      "sourcePointer": "data.candidates.3",
+      "originalStatus": "PARTIAL",
+      "overall": "PROMOTABLE_WITH_OMISSIONS",
+      "composite": false,
+      "groups": {
+        "identity": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "id",
+            "name"
+          ],
+          "omitted": []
+        },
+        "affiliation/catalog": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "factionId"
+          ],
+          "omitted": []
+        },
+        "classification": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "classification.category",
+            "classification.tier"
+          ],
+          "omitted": []
+        },
+        "entities": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "entities.entitySize",
+            "entities.mass"
+          ],
+          "omitted": [
+            "entities.totalHealth:ec9e3ab1b921b805",
+            "entities.healthPerEntity:c91e6133a24bb0f7",
+            "entities.count:55307753502d8137",
+            "entities.unitScale:4ce4a888b689c3f7"
+          ]
+        },
+        "movement": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "movement.canSkirmish"
+          ],
+          "omitted": [
+            "movement.speed:b4ce8c8fa87f333e",
+            "movement.groundSpeed:b03bd19b66616947",
+            "movement.chargeSpeed:0d6e0b1966fad87e",
+            "movement.canFly:f181794b5c1fe8af",
+            "movement.canRun:0e84b2d1d5fcad2c"
+          ]
+        },
+        "defense": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "defense.armor",
+            "defense.meleeDefense",
+            "defense.leadership",
+            "defense.shieldBlockChance",
+            "defense.projectilePenetrationResistance"
+          ],
+          "omitted": [
+            "defense.resistances:6b1e1f9c1948d2d6"
+          ]
+        },
+        "melee": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "melee.meleeAttack",
+            "melee.chargeBonus",
+            "melee.damage.base",
+            "melee.damage.armorPiercing",
+            "melee.damage.bonusVsLarge",
+            "melee.damage.bonusVsInfantry",
+            "melee.attackInterval",
+            "melee.weaponLength",
+            "melee.splash.maxTargets"
+          ],
+          "omitted": [
+            "melee.splash.maxTargetSize:21559b20f62293cb",
+            "melee.attackAttributes.flaming:e8b9e17460f0b1cb"
+          ]
+        },
+        "missile": {
+          "status": "OMIT",
+          "note": "reason-783c8e7e1685ccdc",
+          "admittedFields": [],
+          "omitted": [
+            "missile.range:25a1d1b1a0c1bd73",
+            "missile.projectile.baseDamage:bb0a60fa8122cae7",
+            "missile.projectile.armorPiercingDamage:11ad81cd7be7f91b",
+            "missile.projectile.bonusVsLarge:53128b3801d3586e",
+            "missile.projectile.bonusVsInfantry:502db0e8edeeb776",
+            "missile.projectile.shotsPerVolley:fe41fe3003689ab9",
+            "missile.explosion.baseDamage:2c848a5fb2c6ce77",
+            "missile.explosion.armorPiercingDamage:aca77febc2637459",
+            "missile.explosion.radius:20a3dd2d3d19a789",
+            "missile.accuracy.calibrationDistance:78e047185ab252b5",
+            "missile.accuracy.calibrationArea:9746bb572412b4a7",
+            "missile.reload.baseTime:f6eea1a9c2e14aa9",
+            "missile.projectile.penetration.resistanceBudget:51676867260a6807",
+            "missile.projectile.penetration.stopsAtEntitySize:e3bceb930851de2c",
+            "missile.ammunition:ef768cec0aa7a1ff",
+            "missile.accuracy.accuracy:03f7d158534875fb",
+            "missile.reload.reloadSkill:9cad19b2728385d7",
+            "missile.reload.currentTime:26a4460e6c957684",
+            "missile.strength:6ed0987d2f71de37",
+            "missile.projectile.ignoresShields:3e49353cd50747fc",
+            "missile.projectile.penetration.maxPenetrations:d64eacb755035437"
+          ]
+        },
+        "campaign": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "campaign.recruitmentCost",
+            "campaign.upkeep",
+            "campaign.recruitmentTurns"
+          ],
+          "omitted": [
+            "campaign.recruitmentRequirements:2ad429242940f1fd",
+            "campaign.unitCap:aff5935abb2f84fe"
+          ]
+        },
+        "customBattle": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "customBattle.cost"
+          ],
+          "omitted": []
+        },
+        "abilities": {
+          "status": "OMIT",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [],
+          "omitted": []
+        },
+        "passiveAbilities": {
+          "status": "NEEDS_MAPPING",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [],
+          "omitted": []
+        },
+        "attributes": {
+          "status": "NEEDS_MAPPING",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "attributes.0"
+          ],
+          "omitted": []
+        },
+        "composition/runtime structure": {
+          "status": "OMIT",
+          "note": "reason-63f96edfdbb46360"
+        }
+      },
+      "unknownIds": [
+        {
+          "kind": "attribute",
+          "caId": "charge_defense_vs_large",
+          "source": {
+            "rowId": "unit_attributes_tables:469a1c976e8c6baf9a43",
+            "field": "key"
+          }
+        },
+        {
+          "kind": "attribute",
+          "caId": "charge_reflection",
+          "source": {
+            "rowId": "unit_attributes_tables:31353119746d9fbb526b",
+            "field": "key"
+          }
+        },
+        {
+          "kind": "attribute",
+          "caId": "peasant",
+          "source": {
+            "rowId": "unit_attributes_tables:5a1b0fad7794829bc22f",
+            "field": "key"
+          }
+        },
+        {
+          "kind": "ability",
+          "caId": "wh_dlc07_unit_passive_the_peasants_duty",
+          "source": {
+            "rowId": "unit_abilities_tables:cfc4b4028007de6a294b",
+            "field": "key"
+          }
+        }
+      ],
+      "withdrawals": [
+        {
+          "field": "passiveAbilities",
+          "reason": "reason-d809ce6b39903e8f"
+        },
+        {
+          "field": "attributes",
+          "reason": "reason-d809ce6b39903e8f"
+        },
+        {
+          "field": "missile",
+          "reason": "reason-783c8e7e1685ccdc"
+        }
+      ],
+      "productionProjectionSha256": "c9a4019c72741c6311d16bd8847fd539de7a325102a5f2067b3ef4fe5365966f",
+      "missileReview": {
+        "completeness": "NO_MISSILE_PATH",
+        "paths": [],
+        "ammoSemantics": {
+          "displayConversion": "UNRESOLVED",
+          "consumption": "UNRESOLVED",
+          "poolSharing": "UNRESOLVED",
+          "attachmentScaling": "NOT_AUTHORIZED"
+        },
+        "admittedFields": []
+      }
+    },
+    {
+      "slug": "expansion-02-05",
+      "sourcePointer": "data.candidates.4",
+      "originalStatus": "PARTIAL",
+      "overall": "PROMOTABLE_WITH_OMISSIONS",
+      "composite": false,
+      "groups": {
+        "identity": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "id",
+            "name"
+          ],
+          "omitted": []
+        },
+        "affiliation/catalog": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "factionId"
+          ],
+          "omitted": []
+        },
+        "classification": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "classification.category",
+            "classification.tier"
+          ],
+          "omitted": []
+        },
+        "entities": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "entities.entitySize",
+            "entities.mass"
+          ],
+          "omitted": [
+            "entities.totalHealth:ec9e3ab1b921b805",
+            "entities.healthPerEntity:c91e6133a24bb0f7",
+            "entities.count:55307753502d8137",
+            "entities.unitScale:4ce4a888b689c3f7"
+          ]
+        },
+        "movement": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "movement.canSkirmish"
+          ],
+          "omitted": [
+            "movement.speed:b4ce8c8fa87f333e",
+            "movement.groundSpeed:b03bd19b66616947",
+            "movement.chargeSpeed:0d6e0b1966fad87e",
+            "movement.canFly:f181794b5c1fe8af",
+            "movement.canRun:0e84b2d1d5fcad2c"
+          ]
+        },
+        "defense": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "defense.armor",
+            "defense.meleeDefense",
+            "defense.leadership",
+            "defense.shieldBlockChance",
+            "defense.projectilePenetrationResistance"
+          ],
+          "omitted": [
+            "defense.resistances:6b1e1f9c1948d2d6"
+          ]
+        },
+        "melee": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "melee.meleeAttack",
+            "melee.chargeBonus",
+            "melee.damage.base",
+            "melee.damage.armorPiercing",
+            "melee.damage.bonusVsLarge",
+            "melee.damage.bonusVsInfantry",
+            "melee.attackInterval",
+            "melee.weaponLength",
+            "melee.splash.maxTargets"
+          ],
+          "omitted": [
+            "melee.splash.maxTargetSize:21559b20f62293cb",
+            "melee.attackAttributes.flaming:e8b9e17460f0b1cb"
+          ]
+        },
+        "missile": {
+          "status": "OMIT",
+          "note": "reason-783c8e7e1685ccdc",
+          "admittedFields": [],
+          "omitted": [
+            "missile.range:25a1d1b1a0c1bd73",
+            "missile.projectile.baseDamage:bb0a60fa8122cae7",
+            "missile.projectile.armorPiercingDamage:11ad81cd7be7f91b",
+            "missile.projectile.bonusVsLarge:53128b3801d3586e",
+            "missile.projectile.bonusVsInfantry:502db0e8edeeb776",
+            "missile.projectile.shotsPerVolley:fe41fe3003689ab9",
+            "missile.explosion.baseDamage:2c848a5fb2c6ce77",
+            "missile.explosion.armorPiercingDamage:aca77febc2637459",
+            "missile.explosion.radius:20a3dd2d3d19a789",
+            "missile.accuracy.calibrationDistance:78e047185ab252b5",
+            "missile.accuracy.calibrationArea:9746bb572412b4a7",
+            "missile.reload.baseTime:f6eea1a9c2e14aa9",
+            "missile.projectile.penetration.resistanceBudget:51676867260a6807",
+            "missile.projectile.penetration.stopsAtEntitySize:e3bceb930851de2c",
+            "missile.ammunition:ef768cec0aa7a1ff",
+            "missile.accuracy.accuracy:03f7d158534875fb",
+            "missile.reload.reloadSkill:9cad19b2728385d7",
+            "missile.reload.currentTime:26a4460e6c957684",
+            "missile.strength:6ed0987d2f71de37",
+            "missile.projectile.ignoresShields:3e49353cd50747fc",
+            "missile.projectile.penetration.maxPenetrations:d64eacb755035437"
+          ]
+        },
+        "campaign": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "campaign.recruitmentCost",
+            "campaign.upkeep",
+            "campaign.recruitmentTurns"
+          ],
+          "omitted": [
+            "campaign.recruitmentRequirements:2ad429242940f1fd",
+            "campaign.unitCap:aff5935abb2f84fe"
+          ]
+        },
+        "customBattle": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "customBattle.cost"
+          ],
+          "omitted": []
+        },
+        "abilities": {
+          "status": "OMIT",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [],
+          "omitted": []
+        },
+        "passiveAbilities": {
+          "status": "NEEDS_MAPPING",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [],
+          "omitted": []
+        },
+        "attributes": {
+          "status": "NEEDS_MAPPING",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "attributes.0"
+          ],
+          "omitted": []
+        },
+        "composition/runtime structure": {
+          "status": "OMIT",
+          "note": "reason-63f96edfdbb46360"
+        }
+      },
+      "unknownIds": [
+        {
+          "kind": "attribute",
+          "caId": "charge_defense_vs_large",
+          "source": {
+            "rowId": "unit_attributes_tables:469a1c976e8c6baf9a43",
+            "field": "key"
+          }
+        },
+        {
+          "kind": "attribute",
+          "caId": "charge_reflection",
+          "source": {
+            "rowId": "unit_attributes_tables:31353119746d9fbb526b",
+            "field": "key"
+          }
+        },
+        {
+          "kind": "attribute",
+          "caId": "peasant",
+          "source": {
+            "rowId": "unit_attributes_tables:5a1b0fad7794829bc22f",
+            "field": "key"
+          }
+        },
+        {
+          "kind": "ability",
+          "caId": "wh_dlc07_unit_passive_the_peasants_duty",
+          "source": {
+            "rowId": "unit_abilities_tables:cfc4b4028007de6a294b",
+            "field": "key"
+          }
+        }
+      ],
+      "withdrawals": [
+        {
+          "field": "passiveAbilities",
+          "reason": "reason-d809ce6b39903e8f"
+        },
+        {
+          "field": "attributes",
+          "reason": "reason-d809ce6b39903e8f"
+        },
+        {
+          "field": "missile",
+          "reason": "reason-783c8e7e1685ccdc"
+        }
+      ],
+      "productionProjectionSha256": "bf754b34f693122591cd64dc4a4394dff9b1324542dbd8be49e734498c5d2de6",
+      "missileReview": {
+        "completeness": "NO_MISSILE_PATH",
+        "paths": [],
+        "ammoSemantics": {
+          "displayConversion": "UNRESOLVED",
+          "consumption": "UNRESOLVED",
+          "poolSharing": "UNRESOLVED",
+          "attachmentScaling": "NOT_AUTHORIZED"
+        },
+        "admittedFields": []
+      }
+    },
+    {
+      "slug": "expansion-02-06",
+      "sourcePointer": "data.candidates.5",
+      "originalStatus": "PARTIAL",
+      "overall": "PROMOTABLE_WITH_OMISSIONS",
+      "composite": false,
+      "groups": {
+        "identity": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "id",
+            "name"
+          ],
+          "omitted": []
+        },
+        "affiliation/catalog": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "factionId"
+          ],
+          "omitted": []
+        },
+        "classification": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "classification.category",
+            "classification.tier"
+          ],
+          "omitted": []
+        },
+        "entities": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "entities.entitySize",
+            "entities.mass"
+          ],
+          "omitted": [
+            "entities.totalHealth:ec9e3ab1b921b805",
+            "entities.healthPerEntity:c91e6133a24bb0f7",
+            "entities.count:55307753502d8137",
+            "entities.unitScale:4ce4a888b689c3f7"
+          ]
+        },
+        "movement": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "movement.canSkirmish"
+          ],
+          "omitted": [
+            "movement.speed:b4ce8c8fa87f333e",
+            "movement.groundSpeed:b03bd19b66616947",
+            "movement.chargeSpeed:0d6e0b1966fad87e",
+            "movement.canFly:f181794b5c1fe8af",
+            "movement.canRun:0e84b2d1d5fcad2c"
+          ]
+        },
+        "defense": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "defense.armor",
+            "defense.meleeDefense",
+            "defense.leadership",
+            "defense.shieldBlockChance",
+            "defense.projectilePenetrationResistance"
+          ],
+          "omitted": [
+            "defense.resistances:6b1e1f9c1948d2d6"
+          ]
+        },
+        "melee": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "melee.meleeAttack",
+            "melee.chargeBonus",
+            "melee.damage.base",
+            "melee.damage.armorPiercing",
+            "melee.damage.bonusVsLarge",
+            "melee.damage.bonusVsInfantry",
+            "melee.attackInterval",
+            "melee.weaponLength",
+            "melee.splash.maxTargets"
+          ],
+          "omitted": [
+            "melee.splash.maxTargetSize:21559b20f62293cb",
+            "melee.attackAttributes.flaming:e8b9e17460f0b1cb"
+          ]
+        },
+        "missile": {
+          "status": "OMIT",
+          "note": "reason-783c8e7e1685ccdc",
+          "admittedFields": [],
+          "omitted": [
+            "missile.range:25a1d1b1a0c1bd73",
+            "missile.projectile.baseDamage:bb0a60fa8122cae7",
+            "missile.projectile.armorPiercingDamage:11ad81cd7be7f91b",
+            "missile.projectile.bonusVsLarge:53128b3801d3586e",
+            "missile.projectile.bonusVsInfantry:502db0e8edeeb776",
+            "missile.projectile.shotsPerVolley:fe41fe3003689ab9",
+            "missile.explosion.baseDamage:2c848a5fb2c6ce77",
+            "missile.explosion.armorPiercingDamage:aca77febc2637459",
+            "missile.explosion.radius:20a3dd2d3d19a789",
+            "missile.accuracy.calibrationDistance:78e047185ab252b5",
+            "missile.accuracy.calibrationArea:9746bb572412b4a7",
+            "missile.reload.baseTime:f6eea1a9c2e14aa9",
+            "missile.projectile.penetration.resistanceBudget:51676867260a6807",
+            "missile.projectile.penetration.stopsAtEntitySize:e3bceb930851de2c",
+            "missile.ammunition:ef768cec0aa7a1ff",
+            "missile.accuracy.accuracy:03f7d158534875fb",
+            "missile.reload.reloadSkill:9cad19b2728385d7",
+            "missile.reload.currentTime:26a4460e6c957684",
+            "missile.strength:6ed0987d2f71de37",
+            "missile.projectile.ignoresShields:3e49353cd50747fc",
+            "missile.projectile.penetration.maxPenetrations:d64eacb755035437"
+          ]
+        },
+        "campaign": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "campaign.recruitmentCost",
+            "campaign.upkeep",
+            "campaign.recruitmentTurns"
+          ],
+          "omitted": [
+            "campaign.recruitmentRequirements:2ad429242940f1fd",
+            "campaign.unitCap:aff5935abb2f84fe"
+          ]
+        },
+        "customBattle": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "customBattle.cost"
+          ],
+          "omitted": []
+        },
+        "abilities": {
+          "status": "OMIT",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [],
+          "omitted": []
+        },
+        "passiveAbilities": {
+          "status": "NEEDS_MAPPING",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [],
+          "omitted": []
+        },
+        "attributes": {
+          "status": "NEEDS_MAPPING",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "attributes.0"
+          ],
+          "omitted": []
+        },
+        "composition/runtime structure": {
+          "status": "OMIT",
+          "note": "reason-63f96edfdbb46360"
+        }
+      },
+      "unknownIds": [
+        {
+          "kind": "attribute",
+          "caId": "peasant",
+          "source": {
+            "rowId": "unit_attributes_tables:5a1b0fad7794829bc22f",
+            "field": "key"
+          }
+        },
+        {
+          "kind": "ability",
+          "caId": "wh_dlc07_unit_passive_the_peasants_duty",
+          "source": {
+            "rowId": "unit_abilities_tables:cfc4b4028007de6a294b",
+            "field": "key"
+          }
+        },
+        {
+          "kind": "ability",
+          "caId": "wh_main_unit_passive_frenzy",
+          "source": {
+            "rowId": "unit_abilities_tables:999112bb3efdf8e4f715",
+            "field": "key"
+          }
+        }
+      ],
+      "withdrawals": [
+        {
+          "field": "passiveAbilities",
+          "reason": "reason-d809ce6b39903e8f"
+        },
+        {
+          "field": "attributes",
+          "reason": "reason-d809ce6b39903e8f"
+        },
+        {
+          "field": "missile",
+          "reason": "reason-783c8e7e1685ccdc"
+        }
+      ],
+      "productionProjectionSha256": "26c21b9e056dc4705c33f10d8af105535bf518b903b6de5880150b2af45dea53",
+      "missileReview": {
+        "completeness": "NO_MISSILE_PATH",
+        "paths": [],
+        "ammoSemantics": {
+          "displayConversion": "UNRESOLVED",
+          "consumption": "UNRESOLVED",
+          "poolSharing": "UNRESOLVED",
+          "attachmentScaling": "NOT_AUTHORIZED"
+        },
+        "admittedFields": []
+      }
+    },
+    {
+      "slug": "expansion-02-07",
+      "sourcePointer": "data.candidates.6",
+      "originalStatus": "PARTIAL",
+      "overall": "PROMOTABLE_WITH_OMISSIONS",
+      "composite": false,
+      "groups": {
+        "identity": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "id",
+            "name"
+          ],
+          "omitted": []
+        },
+        "affiliation/catalog": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "factionId"
+          ],
+          "omitted": []
+        },
+        "classification": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "classification.category",
+            "classification.tier"
+          ],
+          "omitted": []
+        },
+        "entities": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "entities.entitySize",
+            "entities.mass"
+          ],
+          "omitted": [
+            "entities.totalHealth:ec9e3ab1b921b805",
+            "entities.healthPerEntity:c91e6133a24bb0f7",
+            "entities.count:55307753502d8137",
+            "entities.unitScale:4ce4a888b689c3f7"
+          ]
+        },
+        "movement": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "movement.canSkirmish"
+          ],
+          "omitted": [
+            "movement.speed:b4ce8c8fa87f333e",
+            "movement.groundSpeed:b03bd19b66616947",
+            "movement.chargeSpeed:0d6e0b1966fad87e",
+            "movement.canFly:f181794b5c1fe8af",
+            "movement.canRun:0e84b2d1d5fcad2c"
+          ]
+        },
+        "defense": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "defense.armor",
+            "defense.meleeDefense",
+            "defense.leadership",
+            "defense.shieldBlockChance",
+            "defense.projectilePenetrationResistance"
+          ],
+          "omitted": [
+            "defense.resistances:6b1e1f9c1948d2d6"
+          ]
+        },
+        "melee": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "melee.meleeAttack",
+            "melee.chargeBonus",
+            "melee.damage.base",
+            "melee.damage.armorPiercing",
+            "melee.damage.bonusVsLarge",
+            "melee.damage.bonusVsInfantry",
+            "melee.attackInterval",
+            "melee.weaponLength",
+            "melee.splash.maxTargets"
+          ],
+          "omitted": [
+            "melee.splash.maxTargetSize:21559b20f62293cb",
+            "melee.attackAttributes.flaming:e8b9e17460f0b1cb"
+          ]
+        },
+        "missile": {
+          "status": "PROMOTABLE",
+          "note": "reason-9067faff1321c5c7",
+          "admittedFields": [
+            "missile.range",
+            "missile.projectile.baseDamage",
+            "missile.projectile.armorPiercingDamage",
+            "missile.projectile.bonusVsLarge",
+            "missile.projectile.bonusVsInfantry",
+            "missile.projectile.shotsPerVolley",
+            "missile.accuracy.calibrationDistance",
+            "missile.accuracy.calibrationArea",
+            "missile.reload.baseTime",
+            "missile.projectile.penetration.resistanceBudget"
+          ],
+          "omitted": [
+            "missile.explosion.baseDamage:2c848a5fb2c6ce77",
+            "missile.explosion.armorPiercingDamage:aca77febc2637459",
+            "missile.explosion.radius:20a3dd2d3d19a789",
+            "missile.projectile.penetration.stopsAtEntitySize:6007fb5f63df4f6f",
+            "missile.ammunition:ef768cec0aa7a1ff",
+            "missile.accuracy.accuracy:03f7d158534875fb",
+            "missile.reload.reloadSkill:9cad19b2728385d7",
+            "missile.reload.currentTime:26a4460e6c957684",
+            "missile.strength:6ed0987d2f71de37",
+            "missile.projectile.ignoresShields:3e49353cd50747fc",
+            "missile.projectile.penetration.maxPenetrations:d64eacb755035437"
+          ]
+        },
+        "campaign": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "campaign.recruitmentCost",
+            "campaign.upkeep",
+            "campaign.recruitmentTurns"
+          ],
+          "omitted": [
+            "campaign.recruitmentRequirements:2ad429242940f1fd",
+            "campaign.unitCap:aff5935abb2f84fe"
+          ]
+        },
+        "customBattle": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "customBattle.cost"
+          ],
+          "omitted": []
+        },
+        "abilities": {
+          "status": "OMIT",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [],
+          "omitted": []
+        },
+        "passiveAbilities": {
+          "status": "NEEDS_MAPPING",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [],
+          "omitted": []
+        },
+        "attributes": {
+          "status": "NEEDS_MAPPING",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "attributes.0"
+          ],
+          "omitted": []
+        },
+        "composition/runtime structure": {
+          "status": "OMIT",
+          "note": "reason-63f96edfdbb46360"
+        }
+      },
+      "unknownIds": [
+        {
+          "kind": "attribute",
+          "caId": "peasant",
+          "source": {
+            "rowId": "unit_attributes_tables:5a1b0fad7794829bc22f",
+            "field": "key"
+          }
+        },
+        {
+          "kind": "ability",
+          "caId": "wh_dlc07_unit_passive_the_peasants_duty",
+          "source": {
+            "rowId": "unit_abilities_tables:cfc4b4028007de6a294b",
+            "field": "key"
+          }
+        }
+      ],
+      "withdrawals": [
+        {
+          "field": "passiveAbilities",
+          "reason": "reason-d809ce6b39903e8f"
+        },
+        {
+          "field": "attributes",
+          "reason": "reason-d809ce6b39903e8f"
+        }
+      ],
+      "productionProjectionSha256": "1daf03c4128ea6a3d681935ce75c57aa1158fc027f027e4e64c5ef2106041fe5",
+      "missileReview": {
+        "completeness": "COMPLETE_STATIC_SINGLE",
+        "paths": [
+          {
+            "role": "LAND_PRIMARY",
+            "weaponKey": "wh_main_brt_longbow",
+            "projectiles": [
+              "wh_brt_longbow_arrow"
+            ]
+          }
+        ],
+        "ammoSemantics": {
+          "displayConversion": "UNRESOLVED",
+          "consumption": "UNRESOLVED",
+          "poolSharing": "UNRESOLVED",
+          "attachmentScaling": "NOT_AUTHORIZED"
+        },
+        "admittedFields": [
+          "missile.range",
+          "missile.projectile.baseDamage",
+          "missile.projectile.armorPiercingDamage",
+          "missile.projectile.bonusVsLarge",
+          "missile.projectile.bonusVsInfantry",
+          "missile.projectile.shotsPerVolley",
+          "missile.accuracy.calibrationDistance",
+          "missile.accuracy.calibrationArea",
+          "missile.reload.baseTime",
+          "missile.projectile.penetration.resistanceBudget"
+        ]
+      }
+    },
+    {
+      "slug": "expansion-02-08",
+      "sourcePointer": "data.candidates.7",
+      "originalStatus": "PARTIAL",
+      "overall": "PROMOTABLE_WITH_OMISSIONS",
+      "composite": false,
+      "groups": {
+        "identity": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "id",
+            "name"
+          ],
+          "omitted": []
+        },
+        "affiliation/catalog": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "factionId"
+          ],
+          "omitted": []
+        },
+        "classification": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "classification.category",
+            "classification.tier"
+          ],
+          "omitted": []
+        },
+        "entities": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "entities.entitySize",
+            "entities.mass"
+          ],
+          "omitted": [
+            "entities.totalHealth:ec9e3ab1b921b805",
+            "entities.healthPerEntity:c91e6133a24bb0f7",
+            "entities.count:55307753502d8137",
+            "entities.unitScale:4ce4a888b689c3f7"
+          ]
+        },
+        "movement": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "movement.canSkirmish"
+          ],
+          "omitted": [
+            "movement.speed:b4ce8c8fa87f333e",
+            "movement.groundSpeed:b03bd19b66616947",
+            "movement.chargeSpeed:0d6e0b1966fad87e",
+            "movement.canFly:f181794b5c1fe8af",
+            "movement.canRun:0e84b2d1d5fcad2c"
+          ]
+        },
+        "defense": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "defense.armor",
+            "defense.meleeDefense",
+            "defense.leadership",
+            "defense.shieldBlockChance",
+            "defense.projectilePenetrationResistance"
+          ],
+          "omitted": [
+            "defense.resistances:6b1e1f9c1948d2d6"
+          ]
+        },
+        "melee": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "melee.meleeAttack",
+            "melee.chargeBonus",
+            "melee.damage.base",
+            "melee.damage.armorPiercing",
+            "melee.damage.bonusVsLarge",
+            "melee.damage.bonusVsInfantry",
+            "melee.attackInterval",
+            "melee.weaponLength",
+            "melee.splash.maxTargets"
+          ],
+          "omitted": [
+            "melee.splash.maxTargetSize:21559b20f62293cb",
+            "melee.attackAttributes.flaming:e8b9e17460f0b1cb"
+          ]
+        },
+        "missile": {
+          "status": "PROMOTABLE",
+          "note": "reason-9067faff1321c5c7",
+          "admittedFields": [
+            "missile.range",
+            "missile.projectile.baseDamage",
+            "missile.projectile.armorPiercingDamage",
+            "missile.projectile.bonusVsLarge",
+            "missile.projectile.bonusVsInfantry",
+            "missile.projectile.shotsPerVolley",
+            "missile.accuracy.calibrationDistance",
+            "missile.accuracy.calibrationArea",
+            "missile.reload.baseTime",
+            "missile.projectile.penetration.resistanceBudget"
+          ],
+          "omitted": [
+            "missile.explosion.baseDamage:2c848a5fb2c6ce77",
+            "missile.explosion.armorPiercingDamage:aca77febc2637459",
+            "missile.explosion.radius:20a3dd2d3d19a789",
+            "missile.projectile.penetration.stopsAtEntitySize:6007fb5f63df4f6f",
+            "missile.ammunition:ef768cec0aa7a1ff",
+            "missile.accuracy.accuracy:03f7d158534875fb",
+            "missile.reload.reloadSkill:9cad19b2728385d7",
+            "missile.reload.currentTime:26a4460e6c957684",
+            "missile.strength:6ed0987d2f71de37",
+            "missile.projectile.ignoresShields:3e49353cd50747fc",
+            "missile.projectile.penetration.maxPenetrations:d64eacb755035437"
+          ]
+        },
+        "campaign": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "campaign.recruitmentCost",
+            "campaign.upkeep",
+            "campaign.recruitmentTurns"
+          ],
+          "omitted": [
+            "campaign.recruitmentRequirements:2ad429242940f1fd",
+            "campaign.unitCap:aff5935abb2f84fe"
+          ]
+        },
+        "customBattle": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "customBattle.cost"
+          ],
+          "omitted": []
+        },
+        "abilities": {
+          "status": "OMIT",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [],
+          "omitted": []
+        },
+        "passiveAbilities": {
+          "status": "NEEDS_MAPPING",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [],
+          "omitted": []
+        },
+        "attributes": {
+          "status": "NEEDS_MAPPING",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "attributes.0"
+          ],
+          "omitted": []
+        },
+        "composition/runtime structure": {
+          "status": "OMIT",
+          "note": "reason-63f96edfdbb46360"
+        }
+      },
+      "unknownIds": [
+        {
+          "kind": "attribute",
+          "caId": "peasant",
+          "source": {
+            "rowId": "unit_attributes_tables:5a1b0fad7794829bc22f",
+            "field": "key"
+          }
+        },
+        {
+          "kind": "ability",
+          "caId": "wh_dlc07_unit_passive_the_peasants_duty",
+          "source": {
+            "rowId": "unit_abilities_tables:cfc4b4028007de6a294b",
+            "field": "key"
+          }
+        }
+      ],
+      "withdrawals": [
+        {
+          "field": "passiveAbilities",
+          "reason": "reason-d809ce6b39903e8f"
+        },
+        {
+          "field": "attributes",
+          "reason": "reason-d809ce6b39903e8f"
+        }
+      ],
+      "productionProjectionSha256": "2a1816838637eb20d3b73df52737a1a93ea2cc35911cc8dc938bb4f4276d49f0",
+      "missileReview": {
+        "completeness": "COMPLETE_STATIC_SINGLE",
+        "paths": [
+          {
+            "role": "LAND_PRIMARY",
+            "weaponKey": "wh_dlc07_brt_longbow_fire",
+            "projectiles": [
+              "wh_brt_longbow_arrow_fire"
+            ]
+          }
+        ],
+        "ammoSemantics": {
+          "displayConversion": "UNRESOLVED",
+          "consumption": "UNRESOLVED",
+          "poolSharing": "UNRESOLVED",
+          "attachmentScaling": "NOT_AUTHORIZED"
+        },
+        "admittedFields": [
+          "missile.range",
+          "missile.projectile.baseDamage",
+          "missile.projectile.armorPiercingDamage",
+          "missile.projectile.bonusVsLarge",
+          "missile.projectile.bonusVsInfantry",
+          "missile.projectile.shotsPerVolley",
+          "missile.accuracy.calibrationDistance",
+          "missile.accuracy.calibrationArea",
+          "missile.reload.baseTime",
+          "missile.projectile.penetration.resistanceBudget"
+        ]
+      }
+    },
+    {
+      "slug": "expansion-02-09",
+      "sourcePointer": "data.candidates.8",
+      "originalStatus": "PARTIAL",
+      "overall": "PROMOTABLE_WITH_OMISSIONS",
+      "composite": false,
+      "groups": {
+        "identity": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "id",
+            "name"
+          ],
+          "omitted": []
+        },
+        "affiliation/catalog": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "factionId"
+          ],
+          "omitted": []
+        },
+        "classification": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "classification.category",
+            "classification.tier"
+          ],
+          "omitted": []
+        },
+        "entities": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "entities.entitySize",
+            "entities.mass"
+          ],
+          "omitted": [
+            "entities.totalHealth:ec9e3ab1b921b805",
+            "entities.healthPerEntity:c91e6133a24bb0f7",
+            "entities.count:55307753502d8137",
+            "entities.unitScale:4ce4a888b689c3f7"
+          ]
+        },
+        "movement": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "movement.canSkirmish"
+          ],
+          "omitted": [
+            "movement.speed:b4ce8c8fa87f333e",
+            "movement.groundSpeed:b03bd19b66616947",
+            "movement.chargeSpeed:0d6e0b1966fad87e",
+            "movement.canFly:f181794b5c1fe8af",
+            "movement.canRun:0e84b2d1d5fcad2c"
+          ]
+        },
+        "defense": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "defense.armor",
+            "defense.meleeDefense",
+            "defense.leadership",
+            "defense.shieldBlockChance",
+            "defense.projectilePenetrationResistance"
+          ],
+          "omitted": [
+            "defense.resistances:6b1e1f9c1948d2d6"
+          ]
+        },
+        "melee": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "melee.meleeAttack",
+            "melee.chargeBonus",
+            "melee.damage.base",
+            "melee.damage.armorPiercing",
+            "melee.damage.bonusVsLarge",
+            "melee.damage.bonusVsInfantry",
+            "melee.attackInterval",
+            "melee.weaponLength",
+            "melee.splash.maxTargets"
+          ],
+          "omitted": [
+            "melee.splash.maxTargetSize:21559b20f62293cb",
+            "melee.attackAttributes.flaming:e8b9e17460f0b1cb"
+          ]
+        },
+        "missile": {
+          "status": "PROMOTABLE",
+          "note": "reason-9067faff1321c5c7",
+          "admittedFields": [
+            "missile.range",
+            "missile.projectile.baseDamage",
+            "missile.projectile.armorPiercingDamage",
+            "missile.projectile.bonusVsLarge",
+            "missile.projectile.bonusVsInfantry",
+            "missile.projectile.shotsPerVolley",
+            "missile.accuracy.calibrationDistance",
+            "missile.accuracy.calibrationArea",
+            "missile.reload.baseTime",
+            "missile.projectile.penetration.resistanceBudget"
+          ],
+          "omitted": [
+            "missile.explosion.baseDamage:2c848a5fb2c6ce77",
+            "missile.explosion.armorPiercingDamage:aca77febc2637459",
+            "missile.explosion.radius:20a3dd2d3d19a789",
+            "missile.projectile.penetration.stopsAtEntitySize:6007fb5f63df4f6f",
+            "missile.ammunition:ef768cec0aa7a1ff",
+            "missile.accuracy.accuracy:03f7d158534875fb",
+            "missile.reload.reloadSkill:9cad19b2728385d7",
+            "missile.reload.currentTime:26a4460e6c957684",
+            "missile.strength:6ed0987d2f71de37",
+            "missile.projectile.ignoresShields:3e49353cd50747fc",
+            "missile.projectile.penetration.maxPenetrations:d64eacb755035437"
+          ]
+        },
+        "campaign": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "campaign.recruitmentCost",
+            "campaign.upkeep",
+            "campaign.recruitmentTurns"
+          ],
+          "omitted": [
+            "campaign.recruitmentRequirements:2ad429242940f1fd",
+            "campaign.unitCap:aff5935abb2f84fe"
+          ]
+        },
+        "customBattle": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "customBattle.cost"
+          ],
+          "omitted": []
+        },
+        "abilities": {
+          "status": "OMIT",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [],
+          "omitted": []
+        },
+        "passiveAbilities": {
+          "status": "NEEDS_MAPPING",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [],
+          "omitted": []
+        },
+        "attributes": {
+          "status": "NEEDS_MAPPING",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "attributes.0"
+          ],
+          "omitted": []
+        },
+        "composition/runtime structure": {
+          "status": "OMIT",
+          "note": "reason-63f96edfdbb46360"
+        }
+      },
+      "unknownIds": [
+        {
+          "kind": "attribute",
+          "caId": "peasant",
+          "source": {
+            "rowId": "unit_attributes_tables:5a1b0fad7794829bc22f",
+            "field": "key"
+          }
+        },
+        {
+          "kind": "ability",
+          "caId": "wh_dlc07_unit_passive_the_peasants_duty",
+          "source": {
+            "rowId": "unit_abilities_tables:cfc4b4028007de6a294b",
+            "field": "key"
+          }
+        }
+      ],
+      "withdrawals": [
+        {
+          "field": "passiveAbilities",
+          "reason": "reason-d809ce6b39903e8f"
+        },
+        {
+          "field": "attributes",
+          "reason": "reason-d809ce6b39903e8f"
+        }
+      ],
+      "productionProjectionSha256": "9c4ca3184f4ee3a0026a6219c40261acc8c54d07811df1651430792e5ad54a76",
+      "missileReview": {
+        "completeness": "COMPLETE_STATIC_SINGLE",
+        "paths": [
+          {
+            "role": "LAND_PRIMARY",
+            "weaponKey": "wh_dlc07_brt_longbow_pox",
+            "projectiles": [
+              "wh_brt_longbow_arrow_pox"
+            ]
+          }
+        ],
+        "ammoSemantics": {
+          "displayConversion": "UNRESOLVED",
+          "consumption": "UNRESOLVED",
+          "poolSharing": "UNRESOLVED",
+          "attachmentScaling": "NOT_AUTHORIZED"
+        },
+        "admittedFields": [
+          "missile.range",
+          "missile.projectile.baseDamage",
+          "missile.projectile.armorPiercingDamage",
+          "missile.projectile.bonusVsLarge",
+          "missile.projectile.bonusVsInfantry",
+          "missile.projectile.shotsPerVolley",
+          "missile.accuracy.calibrationDistance",
+          "missile.accuracy.calibrationArea",
+          "missile.reload.baseTime",
+          "missile.projectile.penetration.resistanceBudget"
+        ]
+      }
+    },
+    {
+      "slug": "expansion-02-10",
+      "sourcePointer": "data.candidates.9",
+      "originalStatus": "PARTIAL",
+      "overall": "PROMOTABLE_WITH_OMISSIONS",
+      "composite": true,
+      "groups": {
+        "identity": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "id",
+            "name"
+          ],
+          "omitted": []
+        },
+        "affiliation/catalog": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "factionId"
+          ],
+          "omitted": []
+        },
+        "classification": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "classification.category",
+            "classification.tier"
+          ],
+          "omitted": []
+        },
+        "entities": {
+          "status": "OMIT",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [],
+          "omitted": [
+            "entities.entitySize:6a0d940197e781d5",
+            "entities.mass:d6da950a53dd5fab",
+            "entities.totalHealth:ec9e3ab1b921b805",
+            "entities.healthPerEntity:c91e6133a24bb0f7",
+            "entities.count:55307753502d8137",
+            "entities.unitScale:4ce4a888b689c3f7"
+          ]
+        },
+        "movement": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "movement.canSkirmish"
+          ],
+          "omitted": [
+            "movement.speed:b4ce8c8fa87f333e",
+            "movement.groundSpeed:b03bd19b66616947",
+            "movement.chargeSpeed:0d6e0b1966fad87e",
+            "movement.canFly:f181794b5c1fe8af",
+            "movement.canRun:0e84b2d1d5fcad2c"
+          ]
+        },
+        "defense": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "defense.armor",
+            "defense.meleeDefense",
+            "defense.leadership",
+            "defense.shieldBlockChance"
+          ],
+          "omitted": [
+            "defense.projectilePenetrationResistance:c48c279e6c8323ae",
+            "defense.resistances:6b1e1f9c1948d2d6"
+          ]
+        },
+        "melee": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "melee.meleeAttack",
+            "melee.chargeBonus",
+            "melee.damage.base",
+            "melee.damage.armorPiercing",
+            "melee.damage.bonusVsLarge",
+            "melee.damage.bonusVsInfantry",
+            "melee.attackInterval",
+            "melee.weaponLength",
+            "melee.splash.maxTargets"
+          ],
+          "omitted": [
+            "melee.splash.maxTargetSize:21559b20f62293cb",
+            "melee.attackAttributes.flaming:e8b9e17460f0b1cb"
+          ]
+        },
+        "missile": {
+          "status": "OMIT",
+          "note": "reason-783c8e7e1685ccdc",
+          "admittedFields": [],
+          "omitted": [
+            "missile.range:25a1d1b1a0c1bd73",
+            "missile.projectile.baseDamage:bb0a60fa8122cae7",
+            "missile.projectile.armorPiercingDamage:11ad81cd7be7f91b",
+            "missile.projectile.bonusVsLarge:53128b3801d3586e",
+            "missile.projectile.bonusVsInfantry:502db0e8edeeb776",
+            "missile.projectile.shotsPerVolley:fe41fe3003689ab9",
+            "missile.explosion.baseDamage:2c848a5fb2c6ce77",
+            "missile.explosion.armorPiercingDamage:aca77febc2637459",
+            "missile.explosion.radius:20a3dd2d3d19a789",
+            "missile.accuracy.calibrationDistance:78e047185ab252b5",
+            "missile.accuracy.calibrationArea:9746bb572412b4a7",
+            "missile.reload.baseTime:f6eea1a9c2e14aa9",
+            "missile.projectile.penetration.resistanceBudget:51676867260a6807",
+            "missile.projectile.penetration.stopsAtEntitySize:e3bceb930851de2c",
+            "missile.ammunition:ef768cec0aa7a1ff",
+            "missile.accuracy.accuracy:03f7d158534875fb",
+            "missile.reload.reloadSkill:9cad19b2728385d7",
+            "missile.reload.currentTime:26a4460e6c957684",
+            "missile.strength:6ed0987d2f71de37",
+            "missile.projectile.ignoresShields:3e49353cd50747fc",
+            "missile.projectile.penetration.maxPenetrations:d64eacb755035437"
+          ]
+        },
+        "campaign": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "campaign.recruitmentCost",
+            "campaign.upkeep",
+            "campaign.recruitmentTurns"
+          ],
+          "omitted": [
+            "campaign.recruitmentRequirements:2ad429242940f1fd",
+            "campaign.unitCap:aff5935abb2f84fe"
+          ]
+        },
+        "customBattle": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "customBattle.cost"
+          ],
+          "omitted": []
+        },
+        "abilities": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "abilities.0"
+          ],
+          "omitted": []
+        },
+        "passiveAbilities": {
+          "status": "NEEDS_MAPPING",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [],
+          "omitted": []
+        },
+        "attributes": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "attributes.0",
+            "attributes.1"
+          ],
+          "omitted": []
+        },
+        "composition/runtime structure": {
+          "status": "NEEDS_RUNTIME",
+          "note": "reason-8076a92906b3498a"
+        }
+      },
+      "unknownIds": [
+        {
+          "kind": "ability",
+          "caId": "wh_dlc07_unit_passive_impetuous",
+          "source": {
+            "rowId": "unit_abilities_tables:94b87748a9faa3cfd60d",
+            "field": "key"
+          }
+        },
+        {
+          "kind": "ability",
+          "caId": "wh_main_lord_passive_the_blessing_of_the_lady_unit_upgrade",
+          "source": {
+            "rowId": "unit_abilities_tables:fd43b2d80fd1a28356d9",
+            "field": "key"
+          }
+        }
+      ],
+      "withdrawals": [
+        {
+          "field": "passiveAbilities",
+          "reason": "reason-d809ce6b39903e8f"
+        },
+        {
+          "field": "missile",
+          "reason": "reason-783c8e7e1685ccdc"
+        }
+      ],
+      "productionProjectionSha256": "de306ee2f2999fbe13ea8874c0fa13a5a9c0da26246955d19cb705b34bf536ff",
+      "missileReview": {
+        "completeness": "NO_MISSILE_PATH",
+        "paths": [],
+        "ammoSemantics": {
+          "displayConversion": "UNRESOLVED",
+          "consumption": "UNRESOLVED",
+          "poolSharing": "UNRESOLVED",
+          "attachmentScaling": "NOT_AUTHORIZED"
+        },
+        "admittedFields": []
+      }
+    },
+    {
+      "slug": "expansion-02-11",
+      "sourcePointer": "data.candidates.10",
+      "originalStatus": "PARTIAL",
+      "overall": "PROMOTABLE_WITH_OMISSIONS",
+      "composite": true,
+      "groups": {
+        "identity": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "id",
+            "name"
+          ],
+          "omitted": []
+        },
+        "affiliation/catalog": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "factionId"
+          ],
+          "omitted": []
+        },
+        "classification": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "classification.category",
+            "classification.tier"
+          ],
+          "omitted": []
+        },
+        "entities": {
+          "status": "OMIT",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [],
+          "omitted": [
+            "entities.entitySize:6a0d940197e781d5",
+            "entities.mass:d6da950a53dd5fab",
+            "entities.totalHealth:ec9e3ab1b921b805",
+            "entities.healthPerEntity:c91e6133a24bb0f7",
+            "entities.count:55307753502d8137",
+            "entities.unitScale:4ce4a888b689c3f7"
+          ]
+        },
+        "movement": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "movement.canSkirmish"
+          ],
+          "omitted": [
+            "movement.speed:b4ce8c8fa87f333e",
+            "movement.groundSpeed:b03bd19b66616947",
+            "movement.chargeSpeed:0d6e0b1966fad87e",
+            "movement.canFly:f181794b5c1fe8af",
+            "movement.canRun:0e84b2d1d5fcad2c"
+          ]
+        },
+        "defense": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "defense.armor",
+            "defense.meleeDefense",
+            "defense.leadership",
+            "defense.shieldBlockChance"
+          ],
+          "omitted": [
+            "defense.projectilePenetrationResistance:c48c279e6c8323ae",
+            "defense.resistances:6b1e1f9c1948d2d6"
+          ]
+        },
+        "melee": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "melee.meleeAttack",
+            "melee.chargeBonus",
+            "melee.damage.base",
+            "melee.damage.armorPiercing",
+            "melee.damage.bonusVsLarge",
+            "melee.damage.bonusVsInfantry",
+            "melee.attackInterval",
+            "melee.weaponLength",
+            "melee.splash.maxTargets",
+            "melee.splash.maxTargetSize",
+            "melee.attackAttributes.0"
+          ],
+          "omitted": [
+            "melee.attackAttributes.flaming:e8b9e17460f0b1cb"
+          ]
+        },
+        "missile": {
+          "status": "OMIT",
+          "note": "reason-783c8e7e1685ccdc",
+          "admittedFields": [],
+          "omitted": [
+            "missile.range:25a1d1b1a0c1bd73",
+            "missile.projectile.baseDamage:bb0a60fa8122cae7",
+            "missile.projectile.armorPiercingDamage:11ad81cd7be7f91b",
+            "missile.projectile.bonusVsLarge:53128b3801d3586e",
+            "missile.projectile.bonusVsInfantry:502db0e8edeeb776",
+            "missile.projectile.shotsPerVolley:fe41fe3003689ab9",
+            "missile.explosion.baseDamage:2c848a5fb2c6ce77",
+            "missile.explosion.armorPiercingDamage:aca77febc2637459",
+            "missile.explosion.radius:20a3dd2d3d19a789",
+            "missile.accuracy.calibrationDistance:78e047185ab252b5",
+            "missile.accuracy.calibrationArea:9746bb572412b4a7",
+            "missile.reload.baseTime:f6eea1a9c2e14aa9",
+            "missile.projectile.penetration.resistanceBudget:51676867260a6807",
+            "missile.projectile.penetration.stopsAtEntitySize:e3bceb930851de2c",
+            "missile.ammunition:ef768cec0aa7a1ff",
+            "missile.accuracy.accuracy:03f7d158534875fb",
+            "missile.reload.reloadSkill:9cad19b2728385d7",
+            "missile.reload.currentTime:26a4460e6c957684",
+            "missile.strength:6ed0987d2f71de37",
+            "missile.projectile.ignoresShields:3e49353cd50747fc",
+            "missile.projectile.penetration.maxPenetrations:d64eacb755035437"
+          ]
+        },
+        "campaign": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "campaign.recruitmentCost",
+            "campaign.upkeep",
+            "campaign.recruitmentTurns"
+          ],
+          "omitted": [
+            "campaign.recruitmentRequirements:2ad429242940f1fd",
+            "campaign.unitCap:aff5935abb2f84fe"
+          ]
+        },
+        "customBattle": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "customBattle.cost"
+          ],
+          "omitted": []
+        },
+        "abilities": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "abilities.0"
+          ],
+          "omitted": []
+        },
+        "passiveAbilities": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "passiveAbilities.0"
+          ],
+          "omitted": []
+        },
+        "attributes": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "attributes.0",
+            "attributes.1",
+            "attributes.2",
+            "attributes.3"
+          ],
+          "omitted": []
+        },
+        "composition/runtime structure": {
+          "status": "NEEDS_RUNTIME",
+          "note": "reason-8076a92906b3498a"
+        }
+      },
+      "unknownIds": [],
+      "withdrawals": [
+        {
+          "field": "missile",
+          "reason": "reason-783c8e7e1685ccdc"
+        }
+      ],
+      "productionProjectionSha256": "1dbeff35b2cdc5149c0699d9e09dc17d3727aca35d2a5db6721225d29deca0e6",
+      "missileReview": {
+        "completeness": "NO_MISSILE_PATH",
+        "paths": [],
+        "ammoSemantics": {
+          "displayConversion": "UNRESOLVED",
+          "consumption": "UNRESOLVED",
+          "poolSharing": "UNRESOLVED",
+          "attachmentScaling": "NOT_AUTHORIZED"
+        },
+        "admittedFields": []
+      }
+    },
+    {
+      "slug": "expansion-02-12",
+      "sourcePointer": "data.candidates.11",
+      "originalStatus": "PARTIAL",
+      "overall": "PROMOTABLE_WITH_OMISSIONS",
+      "composite": true,
+      "groups": {
+        "identity": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "id",
+            "name"
+          ],
+          "omitted": []
+        },
+        "affiliation/catalog": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "factionId"
+          ],
+          "omitted": []
+        },
+        "classification": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "classification.category",
+            "classification.tier"
+          ],
+          "omitted": []
+        },
+        "entities": {
+          "status": "OMIT",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [],
+          "omitted": [
+            "entities.entitySize:6a0d940197e781d5",
+            "entities.mass:d6da950a53dd5fab",
+            "entities.totalHealth:ec9e3ab1b921b805",
+            "entities.healthPerEntity:c91e6133a24bb0f7",
+            "entities.count:55307753502d8137",
+            "entities.unitScale:4ce4a888b689c3f7"
+          ]
+        },
+        "movement": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "movement.canSkirmish"
+          ],
+          "omitted": [
+            "movement.speed:b4ce8c8fa87f333e",
+            "movement.groundSpeed:b03bd19b66616947",
+            "movement.chargeSpeed:0d6e0b1966fad87e",
+            "movement.canFly:f181794b5c1fe8af",
+            "movement.canRun:0e84b2d1d5fcad2c"
+          ]
+        },
+        "defense": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "defense.armor",
+            "defense.meleeDefense",
+            "defense.leadership",
+            "defense.shieldBlockChance"
+          ],
+          "omitted": [
+            "defense.projectilePenetrationResistance:c48c279e6c8323ae",
+            "defense.resistances:6b1e1f9c1948d2d6"
+          ]
+        },
+        "melee": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "melee.meleeAttack",
+            "melee.chargeBonus",
+            "melee.damage.base",
+            "melee.damage.armorPiercing",
+            "melee.damage.bonusVsLarge",
+            "melee.damage.bonusVsInfantry",
+            "melee.attackInterval",
+            "melee.weaponLength",
+            "melee.splash.maxTargets"
+          ],
+          "omitted": [
+            "melee.splash.maxTargetSize:21559b20f62293cb",
+            "melee.attackAttributes.flaming:e8b9e17460f0b1cb"
+          ]
+        },
+        "missile": {
+          "status": "PROMOTABLE",
+          "note": "reason-9067faff1321c5c7",
+          "admittedFields": [
+            "missile.range",
+            "missile.projectile.baseDamage",
+            "missile.projectile.armorPiercingDamage",
+            "missile.projectile.bonusVsLarge",
+            "missile.projectile.bonusVsInfantry",
+            "missile.projectile.shotsPerVolley",
+            "missile.accuracy.calibrationDistance",
+            "missile.accuracy.calibrationArea",
+            "missile.reload.baseTime",
+            "missile.projectile.penetration.resistanceBudget"
+          ],
+          "omitted": [
+            "missile.explosion.baseDamage:2c848a5fb2c6ce77",
+            "missile.explosion.armorPiercingDamage:aca77febc2637459",
+            "missile.explosion.radius:20a3dd2d3d19a789",
+            "missile.projectile.penetration.stopsAtEntitySize:6007fb5f63df4f6f",
+            "missile.ammunition:ef768cec0aa7a1ff",
+            "missile.accuracy.accuracy:03f7d158534875fb",
+            "missile.reload.reloadSkill:9cad19b2728385d7",
+            "missile.reload.currentTime:26a4460e6c957684",
+            "missile.strength:6ed0987d2f71de37",
+            "missile.projectile.ignoresShields:3e49353cd50747fc",
+            "missile.projectile.penetration.maxPenetrations:d64eacb755035437"
+          ]
+        },
+        "campaign": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "campaign.recruitmentCost",
+            "campaign.upkeep",
+            "campaign.recruitmentTurns"
+          ],
+          "omitted": [
+            "campaign.recruitmentRequirements:2ad429242940f1fd",
+            "campaign.unitCap:aff5935abb2f84fe"
+          ]
+        },
+        "customBattle": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "customBattle.cost"
+          ],
+          "omitted": []
+        },
+        "abilities": {
+          "status": "OMIT",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [],
+          "omitted": []
+        },
+        "passiveAbilities": {
+          "status": "NEEDS_MAPPING",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [],
+          "omitted": []
+        },
+        "attributes": {
+          "status": "NEEDS_MAPPING",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "attributes.0"
+          ],
+          "omitted": []
+        },
+        "composition/runtime structure": {
+          "status": "NEEDS_RUNTIME",
+          "note": "reason-8076a92906b3498a"
+        }
+      },
+      "unknownIds": [
+        {
+          "kind": "attribute",
+          "caId": "guerrilla_deploy",
+          "source": {
+            "rowId": "unit_attributes_tables:50490df4c87ca46777a1",
+            "field": "key"
+          }
+        },
+        {
+          "kind": "attribute",
+          "caId": "mounted_fire_move",
+          "source": {
+            "rowId": "unit_attributes_tables:21030f9d17b0af1f01af",
+            "field": "key"
+          }
+        },
+        {
+          "kind": "attribute",
+          "caId": "peasant",
+          "source": {
+            "rowId": "unit_attributes_tables:5a1b0fad7794829bc22f",
+            "field": "key"
+          }
+        },
+        {
+          "kind": "ability",
+          "caId": "wh_dlc07_unit_passive_the_peasants_duty",
+          "source": {
+            "rowId": "unit_abilities_tables:cfc4b4028007de6a294b",
+            "field": "key"
+          }
+        }
+      ],
+      "withdrawals": [
+        {
+          "field": "passiveAbilities",
+          "reason": "reason-d809ce6b39903e8f"
+        },
+        {
+          "field": "attributes",
+          "reason": "reason-d809ce6b39903e8f"
+        }
+      ],
+      "productionProjectionSha256": "10d5a852106a0fcd8cc7ffd68dab31e9db0dd169dbdc1a6e87adfabf3aec2ec3",
+      "missileReview": {
+        "completeness": "COMPLETE_STATIC_SINGLE",
+        "paths": [
+          {
+            "role": "LAND_PRIMARY",
+            "weaponKey": "wh_main_brt_horse_bow",
+            "projectiles": [
+              "wh_brt_arrow_horse"
+            ]
+          }
+        ],
+        "ammoSemantics": {
+          "displayConversion": "UNRESOLVED",
+          "consumption": "UNRESOLVED",
+          "poolSharing": "UNRESOLVED",
+          "attachmentScaling": "NOT_AUTHORIZED"
+        },
+        "admittedFields": [
+          "missile.range",
+          "missile.projectile.baseDamage",
+          "missile.projectile.armorPiercingDamage",
+          "missile.projectile.bonusVsLarge",
+          "missile.projectile.bonusVsInfantry",
+          "missile.projectile.shotsPerVolley",
+          "missile.accuracy.calibrationDistance",
+          "missile.accuracy.calibrationArea",
+          "missile.reload.baseTime",
+          "missile.projectile.penetration.resistanceBudget"
+        ]
+      }
+    },
+    {
+      "slug": "expansion-02-13",
+      "sourcePointer": "data.candidates.12",
+      "originalStatus": "PARTIAL",
+      "overall": "PROMOTABLE_WITH_OMISSIONS",
+      "composite": true,
+      "groups": {
+        "identity": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "id",
+            "name"
+          ],
+          "omitted": []
+        },
+        "affiliation/catalog": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "factionId"
+          ],
+          "omitted": []
+        },
+        "classification": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "classification.category",
+            "classification.tier"
+          ],
+          "omitted": []
+        },
+        "entities": {
+          "status": "OMIT",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [],
+          "omitted": [
+            "entities.entitySize:6a0d940197e781d5",
+            "entities.mass:d6da950a53dd5fab",
+            "entities.totalHealth:ec9e3ab1b921b805",
+            "entities.healthPerEntity:c91e6133a24bb0f7",
+            "entities.count:55307753502d8137",
+            "entities.unitScale:4ce4a888b689c3f7"
+          ]
+        },
+        "movement": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "movement.canSkirmish",
+            "movement.canFly"
+          ],
+          "omitted": [
+            "movement.speed:b4ce8c8fa87f333e",
+            "movement.groundSpeed:b03bd19b66616947",
+            "movement.chargeSpeed:0d6e0b1966fad87e",
+            "movement.canRun:0e84b2d1d5fcad2c"
+          ]
+        },
+        "defense": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "defense.armor",
+            "defense.meleeDefense",
+            "defense.leadership",
+            "defense.shieldBlockChance"
+          ],
+          "omitted": [
+            "defense.projectilePenetrationResistance:c48c279e6c8323ae",
+            "defense.resistances:6b1e1f9c1948d2d6"
+          ]
+        },
+        "melee": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "melee.meleeAttack",
+            "melee.chargeBonus",
+            "melee.damage.base",
+            "melee.damage.armorPiercing",
+            "melee.damage.bonusVsLarge",
+            "melee.damage.bonusVsInfantry",
+            "melee.attackInterval",
+            "melee.weaponLength",
+            "melee.splash.maxTargets",
+            "melee.splash.maxTargetSize",
+            "melee.attackAttributes.0"
+          ],
+          "omitted": [
+            "melee.attackAttributes.flaming:e8b9e17460f0b1cb"
+          ]
+        },
+        "missile": {
+          "status": "OMIT",
+          "note": "reason-783c8e7e1685ccdc",
+          "admittedFields": [],
+          "omitted": [
+            "missile.range:25a1d1b1a0c1bd73",
+            "missile.projectile.baseDamage:bb0a60fa8122cae7",
+            "missile.projectile.armorPiercingDamage:11ad81cd7be7f91b",
+            "missile.projectile.bonusVsLarge:53128b3801d3586e",
+            "missile.projectile.bonusVsInfantry:502db0e8edeeb776",
+            "missile.projectile.shotsPerVolley:fe41fe3003689ab9",
+            "missile.explosion.baseDamage:2c848a5fb2c6ce77",
+            "missile.explosion.armorPiercingDamage:aca77febc2637459",
+            "missile.explosion.radius:20a3dd2d3d19a789",
+            "missile.accuracy.calibrationDistance:78e047185ab252b5",
+            "missile.accuracy.calibrationArea:9746bb572412b4a7",
+            "missile.reload.baseTime:f6eea1a9c2e14aa9",
+            "missile.projectile.penetration.resistanceBudget:51676867260a6807",
+            "missile.projectile.penetration.stopsAtEntitySize:e3bceb930851de2c",
+            "missile.ammunition:ef768cec0aa7a1ff",
+            "missile.accuracy.accuracy:03f7d158534875fb",
+            "missile.reload.reloadSkill:9cad19b2728385d7",
+            "missile.reload.currentTime:26a4460e6c957684",
+            "missile.strength:6ed0987d2f71de37",
+            "missile.projectile.ignoresShields:3e49353cd50747fc",
+            "missile.projectile.penetration.maxPenetrations:d64eacb755035437"
+          ]
+        },
+        "campaign": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "campaign.recruitmentCost",
+            "campaign.upkeep",
+            "campaign.recruitmentTurns"
+          ],
+          "omitted": [
+            "campaign.recruitmentRequirements:2ad429242940f1fd",
+            "campaign.unitCap:aff5935abb2f84fe"
+          ]
+        },
+        "customBattle": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "customBattle.cost"
+          ],
+          "omitted": []
+        },
+        "abilities": {
+          "status": "OMIT",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [],
+          "omitted": []
+        },
+        "passiveAbilities": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "passiveAbilities.0"
+          ],
+          "omitted": []
+        },
+        "attributes": {
+          "status": "NEEDS_MAPPING",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "attributes.0",
+            "attributes.1",
+            "attributes.2"
+          ],
+          "omitted": []
+        },
+        "composition/runtime structure": {
+          "status": "NEEDS_RUNTIME",
+          "note": "reason-8076a92906b3498a"
+        }
+      },
+      "unknownIds": [
+        {
+          "kind": "attribute",
+          "caId": "guerrilla_deploy",
+          "source": {
+            "rowId": "unit_attributes_tables:50490df4c87ca46777a1",
+            "field": "key"
+          }
+        }
+      ],
+      "withdrawals": [
+        {
+          "field": "attributes",
+          "reason": "reason-d809ce6b39903e8f"
+        },
+        {
+          "field": "missile",
+          "reason": "reason-783c8e7e1685ccdc"
+        }
+      ],
+      "productionProjectionSha256": "758842c8921391e6a7333f364260f55731a433d788b663dfa2e83f3dc85130fb",
+      "missileReview": {
+        "completeness": "NO_MISSILE_PATH",
+        "paths": [],
+        "ammoSemantics": {
+          "displayConversion": "UNRESOLVED",
+          "consumption": "UNRESOLVED",
+          "poolSharing": "UNRESOLVED",
+          "attachmentScaling": "NOT_AUTHORIZED"
+        },
+        "admittedFields": []
+      }
+    },
+    {
+      "slug": "expansion-02-14",
+      "sourcePointer": "data.candidates.13",
+      "originalStatus": "PARTIAL",
+      "overall": "PROMOTABLE_WITH_OMISSIONS",
+      "composite": true,
+      "groups": {
+        "identity": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "id",
+            "name"
+          ],
+          "omitted": []
+        },
+        "affiliation/catalog": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "factionId"
+          ],
+          "omitted": []
+        },
+        "classification": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "classification.category",
+            "classification.tier"
+          ],
+          "omitted": []
+        },
+        "entities": {
+          "status": "OMIT",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [],
+          "omitted": [
+            "entities.entitySize:6a0d940197e781d5",
+            "entities.mass:d6da950a53dd5fab",
+            "entities.totalHealth:ec9e3ab1b921b805",
+            "entities.healthPerEntity:c91e6133a24bb0f7",
+            "entities.count:55307753502d8137",
+            "entities.unitScale:4ce4a888b689c3f7"
+          ]
+        },
+        "movement": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "movement.canSkirmish",
+            "movement.canRun"
+          ],
+          "omitted": [
+            "movement.speed:b4ce8c8fa87f333e",
+            "movement.groundSpeed:b03bd19b66616947",
+            "movement.chargeSpeed:0d6e0b1966fad87e",
+            "movement.canFly:f181794b5c1fe8af"
+          ]
+        },
+        "defense": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "defense.armor",
+            "defense.meleeDefense",
+            "defense.leadership",
+            "defense.shieldBlockChance"
+          ],
+          "omitted": [
+            "defense.projectilePenetrationResistance:c48c279e6c8323ae",
+            "defense.resistances:6b1e1f9c1948d2d6"
+          ]
+        },
+        "melee": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "melee.meleeAttack",
+            "melee.chargeBonus",
+            "melee.damage.base",
+            "melee.damage.armorPiercing",
+            "melee.damage.bonusVsLarge",
+            "melee.damage.bonusVsInfantry",
+            "melee.attackInterval",
+            "melee.weaponLength",
+            "melee.splash.maxTargets"
+          ],
+          "omitted": [
+            "melee.splash.maxTargetSize:21559b20f62293cb",
+            "melee.attackAttributes.flaming:e8b9e17460f0b1cb"
+          ]
+        },
+        "missile": {
+          "status": "PROMOTABLE",
+          "note": "reason-9067faff1321c5c7",
+          "admittedFields": [
+            "missile.range",
+            "missile.projectile.baseDamage",
+            "missile.projectile.armorPiercingDamage",
+            "missile.projectile.bonusVsLarge",
+            "missile.projectile.bonusVsInfantry",
+            "missile.projectile.shotsPerVolley",
+            "missile.explosion.baseDamage",
+            "missile.explosion.armorPiercingDamage",
+            "missile.explosion.radius",
+            "missile.accuracy.calibrationDistance",
+            "missile.accuracy.calibrationArea",
+            "missile.reload.baseTime",
+            "missile.projectile.penetration.resistanceBudget",
+            "missile.projectile.penetration.stopsAtEntitySize"
+          ],
+          "omitted": [
+            "missile.ammunition:ef768cec0aa7a1ff",
+            "missile.accuracy.accuracy:03f7d158534875fb",
+            "missile.reload.reloadSkill:9cad19b2728385d7",
+            "missile.reload.currentTime:26a4460e6c957684",
+            "missile.strength:6ed0987d2f71de37",
+            "missile.projectile.ignoresShields:3e49353cd50747fc",
+            "missile.projectile.penetration.maxPenetrations:d64eacb755035437"
+          ]
+        },
+        "campaign": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "campaign.recruitmentCost",
+            "campaign.upkeep",
+            "campaign.recruitmentTurns"
+          ],
+          "omitted": [
+            "campaign.recruitmentRequirements:2ad429242940f1fd",
+            "campaign.unitCap:aff5935abb2f84fe"
+          ]
+        },
+        "customBattle": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "customBattle.cost"
+          ],
+          "omitted": []
+        },
+        "abilities": {
+          "status": "OMIT",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [],
+          "omitted": []
+        },
+        "passiveAbilities": {
+          "status": "NEEDS_MAPPING",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [],
+          "omitted": []
+        },
+        "attributes": {
+          "status": "NEEDS_MAPPING",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "attributes.0"
+          ],
+          "omitted": []
+        },
+        "composition/runtime structure": {
+          "status": "NEEDS_RUNTIME",
+          "note": "reason-8076a92906b3498a"
+        }
+      },
+      "unknownIds": [
+        {
+          "kind": "attribute",
+          "caId": "peasant",
+          "source": {
+            "rowId": "unit_attributes_tables:5a1b0fad7794829bc22f",
+            "field": "key"
+          }
+        },
+        {
+          "kind": "ability",
+          "caId": "wh_dlc07_unit_passive_the_peasants_duty",
+          "source": {
+            "rowId": "unit_abilities_tables:cfc4b4028007de6a294b",
+            "field": "key"
+          }
+        }
+      ],
+      "withdrawals": [
+        {
+          "field": "passiveAbilities",
+          "reason": "reason-d809ce6b39903e8f"
+        },
+        {
+          "field": "attributes",
+          "reason": "reason-d809ce6b39903e8f"
+        }
+      ],
+      "productionProjectionSha256": "900720d26094ecf414326a44abe2ac9941e5ae3138a30e159d1182b302a2d66e",
+      "missileReview": {
+        "completeness": "COMPLETE_STATIC_SINGLE",
+        "paths": [
+          {
+            "role": "ENGINE",
+            "weaponKey": "wh_main_brt_trebuchet",
+            "projectiles": [
+              "wh_brt_trebuchet_stone"
+            ]
+          }
+        ],
+        "ammoSemantics": {
+          "displayConversion": "UNRESOLVED",
+          "consumption": "UNRESOLVED",
+          "poolSharing": "UNRESOLVED",
+          "attachmentScaling": "NOT_AUTHORIZED"
+        },
+        "admittedFields": [
+          "missile.range",
+          "missile.projectile.baseDamage",
+          "missile.projectile.armorPiercingDamage",
+          "missile.projectile.bonusVsLarge",
+          "missile.projectile.bonusVsInfantry",
+          "missile.projectile.shotsPerVolley",
+          "missile.explosion.baseDamage",
+          "missile.explosion.armorPiercingDamage",
+          "missile.explosion.radius",
+          "missile.accuracy.calibrationDistance",
+          "missile.accuracy.calibrationArea",
+          "missile.reload.baseTime",
+          "missile.projectile.penetration.resistanceBudget",
+          "missile.projectile.penetration.stopsAtEntitySize"
+        ]
+      }
+    },
+    {
+      "slug": "expansion-02-15",
+      "sourcePointer": "data.candidates.14",
+      "originalStatus": "PARTIAL",
+      "overall": "PROMOTABLE_WITH_OMISSIONS",
+      "composite": true,
+      "groups": {
+        "identity": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "id",
+            "name"
+          ],
+          "omitted": []
+        },
+        "affiliation/catalog": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "factionId"
+          ],
+          "omitted": []
+        },
+        "classification": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "classification.category",
+            "classification.tier"
+          ],
+          "omitted": []
+        },
+        "entities": {
+          "status": "OMIT",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [],
+          "omitted": [
+            "entities.entitySize:6a0d940197e781d5",
+            "entities.mass:d6da950a53dd5fab",
+            "entities.totalHealth:ec9e3ab1b921b805",
+            "entities.healthPerEntity:c91e6133a24bb0f7",
+            "entities.count:55307753502d8137",
+            "entities.unitScale:4ce4a888b689c3f7"
+          ]
+        },
+        "movement": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "movement.canSkirmish",
+            "movement.canRun"
+          ],
+          "omitted": [
+            "movement.speed:b4ce8c8fa87f333e",
+            "movement.groundSpeed:b03bd19b66616947",
+            "movement.chargeSpeed:0d6e0b1966fad87e",
+            "movement.canFly:f181794b5c1fe8af"
+          ]
+        },
+        "defense": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "defense.armor",
+            "defense.meleeDefense",
+            "defense.leadership",
+            "defense.shieldBlockChance"
+          ],
+          "omitted": [
+            "defense.projectilePenetrationResistance:c48c279e6c8323ae",
+            "defense.resistances:6b1e1f9c1948d2d6"
+          ]
+        },
+        "melee": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "melee.meleeAttack",
+            "melee.chargeBonus",
+            "melee.damage.base",
+            "melee.damage.armorPiercing",
+            "melee.damage.bonusVsLarge",
+            "melee.damage.bonusVsInfantry",
+            "melee.attackInterval",
+            "melee.weaponLength",
+            "melee.splash.maxTargets"
+          ],
+          "omitted": [
+            "melee.splash.maxTargetSize:21559b20f62293cb",
+            "melee.attackAttributes.flaming:e8b9e17460f0b1cb"
+          ]
+        },
+        "missile": {
+          "status": "PROMOTABLE",
+          "note": "reason-9067faff1321c5c7",
+          "admittedFields": [
+            "missile.range",
+            "missile.projectile.baseDamage",
+            "missile.projectile.armorPiercingDamage",
+            "missile.projectile.bonusVsLarge",
+            "missile.projectile.bonusVsInfantry",
+            "missile.projectile.shotsPerVolley",
+            "missile.explosion.baseDamage",
+            "missile.explosion.armorPiercingDamage",
+            "missile.explosion.radius",
+            "missile.accuracy.calibrationDistance",
+            "missile.accuracy.calibrationArea",
+            "missile.reload.baseTime",
+            "missile.projectile.penetration.resistanceBudget",
+            "missile.projectile.penetration.stopsAtEntitySize"
+          ],
+          "omitted": [
+            "missile.ammunition:ef768cec0aa7a1ff",
+            "missile.accuracy.accuracy:03f7d158534875fb",
+            "missile.reload.reloadSkill:9cad19b2728385d7",
+            "missile.reload.currentTime:26a4460e6c957684",
+            "missile.strength:6ed0987d2f71de37",
+            "missile.projectile.ignoresShields:3e49353cd50747fc",
+            "missile.projectile.penetration.maxPenetrations:d64eacb755035437"
+          ]
+        },
+        "campaign": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "campaign.recruitmentCost",
+            "campaign.upkeep",
+            "campaign.recruitmentTurns"
+          ],
+          "omitted": [
+            "campaign.recruitmentRequirements:2ad429242940f1fd",
+            "campaign.unitCap:aff5935abb2f84fe"
+          ]
+        },
+        "customBattle": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "customBattle.cost"
+          ],
+          "omitted": []
+        },
+        "abilities": {
+          "status": "OMIT",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [],
+          "omitted": []
+        },
+        "passiveAbilities": {
+          "status": "NEEDS_MAPPING",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [],
+          "omitted": []
+        },
+        "attributes": {
+          "status": "NEEDS_MAPPING",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "attributes.0"
+          ],
+          "omitted": []
+        },
+        "composition/runtime structure": {
+          "status": "NEEDS_RUNTIME",
+          "note": "reason-8076a92906b3498a"
+        }
+      },
+      "unknownIds": [
+        {
+          "kind": "attribute",
+          "caId": "peasant",
+          "source": {
+            "rowId": "unit_attributes_tables:5a1b0fad7794829bc22f",
+            "field": "key"
+          }
+        },
+        {
+          "kind": "ability",
+          "caId": "wh_dlc07_unit_passive_the_peasants_duty",
+          "source": {
+            "rowId": "unit_abilities_tables:cfc4b4028007de6a294b",
+            "field": "key"
+          }
+        }
+      ],
+      "withdrawals": [
+        {
+          "field": "passiveAbilities",
+          "reason": "reason-d809ce6b39903e8f"
+        },
+        {
+          "field": "attributes",
+          "reason": "reason-d809ce6b39903e8f"
+        }
+      ],
+      "productionProjectionSha256": "11cff8d1dfb76c9d9157c10bd9eeb5fdd8e4a8bcad7bb9d40aaeda74a99aa168",
+      "missileReview": {
+        "completeness": "COMPLETE_STATIC_SINGLE",
+        "paths": [
+          {
+            "role": "ENGINE",
+            "weaponKey": "wh_dlc07_brt_blessed_trebuchet",
+            "projectiles": [
+              "wh_dlc07_brt_trebuchet_blessed_stone"
+            ]
+          }
+        ],
+        "ammoSemantics": {
+          "displayConversion": "UNRESOLVED",
+          "consumption": "UNRESOLVED",
+          "poolSharing": "UNRESOLVED",
+          "attachmentScaling": "NOT_AUTHORIZED"
+        },
+        "admittedFields": [
+          "missile.range",
+          "missile.projectile.baseDamage",
+          "missile.projectile.armorPiercingDamage",
+          "missile.projectile.bonusVsLarge",
+          "missile.projectile.bonusVsInfantry",
+          "missile.projectile.shotsPerVolley",
+          "missile.explosion.baseDamage",
+          "missile.explosion.armorPiercingDamage",
+          "missile.explosion.radius",
+          "missile.accuracy.calibrationDistance",
+          "missile.accuracy.calibrationArea",
+          "missile.reload.baseTime",
+          "missile.projectile.penetration.resistanceBudget",
+          "missile.projectile.penetration.stopsAtEntitySize"
+        ]
+      }
+    },
+    {
+      "slug": "expansion-02-16",
+      "sourcePointer": "data.candidates.15",
+      "originalStatus": "PARTIAL",
+      "overall": "PROMOTABLE_WITH_OMISSIONS",
+      "composite": false,
+      "groups": {
+        "identity": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "id",
+            "name"
+          ],
+          "omitted": []
+        },
+        "affiliation/catalog": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "factionId"
+          ],
+          "omitted": []
+        },
+        "classification": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "classification.category",
+            "classification.tier"
+          ],
+          "omitted": []
+        },
+        "entities": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "entities.entitySize",
+            "entities.mass"
+          ],
+          "omitted": [
+            "entities.totalHealth:ec9e3ab1b921b805",
+            "entities.healthPerEntity:c91e6133a24bb0f7",
+            "entities.count:55307753502d8137",
+            "entities.unitScale:4ce4a888b689c3f7"
+          ]
+        },
+        "movement": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "movement.canSkirmish"
+          ],
+          "omitted": [
+            "movement.speed:b4ce8c8fa87f333e",
+            "movement.groundSpeed:b03bd19b66616947",
+            "movement.chargeSpeed:0d6e0b1966fad87e",
+            "movement.canFly:f181794b5c1fe8af",
+            "movement.canRun:0e84b2d1d5fcad2c"
+          ]
+        },
+        "defense": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "defense.armor",
+            "defense.meleeDefense",
+            "defense.leadership",
+            "defense.shieldBlockChance",
+            "defense.projectilePenetrationResistance"
+          ],
+          "omitted": [
+            "defense.resistances:6b1e1f9c1948d2d6"
+          ]
+        },
+        "melee": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "melee.meleeAttack",
+            "melee.chargeBonus",
+            "melee.damage.base",
+            "melee.damage.armorPiercing",
+            "melee.damage.bonusVsLarge",
+            "melee.damage.bonusVsInfantry",
+            "melee.attackInterval",
+            "melee.weaponLength",
+            "melee.splash.maxTargets"
+          ],
+          "omitted": [
+            "melee.splash.maxTargetSize:21559b20f62293cb",
+            "melee.attackAttributes.flaming:e8b9e17460f0b1cb"
+          ]
+        },
+        "missile": {
+          "status": "OMIT",
+          "note": "reason-783c8e7e1685ccdc",
+          "admittedFields": [],
+          "omitted": [
+            "missile.range:25a1d1b1a0c1bd73",
+            "missile.projectile.baseDamage:bb0a60fa8122cae7",
+            "missile.projectile.armorPiercingDamage:11ad81cd7be7f91b",
+            "missile.projectile.bonusVsLarge:53128b3801d3586e",
+            "missile.projectile.bonusVsInfantry:502db0e8edeeb776",
+            "missile.projectile.shotsPerVolley:fe41fe3003689ab9",
+            "missile.explosion.baseDamage:2c848a5fb2c6ce77",
+            "missile.explosion.armorPiercingDamage:aca77febc2637459",
+            "missile.explosion.radius:20a3dd2d3d19a789",
+            "missile.accuracy.calibrationDistance:78e047185ab252b5",
+            "missile.accuracy.calibrationArea:9746bb572412b4a7",
+            "missile.reload.baseTime:f6eea1a9c2e14aa9",
+            "missile.projectile.penetration.resistanceBudget:51676867260a6807",
+            "missile.projectile.penetration.stopsAtEntitySize:e3bceb930851de2c",
+            "missile.ammunition:ef768cec0aa7a1ff",
+            "missile.accuracy.accuracy:03f7d158534875fb",
+            "missile.reload.reloadSkill:9cad19b2728385d7",
+            "missile.reload.currentTime:26a4460e6c957684",
+            "missile.strength:6ed0987d2f71de37",
+            "missile.projectile.ignoresShields:3e49353cd50747fc",
+            "missile.projectile.penetration.maxPenetrations:d64eacb755035437"
+          ]
+        },
+        "campaign": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "campaign.recruitmentCost",
+            "campaign.upkeep",
+            "campaign.recruitmentTurns"
+          ],
+          "omitted": [
+            "campaign.recruitmentRequirements:2ad429242940f1fd",
+            "campaign.unitCap:aff5935abb2f84fe"
+          ]
+        },
+        "customBattle": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "customBattle.cost"
+          ],
+          "omitted": []
+        },
+        "abilities": {
+          "status": "OMIT",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [],
+          "omitted": []
+        },
+        "passiveAbilities": {
+          "status": "NEEDS_MAPPING",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [],
+          "omitted": []
+        },
+        "attributes": {
+          "status": "NEEDS_MAPPING",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "attributes.0"
+          ],
+          "omitted": []
+        },
+        "composition/runtime structure": {
+          "status": "OMIT",
+          "note": "reason-63f96edfdbb46360"
+        }
+      },
+      "unknownIds": [
+        {
+          "kind": "attribute",
+          "caId": "unbreakable",
+          "source": {
+            "rowId": "unit_attributes_tables:809d0dfe3c93e2e5bc2f",
+            "field": "key"
+          }
+        },
+        {
+          "kind": "ability",
+          "caId": "wh_dlc04_unit_passive_strength_of_the_penitent",
+          "source": {
+            "rowId": "unit_abilities_tables:22f46218d79939ce3d65",
+            "field": "key"
+          }
+        },
+        {
+          "kind": "ability",
+          "caId": "wh_main_unit_passive_frenzy",
+          "source": {
+            "rowId": "unit_abilities_tables:999112bb3efdf8e4f715",
+            "field": "key"
+          }
+        }
+      ],
+      "withdrawals": [
+        {
+          "field": "passiveAbilities",
+          "reason": "reason-d809ce6b39903e8f"
+        },
+        {
+          "field": "attributes",
+          "reason": "reason-d809ce6b39903e8f"
+        },
+        {
+          "field": "missile",
+          "reason": "reason-783c8e7e1685ccdc"
+        }
+      ],
+      "productionProjectionSha256": "1ed07e67ebdb3cad9f6778b5ceb6dccfa76b36d1bfbcfc9611c4479e4300d5a5",
+      "missileReview": {
+        "completeness": "NO_MISSILE_PATH",
+        "paths": [],
+        "ammoSemantics": {
+          "displayConversion": "UNRESOLVED",
+          "consumption": "UNRESOLVED",
+          "poolSharing": "UNRESOLVED",
+          "attachmentScaling": "NOT_AUTHORIZED"
+        },
+        "admittedFields": []
+      }
+    },
+    {
+      "slug": "expansion-02-17",
+      "sourcePointer": "data.candidates.16",
+      "originalStatus": "PARTIAL",
+      "overall": "PROMOTABLE_WITH_OMISSIONS",
+      "composite": false,
+      "groups": {
+        "identity": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "id",
+            "name"
+          ],
+          "omitted": []
+        },
+        "affiliation/catalog": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "factionId"
+          ],
+          "omitted": []
+        },
+        "classification": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "classification.category",
+            "classification.tier"
+          ],
+          "omitted": []
+        },
+        "entities": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "entities.entitySize",
+            "entities.mass"
+          ],
+          "omitted": [
+            "entities.totalHealth:ec9e3ab1b921b805",
+            "entities.healthPerEntity:c91e6133a24bb0f7",
+            "entities.count:55307753502d8137",
+            "entities.unitScale:4ce4a888b689c3f7"
+          ]
+        },
+        "movement": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "movement.canSkirmish"
+          ],
+          "omitted": [
+            "movement.speed:b4ce8c8fa87f333e",
+            "movement.groundSpeed:b03bd19b66616947",
+            "movement.chargeSpeed:0d6e0b1966fad87e",
+            "movement.canFly:f181794b5c1fe8af",
+            "movement.canRun:0e84b2d1d5fcad2c"
+          ]
+        },
+        "defense": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "defense.armor",
+            "defense.meleeDefense",
+            "defense.leadership",
+            "defense.shieldBlockChance",
+            "defense.projectilePenetrationResistance"
+          ],
+          "omitted": [
+            "defense.resistances:6b1e1f9c1948d2d6"
+          ]
+        },
+        "melee": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "melee.meleeAttack",
+            "melee.chargeBonus",
+            "melee.damage.base",
+            "melee.damage.armorPiercing",
+            "melee.damage.bonusVsLarge",
+            "melee.damage.bonusVsInfantry",
+            "melee.attackInterval",
+            "melee.weaponLength",
+            "melee.splash.maxTargets"
+          ],
+          "omitted": [
+            "melee.splash.maxTargetSize:21559b20f62293cb",
+            "melee.attackAttributes.flaming:e8b9e17460f0b1cb"
+          ]
+        },
+        "missile": {
+          "status": "PROMOTABLE",
+          "note": "reason-9067faff1321c5c7",
+          "admittedFields": [
+            "missile.range",
+            "missile.projectile.baseDamage",
+            "missile.projectile.armorPiercingDamage",
+            "missile.projectile.bonusVsLarge",
+            "missile.projectile.bonusVsInfantry",
+            "missile.projectile.shotsPerVolley",
+            "missile.accuracy.calibrationDistance",
+            "missile.accuracy.calibrationArea",
+            "missile.reload.baseTime",
+            "missile.projectile.penetration.resistanceBudget"
+          ],
+          "omitted": [
+            "missile.explosion.baseDamage:2c848a5fb2c6ce77",
+            "missile.explosion.armorPiercingDamage:aca77febc2637459",
+            "missile.explosion.radius:20a3dd2d3d19a789",
+            "missile.projectile.penetration.stopsAtEntitySize:6007fb5f63df4f6f",
+            "missile.ammunition:ef768cec0aa7a1ff",
+            "missile.accuracy.accuracy:03f7d158534875fb",
+            "missile.reload.reloadSkill:9cad19b2728385d7",
+            "missile.reload.currentTime:26a4460e6c957684",
+            "missile.strength:6ed0987d2f71de37",
+            "missile.projectile.ignoresShields:3e49353cd50747fc",
+            "missile.projectile.penetration.maxPenetrations:d64eacb755035437"
+          ]
+        },
+        "campaign": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "campaign.recruitmentCost",
+            "campaign.upkeep",
+            "campaign.recruitmentTurns"
+          ],
+          "omitted": [
+            "campaign.recruitmentRequirements:2ad429242940f1fd",
+            "campaign.unitCap:aff5935abb2f84fe"
+          ]
+        },
+        "customBattle": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "customBattle.cost"
+          ],
+          "omitted": []
+        },
+        "abilities": {
+          "status": "OMIT",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [],
+          "omitted": []
+        },
+        "passiveAbilities": {
+          "status": "OMIT",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [],
+          "omitted": []
+        },
+        "attributes": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "attributes.0"
+          ],
+          "omitted": []
+        },
+        "composition/runtime structure": {
+          "status": "OMIT",
+          "note": "reason-63f96edfdbb46360"
+        }
+      },
+      "unknownIds": [],
+      "withdrawals": [],
+      "productionProjectionSha256": "14fe4d45504041e9ee6440588920e2a52cd99a46a169ecb9f7b2d3242e194652",
+      "missileReview": {
+        "completeness": "COMPLETE_STATIC_SINGLE",
+        "paths": [
+          {
+            "role": "LAND_PRIMARY",
+            "weaponKey": "wh_main_emp_crossbow",
+            "projectiles": [
+              "wh_emp_crossbow_bolt"
+            ]
+          }
+        ],
+        "ammoSemantics": {
+          "displayConversion": "UNRESOLVED",
+          "consumption": "UNRESOLVED",
+          "poolSharing": "UNRESOLVED",
+          "attachmentScaling": "NOT_AUTHORIZED"
+        },
+        "admittedFields": [
+          "missile.range",
+          "missile.projectile.baseDamage",
+          "missile.projectile.armorPiercingDamage",
+          "missile.projectile.bonusVsLarge",
+          "missile.projectile.bonusVsInfantry",
+          "missile.projectile.shotsPerVolley",
+          "missile.accuracy.calibrationDistance",
+          "missile.accuracy.calibrationArea",
+          "missile.reload.baseTime",
+          "missile.projectile.penetration.resistanceBudget"
+        ]
+      }
+    },
+    {
+      "slug": "expansion-02-18",
+      "sourcePointer": "data.candidates.17",
+      "originalStatus": "PARTIAL",
+      "overall": "PROMOTABLE_WITH_OMISSIONS",
+      "composite": true,
+      "groups": {
+        "identity": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "id",
+            "name"
+          ],
+          "omitted": []
+        },
+        "affiliation/catalog": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "factionId"
+          ],
+          "omitted": []
+        },
+        "classification": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "classification.category",
+            "classification.tier"
+          ],
+          "omitted": []
+        },
+        "entities": {
+          "status": "OMIT",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [],
+          "omitted": [
+            "entities.entitySize:6a0d940197e781d5",
+            "entities.mass:d6da950a53dd5fab",
+            "entities.totalHealth:ec9e3ab1b921b805",
+            "entities.healthPerEntity:c91e6133a24bb0f7",
+            "entities.count:55307753502d8137",
+            "entities.unitScale:4ce4a888b689c3f7"
+          ]
+        },
+        "movement": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "movement.canSkirmish"
+          ],
+          "omitted": [
+            "movement.speed:b4ce8c8fa87f333e",
+            "movement.groundSpeed:b03bd19b66616947",
+            "movement.chargeSpeed:0d6e0b1966fad87e",
+            "movement.canFly:f181794b5c1fe8af",
+            "movement.canRun:0e84b2d1d5fcad2c"
+          ]
+        },
+        "defense": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "defense.armor",
+            "defense.meleeDefense",
+            "defense.leadership",
+            "defense.shieldBlockChance"
+          ],
+          "omitted": [
+            "defense.projectilePenetrationResistance:c48c279e6c8323ae",
+            "defense.resistances:6b1e1f9c1948d2d6"
+          ]
+        },
+        "melee": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "melee.meleeAttack",
+            "melee.chargeBonus",
+            "melee.damage.base",
+            "melee.damage.armorPiercing",
+            "melee.damage.bonusVsLarge",
+            "melee.damage.bonusVsInfantry",
+            "melee.attackInterval",
+            "melee.weaponLength",
+            "melee.splash.maxTargets"
+          ],
+          "omitted": [
+            "melee.splash.maxTargetSize:21559b20f62293cb",
+            "melee.attackAttributes.flaming:e8b9e17460f0b1cb"
+          ]
+        },
+        "missile": {
+          "status": "PROMOTABLE",
+          "note": "reason-9067faff1321c5c7",
+          "admittedFields": [
+            "missile.range",
+            "missile.projectile.baseDamage",
+            "missile.projectile.armorPiercingDamage",
+            "missile.projectile.bonusVsLarge",
+            "missile.projectile.bonusVsInfantry",
+            "missile.projectile.shotsPerVolley",
+            "missile.accuracy.calibrationDistance",
+            "missile.accuracy.calibrationArea",
+            "missile.reload.baseTime",
+            "missile.projectile.penetration.resistanceBudget"
+          ],
+          "omitted": [
+            "missile.explosion.baseDamage:2c848a5fb2c6ce77",
+            "missile.explosion.armorPiercingDamage:aca77febc2637459",
+            "missile.explosion.radius:20a3dd2d3d19a789",
+            "missile.projectile.penetration.stopsAtEntitySize:6007fb5f63df4f6f",
+            "missile.ammunition:ef768cec0aa7a1ff",
+            "missile.accuracy.accuracy:03f7d158534875fb",
+            "missile.reload.reloadSkill:9cad19b2728385d7",
+            "missile.reload.currentTime:26a4460e6c957684",
+            "missile.strength:6ed0987d2f71de37",
+            "missile.projectile.ignoresShields:3e49353cd50747fc",
+            "missile.projectile.penetration.maxPenetrations:d64eacb755035437"
+          ]
+        },
+        "campaign": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "campaign.recruitmentCost",
+            "campaign.upkeep",
+            "campaign.recruitmentTurns"
+          ],
+          "omitted": [
+            "campaign.recruitmentRequirements:2ad429242940f1fd",
+            "campaign.unitCap:aff5935abb2f84fe"
+          ]
+        },
+        "customBattle": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "customBattle.cost"
+          ],
+          "omitted": []
+        },
+        "abilities": {
+          "status": "OMIT",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [],
+          "omitted": []
+        },
+        "passiveAbilities": {
+          "status": "OMIT",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [],
+          "omitted": []
+        },
+        "attributes": {
+          "status": "NEEDS_MAPPING",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "attributes.0"
+          ],
+          "omitted": []
+        },
+        "composition/runtime structure": {
+          "status": "NEEDS_RUNTIME",
+          "note": "reason-8076a92906b3498a"
+        }
+      },
+      "unknownIds": [
+        {
+          "kind": "attribute",
+          "caId": "guerrilla_deploy",
+          "source": {
+            "rowId": "unit_attributes_tables:50490df4c87ca46777a1",
+            "field": "key"
+          }
+        },
+        {
+          "kind": "attribute",
+          "caId": "mounted_fire_move",
+          "source": {
+            "rowId": "unit_attributes_tables:21030f9d17b0af1f01af",
+            "field": "key"
+          }
+        }
+      ],
+      "withdrawals": [
+        {
+          "field": "attributes",
+          "reason": "reason-d809ce6b39903e8f"
+        }
+      ],
+      "productionProjectionSha256": "790357e2fe2f269088bdb14fa6070e8ec676fe57ef6aea6ed448a805328f2c3c",
+      "missileReview": {
+        "completeness": "COMPLETE_STATIC_SINGLE",
+        "paths": [
+          {
+            "role": "LAND_PRIMARY",
+            "weaponKey": "wh3_dlc25_emp_rifle_outrider_repeater",
+            "projectiles": [
+              "wh3_dlc25_emp_rifle_outrider_repeater_bullet"
+            ]
+          }
+        ],
+        "ammoSemantics": {
+          "displayConversion": "UNRESOLVED",
+          "consumption": "UNRESOLVED",
+          "poolSharing": "UNRESOLVED",
+          "attachmentScaling": "NOT_AUTHORIZED"
+        },
+        "admittedFields": [
+          "missile.range",
+          "missile.projectile.baseDamage",
+          "missile.projectile.armorPiercingDamage",
+          "missile.projectile.bonusVsLarge",
+          "missile.projectile.bonusVsInfantry",
+          "missile.projectile.shotsPerVolley",
+          "missile.accuracy.calibrationDistance",
+          "missile.accuracy.calibrationArea",
+          "missile.reload.baseTime",
+          "missile.projectile.penetration.resistanceBudget"
+        ]
+      }
+    },
+    {
+      "slug": "expansion-02-19",
+      "sourcePointer": "data.candidates.18",
+      "originalStatus": "PARTIAL",
+      "overall": "PROMOTABLE_WITH_OMISSIONS",
+      "composite": false,
+      "groups": {
+        "identity": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "id",
+            "name"
+          ],
+          "omitted": []
+        },
+        "affiliation/catalog": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "factionId"
+          ],
+          "omitted": []
+        },
+        "classification": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "classification.category",
+            "classification.tier"
+          ],
+          "omitted": []
+        },
+        "entities": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "entities.entitySize",
+            "entities.mass"
+          ],
+          "omitted": [
+            "entities.totalHealth:ec9e3ab1b921b805",
+            "entities.healthPerEntity:c91e6133a24bb0f7",
+            "entities.count:55307753502d8137",
+            "entities.unitScale:4ce4a888b689c3f7"
+          ]
+        },
+        "movement": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "movement.canSkirmish"
+          ],
+          "omitted": [
+            "movement.speed:b4ce8c8fa87f333e",
+            "movement.groundSpeed:b03bd19b66616947",
+            "movement.chargeSpeed:0d6e0b1966fad87e",
+            "movement.canFly:f181794b5c1fe8af",
+            "movement.canRun:0e84b2d1d5fcad2c"
+          ]
+        },
+        "defense": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "defense.armor",
+            "defense.meleeDefense",
+            "defense.leadership",
+            "defense.shieldBlockChance",
+            "defense.projectilePenetrationResistance"
+          ],
+          "omitted": [
+            "defense.resistances:6b1e1f9c1948d2d6"
+          ]
+        },
+        "melee": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "melee.meleeAttack",
+            "melee.chargeBonus",
+            "melee.damage.base",
+            "melee.damage.armorPiercing",
+            "melee.damage.bonusVsLarge",
+            "melee.damage.bonusVsInfantry",
+            "melee.attackInterval",
+            "melee.weaponLength",
+            "melee.splash.maxTargets"
+          ],
+          "omitted": [
+            "melee.splash.maxTargetSize:21559b20f62293cb",
+            "melee.attackAttributes.flaming:e8b9e17460f0b1cb"
+          ]
+        },
+        "missile": {
+          "status": "OMIT",
+          "note": "reason-8195efff3ec87b41",
+          "admittedFields": [],
+          "omitted": [
+            "missile.range:b75b9fa3c298879a",
+            "missile.projectile.baseDamage:4526f90eeb84deb5",
+            "missile.projectile.armorPiercingDamage:0cad8b4ae45747dc",
+            "missile.projectile.bonusVsLarge:25b3db27eb18e300",
+            "missile.projectile.bonusVsInfantry:e42d25c0f0cff447",
+            "missile.projectile.shotsPerVolley:66f7cfb3767ff402",
+            "missile.explosion.baseDamage:2c848a5fb2c6ce77",
+            "missile.explosion.armorPiercingDamage:aca77febc2637459",
+            "missile.explosion.radius:20a3dd2d3d19a789",
+            "missile.accuracy.calibrationDistance:d31e10f3469eeeb7",
+            "missile.accuracy.calibrationArea:23aaba5fe2ccf7dd",
+            "missile.reload.baseTime:6fc4e192f7c4dff3",
+            "missile.projectile.penetration.resistanceBudget:6c6af07f9a2f30bb",
+            "missile.projectile.penetration.stopsAtEntitySize:67db260dddea2221",
+            "missile.ammunition:ef768cec0aa7a1ff",
+            "missile.accuracy.accuracy:03f7d158534875fb",
+            "missile.reload.reloadSkill:9cad19b2728385d7",
+            "missile.reload.currentTime:26a4460e6c957684",
+            "missile.strength:6ed0987d2f71de37",
+            "missile.projectile.ignoresShields:3e49353cd50747fc",
+            "missile.projectile.penetration.maxPenetrations:d64eacb755035437"
+          ]
+        },
+        "campaign": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "campaign.recruitmentCost",
+            "campaign.upkeep",
+            "campaign.recruitmentTurns"
+          ],
+          "omitted": [
+            "campaign.recruitmentRequirements:2ad429242940f1fd",
+            "campaign.unitCap:aff5935abb2f84fe"
+          ]
+        },
+        "customBattle": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "customBattle.cost"
+          ],
+          "omitted": []
+        },
+        "abilities": {
+          "status": "OMIT",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [],
+          "omitted": []
+        },
+        "passiveAbilities": {
+          "status": "OMIT",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [],
+          "omitted": []
+        },
+        "attributes": {
+          "status": "NEEDS_MAPPING",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "attributes.0"
+          ],
+          "omitted": []
+        },
+        "composition/runtime structure": {
+          "status": "OMIT",
+          "note": "reason-63f96edfdbb46360"
+        }
+      },
+      "unknownIds": [
+        {
+          "kind": "attribute",
+          "caId": "snipe",
+          "source": {
+            "rowId": "unit_attributes_tables:2b10e036800894aae03d",
+            "field": "key"
+          }
+        }
+      ],
+      "withdrawals": [
+        {
+          "field": "attributes",
+          "reason": "reason-d809ce6b39903e8f"
+        },
+        {
+          "field": "missile",
+          "reason": "reason-8195efff3ec87b41"
+        }
+      ],
+      "productionProjectionSha256": "712cbd99f7a8d59837b08935ecea8ab24bafa079c8be6f15c22b933aef984dc9",
+      "missileReview": {
+        "completeness": "STRUCTURE_KNOWN_RUNTIME_UNRESOLVED",
+        "paths": [
+          {
+            "role": "LAND_PRIMARY",
+            "weaponKey": "wh3_dlc25_emp_rifle_hochland",
+            "projectiles": [
+              "wh3_dlc25_emp_inf_rifle_bullet_hochland"
+            ]
+          },
+          {
+            "role": "MAIN_SPECIFIC_JUNCTION",
+            "weaponKey": "wh3_dlc25_emp_rifle_hochland_upgraded",
+            "projectiles": [
+              "wh3_dlc25_emp_inf_rifle_bullet_hochland_exploding"
+            ]
+          }
+        ],
+        "ammoSemantics": {
+          "displayConversion": "UNRESOLVED",
+          "consumption": "UNRESOLVED",
+          "poolSharing": "UNRESOLVED",
+          "attachmentScaling": "NOT_AUTHORIZED"
+        },
+        "admittedFields": []
+      }
+    },
+    {
+      "slug": "expansion-02-20",
+      "sourcePointer": "data.candidates.19",
+      "originalStatus": "PARTIAL",
+      "overall": "PROMOTABLE_WITH_OMISSIONS",
+      "composite": false,
+      "groups": {
+        "identity": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "id",
+            "name"
+          ],
+          "omitted": []
+        },
+        "affiliation/catalog": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "factionId"
+          ],
+          "omitted": []
+        },
+        "classification": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "classification.category",
+            "classification.tier"
+          ],
+          "omitted": []
+        },
+        "entities": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "entities.entitySize",
+            "entities.mass"
+          ],
+          "omitted": [
+            "entities.totalHealth:ec9e3ab1b921b805",
+            "entities.healthPerEntity:c91e6133a24bb0f7",
+            "entities.count:55307753502d8137",
+            "entities.unitScale:4ce4a888b689c3f7"
+          ]
+        },
+        "movement": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "movement.canSkirmish"
+          ],
+          "omitted": [
+            "movement.speed:b4ce8c8fa87f333e",
+            "movement.groundSpeed:b03bd19b66616947",
+            "movement.chargeSpeed:0d6e0b1966fad87e",
+            "movement.canFly:f181794b5c1fe8af",
+            "movement.canRun:0e84b2d1d5fcad2c"
+          ]
+        },
+        "defense": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "defense.armor",
+            "defense.meleeDefense",
+            "defense.leadership",
+            "defense.shieldBlockChance",
+            "defense.projectilePenetrationResistance"
+          ],
+          "omitted": [
+            "defense.resistances:6b1e1f9c1948d2d6"
+          ]
+        },
+        "melee": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "melee.meleeAttack",
+            "melee.chargeBonus",
+            "melee.damage.base",
+            "melee.damage.armorPiercing",
+            "melee.damage.bonusVsLarge",
+            "melee.damage.bonusVsInfantry",
+            "melee.attackInterval",
+            "melee.weaponLength",
+            "melee.splash.maxTargets"
+          ],
+          "omitted": [
+            "melee.splash.maxTargetSize:21559b20f62293cb",
+            "melee.attackAttributes.flaming:e8b9e17460f0b1cb"
+          ]
+        },
+        "missile": {
+          "status": "OMIT",
+          "note": "reason-8195efff3ec87b41",
+          "admittedFields": [],
+          "omitted": [
+            "missile.range:b75b9fa3c298879a",
+            "missile.projectile.baseDamage:4526f90eeb84deb5",
+            "missile.projectile.armorPiercingDamage:0cad8b4ae45747dc",
+            "missile.projectile.bonusVsLarge:25b3db27eb18e300",
+            "missile.projectile.bonusVsInfantry:e42d25c0f0cff447",
+            "missile.projectile.shotsPerVolley:66f7cfb3767ff402",
+            "missile.explosion.baseDamage:2c848a5fb2c6ce77",
+            "missile.explosion.armorPiercingDamage:aca77febc2637459",
+            "missile.explosion.radius:20a3dd2d3d19a789",
+            "missile.accuracy.calibrationDistance:d31e10f3469eeeb7",
+            "missile.accuracy.calibrationArea:23aaba5fe2ccf7dd",
+            "missile.reload.baseTime:6fc4e192f7c4dff3",
+            "missile.projectile.penetration.resistanceBudget:6c6af07f9a2f30bb",
+            "missile.projectile.penetration.stopsAtEntitySize:67db260dddea2221",
+            "missile.ammunition:ef768cec0aa7a1ff",
+            "missile.accuracy.accuracy:03f7d158534875fb",
+            "missile.reload.reloadSkill:9cad19b2728385d7",
+            "missile.reload.currentTime:26a4460e6c957684",
+            "missile.strength:6ed0987d2f71de37",
+            "missile.projectile.ignoresShields:3e49353cd50747fc",
+            "missile.projectile.penetration.maxPenetrations:d64eacb755035437"
+          ]
+        },
+        "campaign": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "campaign.recruitmentCost",
+            "campaign.upkeep",
+            "campaign.recruitmentTurns"
+          ],
+          "omitted": [
+            "campaign.recruitmentRequirements:2ad429242940f1fd",
+            "campaign.unitCap:aff5935abb2f84fe"
+          ]
+        },
+        "customBattle": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "customBattle.cost"
+          ],
+          "omitted": []
+        },
+        "abilities": {
+          "status": "OMIT",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [],
+          "omitted": []
+        },
+        "passiveAbilities": {
+          "status": "NEEDS_MAPPING",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [],
+          "omitted": []
+        },
+        "attributes": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "attributes.0"
+          ],
+          "omitted": []
+        },
+        "composition/runtime structure": {
+          "status": "OMIT",
+          "note": "reason-63f96edfdbb46360"
+        }
+      },
+      "unknownIds": [
+        {
+          "kind": "ability",
+          "caId": "wh3_dlc25_unit_passive_blackpowder_discipline",
+          "source": {
+            "rowId": "unit_abilities_tables:1b247ec7fe4db50f31c7",
+            "field": "key"
+          }
+        }
+      ],
+      "withdrawals": [
+        {
+          "field": "passiveAbilities",
+          "reason": "reason-d809ce6b39903e8f"
+        },
+        {
+          "field": "missile",
+          "reason": "reason-8195efff3ec87b41"
+        }
+      ],
+      "productionProjectionSha256": "a3201dcf1ea3370faacf9451b364cd8b1fc3082b10ce83d77d5a737c9957421c",
+      "missileReview": {
+        "completeness": "STRUCTURE_KNOWN_RUNTIME_UNRESOLVED",
+        "paths": [
+          {
+            "role": "LAND_PRIMARY",
+            "weaponKey": "wh_main_emp_rifle_ironsides",
+            "projectiles": [
+              "wh3_dlc25_emp_rifle_bullet_ironsides"
+            ]
+          },
+          {
+            "role": "MAIN_SPECIFIC_JUNCTION",
+            "weaponKey": "wh_main_emp_rifle_ironsides_upgraded",
+            "projectiles": [
+              "wh3_dlc25_emp_rifle_bullet_ironsides_exploding"
+            ]
+          }
+        ],
+        "ammoSemantics": {
+          "displayConversion": "UNRESOLVED",
+          "consumption": "UNRESOLVED",
+          "poolSharing": "UNRESOLVED",
+          "attachmentScaling": "NOT_AUTHORIZED"
+        },
+        "admittedFields": []
+      }
+    },
+    {
+      "slug": "expansion-02-21",
+      "sourcePointer": "data.candidates.20",
+      "originalStatus": "PARTIAL",
+      "overall": "PROMOTABLE_WITH_OMISSIONS",
+      "composite": false,
+      "groups": {
+        "identity": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "id",
+            "name"
+          ],
+          "omitted": []
+        },
+        "affiliation/catalog": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "factionId"
+          ],
+          "omitted": []
+        },
+        "classification": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "classification.category",
+            "classification.tier"
+          ],
+          "omitted": []
+        },
+        "entities": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "entities.entitySize",
+            "entities.mass"
+          ],
+          "omitted": [
+            "entities.totalHealth:ec9e3ab1b921b805",
+            "entities.healthPerEntity:c91e6133a24bb0f7",
+            "entities.count:55307753502d8137",
+            "entities.unitScale:4ce4a888b689c3f7"
+          ]
+        },
+        "movement": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "movement.canSkirmish"
+          ],
+          "omitted": [
+            "movement.speed:b4ce8c8fa87f333e",
+            "movement.groundSpeed:b03bd19b66616947",
+            "movement.chargeSpeed:0d6e0b1966fad87e",
+            "movement.canFly:f181794b5c1fe8af",
+            "movement.canRun:0e84b2d1d5fcad2c"
+          ]
+        },
+        "defense": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "defense.armor",
+            "defense.meleeDefense",
+            "defense.leadership",
+            "defense.shieldBlockChance",
+            "defense.projectilePenetrationResistance"
+          ],
+          "omitted": [
+            "defense.resistances:6b1e1f9c1948d2d6"
+          ]
+        },
+        "melee": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "melee.meleeAttack",
+            "melee.chargeBonus",
+            "melee.damage.base",
+            "melee.damage.armorPiercing",
+            "melee.damage.bonusVsLarge",
+            "melee.damage.bonusVsInfantry",
+            "melee.attackInterval",
+            "melee.weaponLength",
+            "melee.splash.maxTargets"
+          ],
+          "omitted": [
+            "melee.splash.maxTargetSize:21559b20f62293cb",
+            "melee.attackAttributes.flaming:e8b9e17460f0b1cb"
+          ]
+        },
+        "missile": {
+          "status": "OMIT",
+          "note": "reason-783c8e7e1685ccdc",
+          "admittedFields": [],
+          "omitted": [
+            "missile.range:25a1d1b1a0c1bd73",
+            "missile.projectile.baseDamage:bb0a60fa8122cae7",
+            "missile.projectile.armorPiercingDamage:11ad81cd7be7f91b",
+            "missile.projectile.bonusVsLarge:53128b3801d3586e",
+            "missile.projectile.bonusVsInfantry:502db0e8edeeb776",
+            "missile.projectile.shotsPerVolley:fe41fe3003689ab9",
+            "missile.explosion.baseDamage:2c848a5fb2c6ce77",
+            "missile.explosion.armorPiercingDamage:aca77febc2637459",
+            "missile.explosion.radius:20a3dd2d3d19a789",
+            "missile.accuracy.calibrationDistance:78e047185ab252b5",
+            "missile.accuracy.calibrationArea:9746bb572412b4a7",
+            "missile.reload.baseTime:f6eea1a9c2e14aa9",
+            "missile.projectile.penetration.resistanceBudget:51676867260a6807",
+            "missile.projectile.penetration.stopsAtEntitySize:e3bceb930851de2c",
+            "missile.ammunition:ef768cec0aa7a1ff",
+            "missile.accuracy.accuracy:03f7d158534875fb",
+            "missile.reload.reloadSkill:9cad19b2728385d7",
+            "missile.reload.currentTime:26a4460e6c957684",
+            "missile.strength:6ed0987d2f71de37",
+            "missile.projectile.ignoresShields:3e49353cd50747fc",
+            "missile.projectile.penetration.maxPenetrations:d64eacb755035437"
+          ]
+        },
+        "campaign": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "campaign.recruitmentCost",
+            "campaign.upkeep",
+            "campaign.recruitmentTurns"
+          ],
+          "omitted": [
+            "campaign.recruitmentRequirements:2ad429242940f1fd",
+            "campaign.unitCap:aff5935abb2f84fe"
+          ]
+        },
+        "customBattle": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "customBattle.cost"
+          ],
+          "omitted": []
+        },
+        "abilities": {
+          "status": "OMIT",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [],
+          "omitted": []
+        },
+        "passiveAbilities": {
+          "status": "NEEDS_MAPPING",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [],
+          "omitted": []
+        },
+        "attributes": {
+          "status": "NEEDS_MAPPING",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "attributes.0",
+            "attributes.1"
+          ],
+          "omitted": []
+        },
+        "composition/runtime structure": {
+          "status": "OMIT",
+          "note": "reason-63f96edfdbb46360"
+        }
+      },
+      "unknownIds": [
+        {
+          "kind": "attribute",
+          "caId": "charge_defense",
+          "source": {
+            "rowId": "unit_attributes_tables:3a15501cebe2a28d1e33",
+            "field": "key"
+          }
+        },
+        {
+          "kind": "ability",
+          "caId": "wh3_dlc29_unit_passive_crush_the_weak",
+          "source": {
+            "rowId": "unit_abilities_tables:7018df55ee6065584909",
+            "field": "key"
+          }
+        }
+      ],
+      "withdrawals": [
+        {
+          "field": "passiveAbilities",
+          "reason": "reason-d809ce6b39903e8f"
+        },
+        {
+          "field": "attributes",
+          "reason": "reason-d809ce6b39903e8f"
+        },
+        {
+          "field": "missile",
+          "reason": "reason-783c8e7e1685ccdc"
+        }
+      ],
+      "productionProjectionSha256": "25606831efe4dfac2be1d52f1ea55a5d3f32dc4bcaa1736517b30cadc1ebf836",
+      "missileReview": {
+        "completeness": "NO_MISSILE_PATH",
+        "paths": [],
+        "ammoSemantics": {
+          "displayConversion": "UNRESOLVED",
+          "consumption": "UNRESOLVED",
+          "poolSharing": "UNRESOLVED",
+          "attachmentScaling": "NOT_AUTHORIZED"
+        },
+        "admittedFields": []
+      }
+    },
+    {
+      "slug": "expansion-02-22",
+      "sourcePointer": "data.candidates.21",
+      "originalStatus": "PARTIAL",
+      "overall": "PROMOTABLE_WITH_OMISSIONS",
+      "composite": false,
+      "groups": {
+        "identity": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "id",
+            "name"
+          ],
+          "omitted": []
+        },
+        "affiliation/catalog": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "factionId"
+          ],
+          "omitted": []
+        },
+        "classification": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "classification.category",
+            "classification.tier"
+          ],
+          "omitted": []
+        },
+        "entities": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "entities.entitySize",
+            "entities.mass"
+          ],
+          "omitted": [
+            "entities.totalHealth:ec9e3ab1b921b805",
+            "entities.healthPerEntity:c91e6133a24bb0f7",
+            "entities.count:55307753502d8137",
+            "entities.unitScale:4ce4a888b689c3f7"
+          ]
+        },
+        "movement": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "movement.canSkirmish"
+          ],
+          "omitted": [
+            "movement.speed:b4ce8c8fa87f333e",
+            "movement.groundSpeed:b03bd19b66616947",
+            "movement.chargeSpeed:0d6e0b1966fad87e",
+            "movement.canFly:f181794b5c1fe8af",
+            "movement.canRun:0e84b2d1d5fcad2c"
+          ]
+        },
+        "defense": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "defense.armor",
+            "defense.meleeDefense",
+            "defense.leadership",
+            "defense.shieldBlockChance",
+            "defense.projectilePenetrationResistance"
+          ],
+          "omitted": [
+            "defense.resistances:6b1e1f9c1948d2d6"
+          ]
+        },
+        "melee": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "melee.meleeAttack",
+            "melee.chargeBonus",
+            "melee.damage.base",
+            "melee.damage.armorPiercing",
+            "melee.damage.bonusVsLarge",
+            "melee.damage.bonusVsInfantry",
+            "melee.attackInterval",
+            "melee.weaponLength",
+            "melee.splash.maxTargets"
+          ],
+          "omitted": [
+            "melee.splash.maxTargetSize:21559b20f62293cb",
+            "melee.attackAttributes.flaming:e8b9e17460f0b1cb"
+          ]
+        },
+        "missile": {
+          "status": "OMIT",
+          "note": "reason-783c8e7e1685ccdc",
+          "admittedFields": [],
+          "omitted": [
+            "missile.range:25a1d1b1a0c1bd73",
+            "missile.projectile.baseDamage:bb0a60fa8122cae7",
+            "missile.projectile.armorPiercingDamage:11ad81cd7be7f91b",
+            "missile.projectile.bonusVsLarge:53128b3801d3586e",
+            "missile.projectile.bonusVsInfantry:502db0e8edeeb776",
+            "missile.projectile.shotsPerVolley:fe41fe3003689ab9",
+            "missile.explosion.baseDamage:2c848a5fb2c6ce77",
+            "missile.explosion.armorPiercingDamage:aca77febc2637459",
+            "missile.explosion.radius:20a3dd2d3d19a789",
+            "missile.accuracy.calibrationDistance:78e047185ab252b5",
+            "missile.accuracy.calibrationArea:9746bb572412b4a7",
+            "missile.reload.baseTime:f6eea1a9c2e14aa9",
+            "missile.projectile.penetration.resistanceBudget:51676867260a6807",
+            "missile.projectile.penetration.stopsAtEntitySize:e3bceb930851de2c",
+            "missile.ammunition:ef768cec0aa7a1ff",
+            "missile.accuracy.accuracy:03f7d158534875fb",
+            "missile.reload.reloadSkill:9cad19b2728385d7",
+            "missile.reload.currentTime:26a4460e6c957684",
+            "missile.strength:6ed0987d2f71de37",
+            "missile.projectile.ignoresShields:3e49353cd50747fc",
+            "missile.projectile.penetration.maxPenetrations:d64eacb755035437"
+          ]
+        },
+        "campaign": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "campaign.recruitmentCost",
+            "campaign.upkeep",
+            "campaign.recruitmentTurns"
+          ],
+          "omitted": [
+            "campaign.recruitmentRequirements:2ad429242940f1fd",
+            "campaign.unitCap:aff5935abb2f84fe"
+          ]
+        },
+        "customBattle": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "customBattle.cost"
+          ],
+          "omitted": []
+        },
+        "abilities": {
+          "status": "OMIT",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [],
+          "omitted": []
+        },
+        "passiveAbilities": {
+          "status": "NEEDS_MAPPING",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [],
+          "omitted": []
+        },
+        "attributes": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "attributes.0"
+          ],
+          "omitted": []
+        },
+        "composition/runtime structure": {
+          "status": "OMIT",
+          "note": "reason-63f96edfdbb46360"
+        }
+      },
+      "unknownIds": [
+        {
+          "kind": "ability",
+          "caId": "wh3_dlc29_unit_passive_crush_the_weak",
+          "source": {
+            "rowId": "unit_abilities_tables:7018df55ee6065584909",
+            "field": "key"
+          }
+        }
+      ],
+      "withdrawals": [
+        {
+          "field": "passiveAbilities",
+          "reason": "reason-d809ce6b39903e8f"
+        },
+        {
+          "field": "missile",
+          "reason": "reason-783c8e7e1685ccdc"
+        }
+      ],
+      "productionProjectionSha256": "a4d16142f0218c597d00c3a238ed459c814d9be29abc2b3b7f802136518a4002",
+      "missileReview": {
+        "completeness": "NO_MISSILE_PATH",
+        "paths": [],
+        "ammoSemantics": {
+          "displayConversion": "UNRESOLVED",
+          "consumption": "UNRESOLVED",
+          "poolSharing": "UNRESOLVED",
+          "attachmentScaling": "NOT_AUTHORIZED"
+        },
+        "admittedFields": []
+      }
+    },
+    {
+      "slug": "expansion-02-23",
+      "sourcePointer": "data.candidates.22",
+      "originalStatus": "PARTIAL",
+      "overall": "PROMOTABLE_WITH_OMISSIONS",
+      "composite": false,
+      "groups": {
+        "identity": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "id",
+            "name"
+          ],
+          "omitted": []
+        },
+        "affiliation/catalog": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "factionId"
+          ],
+          "omitted": []
+        },
+        "classification": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "classification.category",
+            "classification.tier"
+          ],
+          "omitted": []
+        },
+        "entities": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "entities.entitySize",
+            "entities.mass"
+          ],
+          "omitted": [
+            "entities.totalHealth:ec9e3ab1b921b805",
+            "entities.healthPerEntity:c91e6133a24bb0f7",
+            "entities.count:55307753502d8137",
+            "entities.unitScale:4ce4a888b689c3f7"
+          ]
+        },
+        "movement": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "movement.canSkirmish"
+          ],
+          "omitted": [
+            "movement.speed:b4ce8c8fa87f333e",
+            "movement.groundSpeed:b03bd19b66616947",
+            "movement.chargeSpeed:0d6e0b1966fad87e",
+            "movement.canFly:f181794b5c1fe8af",
+            "movement.canRun:0e84b2d1d5fcad2c"
+          ]
+        },
+        "defense": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "defense.armor",
+            "defense.meleeDefense",
+            "defense.leadership",
+            "defense.shieldBlockChance",
+            "defense.projectilePenetrationResistance"
+          ],
+          "omitted": [
+            "defense.resistances:6b1e1f9c1948d2d6"
+          ]
+        },
+        "melee": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "melee.meleeAttack",
+            "melee.chargeBonus",
+            "melee.damage.base",
+            "melee.damage.armorPiercing",
+            "melee.damage.bonusVsLarge",
+            "melee.damage.bonusVsInfantry",
+            "melee.attackInterval",
+            "melee.weaponLength",
+            "melee.splash.maxTargets"
+          ],
+          "omitted": [
+            "melee.splash.maxTargetSize:21559b20f62293cb",
+            "melee.attackAttributes.flaming:e8b9e17460f0b1cb"
+          ]
+        },
+        "missile": {
+          "status": "OMIT",
+          "note": "reason-783c8e7e1685ccdc",
+          "admittedFields": [],
+          "omitted": [
+            "missile.range:25a1d1b1a0c1bd73",
+            "missile.projectile.baseDamage:bb0a60fa8122cae7",
+            "missile.projectile.armorPiercingDamage:11ad81cd7be7f91b",
+            "missile.projectile.bonusVsLarge:53128b3801d3586e",
+            "missile.projectile.bonusVsInfantry:502db0e8edeeb776",
+            "missile.projectile.shotsPerVolley:fe41fe3003689ab9",
+            "missile.explosion.baseDamage:2c848a5fb2c6ce77",
+            "missile.explosion.armorPiercingDamage:aca77febc2637459",
+            "missile.explosion.radius:20a3dd2d3d19a789",
+            "missile.accuracy.calibrationDistance:78e047185ab252b5",
+            "missile.accuracy.calibrationArea:9746bb572412b4a7",
+            "missile.reload.baseTime:f6eea1a9c2e14aa9",
+            "missile.projectile.penetration.resistanceBudget:51676867260a6807",
+            "missile.projectile.penetration.stopsAtEntitySize:e3bceb930851de2c",
+            "missile.ammunition:ef768cec0aa7a1ff",
+            "missile.accuracy.accuracy:03f7d158534875fb",
+            "missile.reload.reloadSkill:9cad19b2728385d7",
+            "missile.reload.currentTime:26a4460e6c957684",
+            "missile.strength:6ed0987d2f71de37",
+            "missile.projectile.ignoresShields:3e49353cd50747fc",
+            "missile.projectile.penetration.maxPenetrations:d64eacb755035437"
+          ]
+        },
+        "campaign": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "campaign.recruitmentCost",
+            "campaign.upkeep",
+            "campaign.recruitmentTurns"
+          ],
+          "omitted": [
+            "campaign.recruitmentRequirements:2ad429242940f1fd",
+            "campaign.unitCap:aff5935abb2f84fe"
+          ]
+        },
+        "customBattle": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "customBattle.cost"
+          ],
+          "omitted": []
+        },
+        "abilities": {
+          "status": "OMIT",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [],
+          "omitted": []
+        },
+        "passiveAbilities": {
+          "status": "NEEDS_MAPPING",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [],
+          "omitted": []
+        },
+        "attributes": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "attributes.0"
+          ],
+          "omitted": []
+        },
+        "composition/runtime structure": {
+          "status": "OMIT",
+          "note": "reason-63f96edfdbb46360"
+        }
+      },
+      "unknownIds": [
+        {
+          "kind": "ability",
+          "caId": "wh3_dlc29_unit_passive_crush_the_weak",
+          "source": {
+            "rowId": "unit_abilities_tables:7018df55ee6065584909",
+            "field": "key"
+          }
+        },
+        {
+          "kind": "ability",
+          "caId": "wh_main_unit_passive_frenzy",
+          "source": {
+            "rowId": "unit_abilities_tables:999112bb3efdf8e4f715",
+            "field": "key"
+          }
+        }
+      ],
+      "withdrawals": [
+        {
+          "field": "passiveAbilities",
+          "reason": "reason-d809ce6b39903e8f"
+        },
+        {
+          "field": "missile",
+          "reason": "reason-783c8e7e1685ccdc"
+        }
+      ],
+      "productionProjectionSha256": "16c68103131c6159f6febcf1e94bcf2101f121cbf994cafc1586f752b74263d4",
+      "missileReview": {
+        "completeness": "NO_MISSILE_PATH",
+        "paths": [],
+        "ammoSemantics": {
+          "displayConversion": "UNRESOLVED",
+          "consumption": "UNRESOLVED",
+          "poolSharing": "UNRESOLVED",
+          "attachmentScaling": "NOT_AUTHORIZED"
+        },
+        "admittedFields": []
+      }
+    },
+    {
+      "slug": "expansion-02-24",
+      "sourcePointer": "data.candidates.23",
+      "originalStatus": "PARTIAL",
+      "overall": "PROMOTABLE_WITH_OMISSIONS",
+      "composite": true,
+      "groups": {
+        "identity": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "id",
+            "name"
+          ],
+          "omitted": []
+        },
+        "affiliation/catalog": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "factionId"
+          ],
+          "omitted": []
+        },
+        "classification": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "classification.category",
+            "classification.tier"
+          ],
+          "omitted": []
+        },
+        "entities": {
+          "status": "OMIT",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [],
+          "omitted": [
+            "entities.entitySize:6a0d940197e781d5",
+            "entities.mass:d6da950a53dd5fab",
+            "entities.totalHealth:ec9e3ab1b921b805",
+            "entities.healthPerEntity:c91e6133a24bb0f7",
+            "entities.count:55307753502d8137",
+            "entities.unitScale:4ce4a888b689c3f7"
+          ]
+        },
+        "movement": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "movement.canSkirmish"
+          ],
+          "omitted": [
+            "movement.speed:b4ce8c8fa87f333e",
+            "movement.groundSpeed:b03bd19b66616947",
+            "movement.chargeSpeed:0d6e0b1966fad87e",
+            "movement.canFly:f181794b5c1fe8af",
+            "movement.canRun:0e84b2d1d5fcad2c"
+          ]
+        },
+        "defense": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "defense.armor",
+            "defense.meleeDefense",
+            "defense.leadership",
+            "defense.shieldBlockChance"
+          ],
+          "omitted": [
+            "defense.projectilePenetrationResistance:c48c279e6c8323ae",
+            "defense.resistances:6b1e1f9c1948d2d6"
+          ]
+        },
+        "melee": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "melee.meleeAttack",
+            "melee.chargeBonus",
+            "melee.damage.base",
+            "melee.damage.armorPiercing",
+            "melee.damage.bonusVsLarge",
+            "melee.damage.bonusVsInfantry",
+            "melee.attackInterval",
+            "melee.weaponLength",
+            "melee.splash.maxTargets"
+          ],
+          "omitted": [
+            "melee.splash.maxTargetSize:21559b20f62293cb",
+            "melee.attackAttributes.flaming:e8b9e17460f0b1cb"
+          ]
+        },
+        "missile": {
+          "status": "OMIT",
+          "note": "reason-783c8e7e1685ccdc",
+          "admittedFields": [],
+          "omitted": [
+            "missile.range:25a1d1b1a0c1bd73",
+            "missile.projectile.baseDamage:bb0a60fa8122cae7",
+            "missile.projectile.armorPiercingDamage:11ad81cd7be7f91b",
+            "missile.projectile.bonusVsLarge:53128b3801d3586e",
+            "missile.projectile.bonusVsInfantry:502db0e8edeeb776",
+            "missile.projectile.shotsPerVolley:fe41fe3003689ab9",
+            "missile.explosion.baseDamage:2c848a5fb2c6ce77",
+            "missile.explosion.armorPiercingDamage:aca77febc2637459",
+            "missile.explosion.radius:20a3dd2d3d19a789",
+            "missile.accuracy.calibrationDistance:78e047185ab252b5",
+            "missile.accuracy.calibrationArea:9746bb572412b4a7",
+            "missile.reload.baseTime:f6eea1a9c2e14aa9",
+            "missile.projectile.penetration.resistanceBudget:51676867260a6807",
+            "missile.projectile.penetration.stopsAtEntitySize:e3bceb930851de2c",
+            "missile.ammunition:ef768cec0aa7a1ff",
+            "missile.accuracy.accuracy:03f7d158534875fb",
+            "missile.reload.reloadSkill:9cad19b2728385d7",
+            "missile.reload.currentTime:26a4460e6c957684",
+            "missile.strength:6ed0987d2f71de37",
+            "missile.projectile.ignoresShields:3e49353cd50747fc",
+            "missile.projectile.penetration.maxPenetrations:d64eacb755035437"
+          ]
+        },
+        "campaign": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "campaign.recruitmentCost",
+            "campaign.upkeep",
+            "campaign.recruitmentTurns"
+          ],
+          "omitted": [
+            "campaign.recruitmentRequirements:2ad429242940f1fd",
+            "campaign.unitCap:aff5935abb2f84fe"
+          ]
+        },
+        "customBattle": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "customBattle.cost"
+          ],
+          "omitted": []
+        },
+        "abilities": {
+          "status": "OMIT",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [],
+          "omitted": []
+        },
+        "passiveAbilities": {
+          "status": "OMIT",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [],
+          "omitted": []
+        },
+        "attributes": {
+          "status": "PROMOTABLE",
+          "note": "reason-797c408fb6c3eb57",
+          "admittedFields": [
+            "attributes.0",
+            "attributes.1"
+          ],
+          "omitted": []
+        },
+        "composition/runtime structure": {
+          "status": "NEEDS_RUNTIME",
+          "note": "reason-8076a92906b3498a"
+        }
+      },
+      "unknownIds": [],
+      "withdrawals": [
+        {
+          "field": "missile",
+          "reason": "reason-783c8e7e1685ccdc"
+        }
+      ],
+      "productionProjectionSha256": "371ef782e941ae37eb2bddc27888199d1846e6f6d691e23e96a00c09d35c1c1c",
+      "missileReview": {
+        "completeness": "NO_MISSILE_PATH",
+        "paths": [],
+        "ammoSemantics": {
+          "displayConversion": "UNRESOLVED",
+          "consumption": "UNRESOLVED",
+          "poolSharing": "UNRESOLVED",
+          "attachmentScaling": "NOT_AUTHORIZED"
+        },
+        "admittedFields": []
+      }
+    }
+  ],
+  "omissions": {
+    "entities.totalHealth:ec9e3ab1b921b805": {
+      "field": "entities.totalHealth",
+      "kind": "UNRESOLVED",
+      "semanticsStatus": "UNRESOLVED",
+      "reason": "reason-8d532d2523b80a2e"
+    },
+    "entities.healthPerEntity:c91e6133a24bb0f7": {
+      "field": "entities.healthPerEntity",
+      "kind": "UNRESOLVED",
+      "semanticsStatus": "UNRESOLVED",
+      "reason": "reason-caece52e26fc5b60"
+    },
+    "entities.count:55307753502d8137": {
+      "field": "entities.count",
+      "kind": "UNRESOLVED",
+      "semanticsStatus": "UNRESOLVED",
+      "reason": "reason-69f876d122c80576"
+    },
+    "entities.unitScale:4ce4a888b689c3f7": {
+      "field": "entities.unitScale",
+      "kind": "UNRESOLVED",
+      "semanticsStatus": "UNRESOLVED",
+      "reason": "reason-bdf7eb42159b4931"
+    },
+    "movement.speed:b4ce8c8fa87f333e": {
+      "field": "movement.speed",
+      "kind": "UNRESOLVED",
+      "semanticsStatus": "STRONGLY SUPPORTED",
+      "reason": "reason-945738a866e3f910"
+    },
+    "movement.groundSpeed:b03bd19b66616947": {
+      "field": "movement.groundSpeed",
+      "kind": "UNRESOLVED",
+      "semanticsStatus": "STRONGLY SUPPORTED",
+      "reason": "reason-945738a866e3f910"
+    },
+    "movement.chargeSpeed:0d6e0b1966fad87e": {
+      "field": "movement.chargeSpeed",
+      "kind": "UNRESOLVED",
+      "semanticsStatus": "STRONGLY SUPPORTED",
+      "reason": "reason-8ebde9432e30bf3e"
+    },
+    "movement.canFly:f181794b5c1fe8af": {
+      "field": "movement.canFly",
+      "kind": "UNRESOLVED",
+      "semanticsStatus": "UNRESOLVED",
+      "reason": "reason-f49eecbb483f74d4"
+    },
+    "movement.canRun:0e84b2d1d5fcad2c": {
+      "field": "movement.canRun",
+      "kind": "UNRESOLVED",
+      "semanticsStatus": "UNRESOLVED",
+      "reason": "reason-f49eecbb483f74d4"
+    },
+    "defense.resistances:6b1e1f9c1948d2d6": {
+      "field": "defense.resistances",
+      "kind": "UNRESOLVED",
+      "semanticsStatus": "STRONGLY SUPPORTED",
+      "reason": "reason-7ab7d691d225a5b5"
+    },
+    "melee.splash.maxTargetSize:21559b20f62293cb": {
+      "field": "melee.splash.maxTargetSize",
+      "kind": "UNRESOLVED",
+      "semanticsStatus": "UNRESOLVED",
+      "reason": "reason-d538096ce3cbac61"
+    },
+    "melee.attackAttributes.flaming:e8b9e17460f0b1cb": {
+      "field": "melee.attackAttributes.flaming",
+      "kind": "UNRESOLVED",
+      "semanticsStatus": "UNRESOLVED",
+      "reason": "reason-2d6d3ca1a41db18c"
+    },
+    "missile.range:25a1d1b1a0c1bd73": {
+      "field": "missile.range",
+      "kind": "UNRESOLVED",
+      "semanticsStatus": "UNRESOLVED",
+      "reason": "reason-f810d76fea34be73"
+    },
+    "missile.projectile.baseDamage:bb0a60fa8122cae7": {
+      "field": "missile.projectile.baseDamage",
+      "kind": "UNRESOLVED",
+      "semanticsStatus": "UNRESOLVED",
+      "reason": "reason-f810d76fea34be73"
+    },
+    "missile.projectile.armorPiercingDamage:11ad81cd7be7f91b": {
+      "field": "missile.projectile.armorPiercingDamage",
+      "kind": "UNRESOLVED",
+      "semanticsStatus": "UNRESOLVED",
+      "reason": "reason-f810d76fea34be73"
+    },
+    "missile.projectile.bonusVsLarge:53128b3801d3586e": {
+      "field": "missile.projectile.bonusVsLarge",
+      "kind": "UNRESOLVED",
+      "semanticsStatus": "UNRESOLVED",
+      "reason": "reason-f810d76fea34be73"
+    },
+    "missile.projectile.bonusVsInfantry:502db0e8edeeb776": {
+      "field": "missile.projectile.bonusVsInfantry",
+      "kind": "UNRESOLVED",
+      "semanticsStatus": "UNRESOLVED",
+      "reason": "reason-f810d76fea34be73"
+    },
+    "missile.projectile.shotsPerVolley:fe41fe3003689ab9": {
+      "field": "missile.projectile.shotsPerVolley",
+      "kind": "UNRESOLVED",
+      "semanticsStatus": "UNRESOLVED",
+      "reason": "reason-f810d76fea34be73"
+    },
+    "missile.explosion.baseDamage:2c848a5fb2c6ce77": {
+      "field": "missile.explosion.baseDamage",
+      "kind": "UNRESOLVED",
+      "semanticsStatus": "UNRESOLVED",
+      "reason": "reason-f810d76fea34be73"
+    },
+    "missile.explosion.armorPiercingDamage:aca77febc2637459": {
+      "field": "missile.explosion.armorPiercingDamage",
+      "kind": "UNRESOLVED",
+      "semanticsStatus": "UNRESOLVED",
+      "reason": "reason-f810d76fea34be73"
+    },
+    "missile.explosion.radius:20a3dd2d3d19a789": {
+      "field": "missile.explosion.radius",
+      "kind": "UNRESOLVED",
+      "semanticsStatus": "UNRESOLVED",
+      "reason": "reason-f810d76fea34be73"
+    },
+    "missile.accuracy.calibrationDistance:78e047185ab252b5": {
+      "field": "missile.accuracy.calibrationDistance",
+      "kind": "UNRESOLVED",
+      "semanticsStatus": "UNRESOLVED",
+      "reason": "reason-f810d76fea34be73"
+    },
+    "missile.accuracy.calibrationArea:9746bb572412b4a7": {
+      "field": "missile.accuracy.calibrationArea",
+      "kind": "UNRESOLVED",
+      "semanticsStatus": "UNRESOLVED",
+      "reason": "reason-f810d76fea34be73"
+    },
+    "missile.reload.baseTime:f6eea1a9c2e14aa9": {
+      "field": "missile.reload.baseTime",
+      "kind": "UNRESOLVED",
+      "semanticsStatus": "UNRESOLVED",
+      "reason": "reason-f810d76fea34be73"
+    },
+    "missile.projectile.penetration.resistanceBudget:51676867260a6807": {
+      "field": "missile.projectile.penetration.resistanceBudget",
+      "kind": "UNRESOLVED",
+      "semanticsStatus": "UNRESOLVED",
+      "reason": "reason-f810d76fea34be73"
+    },
+    "missile.projectile.penetration.stopsAtEntitySize:e3bceb930851de2c": {
+      "field": "missile.projectile.penetration.stopsAtEntitySize",
+      "kind": "UNRESOLVED",
+      "semanticsStatus": "UNRESOLVED",
+      "reason": "reason-f810d76fea34be73"
+    },
+    "missile.ammunition:ef768cec0aa7a1ff": {
+      "field": "missile.ammunition",
+      "kind": "UNRESOLVED",
+      "semanticsStatus": "UNRESOLVED",
+      "reason": "reason-144c6f546d4418e3"
+    },
+    "missile.accuracy.accuracy:03f7d158534875fb": {
+      "field": "missile.accuracy.accuracy",
+      "kind": "UNRESOLVED",
+      "semanticsStatus": "STRONGLY SUPPORTED",
+      "reason": "reason-00d6d490fb521eba"
+    },
+    "missile.reload.reloadSkill:9cad19b2728385d7": {
+      "field": "missile.reload.reloadSkill",
+      "kind": "UNRESOLVED",
+      "semanticsStatus": "UNRESOLVED",
+      "reason": "reason-370132a3820786d6"
+    },
+    "missile.reload.currentTime:26a4460e6c957684": {
+      "field": "missile.reload.currentTime",
+      "kind": "UNRESOLVED",
+      "semanticsStatus": "UNRESOLVED",
+      "reason": "reason-fb4ab7af3a5e3553"
+    },
+    "missile.strength:6ed0987d2f71de37": {
+      "field": "missile.strength",
+      "kind": "UNRESOLVED",
+      "semanticsStatus": "UNRESOLVED",
+      "reason": "reason-d2a705c574fd6a19"
+    },
+    "missile.projectile.ignoresShields:3e49353cd50747fc": {
+      "field": "missile.projectile.ignoresShields",
+      "kind": "UNRESOLVED",
+      "semanticsStatus": "STRONGLY SUPPORTED",
+      "reason": "reason-e0992cbedf536ad9"
+    },
+    "missile.projectile.penetration.maxPenetrations:d64eacb755035437": {
+      "field": "missile.projectile.penetration.maxPenetrations",
+      "kind": "UNRESOLVED",
+      "semanticsStatus": "UNRESOLVED",
+      "reason": "reason-4ed38876df51e831"
+    },
+    "campaign.recruitmentRequirements:2ad429242940f1fd": {
+      "field": "campaign.recruitmentRequirements",
+      "kind": "UNRESOLVED",
+      "semanticsStatus": "UNRESOLVED",
+      "reason": "reason-54444d0ebc88ab98"
+    },
+    "campaign.unitCap:aff5935abb2f84fe": {
+      "field": "campaign.unitCap",
+      "kind": "UNRESOLVED",
+      "semanticsStatus": "CONFIRMED",
+      "reason": "reason-a679c394979b393d"
+    },
+    "missile.projectile.penetration.stopsAtEntitySize:6007fb5f63df4f6f": {
+      "field": "missile.projectile.penetration.stopsAtEntitySize",
+      "kind": "UNRESOLVED",
+      "semanticsStatus": "UNRESOLVED",
+      "reason": "reason-d538096ce3cbac61"
+    },
+    "entities.entitySize:6a0d940197e781d5": {
+      "field": "entities.entitySize",
+      "kind": "UNRESOLVED",
+      "semanticsStatus": "UNRESOLVED",
+      "reason": "reason-8014f139b3c8e91a"
+    },
+    "entities.mass:d6da950a53dd5fab": {
+      "field": "entities.mass",
+      "kind": "UNRESOLVED",
+      "semanticsStatus": "UNRESOLVED",
+      "reason": "reason-8014f139b3c8e91a"
+    },
+    "defense.projectilePenetrationResistance:c48c279e6c8323ae": {
+      "field": "defense.projectilePenetrationResistance",
+      "kind": "UNRESOLVED",
+      "semanticsStatus": "UNRESOLVED",
+      "reason": "reason-8014f139b3c8e91a"
+    },
+    "missile.range:b75b9fa3c298879a": {
+      "field": "missile.range",
+      "kind": "UNRESOLVED",
+      "semanticsStatus": "MISSILE_PRESENTATION_UNRESOLVED",
+      "reason": "reason-e4f438aa0ef37f68"
+    },
+    "missile.projectile.baseDamage:4526f90eeb84deb5": {
+      "field": "missile.projectile.baseDamage",
+      "kind": "UNRESOLVED",
+      "semanticsStatus": "MISSILE_PRESENTATION_UNRESOLVED",
+      "reason": "reason-e4f438aa0ef37f68"
+    },
+    "missile.projectile.armorPiercingDamage:0cad8b4ae45747dc": {
+      "field": "missile.projectile.armorPiercingDamage",
+      "kind": "UNRESOLVED",
+      "semanticsStatus": "MISSILE_PRESENTATION_UNRESOLVED",
+      "reason": "reason-e4f438aa0ef37f68"
+    },
+    "missile.projectile.bonusVsLarge:25b3db27eb18e300": {
+      "field": "missile.projectile.bonusVsLarge",
+      "kind": "UNRESOLVED",
+      "semanticsStatus": "MISSILE_PRESENTATION_UNRESOLVED",
+      "reason": "reason-e4f438aa0ef37f68"
+    },
+    "missile.projectile.bonusVsInfantry:e42d25c0f0cff447": {
+      "field": "missile.projectile.bonusVsInfantry",
+      "kind": "UNRESOLVED",
+      "semanticsStatus": "MISSILE_PRESENTATION_UNRESOLVED",
+      "reason": "reason-e4f438aa0ef37f68"
+    },
+    "missile.projectile.shotsPerVolley:66f7cfb3767ff402": {
+      "field": "missile.projectile.shotsPerVolley",
+      "kind": "UNRESOLVED",
+      "semanticsStatus": "MISSILE_PRESENTATION_UNRESOLVED",
+      "reason": "reason-e4f438aa0ef37f68"
+    },
+    "missile.accuracy.calibrationDistance:d31e10f3469eeeb7": {
+      "field": "missile.accuracy.calibrationDistance",
+      "kind": "UNRESOLVED",
+      "semanticsStatus": "MISSILE_PRESENTATION_UNRESOLVED",
+      "reason": "reason-e4f438aa0ef37f68"
+    },
+    "missile.accuracy.calibrationArea:23aaba5fe2ccf7dd": {
+      "field": "missile.accuracy.calibrationArea",
+      "kind": "UNRESOLVED",
+      "semanticsStatus": "MISSILE_PRESENTATION_UNRESOLVED",
+      "reason": "reason-e4f438aa0ef37f68"
+    },
+    "missile.reload.baseTime:6fc4e192f7c4dff3": {
+      "field": "missile.reload.baseTime",
+      "kind": "UNRESOLVED",
+      "semanticsStatus": "MISSILE_PRESENTATION_UNRESOLVED",
+      "reason": "reason-e4f438aa0ef37f68"
+    },
+    "missile.projectile.penetration.resistanceBudget:6c6af07f9a2f30bb": {
+      "field": "missile.projectile.penetration.resistanceBudget",
+      "kind": "UNRESOLVED",
+      "semanticsStatus": "MISSILE_PRESENTATION_UNRESOLVED",
+      "reason": "reason-e4f438aa0ef37f68"
+    },
+    "missile.projectile.penetration.stopsAtEntitySize:67db260dddea2221": {
+      "field": "missile.projectile.penetration.stopsAtEntitySize",
+      "kind": "UNRESOLVED",
+      "semanticsStatus": "MISSILE_PRESENTATION_UNRESOLVED",
+      "reason": "reason-e4f438aa0ef37f68"
+    }
+  },
+  "reasons": {
+    "reason-797c408fb6c3eb57": "Only listed direct/curated fields; missing values remain unknown.",
+    "reason-8d532d2523b80a2e": "HP aggregation and scaling are unverified.",
+    "reason-caece52e26fc5b60": "Entity hit_points alone is not verified final per-entity health.",
+    "reason-69f876d122c80576": "Displayed count policy is not implemented; num_men/num_engines remain raw facts.",
+    "reason-bdf7eb42159b4931": "No verified displayed troop-scale mapping.",
+    "reason-945738a866e3f910": "The x10 hypothesis is not CONFIRMED.",
+    "reason-8ebde9432e30bf3e": "Displayed charge-speed units/source selection are unverified.",
+    "reason-f49eecbb483f74d4": "No positive reviewed attribute evidence; absence never implies false/true.",
+    "reason-7ab7d691d225a5b5": "Raw-to-runtime resistance mapping is only STRONGLY SUPPORTED; no opt-in in conservative mode.",
+    "reason-d538096ce3cbac61": "Raw field is not a valid size for this Unit field; no substitute used.",
+    "reason-2d6d3ca1a41db18c": "Numeric ignition_amount is retained; no verified boolean flaming mapping.",
+    "reason-783c8e7e1685ccdc": "Bounded missile graph: NO_MISSILE_PATH. Only a complete static single profile permits direct base fields; ammo/DPS/runtime precedence remain unresolved.",
+    "reason-f810d76fea34be73": "Missing/ambiguous source row, named field or verified join.",
+    "reason-144c6f546d4418e3": "Volley/display ammunition conversion is unverified.",
+    "reason-00d6d490fb521eba": "Combined displayed accuracy is unverified.",
+    "reason-370132a3820786d6": "Raw reload reduction is not established as displayed reload skill.",
+    "reason-fb4ab7af3a5e3553": "No verified current-reload formula; not a stored Unit field.",
+    "reason-d2a705c574fd6a19": "No verified missile-strength/DPS formula; not a stored Unit field.",
+    "reason-e0992cbedf536ad9": "A category description does not establish a universal shield-bypass flag.",
+    "reason-4ed38876df51e831": "Resistance budget must not be converted into pierced-entity count.",
+    "reason-54444d0ebc88ab98": "Building stage/requirement/permissions do not establish effective availability.",
+    "reason-a679c394979b393d": "Raw cap sentinel/context semantics are not mapped.",
+    "reason-63f96edfdbb46360": "Unique schema-connected MAN supports only direct per-entity size/mass/resistance. No displayed count/HP/speed/scale inference.",
+    "reason-d809ce6b39903e8f": "Incomplete optional ID group omitted in full; raw unknown IDs retained.",
+    "reason-9067faff1321c5c7": "Bounded missile graph: COMPLETE_STATIC_SINGLE. Only a complete static single profile permits direct base fields; ammo/DPS/runtime precedence remain unresolved.",
+    "reason-8014f139b3c8e91a": "Representative entity is ambiguous or its raw property is unavailable; no crew/mount/engine aggregation.",
+    "reason-8076a92906b3498a": "Mounted representative unresolved: no rider/mount size, mass, resistance or speed selected. Core admission needs no runtime.",
+    "reason-8195efff3ec87b41": "Bounded missile graph: STRUCTURE_KNOWN_RUNTIME_UNRESOLVED. Only a complete static single profile permits direct base fields; ammo/DPS/runtime precedence remain unresolved.",
+    "reason-e4f438aa0ef37f68": "Missile sidecar STRUCTURE_KNOWN_RUNTIME_UNRESOLVED: a single active/representative profile is not established."
+  }
+}

@@ -82,11 +82,11 @@ test('explicit admission appends 14, preserves previous 20 values/order and is i
   const batch=buildExpansionBatch(input);assert.equal(batch.added,0);assert.deepEqual(batch.units,units);
   const after=structuredClone({...input,validate:undefined});delete after.validate;assert.deepEqual(after,before);
   assert.equal(evidenceHash(units.slice(0,20)),baselineUnitsHash);
-  input.units=units.slice(0,20);const first=buildExpansionBatch(input);assert.equal(first.added,14);assert.deepEqual(first.units,units);
+  input.units=units.slice(0,20);const first=buildExpansionBatch(input);assert.equal(first.added,14);assert.deepEqual(first.units,units.slice(0,34));
   assert.deepEqual(first.units.slice(0,20),input.units);assert.deepEqual(buildExpansionBatch({...input,units:first.units}).units,first.units);
   assert.deepEqual(validateUnits(units,factions.map(f=>f.id)),[]);
-  assert.equal(catalog.list().length,34);assert.equal(new Set(catalog.list().map(e=>e.id)).size,34);
-  assert.equal(catalog.list().filter(e=>e.hasProduction&&!e.isSample).length,29);assert.equal(catalog.list().filter(e=>e.isSample).length,5);
+  assert.equal(catalog.list().length,106);assert.equal(new Set(catalog.list().map(e=>e.id)).size,106);
+  assert.equal(catalog.list().filter(e=>e.hasProduction&&!e.isSample).length,101);assert.equal(catalog.list().filter(e=>e.isSample).length,5);
   assert.equal(catalog.search('','evidence').length,5);assert.equal(catalog.search('','diagnostic-only').length,0);
 });
 
