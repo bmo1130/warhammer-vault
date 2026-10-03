@@ -70,3 +70,27 @@ the entire Production file remain exact.
   manifest, review, projections, semantic fixtures, raw inputs, Production data,
   diagnostic/shared identity files and every other importer policy are untouched.
 - No game execution, new measurement request, raw-log reconstruction or push.
+
+## Recheck: 2026-10-03 (Asia/Seoul)
+
+Rechecked from `637b4d38b0b072b98349bda7f86cfbdc34485b0e` after the repeated
+admission request. Refreshed the repository raw-capture inventory and rescanned
+the known original game/Desktop log locations plus stored runtime JSON files.
+The counts remain 91 file paths, 44 prefix-bearing copies / 13 unique capture
+hashes, and 31 archived JSON files (15,600 repeated probe records / 2,528 repeated
+observation instances). There are still zero matching records for the three
+exact identities. No additional capture file was available to admit.
+
+All three remain `WITHHELD / NO_MATCHING_ULTRA_RECORD`. Missing sources are the
+original Swordsmen (120 / 8280), Mounted Yeomen (60 / 5520) and Dragon Ogres
+(16 / 9856) ULTRA / DECLARED_SETUP records with exact main/land identity and a
+matching game/static snapshot. Semantic fixtures remain comparison fixtures only.
+
+Reran full tests (309/309), build (PASS), stored context/runtime/CCO regression
+(16/16), and HP admission/projection equality (PASS). Historical runtime outputs
+remain exactly equal and the original 51 archived files retain their bytes and
+provenance. Production JSON SHA256 remains the value recorded above; HP populated
+remains 2, with Dread Saurian 15088 / Skeleton Chariots 7032 unchanged.
+
+This recheck changes only this document. No Production field, HP policy,
+manifest/review/projection, runtime source, test, or unrelated importer code changes.
