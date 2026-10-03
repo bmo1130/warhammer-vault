@@ -1,5 +1,13 @@
 # ULTRA HP admission
 
+Current state: 10 unchanged `DIRECT_ULTRA_RUNTIME` admissions plus exactly three
+explicit `STATIC_DERIVED_HP` admissions; Production HP populated 13 / missing 88.
+The original direct runtime policy and normalizer remain unchanged. The separate
+[three-unit static admission](STATIC_DERIVED_HP.md) requires the latest research's
+exact tested HP-chain profile and does not authorize general static derivation.
+The initial implementation and subsequent capture history below describe their
+original cohorts; their evidence and reports remain pinned.
+
 ## Existing source chain (inspection before implementation)
 
 The conservative static normalizer follows processed-schema main_units.land_unit

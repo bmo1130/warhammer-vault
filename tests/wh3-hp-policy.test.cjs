@@ -20,9 +20,9 @@ test('ULTRA HP clean checkout source → review → explicit admission → Produ
   assert.deepEqual(overlay.applyProductionHP([...staticUnits]),overlay.applyProductionHP(staticUnits));
   assert.deepEqual(units.filter(u=>u.gameVersion==='sample'),staticUnits.filter(u=>u.gameVersion==='sample'));
   assert.equal(units.filter(u=>u.gameVersion!=='sample').length,101);assert.equal(units.filter(u=>u.gameVersion==='sample').length,5);
-  const changed=units.filter((u,i)=>JSON.stringify(u)!==JSON.stringify(staticUnits[i]));assert.equal(changed.length,10);
+  const changed=units.filter((u,i)=>JSON.stringify(u)!==JSON.stringify(staticUnits[i]));assert.equal(changed.length,13);
   for(const unit of changed){const index=units.indexOf(unit),copy=structuredClone(unit);delete copy.entities.totalHealth;assert.deepEqual(copy,staticUnits[index]);}
-  assert.equal(units.filter(u=>u.gameVersion!=='sample'&&u.entities.totalHealth===undefined).length,91);
+  assert.equal(units.filter(u=>u.gameVersion!=='sample'&&u.entities.totalHealth===undefined).length,88);
   const check=spawnSync(process.execPath,['scripts/promote-ultra-hp.mjs','--check'],{encoding:'utf8'});assert.equal(check.status,0,check.stderr);
 });
 
@@ -120,6 +120,7 @@ test('three original ULTRA captures admit exact totals; only their HP fields cha
   const {replayHP,byteHash}=await modules(),report=replayHP(manifest),units=read('src/data/units.json');
   const expected=[['wh_main_emp_inf_swordsmen',8280,120],['wh_main_brt_cav_mounted_yeomen_0',5520,60],['wh_dlc01_chs_mon_dragon_ogre',9856,16]];
   const previous=structuredClone(units);
+  for(const a of read(base+'static-review.json').admitted)delete previous.find(u=>u.id===a.id).entities.totalHealth;
   for(const admission of committed.admitted.slice(5))delete previous.find(u=>u.id===admission.id).entities.totalHealth;
   for(const [main,hp,count] of expected){
     const r=report.review.find(r=>r.staticChain.sourceMainKey===main);

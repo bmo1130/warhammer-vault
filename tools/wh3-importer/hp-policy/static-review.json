@@ -1,0 +1,1470 @@
+{
+  "format": "reviewed-three-unit-static-ultra-hp-v1",
+  "manifestSha256": "8823829b5a4e0e2159edc0d9afe7aaa3935bd0a414861c7a87168cef361acd67",
+  "inputs": [
+    {
+      "file": "tools/wh3-importer/hp-research/black-coach.json",
+      "sha256": "04ce4b633989d260851579ffc5de0358457343739cda534d0a00c4ac1c3b57af"
+    },
+    {
+      "file": "tools/wh3-importer/hp-research/selection.json",
+      "sha256": "e02245a4511c6ea05ad4b9373ad46f89b79948e888c46d01bd96c7209ced0ac2"
+    },
+    {
+      "file": "tools/wh3-importer/hp-research/report.json",
+      "sha256": "cde3a364aee6b4ca0bcad74cfb83ff4c9509f06e98a181614abd111a7a8cbfa3"
+    },
+    {
+      "file": "tools/wh3-importer/hp-policy/manifest.json",
+      "sha256": "2cd6086727dbc289e6db776da58498129ea7e2637ffccb8872ddf3a1a46a980d"
+    },
+    {
+      "file": "tools/wh3-importer/hp-policy/review.json",
+      "sha256": "4b094f4fb9ee1898674c68b686eafec22c15545808aa128283d5c62942b8f833"
+    }
+  ],
+  "unitSize": "ULTRA",
+  "admitted": [
+    {
+      "id": "ca_unit_wh_main_emp_inf_spearmen_1",
+      "name": "Spearmen (Shields)",
+      "sourceMainKey": "wh_main_emp_inf_spearmen_1",
+      "sourceLandKey": "wh_main_emp_inf_spearmen_1",
+      "staticSnapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+      "kind": "STATIC_DERIVED_HP",
+      "field": "entities.totalHealth",
+      "value": 8280,
+      "baseUnitSha256": "b8580d0fc19ea4ea0bf836d83b87bd6913ff5425eaffced4473e53e679d9f136",
+      "unitSize": "ULTRA",
+      "unitSizeSource": "RUNTIME_VALIDATED_EXACT_PROFILE",
+      "profile": "MAN_ONLY",
+      "hpProfileSha256": "ae005698bf6a6bab98074859cc6bb98e1ff28605962b23ff70e50ad06e76e39e",
+      "formula": "(B+M)*N",
+      "inputs": {
+        "main.num_men": 120,
+        "land.num_mounts": 0,
+        "land.num_engines": 0,
+        "land.bonus_hit_points": 61,
+        "man.hit_points": 8,
+        "mount.hit_points": null,
+        "engine.hit_points": null,
+        "articulation.hit_points": null
+      },
+      "logicalCount": 120,
+      "confidence": "EXACT_RUNTIME_VALIDATED_HP_CHAIN_PROFILE_ONLY",
+      "checks": {
+        "EXACT_STATIC_IDENTITY_AND_JOINS": true,
+        "STRUCTURAL_CLASS_TESTED": true,
+        "NO_DIFFERING_SURVIVING_HP_PREDICTION": true,
+        "REQUIRED_STATIC_MULTIPLICITIES_VERIFIED": true,
+        "ULTRA_LOGICAL_COUNT_VERIFIED": true,
+        "SAME_TESTED_HP_CHAIN_PROFILE": true
+      },
+      "staticSource": {
+        "file": "tools/wh3-importer/promotion/partial-sources.json",
+        "pointer": "/candidates/2/dump"
+      },
+      "sourcePin": {
+        "file": "tools/wh3-importer/promotion/partial-sources.json",
+        "bytesSha256": "01da7892494835588d38ee8d116b0d2d556d3888eb638ab793d6dbfc74445a58"
+      },
+      "snapshot": {
+        "gameVersion": "9.0.2.0",
+        "schemaSha256": "5d628a0167b34a096752c5c21acd16493834a987c80dc9f02364617f796ba2a4",
+        "packs": [
+          {
+            "name": "db.pack",
+            "sha256": "d0fafac984b3985ec47cec0ea957591424f1077e52ef61941dbf2dc46e6cf723"
+          },
+          {
+            "name": "local_en.pack",
+            "sha256": "f979527a5aaecf293a4e66afc25ed6c760e4107ef4920b73bd56e10e2652fd6a"
+          }
+        ]
+      },
+      "sourceFields": {
+        "main.num_men": {
+          "value": 120,
+          "source": {
+            "rowId": "main_units_tables:0766962dc0380577ae99",
+            "table": "main_units_tables",
+            "rowKey": {
+              "unit": "wh_main_emp_inf_spearmen_1"
+            },
+            "field": "num_men",
+            "sourcePack": "db.pack",
+            "sourcePackPath": "db.pack",
+            "path": "db/main_units_tables/data__",
+            "schemaVersion": 7,
+            "joins": []
+          }
+        },
+        "land.num_mounts": {
+          "value": 0,
+          "source": {
+            "rowId": "land_units_tables:a1de8cf67c936ded2101",
+            "table": "land_units_tables",
+            "rowKey": {
+              "key": "wh_main_emp_inf_spearmen_1"
+            },
+            "field": "num_mounts",
+            "sourcePack": "db.pack",
+            "sourcePackPath": "db.pack",
+            "path": "db/land_units_tables/data__",
+            "schemaVersion": 54,
+            "joins": [
+              {
+                "from": "main_units_tables:0766962dc0380577ae99",
+                "field": "land_unit",
+                "to": "land_units_tables:a1de8cf67c936ded2101",
+                "targetField": "key",
+                "value": "wh_main_emp_inf_spearmen_1",
+                "direction": "forward",
+                "evidence": "RPFM processed schema is_reference",
+                "traversal": "from-to"
+              }
+            ]
+          }
+        },
+        "land.num_engines": {
+          "value": 0,
+          "source": {
+            "rowId": "land_units_tables:a1de8cf67c936ded2101",
+            "table": "land_units_tables",
+            "rowKey": {
+              "key": "wh_main_emp_inf_spearmen_1"
+            },
+            "field": "num_engines",
+            "sourcePack": "db.pack",
+            "sourcePackPath": "db.pack",
+            "path": "db/land_units_tables/data__",
+            "schemaVersion": 54,
+            "joins": [
+              {
+                "from": "main_units_tables:0766962dc0380577ae99",
+                "field": "land_unit",
+                "to": "land_units_tables:a1de8cf67c936ded2101",
+                "targetField": "key",
+                "value": "wh_main_emp_inf_spearmen_1",
+                "direction": "forward",
+                "evidence": "RPFM processed schema is_reference",
+                "traversal": "from-to"
+              }
+            ]
+          }
+        },
+        "land.bonus_hit_points": {
+          "value": 61,
+          "source": {
+            "rowId": "land_units_tables:a1de8cf67c936ded2101",
+            "table": "land_units_tables",
+            "rowKey": {
+              "key": "wh_main_emp_inf_spearmen_1"
+            },
+            "field": "bonus_hit_points",
+            "sourcePack": "db.pack",
+            "sourcePackPath": "db.pack",
+            "path": "db/land_units_tables/data__",
+            "schemaVersion": 54,
+            "joins": [
+              {
+                "from": "main_units_tables:0766962dc0380577ae99",
+                "field": "land_unit",
+                "to": "land_units_tables:a1de8cf67c936ded2101",
+                "targetField": "key",
+                "value": "wh_main_emp_inf_spearmen_1",
+                "direction": "forward",
+                "evidence": "RPFM processed schema is_reference",
+                "traversal": "from-to"
+              }
+            ]
+          }
+        },
+        "man.hit_points": {
+          "value": 8,
+          "source": {
+            "rowId": "battle_entities_tables:a55b0426b855f8b82693",
+            "table": "battle_entities_tables",
+            "rowKey": {
+              "key": "wh_main_infantry_standard_blood_dismembers"
+            },
+            "field": "hit_points",
+            "sourcePack": "db.pack",
+            "sourcePackPath": "db.pack",
+            "path": "db/battle_entities_tables/data__",
+            "schemaVersion": 39,
+            "joins": [
+              {
+                "from": "main_units_tables:0766962dc0380577ae99",
+                "field": "land_unit",
+                "to": "land_units_tables:a1de8cf67c936ded2101",
+                "targetField": "key",
+                "value": "wh_main_emp_inf_spearmen_1",
+                "direction": "forward",
+                "evidence": "RPFM processed schema is_reference",
+                "traversal": "from-to"
+              },
+              {
+                "from": "land_units_tables:a1de8cf67c936ded2101",
+                "field": "man_entity",
+                "to": "battle_entities_tables:a55b0426b855f8b82693",
+                "targetField": "key",
+                "value": "wh_main_infantry_standard_blood_dismembers",
+                "direction": "forward",
+                "evidence": "RPFM processed schema is_reference",
+                "traversal": "from-to"
+              }
+            ]
+          }
+        },
+        "mount.hit_points": null,
+        "engine.hit_points": null,
+        "articulation.hit_points": null
+      },
+      "componentReferences": {
+        "man_entity": {
+          "value": "wh_main_infantry_standard_blood_dismembers",
+          "source": {
+            "rowId": "land_units_tables:a1de8cf67c936ded2101",
+            "table": "land_units_tables",
+            "rowKey": {
+              "key": "wh_main_emp_inf_spearmen_1"
+            },
+            "field": "man_entity",
+            "sourcePack": "db.pack",
+            "sourcePackPath": "db.pack",
+            "path": "db/land_units_tables/data__",
+            "schemaVersion": 54,
+            "joins": [
+              {
+                "from": "main_units_tables:0766962dc0380577ae99",
+                "field": "land_unit",
+                "to": "land_units_tables:a1de8cf67c936ded2101",
+                "targetField": "key",
+                "value": "wh_main_emp_inf_spearmen_1",
+                "direction": "forward",
+                "evidence": "RPFM processed schema is_reference",
+                "traversal": "from-to"
+              }
+            ]
+          }
+        },
+        "mount": {
+          "value": "",
+          "source": {
+            "rowId": "land_units_tables:a1de8cf67c936ded2101",
+            "table": "land_units_tables",
+            "rowKey": {
+              "key": "wh_main_emp_inf_spearmen_1"
+            },
+            "field": "mount",
+            "sourcePack": "db.pack",
+            "sourcePackPath": "db.pack",
+            "path": "db/land_units_tables/data__",
+            "schemaVersion": 54,
+            "joins": [
+              {
+                "from": "main_units_tables:0766962dc0380577ae99",
+                "field": "land_unit",
+                "to": "land_units_tables:a1de8cf67c936ded2101",
+                "targetField": "key",
+                "value": "wh_main_emp_inf_spearmen_1",
+                "direction": "forward",
+                "evidence": "RPFM processed schema is_reference",
+                "traversal": "from-to"
+              }
+            ]
+          }
+        },
+        "engine": {
+          "value": "",
+          "source": {
+            "rowId": "land_units_tables:a1de8cf67c936ded2101",
+            "table": "land_units_tables",
+            "rowKey": {
+              "key": "wh_main_emp_inf_spearmen_1"
+            },
+            "field": "engine",
+            "sourcePack": "db.pack",
+            "sourcePackPath": "db.pack",
+            "path": "db/land_units_tables/data__",
+            "schemaVersion": 54,
+            "joins": [
+              {
+                "from": "main_units_tables:0766962dc0380577ae99",
+                "field": "land_unit",
+                "to": "land_units_tables:a1de8cf67c936ded2101",
+                "targetField": "key",
+                "value": "wh_main_emp_inf_spearmen_1",
+                "direction": "forward",
+                "evidence": "RPFM processed schema is_reference",
+                "traversal": "from-to"
+              }
+            ]
+          }
+        },
+        "articulated_record": {
+          "value": "",
+          "source": {
+            "rowId": "land_units_tables:a1de8cf67c936ded2101",
+            "table": "land_units_tables",
+            "rowKey": {
+              "key": "wh_main_emp_inf_spearmen_1"
+            },
+            "field": "articulated_record",
+            "sourcePack": "db.pack",
+            "sourcePackPath": "db.pack",
+            "path": "db/land_units_tables/data__",
+            "schemaVersion": 54,
+            "joins": [
+              {
+                "from": "main_units_tables:0766962dc0380577ae99",
+                "field": "land_unit",
+                "to": "land_units_tables:a1de8cf67c936ded2101",
+                "targetField": "key",
+                "value": "wh_main_emp_inf_spearmen_1",
+                "direction": "forward",
+                "evidence": "RPFM processed schema is_reference",
+                "traversal": "from-to"
+              }
+            ]
+          }
+        }
+      },
+      "entityKeys": {
+        "man": {
+          "value": "wh_main_infantry_standard_blood_dismembers",
+          "source": {
+            "rowId": "battle_entities_tables:a55b0426b855f8b82693",
+            "table": "battle_entities_tables",
+            "rowKey": {
+              "key": "wh_main_infantry_standard_blood_dismembers"
+            },
+            "field": "key",
+            "sourcePack": "db.pack",
+            "sourcePackPath": "db.pack",
+            "path": "db/battle_entities_tables/data__",
+            "schemaVersion": 39,
+            "joins": [
+              {
+                "from": "main_units_tables:0766962dc0380577ae99",
+                "field": "land_unit",
+                "to": "land_units_tables:a1de8cf67c936ded2101",
+                "targetField": "key",
+                "value": "wh_main_emp_inf_spearmen_1",
+                "direction": "forward",
+                "evidence": "RPFM processed schema is_reference",
+                "traversal": "from-to"
+              },
+              {
+                "from": "land_units_tables:a1de8cf67c936ded2101",
+                "field": "man_entity",
+                "to": "battle_entities_tables:a55b0426b855f8b82693",
+                "targetField": "key",
+                "value": "wh_main_infantry_standard_blood_dismembers",
+                "direction": "forward",
+                "evidence": "RPFM processed schema is_reference",
+                "traversal": "from-to"
+              }
+            ]
+          }
+        },
+        "mount": null,
+        "engine": null,
+        "articulation": null
+      },
+      "structuralFacts": {
+        "engine_type": null,
+        "draught_attachment_point": null,
+        "rider_attachment_point": null,
+        "mounted_draughts": {
+          "value": false,
+          "source": {
+            "rowId": "land_units_tables:a1de8cf67c936ded2101",
+            "table": "land_units_tables",
+            "rowKey": {
+              "key": "wh_main_emp_inf_spearmen_1"
+            },
+            "field": "mounted_draughts",
+            "sourcePack": "db.pack",
+            "sourcePackPath": "db.pack",
+            "path": "db/land_units_tables/data__",
+            "schemaVersion": 54,
+            "joins": [
+              {
+                "from": "main_units_tables:0766962dc0380577ae99",
+                "field": "land_unit",
+                "to": "land_units_tables:a1de8cf67c936ded2101",
+                "targetField": "key",
+                "value": "wh_main_emp_inf_spearmen_1",
+                "direction": "forward",
+                "evidence": "RPFM processed schema is_reference",
+                "traversal": "from-to"
+              }
+            ]
+          }
+        },
+        "sync_locomotion": {
+          "value": false,
+          "source": {
+            "rowId": "land_units_tables:a1de8cf67c936ded2101",
+            "table": "land_units_tables",
+            "rowKey": {
+              "key": "wh_main_emp_inf_spearmen_1"
+            },
+            "field": "sync_locomotion",
+            "sourcePack": "db.pack",
+            "sourcePackPath": "db.pack",
+            "path": "db/land_units_tables/data__",
+            "schemaVersion": 54,
+            "joins": [
+              {
+                "from": "main_units_tables:0766962dc0380577ae99",
+                "field": "land_unit",
+                "to": "land_units_tables:a1de8cf67c936ded2101",
+                "targetField": "key",
+                "value": "wh_main_emp_inf_spearmen_1",
+                "direction": "forward",
+                "evidence": "RPFM processed schema is_reference",
+                "traversal": "from-to"
+              }
+            ]
+          }
+        }
+      },
+      "runtimeValidation": {
+        "id": "ca_unit_wh_main_emp_inf_swordsmen",
+        "kind": "DIRECT_ULTRA_RUNTIME",
+        "reviewReference": "tools/wh3-importer/hp-policy/review.json",
+        "HealthMax": 8280,
+        "NumEntitiesInitial": 120,
+        "unitSize": "ULTRA",
+        "unitSizeSource": "DECLARED_SETUP",
+        "references": [
+          "inputs/script_log_021026_1931.txt:83"
+        ]
+      }
+    },
+    {
+      "id": "ca_unit_wh_dlc07_brt_inf_battle_pilgrims_0",
+      "name": "Battle Pilgrims",
+      "sourceMainKey": "wh_dlc07_brt_inf_battle_pilgrims_0",
+      "sourceLandKey": "wh_dlc07_brt_inf_battle_pilgrims_0",
+      "staticSnapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+      "kind": "STATIC_DERIVED_HP",
+      "field": "entities.totalHealth",
+      "value": 8280,
+      "baseUnitSha256": "1e66b2f71d578edda841496397b04455483ab08f8340b9e0fe0f17f11b904faf",
+      "unitSize": "ULTRA",
+      "unitSizeSource": "RUNTIME_VALIDATED_EXACT_PROFILE",
+      "profile": "MAN_ONLY",
+      "hpProfileSha256": "ae005698bf6a6bab98074859cc6bb98e1ff28605962b23ff70e50ad06e76e39e",
+      "formula": "(B+M)*N",
+      "inputs": {
+        "main.num_men": 120,
+        "land.num_mounts": 0,
+        "land.num_engines": 0,
+        "land.bonus_hit_points": 61,
+        "man.hit_points": 8,
+        "mount.hit_points": null,
+        "engine.hit_points": null,
+        "articulation.hit_points": null
+      },
+      "logicalCount": 120,
+      "confidence": "EXACT_RUNTIME_VALIDATED_HP_CHAIN_PROFILE_ONLY",
+      "checks": {
+        "EXACT_STATIC_IDENTITY_AND_JOINS": true,
+        "STRUCTURAL_CLASS_TESTED": true,
+        "NO_DIFFERING_SURVIVING_HP_PREDICTION": true,
+        "REQUIRED_STATIC_MULTIPLICITIES_VERIFIED": true,
+        "ULTRA_LOGICAL_COUNT_VERIFIED": true,
+        "SAME_TESTED_HP_CHAIN_PROFILE": true
+      },
+      "staticSource": {
+        "file": "tools/wh3-importer/expansion-batch-02/sources.json",
+        "pointer": "/decoded/candidates/5/dump",
+        "originalExtraction": {
+          "reference": "generated/wh3/expansion-batch-02/units/expansion-02-06.result.json",
+          "sha256": "f8806674df45aeebcb6ccac8ec120ffdde4c99e49c199d38268c8d045249ece0"
+        }
+      },
+      "sourcePin": {
+        "file": "tools/wh3-importer/expansion-batch-02/sources.json",
+        "bytesSha256": "c46bdabe6a496d4f3444b9fd3fe0d8b5e200c7a21c00dc6889e9fd98679a260c",
+        "expandedSha256": "27dc903fc231c84f4e9a7bb197ff99a3fc104c84756b8748b597d2ec7a3aadd6"
+      },
+      "snapshot": {
+        "gameVersion": "9.0.2.0",
+        "schemaSha256": "5d628a0167b34a096752c5c21acd16493834a987c80dc9f02364617f796ba2a4",
+        "packs": [
+          {
+            "name": "db.pack",
+            "sha256": "d0fafac984b3985ec47cec0ea957591424f1077e52ef61941dbf2dc46e6cf723"
+          },
+          {
+            "name": "local_en.pack",
+            "sha256": "f979527a5aaecf293a4e66afc25ed6c760e4107ef4920b73bd56e10e2652fd6a"
+          }
+        ]
+      },
+      "sourceFields": {
+        "main.num_men": {
+          "value": 120,
+          "source": {
+            "rowId": "main_units_tables:2c1173ced83c8fa36a28",
+            "table": "main_units_tables",
+            "rowKey": {
+              "unit": "wh_dlc07_brt_inf_battle_pilgrims_0"
+            },
+            "field": "num_men",
+            "sourcePack": "db.pack",
+            "path": "db/main_units_tables/data__",
+            "schemaVersion": 7,
+            "joins": []
+          }
+        },
+        "land.num_mounts": {
+          "value": 0,
+          "source": {
+            "rowId": "land_units_tables:c4123b8fe036449de18f",
+            "table": "land_units_tables",
+            "rowKey": {
+              "key": "wh_dlc07_brt_inf_battle_pilgrims_0"
+            },
+            "field": "num_mounts",
+            "sourcePack": "db.pack",
+            "path": "db/land_units_tables/data__",
+            "schemaVersion": 54,
+            "joins": [
+              {
+                "from": "main_units_tables:2c1173ced83c8fa36a28",
+                "field": "land_unit",
+                "to": "land_units_tables:c4123b8fe036449de18f",
+                "targetField": "key",
+                "value": "wh_dlc07_brt_inf_battle_pilgrims_0",
+                "direction": "forward",
+                "evidence": "RPFM processed schema is_reference",
+                "traversal": "from-to"
+              }
+            ]
+          }
+        },
+        "land.num_engines": {
+          "value": 0,
+          "source": {
+            "rowId": "land_units_tables:c4123b8fe036449de18f",
+            "table": "land_units_tables",
+            "rowKey": {
+              "key": "wh_dlc07_brt_inf_battle_pilgrims_0"
+            },
+            "field": "num_engines",
+            "sourcePack": "db.pack",
+            "path": "db/land_units_tables/data__",
+            "schemaVersion": 54,
+            "joins": [
+              {
+                "from": "main_units_tables:2c1173ced83c8fa36a28",
+                "field": "land_unit",
+                "to": "land_units_tables:c4123b8fe036449de18f",
+                "targetField": "key",
+                "value": "wh_dlc07_brt_inf_battle_pilgrims_0",
+                "direction": "forward",
+                "evidence": "RPFM processed schema is_reference",
+                "traversal": "from-to"
+              }
+            ]
+          }
+        },
+        "land.bonus_hit_points": {
+          "value": 61,
+          "source": {
+            "rowId": "land_units_tables:c4123b8fe036449de18f",
+            "table": "land_units_tables",
+            "rowKey": {
+              "key": "wh_dlc07_brt_inf_battle_pilgrims_0"
+            },
+            "field": "bonus_hit_points",
+            "sourcePack": "db.pack",
+            "path": "db/land_units_tables/data__",
+            "schemaVersion": 54,
+            "joins": [
+              {
+                "from": "main_units_tables:2c1173ced83c8fa36a28",
+                "field": "land_unit",
+                "to": "land_units_tables:c4123b8fe036449de18f",
+                "targetField": "key",
+                "value": "wh_dlc07_brt_inf_battle_pilgrims_0",
+                "direction": "forward",
+                "evidence": "RPFM processed schema is_reference",
+                "traversal": "from-to"
+              }
+            ]
+          }
+        },
+        "man.hit_points": {
+          "value": 8,
+          "source": {
+            "rowId": "battle_entities_tables:a55b0426b855f8b82693",
+            "table": "battle_entities_tables",
+            "rowKey": {
+              "key": "wh_main_infantry_standard_blood_dismembers"
+            },
+            "field": "hit_points",
+            "sourcePack": "db.pack",
+            "path": "db/battle_entities_tables/data__",
+            "schemaVersion": 39,
+            "joins": [
+              {
+                "from": "main_units_tables:2c1173ced83c8fa36a28",
+                "field": "land_unit",
+                "to": "land_units_tables:c4123b8fe036449de18f",
+                "targetField": "key",
+                "value": "wh_dlc07_brt_inf_battle_pilgrims_0",
+                "direction": "forward",
+                "evidence": "RPFM processed schema is_reference",
+                "traversal": "from-to"
+              },
+              {
+                "from": "land_units_tables:c4123b8fe036449de18f",
+                "field": "man_entity",
+                "to": "battle_entities_tables:a55b0426b855f8b82693",
+                "targetField": "key",
+                "value": "wh_main_infantry_standard_blood_dismembers",
+                "direction": "forward",
+                "evidence": "RPFM processed schema is_reference",
+                "traversal": "from-to"
+              }
+            ]
+          }
+        },
+        "mount.hit_points": null,
+        "engine.hit_points": null,
+        "articulation.hit_points": null
+      },
+      "componentReferences": {
+        "man_entity": {
+          "value": "wh_main_infantry_standard_blood_dismembers",
+          "source": {
+            "rowId": "land_units_tables:c4123b8fe036449de18f",
+            "table": "land_units_tables",
+            "rowKey": {
+              "key": "wh_dlc07_brt_inf_battle_pilgrims_0"
+            },
+            "field": "man_entity",
+            "sourcePack": "db.pack",
+            "path": "db/land_units_tables/data__",
+            "schemaVersion": 54,
+            "joins": [
+              {
+                "from": "main_units_tables:2c1173ced83c8fa36a28",
+                "field": "land_unit",
+                "to": "land_units_tables:c4123b8fe036449de18f",
+                "targetField": "key",
+                "value": "wh_dlc07_brt_inf_battle_pilgrims_0",
+                "direction": "forward",
+                "evidence": "RPFM processed schema is_reference",
+                "traversal": "from-to"
+              }
+            ]
+          }
+        },
+        "mount": {
+          "value": "",
+          "source": {
+            "rowId": "land_units_tables:c4123b8fe036449de18f",
+            "table": "land_units_tables",
+            "rowKey": {
+              "key": "wh_dlc07_brt_inf_battle_pilgrims_0"
+            },
+            "field": "mount",
+            "sourcePack": "db.pack",
+            "path": "db/land_units_tables/data__",
+            "schemaVersion": 54,
+            "joins": [
+              {
+                "from": "main_units_tables:2c1173ced83c8fa36a28",
+                "field": "land_unit",
+                "to": "land_units_tables:c4123b8fe036449de18f",
+                "targetField": "key",
+                "value": "wh_dlc07_brt_inf_battle_pilgrims_0",
+                "direction": "forward",
+                "evidence": "RPFM processed schema is_reference",
+                "traversal": "from-to"
+              }
+            ]
+          }
+        },
+        "engine": {
+          "value": "",
+          "source": {
+            "rowId": "land_units_tables:c4123b8fe036449de18f",
+            "table": "land_units_tables",
+            "rowKey": {
+              "key": "wh_dlc07_brt_inf_battle_pilgrims_0"
+            },
+            "field": "engine",
+            "sourcePack": "db.pack",
+            "path": "db/land_units_tables/data__",
+            "schemaVersion": 54,
+            "joins": [
+              {
+                "from": "main_units_tables:2c1173ced83c8fa36a28",
+                "field": "land_unit",
+                "to": "land_units_tables:c4123b8fe036449de18f",
+                "targetField": "key",
+                "value": "wh_dlc07_brt_inf_battle_pilgrims_0",
+                "direction": "forward",
+                "evidence": "RPFM processed schema is_reference",
+                "traversal": "from-to"
+              }
+            ]
+          }
+        },
+        "articulated_record": {
+          "value": "",
+          "source": {
+            "rowId": "land_units_tables:c4123b8fe036449de18f",
+            "table": "land_units_tables",
+            "rowKey": {
+              "key": "wh_dlc07_brt_inf_battle_pilgrims_0"
+            },
+            "field": "articulated_record",
+            "sourcePack": "db.pack",
+            "path": "db/land_units_tables/data__",
+            "schemaVersion": 54,
+            "joins": [
+              {
+                "from": "main_units_tables:2c1173ced83c8fa36a28",
+                "field": "land_unit",
+                "to": "land_units_tables:c4123b8fe036449de18f",
+                "targetField": "key",
+                "value": "wh_dlc07_brt_inf_battle_pilgrims_0",
+                "direction": "forward",
+                "evidence": "RPFM processed schema is_reference",
+                "traversal": "from-to"
+              }
+            ]
+          }
+        }
+      },
+      "entityKeys": {
+        "man": {
+          "value": "wh_main_infantry_standard_blood_dismembers",
+          "source": {
+            "rowId": "battle_entities_tables:a55b0426b855f8b82693",
+            "table": "battle_entities_tables",
+            "rowKey": {
+              "key": "wh_main_infantry_standard_blood_dismembers"
+            },
+            "field": "key",
+            "sourcePack": "db.pack",
+            "path": "db/battle_entities_tables/data__",
+            "schemaVersion": 39,
+            "joins": [
+              {
+                "from": "main_units_tables:2c1173ced83c8fa36a28",
+                "field": "land_unit",
+                "to": "land_units_tables:c4123b8fe036449de18f",
+                "targetField": "key",
+                "value": "wh_dlc07_brt_inf_battle_pilgrims_0",
+                "direction": "forward",
+                "evidence": "RPFM processed schema is_reference",
+                "traversal": "from-to"
+              },
+              {
+                "from": "land_units_tables:c4123b8fe036449de18f",
+                "field": "man_entity",
+                "to": "battle_entities_tables:a55b0426b855f8b82693",
+                "targetField": "key",
+                "value": "wh_main_infantry_standard_blood_dismembers",
+                "direction": "forward",
+                "evidence": "RPFM processed schema is_reference",
+                "traversal": "from-to"
+              }
+            ]
+          }
+        },
+        "mount": null,
+        "engine": null,
+        "articulation": null
+      },
+      "structuralFacts": {
+        "engine_type": null,
+        "draught_attachment_point": null,
+        "rider_attachment_point": null,
+        "mounted_draughts": {
+          "value": false,
+          "source": {
+            "rowId": "land_units_tables:c4123b8fe036449de18f",
+            "table": "land_units_tables",
+            "rowKey": {
+              "key": "wh_dlc07_brt_inf_battle_pilgrims_0"
+            },
+            "field": "mounted_draughts",
+            "sourcePack": "db.pack",
+            "path": "db/land_units_tables/data__",
+            "schemaVersion": 54,
+            "joins": [
+              {
+                "from": "main_units_tables:2c1173ced83c8fa36a28",
+                "field": "land_unit",
+                "to": "land_units_tables:c4123b8fe036449de18f",
+                "targetField": "key",
+                "value": "wh_dlc07_brt_inf_battle_pilgrims_0",
+                "direction": "forward",
+                "evidence": "RPFM processed schema is_reference",
+                "traversal": "from-to"
+              }
+            ]
+          }
+        },
+        "sync_locomotion": {
+          "value": false,
+          "source": {
+            "rowId": "land_units_tables:c4123b8fe036449de18f",
+            "table": "land_units_tables",
+            "rowKey": {
+              "key": "wh_dlc07_brt_inf_battle_pilgrims_0"
+            },
+            "field": "sync_locomotion",
+            "sourcePack": "db.pack",
+            "path": "db/land_units_tables/data__",
+            "schemaVersion": 54,
+            "joins": [
+              {
+                "from": "main_units_tables:2c1173ced83c8fa36a28",
+                "field": "land_unit",
+                "to": "land_units_tables:c4123b8fe036449de18f",
+                "targetField": "key",
+                "value": "wh_dlc07_brt_inf_battle_pilgrims_0",
+                "direction": "forward",
+                "evidence": "RPFM processed schema is_reference",
+                "traversal": "from-to"
+              }
+            ]
+          }
+        }
+      },
+      "runtimeValidation": {
+        "id": "ca_unit_wh_main_emp_inf_swordsmen",
+        "kind": "DIRECT_ULTRA_RUNTIME",
+        "reviewReference": "tools/wh3-importer/hp-policy/review.json",
+        "HealthMax": 8280,
+        "NumEntitiesInitial": 120,
+        "unitSize": "ULTRA",
+        "unitSizeSource": "DECLARED_SETUP",
+        "references": [
+          "inputs/script_log_021026_1931.txt:83"
+        ]
+      }
+    },
+    {
+      "id": "ca_unit_wh_dlc07_brt_art_blessed_field_trebuchet_0",
+      "name": "Blessed Field Trebuchets",
+      "sourceMainKey": "wh_dlc07_brt_art_blessed_field_trebuchet_0",
+      "sourceLandKey": "wh_dlc07_brt_art_blessed_field_trebuchet_0",
+      "staticSnapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+      "kind": "STATIC_DERIVED_HP",
+      "field": "entities.totalHealth",
+      "value": 4512,
+      "baseUnitSha256": "768b60f607a925d2502e5ce1771edcb1ae809e1d6c7147cad1a0bba36ce924e4",
+      "unitSize": "ULTRA",
+      "unitSizeSource": "RUNTIME_VALIDATED_EXACT_PROFILE",
+      "profile": "ARTILLERY",
+      "hpProfileSha256": "0f240d39c18c6a48b312139198e558e288c3d8d0dff0a760cb8dd574bee89964",
+      "formula": "(B+M)*N + (B+E)*G",
+      "inputs": {
+        "main.num_men": 44,
+        "land.num_mounts": 0,
+        "land.num_engines": 4,
+        "land.bonus_hit_points": 45,
+        "man.hit_points": 8,
+        "mount.hit_points": null,
+        "engine.hit_points": 500,
+        "articulation.hit_points": null
+      },
+      "logicalCount": 4,
+      "confidence": "EXACT_RUNTIME_VALIDATED_HP_CHAIN_PROFILE_ONLY",
+      "checks": {
+        "EXACT_STATIC_IDENTITY_AND_JOINS": true,
+        "STRUCTURAL_CLASS_TESTED": true,
+        "NO_DIFFERING_SURVIVING_HP_PREDICTION": true,
+        "REQUIRED_STATIC_MULTIPLICITIES_VERIFIED": true,
+        "ULTRA_LOGICAL_COUNT_VERIFIED": true,
+        "SAME_TESTED_HP_CHAIN_PROFILE": true
+      },
+      "staticSource": {
+        "file": "tools/wh3-importer/expansion-batch-02/sources.json",
+        "pointer": "/decoded/candidates/14/dump",
+        "originalExtraction": {
+          "reference": "generated/wh3/expansion-batch-02/units/expansion-02-15.result.json",
+          "sha256": "173ed6e1dbd6c904fcd108b4709f5e5f61d9efb9d3176358a5e7a990e313364a"
+        }
+      },
+      "sourcePin": {
+        "file": "tools/wh3-importer/expansion-batch-02/sources.json",
+        "bytesSha256": "c46bdabe6a496d4f3444b9fd3fe0d8b5e200c7a21c00dc6889e9fd98679a260c",
+        "expandedSha256": "27dc903fc231c84f4e9a7bb197ff99a3fc104c84756b8748b597d2ec7a3aadd6"
+      },
+      "snapshot": {
+        "gameVersion": "9.0.2.0",
+        "schemaSha256": "5d628a0167b34a096752c5c21acd16493834a987c80dc9f02364617f796ba2a4",
+        "packs": [
+          {
+            "name": "db.pack",
+            "sha256": "d0fafac984b3985ec47cec0ea957591424f1077e52ef61941dbf2dc46e6cf723"
+          },
+          {
+            "name": "local_en.pack",
+            "sha256": "f979527a5aaecf293a4e66afc25ed6c760e4107ef4920b73bd56e10e2652fd6a"
+          }
+        ]
+      },
+      "sourceFields": {
+        "main.num_men": {
+          "value": 44,
+          "source": {
+            "rowId": "main_units_tables:a6838083c288fb4e792b",
+            "table": "main_units_tables",
+            "rowKey": {
+              "unit": "wh_dlc07_brt_art_blessed_field_trebuchet_0"
+            },
+            "field": "num_men",
+            "sourcePack": "db.pack",
+            "path": "db/main_units_tables/data__",
+            "schemaVersion": 7,
+            "joins": []
+          }
+        },
+        "land.num_mounts": {
+          "value": 0,
+          "source": {
+            "rowId": "land_units_tables:78f18dfa02ab50c4b3cb",
+            "table": "land_units_tables",
+            "rowKey": {
+              "key": "wh_dlc07_brt_art_blessed_field_trebuchet_0"
+            },
+            "field": "num_mounts",
+            "sourcePack": "db.pack",
+            "path": "db/land_units_tables/data__",
+            "schemaVersion": 54,
+            "joins": [
+              {
+                "from": "main_units_tables:a6838083c288fb4e792b",
+                "field": "land_unit",
+                "to": "land_units_tables:78f18dfa02ab50c4b3cb",
+                "targetField": "key",
+                "value": "wh_dlc07_brt_art_blessed_field_trebuchet_0",
+                "direction": "forward",
+                "evidence": "RPFM processed schema is_reference",
+                "traversal": "from-to"
+              }
+            ]
+          }
+        },
+        "land.num_engines": {
+          "value": 4,
+          "source": {
+            "rowId": "land_units_tables:78f18dfa02ab50c4b3cb",
+            "table": "land_units_tables",
+            "rowKey": {
+              "key": "wh_dlc07_brt_art_blessed_field_trebuchet_0"
+            },
+            "field": "num_engines",
+            "sourcePack": "db.pack",
+            "path": "db/land_units_tables/data__",
+            "schemaVersion": 54,
+            "joins": [
+              {
+                "from": "main_units_tables:a6838083c288fb4e792b",
+                "field": "land_unit",
+                "to": "land_units_tables:78f18dfa02ab50c4b3cb",
+                "targetField": "key",
+                "value": "wh_dlc07_brt_art_blessed_field_trebuchet_0",
+                "direction": "forward",
+                "evidence": "RPFM processed schema is_reference",
+                "traversal": "from-to"
+              }
+            ]
+          }
+        },
+        "land.bonus_hit_points": {
+          "value": 45,
+          "source": {
+            "rowId": "land_units_tables:78f18dfa02ab50c4b3cb",
+            "table": "land_units_tables",
+            "rowKey": {
+              "key": "wh_dlc07_brt_art_blessed_field_trebuchet_0"
+            },
+            "field": "bonus_hit_points",
+            "sourcePack": "db.pack",
+            "path": "db/land_units_tables/data__",
+            "schemaVersion": 54,
+            "joins": [
+              {
+                "from": "main_units_tables:a6838083c288fb4e792b",
+                "field": "land_unit",
+                "to": "land_units_tables:78f18dfa02ab50c4b3cb",
+                "targetField": "key",
+                "value": "wh_dlc07_brt_art_blessed_field_trebuchet_0",
+                "direction": "forward",
+                "evidence": "RPFM processed schema is_reference",
+                "traversal": "from-to"
+              }
+            ]
+          }
+        },
+        "man.hit_points": {
+          "value": 8,
+          "source": {
+            "rowId": "battle_entities_tables:c082c3a7d4ecadca012b",
+            "table": "battle_entities_tables",
+            "rowKey": {
+              "key": "wh2_dlc16_infantry_standard_crew_blood_dismembers"
+            },
+            "field": "hit_points",
+            "sourcePack": "db.pack",
+            "path": "db/battle_entities_tables/data__",
+            "schemaVersion": 39,
+            "joins": [
+              {
+                "from": "main_units_tables:a6838083c288fb4e792b",
+                "field": "land_unit",
+                "to": "land_units_tables:78f18dfa02ab50c4b3cb",
+                "targetField": "key",
+                "value": "wh_dlc07_brt_art_blessed_field_trebuchet_0",
+                "direction": "forward",
+                "evidence": "RPFM processed schema is_reference",
+                "traversal": "from-to"
+              },
+              {
+                "from": "land_units_tables:78f18dfa02ab50c4b3cb",
+                "field": "man_entity",
+                "to": "battle_entities_tables:c082c3a7d4ecadca012b",
+                "targetField": "key",
+                "value": "wh2_dlc16_infantry_standard_crew_blood_dismembers",
+                "direction": "forward",
+                "evidence": "RPFM processed schema is_reference",
+                "traversal": "from-to"
+              }
+            ]
+          }
+        },
+        "mount.hit_points": null,
+        "engine.hit_points": {
+          "value": 500,
+          "source": {
+            "rowId": "battle_entities_tables:41e22987aa7315020b3d",
+            "table": "battle_entities_tables",
+            "rowKey": {
+              "key": "wh_main_brt_art_trebuchet"
+            },
+            "field": "hit_points",
+            "sourcePack": "db.pack",
+            "path": "db/battle_entities_tables/data__",
+            "schemaVersion": 39,
+            "joins": [
+              {
+                "from": "main_units_tables:a6838083c288fb4e792b",
+                "field": "land_unit",
+                "to": "land_units_tables:78f18dfa02ab50c4b3cb",
+                "targetField": "key",
+                "value": "wh_dlc07_brt_art_blessed_field_trebuchet_0",
+                "direction": "forward",
+                "evidence": "RPFM processed schema is_reference",
+                "traversal": "from-to"
+              },
+              {
+                "from": "land_units_tables:78f18dfa02ab50c4b3cb",
+                "field": "engine",
+                "to": "battlefield_engines_tables:fd95cf41d21c67f0147d",
+                "targetField": "key",
+                "value": "wh_dlc07_brt_art_field_blessed_trebuchet",
+                "direction": "forward",
+                "evidence": "RPFM processed schema is_reference",
+                "traversal": "from-to"
+              },
+              {
+                "from": "battlefield_engines_tables:fd95cf41d21c67f0147d",
+                "field": "battle_entity",
+                "to": "battle_entities_tables:41e22987aa7315020b3d",
+                "targetField": "key",
+                "value": "wh_main_brt_art_trebuchet",
+                "direction": "forward",
+                "evidence": "RPFM processed schema is_reference",
+                "traversal": "from-to"
+              }
+            ]
+          }
+        },
+        "articulation.hit_points": null
+      },
+      "componentReferences": {
+        "man_entity": {
+          "value": "wh2_dlc16_infantry_standard_crew_blood_dismembers",
+          "source": {
+            "rowId": "land_units_tables:78f18dfa02ab50c4b3cb",
+            "table": "land_units_tables",
+            "rowKey": {
+              "key": "wh_dlc07_brt_art_blessed_field_trebuchet_0"
+            },
+            "field": "man_entity",
+            "sourcePack": "db.pack",
+            "path": "db/land_units_tables/data__",
+            "schemaVersion": 54,
+            "joins": [
+              {
+                "from": "main_units_tables:a6838083c288fb4e792b",
+                "field": "land_unit",
+                "to": "land_units_tables:78f18dfa02ab50c4b3cb",
+                "targetField": "key",
+                "value": "wh_dlc07_brt_art_blessed_field_trebuchet_0",
+                "direction": "forward",
+                "evidence": "RPFM processed schema is_reference",
+                "traversal": "from-to"
+              }
+            ]
+          }
+        },
+        "mount": {
+          "value": "",
+          "source": {
+            "rowId": "land_units_tables:78f18dfa02ab50c4b3cb",
+            "table": "land_units_tables",
+            "rowKey": {
+              "key": "wh_dlc07_brt_art_blessed_field_trebuchet_0"
+            },
+            "field": "mount",
+            "sourcePack": "db.pack",
+            "path": "db/land_units_tables/data__",
+            "schemaVersion": 54,
+            "joins": [
+              {
+                "from": "main_units_tables:a6838083c288fb4e792b",
+                "field": "land_unit",
+                "to": "land_units_tables:78f18dfa02ab50c4b3cb",
+                "targetField": "key",
+                "value": "wh_dlc07_brt_art_blessed_field_trebuchet_0",
+                "direction": "forward",
+                "evidence": "RPFM processed schema is_reference",
+                "traversal": "from-to"
+              }
+            ]
+          }
+        },
+        "engine": {
+          "value": "wh_dlc07_brt_art_field_blessed_trebuchet",
+          "source": {
+            "rowId": "land_units_tables:78f18dfa02ab50c4b3cb",
+            "table": "land_units_tables",
+            "rowKey": {
+              "key": "wh_dlc07_brt_art_blessed_field_trebuchet_0"
+            },
+            "field": "engine",
+            "sourcePack": "db.pack",
+            "path": "db/land_units_tables/data__",
+            "schemaVersion": 54,
+            "joins": [
+              {
+                "from": "main_units_tables:a6838083c288fb4e792b",
+                "field": "land_unit",
+                "to": "land_units_tables:78f18dfa02ab50c4b3cb",
+                "targetField": "key",
+                "value": "wh_dlc07_brt_art_blessed_field_trebuchet_0",
+                "direction": "forward",
+                "evidence": "RPFM processed schema is_reference",
+                "traversal": "from-to"
+              }
+            ]
+          }
+        },
+        "articulated_record": {
+          "value": "",
+          "source": {
+            "rowId": "land_units_tables:78f18dfa02ab50c4b3cb",
+            "table": "land_units_tables",
+            "rowKey": {
+              "key": "wh_dlc07_brt_art_blessed_field_trebuchet_0"
+            },
+            "field": "articulated_record",
+            "sourcePack": "db.pack",
+            "path": "db/land_units_tables/data__",
+            "schemaVersion": 54,
+            "joins": [
+              {
+                "from": "main_units_tables:a6838083c288fb4e792b",
+                "field": "land_unit",
+                "to": "land_units_tables:78f18dfa02ab50c4b3cb",
+                "targetField": "key",
+                "value": "wh_dlc07_brt_art_blessed_field_trebuchet_0",
+                "direction": "forward",
+                "evidence": "RPFM processed schema is_reference",
+                "traversal": "from-to"
+              }
+            ]
+          }
+        }
+      },
+      "entityKeys": {
+        "man": {
+          "value": "wh2_dlc16_infantry_standard_crew_blood_dismembers",
+          "source": {
+            "rowId": "battle_entities_tables:c082c3a7d4ecadca012b",
+            "table": "battle_entities_tables",
+            "rowKey": {
+              "key": "wh2_dlc16_infantry_standard_crew_blood_dismembers"
+            },
+            "field": "key",
+            "sourcePack": "db.pack",
+            "path": "db/battle_entities_tables/data__",
+            "schemaVersion": 39,
+            "joins": [
+              {
+                "from": "main_units_tables:a6838083c288fb4e792b",
+                "field": "land_unit",
+                "to": "land_units_tables:78f18dfa02ab50c4b3cb",
+                "targetField": "key",
+                "value": "wh_dlc07_brt_art_blessed_field_trebuchet_0",
+                "direction": "forward",
+                "evidence": "RPFM processed schema is_reference",
+                "traversal": "from-to"
+              },
+              {
+                "from": "land_units_tables:78f18dfa02ab50c4b3cb",
+                "field": "man_entity",
+                "to": "battle_entities_tables:c082c3a7d4ecadca012b",
+                "targetField": "key",
+                "value": "wh2_dlc16_infantry_standard_crew_blood_dismembers",
+                "direction": "forward",
+                "evidence": "RPFM processed schema is_reference",
+                "traversal": "from-to"
+              }
+            ]
+          }
+        },
+        "mount": null,
+        "engine": {
+          "value": "wh_main_brt_art_trebuchet",
+          "source": {
+            "rowId": "battle_entities_tables:41e22987aa7315020b3d",
+            "table": "battle_entities_tables",
+            "rowKey": {
+              "key": "wh_main_brt_art_trebuchet"
+            },
+            "field": "key",
+            "sourcePack": "db.pack",
+            "path": "db/battle_entities_tables/data__",
+            "schemaVersion": 39,
+            "joins": [
+              {
+                "from": "main_units_tables:a6838083c288fb4e792b",
+                "field": "land_unit",
+                "to": "land_units_tables:78f18dfa02ab50c4b3cb",
+                "targetField": "key",
+                "value": "wh_dlc07_brt_art_blessed_field_trebuchet_0",
+                "direction": "forward",
+                "evidence": "RPFM processed schema is_reference",
+                "traversal": "from-to"
+              },
+              {
+                "from": "land_units_tables:78f18dfa02ab50c4b3cb",
+                "field": "engine",
+                "to": "battlefield_engines_tables:fd95cf41d21c67f0147d",
+                "targetField": "key",
+                "value": "wh_dlc07_brt_art_field_blessed_trebuchet",
+                "direction": "forward",
+                "evidence": "RPFM processed schema is_reference",
+                "traversal": "from-to"
+              },
+              {
+                "from": "battlefield_engines_tables:fd95cf41d21c67f0147d",
+                "field": "battle_entity",
+                "to": "battle_entities_tables:41e22987aa7315020b3d",
+                "targetField": "key",
+                "value": "wh_main_brt_art_trebuchet",
+                "direction": "forward",
+                "evidence": "RPFM processed schema is_reference",
+                "traversal": "from-to"
+              }
+            ]
+          }
+        },
+        "articulation": null
+      },
+      "structuralFacts": {
+        "engine_type": {
+          "value": "Generic_3_Crew",
+          "source": {
+            "rowId": "battlefield_engines_tables:fd95cf41d21c67f0147d",
+            "table": "battlefield_engines_tables",
+            "rowKey": {
+              "key": "wh_dlc07_brt_art_field_blessed_trebuchet"
+            },
+            "field": "engine_type",
+            "sourcePack": "db.pack",
+            "path": "db/battlefield_engines_tables/data__",
+            "schemaVersion": 24,
+            "joins": [
+              {
+                "from": "main_units_tables:a6838083c288fb4e792b",
+                "field": "land_unit",
+                "to": "land_units_tables:78f18dfa02ab50c4b3cb",
+                "targetField": "key",
+                "value": "wh_dlc07_brt_art_blessed_field_trebuchet_0",
+                "direction": "forward",
+                "evidence": "RPFM processed schema is_reference",
+                "traversal": "from-to"
+              },
+              {
+                "from": "land_units_tables:78f18dfa02ab50c4b3cb",
+                "field": "engine",
+                "to": "battlefield_engines_tables:fd95cf41d21c67f0147d",
+                "targetField": "key",
+                "value": "wh_dlc07_brt_art_field_blessed_trebuchet",
+                "direction": "forward",
+                "evidence": "RPFM processed schema is_reference",
+                "traversal": "from-to"
+              }
+            ]
+          }
+        },
+        "draught_attachment_point": {
+          "value": "",
+          "source": {
+            "rowId": "battlefield_engines_tables:fd95cf41d21c67f0147d",
+            "table": "battlefield_engines_tables",
+            "rowKey": {
+              "key": "wh_dlc07_brt_art_field_blessed_trebuchet"
+            },
+            "field": "draught_attachment_point",
+            "sourcePack": "db.pack",
+            "path": "db/battlefield_engines_tables/data__",
+            "schemaVersion": 24,
+            "joins": [
+              {
+                "from": "main_units_tables:a6838083c288fb4e792b",
+                "field": "land_unit",
+                "to": "land_units_tables:78f18dfa02ab50c4b3cb",
+                "targetField": "key",
+                "value": "wh_dlc07_brt_art_blessed_field_trebuchet_0",
+                "direction": "forward",
+                "evidence": "RPFM processed schema is_reference",
+                "traversal": "from-to"
+              },
+              {
+                "from": "land_units_tables:78f18dfa02ab50c4b3cb",
+                "field": "engine",
+                "to": "battlefield_engines_tables:fd95cf41d21c67f0147d",
+                "targetField": "key",
+                "value": "wh_dlc07_brt_art_field_blessed_trebuchet",
+                "direction": "forward",
+                "evidence": "RPFM processed schema is_reference",
+                "traversal": "from-to"
+              }
+            ]
+          }
+        },
+        "rider_attachment_point": {
+          "value": "",
+          "source": {
+            "rowId": "battlefield_engines_tables:fd95cf41d21c67f0147d",
+            "table": "battlefield_engines_tables",
+            "rowKey": {
+              "key": "wh_dlc07_brt_art_field_blessed_trebuchet"
+            },
+            "field": "rider_attachment_point",
+            "sourcePack": "db.pack",
+            "path": "db/battlefield_engines_tables/data__",
+            "schemaVersion": 24,
+            "joins": [
+              {
+                "from": "main_units_tables:a6838083c288fb4e792b",
+                "field": "land_unit",
+                "to": "land_units_tables:78f18dfa02ab50c4b3cb",
+                "targetField": "key",
+                "value": "wh_dlc07_brt_art_blessed_field_trebuchet_0",
+                "direction": "forward",
+                "evidence": "RPFM processed schema is_reference",
+                "traversal": "from-to"
+              },
+              {
+                "from": "land_units_tables:78f18dfa02ab50c4b3cb",
+                "field": "engine",
+                "to": "battlefield_engines_tables:fd95cf41d21c67f0147d",
+                "targetField": "key",
+                "value": "wh_dlc07_brt_art_field_blessed_trebuchet",
+                "direction": "forward",
+                "evidence": "RPFM processed schema is_reference",
+                "traversal": "from-to"
+              }
+            ]
+          }
+        },
+        "mounted_draughts": {
+          "value": false,
+          "source": {
+            "rowId": "land_units_tables:78f18dfa02ab50c4b3cb",
+            "table": "land_units_tables",
+            "rowKey": {
+              "key": "wh_dlc07_brt_art_blessed_field_trebuchet_0"
+            },
+            "field": "mounted_draughts",
+            "sourcePack": "db.pack",
+            "path": "db/land_units_tables/data__",
+            "schemaVersion": 54,
+            "joins": [
+              {
+                "from": "main_units_tables:a6838083c288fb4e792b",
+                "field": "land_unit",
+                "to": "land_units_tables:78f18dfa02ab50c4b3cb",
+                "targetField": "key",
+                "value": "wh_dlc07_brt_art_blessed_field_trebuchet_0",
+                "direction": "forward",
+                "evidence": "RPFM processed schema is_reference",
+                "traversal": "from-to"
+              }
+            ]
+          }
+        },
+        "sync_locomotion": {
+          "value": false,
+          "source": {
+            "rowId": "land_units_tables:78f18dfa02ab50c4b3cb",
+            "table": "land_units_tables",
+            "rowKey": {
+              "key": "wh_dlc07_brt_art_blessed_field_trebuchet_0"
+            },
+            "field": "sync_locomotion",
+            "sourcePack": "db.pack",
+            "path": "db/land_units_tables/data__",
+            "schemaVersion": 54,
+            "joins": [
+              {
+                "from": "main_units_tables:a6838083c288fb4e792b",
+                "field": "land_unit",
+                "to": "land_units_tables:78f18dfa02ab50c4b3cb",
+                "targetField": "key",
+                "value": "wh_dlc07_brt_art_blessed_field_trebuchet_0",
+                "direction": "forward",
+                "evidence": "RPFM processed schema is_reference",
+                "traversal": "from-to"
+              }
+            ]
+          }
+        }
+      },
+      "runtimeValidation": {
+        "id": "ca_unit_wh_main_brt_art_field_trebuchet",
+        "kind": "DIRECT_ULTRA_RUNTIME",
+        "reviewReference": "tools/wh3-importer/hp-policy/review.json",
+        "HealthMax": 4512,
+        "NumEntitiesInitial": 4,
+        "unitSize": "ULTRA",
+        "unitSizeSource": "DECLARED_SETUP",
+        "references": [
+          "inputs/script_log_031026_1244.txt:83"
+        ]
+      }
+    }
+  ]
+}

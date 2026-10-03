@@ -1,0 +1,64 @@
+{
+  "format": "explicit-three-unit-static-hp-v1",
+  "unitSize": "ULTRA",
+  "staticSnapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+  "baselineCommit": "7b2d394500500b251980a33e4ca5e9f1e1ca4ca7",
+  "baselineUnitsSha256": "3b3b2d84c55db5ff48be01a20fcf269eef0384e6a9eeb83ca571b7ed37b3818a",
+  "inputs": [
+    {
+      "file": "tools/wh3-importer/hp-research/black-coach.json",
+      "sha256": "04ce4b633989d260851579ffc5de0358457343739cda534d0a00c4ac1c3b57af"
+    },
+    {
+      "file": "tools/wh3-importer/hp-research/selection.json",
+      "sha256": "e02245a4511c6ea05ad4b9373ad46f89b79948e888c46d01bd96c7209ced0ac2"
+    },
+    {
+      "file": "tools/wh3-importer/hp-research/report.json",
+      "sha256": "cde3a364aee6b4ca0bcad74cfb83ff4c9509f06e98a181614abd111a7a8cbfa3"
+    },
+    {
+      "file": "tools/wh3-importer/hp-policy/manifest.json",
+      "sha256": "2cd6086727dbc289e6db776da58498129ea7e2637ffccb8872ddf3a1a46a980d"
+    },
+    {
+      "file": "tools/wh3-importer/hp-policy/review.json",
+      "sha256": "4b094f4fb9ee1898674c68b686eafec22c15545808aa128283d5c62942b8f833"
+    }
+  ],
+  "subjects": [
+    {
+      "id": "ca_unit_wh_main_emp_inf_spearmen_1",
+      "mainKey": "wh_main_emp_inf_spearmen_1",
+      "landKey": "wh_main_emp_inf_spearmen_1",
+      "approved": true,
+      "profile": "MAN_ONLY",
+      "anchor": "ca_unit_wh_main_emp_inf_swordsmen",
+      "hpProfileSha256": "ae005698bf6a6bab98074859cc6bb98e1ff28605962b23ff70e50ad06e76e39e",
+      "expectedHP": 8280,
+      "baseUnitSha256": "b8580d0fc19ea4ea0bf836d83b87bd6913ff5425eaffced4473e53e679d9f136"
+    },
+    {
+      "id": "ca_unit_wh_dlc07_brt_inf_battle_pilgrims_0",
+      "mainKey": "wh_dlc07_brt_inf_battle_pilgrims_0",
+      "landKey": "wh_dlc07_brt_inf_battle_pilgrims_0",
+      "approved": true,
+      "profile": "MAN_ONLY",
+      "anchor": "ca_unit_wh_main_emp_inf_swordsmen",
+      "hpProfileSha256": "ae005698bf6a6bab98074859cc6bb98e1ff28605962b23ff70e50ad06e76e39e",
+      "expectedHP": 8280,
+      "baseUnitSha256": "1e66b2f71d578edda841496397b04455483ab08f8340b9e0fe0f17f11b904faf"
+    },
+    {
+      "id": "ca_unit_wh_dlc07_brt_art_blessed_field_trebuchet_0",
+      "mainKey": "wh_dlc07_brt_art_blessed_field_trebuchet_0",
+      "landKey": "wh_dlc07_brt_art_blessed_field_trebuchet_0",
+      "approved": true,
+      "profile": "ARTILLERY",
+      "anchor": "ca_unit_wh_main_brt_art_field_trebuchet",
+      "hpProfileSha256": "0f240d39c18c6a48b312139198e558e288c3d8d0dff0a760cb8dd574bee89964",
+      "expectedHP": 4512,
+      "baseUnitSha256": "768b60f607a925d2502e5ce1771edcb1ae809e1d6c7147cad1a0bba36ce924e4"
+    }
+  ]
+}

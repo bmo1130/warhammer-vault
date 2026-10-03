@@ -242,7 +242,8 @@
     },
     "entities": {
       "entitySize": "small",
-      "mass": 100
+      "mass": 100,
+      "totalHealth": 8280
     },
     "movement": {
       "canSkirmish": false
@@ -2062,7 +2063,8 @@
     },
     "entities": {
       "entitySize": "small",
-      "mass": 100
+      "mass": 100,
+      "totalHealth": 8280
     },
     "movement": {
       "canSkirmish": false
@@ -2675,7 +2677,9 @@
       "category": "Siege Engine",
       "tier": 2
     },
-    "entities": {},
+    "entities": {
+      "totalHealth": 4512
+    },
     "movement": {
       "canSkirmish": false,
       "canRun": false

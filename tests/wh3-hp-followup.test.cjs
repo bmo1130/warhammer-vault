@@ -39,11 +39,12 @@ test('only four new HP fields change; existing five, Sample and every non-HP byt
   const historical=replayHP(read(research+'five-unit-manifest.json'));
   assert.deepEqual(review.review.slice(0,5),historical.review);assert.deepEqual(review.admitted.slice(0,5),historical.admitted);
   const units=read('src/data/units.json'),previous=structuredClone(units);
+  for(const a of read(base+'static-review.json').admitted)delete previous.find(u=>u.id===a.id).entities.totalHealth;
   delete previous.find(u=>u.id==='ca_unit_wh_main_vmp_veh_black_coach').entities.totalHealth;
   for(const [key,hp] of expected){const unit=previous.find(u=>u.id==='ca_unit_'+key);assert.equal(unit.entities.totalHealth,hp);delete unit.entities.totalHealth;}
   assert.equal(byteHash(Buffer.from(JSON.stringify(previous,null,2)+'\n')),'68661de31d19c1660949fa0196422a4b59cdff26d7fba2f7ec70b84a324a45e9');
   assert.deepEqual(units.filter(u=>u.gameVersion==='sample'),previous.filter(u=>u.gameVersion==='sample'));
-  assert.equal(units.filter(u=>u.entities.totalHealth!==undefined&&u.gameVersion!=='sample').length,10);
+  assert.equal(units.filter(u=>u.entities.totalHealth!==undefined&&u.gameVersion!=='sample').length,13);
   const {checkProtectedInputs}=await import('../tools/wh3-importer/hp-research/research.mjs');checkProtectedInputs();
 });
 

@@ -48,10 +48,11 @@ test('only Black Coach HP changes from the nine-HP baseline; original nine and a
   const {byteHash,replayHP}=await modules(),prior=replayHP(read(folder+'nine-unit-manifest.json'));
   assert.deepEqual(review.review.slice(0,9),prior.review);assert.deepEqual(review.admitted.slice(0,9),prior.admitted);
   const units=read('src/data/units.json'),before=structuredClone(units),black=before.find(u=>u.id==='ca_unit_'+key);
+  for(const a of read(base+'static-review.json').admitted)delete before.find(u=>u.id===a.id).entities.totalHealth;
   assert.equal(black.entities.totalHealth,5980);assert.equal(black.entities.healthPerEntity,undefined);delete black.entities.totalHealth;
   assert.equal(byteHash(Buffer.from(JSON.stringify(before,null,2)+'\n')),'a61b96fbfbf204b43f3d8583c3c771adfbf0b2b948919998fd95c115b65c0057');
   assert.deepEqual(units.filter(u=>u.gameVersion==='sample'),before.filter(u=>u.gameVersion==='sample'));
-  assert.equal(units.filter(u=>u.gameVersion!=='sample'&&u.entities.totalHealth===undefined).length,91);
+  assert.equal(units.filter(u=>u.gameVersion!=='sample'&&u.entities.totalHealth===undefined).length,88);
   assert.equal(byteHash(readFileSync(base+'policy.mjs')),'ce13f0ec90cc3e13003515ed7446d2f6927f3cd7341493a179562d46e22ef37a');
   const {checkProtectedInputs}=await import('../tools/wh3-importer/hp-research/research.mjs');checkProtectedInputs();
 });
@@ -69,14 +70,15 @@ test('ten-case research deterministically rejects the original 5988 forecast and
   assert.deepEqual(black.roleMismatches,['man']);assert.deepEqual(black.runtime.listEntityKeys.ManList,['wh_main_infantry_rider']);
 });
 
-test('six-condition assessment yields a bounded confident subset, including three unmeasured identical HP profiles without admitting them',()=>{
+test('six-condition assessment yields a bounded confident subset, including three unmeasured identical HP profiles with separate explicit static admissions',()=>{
   const result=read(folder+'black-coach.json');assert.deepEqual(result.counts,{production:101,directRuntimeHP:10,missingHP:91,
     STATIC_DERIVATION_CONFIDENT:10,STATIC_DERIVATION_AMBIGUOUS:91,STATIC_DERIVATION_UNAVAILABLE:0});
   const confident=result.catalog.filter(c=>c.assessment.status==='STATIC_DERIVATION_CONFIDENT');
   for(const c of confident){assert(Object.values(c.assessment.checks).every(Boolean));assert.equal(c.assessment.productionEligible,false);assert.equal(c.assessment.reviewedHPOutputs.length,1);}
   const unmeasured=confident.filter(c=>!result.cases.some(s=>s.id===c.id));
   assert.deepEqual(unmeasured.map(c=>c.name),['Spearmen (Shields)','Battle Pilgrims','Blessed Field Trebuchets']);
-  for(const c of unmeasured){assert(!review.admitted.some(a=>a.id===c.id));assert.equal(read('src/data/units.json').find(u=>u.id===c.id).entities.totalHealth,undefined);}
+  for(const c of unmeasured){assert(!review.admitted.some(a=>a.id===c.id));assert.equal(read('src/data/units.json').find(u=>u.id===c.id).entities.totalHealth,c.assessment.reviewedHPOutputs[0]);
+    assert.equal(read('src/data/unitHpAdmissions.json').admissions.find(a=>a.id===c.id).kind,'STATIC_DERIVED_HP');}
   const blessed=result.catalog.find(c=>c.name==='Blessed Field Trebuchets'),field=result.catalog.find(c=>c.name==='Field Trebuchets');
   assert.equal(blessed.hpProfileSha256,field.hpProfileSha256);assert.notEqual(blessed.componentRecords.engineRecord,field.componentRecords.engineRecord);
   assert.equal(blessed.componentRecords.engine,field.componentRecords.engine);

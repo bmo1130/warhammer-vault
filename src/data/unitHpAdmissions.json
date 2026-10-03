@@ -4,6 +4,8 @@
   "reviewSha256": "4b094f4fb9ee1898674c68b686eafec22c15545808aa128283d5c62942b8f833",
   "unitSize": "ULTRA",
   "unitSizeSource": "DECLARED_SETUP",
+  "staticReviewReference": "tools/wh3-importer/hp-policy/static-review.json",
+  "staticReviewSha256": "2a717a9d31c2c1fc2e62fa75bc8d5574a7289cb708efa8dcd415a8d14e361a55",
   "admissions": [
     {
       "id": "ca_unit_wh_main_emp_inf_swordsmen",
@@ -94,6 +96,51 @@
       "kind": "DIRECT_ULTRA_RUNTIME",
       "field": "entities.totalHealth",
       "value": 5980
+    },
+    {
+      "id": "ca_unit_wh_main_emp_inf_spearmen_1",
+      "mainKey": "wh_main_emp_inf_spearmen_1",
+      "landKey": "wh_main_emp_inf_spearmen_1",
+      "staticSnapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+      "kind": "STATIC_DERIVED_HP",
+      "field": "entities.totalHealth",
+      "value": 8280,
+      "unitSize": "ULTRA",
+      "unitSizeSource": "RUNTIME_VALIDATED_EXACT_PROFILE",
+      "profile": "MAN_ONLY",
+      "hpProfileSha256": "ae005698bf6a6bab98074859cc6bb98e1ff28605962b23ff70e50ad06e76e39e",
+      "confidence": "EXACT_RUNTIME_VALIDATED_HP_CHAIN_PROFILE_ONLY",
+      "sourceReference": "tools/wh3-importer/hp-policy/static-review.json#/admitted/0"
+    },
+    {
+      "id": "ca_unit_wh_dlc07_brt_inf_battle_pilgrims_0",
+      "mainKey": "wh_dlc07_brt_inf_battle_pilgrims_0",
+      "landKey": "wh_dlc07_brt_inf_battle_pilgrims_0",
+      "staticSnapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+      "kind": "STATIC_DERIVED_HP",
+      "field": "entities.totalHealth",
+      "value": 8280,
+      "unitSize": "ULTRA",
+      "unitSizeSource": "RUNTIME_VALIDATED_EXACT_PROFILE",
+      "profile": "MAN_ONLY",
+      "hpProfileSha256": "ae005698bf6a6bab98074859cc6bb98e1ff28605962b23ff70e50ad06e76e39e",
+      "confidence": "EXACT_RUNTIME_VALIDATED_HP_CHAIN_PROFILE_ONLY",
+      "sourceReference": "tools/wh3-importer/hp-policy/static-review.json#/admitted/1"
+    },
+    {
+      "id": "ca_unit_wh_dlc07_brt_art_blessed_field_trebuchet_0",
+      "mainKey": "wh_dlc07_brt_art_blessed_field_trebuchet_0",
+      "landKey": "wh_dlc07_brt_art_blessed_field_trebuchet_0",
+      "staticSnapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+      "kind": "STATIC_DERIVED_HP",
+      "field": "entities.totalHealth",
+      "value": 4512,
+      "unitSize": "ULTRA",
+      "unitSizeSource": "RUNTIME_VALIDATED_EXACT_PROFILE",
+      "profile": "ARTILLERY",
+      "hpProfileSha256": "0f240d39c18c6a48b312139198e558e288c3d8d0dff0a760cb8dd574bee89964",
+      "confidence": "EXACT_RUNTIME_VALIDATED_HP_CHAIN_PROFILE_ONLY",
+      "sourceReference": "tools/wh3-importer/hp-policy/static-review.json#/admitted/2"
     }
   ]
 }
