@@ -4,6 +4,7 @@ import {isDeepStrictEqual as equal} from 'node:util';
 import {createHash} from 'node:crypto';
 import {loadCardTraces,speedProfile,validateManualCard} from './card-validation.mjs';
 import {serialize} from './research.mjs';
+import speedOverlay from '../speed-policy/overlay.cjs';
 const folder='tools/wh3-importer/speed-research/',read=f=>JSON.parse(readFileSync(f));
 const hash=b=>createHash('sha256').update(b).digest('hex'),stored=v=>JSON.parse(serialize(v));
 const gate=(ok,m)=>{if(!ok)throw Error('Mounted Speed research refused: '+m);};
@@ -104,7 +105,7 @@ export function buildMountedValidation() {
   const buckets=Object.fromEntries([...new Set(catalog.filter(c=>c.reason).map(c=>c.reason))].sort().map(r=>[r,catalog.filter(c=>c.reason===r).length]));
   return stored({purpose:'MOUNTED_17_RESEARCH_CANDIDATES_ONLY',baselineCommit:'faf5b2aa724b0dffcdb53fb633ed34ab20fd720b',productionEligible:false,
     inputs:[folder+'card-validation.json',folder+'manual-card-evidence.json',folder+'mounted-manual-card-evidence.json','src/data/units.json',
-      'src/data/unitSpeedAdmissions.json','tools/wh3-importer/speed-policy/manifest.json'].map(file=>({file,sha256:hash(readFileSync(file))})),
+      'src/data/unitSpeedAdmissions.json','tools/wh3-importer/speed-policy/manifest.json'].map(file=>({file,sha256:hash(speedOverlay.mountedResearchInputBytes(file))})),
     staticSnapshotId:manual.staticAssociation.snapshotId,materializedIdentityIds:traces.map(c=>c.identity.id),anchors,
     counts:{mountedReviewed:17,mountedAnchors:4,newDirect:direct,mountedAmbiguous:catalog.filter(c=>c.status==='SPEED_AMBIGUOUS').length,
       unavailable,

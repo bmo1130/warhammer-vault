@@ -5,6 +5,7 @@ const {createHash}=require('node:crypto');
 const read=f=>JSON.parse(readFileSync(f)),hash=b=>createHash('sha256').update(b).digest('hex');
 const folder='tools/wh3-importer/speed-research/',manual=read(folder+'mounted-manual-card-evidence.json'),report=read(folder+'mounted-validation.json'),
   baseline=read(folder+'card-validation.json');
+const speedOverlay=require('../tools/wh3-importer/speed-policy/overlay.cjs');
 const modules=()=>import('../tools/wh3-importer/speed-research/mounted-validation.mjs');
 let cached;const scope=async()=>cached??=(await modules()).loadMountedScope();
 const expected=[['wh_main_brt_cav_grail_knights',84],['wh_main_brt_cav_knights_of_the_realm',84],
@@ -92,9 +93,9 @@ test('extra mounts/entities, hybrid/flight/flags, schema/join/profile drift, rou
   assert.equal(assessMounted(base,[...report.anchors,report.anchors[1]]).reason,'COMPETING_VALIDATION_PROFILES');
 });
 
-test('Production 74/27, HP13, all previous admission/manual reports and non-mounted buckets remain byte-pinned',()=>{
-  for(const p of report.inputs)assert.equal(hash(readFileSync(p.file)),p.sha256);
-  const units=read('src/data/units.json');assert.equal(units.filter(u=>u.gameVersion!=='sample'&&u.movement.speed!==undefined).length,74);
+test('Historical research 74/27, HP13, all previous admission/manual reports and non-mounted buckets remain byte-pinned',()=>{
+  for(const p of report.inputs)assert.equal(hash(speedOverlay.mountedResearchInputBytes(p.file)),p.sha256);
+  const units=JSON.parse(speedOverlay.mountedResearchInputBytes('src/data/units.json'));assert.equal(units.filter(u=>u.gameVersion!=='sample'&&u.movement.speed!==undefined).length,74);
   assert.equal(units.filter(u=>u.gameVersion!=='sample'&&u.movement.speed===undefined).length,27);
   assert.equal(units.filter(u=>u.gameVersion!=='sample'&&u.entities.totalHealth!==undefined).length,13);
   for(const c of report.catalog)assert.equal(units.find(u=>u.id===c.identity.id).movement.speed,undefined);

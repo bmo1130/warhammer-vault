@@ -430,7 +430,8 @@
     },
     "entities": {},
     "movement": {
-      "canSkirmish": false
+      "canSkirmish": false,
+      "speed": 84
     },
     "defense": {
       "armor": 120,
@@ -1064,7 +1065,8 @@
     },
     "entities": {},
     "movement": {
-      "canSkirmish": false
+      "canSkirmish": false,
+      "speed": 84
     },
     "defense": {
       "armor": 100,
@@ -1122,7 +1124,8 @@
     },
     "entities": {},
     "movement": {
-      "canSkirmish": false
+      "canSkirmish": false,
+      "speed": 84
     },
     "defense": {
       "armor": 90,
@@ -2369,7 +2372,8 @@
     },
     "entities": {},
     "movement": {
-      "canSkirmish": false
+      "canSkirmish": false,
+      "speed": 84
     },
     "defense": {
       "armor": 80,
@@ -2427,7 +2431,8 @@
     },
     "entities": {},
     "movement": {
-      "canSkirmish": false
+      "canSkirmish": false,
+      "speed": 84
     },
     "defense": {
       "armor": 120,
@@ -5462,7 +5467,8 @@
     },
     "entities": {},
     "movement": {
-      "canSkirmish": false
+      "canSkirmish": false,
+      "speed": 66
     },
     "defense": {
       "armor": 90,
@@ -5517,7 +5523,8 @@
     },
     "entities": {},
     "movement": {
-      "canSkirmish": false
+      "canSkirmish": false,
+      "speed": 66
     },
     "defense": {
       "armor": 90,

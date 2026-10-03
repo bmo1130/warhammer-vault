@@ -1,7 +1,7 @@
 {
   "format": "reviewed-unit-static-speed-admissions-v1",
   "manifestReference": "tools/wh3-importer/speed-policy/manifest.json",
-  "manifestSha256": "9da8c7dcf52a4d3a0ba1cac38f82ff444daced20892111f5a45b37bcd9b620f0",
+  "manifestSha256": "78b6c84540fe31414a75717ad982bdbabfed3bf660a2ebe338bc0f91857cb92c",
   "candidateReportReference": "tools/wh3-importer/speed-research/card-validation.json",
   "candidateReportSha256": "c8ff40615e8605bf78f5b4f67d19ae486c14c75ab80b1758cacf307bff2e3477",
   "admissions": [
@@ -2492,6 +2492,242 @@
         "reference": "tools/wh3-importer/speed-research/manual-card-evidence.json#/samples/0"
       },
       "validationBasis": "EXACT_STRUCTURAL_PROFILE_INHERITANCE"
+    },
+    {
+      "id": "ca_unit_wh_main_brt_cav_grail_knights",
+      "mainKey": "wh_main_brt_cav_grail_knights",
+      "landKey": "wh_main_brt_cav_grail_knights",
+      "kind": "STATIC_DERIVED_SPEED",
+      "field": "movement.speed",
+      "value": 84,
+      "selectedComponent": "mount",
+      "selectedEntityKey": "wh_main_brt_mnt_cavalry_knights_heavy_blood",
+      "rawRunSpeed": 8.4,
+      "formula": "rawSpeed * 10",
+      "rounding": "NONE",
+      "staticSnapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+      "profile": "EXACT_GRAIL_KNIGHTS_CHAIN",
+      "profileSha256": "454563f92f8c59150f224b3c8061c538cfc486912a08afc213ae5d11a4894837",
+      "confidence": "EXACT_MANUAL_VALIDATED_SPEED_CHAIN_PROFILE_ONLY",
+      "baseUnitSha256": "406531ba61d42ab3b97d5c882f84ded903efa067fe34927333b57b8c185745b9",
+      "staticSource": {
+        "file": "tools/wh3-importer/promotion/partial-sources.json",
+        "pointer": "/candidates/0/dump"
+      },
+      "sourceFieldReference": "tools/wh3-importer/speed-research/mounted-validation.json#/catalog/0/sourceTraces/mount",
+      "validationAnchor": {
+        "id": "ca_unit_wh_main_brt_cav_grail_knights",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 84,
+        "reference": "tools/wh3-importer/speed-research/mounted-manual-card-evidence.json#/samples/2"
+      },
+      "validationBasis": "DIRECT_MANUAL_CARD_MATCH"
+    },
+    {
+      "id": "ca_unit_wh_main_brt_cav_knights_of_the_realm",
+      "mainKey": "wh_main_brt_cav_knights_of_the_realm",
+      "landKey": "wh_main_brt_cav_knights_of_the_realm",
+      "kind": "STATIC_DERIVED_SPEED",
+      "field": "movement.speed",
+      "value": 84,
+      "selectedComponent": "mount",
+      "selectedEntityKey": "wh_main_brt_mnt_cavalry_knights_blood",
+      "rawRunSpeed": 8.4,
+      "formula": "rawSpeed * 10",
+      "rounding": "NONE",
+      "staticSnapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+      "profile": "EXACT_KNIGHTS_OF_THE_REALM_CHAIN",
+      "profileSha256": "20968f30d593d0d6d80d077f95a3f19f8954897a80f3f6e49c7d255d650786b0",
+      "confidence": "EXACT_MANUAL_VALIDATED_SPEED_CHAIN_PROFILE_ONLY",
+      "baseUnitSha256": "2a05f9d24ec07ef28863d70e50cd05c6d9d4ce8bfffcd608327689acf9bdfa18",
+      "staticSource": {
+        "file": "tools/wh3-importer/expansion-batch-01/sources.json",
+        "pointer": "/decoded/candidates/1/dump",
+        "originalExtraction": {
+          "reference": "generated/wh3/expansion-batch-01/units/expansion-01-04.result.json",
+          "sha256": "71f41e4bf28d7352e45b45e887b079929101116f2b2bac8d8b21ae0579da6afa"
+        }
+      },
+      "sourceFieldReference": "tools/wh3-importer/speed-research/mounted-validation.json#/catalog/4/sourceTraces/mount",
+      "validationAnchor": {
+        "id": "ca_unit_wh_main_brt_cav_knights_of_the_realm",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 84,
+        "reference": "tools/wh3-importer/speed-research/mounted-manual-card-evidence.json#/samples/0"
+      },
+      "validationBasis": "DIRECT_MANUAL_CARD_MATCH"
+    },
+    {
+      "id": "ca_unit_wh_dlc07_brt_cav_questing_knights_0",
+      "mainKey": "wh_dlc07_brt_cav_questing_knights_0",
+      "landKey": "wh_dlc07_brt_cav_questing_knights_0",
+      "kind": "STATIC_DERIVED_SPEED",
+      "field": "movement.speed",
+      "value": 84,
+      "selectedComponent": "mount",
+      "selectedEntityKey": "wh_main_brt_mnt_cavalry_knights_blood",
+      "rawRunSpeed": 8.4,
+      "formula": "rawSpeed * 10",
+      "rounding": "NONE",
+      "staticSnapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+      "profile": "EXACT_KNIGHTS_OF_THE_REALM_CHAIN",
+      "profileSha256": "20968f30d593d0d6d80d077f95a3f19f8954897a80f3f6e49c7d255d650786b0",
+      "confidence": "EXACT_MANUAL_VALIDATED_SPEED_CHAIN_PROFILE_ONLY",
+      "baseUnitSha256": "dd8f847c0da5b5a7b0e3750544abd5fa18ac9844b990a187f16b14317096f2c2",
+      "staticSource": {
+        "file": "tools/wh3-importer/expansion-batch-01/sources.json",
+        "pointer": "/decoded/candidates/2/dump",
+        "originalExtraction": {
+          "reference": "generated/wh3/expansion-batch-01/units/expansion-01-05.result.json",
+          "sha256": "c7ad50660dae6e7b60fd3d5cdcc308d274ac859b83aa77535ca562d99ff4d41e"
+        }
+      },
+      "sourceFieldReference": "tools/wh3-importer/speed-research/mounted-validation.json#/catalog/5/sourceTraces/mount",
+      "validationAnchor": {
+        "id": "ca_unit_wh_main_brt_cav_knights_of_the_realm",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 84,
+        "reference": "tools/wh3-importer/speed-research/mounted-manual-card-evidence.json#/samples/0"
+      },
+      "validationBasis": "EXACT_STRUCTURAL_PROFILE_INHERITANCE"
+    },
+    {
+      "id": "ca_unit_wh_dlc07_brt_cav_knights_errant_0",
+      "mainKey": "wh_dlc07_brt_cav_knights_errant_0",
+      "landKey": "wh_dlc07_brt_cav_knights_errant_0",
+      "kind": "STATIC_DERIVED_SPEED",
+      "field": "movement.speed",
+      "value": 84,
+      "selectedComponent": "mount",
+      "selectedEntityKey": "wh_main_brt_mnt_cavalry_knights_blood",
+      "rawRunSpeed": 8.4,
+      "formula": "rawSpeed * 10",
+      "rounding": "NONE",
+      "staticSnapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+      "profile": "EXACT_KNIGHTS_OF_THE_REALM_CHAIN",
+      "profileSha256": "20968f30d593d0d6d80d077f95a3f19f8954897a80f3f6e49c7d255d650786b0",
+      "confidence": "EXACT_MANUAL_VALIDATED_SPEED_CHAIN_PROFILE_ONLY",
+      "baseUnitSha256": "f6db62d1fbee79652f3475a48e197c75bf0ccb0b872081511b50e8ded36a36a9",
+      "staticSource": {
+        "file": "tools/wh3-importer/expansion-batch-02/sources.json",
+        "pointer": "/decoded/candidates/9/dump",
+        "originalExtraction": {
+          "reference": "generated/wh3/expansion-batch-02/units/expansion-02-10.result.json",
+          "sha256": "6f4d2d424b64f416d5bf1f3c0617c9b5a2495e07e2ae620fe462df0e1a7b7c7c"
+        }
+      },
+      "sourceFieldReference": "tools/wh3-importer/speed-research/mounted-validation.json#/catalog/8/sourceTraces/mount",
+      "validationAnchor": {
+        "id": "ca_unit_wh_main_brt_cav_knights_of_the_realm",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 84,
+        "reference": "tools/wh3-importer/speed-research/mounted-manual-card-evidence.json#/samples/0"
+      },
+      "validationBasis": "EXACT_STRUCTURAL_PROFILE_INHERITANCE"
+    },
+    {
+      "id": "ca_unit_wh_dlc07_brt_cav_grail_guardians_0",
+      "mainKey": "wh_dlc07_brt_cav_grail_guardians_0",
+      "landKey": "wh_dlc07_brt_cav_grail_guardians_0",
+      "kind": "STATIC_DERIVED_SPEED",
+      "field": "movement.speed",
+      "value": 84,
+      "selectedComponent": "mount",
+      "selectedEntityKey": "wh_main_brt_mnt_cavalry_knights_heavy_blood",
+      "rawRunSpeed": 8.4,
+      "formula": "rawSpeed * 10",
+      "rounding": "NONE",
+      "staticSnapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+      "profile": "EXACT_GRAIL_KNIGHTS_CHAIN",
+      "profileSha256": "454563f92f8c59150f224b3c8061c538cfc486912a08afc213ae5d11a4894837",
+      "confidence": "EXACT_MANUAL_VALIDATED_SPEED_CHAIN_PROFILE_ONLY",
+      "baseUnitSha256": "00bcdb7b69c9c2072c97a71e3a98b6c98128bf021e235044aed848a82aa7e7a7",
+      "staticSource": {
+        "file": "tools/wh3-importer/expansion-batch-02/sources.json",
+        "pointer": "/decoded/candidates/10/dump",
+        "originalExtraction": {
+          "reference": "generated/wh3/expansion-batch-02/units/expansion-02-11.result.json",
+          "sha256": "260cd5973307f920bd6a215080e24fb1f9379ad84b267121b245fdb9c40cc619"
+        }
+      },
+      "sourceFieldReference": "tools/wh3-importer/speed-research/mounted-validation.json#/catalog/9/sourceTraces/mount",
+      "validationAnchor": {
+        "id": "ca_unit_wh_main_brt_cav_grail_knights",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 84,
+        "reference": "tools/wh3-importer/speed-research/mounted-manual-card-evidence.json#/samples/2"
+      },
+      "validationBasis": "EXACT_STRUCTURAL_PROFILE_INHERITANCE"
+    },
+    {
+      "id": "ca_unit_wh2_main_lzd_cav_cold_ones_1",
+      "mainKey": "wh2_main_lzd_cav_cold_ones_1",
+      "landKey": "wh2_main_lzd_cav_cold_ones_1",
+      "kind": "STATIC_DERIVED_SPEED",
+      "field": "movement.speed",
+      "value": 66,
+      "selectedComponent": "mount",
+      "selectedEntityKey": "wh2_main_lzd_cavalry_cold_one_blood",
+      "rawRunSpeed": 6.6,
+      "formula": "rawSpeed * 10",
+      "rounding": "NONE",
+      "staticSnapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+      "profile": "EXACT_COLD_ONE_RIDERS_CHAIN",
+      "profileSha256": "1633b3c42df4ca33482a4f021985ac042f45a87f9e9e6a6d5534114b23c633fd",
+      "confidence": "EXACT_MANUAL_VALIDATED_SPEED_CHAIN_PROFILE_ONLY",
+      "baseUnitSha256": "978db16e900b8a93beae8d6c86fd8154e489dd5b2602eeff78bd69e5350ab938",
+      "staticSource": {
+        "file": "tools/wh3-importer/expansion-batch-04/sources.json",
+        "pointer": "/decoded/candidates/11/dump",
+        "originalExtraction": {
+          "reference": "generated/wh3/expansion-batch-04/units/expansion-04-12.result.json",
+          "sha256": "af7d646b22b48476dc06f3f91260a130727627bfc0a5983b4b89407ec870cabf"
+        }
+      },
+      "sourceFieldReference": "tools/wh3-importer/speed-research/mounted-validation.json#/catalog/13/sourceTraces/mount",
+      "validationAnchor": {
+        "id": "ca_unit_wh2_main_lzd_cav_cold_ones_1",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 66,
+        "reference": "tools/wh3-importer/speed-research/mounted-manual-card-evidence.json#/samples/1"
+      },
+      "validationBasis": "DIRECT_MANUAL_CARD_MATCH"
+    },
+    {
+      "id": "ca_unit_wh2_main_lzd_cav_cold_one_spearmen_1",
+      "mainKey": "wh2_main_lzd_cav_cold_one_spearmen_1",
+      "landKey": "wh2_main_lzd_cav_cold_one_spearriders_1",
+      "kind": "STATIC_DERIVED_SPEED",
+      "field": "movement.speed",
+      "value": 66,
+      "selectedComponent": "mount",
+      "selectedEntityKey": "wh2_main_lzd_cavalry_cold_one_blood",
+      "rawRunSpeed": 6.6,
+      "formula": "rawSpeed * 10",
+      "rounding": "NONE",
+      "staticSnapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+      "profile": "EXACT_COLD_ONE_RIDERS_CHAIN",
+      "profileSha256": "1633b3c42df4ca33482a4f021985ac042f45a87f9e9e6a6d5534114b23c633fd",
+      "confidence": "EXACT_MANUAL_VALIDATED_SPEED_CHAIN_PROFILE_ONLY",
+      "baseUnitSha256": "8ec35943f1e49e820b73fc4bfbf730ceb13aae01f89b75a451554f7fc21da1f1",
+      "staticSource": {
+        "file": "tools/wh3-importer/expansion-batch-04/sources.json",
+        "pointer": "/decoded/candidates/12/dump",
+        "originalExtraction": {
+          "reference": "generated/wh3/expansion-batch-04/units/expansion-04-13.result.json",
+          "sha256": "746d7c76290c3d7ae5a8ce084ec222bde2523b4162acf91cd9ca2127c4a5e227"
+        }
+      },
+      "sourceFieldReference": "tools/wh3-importer/speed-research/mounted-validation.json#/catalog/14/sourceTraces/mount",
+      "validationAnchor": {
+        "id": "ca_unit_wh2_main_lzd_cav_cold_ones_1",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 66,
+        "reference": "tools/wh3-importer/speed-research/mounted-manual-card-evidence.json#/samples/1"
+      },
+      "validationBasis": "EXACT_STRUCTURAL_PROFILE_INHERITANCE"
     }
-  ]
+  ],
+  "mountedCandidateReportReference": "tools/wh3-importer/speed-research/mounted-validation.json",
+  "mountedCandidateReportSha256": "5488ddf77cb3ca0ea8d15316c8c75d25e0a7f2374ce5e4f2a5d896356aeeb345"
 }

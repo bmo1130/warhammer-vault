@@ -1,5 +1,5 @@
 {
-  "format": "explicit-reviewed-74-static-speed-v1",
+  "format": "explicit-reviewed-static-speed-v1",
   "baselineCommit": "d4964f47365e1ea11106af7f17e3c37b83fec648",
   "baselineUnitsSha256": "308f7dab9ae339d2629de18d350c07febe7af78bb7fdbc20f598f9a58b7a9511",
   "staticSnapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
@@ -719,6 +719,85 @@
       "expectedSpeed": 39,
       "profile": "NONFLYING_SINGLE_MAN_RUN",
       "baseUnitSha256": "d0861bc7891e4ae1a60215a843e9e949077df1baafa7d5fa4cc31023d4745a69"
+    },
+    {
+      "id": "ca_unit_wh_main_brt_cav_grail_knights",
+      "mainKey": "wh_main_brt_cav_grail_knights",
+      "landKey": "wh_main_brt_cav_grail_knights",
+      "approved": true,
+      "expectedSpeed": 84,
+      "profile": "EXACT_GRAIL_KNIGHTS_CHAIN",
+      "baseUnitSha256": "406531ba61d42ab3b97d5c882f84ded903efa067fe34927333b57b8c185745b9"
+    },
+    {
+      "id": "ca_unit_wh_main_brt_cav_knights_of_the_realm",
+      "mainKey": "wh_main_brt_cav_knights_of_the_realm",
+      "landKey": "wh_main_brt_cav_knights_of_the_realm",
+      "approved": true,
+      "expectedSpeed": 84,
+      "profile": "EXACT_KNIGHTS_OF_THE_REALM_CHAIN",
+      "baseUnitSha256": "2a05f9d24ec07ef28863d70e50cd05c6d9d4ce8bfffcd608327689acf9bdfa18"
+    },
+    {
+      "id": "ca_unit_wh_dlc07_brt_cav_questing_knights_0",
+      "mainKey": "wh_dlc07_brt_cav_questing_knights_0",
+      "landKey": "wh_dlc07_brt_cav_questing_knights_0",
+      "approved": true,
+      "expectedSpeed": 84,
+      "profile": "EXACT_KNIGHTS_OF_THE_REALM_CHAIN",
+      "baseUnitSha256": "dd8f847c0da5b5a7b0e3750544abd5fa18ac9844b990a187f16b14317096f2c2"
+    },
+    {
+      "id": "ca_unit_wh_dlc07_brt_cav_knights_errant_0",
+      "mainKey": "wh_dlc07_brt_cav_knights_errant_0",
+      "landKey": "wh_dlc07_brt_cav_knights_errant_0",
+      "approved": true,
+      "expectedSpeed": 84,
+      "profile": "EXACT_KNIGHTS_OF_THE_REALM_CHAIN",
+      "baseUnitSha256": "f6db62d1fbee79652f3475a48e197c75bf0ccb0b872081511b50e8ded36a36a9"
+    },
+    {
+      "id": "ca_unit_wh_dlc07_brt_cav_grail_guardians_0",
+      "mainKey": "wh_dlc07_brt_cav_grail_guardians_0",
+      "landKey": "wh_dlc07_brt_cav_grail_guardians_0",
+      "approved": true,
+      "expectedSpeed": 84,
+      "profile": "EXACT_GRAIL_KNIGHTS_CHAIN",
+      "baseUnitSha256": "00bcdb7b69c9c2072c97a71e3a98b6c98128bf021e235044aed848a82aa7e7a7"
+    },
+    {
+      "id": "ca_unit_wh2_main_lzd_cav_cold_ones_1",
+      "mainKey": "wh2_main_lzd_cav_cold_ones_1",
+      "landKey": "wh2_main_lzd_cav_cold_ones_1",
+      "approved": true,
+      "expectedSpeed": 66,
+      "profile": "EXACT_COLD_ONE_RIDERS_CHAIN",
+      "baseUnitSha256": "978db16e900b8a93beae8d6c86fd8154e489dd5b2602eeff78bd69e5350ab938"
+    },
+    {
+      "id": "ca_unit_wh2_main_lzd_cav_cold_one_spearmen_1",
+      "mainKey": "wh2_main_lzd_cav_cold_one_spearmen_1",
+      "landKey": "wh2_main_lzd_cav_cold_one_spearriders_1",
+      "approved": true,
+      "expectedSpeed": 66,
+      "profile": "EXACT_COLD_ONE_RIDERS_CHAIN",
+      "baseUnitSha256": "8ec35943f1e49e820b73fc4bfbf730ceb13aae01f89b75a451554f7fc21da1f1"
     }
-  ]
+  ],
+  "mountedFollowup": {
+    "researchCommit": "e4c9b5aa8a4aa5dc2b1271b87b0e110d991736c5",
+    "inputs": [
+      {
+        "file": "tools/wh3-importer/speed-research/mounted-validation.json",
+        "sha256": "5488ddf77cb3ca0ea8d15316c8c75d25e0a7f2374ce5e4f2a5d896356aeeb345"
+      },
+      {
+        "file": "tools/wh3-importer/speed-research/mounted-manual-card-evidence.json",
+        "sha256": "9f901bc28a8ac800e61e71b6b5e5ae7fb6fd22ce30b96568baca390afb0308a4"
+      }
+    ],
+    "baselineUnitsSha256": "67aa2937d3c7799368f4fde9a610568b69263c331fd8addc90691f1145126887",
+    "baselineAdmissionsSha256": "cf21af9b51d2572eb10f18d128bff8248d89fab0914c77f0582554ff018ee63d",
+    "baselineManifestSha256": "9da8c7dcf52a4d3a0ba1cac38f82ff444daced20892111f5a45b37bcd9b620f0"
+  }
 }

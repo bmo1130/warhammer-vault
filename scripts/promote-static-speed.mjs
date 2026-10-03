@@ -12,4 +12,4 @@ const validate=await loadUnitValidator();
 if(validate(next,JSON.parse(readFileSync('src/data/factions.json')).map(f=>f.id)).length)throw Error('Speed output rejected by Unit validator');
 if(mode==='--write'){writeFileSync(file,sidecar);writeFileSync('src/data/units.json',bytes);}
 else if(readFileSync('src/data/units.json','utf8')!==bytes)throw Error('Speed Production equality failed');
-console.log(JSON.stringify({mode,populated:74,blank:27,kind:'STATIC_DERIVED_SPEED'}));
+console.log(JSON.stringify({mode,populated:81,blank:20,kind:'STATIC_DERIVED_SPEED'}));
