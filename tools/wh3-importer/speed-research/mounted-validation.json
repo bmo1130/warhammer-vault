@@ -1,0 +1,4340 @@
+{
+  "purpose": "MOUNTED_17_RESEARCH_CANDIDATES_ONLY",
+  "baselineCommit": "faf5b2aa724b0dffcdb53fb633ed34ab20fd720b",
+  "productionEligible": false,
+  "inputs": [
+    {
+      "file": "tools/wh3-importer/speed-research/card-validation.json",
+      "sha256": "c8ff40615e8605bf78f5b4f67d19ae486c14c75ab80b1758cacf307bff2e3477"
+    },
+    {
+      "file": "tools/wh3-importer/speed-research/manual-card-evidence.json",
+      "sha256": "0397ecaa264295f0843aac306b43fdf5d9fc5e511cc181d8a283dd1027f9287b"
+    },
+    {
+      "file": "tools/wh3-importer/speed-research/mounted-manual-card-evidence.json",
+      "sha256": "9f901bc28a8ac800e61e71b6b5e5ae7fb6fd22ce30b96568baca390afb0308a4"
+    },
+    {
+      "file": "src/data/units.json",
+      "sha256": "67aa2937d3c7799368f4fde9a610568b69263c331fd8addc90691f1145126887"
+    },
+    {
+      "file": "src/data/unitSpeedAdmissions.json",
+      "sha256": "cf21af9b51d2572eb10f18d128bff8248d89fab0914c77f0582554ff018ee63d"
+    },
+    {
+      "file": "tools/wh3-importer/speed-policy/manifest.json",
+      "sha256": "9da8c7dcf52a4d3a0ba1cac38f82ff444daced20892111f5a45b37bcd9b620f0"
+    }
+  ],
+  "staticSnapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+  "materializedIdentityIds": [
+    "ca_unit_wh_main_brt_cav_grail_knights",
+    "ca_unit_wh_dlc04_emp_cav_royal_altdorf_gryphites_0",
+    "ca_unit_wh2_dlc11_cst_mon_necrofex_colossus_0",
+    "ca_unit_wh2_dlc13_lzd_mon_dread_saurian_1",
+    "ca_unit_wh_main_brt_cav_knights_of_the_realm",
+    "ca_unit_wh_dlc07_brt_cav_questing_knights_0",
+    "ca_unit_wh_main_vmp_cav_black_knights_3",
+    "ca_unit_wh_main_chs_cav_chaos_knights_1",
+    "ca_unit_wh_dlc07_brt_cav_knights_errant_0",
+    "ca_unit_wh_dlc07_brt_cav_grail_guardians_0",
+    "ca_unit_wh_main_emp_cav_outriders_0",
+    "ca_unit_wh3_dlc25_emp_cav_knights_of_the_black_rose",
+    "ca_unit_wh2_dlc09_tmb_cav_skeleton_horsemen_0",
+    "ca_unit_wh2_main_lzd_cav_cold_ones_1",
+    "ca_unit_wh2_main_lzd_cav_cold_one_spearmen_1",
+    "ca_unit_wh_main_vmp_cav_black_knights_0",
+    "ca_unit_wh3_main_vmp_blood_knights_sword_shield",
+    "ca_unit_wh_main_brt_cav_mounted_yeomen_0"
+  ],
+  "anchors": [
+    {
+      "id": "ca_unit_wh_main_brt_cav_mounted_yeomen_0",
+      "mainKey": "wh_main_brt_cav_mounted_yeomen_0",
+      "landKey": "wh_main_brt_cav_mounted_yeomen_0",
+      "kind": "MANUAL_CARD_VALIDATION",
+      "manualReference": "tools/wh3-importer/speed-research/manual-card-evidence.json#/samples/1",
+      "rider": {
+        "entityKey": "wh_main_cavalry_rider_standard_blood",
+        "rawRunSpeed": 3.3,
+        "timesTenCandidate": 33
+      },
+      "mount": {
+        "entityKey": "wh_main_brt_mnt_cavalry_fast_blood",
+        "rawRunSpeed": 9.2,
+        "timesTenCandidate": 92
+      },
+      "observedCardSpeed": 92,
+      "selectedComponent": "mount",
+      "comparison": "MATCH",
+      "formula": "mount run_speed * 10",
+      "profile": "EXACT_MOUNTED_YEOMEN_CHAIN",
+      "profileSha256": "b3d2d261ac074ccd7a1e42231118241099413d563438b8f9b480ee453838152b",
+      "profileDefinition": {
+        "profile": "EXACT_MOUNTED_YEOMEN_CHAIN",
+        "snapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+        "refs": {
+          "man": true,
+          "mount": true,
+          "engine": false,
+          "articulation": false
+        },
+        "flags": {
+          "mounted_draughts": false,
+          "sync_locomotion": false,
+          "engine_type": null,
+          "draught_attachment_point": null,
+          "rider_attachment_point": null
+        },
+        "roles": {
+          "man": {
+            "schema": {
+              "table": "battle_entities_tables",
+              "version": 39,
+              "runSpeedType": "F32"
+            },
+            "joins": [
+              {
+                "fromTable": "main_units_tables",
+                "field": "land_unit",
+                "toTable": "land_units_tables",
+                "targetField": "key",
+                "direction": "forward",
+                "traversal": "from-to"
+              },
+              {
+                "fromTable": "land_units_tables",
+                "field": "man_entity",
+                "toTable": "battle_entities_tables",
+                "targetField": "key",
+                "direction": "forward",
+                "traversal": "from-to"
+              }
+            ],
+            "entityKey": "wh_main_cavalry_rider_standard_blood",
+            "values": {
+              "walk_speed": 1.5,
+              "run_speed": 3.3,
+              "charge_speed": 4.5,
+              "fly_speed": 0,
+              "flying_charge_speed": 0,
+              "locomotion_constants": "medium_entity"
+            }
+          },
+          "mount": {
+            "schema": {
+              "table": "battle_entities_tables",
+              "version": 39,
+              "runSpeedType": "F32"
+            },
+            "joins": [
+              {
+                "fromTable": "main_units_tables",
+                "field": "land_unit",
+                "toTable": "land_units_tables",
+                "targetField": "key",
+                "direction": "forward",
+                "traversal": "from-to"
+              },
+              {
+                "fromTable": "land_units_tables",
+                "field": "mount",
+                "toTable": "mounts_tables",
+                "targetField": "key",
+                "direction": "forward",
+                "traversal": "from-to"
+              },
+              {
+                "fromTable": "mounts_tables",
+                "field": "entity",
+                "toTable": "battle_entities_tables",
+                "targetField": "key",
+                "direction": "forward",
+                "traversal": "from-to"
+              }
+            ],
+            "entityKey": "wh_main_brt_mnt_cavalry_fast_blood",
+            "values": {
+              "walk_speed": 2,
+              "run_speed": 9.2,
+              "charge_speed": 11,
+              "fly_speed": 0,
+              "flying_charge_speed": 0,
+              "locomotion_constants": "medium_entity"
+            }
+          }
+        }
+      },
+      "source": {
+        "file": "tools/wh3-importer/promotion/partial-sources.json",
+        "pointer": "/candidates/4/dump"
+      },
+      "sourceTraces": {
+        "man": {
+          "rowId": "battle_entities_tables:2401ad24a4098a41bd20",
+          "table": "battle_entities_tables",
+          "rowKey": {
+            "key": "wh_main_cavalry_rider_standard_blood"
+          },
+          "field": "run_speed",
+          "sourcePack": "db.pack",
+          "sourcePackPath": "db.pack",
+          "path": "db/battle_entities_tables/data__",
+          "schemaVersion": 39,
+          "joins": [
+            {
+              "from": "main_units_tables:8b6e79116ac051c43dab",
+              "field": "land_unit",
+              "to": "land_units_tables:4f574906c377c7d43cd1",
+              "targetField": "key",
+              "value": "wh_main_brt_cav_mounted_yeomen_0",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            },
+            {
+              "from": "land_units_tables:4f574906c377c7d43cd1",
+              "field": "man_entity",
+              "to": "battle_entities_tables:2401ad24a4098a41bd20",
+              "targetField": "key",
+              "value": "wh_main_cavalry_rider_standard_blood",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            }
+          ]
+        },
+        "mount": {
+          "rowId": "battle_entities_tables:d73d160e6a5ef6728fe3",
+          "table": "battle_entities_tables",
+          "rowKey": {
+            "key": "wh_main_brt_mnt_cavalry_fast_blood"
+          },
+          "field": "run_speed",
+          "sourcePack": "db.pack",
+          "sourcePackPath": "db.pack",
+          "path": "db/battle_entities_tables/data__",
+          "schemaVersion": 39,
+          "joins": [
+            {
+              "from": "main_units_tables:8b6e79116ac051c43dab",
+              "field": "land_unit",
+              "to": "land_units_tables:4f574906c377c7d43cd1",
+              "targetField": "key",
+              "value": "wh_main_brt_cav_mounted_yeomen_0",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            },
+            {
+              "from": "land_units_tables:4f574906c377c7d43cd1",
+              "field": "mount",
+              "to": "mounts_tables:99a5856db2fe3577270a",
+              "targetField": "key",
+              "value": "wh_main_brt_mnt_warhorse_fast",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            },
+            {
+              "from": "mounts_tables:99a5856db2fe3577270a",
+              "field": "entity",
+              "to": "battle_entities_tables:d73d160e6a5ef6728fe3",
+              "targetField": "key",
+              "value": "wh_main_brt_mnt_cavalry_fast_blood",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            }
+          ]
+        }
+      },
+      "productionEligible": false
+    },
+    {
+      "id": "ca_unit_wh_main_brt_cav_knights_of_the_realm",
+      "mainKey": "wh_main_brt_cav_knights_of_the_realm",
+      "landKey": "wh_main_brt_cav_knights_of_the_realm",
+      "kind": "MANUAL_CARD_VALIDATION",
+      "manualReference": "tools/wh3-importer/speed-research/mounted-manual-card-evidence.json#/samples/0",
+      "rider": {
+        "entityKey": "wh_main_cavalry_rider_standard_blood",
+        "rawRunSpeed": 3.3,
+        "timesTenCandidate": 33
+      },
+      "mount": {
+        "entityKey": "wh_main_brt_mnt_cavalry_knights_blood",
+        "rawRunSpeed": 8.4,
+        "timesTenCandidate": 84
+      },
+      "observedCardSpeed": 84,
+      "selectedComponent": "mount",
+      "comparison": "MATCH",
+      "formula": "mount run_speed * 10",
+      "profile": "EXACT_KNIGHTS_OF_THE_REALM_CHAIN",
+      "profileSha256": "20968f30d593d0d6d80d077f95a3f19f8954897a80f3f6e49c7d255d650786b0",
+      "profileDefinition": {
+        "profile": "EXACT_KNIGHTS_OF_THE_REALM_CHAIN",
+        "snapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+        "refs": {
+          "man": true,
+          "mount": true,
+          "engine": false,
+          "articulation": false
+        },
+        "flags": {
+          "mounted_draughts": false,
+          "sync_locomotion": false,
+          "engine_type": null,
+          "draught_attachment_point": null,
+          "rider_attachment_point": null
+        },
+        "roles": {
+          "man": {
+            "schema": {
+              "table": "battle_entities_tables",
+              "version": 39,
+              "runSpeedType": "F32"
+            },
+            "joins": [
+              {
+                "fromTable": "main_units_tables",
+                "field": "land_unit",
+                "toTable": "land_units_tables",
+                "targetField": "key",
+                "direction": "forward",
+                "traversal": "from-to"
+              },
+              {
+                "fromTable": "land_units_tables",
+                "field": "man_entity",
+                "toTable": "battle_entities_tables",
+                "targetField": "key",
+                "direction": "forward",
+                "traversal": "from-to"
+              }
+            ],
+            "entityKey": "wh_main_cavalry_rider_standard_blood",
+            "values": {
+              "walk_speed": 1.5,
+              "run_speed": 3.3,
+              "charge_speed": 4.5,
+              "fly_speed": 0,
+              "flying_charge_speed": 0,
+              "locomotion_constants": "medium_entity"
+            }
+          },
+          "mount": {
+            "schema": {
+              "table": "battle_entities_tables",
+              "version": 39,
+              "runSpeedType": "F32"
+            },
+            "joins": [
+              {
+                "fromTable": "main_units_tables",
+                "field": "land_unit",
+                "toTable": "land_units_tables",
+                "targetField": "key",
+                "direction": "forward",
+                "traversal": "from-to"
+              },
+              {
+                "fromTable": "land_units_tables",
+                "field": "mount",
+                "toTable": "mounts_tables",
+                "targetField": "key",
+                "direction": "forward",
+                "traversal": "from-to"
+              },
+              {
+                "fromTable": "mounts_tables",
+                "field": "entity",
+                "toTable": "battle_entities_tables",
+                "targetField": "key",
+                "direction": "forward",
+                "traversal": "from-to"
+              }
+            ],
+            "entityKey": "wh_main_brt_mnt_cavalry_knights_blood",
+            "values": {
+              "walk_speed": 2,
+              "run_speed": 8.4,
+              "charge_speed": 10.8,
+              "fly_speed": 0,
+              "flying_charge_speed": 0,
+              "locomotion_constants": "medium_entity"
+            }
+          }
+        }
+      },
+      "source": {
+        "file": "tools/wh3-importer/expansion-batch-01/sources.json",
+        "pointer": "/decoded/candidates/1/dump",
+        "originalExtraction": {
+          "reference": "generated/wh3/expansion-batch-01/units/expansion-01-04.result.json",
+          "sha256": "71f41e4bf28d7352e45b45e887b079929101116f2b2bac8d8b21ae0579da6afa"
+        }
+      },
+      "sourceTraces": {
+        "man": {
+          "rowId": "battle_entities_tables:2401ad24a4098a41bd20",
+          "table": "battle_entities_tables",
+          "rowKey": {
+            "key": "wh_main_cavalry_rider_standard_blood"
+          },
+          "field": "run_speed",
+          "sourcePack": "db.pack",
+          "path": "db/battle_entities_tables/data__",
+          "schemaVersion": 39,
+          "joins": [
+            {
+              "from": "main_units_tables:a3356d1521443fb8e1b0",
+              "field": "land_unit",
+              "to": "land_units_tables:e7e2955b702f2616fdad",
+              "targetField": "key",
+              "value": "wh_main_brt_cav_knights_of_the_realm",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            },
+            {
+              "from": "land_units_tables:e7e2955b702f2616fdad",
+              "field": "man_entity",
+              "to": "battle_entities_tables:2401ad24a4098a41bd20",
+              "targetField": "key",
+              "value": "wh_main_cavalry_rider_standard_blood",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            }
+          ]
+        },
+        "mount": {
+          "rowId": "battle_entities_tables:65af0620ccf3a3a912a5",
+          "table": "battle_entities_tables",
+          "rowKey": {
+            "key": "wh_main_brt_mnt_cavalry_knights_blood"
+          },
+          "field": "run_speed",
+          "sourcePack": "db.pack",
+          "path": "db/battle_entities_tables/data__",
+          "schemaVersion": 39,
+          "joins": [
+            {
+              "from": "main_units_tables:a3356d1521443fb8e1b0",
+              "field": "land_unit",
+              "to": "land_units_tables:e7e2955b702f2616fdad",
+              "targetField": "key",
+              "value": "wh_main_brt_cav_knights_of_the_realm",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            },
+            {
+              "from": "land_units_tables:e7e2955b702f2616fdad",
+              "field": "mount",
+              "to": "mounts_tables:e8da8130f128b9fae445",
+              "targetField": "key",
+              "value": "wh_main_brt_mnt_warhorse_knights",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            },
+            {
+              "from": "mounts_tables:e8da8130f128b9fae445",
+              "field": "entity",
+              "to": "battle_entities_tables:65af0620ccf3a3a912a5",
+              "targetField": "key",
+              "value": "wh_main_brt_mnt_cavalry_knights_blood",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            }
+          ]
+        }
+      },
+      "productionEligible": false
+    },
+    {
+      "id": "ca_unit_wh2_main_lzd_cav_cold_ones_1",
+      "mainKey": "wh2_main_lzd_cav_cold_ones_1",
+      "landKey": "wh2_main_lzd_cav_cold_ones_1",
+      "kind": "MANUAL_CARD_VALIDATION",
+      "manualReference": "tools/wh3-importer/speed-research/mounted-manual-card-evidence.json#/samples/1",
+      "rider": {
+        "entityKey": "wh_main_cavalry_rider_standard_blood",
+        "rawRunSpeed": 3.3,
+        "timesTenCandidate": 33
+      },
+      "mount": {
+        "entityKey": "wh2_main_lzd_cavalry_cold_one_blood",
+        "rawRunSpeed": 6.6,
+        "timesTenCandidate": 66
+      },
+      "observedCardSpeed": 66,
+      "selectedComponent": "mount",
+      "comparison": "MATCH",
+      "formula": "mount run_speed * 10",
+      "profile": "EXACT_COLD_ONE_RIDERS_CHAIN",
+      "profileSha256": "1633b3c42df4ca33482a4f021985ac042f45a87f9e9e6a6d5534114b23c633fd",
+      "profileDefinition": {
+        "profile": "EXACT_COLD_ONE_RIDERS_CHAIN",
+        "snapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+        "refs": {
+          "man": true,
+          "mount": true,
+          "engine": false,
+          "articulation": false
+        },
+        "flags": {
+          "mounted_draughts": false,
+          "sync_locomotion": false,
+          "engine_type": null,
+          "draught_attachment_point": null,
+          "rider_attachment_point": null
+        },
+        "roles": {
+          "man": {
+            "schema": {
+              "table": "battle_entities_tables",
+              "version": 39,
+              "runSpeedType": "F32"
+            },
+            "joins": [
+              {
+                "fromTable": "main_units_tables",
+                "field": "land_unit",
+                "toTable": "land_units_tables",
+                "targetField": "key",
+                "direction": "forward",
+                "traversal": "from-to"
+              },
+              {
+                "fromTable": "land_units_tables",
+                "field": "man_entity",
+                "toTable": "battle_entities_tables",
+                "targetField": "key",
+                "direction": "forward",
+                "traversal": "from-to"
+              }
+            ],
+            "entityKey": "wh_main_cavalry_rider_standard_blood",
+            "values": {
+              "walk_speed": 1.5,
+              "run_speed": 3.3,
+              "charge_speed": 4.5,
+              "fly_speed": 0,
+              "flying_charge_speed": 0,
+              "locomotion_constants": "medium_entity"
+            }
+          },
+          "mount": {
+            "schema": {
+              "table": "battle_entities_tables",
+              "version": 39,
+              "runSpeedType": "F32"
+            },
+            "joins": [
+              {
+                "fromTable": "main_units_tables",
+                "field": "land_unit",
+                "toTable": "land_units_tables",
+                "targetField": "key",
+                "direction": "forward",
+                "traversal": "from-to"
+              },
+              {
+                "fromTable": "land_units_tables",
+                "field": "mount",
+                "toTable": "mounts_tables",
+                "targetField": "key",
+                "direction": "forward",
+                "traversal": "from-to"
+              },
+              {
+                "fromTable": "mounts_tables",
+                "field": "entity",
+                "toTable": "battle_entities_tables",
+                "targetField": "key",
+                "direction": "forward",
+                "traversal": "from-to"
+              }
+            ],
+            "entityKey": "wh2_main_lzd_cavalry_cold_one_blood",
+            "values": {
+              "walk_speed": 2,
+              "run_speed": 6.6,
+              "charge_speed": 10,
+              "fly_speed": 0,
+              "flying_charge_speed": 0,
+              "locomotion_constants": "medium_entity"
+            }
+          }
+        }
+      },
+      "source": {
+        "file": "tools/wh3-importer/expansion-batch-04/sources.json",
+        "pointer": "/decoded/candidates/11/dump",
+        "originalExtraction": {
+          "reference": "generated/wh3/expansion-batch-04/units/expansion-04-12.result.json",
+          "sha256": "af7d646b22b48476dc06f3f91260a130727627bfc0a5983b4b89407ec870cabf"
+        }
+      },
+      "sourceTraces": {
+        "man": {
+          "rowId": "battle_entities_tables:2401ad24a4098a41bd20",
+          "table": "battle_entities_tables",
+          "rowKey": {
+            "key": "wh_main_cavalry_rider_standard_blood"
+          },
+          "field": "run_speed",
+          "sourcePack": "db.pack",
+          "path": "db/battle_entities_tables/data__",
+          "schemaVersion": 39,
+          "joins": [
+            {
+              "from": "main_units_tables:e48aa278ecc3a4f856cc",
+              "field": "land_unit",
+              "to": "land_units_tables:a879697104e8099bdd1d",
+              "targetField": "key",
+              "value": "wh2_main_lzd_cav_cold_ones_1",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            },
+            {
+              "from": "land_units_tables:a879697104e8099bdd1d",
+              "field": "man_entity",
+              "to": "battle_entities_tables:2401ad24a4098a41bd20",
+              "targetField": "key",
+              "value": "wh_main_cavalry_rider_standard_blood",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            }
+          ]
+        },
+        "mount": {
+          "rowId": "battle_entities_tables:ac3d43c79b6e77eb9d34",
+          "table": "battle_entities_tables",
+          "rowKey": {
+            "key": "wh2_main_lzd_cavalry_cold_one_blood"
+          },
+          "field": "run_speed",
+          "sourcePack": "db.pack",
+          "path": "db/battle_entities_tables/data__",
+          "schemaVersion": 39,
+          "joins": [
+            {
+              "from": "main_units_tables:e48aa278ecc3a4f856cc",
+              "field": "land_unit",
+              "to": "land_units_tables:a879697104e8099bdd1d",
+              "targetField": "key",
+              "value": "wh2_main_lzd_cav_cold_ones_1",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            },
+            {
+              "from": "land_units_tables:a879697104e8099bdd1d",
+              "field": "mount",
+              "to": "mounts_tables:d786fd6e5238319da619",
+              "targetField": "key",
+              "value": "wh2_main_lzd_mnt_cold_one",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            },
+            {
+              "from": "mounts_tables:d786fd6e5238319da619",
+              "field": "entity",
+              "to": "battle_entities_tables:ac3d43c79b6e77eb9d34",
+              "targetField": "key",
+              "value": "wh2_main_lzd_cavalry_cold_one_blood",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            }
+          ]
+        }
+      },
+      "productionEligible": false
+    },
+    {
+      "id": "ca_unit_wh_main_brt_cav_grail_knights",
+      "mainKey": "wh_main_brt_cav_grail_knights",
+      "landKey": "wh_main_brt_cav_grail_knights",
+      "kind": "MANUAL_CARD_VALIDATION",
+      "manualReference": "tools/wh3-importer/speed-research/mounted-manual-card-evidence.json#/samples/2",
+      "rider": {
+        "entityKey": "wh_main_cavalry_rider_standard_blood",
+        "rawRunSpeed": 3.3,
+        "timesTenCandidate": 33
+      },
+      "mount": {
+        "entityKey": "wh_main_brt_mnt_cavalry_knights_heavy_blood",
+        "rawRunSpeed": 8.4,
+        "timesTenCandidate": 84
+      },
+      "observedCardSpeed": 84,
+      "selectedComponent": "mount",
+      "comparison": "MATCH",
+      "formula": "mount run_speed * 10",
+      "profile": "EXACT_GRAIL_KNIGHTS_CHAIN",
+      "profileSha256": "454563f92f8c59150f224b3c8061c538cfc486912a08afc213ae5d11a4894837",
+      "profileDefinition": {
+        "profile": "EXACT_GRAIL_KNIGHTS_CHAIN",
+        "snapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+        "refs": {
+          "man": true,
+          "mount": true,
+          "engine": false,
+          "articulation": false
+        },
+        "flags": {
+          "mounted_draughts": false,
+          "sync_locomotion": false,
+          "engine_type": null,
+          "draught_attachment_point": null,
+          "rider_attachment_point": null
+        },
+        "roles": {
+          "man": {
+            "schema": {
+              "table": "battle_entities_tables",
+              "version": 39,
+              "runSpeedType": "F32"
+            },
+            "joins": [
+              {
+                "fromTable": "main_units_tables",
+                "field": "land_unit",
+                "toTable": "land_units_tables",
+                "targetField": "key",
+                "direction": "forward",
+                "traversal": "from-to"
+              },
+              {
+                "fromTable": "land_units_tables",
+                "field": "man_entity",
+                "toTable": "battle_entities_tables",
+                "targetField": "key",
+                "direction": "forward",
+                "traversal": "from-to"
+              }
+            ],
+            "entityKey": "wh_main_cavalry_rider_standard_blood",
+            "values": {
+              "walk_speed": 1.5,
+              "run_speed": 3.3,
+              "charge_speed": 4.5,
+              "fly_speed": 0,
+              "flying_charge_speed": 0,
+              "locomotion_constants": "medium_entity"
+            }
+          },
+          "mount": {
+            "schema": {
+              "table": "battle_entities_tables",
+              "version": 39,
+              "runSpeedType": "F32"
+            },
+            "joins": [
+              {
+                "fromTable": "main_units_tables",
+                "field": "land_unit",
+                "toTable": "land_units_tables",
+                "targetField": "key",
+                "direction": "forward",
+                "traversal": "from-to"
+              },
+              {
+                "fromTable": "land_units_tables",
+                "field": "mount",
+                "toTable": "mounts_tables",
+                "targetField": "key",
+                "direction": "forward",
+                "traversal": "from-to"
+              },
+              {
+                "fromTable": "mounts_tables",
+                "field": "entity",
+                "toTable": "battle_entities_tables",
+                "targetField": "key",
+                "direction": "forward",
+                "traversal": "from-to"
+              }
+            ],
+            "entityKey": "wh_main_brt_mnt_cavalry_knights_heavy_blood",
+            "values": {
+              "walk_speed": 2,
+              "run_speed": 8.4,
+              "charge_speed": 10.8,
+              "fly_speed": 0,
+              "flying_charge_speed": 0,
+              "locomotion_constants": "medium_entity"
+            }
+          }
+        }
+      },
+      "source": {
+        "file": "tools/wh3-importer/promotion/partial-sources.json",
+        "pointer": "/candidates/0/dump"
+      },
+      "sourceTraces": {
+        "man": {
+          "rowId": "battle_entities_tables:2401ad24a4098a41bd20",
+          "table": "battle_entities_tables",
+          "rowKey": {
+            "key": "wh_main_cavalry_rider_standard_blood"
+          },
+          "field": "run_speed",
+          "sourcePack": "db.pack",
+          "sourcePackPath": "db.pack",
+          "path": "db/battle_entities_tables/data__",
+          "schemaVersion": 39,
+          "joins": [
+            {
+              "from": "main_units_tables:00368322a6b077d33b4e",
+              "field": "land_unit",
+              "to": "land_units_tables:1b6376fa24c71e429596",
+              "targetField": "key",
+              "value": "wh_main_brt_cav_grail_knights",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            },
+            {
+              "from": "land_units_tables:1b6376fa24c71e429596",
+              "field": "man_entity",
+              "to": "battle_entities_tables:2401ad24a4098a41bd20",
+              "targetField": "key",
+              "value": "wh_main_cavalry_rider_standard_blood",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            }
+          ]
+        },
+        "mount": {
+          "rowId": "battle_entities_tables:0202bbbcc41b9c4b9801",
+          "table": "battle_entities_tables",
+          "rowKey": {
+            "key": "wh_main_brt_mnt_cavalry_knights_heavy_blood"
+          },
+          "field": "run_speed",
+          "sourcePack": "db.pack",
+          "sourcePackPath": "db.pack",
+          "path": "db/battle_entities_tables/data__",
+          "schemaVersion": 39,
+          "joins": [
+            {
+              "from": "main_units_tables:00368322a6b077d33b4e",
+              "field": "land_unit",
+              "to": "land_units_tables:1b6376fa24c71e429596",
+              "targetField": "key",
+              "value": "wh_main_brt_cav_grail_knights",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            },
+            {
+              "from": "land_units_tables:1b6376fa24c71e429596",
+              "field": "mount",
+              "to": "mounts_tables:94131125d572f717815d",
+              "targetField": "key",
+              "value": "wh_main_brt_mnt_warhorse_grail_knights",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            },
+            {
+              "from": "mounts_tables:94131125d572f717815d",
+              "field": "entity",
+              "to": "battle_entities_tables:0202bbbcc41b9c4b9801",
+              "targetField": "key",
+              "value": "wh_main_brt_mnt_cavalry_knights_heavy_blood",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            }
+          ]
+        }
+      },
+      "productionEligible": false
+    }
+  ],
+  "counts": {
+    "mountedReviewed": 17,
+    "mountedAnchors": 4,
+    "newDirect": 7,
+    "mountedAmbiguous": 10,
+    "unavailable": 0,
+    "expectedCatalog": {
+      "SPEED_DIRECT_STATIC": 81,
+      "SPEED_AMBIGUOUS": 20,
+      "SPEED_UNAVAILABLE": 0
+    },
+    "unchangedProduction": {
+      "speedPopulated": 74,
+      "speedBlank": 27
+    }
+  },
+  "ambiguityReasons": {
+    "EXACT_MOUNTED_PROFILE_NOT_VALIDATED": 9,
+    "RIDER_MOUNT_SOURCE_NOT_DISTINGUISHABLE": 1
+  },
+  "untouchedBuckets": {
+    "ENGINE_VEHICLE_PRECEDENCE_UNRESOLVED": 5,
+    "FLYING_SEMANTICS_UNRESOLVED": 3,
+    "ARTICULATED_COMPONENT_AMBIGUITY": 2
+  },
+  "catalog": [
+    {
+      "identity": {
+        "id": "ca_unit_wh_main_brt_cav_grail_knights",
+        "name": "Grail Knights",
+        "mainKey": "wh_main_brt_cav_grail_knights",
+        "landKey": "wh_main_brt_cav_grail_knights"
+      },
+      "source": {
+        "file": "tools/wh3-importer/promotion/partial-sources.json",
+        "pointer": "/candidates/0/dump"
+      },
+      "staticSnapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+      "status": "SPEED_DIRECT_STATIC",
+      "reason": null,
+      "candidate": {
+        "mainKey": "wh_main_brt_cav_grail_knights",
+        "landKey": "wh_main_brt_cav_grail_knights",
+        "selectedComponent": "mount",
+        "selectedEntityKey": "wh_main_brt_mnt_cavalry_knights_heavy_blood",
+        "rawRunSpeed": 8.4,
+        "calculatedSpeed": 84,
+        "formula": "rawSpeed * 10",
+        "rounding": "NONE",
+        "validationAnchor": "ca_unit_wh_main_brt_cav_grail_knights",
+        "profile": "EXACT_GRAIL_KNIGHTS_CHAIN",
+        "profileSha256": "454563f92f8c59150f224b3c8061c538cfc486912a08afc213ae5d11a4894837",
+        "validationBasis": "DIRECT_MANUAL_CARD_MATCH",
+        "sourceTraceReference": "sourceTraces/mount",
+        "evidenceKind": "MANUAL_CARD_VALIDATION"
+      },
+      "productionEligible": false,
+      "components": {
+        "man": {
+          "entityKey": "wh_main_cavalry_rider_standard_blood",
+          "rawRunSpeed": 3.3,
+          "timesTenCandidate": 33
+        },
+        "mount": {
+          "entityKey": "wh_main_brt_mnt_cavalry_knights_heavy_blood",
+          "rawRunSpeed": 8.4,
+          "timesTenCandidate": 84
+        }
+      },
+      "mountRelation": {
+        "value": "wh_main_brt_mnt_warhorse_grail_knights",
+        "source": {
+          "rowId": "land_units_tables:1b6376fa24c71e429596",
+          "table": "land_units_tables",
+          "rowKey": {
+            "key": "wh_main_brt_cav_grail_knights"
+          },
+          "field": "mount",
+          "sourcePack": "db.pack",
+          "sourcePackPath": "db.pack",
+          "path": "db/land_units_tables/data__",
+          "schemaVersion": 54,
+          "joins": [
+            {
+              "from": "main_units_tables:00368322a6b077d33b4e",
+              "field": "land_unit",
+              "to": "land_units_tables:1b6376fa24c71e429596",
+              "targetField": "key",
+              "value": "wh_main_brt_cav_grail_knights",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            }
+          ]
+        }
+      },
+      "topology": {
+        "mainKey": "wh_main_brt_cav_grail_knights",
+        "landKey": "wh_main_brt_cav_grail_knights",
+        "mountRecords": [
+          {
+            "rowId": "mounts_tables:94131125d572f717815d",
+            "key": {
+              "key": "wh_main_brt_mnt_warhorse_grail_knights"
+            },
+            "entity": {
+              "value": "wh_main_brt_mnt_cavalry_knights_heavy_blood",
+              "source": {
+                "rowId": "mounts_tables:94131125d572f717815d",
+                "table": "mounts_tables",
+                "rowKey": {
+                  "key": "wh_main_brt_mnt_warhorse_grail_knights"
+                },
+                "field": "entity",
+                "sourcePack": "db.pack",
+                "sourcePackPath": "db.pack",
+                "path": "db/mounts_tables/data__",
+                "schemaVersion": 10,
+                "joins": [
+                  {
+                    "from": "main_units_tables:00368322a6b077d33b4e",
+                    "field": "land_unit",
+                    "to": "land_units_tables:1b6376fa24c71e429596",
+                    "targetField": "key",
+                    "value": "wh_main_brt_cav_grail_knights",
+                    "direction": "forward",
+                    "evidence": "RPFM processed schema is_reference",
+                    "traversal": "from-to"
+                  },
+                  {
+                    "from": "land_units_tables:1b6376fa24c71e429596",
+                    "field": "mount",
+                    "to": "mounts_tables:94131125d572f717815d",
+                    "targetField": "key",
+                    "value": "wh_main_brt_mnt_warhorse_grail_knights",
+                    "direction": "forward",
+                    "evidence": "RPFM processed schema is_reference",
+                    "traversal": "from-to"
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "entityKeys": [
+          "wh_main_cavalry_rider_standard_blood",
+          "wh_main_brt_mnt_cavalry_knights_heavy_blood"
+        ]
+      },
+      "sourceTraces": {
+        "man": {
+          "rowId": "battle_entities_tables:2401ad24a4098a41bd20",
+          "table": "battle_entities_tables",
+          "rowKey": {
+            "key": "wh_main_cavalry_rider_standard_blood"
+          },
+          "field": "run_speed",
+          "sourcePack": "db.pack",
+          "sourcePackPath": "db.pack",
+          "path": "db/battle_entities_tables/data__",
+          "schemaVersion": 39,
+          "joins": [
+            {
+              "from": "main_units_tables:00368322a6b077d33b4e",
+              "field": "land_unit",
+              "to": "land_units_tables:1b6376fa24c71e429596",
+              "targetField": "key",
+              "value": "wh_main_brt_cav_grail_knights",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            },
+            {
+              "from": "land_units_tables:1b6376fa24c71e429596",
+              "field": "man_entity",
+              "to": "battle_entities_tables:2401ad24a4098a41bd20",
+              "targetField": "key",
+              "value": "wh_main_cavalry_rider_standard_blood",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            }
+          ]
+        },
+        "mount": {
+          "rowId": "battle_entities_tables:0202bbbcc41b9c4b9801",
+          "table": "battle_entities_tables",
+          "rowKey": {
+            "key": "wh_main_brt_mnt_cavalry_knights_heavy_blood"
+          },
+          "field": "run_speed",
+          "sourcePack": "db.pack",
+          "sourcePackPath": "db.pack",
+          "path": "db/battle_entities_tables/data__",
+          "schemaVersion": 39,
+          "joins": [
+            {
+              "from": "main_units_tables:00368322a6b077d33b4e",
+              "field": "land_unit",
+              "to": "land_units_tables:1b6376fa24c71e429596",
+              "targetField": "key",
+              "value": "wh_main_brt_cav_grail_knights",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            },
+            {
+              "from": "land_units_tables:1b6376fa24c71e429596",
+              "field": "mount",
+              "to": "mounts_tables:94131125d572f717815d",
+              "targetField": "key",
+              "value": "wh_main_brt_mnt_warhorse_grail_knights",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            },
+            {
+              "from": "mounts_tables:94131125d572f717815d",
+              "field": "entity",
+              "to": "battle_entities_tables:0202bbbcc41b9c4b9801",
+              "targetField": "key",
+              "value": "wh_main_brt_mnt_cavalry_knights_heavy_blood",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            }
+          ]
+        }
+      },
+      "movementFlags": {
+        "mounted_draughts": false,
+        "sync_locomotion": false,
+        "engine_type": null,
+        "draught_attachment_point": null,
+        "rider_attachment_point": null
+      },
+      "overrideScope": "NO_ADDITIONAL_BASE_MOVEMENT_SOURCE_IN_REVIEWED_TRACE; conditional ground effects excluded"
+    },
+    {
+      "identity": {
+        "id": "ca_unit_wh_dlc04_emp_cav_royal_altdorf_gryphites_0",
+        "name": "The Royal Altdorf Gryphites (Demigryph Knights)",
+        "mainKey": "wh_dlc04_emp_cav_royal_altdorf_gryphites_0",
+        "landKey": "wh_dlc04_emp_cav_royal_altdorf_gryphites_0"
+      },
+      "source": {
+        "file": "tools/wh3-importer/promotion/partial-sources.json",
+        "pointer": "/candidates/11/dump"
+      },
+      "staticSnapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+      "status": "SPEED_AMBIGUOUS",
+      "reason": "EXACT_MOUNTED_PROFILE_NOT_VALIDATED",
+      "candidate": null,
+      "productionEligible": false,
+      "components": {
+        "man": {
+          "entityKey": "wh_main_cavalry_rider_standard_blood",
+          "rawRunSpeed": 3.3,
+          "timesTenCandidate": 33
+        },
+        "mount": {
+          "entityKey": "wh_main_monster_demigryph_blood",
+          "rawRunSpeed": 7.5,
+          "timesTenCandidate": 75
+        }
+      },
+      "mountRelation": {
+        "value": "wh_dlc04_emp_mnt_demigryph_altdorf",
+        "source": {
+          "rowId": "land_units_tables:6d3cfa85e793fd350096",
+          "table": "land_units_tables",
+          "rowKey": {
+            "key": "wh_dlc04_emp_cav_royal_altdorf_gryphites_0"
+          },
+          "field": "mount",
+          "sourcePack": "db.pack",
+          "sourcePackPath": "db.pack",
+          "path": "db/land_units_tables/data__",
+          "schemaVersion": 54,
+          "joins": [
+            {
+              "from": "main_units_tables:fd3c38f54a600189ec18",
+              "field": "land_unit",
+              "to": "land_units_tables:6d3cfa85e793fd350096",
+              "targetField": "key",
+              "value": "wh_dlc04_emp_cav_royal_altdorf_gryphites_0",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            }
+          ]
+        }
+      },
+      "topology": {
+        "mainKey": "wh_dlc04_emp_cav_royal_altdorf_gryphites_0",
+        "landKey": "wh_dlc04_emp_cav_royal_altdorf_gryphites_0",
+        "mountRecords": [
+          {
+            "rowId": "mounts_tables:0c43422ae7bfce98807b",
+            "key": {
+              "key": "wh_dlc04_emp_mnt_demigryph_altdorf"
+            },
+            "entity": {
+              "value": "wh_main_monster_demigryph_blood",
+              "source": {
+                "rowId": "mounts_tables:0c43422ae7bfce98807b",
+                "table": "mounts_tables",
+                "rowKey": {
+                  "key": "wh_dlc04_emp_mnt_demigryph_altdorf"
+                },
+                "field": "entity",
+                "sourcePack": "db.pack",
+                "sourcePackPath": "db.pack",
+                "path": "db/mounts_tables/data__",
+                "schemaVersion": 10,
+                "joins": [
+                  {
+                    "from": "main_units_tables:fd3c38f54a600189ec18",
+                    "field": "land_unit",
+                    "to": "land_units_tables:6d3cfa85e793fd350096",
+                    "targetField": "key",
+                    "value": "wh_dlc04_emp_cav_royal_altdorf_gryphites_0",
+                    "direction": "forward",
+                    "evidence": "RPFM processed schema is_reference",
+                    "traversal": "from-to"
+                  },
+                  {
+                    "from": "land_units_tables:6d3cfa85e793fd350096",
+                    "field": "mount",
+                    "to": "mounts_tables:0c43422ae7bfce98807b",
+                    "targetField": "key",
+                    "value": "wh_dlc04_emp_mnt_demigryph_altdorf",
+                    "direction": "forward",
+                    "evidence": "RPFM processed schema is_reference",
+                    "traversal": "from-to"
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "entityKeys": [
+          "wh_main_cavalry_rider_standard_blood",
+          "wh_main_monster_demigryph_blood"
+        ]
+      },
+      "sourceTraces": {
+        "man": {
+          "rowId": "battle_entities_tables:2401ad24a4098a41bd20",
+          "table": "battle_entities_tables",
+          "rowKey": {
+            "key": "wh_main_cavalry_rider_standard_blood"
+          },
+          "field": "run_speed",
+          "sourcePack": "db.pack",
+          "sourcePackPath": "db.pack",
+          "path": "db/battle_entities_tables/data__",
+          "schemaVersion": 39,
+          "joins": [
+            {
+              "from": "main_units_tables:fd3c38f54a600189ec18",
+              "field": "land_unit",
+              "to": "land_units_tables:6d3cfa85e793fd350096",
+              "targetField": "key",
+              "value": "wh_dlc04_emp_cav_royal_altdorf_gryphites_0",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            },
+            {
+              "from": "land_units_tables:6d3cfa85e793fd350096",
+              "field": "man_entity",
+              "to": "battle_entities_tables:2401ad24a4098a41bd20",
+              "targetField": "key",
+              "value": "wh_main_cavalry_rider_standard_blood",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            }
+          ]
+        },
+        "mount": {
+          "rowId": "battle_entities_tables:d100399c945dfc168d26",
+          "table": "battle_entities_tables",
+          "rowKey": {
+            "key": "wh_main_monster_demigryph_blood"
+          },
+          "field": "run_speed",
+          "sourcePack": "db.pack",
+          "sourcePackPath": "db.pack",
+          "path": "db/battle_entities_tables/data__",
+          "schemaVersion": 39,
+          "joins": [
+            {
+              "from": "main_units_tables:fd3c38f54a600189ec18",
+              "field": "land_unit",
+              "to": "land_units_tables:6d3cfa85e793fd350096",
+              "targetField": "key",
+              "value": "wh_dlc04_emp_cav_royal_altdorf_gryphites_0",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            },
+            {
+              "from": "land_units_tables:6d3cfa85e793fd350096",
+              "field": "mount",
+              "to": "mounts_tables:0c43422ae7bfce98807b",
+              "targetField": "key",
+              "value": "wh_dlc04_emp_mnt_demigryph_altdorf",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            },
+            {
+              "from": "mounts_tables:0c43422ae7bfce98807b",
+              "field": "entity",
+              "to": "battle_entities_tables:d100399c945dfc168d26",
+              "targetField": "key",
+              "value": "wh_main_monster_demigryph_blood",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            }
+          ]
+        }
+      },
+      "movementFlags": {
+        "mounted_draughts": false,
+        "sync_locomotion": false,
+        "engine_type": null,
+        "draught_attachment_point": null,
+        "rider_attachment_point": null
+      },
+      "overrideScope": "NO_ADDITIONAL_BASE_MOVEMENT_SOURCE_IN_REVIEWED_TRACE; conditional ground effects excluded"
+    },
+    {
+      "identity": {
+        "id": "ca_unit_wh2_dlc11_cst_mon_necrofex_colossus_0",
+        "name": "Necrofex Colossus",
+        "mainKey": "wh2_dlc11_cst_mon_necrofex_colossus_0",
+        "landKey": "wh2_dlc11_cst_mon_necrofex_colossus_0"
+      },
+      "source": {
+        "file": "tools/wh3-importer/promotion/partial-sources.json",
+        "pointer": "/candidates/6/dump"
+      },
+      "staticSnapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+      "status": "SPEED_AMBIGUOUS",
+      "reason": "RIDER_MOUNT_SOURCE_NOT_DISTINGUISHABLE",
+      "candidate": null,
+      "productionEligible": false,
+      "components": {
+        "man": {
+          "entityKey": "wh2_dlc11_cst_mon_necrofex_colossus",
+          "rawRunSpeed": 4.5,
+          "timesTenCandidate": 45
+        },
+        "mount": {
+          "entityKey": "wh2_dlc11_cst_mon_necrofex_colossus",
+          "rawRunSpeed": 4.5,
+          "timesTenCandidate": 45
+        }
+      },
+      "mountRelation": {
+        "value": "wh2_dlc11_cst_mnt_necrofex_colossus",
+        "source": {
+          "rowId": "land_units_tables:40bd6445de10c3ca8f2d",
+          "table": "land_units_tables",
+          "rowKey": {
+            "key": "wh2_dlc11_cst_mon_necrofex_colossus_0"
+          },
+          "field": "mount",
+          "sourcePack": "db.pack",
+          "sourcePackPath": "db.pack",
+          "path": "db/land_units_tables/data__",
+          "schemaVersion": 54,
+          "joins": [
+            {
+              "from": "main_units_tables:3471e1382d0dc7a0324a",
+              "field": "land_unit",
+              "to": "land_units_tables:40bd6445de10c3ca8f2d",
+              "targetField": "key",
+              "value": "wh2_dlc11_cst_mon_necrofex_colossus_0",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            }
+          ]
+        }
+      },
+      "topology": {
+        "mainKey": "wh2_dlc11_cst_mon_necrofex_colossus_0",
+        "landKey": "wh2_dlc11_cst_mon_necrofex_colossus_0",
+        "mountRecords": [
+          {
+            "rowId": "mounts_tables:adcfd209e802ce4147fa",
+            "key": {
+              "key": "wh2_dlc11_cst_mnt_necrofex_colossus"
+            },
+            "entity": {
+              "value": "wh2_dlc11_cst_mon_necrofex_colossus",
+              "source": {
+                "rowId": "mounts_tables:adcfd209e802ce4147fa",
+                "table": "mounts_tables",
+                "rowKey": {
+                  "key": "wh2_dlc11_cst_mnt_necrofex_colossus"
+                },
+                "field": "entity",
+                "sourcePack": "db.pack",
+                "sourcePackPath": "db.pack",
+                "path": "db/mounts_tables/data__",
+                "schemaVersion": 10,
+                "joins": [
+                  {
+                    "from": "main_units_tables:3471e1382d0dc7a0324a",
+                    "field": "land_unit",
+                    "to": "land_units_tables:40bd6445de10c3ca8f2d",
+                    "targetField": "key",
+                    "value": "wh2_dlc11_cst_mon_necrofex_colossus_0",
+                    "direction": "forward",
+                    "evidence": "RPFM processed schema is_reference",
+                    "traversal": "from-to"
+                  },
+                  {
+                    "from": "land_units_tables:40bd6445de10c3ca8f2d",
+                    "field": "mount",
+                    "to": "mounts_tables:adcfd209e802ce4147fa",
+                    "targetField": "key",
+                    "value": "wh2_dlc11_cst_mnt_necrofex_colossus",
+                    "direction": "forward",
+                    "evidence": "RPFM processed schema is_reference",
+                    "traversal": "from-to"
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "entityKeys": [
+          "wh2_dlc11_cst_mon_necrofex_colossus"
+        ]
+      },
+      "sourceTraces": {
+        "man": {
+          "rowId": "battle_entities_tables:98bc4cb073a2b02cc639",
+          "table": "battle_entities_tables",
+          "rowKey": {
+            "key": "wh2_dlc11_cst_mon_necrofex_colossus"
+          },
+          "field": "run_speed",
+          "sourcePack": "db.pack",
+          "sourcePackPath": "db.pack",
+          "path": "db/battle_entities_tables/data__",
+          "schemaVersion": 39,
+          "joins": [
+            {
+              "from": "main_units_tables:3471e1382d0dc7a0324a",
+              "field": "land_unit",
+              "to": "land_units_tables:40bd6445de10c3ca8f2d",
+              "targetField": "key",
+              "value": "wh2_dlc11_cst_mon_necrofex_colossus_0",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            },
+            {
+              "from": "land_units_tables:40bd6445de10c3ca8f2d",
+              "field": "man_entity",
+              "to": "battle_entities_tables:98bc4cb073a2b02cc639",
+              "targetField": "key",
+              "value": "wh2_dlc11_cst_mon_necrofex_colossus",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            }
+          ]
+        },
+        "mount": {
+          "rowId": "battle_entities_tables:98bc4cb073a2b02cc639",
+          "table": "battle_entities_tables",
+          "rowKey": {
+            "key": "wh2_dlc11_cst_mon_necrofex_colossus"
+          },
+          "field": "run_speed",
+          "sourcePack": "db.pack",
+          "sourcePackPath": "db.pack",
+          "path": "db/battle_entities_tables/data__",
+          "schemaVersion": 39,
+          "joins": [
+            {
+              "from": "main_units_tables:3471e1382d0dc7a0324a",
+              "field": "land_unit",
+              "to": "land_units_tables:40bd6445de10c3ca8f2d",
+              "targetField": "key",
+              "value": "wh2_dlc11_cst_mon_necrofex_colossus_0",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            },
+            {
+              "from": "land_units_tables:40bd6445de10c3ca8f2d",
+              "field": "man_entity",
+              "to": "battle_entities_tables:98bc4cb073a2b02cc639",
+              "targetField": "key",
+              "value": "wh2_dlc11_cst_mon_necrofex_colossus",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            }
+          ]
+        }
+      },
+      "movementFlags": {
+        "mounted_draughts": false,
+        "sync_locomotion": false,
+        "engine_type": null,
+        "draught_attachment_point": null,
+        "rider_attachment_point": null
+      },
+      "overrideScope": "NO_ADDITIONAL_BASE_MOVEMENT_SOURCE_IN_REVIEWED_TRACE; conditional ground effects excluded"
+    },
+    {
+      "identity": {
+        "id": "ca_unit_wh2_dlc13_lzd_mon_dread_saurian_1",
+        "name": "Dread Saurian",
+        "mainKey": "wh2_dlc13_lzd_mon_dread_saurian_1",
+        "landKey": "wh2_dlc13_lzd_mon_dread_saurian_1"
+      },
+      "source": {
+        "file": "tools/wh3-importer/promotion/partial-sources.json",
+        "pointer": "/candidates/13/dump"
+      },
+      "staticSnapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+      "status": "SPEED_AMBIGUOUS",
+      "reason": "EXACT_MOUNTED_PROFILE_NOT_VALIDATED",
+      "candidate": null,
+      "productionEligible": false,
+      "components": {
+        "man": {
+          "entityKey": "wh_main_infantry_rider",
+          "rawRunSpeed": 3.3,
+          "timesTenCandidate": 33
+        },
+        "mount": {
+          "entityKey": "wh2_dlc13_lzd_mon_dread_saurian_blood",
+          "rawRunSpeed": 6,
+          "timesTenCandidate": 60
+        }
+      },
+      "mountRelation": {
+        "value": "wh2_dlc13_lzd_mnt_dread_saurian",
+        "source": {
+          "rowId": "land_units_tables:1296089d13d559bc68d3",
+          "table": "land_units_tables",
+          "rowKey": {
+            "key": "wh2_dlc13_lzd_mon_dread_saurian_1"
+          },
+          "field": "mount",
+          "sourcePack": "db.pack",
+          "sourcePackPath": "db.pack",
+          "path": "db/land_units_tables/data__",
+          "schemaVersion": 54,
+          "joins": [
+            {
+              "from": "main_units_tables:af08e01e332e4ddd9cda",
+              "field": "land_unit",
+              "to": "land_units_tables:1296089d13d559bc68d3",
+              "targetField": "key",
+              "value": "wh2_dlc13_lzd_mon_dread_saurian_1",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            }
+          ]
+        }
+      },
+      "topology": {
+        "mainKey": "wh2_dlc13_lzd_mon_dread_saurian_1",
+        "landKey": "wh2_dlc13_lzd_mon_dread_saurian_1",
+        "mountRecords": [
+          {
+            "rowId": "mounts_tables:d203832978a7d7d624c2",
+            "key": {
+              "key": "wh2_dlc13_lzd_mnt_dread_saurian"
+            },
+            "entity": {
+              "value": "wh2_dlc13_lzd_mon_dread_saurian_blood",
+              "source": {
+                "rowId": "mounts_tables:d203832978a7d7d624c2",
+                "table": "mounts_tables",
+                "rowKey": {
+                  "key": "wh2_dlc13_lzd_mnt_dread_saurian"
+                },
+                "field": "entity",
+                "sourcePack": "db.pack",
+                "sourcePackPath": "db.pack",
+                "path": "db/mounts_tables/data__",
+                "schemaVersion": 10,
+                "joins": [
+                  {
+                    "from": "main_units_tables:af08e01e332e4ddd9cda",
+                    "field": "land_unit",
+                    "to": "land_units_tables:1296089d13d559bc68d3",
+                    "targetField": "key",
+                    "value": "wh2_dlc13_lzd_mon_dread_saurian_1",
+                    "direction": "forward",
+                    "evidence": "RPFM processed schema is_reference",
+                    "traversal": "from-to"
+                  },
+                  {
+                    "from": "land_units_tables:1296089d13d559bc68d3",
+                    "field": "mount",
+                    "to": "mounts_tables:d203832978a7d7d624c2",
+                    "targetField": "key",
+                    "value": "wh2_dlc13_lzd_mnt_dread_saurian",
+                    "direction": "forward",
+                    "evidence": "RPFM processed schema is_reference",
+                    "traversal": "from-to"
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "entityKeys": [
+          "wh_main_infantry_rider",
+          "wh2_dlc13_lzd_mon_dread_saurian_blood"
+        ]
+      },
+      "sourceTraces": {
+        "man": {
+          "rowId": "battle_entities_tables:7786e345dd78b01ca6b0",
+          "table": "battle_entities_tables",
+          "rowKey": {
+            "key": "wh_main_infantry_rider"
+          },
+          "field": "run_speed",
+          "sourcePack": "db.pack",
+          "sourcePackPath": "db.pack",
+          "path": "db/battle_entities_tables/data__",
+          "schemaVersion": 39,
+          "joins": [
+            {
+              "from": "main_units_tables:af08e01e332e4ddd9cda",
+              "field": "land_unit",
+              "to": "land_units_tables:1296089d13d559bc68d3",
+              "targetField": "key",
+              "value": "wh2_dlc13_lzd_mon_dread_saurian_1",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            },
+            {
+              "from": "land_units_tables:1296089d13d559bc68d3",
+              "field": "man_entity",
+              "to": "battle_entities_tables:7786e345dd78b01ca6b0",
+              "targetField": "key",
+              "value": "wh_main_infantry_rider",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            }
+          ]
+        },
+        "mount": {
+          "rowId": "battle_entities_tables:6973be9f31afb6cdc9f4",
+          "table": "battle_entities_tables",
+          "rowKey": {
+            "key": "wh2_dlc13_lzd_mon_dread_saurian_blood"
+          },
+          "field": "run_speed",
+          "sourcePack": "db.pack",
+          "sourcePackPath": "db.pack",
+          "path": "db/battle_entities_tables/data__",
+          "schemaVersion": 39,
+          "joins": [
+            {
+              "from": "main_units_tables:af08e01e332e4ddd9cda",
+              "field": "land_unit",
+              "to": "land_units_tables:1296089d13d559bc68d3",
+              "targetField": "key",
+              "value": "wh2_dlc13_lzd_mon_dread_saurian_1",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            },
+            {
+              "from": "land_units_tables:1296089d13d559bc68d3",
+              "field": "mount",
+              "to": "mounts_tables:d203832978a7d7d624c2",
+              "targetField": "key",
+              "value": "wh2_dlc13_lzd_mnt_dread_saurian",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            },
+            {
+              "from": "mounts_tables:d203832978a7d7d624c2",
+              "field": "entity",
+              "to": "battle_entities_tables:6973be9f31afb6cdc9f4",
+              "targetField": "key",
+              "value": "wh2_dlc13_lzd_mon_dread_saurian_blood",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            }
+          ]
+        }
+      },
+      "movementFlags": {
+        "mounted_draughts": false,
+        "sync_locomotion": false,
+        "engine_type": null,
+        "draught_attachment_point": null,
+        "rider_attachment_point": null
+      },
+      "overrideScope": "NO_ADDITIONAL_BASE_MOVEMENT_SOURCE_IN_REVIEWED_TRACE; conditional ground effects excluded"
+    },
+    {
+      "identity": {
+        "id": "ca_unit_wh_main_brt_cav_knights_of_the_realm",
+        "name": "Knights of the Realm",
+        "mainKey": "wh_main_brt_cav_knights_of_the_realm",
+        "landKey": "wh_main_brt_cav_knights_of_the_realm"
+      },
+      "source": {
+        "file": "tools/wh3-importer/expansion-batch-01/sources.json",
+        "pointer": "/decoded/candidates/1/dump",
+        "originalExtraction": {
+          "reference": "generated/wh3/expansion-batch-01/units/expansion-01-04.result.json",
+          "sha256": "71f41e4bf28d7352e45b45e887b079929101116f2b2bac8d8b21ae0579da6afa"
+        }
+      },
+      "staticSnapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+      "status": "SPEED_DIRECT_STATIC",
+      "reason": null,
+      "candidate": {
+        "mainKey": "wh_main_brt_cav_knights_of_the_realm",
+        "landKey": "wh_main_brt_cav_knights_of_the_realm",
+        "selectedComponent": "mount",
+        "selectedEntityKey": "wh_main_brt_mnt_cavalry_knights_blood",
+        "rawRunSpeed": 8.4,
+        "calculatedSpeed": 84,
+        "formula": "rawSpeed * 10",
+        "rounding": "NONE",
+        "validationAnchor": "ca_unit_wh_main_brt_cav_knights_of_the_realm",
+        "profile": "EXACT_KNIGHTS_OF_THE_REALM_CHAIN",
+        "profileSha256": "20968f30d593d0d6d80d077f95a3f19f8954897a80f3f6e49c7d255d650786b0",
+        "validationBasis": "DIRECT_MANUAL_CARD_MATCH",
+        "sourceTraceReference": "sourceTraces/mount",
+        "evidenceKind": "MANUAL_CARD_VALIDATION"
+      },
+      "productionEligible": false,
+      "components": {
+        "man": {
+          "entityKey": "wh_main_cavalry_rider_standard_blood",
+          "rawRunSpeed": 3.3,
+          "timesTenCandidate": 33
+        },
+        "mount": {
+          "entityKey": "wh_main_brt_mnt_cavalry_knights_blood",
+          "rawRunSpeed": 8.4,
+          "timesTenCandidate": 84
+        }
+      },
+      "mountRelation": {
+        "value": "wh_main_brt_mnt_warhorse_knights",
+        "source": {
+          "rowId": "land_units_tables:e7e2955b702f2616fdad",
+          "table": "land_units_tables",
+          "rowKey": {
+            "key": "wh_main_brt_cav_knights_of_the_realm"
+          },
+          "field": "mount",
+          "sourcePack": "db.pack",
+          "path": "db/land_units_tables/data__",
+          "schemaVersion": 54,
+          "joins": [
+            {
+              "from": "main_units_tables:a3356d1521443fb8e1b0",
+              "field": "land_unit",
+              "to": "land_units_tables:e7e2955b702f2616fdad",
+              "targetField": "key",
+              "value": "wh_main_brt_cav_knights_of_the_realm",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            }
+          ]
+        }
+      },
+      "topology": {
+        "mainKey": "wh_main_brt_cav_knights_of_the_realm",
+        "landKey": "wh_main_brt_cav_knights_of_the_realm",
+        "mountRecords": [
+          {
+            "rowId": "mounts_tables:e8da8130f128b9fae445",
+            "key": {
+              "key": "wh_main_brt_mnt_warhorse_knights"
+            },
+            "entity": {
+              "value": "wh_main_brt_mnt_cavalry_knights_blood",
+              "source": {
+                "rowId": "mounts_tables:e8da8130f128b9fae445",
+                "table": "mounts_tables",
+                "rowKey": {
+                  "key": "wh_main_brt_mnt_warhorse_knights"
+                },
+                "field": "entity",
+                "sourcePack": "db.pack",
+                "path": "db/mounts_tables/data__",
+                "schemaVersion": 10,
+                "joins": [
+                  {
+                    "from": "main_units_tables:a3356d1521443fb8e1b0",
+                    "field": "land_unit",
+                    "to": "land_units_tables:e7e2955b702f2616fdad",
+                    "targetField": "key",
+                    "value": "wh_main_brt_cav_knights_of_the_realm",
+                    "direction": "forward",
+                    "evidence": "RPFM processed schema is_reference",
+                    "traversal": "from-to"
+                  },
+                  {
+                    "from": "land_units_tables:e7e2955b702f2616fdad",
+                    "field": "mount",
+                    "to": "mounts_tables:e8da8130f128b9fae445",
+                    "targetField": "key",
+                    "value": "wh_main_brt_mnt_warhorse_knights",
+                    "direction": "forward",
+                    "evidence": "RPFM processed schema is_reference",
+                    "traversal": "from-to"
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "entityKeys": [
+          "wh_main_cavalry_rider_standard_blood",
+          "wh_main_brt_mnt_cavalry_knights_blood"
+        ]
+      },
+      "sourceTraces": {
+        "man": {
+          "rowId": "battle_entities_tables:2401ad24a4098a41bd20",
+          "table": "battle_entities_tables",
+          "rowKey": {
+            "key": "wh_main_cavalry_rider_standard_blood"
+          },
+          "field": "run_speed",
+          "sourcePack": "db.pack",
+          "path": "db/battle_entities_tables/data__",
+          "schemaVersion": 39,
+          "joins": [
+            {
+              "from": "main_units_tables:a3356d1521443fb8e1b0",
+              "field": "land_unit",
+              "to": "land_units_tables:e7e2955b702f2616fdad",
+              "targetField": "key",
+              "value": "wh_main_brt_cav_knights_of_the_realm",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            },
+            {
+              "from": "land_units_tables:e7e2955b702f2616fdad",
+              "field": "man_entity",
+              "to": "battle_entities_tables:2401ad24a4098a41bd20",
+              "targetField": "key",
+              "value": "wh_main_cavalry_rider_standard_blood",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            }
+          ]
+        },
+        "mount": {
+          "rowId": "battle_entities_tables:65af0620ccf3a3a912a5",
+          "table": "battle_entities_tables",
+          "rowKey": {
+            "key": "wh_main_brt_mnt_cavalry_knights_blood"
+          },
+          "field": "run_speed",
+          "sourcePack": "db.pack",
+          "path": "db/battle_entities_tables/data__",
+          "schemaVersion": 39,
+          "joins": [
+            {
+              "from": "main_units_tables:a3356d1521443fb8e1b0",
+              "field": "land_unit",
+              "to": "land_units_tables:e7e2955b702f2616fdad",
+              "targetField": "key",
+              "value": "wh_main_brt_cav_knights_of_the_realm",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            },
+            {
+              "from": "land_units_tables:e7e2955b702f2616fdad",
+              "field": "mount",
+              "to": "mounts_tables:e8da8130f128b9fae445",
+              "targetField": "key",
+              "value": "wh_main_brt_mnt_warhorse_knights",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            },
+            {
+              "from": "mounts_tables:e8da8130f128b9fae445",
+              "field": "entity",
+              "to": "battle_entities_tables:65af0620ccf3a3a912a5",
+              "targetField": "key",
+              "value": "wh_main_brt_mnt_cavalry_knights_blood",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            }
+          ]
+        }
+      },
+      "movementFlags": {
+        "mounted_draughts": false,
+        "sync_locomotion": false,
+        "engine_type": null,
+        "draught_attachment_point": null,
+        "rider_attachment_point": null
+      },
+      "overrideScope": "NO_ADDITIONAL_BASE_MOVEMENT_SOURCE_IN_REVIEWED_TRACE; conditional ground effects excluded"
+    },
+    {
+      "identity": {
+        "id": "ca_unit_wh_dlc07_brt_cav_questing_knights_0",
+        "name": "Questing Knights",
+        "mainKey": "wh_dlc07_brt_cav_questing_knights_0",
+        "landKey": "wh_dlc07_brt_cav_questing_knights_0"
+      },
+      "source": {
+        "file": "tools/wh3-importer/expansion-batch-01/sources.json",
+        "pointer": "/decoded/candidates/2/dump",
+        "originalExtraction": {
+          "reference": "generated/wh3/expansion-batch-01/units/expansion-01-05.result.json",
+          "sha256": "c7ad50660dae6e7b60fd3d5cdcc308d274ac859b83aa77535ca562d99ff4d41e"
+        }
+      },
+      "staticSnapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+      "status": "SPEED_DIRECT_STATIC",
+      "reason": null,
+      "candidate": {
+        "mainKey": "wh_dlc07_brt_cav_questing_knights_0",
+        "landKey": "wh_dlc07_brt_cav_questing_knights_0",
+        "selectedComponent": "mount",
+        "selectedEntityKey": "wh_main_brt_mnt_cavalry_knights_blood",
+        "rawRunSpeed": 8.4,
+        "calculatedSpeed": 84,
+        "formula": "rawSpeed * 10",
+        "rounding": "NONE",
+        "validationAnchor": "ca_unit_wh_main_brt_cav_knights_of_the_realm",
+        "profile": "EXACT_KNIGHTS_OF_THE_REALM_CHAIN",
+        "profileSha256": "20968f30d593d0d6d80d077f95a3f19f8954897a80f3f6e49c7d255d650786b0",
+        "validationBasis": "EXACT_STRUCTURAL_PROFILE_INHERITANCE",
+        "sourceTraceReference": "sourceTraces/mount",
+        "evidenceKind": "MANUAL_CARD_VALIDATION"
+      },
+      "productionEligible": false,
+      "components": {
+        "man": {
+          "entityKey": "wh_main_cavalry_rider_standard_blood",
+          "rawRunSpeed": 3.3,
+          "timesTenCandidate": 33
+        },
+        "mount": {
+          "entityKey": "wh_main_brt_mnt_cavalry_knights_blood",
+          "rawRunSpeed": 8.4,
+          "timesTenCandidate": 84
+        }
+      },
+      "mountRelation": {
+        "value": "wh_dlc07_brt_mnt_warhorse_questing_knights",
+        "source": {
+          "rowId": "land_units_tables:ea97130c6caae6f0b0d6",
+          "table": "land_units_tables",
+          "rowKey": {
+            "key": "wh_dlc07_brt_cav_questing_knights_0"
+          },
+          "field": "mount",
+          "sourcePack": "db.pack",
+          "path": "db/land_units_tables/data__",
+          "schemaVersion": 54,
+          "joins": [
+            {
+              "from": "main_units_tables:4d93e338e92672160578",
+              "field": "land_unit",
+              "to": "land_units_tables:ea97130c6caae6f0b0d6",
+              "targetField": "key",
+              "value": "wh_dlc07_brt_cav_questing_knights_0",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            }
+          ]
+        }
+      },
+      "topology": {
+        "mainKey": "wh_dlc07_brt_cav_questing_knights_0",
+        "landKey": "wh_dlc07_brt_cav_questing_knights_0",
+        "mountRecords": [
+          {
+            "rowId": "mounts_tables:ab10b69772e6faf16e0a",
+            "key": {
+              "key": "wh_dlc07_brt_mnt_warhorse_questing_knights"
+            },
+            "entity": {
+              "value": "wh_main_brt_mnt_cavalry_knights_blood",
+              "source": {
+                "rowId": "mounts_tables:ab10b69772e6faf16e0a",
+                "table": "mounts_tables",
+                "rowKey": {
+                  "key": "wh_dlc07_brt_mnt_warhorse_questing_knights"
+                },
+                "field": "entity",
+                "sourcePack": "db.pack",
+                "path": "db/mounts_tables/data__",
+                "schemaVersion": 10,
+                "joins": [
+                  {
+                    "from": "main_units_tables:4d93e338e92672160578",
+                    "field": "land_unit",
+                    "to": "land_units_tables:ea97130c6caae6f0b0d6",
+                    "targetField": "key",
+                    "value": "wh_dlc07_brt_cav_questing_knights_0",
+                    "direction": "forward",
+                    "evidence": "RPFM processed schema is_reference",
+                    "traversal": "from-to"
+                  },
+                  {
+                    "from": "land_units_tables:ea97130c6caae6f0b0d6",
+                    "field": "mount",
+                    "to": "mounts_tables:ab10b69772e6faf16e0a",
+                    "targetField": "key",
+                    "value": "wh_dlc07_brt_mnt_warhorse_questing_knights",
+                    "direction": "forward",
+                    "evidence": "RPFM processed schema is_reference",
+                    "traversal": "from-to"
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "entityKeys": [
+          "wh_main_cavalry_rider_standard_blood",
+          "wh_main_brt_mnt_cavalry_knights_blood"
+        ]
+      },
+      "sourceTraces": {
+        "man": {
+          "rowId": "battle_entities_tables:2401ad24a4098a41bd20",
+          "table": "battle_entities_tables",
+          "rowKey": {
+            "key": "wh_main_cavalry_rider_standard_blood"
+          },
+          "field": "run_speed",
+          "sourcePack": "db.pack",
+          "path": "db/battle_entities_tables/data__",
+          "schemaVersion": 39,
+          "joins": [
+            {
+              "from": "main_units_tables:4d93e338e92672160578",
+              "field": "land_unit",
+              "to": "land_units_tables:ea97130c6caae6f0b0d6",
+              "targetField": "key",
+              "value": "wh_dlc07_brt_cav_questing_knights_0",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            },
+            {
+              "from": "land_units_tables:ea97130c6caae6f0b0d6",
+              "field": "man_entity",
+              "to": "battle_entities_tables:2401ad24a4098a41bd20",
+              "targetField": "key",
+              "value": "wh_main_cavalry_rider_standard_blood",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            }
+          ]
+        },
+        "mount": {
+          "rowId": "battle_entities_tables:65af0620ccf3a3a912a5",
+          "table": "battle_entities_tables",
+          "rowKey": {
+            "key": "wh_main_brt_mnt_cavalry_knights_blood"
+          },
+          "field": "run_speed",
+          "sourcePack": "db.pack",
+          "path": "db/battle_entities_tables/data__",
+          "schemaVersion": 39,
+          "joins": [
+            {
+              "from": "main_units_tables:4d93e338e92672160578",
+              "field": "land_unit",
+              "to": "land_units_tables:ea97130c6caae6f0b0d6",
+              "targetField": "key",
+              "value": "wh_dlc07_brt_cav_questing_knights_0",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            },
+            {
+              "from": "land_units_tables:ea97130c6caae6f0b0d6",
+              "field": "mount",
+              "to": "mounts_tables:ab10b69772e6faf16e0a",
+              "targetField": "key",
+              "value": "wh_dlc07_brt_mnt_warhorse_questing_knights",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            },
+            {
+              "from": "mounts_tables:ab10b69772e6faf16e0a",
+              "field": "entity",
+              "to": "battle_entities_tables:65af0620ccf3a3a912a5",
+              "targetField": "key",
+              "value": "wh_main_brt_mnt_cavalry_knights_blood",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            }
+          ]
+        }
+      },
+      "movementFlags": {
+        "mounted_draughts": false,
+        "sync_locomotion": false,
+        "engine_type": null,
+        "draught_attachment_point": null,
+        "rider_attachment_point": null
+      },
+      "overrideScope": "NO_ADDITIONAL_BASE_MOVEMENT_SOURCE_IN_REVIEWED_TRACE; conditional ground effects excluded"
+    },
+    {
+      "identity": {
+        "id": "ca_unit_wh_main_vmp_cav_black_knights_3",
+        "name": "Black Knights (Lances & Barding)",
+        "mainKey": "wh_main_vmp_cav_black_knights_3",
+        "landKey": "wh_main_vmp_cav_black_knights_3"
+      },
+      "source": {
+        "file": "tools/wh3-importer/expansion-batch-01/sources.json",
+        "pointer": "/decoded/candidates/6/dump",
+        "originalExtraction": {
+          "reference": "generated/wh3/expansion-batch-01/units/expansion-01-12.result.json",
+          "sha256": "e03f2eef1fb0c201da0e0ab8102c38375b9f6ae87c75d5332a512ad0d6c895ac"
+        }
+      },
+      "staticSnapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+      "status": "SPEED_AMBIGUOUS",
+      "reason": "EXACT_MOUNTED_PROFILE_NOT_VALIDATED",
+      "candidate": null,
+      "productionEligible": false,
+      "components": {
+        "man": {
+          "entityKey": "wh_main_cavalry_rider_standard",
+          "rawRunSpeed": 3.3,
+          "timesTenCandidate": 33
+        },
+        "mount": {
+          "entityKey": "wh_main_vmp_cav_skeletal_steed_barded",
+          "rawRunSpeed": 7.2,
+          "timesTenCandidate": 72
+        }
+      },
+      "mountRelation": {
+        "value": "wh_main_vmp_mnt_barded_skeletal_steed",
+        "source": {
+          "rowId": "land_units_tables:57b037240b6497bbc5d8",
+          "table": "land_units_tables",
+          "rowKey": {
+            "key": "wh_main_vmp_cav_black_knights_3"
+          },
+          "field": "mount",
+          "sourcePack": "db.pack",
+          "path": "db/land_units_tables/data__",
+          "schemaVersion": 54,
+          "joins": [
+            {
+              "from": "main_units_tables:d2f0abdf66ae76e27fa4",
+              "field": "land_unit",
+              "to": "land_units_tables:57b037240b6497bbc5d8",
+              "targetField": "key",
+              "value": "wh_main_vmp_cav_black_knights_3",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            }
+          ]
+        }
+      },
+      "topology": {
+        "mainKey": "wh_main_vmp_cav_black_knights_3",
+        "landKey": "wh_main_vmp_cav_black_knights_3",
+        "mountRecords": [
+          {
+            "rowId": "mounts_tables:d53624fbfdc0c5e0b5ba",
+            "key": {
+              "key": "wh_main_vmp_mnt_barded_skeletal_steed"
+            },
+            "entity": {
+              "value": "wh_main_vmp_cav_skeletal_steed_barded",
+              "source": {
+                "rowId": "mounts_tables:d53624fbfdc0c5e0b5ba",
+                "table": "mounts_tables",
+                "rowKey": {
+                  "key": "wh_main_vmp_mnt_barded_skeletal_steed"
+                },
+                "field": "entity",
+                "sourcePack": "db.pack",
+                "path": "db/mounts_tables/data__",
+                "schemaVersion": 10,
+                "joins": [
+                  {
+                    "from": "main_units_tables:d2f0abdf66ae76e27fa4",
+                    "field": "land_unit",
+                    "to": "land_units_tables:57b037240b6497bbc5d8",
+                    "targetField": "key",
+                    "value": "wh_main_vmp_cav_black_knights_3",
+                    "direction": "forward",
+                    "evidence": "RPFM processed schema is_reference",
+                    "traversal": "from-to"
+                  },
+                  {
+                    "from": "land_units_tables:57b037240b6497bbc5d8",
+                    "field": "mount",
+                    "to": "mounts_tables:d53624fbfdc0c5e0b5ba",
+                    "targetField": "key",
+                    "value": "wh_main_vmp_mnt_barded_skeletal_steed",
+                    "direction": "forward",
+                    "evidence": "RPFM processed schema is_reference",
+                    "traversal": "from-to"
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "entityKeys": [
+          "wh_main_cavalry_rider_standard",
+          "wh_main_vmp_cav_skeletal_steed_barded"
+        ]
+      },
+      "sourceTraces": {
+        "man": {
+          "rowId": "battle_entities_tables:aadebeb13f1be2bb9bc3",
+          "table": "battle_entities_tables",
+          "rowKey": {
+            "key": "wh_main_cavalry_rider_standard"
+          },
+          "field": "run_speed",
+          "sourcePack": "db.pack",
+          "path": "db/battle_entities_tables/data__",
+          "schemaVersion": 39,
+          "joins": [
+            {
+              "from": "main_units_tables:d2f0abdf66ae76e27fa4",
+              "field": "land_unit",
+              "to": "land_units_tables:57b037240b6497bbc5d8",
+              "targetField": "key",
+              "value": "wh_main_vmp_cav_black_knights_3",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            },
+            {
+              "from": "land_units_tables:57b037240b6497bbc5d8",
+              "field": "man_entity",
+              "to": "battle_entities_tables:aadebeb13f1be2bb9bc3",
+              "targetField": "key",
+              "value": "wh_main_cavalry_rider_standard",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            }
+          ]
+        },
+        "mount": {
+          "rowId": "battle_entities_tables:7a94c8fd20351839fd9b",
+          "table": "battle_entities_tables",
+          "rowKey": {
+            "key": "wh_main_vmp_cav_skeletal_steed_barded"
+          },
+          "field": "run_speed",
+          "sourcePack": "db.pack",
+          "path": "db/battle_entities_tables/data__",
+          "schemaVersion": 39,
+          "joins": [
+            {
+              "from": "main_units_tables:d2f0abdf66ae76e27fa4",
+              "field": "land_unit",
+              "to": "land_units_tables:57b037240b6497bbc5d8",
+              "targetField": "key",
+              "value": "wh_main_vmp_cav_black_knights_3",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            },
+            {
+              "from": "land_units_tables:57b037240b6497bbc5d8",
+              "field": "mount",
+              "to": "mounts_tables:d53624fbfdc0c5e0b5ba",
+              "targetField": "key",
+              "value": "wh_main_vmp_mnt_barded_skeletal_steed",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            },
+            {
+              "from": "mounts_tables:d53624fbfdc0c5e0b5ba",
+              "field": "entity",
+              "to": "battle_entities_tables:7a94c8fd20351839fd9b",
+              "targetField": "key",
+              "value": "wh_main_vmp_cav_skeletal_steed_barded",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            }
+          ]
+        }
+      },
+      "movementFlags": {
+        "mounted_draughts": false,
+        "sync_locomotion": false,
+        "engine_type": null,
+        "draught_attachment_point": null,
+        "rider_attachment_point": null
+      },
+      "overrideScope": "NO_ADDITIONAL_BASE_MOVEMENT_SOURCE_IN_REVIEWED_TRACE; conditional ground effects excluded"
+    },
+    {
+      "identity": {
+        "id": "ca_unit_wh_main_chs_cav_chaos_knights_1",
+        "name": "Chaos Knights (Lances)",
+        "mainKey": "wh_main_chs_cav_chaos_knights_1",
+        "landKey": "wh_main_chs_cav_chaos_knights_1"
+      },
+      "source": {
+        "file": "tools/wh3-importer/expansion-batch-01/sources.json",
+        "pointer": "/decoded/candidates/13/dump",
+        "originalExtraction": {
+          "reference": "generated/wh3/expansion-batch-01/units/expansion-01-24.result.json",
+          "sha256": "b4c889422a5279bafd73d294b18c2e518c13d7afb04f972bb3881f72d8473076"
+        }
+      },
+      "staticSnapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+      "status": "SPEED_AMBIGUOUS",
+      "reason": "EXACT_MOUNTED_PROFILE_NOT_VALIDATED",
+      "candidate": null,
+      "productionEligible": false,
+      "components": {
+        "man": {
+          "entityKey": "wh3_dlc20_chaos_knight_rider_blood",
+          "rawRunSpeed": 3.3,
+          "timesTenCandidate": 33
+        },
+        "mount": {
+          "entityKey": "wh3_dlc20_chs_mnt_chaos_steed_knights",
+          "rawRunSpeed": 7,
+          "timesTenCandidate": 70
+        }
+      },
+      "mountRelation": {
+        "value": "wh3_dlc20_chs_mnt_chaos_steed_knights",
+        "source": {
+          "rowId": "land_units_tables:50dde97d44e7023153a0",
+          "table": "land_units_tables",
+          "rowKey": {
+            "key": "wh_main_chs_cav_chaos_knights_1"
+          },
+          "field": "mount",
+          "sourcePack": "db.pack",
+          "path": "db/land_units_tables/data__",
+          "schemaVersion": 54,
+          "joins": [
+            {
+              "from": "main_units_tables:b02dc5584aa31bf78ebc",
+              "field": "land_unit",
+              "to": "land_units_tables:50dde97d44e7023153a0",
+              "targetField": "key",
+              "value": "wh_main_chs_cav_chaos_knights_1",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            }
+          ]
+        }
+      },
+      "topology": {
+        "mainKey": "wh_main_chs_cav_chaos_knights_1",
+        "landKey": "wh_main_chs_cav_chaos_knights_1",
+        "mountRecords": [
+          {
+            "rowId": "mounts_tables:c05dba728cc36a9fc1b4",
+            "key": {
+              "key": "wh3_dlc20_chs_mnt_chaos_steed_knights"
+            },
+            "entity": {
+              "value": "wh3_dlc20_chs_mnt_chaos_steed_knights",
+              "source": {
+                "rowId": "mounts_tables:c05dba728cc36a9fc1b4",
+                "table": "mounts_tables",
+                "rowKey": {
+                  "key": "wh3_dlc20_chs_mnt_chaos_steed_knights"
+                },
+                "field": "entity",
+                "sourcePack": "db.pack",
+                "path": "db/mounts_tables/data__",
+                "schemaVersion": 10,
+                "joins": [
+                  {
+                    "from": "main_units_tables:b02dc5584aa31bf78ebc",
+                    "field": "land_unit",
+                    "to": "land_units_tables:50dde97d44e7023153a0",
+                    "targetField": "key",
+                    "value": "wh_main_chs_cav_chaos_knights_1",
+                    "direction": "forward",
+                    "evidence": "RPFM processed schema is_reference",
+                    "traversal": "from-to"
+                  },
+                  {
+                    "from": "land_units_tables:50dde97d44e7023153a0",
+                    "field": "mount",
+                    "to": "mounts_tables:c05dba728cc36a9fc1b4",
+                    "targetField": "key",
+                    "value": "wh3_dlc20_chs_mnt_chaos_steed_knights",
+                    "direction": "forward",
+                    "evidence": "RPFM processed schema is_reference",
+                    "traversal": "from-to"
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "entityKeys": [
+          "wh3_dlc20_chaos_knight_rider_blood",
+          "wh3_dlc20_chs_mnt_chaos_steed_knights"
+        ]
+      },
+      "sourceTraces": {
+        "man": {
+          "rowId": "battle_entities_tables:2edc1fdd2a38f05db101",
+          "table": "battle_entities_tables",
+          "rowKey": {
+            "key": "wh3_dlc20_chaos_knight_rider_blood"
+          },
+          "field": "run_speed",
+          "sourcePack": "db.pack",
+          "path": "db/battle_entities_tables/data__",
+          "schemaVersion": 39,
+          "joins": [
+            {
+              "from": "main_units_tables:b02dc5584aa31bf78ebc",
+              "field": "land_unit",
+              "to": "land_units_tables:50dde97d44e7023153a0",
+              "targetField": "key",
+              "value": "wh_main_chs_cav_chaos_knights_1",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            },
+            {
+              "from": "land_units_tables:50dde97d44e7023153a0",
+              "field": "man_entity",
+              "to": "battle_entities_tables:2edc1fdd2a38f05db101",
+              "targetField": "key",
+              "value": "wh3_dlc20_chaos_knight_rider_blood",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            }
+          ]
+        },
+        "mount": {
+          "rowId": "battle_entities_tables:dd9675945830021ce4fa",
+          "table": "battle_entities_tables",
+          "rowKey": {
+            "key": "wh3_dlc20_chs_mnt_chaos_steed_knights"
+          },
+          "field": "run_speed",
+          "sourcePack": "db.pack",
+          "path": "db/battle_entities_tables/data__",
+          "schemaVersion": 39,
+          "joins": [
+            {
+              "from": "main_units_tables:b02dc5584aa31bf78ebc",
+              "field": "land_unit",
+              "to": "land_units_tables:50dde97d44e7023153a0",
+              "targetField": "key",
+              "value": "wh_main_chs_cav_chaos_knights_1",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            },
+            {
+              "from": "land_units_tables:50dde97d44e7023153a0",
+              "field": "mount",
+              "to": "mounts_tables:c05dba728cc36a9fc1b4",
+              "targetField": "key",
+              "value": "wh3_dlc20_chs_mnt_chaos_steed_knights",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            },
+            {
+              "from": "mounts_tables:c05dba728cc36a9fc1b4",
+              "field": "entity",
+              "to": "battle_entities_tables:dd9675945830021ce4fa",
+              "targetField": "key",
+              "value": "wh3_dlc20_chs_mnt_chaos_steed_knights",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            }
+          ]
+        }
+      },
+      "movementFlags": {
+        "mounted_draughts": false,
+        "sync_locomotion": false,
+        "engine_type": null,
+        "draught_attachment_point": null,
+        "rider_attachment_point": null
+      },
+      "overrideScope": "NO_ADDITIONAL_BASE_MOVEMENT_SOURCE_IN_REVIEWED_TRACE; conditional ground effects excluded"
+    },
+    {
+      "identity": {
+        "id": "ca_unit_wh_dlc07_brt_cav_knights_errant_0",
+        "name": "Knights Errant",
+        "mainKey": "wh_dlc07_brt_cav_knights_errant_0",
+        "landKey": "wh_dlc07_brt_cav_knights_errant_0"
+      },
+      "source": {
+        "file": "tools/wh3-importer/expansion-batch-02/sources.json",
+        "pointer": "/decoded/candidates/9/dump",
+        "originalExtraction": {
+          "reference": "generated/wh3/expansion-batch-02/units/expansion-02-10.result.json",
+          "sha256": "6f4d2d424b64f416d5bf1f3c0617c9b5a2495e07e2ae620fe462df0e1a7b7c7c"
+        }
+      },
+      "staticSnapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+      "status": "SPEED_DIRECT_STATIC",
+      "reason": null,
+      "candidate": {
+        "mainKey": "wh_dlc07_brt_cav_knights_errant_0",
+        "landKey": "wh_dlc07_brt_cav_knights_errant_0",
+        "selectedComponent": "mount",
+        "selectedEntityKey": "wh_main_brt_mnt_cavalry_knights_blood",
+        "rawRunSpeed": 8.4,
+        "calculatedSpeed": 84,
+        "formula": "rawSpeed * 10",
+        "rounding": "NONE",
+        "validationAnchor": "ca_unit_wh_main_brt_cav_knights_of_the_realm",
+        "profile": "EXACT_KNIGHTS_OF_THE_REALM_CHAIN",
+        "profileSha256": "20968f30d593d0d6d80d077f95a3f19f8954897a80f3f6e49c7d255d650786b0",
+        "validationBasis": "EXACT_STRUCTURAL_PROFILE_INHERITANCE",
+        "sourceTraceReference": "sourceTraces/mount",
+        "evidenceKind": "MANUAL_CARD_VALIDATION"
+      },
+      "productionEligible": false,
+      "components": {
+        "man": {
+          "entityKey": "wh_main_cavalry_rider_standard_blood",
+          "rawRunSpeed": 3.3,
+          "timesTenCandidate": 33
+        },
+        "mount": {
+          "entityKey": "wh_main_brt_mnt_cavalry_knights_blood",
+          "rawRunSpeed": 8.4,
+          "timesTenCandidate": 84
+        }
+      },
+      "mountRelation": {
+        "value": "wh_main_brt_mnt_warhorse_knights",
+        "source": {
+          "rowId": "land_units_tables:5036118c9f42a1d84c9f",
+          "table": "land_units_tables",
+          "rowKey": {
+            "key": "wh_dlc07_brt_cav_knights_errant_0"
+          },
+          "field": "mount",
+          "sourcePack": "db.pack",
+          "path": "db/land_units_tables/data__",
+          "schemaVersion": 54,
+          "joins": [
+            {
+              "from": "main_units_tables:628b3d8d2b6d19998bc0",
+              "field": "land_unit",
+              "to": "land_units_tables:5036118c9f42a1d84c9f",
+              "targetField": "key",
+              "value": "wh_dlc07_brt_cav_knights_errant_0",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            }
+          ]
+        }
+      },
+      "topology": {
+        "mainKey": "wh_dlc07_brt_cav_knights_errant_0",
+        "landKey": "wh_dlc07_brt_cav_knights_errant_0",
+        "mountRecords": [
+          {
+            "rowId": "mounts_tables:e8da8130f128b9fae445",
+            "key": {
+              "key": "wh_main_brt_mnt_warhorse_knights"
+            },
+            "entity": {
+              "value": "wh_main_brt_mnt_cavalry_knights_blood",
+              "source": {
+                "rowId": "mounts_tables:e8da8130f128b9fae445",
+                "table": "mounts_tables",
+                "rowKey": {
+                  "key": "wh_main_brt_mnt_warhorse_knights"
+                },
+                "field": "entity",
+                "sourcePack": "db.pack",
+                "path": "db/mounts_tables/data__",
+                "schemaVersion": 10,
+                "joins": [
+                  {
+                    "from": "main_units_tables:628b3d8d2b6d19998bc0",
+                    "field": "land_unit",
+                    "to": "land_units_tables:5036118c9f42a1d84c9f",
+                    "targetField": "key",
+                    "value": "wh_dlc07_brt_cav_knights_errant_0",
+                    "direction": "forward",
+                    "evidence": "RPFM processed schema is_reference",
+                    "traversal": "from-to"
+                  },
+                  {
+                    "from": "land_units_tables:5036118c9f42a1d84c9f",
+                    "field": "mount",
+                    "to": "mounts_tables:e8da8130f128b9fae445",
+                    "targetField": "key",
+                    "value": "wh_main_brt_mnt_warhorse_knights",
+                    "direction": "forward",
+                    "evidence": "RPFM processed schema is_reference",
+                    "traversal": "from-to"
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "entityKeys": [
+          "wh_main_cavalry_rider_standard_blood",
+          "wh_main_brt_mnt_cavalry_knights_blood"
+        ]
+      },
+      "sourceTraces": {
+        "man": {
+          "rowId": "battle_entities_tables:2401ad24a4098a41bd20",
+          "table": "battle_entities_tables",
+          "rowKey": {
+            "key": "wh_main_cavalry_rider_standard_blood"
+          },
+          "field": "run_speed",
+          "sourcePack": "db.pack",
+          "path": "db/battle_entities_tables/data__",
+          "schemaVersion": 39,
+          "joins": [
+            {
+              "from": "main_units_tables:628b3d8d2b6d19998bc0",
+              "field": "land_unit",
+              "to": "land_units_tables:5036118c9f42a1d84c9f",
+              "targetField": "key",
+              "value": "wh_dlc07_brt_cav_knights_errant_0",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            },
+            {
+              "from": "land_units_tables:5036118c9f42a1d84c9f",
+              "field": "man_entity",
+              "to": "battle_entities_tables:2401ad24a4098a41bd20",
+              "targetField": "key",
+              "value": "wh_main_cavalry_rider_standard_blood",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            }
+          ]
+        },
+        "mount": {
+          "rowId": "battle_entities_tables:65af0620ccf3a3a912a5",
+          "table": "battle_entities_tables",
+          "rowKey": {
+            "key": "wh_main_brt_mnt_cavalry_knights_blood"
+          },
+          "field": "run_speed",
+          "sourcePack": "db.pack",
+          "path": "db/battle_entities_tables/data__",
+          "schemaVersion": 39,
+          "joins": [
+            {
+              "from": "main_units_tables:628b3d8d2b6d19998bc0",
+              "field": "land_unit",
+              "to": "land_units_tables:5036118c9f42a1d84c9f",
+              "targetField": "key",
+              "value": "wh_dlc07_brt_cav_knights_errant_0",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            },
+            {
+              "from": "land_units_tables:5036118c9f42a1d84c9f",
+              "field": "mount",
+              "to": "mounts_tables:e8da8130f128b9fae445",
+              "targetField": "key",
+              "value": "wh_main_brt_mnt_warhorse_knights",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            },
+            {
+              "from": "mounts_tables:e8da8130f128b9fae445",
+              "field": "entity",
+              "to": "battle_entities_tables:65af0620ccf3a3a912a5",
+              "targetField": "key",
+              "value": "wh_main_brt_mnt_cavalry_knights_blood",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            }
+          ]
+        }
+      },
+      "movementFlags": {
+        "mounted_draughts": false,
+        "sync_locomotion": false,
+        "engine_type": null,
+        "draught_attachment_point": null,
+        "rider_attachment_point": null
+      },
+      "overrideScope": "NO_ADDITIONAL_BASE_MOVEMENT_SOURCE_IN_REVIEWED_TRACE; conditional ground effects excluded"
+    },
+    {
+      "identity": {
+        "id": "ca_unit_wh_dlc07_brt_cav_grail_guardians_0",
+        "name": "Grail Guardians",
+        "mainKey": "wh_dlc07_brt_cav_grail_guardians_0",
+        "landKey": "wh_dlc07_brt_cav_grail_guardians_0"
+      },
+      "source": {
+        "file": "tools/wh3-importer/expansion-batch-02/sources.json",
+        "pointer": "/decoded/candidates/10/dump",
+        "originalExtraction": {
+          "reference": "generated/wh3/expansion-batch-02/units/expansion-02-11.result.json",
+          "sha256": "260cd5973307f920bd6a215080e24fb1f9379ad84b267121b245fdb9c40cc619"
+        }
+      },
+      "staticSnapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+      "status": "SPEED_DIRECT_STATIC",
+      "reason": null,
+      "candidate": {
+        "mainKey": "wh_dlc07_brt_cav_grail_guardians_0",
+        "landKey": "wh_dlc07_brt_cav_grail_guardians_0",
+        "selectedComponent": "mount",
+        "selectedEntityKey": "wh_main_brt_mnt_cavalry_knights_heavy_blood",
+        "rawRunSpeed": 8.4,
+        "calculatedSpeed": 84,
+        "formula": "rawSpeed * 10",
+        "rounding": "NONE",
+        "validationAnchor": "ca_unit_wh_main_brt_cav_grail_knights",
+        "profile": "EXACT_GRAIL_KNIGHTS_CHAIN",
+        "profileSha256": "454563f92f8c59150f224b3c8061c538cfc486912a08afc213ae5d11a4894837",
+        "validationBasis": "EXACT_STRUCTURAL_PROFILE_INHERITANCE",
+        "sourceTraceReference": "sourceTraces/mount",
+        "evidenceKind": "MANUAL_CARD_VALIDATION"
+      },
+      "productionEligible": false,
+      "components": {
+        "man": {
+          "entityKey": "wh_main_cavalry_rider_standard_blood",
+          "rawRunSpeed": 3.3,
+          "timesTenCandidate": 33
+        },
+        "mount": {
+          "entityKey": "wh_main_brt_mnt_cavalry_knights_heavy_blood",
+          "rawRunSpeed": 8.4,
+          "timesTenCandidate": 84
+        }
+      },
+      "mountRelation": {
+        "value": "wh_main_brt_mnt_warhorse_grail_knights",
+        "source": {
+          "rowId": "land_units_tables:240c432afba3d84d904a",
+          "table": "land_units_tables",
+          "rowKey": {
+            "key": "wh_dlc07_brt_cav_grail_guardians_0"
+          },
+          "field": "mount",
+          "sourcePack": "db.pack",
+          "path": "db/land_units_tables/data__",
+          "schemaVersion": 54,
+          "joins": [
+            {
+              "from": "main_units_tables:a8820ddf245c2908d09e",
+              "field": "land_unit",
+              "to": "land_units_tables:240c432afba3d84d904a",
+              "targetField": "key",
+              "value": "wh_dlc07_brt_cav_grail_guardians_0",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            }
+          ]
+        }
+      },
+      "topology": {
+        "mainKey": "wh_dlc07_brt_cav_grail_guardians_0",
+        "landKey": "wh_dlc07_brt_cav_grail_guardians_0",
+        "mountRecords": [
+          {
+            "rowId": "mounts_tables:94131125d572f717815d",
+            "key": {
+              "key": "wh_main_brt_mnt_warhorse_grail_knights"
+            },
+            "entity": {
+              "value": "wh_main_brt_mnt_cavalry_knights_heavy_blood",
+              "source": {
+                "rowId": "mounts_tables:94131125d572f717815d",
+                "table": "mounts_tables",
+                "rowKey": {
+                  "key": "wh_main_brt_mnt_warhorse_grail_knights"
+                },
+                "field": "entity",
+                "sourcePack": "db.pack",
+                "path": "db/mounts_tables/data__",
+                "schemaVersion": 10,
+                "joins": [
+                  {
+                    "from": "main_units_tables:a8820ddf245c2908d09e",
+                    "field": "land_unit",
+                    "to": "land_units_tables:240c432afba3d84d904a",
+                    "targetField": "key",
+                    "value": "wh_dlc07_brt_cav_grail_guardians_0",
+                    "direction": "forward",
+                    "evidence": "RPFM processed schema is_reference",
+                    "traversal": "from-to"
+                  },
+                  {
+                    "from": "land_units_tables:240c432afba3d84d904a",
+                    "field": "mount",
+                    "to": "mounts_tables:94131125d572f717815d",
+                    "targetField": "key",
+                    "value": "wh_main_brt_mnt_warhorse_grail_knights",
+                    "direction": "forward",
+                    "evidence": "RPFM processed schema is_reference",
+                    "traversal": "from-to"
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "entityKeys": [
+          "wh_main_cavalry_rider_standard_blood",
+          "wh_main_brt_mnt_cavalry_knights_heavy_blood"
+        ]
+      },
+      "sourceTraces": {
+        "man": {
+          "rowId": "battle_entities_tables:2401ad24a4098a41bd20",
+          "table": "battle_entities_tables",
+          "rowKey": {
+            "key": "wh_main_cavalry_rider_standard_blood"
+          },
+          "field": "run_speed",
+          "sourcePack": "db.pack",
+          "path": "db/battle_entities_tables/data__",
+          "schemaVersion": 39,
+          "joins": [
+            {
+              "from": "main_units_tables:a8820ddf245c2908d09e",
+              "field": "land_unit",
+              "to": "land_units_tables:240c432afba3d84d904a",
+              "targetField": "key",
+              "value": "wh_dlc07_brt_cav_grail_guardians_0",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            },
+            {
+              "from": "land_units_tables:240c432afba3d84d904a",
+              "field": "man_entity",
+              "to": "battle_entities_tables:2401ad24a4098a41bd20",
+              "targetField": "key",
+              "value": "wh_main_cavalry_rider_standard_blood",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            }
+          ]
+        },
+        "mount": {
+          "rowId": "battle_entities_tables:0202bbbcc41b9c4b9801",
+          "table": "battle_entities_tables",
+          "rowKey": {
+            "key": "wh_main_brt_mnt_cavalry_knights_heavy_blood"
+          },
+          "field": "run_speed",
+          "sourcePack": "db.pack",
+          "path": "db/battle_entities_tables/data__",
+          "schemaVersion": 39,
+          "joins": [
+            {
+              "from": "main_units_tables:a8820ddf245c2908d09e",
+              "field": "land_unit",
+              "to": "land_units_tables:240c432afba3d84d904a",
+              "targetField": "key",
+              "value": "wh_dlc07_brt_cav_grail_guardians_0",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            },
+            {
+              "from": "land_units_tables:240c432afba3d84d904a",
+              "field": "mount",
+              "to": "mounts_tables:94131125d572f717815d",
+              "targetField": "key",
+              "value": "wh_main_brt_mnt_warhorse_grail_knights",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            },
+            {
+              "from": "mounts_tables:94131125d572f717815d",
+              "field": "entity",
+              "to": "battle_entities_tables:0202bbbcc41b9c4b9801",
+              "targetField": "key",
+              "value": "wh_main_brt_mnt_cavalry_knights_heavy_blood",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            }
+          ]
+        }
+      },
+      "movementFlags": {
+        "mounted_draughts": false,
+        "sync_locomotion": false,
+        "engine_type": null,
+        "draught_attachment_point": null,
+        "rider_attachment_point": null
+      },
+      "overrideScope": "NO_ADDITIONAL_BASE_MOVEMENT_SOURCE_IN_REVIEWED_TRACE; conditional ground effects excluded"
+    },
+    {
+      "identity": {
+        "id": "ca_unit_wh_main_emp_cav_outriders_0",
+        "name": "Outriders",
+        "mainKey": "wh_main_emp_cav_outriders_0",
+        "landKey": "wh_main_emp_cav_outriders_0"
+      },
+      "source": {
+        "file": "tools/wh3-importer/expansion-batch-02/sources.json",
+        "pointer": "/decoded/candidates/17/dump",
+        "originalExtraction": {
+          "reference": "generated/wh3/expansion-batch-02/units/expansion-02-18.result.json",
+          "sha256": "ef66db2d76029a8ee6cfdef1b2bba12a9aac28bf4d643e53d73cca04407ba535"
+        }
+      },
+      "staticSnapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+      "status": "SPEED_AMBIGUOUS",
+      "reason": "EXACT_MOUNTED_PROFILE_NOT_VALIDATED",
+      "candidate": null,
+      "productionEligible": false,
+      "components": {
+        "man": {
+          "entityKey": "wh_main_cavalry_rider_standard_blood",
+          "rawRunSpeed": 3.3,
+          "timesTenCandidate": 33
+        },
+        "mount": {
+          "entityKey": "wh_main_emp_cav_outriders_blood",
+          "rawRunSpeed": 8.4,
+          "timesTenCandidate": 84
+        }
+      },
+      "mountRelation": {
+        "value": "wh_main_emp_mnt_warhorse_outriders",
+        "source": {
+          "rowId": "land_units_tables:7f759b7787b74a321c80",
+          "table": "land_units_tables",
+          "rowKey": {
+            "key": "wh_main_emp_cav_outriders_0"
+          },
+          "field": "mount",
+          "sourcePack": "db.pack",
+          "path": "db/land_units_tables/data__",
+          "schemaVersion": 54,
+          "joins": [
+            {
+              "from": "main_units_tables:9eaa92fbb199a236089a",
+              "field": "land_unit",
+              "to": "land_units_tables:7f759b7787b74a321c80",
+              "targetField": "key",
+              "value": "wh_main_emp_cav_outriders_0",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            }
+          ]
+        }
+      },
+      "topology": {
+        "mainKey": "wh_main_emp_cav_outriders_0",
+        "landKey": "wh_main_emp_cav_outriders_0",
+        "mountRecords": [
+          {
+            "rowId": "mounts_tables:a1f011e864de5cf35681",
+            "key": {
+              "key": "wh_main_emp_mnt_warhorse_outriders"
+            },
+            "entity": {
+              "value": "wh_main_emp_cav_outriders_blood",
+              "source": {
+                "rowId": "mounts_tables:a1f011e864de5cf35681",
+                "table": "mounts_tables",
+                "rowKey": {
+                  "key": "wh_main_emp_mnt_warhorse_outriders"
+                },
+                "field": "entity",
+                "sourcePack": "db.pack",
+                "path": "db/mounts_tables/data__",
+                "schemaVersion": 10,
+                "joins": [
+                  {
+                    "from": "main_units_tables:9eaa92fbb199a236089a",
+                    "field": "land_unit",
+                    "to": "land_units_tables:7f759b7787b74a321c80",
+                    "targetField": "key",
+                    "value": "wh_main_emp_cav_outriders_0",
+                    "direction": "forward",
+                    "evidence": "RPFM processed schema is_reference",
+                    "traversal": "from-to"
+                  },
+                  {
+                    "from": "land_units_tables:7f759b7787b74a321c80",
+                    "field": "mount",
+                    "to": "mounts_tables:a1f011e864de5cf35681",
+                    "targetField": "key",
+                    "value": "wh_main_emp_mnt_warhorse_outriders",
+                    "direction": "forward",
+                    "evidence": "RPFM processed schema is_reference",
+                    "traversal": "from-to"
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "entityKeys": [
+          "wh_main_cavalry_rider_standard_blood",
+          "wh_main_emp_cav_outriders_blood"
+        ]
+      },
+      "sourceTraces": {
+        "man": {
+          "rowId": "battle_entities_tables:2401ad24a4098a41bd20",
+          "table": "battle_entities_tables",
+          "rowKey": {
+            "key": "wh_main_cavalry_rider_standard_blood"
+          },
+          "field": "run_speed",
+          "sourcePack": "db.pack",
+          "path": "db/battle_entities_tables/data__",
+          "schemaVersion": 39,
+          "joins": [
+            {
+              "from": "main_units_tables:9eaa92fbb199a236089a",
+              "field": "land_unit",
+              "to": "land_units_tables:7f759b7787b74a321c80",
+              "targetField": "key",
+              "value": "wh_main_emp_cav_outriders_0",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            },
+            {
+              "from": "land_units_tables:7f759b7787b74a321c80",
+              "field": "man_entity",
+              "to": "battle_entities_tables:2401ad24a4098a41bd20",
+              "targetField": "key",
+              "value": "wh_main_cavalry_rider_standard_blood",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            }
+          ]
+        },
+        "mount": {
+          "rowId": "battle_entities_tables:bbc6d7afa49a9e56c8b0",
+          "table": "battle_entities_tables",
+          "rowKey": {
+            "key": "wh_main_emp_cav_outriders_blood"
+          },
+          "field": "run_speed",
+          "sourcePack": "db.pack",
+          "path": "db/battle_entities_tables/data__",
+          "schemaVersion": 39,
+          "joins": [
+            {
+              "from": "main_units_tables:9eaa92fbb199a236089a",
+              "field": "land_unit",
+              "to": "land_units_tables:7f759b7787b74a321c80",
+              "targetField": "key",
+              "value": "wh_main_emp_cav_outriders_0",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            },
+            {
+              "from": "land_units_tables:7f759b7787b74a321c80",
+              "field": "mount",
+              "to": "mounts_tables:a1f011e864de5cf35681",
+              "targetField": "key",
+              "value": "wh_main_emp_mnt_warhorse_outriders",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            },
+            {
+              "from": "mounts_tables:a1f011e864de5cf35681",
+              "field": "entity",
+              "to": "battle_entities_tables:bbc6d7afa49a9e56c8b0",
+              "targetField": "key",
+              "value": "wh_main_emp_cav_outriders_blood",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            }
+          ]
+        }
+      },
+      "movementFlags": {
+        "mounted_draughts": false,
+        "sync_locomotion": false,
+        "engine_type": null,
+        "draught_attachment_point": null,
+        "rider_attachment_point": null
+      },
+      "overrideScope": "NO_ADDITIONAL_BASE_MOVEMENT_SOURCE_IN_REVIEWED_TRACE; conditional ground effects excluded"
+    },
+    {
+      "identity": {
+        "id": "ca_unit_wh3_dlc25_emp_cav_knights_of_the_black_rose",
+        "name": "Knights of the Black Rose",
+        "mainKey": "wh3_dlc25_emp_cav_knights_of_the_black_rose",
+        "landKey": "wh3_dlc25_emp_cav_knights_of_the_black_rose"
+      },
+      "source": {
+        "file": "tools/wh3-importer/expansion-batch-02/sources.json",
+        "pointer": "/decoded/candidates/23/dump",
+        "originalExtraction": {
+          "reference": "generated/wh3/expansion-batch-02/units/expansion-02-24.result.json",
+          "sha256": "1296594a1a45c05756097e15a7e7d787d2086579a5d49137eebd97c59811fbbf"
+        }
+      },
+      "staticSnapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+      "status": "SPEED_AMBIGUOUS",
+      "reason": "EXACT_MOUNTED_PROFILE_NOT_VALIDATED",
+      "candidate": null,
+      "productionEligible": false,
+      "components": {
+        "man": {
+          "entityKey": "wh_main_cavalry_rider_standard_blood",
+          "rawRunSpeed": 3.3,
+          "timesTenCandidate": 33
+        },
+        "mount": {
+          "entityKey": "wh_main_cavalry_slow_blood",
+          "rawRunSpeed": 7.8,
+          "timesTenCandidate": 78
+        }
+      },
+      "mountRelation": {
+        "value": "wh3_dlc25_emp_mnt_knights_of_the_black_rose",
+        "source": {
+          "rowId": "land_units_tables:e27472da331510755735",
+          "table": "land_units_tables",
+          "rowKey": {
+            "key": "wh3_dlc25_emp_cav_knights_of_the_black_rose"
+          },
+          "field": "mount",
+          "sourcePack": "db.pack",
+          "path": "db/land_units_tables/data__",
+          "schemaVersion": 54,
+          "joins": [
+            {
+              "from": "main_units_tables:a52170264a85f46d1e5c",
+              "field": "land_unit",
+              "to": "land_units_tables:e27472da331510755735",
+              "targetField": "key",
+              "value": "wh3_dlc25_emp_cav_knights_of_the_black_rose",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            }
+          ]
+        }
+      },
+      "topology": {
+        "mainKey": "wh3_dlc25_emp_cav_knights_of_the_black_rose",
+        "landKey": "wh3_dlc25_emp_cav_knights_of_the_black_rose",
+        "mountRecords": [
+          {
+            "rowId": "mounts_tables:6a4ed81dd2466b1ca32c",
+            "key": {
+              "key": "wh3_dlc25_emp_mnt_knights_of_the_black_rose"
+            },
+            "entity": {
+              "value": "wh_main_cavalry_slow_blood",
+              "source": {
+                "rowId": "mounts_tables:6a4ed81dd2466b1ca32c",
+                "table": "mounts_tables",
+                "rowKey": {
+                  "key": "wh3_dlc25_emp_mnt_knights_of_the_black_rose"
+                },
+                "field": "entity",
+                "sourcePack": "db.pack",
+                "path": "db/mounts_tables/data__",
+                "schemaVersion": 10,
+                "joins": [
+                  {
+                    "from": "main_units_tables:a52170264a85f46d1e5c",
+                    "field": "land_unit",
+                    "to": "land_units_tables:e27472da331510755735",
+                    "targetField": "key",
+                    "value": "wh3_dlc25_emp_cav_knights_of_the_black_rose",
+                    "direction": "forward",
+                    "evidence": "RPFM processed schema is_reference",
+                    "traversal": "from-to"
+                  },
+                  {
+                    "from": "land_units_tables:e27472da331510755735",
+                    "field": "mount",
+                    "to": "mounts_tables:6a4ed81dd2466b1ca32c",
+                    "targetField": "key",
+                    "value": "wh3_dlc25_emp_mnt_knights_of_the_black_rose",
+                    "direction": "forward",
+                    "evidence": "RPFM processed schema is_reference",
+                    "traversal": "from-to"
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "entityKeys": [
+          "wh_main_cavalry_rider_standard_blood",
+          "wh_main_cavalry_slow_blood"
+        ]
+      },
+      "sourceTraces": {
+        "man": {
+          "rowId": "battle_entities_tables:2401ad24a4098a41bd20",
+          "table": "battle_entities_tables",
+          "rowKey": {
+            "key": "wh_main_cavalry_rider_standard_blood"
+          },
+          "field": "run_speed",
+          "sourcePack": "db.pack",
+          "path": "db/battle_entities_tables/data__",
+          "schemaVersion": 39,
+          "joins": [
+            {
+              "from": "main_units_tables:a52170264a85f46d1e5c",
+              "field": "land_unit",
+              "to": "land_units_tables:e27472da331510755735",
+              "targetField": "key",
+              "value": "wh3_dlc25_emp_cav_knights_of_the_black_rose",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            },
+            {
+              "from": "land_units_tables:e27472da331510755735",
+              "field": "man_entity",
+              "to": "battle_entities_tables:2401ad24a4098a41bd20",
+              "targetField": "key",
+              "value": "wh_main_cavalry_rider_standard_blood",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            }
+          ]
+        },
+        "mount": {
+          "rowId": "battle_entities_tables:c10f244e3018ebdb768a",
+          "table": "battle_entities_tables",
+          "rowKey": {
+            "key": "wh_main_cavalry_slow_blood"
+          },
+          "field": "run_speed",
+          "sourcePack": "db.pack",
+          "path": "db/battle_entities_tables/data__",
+          "schemaVersion": 39,
+          "joins": [
+            {
+              "from": "main_units_tables:a52170264a85f46d1e5c",
+              "field": "land_unit",
+              "to": "land_units_tables:e27472da331510755735",
+              "targetField": "key",
+              "value": "wh3_dlc25_emp_cav_knights_of_the_black_rose",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            },
+            {
+              "from": "land_units_tables:e27472da331510755735",
+              "field": "mount",
+              "to": "mounts_tables:6a4ed81dd2466b1ca32c",
+              "targetField": "key",
+              "value": "wh3_dlc25_emp_mnt_knights_of_the_black_rose",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            },
+            {
+              "from": "mounts_tables:6a4ed81dd2466b1ca32c",
+              "field": "entity",
+              "to": "battle_entities_tables:c10f244e3018ebdb768a",
+              "targetField": "key",
+              "value": "wh_main_cavalry_slow_blood",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            }
+          ]
+        }
+      },
+      "movementFlags": {
+        "mounted_draughts": false,
+        "sync_locomotion": false,
+        "engine_type": null,
+        "draught_attachment_point": null,
+        "rider_attachment_point": null
+      },
+      "overrideScope": "NO_ADDITIONAL_BASE_MOVEMENT_SOURCE_IN_REVIEWED_TRACE; conditional ground effects excluded"
+    },
+    {
+      "identity": {
+        "id": "ca_unit_wh2_dlc09_tmb_cav_skeleton_horsemen_0",
+        "name": "Skeleton Horsemen",
+        "mainKey": "wh2_dlc09_tmb_cav_skeleton_horsemen_0",
+        "landKey": "wh2_dlc09_tmb_cav_skeleton_horsemen_0"
+      },
+      "source": {
+        "file": "tools/wh3-importer/expansion-batch-03/sources.json",
+        "pointer": "/decoded/candidates/22/dump",
+        "originalExtraction": {
+          "reference": "generated/wh3/expansion-batch-03/units/expansion-03-23.result.json",
+          "sha256": "68148f0a8d390a254977f0c1721b5b8fb64086a0072a2809d04b855837bfae77"
+        }
+      },
+      "staticSnapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+      "status": "SPEED_AMBIGUOUS",
+      "reason": "EXACT_MOUNTED_PROFILE_NOT_VALIDATED",
+      "candidate": null,
+      "productionEligible": false,
+      "components": {
+        "man": {
+          "entityKey": "wh2_dlc09_tmb_skeleton",
+          "rawRunSpeed": 2.8,
+          "timesTenCandidate": 28
+        },
+        "mount": {
+          "entityKey": "wh2_dlc09_tmb_cav_skeletal_steed",
+          "rawRunSpeed": 7.6,
+          "timesTenCandidate": 76
+        }
+      },
+      "mountRelation": {
+        "value": "wh2_dlc09_tmb_mnt_tomb_steed",
+        "source": {
+          "rowId": "land_units_tables:c62ab061bc849568a874",
+          "table": "land_units_tables",
+          "rowKey": {
+            "key": "wh2_dlc09_tmb_cav_skeleton_horsemen_0"
+          },
+          "field": "mount",
+          "sourcePack": "db.pack",
+          "path": "db/land_units_tables/data__",
+          "schemaVersion": 54,
+          "joins": [
+            {
+              "from": "main_units_tables:d1ae5fbf9c879c70efc4",
+              "field": "land_unit",
+              "to": "land_units_tables:c62ab061bc849568a874",
+              "targetField": "key",
+              "value": "wh2_dlc09_tmb_cav_skeleton_horsemen_0",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            }
+          ]
+        }
+      },
+      "topology": {
+        "mainKey": "wh2_dlc09_tmb_cav_skeleton_horsemen_0",
+        "landKey": "wh2_dlc09_tmb_cav_skeleton_horsemen_0",
+        "mountRecords": [
+          {
+            "rowId": "mounts_tables:03762e3789b0e13fda4a",
+            "key": {
+              "key": "wh2_dlc09_tmb_mnt_tomb_steed"
+            },
+            "entity": {
+              "value": "wh2_dlc09_tmb_cav_skeletal_steed",
+              "source": {
+                "rowId": "mounts_tables:03762e3789b0e13fda4a",
+                "table": "mounts_tables",
+                "rowKey": {
+                  "key": "wh2_dlc09_tmb_mnt_tomb_steed"
+                },
+                "field": "entity",
+                "sourcePack": "db.pack",
+                "path": "db/mounts_tables/data__",
+                "schemaVersion": 10,
+                "joins": [
+                  {
+                    "from": "main_units_tables:d1ae5fbf9c879c70efc4",
+                    "field": "land_unit",
+                    "to": "land_units_tables:c62ab061bc849568a874",
+                    "targetField": "key",
+                    "value": "wh2_dlc09_tmb_cav_skeleton_horsemen_0",
+                    "direction": "forward",
+                    "evidence": "RPFM processed schema is_reference",
+                    "traversal": "from-to"
+                  },
+                  {
+                    "from": "land_units_tables:c62ab061bc849568a874",
+                    "field": "mount",
+                    "to": "mounts_tables:03762e3789b0e13fda4a",
+                    "targetField": "key",
+                    "value": "wh2_dlc09_tmb_mnt_tomb_steed",
+                    "direction": "forward",
+                    "evidence": "RPFM processed schema is_reference",
+                    "traversal": "from-to"
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "entityKeys": [
+          "wh2_dlc09_tmb_skeleton",
+          "wh2_dlc09_tmb_cav_skeletal_steed"
+        ]
+      },
+      "sourceTraces": {
+        "man": {
+          "rowId": "battle_entities_tables:688623369a35188b152a",
+          "table": "battle_entities_tables",
+          "rowKey": {
+            "key": "wh2_dlc09_tmb_skeleton"
+          },
+          "field": "run_speed",
+          "sourcePack": "db.pack",
+          "path": "db/battle_entities_tables/data__",
+          "schemaVersion": 39,
+          "joins": [
+            {
+              "from": "main_units_tables:d1ae5fbf9c879c70efc4",
+              "field": "land_unit",
+              "to": "land_units_tables:c62ab061bc849568a874",
+              "targetField": "key",
+              "value": "wh2_dlc09_tmb_cav_skeleton_horsemen_0",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            },
+            {
+              "from": "land_units_tables:c62ab061bc849568a874",
+              "field": "man_entity",
+              "to": "battle_entities_tables:688623369a35188b152a",
+              "targetField": "key",
+              "value": "wh2_dlc09_tmb_skeleton",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            }
+          ]
+        },
+        "mount": {
+          "rowId": "battle_entities_tables:21f225dc817eb0fa24c7",
+          "table": "battle_entities_tables",
+          "rowKey": {
+            "key": "wh2_dlc09_tmb_cav_skeletal_steed"
+          },
+          "field": "run_speed",
+          "sourcePack": "db.pack",
+          "path": "db/battle_entities_tables/data__",
+          "schemaVersion": 39,
+          "joins": [
+            {
+              "from": "main_units_tables:d1ae5fbf9c879c70efc4",
+              "field": "land_unit",
+              "to": "land_units_tables:c62ab061bc849568a874",
+              "targetField": "key",
+              "value": "wh2_dlc09_tmb_cav_skeleton_horsemen_0",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            },
+            {
+              "from": "land_units_tables:c62ab061bc849568a874",
+              "field": "mount",
+              "to": "mounts_tables:03762e3789b0e13fda4a",
+              "targetField": "key",
+              "value": "wh2_dlc09_tmb_mnt_tomb_steed",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            },
+            {
+              "from": "mounts_tables:03762e3789b0e13fda4a",
+              "field": "entity",
+              "to": "battle_entities_tables:21f225dc817eb0fa24c7",
+              "targetField": "key",
+              "value": "wh2_dlc09_tmb_cav_skeletal_steed",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            }
+          ]
+        }
+      },
+      "movementFlags": {
+        "mounted_draughts": false,
+        "sync_locomotion": false,
+        "engine_type": null,
+        "draught_attachment_point": null,
+        "rider_attachment_point": null
+      },
+      "overrideScope": "NO_ADDITIONAL_BASE_MOVEMENT_SOURCE_IN_REVIEWED_TRACE; conditional ground effects excluded"
+    },
+    {
+      "identity": {
+        "id": "ca_unit_wh2_main_lzd_cav_cold_ones_1",
+        "name": "Cold One Riders",
+        "mainKey": "wh2_main_lzd_cav_cold_ones_1",
+        "landKey": "wh2_main_lzd_cav_cold_ones_1"
+      },
+      "source": {
+        "file": "tools/wh3-importer/expansion-batch-04/sources.json",
+        "pointer": "/decoded/candidates/11/dump",
+        "originalExtraction": {
+          "reference": "generated/wh3/expansion-batch-04/units/expansion-04-12.result.json",
+          "sha256": "af7d646b22b48476dc06f3f91260a130727627bfc0a5983b4b89407ec870cabf"
+        }
+      },
+      "staticSnapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+      "status": "SPEED_DIRECT_STATIC",
+      "reason": null,
+      "candidate": {
+        "mainKey": "wh2_main_lzd_cav_cold_ones_1",
+        "landKey": "wh2_main_lzd_cav_cold_ones_1",
+        "selectedComponent": "mount",
+        "selectedEntityKey": "wh2_main_lzd_cavalry_cold_one_blood",
+        "rawRunSpeed": 6.6,
+        "calculatedSpeed": 66,
+        "formula": "rawSpeed * 10",
+        "rounding": "NONE",
+        "validationAnchor": "ca_unit_wh2_main_lzd_cav_cold_ones_1",
+        "profile": "EXACT_COLD_ONE_RIDERS_CHAIN",
+        "profileSha256": "1633b3c42df4ca33482a4f021985ac042f45a87f9e9e6a6d5534114b23c633fd",
+        "validationBasis": "DIRECT_MANUAL_CARD_MATCH",
+        "sourceTraceReference": "sourceTraces/mount",
+        "evidenceKind": "MANUAL_CARD_VALIDATION"
+      },
+      "productionEligible": false,
+      "components": {
+        "man": {
+          "entityKey": "wh_main_cavalry_rider_standard_blood",
+          "rawRunSpeed": 3.3,
+          "timesTenCandidate": 33
+        },
+        "mount": {
+          "entityKey": "wh2_main_lzd_cavalry_cold_one_blood",
+          "rawRunSpeed": 6.6,
+          "timesTenCandidate": 66
+        }
+      },
+      "mountRelation": {
+        "value": "wh2_main_lzd_mnt_cold_one",
+        "source": {
+          "rowId": "land_units_tables:a879697104e8099bdd1d",
+          "table": "land_units_tables",
+          "rowKey": {
+            "key": "wh2_main_lzd_cav_cold_ones_1"
+          },
+          "field": "mount",
+          "sourcePack": "db.pack",
+          "path": "db/land_units_tables/data__",
+          "schemaVersion": 54,
+          "joins": [
+            {
+              "from": "main_units_tables:e48aa278ecc3a4f856cc",
+              "field": "land_unit",
+              "to": "land_units_tables:a879697104e8099bdd1d",
+              "targetField": "key",
+              "value": "wh2_main_lzd_cav_cold_ones_1",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            }
+          ]
+        }
+      },
+      "topology": {
+        "mainKey": "wh2_main_lzd_cav_cold_ones_1",
+        "landKey": "wh2_main_lzd_cav_cold_ones_1",
+        "mountRecords": [
+          {
+            "rowId": "mounts_tables:d786fd6e5238319da619",
+            "key": {
+              "key": "wh2_main_lzd_mnt_cold_one"
+            },
+            "entity": {
+              "value": "wh2_main_lzd_cavalry_cold_one_blood",
+              "source": {
+                "rowId": "mounts_tables:d786fd6e5238319da619",
+                "table": "mounts_tables",
+                "rowKey": {
+                  "key": "wh2_main_lzd_mnt_cold_one"
+                },
+                "field": "entity",
+                "sourcePack": "db.pack",
+                "path": "db/mounts_tables/data__",
+                "schemaVersion": 10,
+                "joins": [
+                  {
+                    "from": "main_units_tables:e48aa278ecc3a4f856cc",
+                    "field": "land_unit",
+                    "to": "land_units_tables:a879697104e8099bdd1d",
+                    "targetField": "key",
+                    "value": "wh2_main_lzd_cav_cold_ones_1",
+                    "direction": "forward",
+                    "evidence": "RPFM processed schema is_reference",
+                    "traversal": "from-to"
+                  },
+                  {
+                    "from": "land_units_tables:a879697104e8099bdd1d",
+                    "field": "mount",
+                    "to": "mounts_tables:d786fd6e5238319da619",
+                    "targetField": "key",
+                    "value": "wh2_main_lzd_mnt_cold_one",
+                    "direction": "forward",
+                    "evidence": "RPFM processed schema is_reference",
+                    "traversal": "from-to"
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "entityKeys": [
+          "wh_main_cavalry_rider_standard_blood",
+          "wh2_main_lzd_cavalry_cold_one_blood"
+        ]
+      },
+      "sourceTraces": {
+        "man": {
+          "rowId": "battle_entities_tables:2401ad24a4098a41bd20",
+          "table": "battle_entities_tables",
+          "rowKey": {
+            "key": "wh_main_cavalry_rider_standard_blood"
+          },
+          "field": "run_speed",
+          "sourcePack": "db.pack",
+          "path": "db/battle_entities_tables/data__",
+          "schemaVersion": 39,
+          "joins": [
+            {
+              "from": "main_units_tables:e48aa278ecc3a4f856cc",
+              "field": "land_unit",
+              "to": "land_units_tables:a879697104e8099bdd1d",
+              "targetField": "key",
+              "value": "wh2_main_lzd_cav_cold_ones_1",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            },
+            {
+              "from": "land_units_tables:a879697104e8099bdd1d",
+              "field": "man_entity",
+              "to": "battle_entities_tables:2401ad24a4098a41bd20",
+              "targetField": "key",
+              "value": "wh_main_cavalry_rider_standard_blood",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            }
+          ]
+        },
+        "mount": {
+          "rowId": "battle_entities_tables:ac3d43c79b6e77eb9d34",
+          "table": "battle_entities_tables",
+          "rowKey": {
+            "key": "wh2_main_lzd_cavalry_cold_one_blood"
+          },
+          "field": "run_speed",
+          "sourcePack": "db.pack",
+          "path": "db/battle_entities_tables/data__",
+          "schemaVersion": 39,
+          "joins": [
+            {
+              "from": "main_units_tables:e48aa278ecc3a4f856cc",
+              "field": "land_unit",
+              "to": "land_units_tables:a879697104e8099bdd1d",
+              "targetField": "key",
+              "value": "wh2_main_lzd_cav_cold_ones_1",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            },
+            {
+              "from": "land_units_tables:a879697104e8099bdd1d",
+              "field": "mount",
+              "to": "mounts_tables:d786fd6e5238319da619",
+              "targetField": "key",
+              "value": "wh2_main_lzd_mnt_cold_one",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            },
+            {
+              "from": "mounts_tables:d786fd6e5238319da619",
+              "field": "entity",
+              "to": "battle_entities_tables:ac3d43c79b6e77eb9d34",
+              "targetField": "key",
+              "value": "wh2_main_lzd_cavalry_cold_one_blood",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            }
+          ]
+        }
+      },
+      "movementFlags": {
+        "mounted_draughts": false,
+        "sync_locomotion": false,
+        "engine_type": null,
+        "draught_attachment_point": null,
+        "rider_attachment_point": null
+      },
+      "overrideScope": "NO_ADDITIONAL_BASE_MOVEMENT_SOURCE_IN_REVIEWED_TRACE; conditional ground effects excluded"
+    },
+    {
+      "identity": {
+        "id": "ca_unit_wh2_main_lzd_cav_cold_one_spearmen_1",
+        "name": "Cold One Spear-Riders",
+        "mainKey": "wh2_main_lzd_cav_cold_one_spearmen_1",
+        "landKey": "wh2_main_lzd_cav_cold_one_spearriders_1"
+      },
+      "source": {
+        "file": "tools/wh3-importer/expansion-batch-04/sources.json",
+        "pointer": "/decoded/candidates/12/dump",
+        "originalExtraction": {
+          "reference": "generated/wh3/expansion-batch-04/units/expansion-04-13.result.json",
+          "sha256": "746d7c76290c3d7ae5a8ce084ec222bde2523b4162acf91cd9ca2127c4a5e227"
+        }
+      },
+      "staticSnapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+      "status": "SPEED_DIRECT_STATIC",
+      "reason": null,
+      "candidate": {
+        "mainKey": "wh2_main_lzd_cav_cold_one_spearmen_1",
+        "landKey": "wh2_main_lzd_cav_cold_one_spearriders_1",
+        "selectedComponent": "mount",
+        "selectedEntityKey": "wh2_main_lzd_cavalry_cold_one_blood",
+        "rawRunSpeed": 6.6,
+        "calculatedSpeed": 66,
+        "formula": "rawSpeed * 10",
+        "rounding": "NONE",
+        "validationAnchor": "ca_unit_wh2_main_lzd_cav_cold_ones_1",
+        "profile": "EXACT_COLD_ONE_RIDERS_CHAIN",
+        "profileSha256": "1633b3c42df4ca33482a4f021985ac042f45a87f9e9e6a6d5534114b23c633fd",
+        "validationBasis": "EXACT_STRUCTURAL_PROFILE_INHERITANCE",
+        "sourceTraceReference": "sourceTraces/mount",
+        "evidenceKind": "MANUAL_CARD_VALIDATION"
+      },
+      "productionEligible": false,
+      "components": {
+        "man": {
+          "entityKey": "wh_main_cavalry_rider_standard_blood",
+          "rawRunSpeed": 3.3,
+          "timesTenCandidate": 33
+        },
+        "mount": {
+          "entityKey": "wh2_main_lzd_cavalry_cold_one_blood",
+          "rawRunSpeed": 6.6,
+          "timesTenCandidate": 66
+        }
+      },
+      "mountRelation": {
+        "value": "wh2_main_lzd_mnt_cold_one",
+        "source": {
+          "rowId": "land_units_tables:9f6f3490b580e944a965",
+          "table": "land_units_tables",
+          "rowKey": {
+            "key": "wh2_main_lzd_cav_cold_one_spearriders_1"
+          },
+          "field": "mount",
+          "sourcePack": "db.pack",
+          "path": "db/land_units_tables/data__",
+          "schemaVersion": 54,
+          "joins": [
+            {
+              "from": "main_units_tables:e5c2762f5a1e0639eb4c",
+              "field": "land_unit",
+              "to": "land_units_tables:9f6f3490b580e944a965",
+              "targetField": "key",
+              "value": "wh2_main_lzd_cav_cold_one_spearriders_1",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            }
+          ]
+        }
+      },
+      "topology": {
+        "mainKey": "wh2_main_lzd_cav_cold_one_spearmen_1",
+        "landKey": "wh2_main_lzd_cav_cold_one_spearriders_1",
+        "mountRecords": [
+          {
+            "rowId": "mounts_tables:d786fd6e5238319da619",
+            "key": {
+              "key": "wh2_main_lzd_mnt_cold_one"
+            },
+            "entity": {
+              "value": "wh2_main_lzd_cavalry_cold_one_blood",
+              "source": {
+                "rowId": "mounts_tables:d786fd6e5238319da619",
+                "table": "mounts_tables",
+                "rowKey": {
+                  "key": "wh2_main_lzd_mnt_cold_one"
+                },
+                "field": "entity",
+                "sourcePack": "db.pack",
+                "path": "db/mounts_tables/data__",
+                "schemaVersion": 10,
+                "joins": [
+                  {
+                    "from": "main_units_tables:e5c2762f5a1e0639eb4c",
+                    "field": "land_unit",
+                    "to": "land_units_tables:9f6f3490b580e944a965",
+                    "targetField": "key",
+                    "value": "wh2_main_lzd_cav_cold_one_spearriders_1",
+                    "direction": "forward",
+                    "evidence": "RPFM processed schema is_reference",
+                    "traversal": "from-to"
+                  },
+                  {
+                    "from": "land_units_tables:9f6f3490b580e944a965",
+                    "field": "mount",
+                    "to": "mounts_tables:d786fd6e5238319da619",
+                    "targetField": "key",
+                    "value": "wh2_main_lzd_mnt_cold_one",
+                    "direction": "forward",
+                    "evidence": "RPFM processed schema is_reference",
+                    "traversal": "from-to"
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "entityKeys": [
+          "wh_main_cavalry_rider_standard_blood",
+          "wh2_main_lzd_cavalry_cold_one_blood"
+        ]
+      },
+      "sourceTraces": {
+        "man": {
+          "rowId": "battle_entities_tables:2401ad24a4098a41bd20",
+          "table": "battle_entities_tables",
+          "rowKey": {
+            "key": "wh_main_cavalry_rider_standard_blood"
+          },
+          "field": "run_speed",
+          "sourcePack": "db.pack",
+          "path": "db/battle_entities_tables/data__",
+          "schemaVersion": 39,
+          "joins": [
+            {
+              "from": "main_units_tables:e5c2762f5a1e0639eb4c",
+              "field": "land_unit",
+              "to": "land_units_tables:9f6f3490b580e944a965",
+              "targetField": "key",
+              "value": "wh2_main_lzd_cav_cold_one_spearriders_1",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            },
+            {
+              "from": "land_units_tables:9f6f3490b580e944a965",
+              "field": "man_entity",
+              "to": "battle_entities_tables:2401ad24a4098a41bd20",
+              "targetField": "key",
+              "value": "wh_main_cavalry_rider_standard_blood",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            }
+          ]
+        },
+        "mount": {
+          "rowId": "battle_entities_tables:ac3d43c79b6e77eb9d34",
+          "table": "battle_entities_tables",
+          "rowKey": {
+            "key": "wh2_main_lzd_cavalry_cold_one_blood"
+          },
+          "field": "run_speed",
+          "sourcePack": "db.pack",
+          "path": "db/battle_entities_tables/data__",
+          "schemaVersion": 39,
+          "joins": [
+            {
+              "from": "main_units_tables:e5c2762f5a1e0639eb4c",
+              "field": "land_unit",
+              "to": "land_units_tables:9f6f3490b580e944a965",
+              "targetField": "key",
+              "value": "wh2_main_lzd_cav_cold_one_spearriders_1",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            },
+            {
+              "from": "land_units_tables:9f6f3490b580e944a965",
+              "field": "mount",
+              "to": "mounts_tables:d786fd6e5238319da619",
+              "targetField": "key",
+              "value": "wh2_main_lzd_mnt_cold_one",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            },
+            {
+              "from": "mounts_tables:d786fd6e5238319da619",
+              "field": "entity",
+              "to": "battle_entities_tables:ac3d43c79b6e77eb9d34",
+              "targetField": "key",
+              "value": "wh2_main_lzd_cavalry_cold_one_blood",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            }
+          ]
+        }
+      },
+      "movementFlags": {
+        "mounted_draughts": false,
+        "sync_locomotion": false,
+        "engine_type": null,
+        "draught_attachment_point": null,
+        "rider_attachment_point": null
+      },
+      "overrideScope": "NO_ADDITIONAL_BASE_MOVEMENT_SOURCE_IN_REVIEWED_TRACE; conditional ground effects excluded"
+    },
+    {
+      "identity": {
+        "id": "ca_unit_wh_main_vmp_cav_black_knights_0",
+        "name": "Black Knights",
+        "mainKey": "wh_main_vmp_cav_black_knights_0",
+        "landKey": "wh_main_vmp_cav_black_knights_0"
+      },
+      "source": {
+        "file": "tools/wh3-importer/expansion-batch-04/sources.json",
+        "pointer": "/decoded/candidates/13/dump",
+        "originalExtraction": {
+          "reference": "generated/wh3/expansion-batch-04/units/expansion-04-14.result.json",
+          "sha256": "55154fbe88dfe16db35f7f2dcc227f8eca2fecaacec18786a5a269ede3cdb17e"
+        }
+      },
+      "staticSnapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+      "status": "SPEED_AMBIGUOUS",
+      "reason": "EXACT_MOUNTED_PROFILE_NOT_VALIDATED",
+      "candidate": null,
+      "productionEligible": false,
+      "components": {
+        "man": {
+          "entityKey": "wh_main_cavalry_rider_standard",
+          "rawRunSpeed": 3.3,
+          "timesTenCandidate": 33
+        },
+        "mount": {
+          "entityKey": "wh_main_vmp_cav_skeletal_steed",
+          "rawRunSpeed": 7.8,
+          "timesTenCandidate": 78
+        }
+      },
+      "mountRelation": {
+        "value": "wh_main_vmp_mnt_skeletal_steed",
+        "source": {
+          "rowId": "land_units_tables:49f0bb30882036e241dc",
+          "table": "land_units_tables",
+          "rowKey": {
+            "key": "wh_main_vmp_cav_black_knights_0"
+          },
+          "field": "mount",
+          "sourcePack": "db.pack",
+          "path": "db/land_units_tables/data__",
+          "schemaVersion": 54,
+          "joins": [
+            {
+              "from": "main_units_tables:ff8b5d3c345292a7e17c",
+              "field": "land_unit",
+              "to": "land_units_tables:49f0bb30882036e241dc",
+              "targetField": "key",
+              "value": "wh_main_vmp_cav_black_knights_0",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            }
+          ]
+        }
+      },
+      "topology": {
+        "mainKey": "wh_main_vmp_cav_black_knights_0",
+        "landKey": "wh_main_vmp_cav_black_knights_0",
+        "mountRecords": [
+          {
+            "rowId": "mounts_tables:97f7980e7ab72bd07dc5",
+            "key": {
+              "key": "wh_main_vmp_mnt_skeletal_steed"
+            },
+            "entity": {
+              "value": "wh_main_vmp_cav_skeletal_steed",
+              "source": {
+                "rowId": "mounts_tables:97f7980e7ab72bd07dc5",
+                "table": "mounts_tables",
+                "rowKey": {
+                  "key": "wh_main_vmp_mnt_skeletal_steed"
+                },
+                "field": "entity",
+                "sourcePack": "db.pack",
+                "path": "db/mounts_tables/data__",
+                "schemaVersion": 10,
+                "joins": [
+                  {
+                    "from": "main_units_tables:ff8b5d3c345292a7e17c",
+                    "field": "land_unit",
+                    "to": "land_units_tables:49f0bb30882036e241dc",
+                    "targetField": "key",
+                    "value": "wh_main_vmp_cav_black_knights_0",
+                    "direction": "forward",
+                    "evidence": "RPFM processed schema is_reference",
+                    "traversal": "from-to"
+                  },
+                  {
+                    "from": "land_units_tables:49f0bb30882036e241dc",
+                    "field": "mount",
+                    "to": "mounts_tables:97f7980e7ab72bd07dc5",
+                    "targetField": "key",
+                    "value": "wh_main_vmp_mnt_skeletal_steed",
+                    "direction": "forward",
+                    "evidence": "RPFM processed schema is_reference",
+                    "traversal": "from-to"
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "entityKeys": [
+          "wh_main_cavalry_rider_standard",
+          "wh_main_vmp_cav_skeletal_steed"
+        ]
+      },
+      "sourceTraces": {
+        "man": {
+          "rowId": "battle_entities_tables:aadebeb13f1be2bb9bc3",
+          "table": "battle_entities_tables",
+          "rowKey": {
+            "key": "wh_main_cavalry_rider_standard"
+          },
+          "field": "run_speed",
+          "sourcePack": "db.pack",
+          "path": "db/battle_entities_tables/data__",
+          "schemaVersion": 39,
+          "joins": [
+            {
+              "from": "main_units_tables:ff8b5d3c345292a7e17c",
+              "field": "land_unit",
+              "to": "land_units_tables:49f0bb30882036e241dc",
+              "targetField": "key",
+              "value": "wh_main_vmp_cav_black_knights_0",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            },
+            {
+              "from": "land_units_tables:49f0bb30882036e241dc",
+              "field": "man_entity",
+              "to": "battle_entities_tables:aadebeb13f1be2bb9bc3",
+              "targetField": "key",
+              "value": "wh_main_cavalry_rider_standard",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            }
+          ]
+        },
+        "mount": {
+          "rowId": "battle_entities_tables:1e8f7fed0d75b89c593d",
+          "table": "battle_entities_tables",
+          "rowKey": {
+            "key": "wh_main_vmp_cav_skeletal_steed"
+          },
+          "field": "run_speed",
+          "sourcePack": "db.pack",
+          "path": "db/battle_entities_tables/data__",
+          "schemaVersion": 39,
+          "joins": [
+            {
+              "from": "main_units_tables:ff8b5d3c345292a7e17c",
+              "field": "land_unit",
+              "to": "land_units_tables:49f0bb30882036e241dc",
+              "targetField": "key",
+              "value": "wh_main_vmp_cav_black_knights_0",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            },
+            {
+              "from": "land_units_tables:49f0bb30882036e241dc",
+              "field": "mount",
+              "to": "mounts_tables:97f7980e7ab72bd07dc5",
+              "targetField": "key",
+              "value": "wh_main_vmp_mnt_skeletal_steed",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            },
+            {
+              "from": "mounts_tables:97f7980e7ab72bd07dc5",
+              "field": "entity",
+              "to": "battle_entities_tables:1e8f7fed0d75b89c593d",
+              "targetField": "key",
+              "value": "wh_main_vmp_cav_skeletal_steed",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            }
+          ]
+        }
+      },
+      "movementFlags": {
+        "mounted_draughts": false,
+        "sync_locomotion": false,
+        "engine_type": null,
+        "draught_attachment_point": null,
+        "rider_attachment_point": null
+      },
+      "overrideScope": "NO_ADDITIONAL_BASE_MOVEMENT_SOURCE_IN_REVIEWED_TRACE; conditional ground effects excluded"
+    },
+    {
+      "identity": {
+        "id": "ca_unit_wh3_main_vmp_blood_knights_sword_shield",
+        "name": "Blood Knights",
+        "mainKey": "wh3_main_vmp_blood_knights_sword_shield",
+        "landKey": "wh3_main_vmp_blood_knights_sword_shield"
+      },
+      "source": {
+        "file": "tools/wh3-importer/expansion-batch-04/sources.json",
+        "pointer": "/decoded/candidates/14/dump",
+        "originalExtraction": {
+          "reference": "generated/wh3/expansion-batch-04/units/expansion-04-15.result.json",
+          "sha256": "00d8b7e4d61d18c41d2398b4b89d70c997a41c0701636c379a6eaeeb2f004fec"
+        }
+      },
+      "staticSnapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+      "status": "SPEED_AMBIGUOUS",
+      "reason": "EXACT_MOUNTED_PROFILE_NOT_VALIDATED",
+      "candidate": null,
+      "productionEligible": false,
+      "components": {
+        "man": {
+          "entityKey": "wh_main_infantry_standard_large_blood",
+          "rawRunSpeed": 3.3,
+          "timesTenCandidate": 33
+        },
+        "mount": {
+          "entityKey": "wh_dlc02_vmp_cavalry_standard_blood_knight_blood",
+          "rawRunSpeed": 7,
+          "timesTenCandidate": 70
+        }
+      },
+      "mountRelation": {
+        "value": "wh_dlc02_vmp_mnt_blood_knights_steed",
+        "source": {
+          "rowId": "land_units_tables:1f4c1c6a3e4da578b151",
+          "table": "land_units_tables",
+          "rowKey": {
+            "key": "wh3_main_vmp_blood_knights_sword_shield"
+          },
+          "field": "mount",
+          "sourcePack": "db.pack",
+          "path": "db/land_units_tables/data__",
+          "schemaVersion": 54,
+          "joins": [
+            {
+              "from": "main_units_tables:d141ed0a651ec8957960",
+              "field": "land_unit",
+              "to": "land_units_tables:1f4c1c6a3e4da578b151",
+              "targetField": "key",
+              "value": "wh3_main_vmp_blood_knights_sword_shield",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            }
+          ]
+        }
+      },
+      "topology": {
+        "mainKey": "wh3_main_vmp_blood_knights_sword_shield",
+        "landKey": "wh3_main_vmp_blood_knights_sword_shield",
+        "mountRecords": [
+          {
+            "rowId": "mounts_tables:e93b8692ec9180c83266",
+            "key": {
+              "key": "wh_dlc02_vmp_mnt_blood_knights_steed"
+            },
+            "entity": {
+              "value": "wh_dlc02_vmp_cavalry_standard_blood_knight_blood",
+              "source": {
+                "rowId": "mounts_tables:e93b8692ec9180c83266",
+                "table": "mounts_tables",
+                "rowKey": {
+                  "key": "wh_dlc02_vmp_mnt_blood_knights_steed"
+                },
+                "field": "entity",
+                "sourcePack": "db.pack",
+                "path": "db/mounts_tables/data__",
+                "schemaVersion": 10,
+                "joins": [
+                  {
+                    "from": "main_units_tables:d141ed0a651ec8957960",
+                    "field": "land_unit",
+                    "to": "land_units_tables:1f4c1c6a3e4da578b151",
+                    "targetField": "key",
+                    "value": "wh3_main_vmp_blood_knights_sword_shield",
+                    "direction": "forward",
+                    "evidence": "RPFM processed schema is_reference",
+                    "traversal": "from-to"
+                  },
+                  {
+                    "from": "land_units_tables:1f4c1c6a3e4da578b151",
+                    "field": "mount",
+                    "to": "mounts_tables:e93b8692ec9180c83266",
+                    "targetField": "key",
+                    "value": "wh_dlc02_vmp_mnt_blood_knights_steed",
+                    "direction": "forward",
+                    "evidence": "RPFM processed schema is_reference",
+                    "traversal": "from-to"
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "entityKeys": [
+          "wh_main_infantry_standard_large_blood",
+          "wh_dlc02_vmp_cavalry_standard_blood_knight_blood"
+        ]
+      },
+      "sourceTraces": {
+        "man": {
+          "rowId": "battle_entities_tables:c497d3f335c05e37854c",
+          "table": "battle_entities_tables",
+          "rowKey": {
+            "key": "wh_main_infantry_standard_large_blood"
+          },
+          "field": "run_speed",
+          "sourcePack": "db.pack",
+          "path": "db/battle_entities_tables/data__",
+          "schemaVersion": 39,
+          "joins": [
+            {
+              "from": "main_units_tables:d141ed0a651ec8957960",
+              "field": "land_unit",
+              "to": "land_units_tables:1f4c1c6a3e4da578b151",
+              "targetField": "key",
+              "value": "wh3_main_vmp_blood_knights_sword_shield",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            },
+            {
+              "from": "land_units_tables:1f4c1c6a3e4da578b151",
+              "field": "man_entity",
+              "to": "battle_entities_tables:c497d3f335c05e37854c",
+              "targetField": "key",
+              "value": "wh_main_infantry_standard_large_blood",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            }
+          ]
+        },
+        "mount": {
+          "rowId": "battle_entities_tables:92f629b73528b7dc509d",
+          "table": "battle_entities_tables",
+          "rowKey": {
+            "key": "wh_dlc02_vmp_cavalry_standard_blood_knight_blood"
+          },
+          "field": "run_speed",
+          "sourcePack": "db.pack",
+          "path": "db/battle_entities_tables/data__",
+          "schemaVersion": 39,
+          "joins": [
+            {
+              "from": "main_units_tables:d141ed0a651ec8957960",
+              "field": "land_unit",
+              "to": "land_units_tables:1f4c1c6a3e4da578b151",
+              "targetField": "key",
+              "value": "wh3_main_vmp_blood_knights_sword_shield",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            },
+            {
+              "from": "land_units_tables:1f4c1c6a3e4da578b151",
+              "field": "mount",
+              "to": "mounts_tables:e93b8692ec9180c83266",
+              "targetField": "key",
+              "value": "wh_dlc02_vmp_mnt_blood_knights_steed",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            },
+            {
+              "from": "mounts_tables:e93b8692ec9180c83266",
+              "field": "entity",
+              "to": "battle_entities_tables:92f629b73528b7dc509d",
+              "targetField": "key",
+              "value": "wh_dlc02_vmp_cavalry_standard_blood_knight_blood",
+              "direction": "forward",
+              "evidence": "RPFM processed schema is_reference",
+              "traversal": "from-to"
+            }
+          ]
+        }
+      },
+      "movementFlags": {
+        "mounted_draughts": false,
+        "sync_locomotion": false,
+        "engine_type": null,
+        "draught_attachment_point": null,
+        "rider_attachment_point": null
+      },
+      "overrideScope": "NO_ADDITIONAL_BASE_MOVEMENT_SOURCE_IN_REVIEWED_TRACE; conditional ground effects excluded"
+    }
+  ]
+}

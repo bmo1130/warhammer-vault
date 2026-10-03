@@ -15,10 +15,18 @@ const scopes={wh_main_emp_inf_swordsmen:{role:'man',profile:'NONFLYING_SINGLE_MA
   wh_main_brt_cav_mounted_yeomen_0:{role:'mount',profile:'EXACT_MOUNTED_YEOMEN_CHAIN'},
   wh_main_brt_art_field_trebuchet:{role:'engine',profile:'EXACT_FIELD_TREBUCHETS_CHAIN'}};
 
-export function loadCardTraces() {
-  const inventory=buildSpeedResearch();gate(serialize(inventory)===readFileSync(folder+'report.json','utf8'),'original source inventory changed');
+export function loadCardTraces(ids=null) {
+  // A bounded follow-up can materialize named existing traces without rerunning
+  // the single-man, engine, flight or articulation catalog research.
+  const inventory=ids===null?buildSpeedResearch():read(folder+'report.json');
+  if(ids===null)gate(serialize(inventory)===readFileSync(folder+'report.json','utf8'),'original source inventory changed');
+  else {
+    gate(new Set(ids).size===ids.length&&ids.every(id=>inventory.catalog.some(e=>e.identity.id===id)),'missing/duplicate scoped identity');
+    for(const pin of inventory.inputs){const bytes=pin.file==='src/data/units.json'?serialize(speedOverlay.withoutSpeed(read(pin.file))):readFileSync(pin.file);
+      gate(hash(bytes)===pin.sha256,'scoped source pin changed: '+pin.file);}
+  }
   const index=read('tools/wh3-importer/hp-research/report.json'),supplement=read('tools/wh3-importer/hp-research/articulation.source.json'),cache=new Map();
-  return inventory.catalog.map(entry=> {
+  return (ids===null?inventory.catalog:ids.map(id=>inventory.catalog.find(e=>e.identity.id===id))).map(entry=> {
     let bundle=cache.get(entry.source.file);
     if(!bundle){bundle=read(entry.source.file);if(entry.source.pointer.startsWith('/decoded/'))bundle=decodeSource(bundle,index.inputs.find(i=>i.file===entry.source.file).expandedSha256);cache.set(entry.source.file,bundle);}
     let dump=entry.source.pointer.replace(/^\/decoded/,'').slice(1).split('/').reduce((v,k)=>v?.[k],bundle);
@@ -31,7 +39,12 @@ export function loadCardTraces() {
       const def=dump.schemas.find(d=>d.table===r.facts.run_speed.source.table&&d.version===r.facts.run_speed.source.schemaVersion);
       return [role,{table:def.table,version:def.version,runSpeedType:def.fields.find(f=>f.name==='run_speed')?.field_type}];
     }));
-    return {...c,source:entry.source,movementFacts,speedSchemas};
+    const scopedTopology=ids===null?{}:{scopedTopology:{
+      mainKey:s.fact(ctx.root,'unit')?.value??null,landKey:s.fact(ctx.land,'key')?.value??null,
+      mountRecords:dump.rows.filter(r=>r.table==='mounts_tables'&&s.reachable(r)).map(r=>({rowId:r.id,key:r.key,entity:s.fact(r,'entity')??null})),
+      entityKeys:dump.rows.filter(r=>r.table==='battle_entities_tables'&&s.reachable(r)).map(r=>s.fact(r,'key')?.value??null),
+    }};
+    return {...c,source:entry.source,movementFacts,speedSchemas,...scopedTopology};
   });
 }
 
