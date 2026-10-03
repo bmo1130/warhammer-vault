@@ -1,5 +1,9 @@
 # Speed source inspection — 101 Production units
 
+This is the initial static-only inventory. The subsequent user in-game card
+readings and scoped 74/27/0 candidate reassessment are documented separately in
+[CARD_VALIDATION.md](CARD_VALIDATION.md); no Production Speed has been written.
+
 This commit is research only. Production/Sample data, HP inputs/reviews/policies,
 normalization, runtime probe, missile and UI are unchanged. No speed admission or
 projection is implemented. No game, new measurements or external data were used.

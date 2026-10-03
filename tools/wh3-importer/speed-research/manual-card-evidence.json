@@ -1,0 +1,66 @@
+{
+  "format": "manual-in-game-speed-card-validation-v1",
+  "kind": "MANUAL_CARD_VALIDATION",
+  "observationSource": "user manual in-game card reading",
+  "reportedUnitSize": "ULTRA",
+  "reportedCardKind": "NORMAL_CARD",
+  "observedGameVersion": null,
+  "observedAt": null,
+  "contextModifiers": "NOT_REPORTED",
+  "productionEligible": false,
+  "staticAssociation": {
+    "file": "tools/wh3-importer/speed-research/report.json",
+    "sha256": "30da16701a3c82952a9a0efd7a74241fe159161b7966545bce65fb1ec58c5529",
+    "snapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5"
+  },
+  "samples": [
+    {
+      "id": "ca_unit_wh_main_emp_inf_swordsmen",
+      "mainKey": "wh_main_emp_inf_swordsmen",
+      "landKey": "wh_main_emp_inf_swordsmen",
+      "observedCardSpeed": 30,
+      "matchingStaticComponent": {
+        "role": "man",
+        "entityKey": "wh_main_infantry_standard_blood_dismembers",
+        "field": "battle_entities_tables.run_speed",
+        "rawRunSpeed": 3,
+        "transformationCandidate": "rawSpeed * 10",
+        "calculatedCandidate": 30,
+        "comparison": "MATCH",
+        "selectionBasis": "UNIQUE_COMPONENT_MATCH_TO_USER_CARD_READING"
+      }
+    },
+    {
+      "id": "ca_unit_wh_main_brt_cav_mounted_yeomen_0",
+      "mainKey": "wh_main_brt_cav_mounted_yeomen_0",
+      "landKey": "wh_main_brt_cav_mounted_yeomen_0",
+      "observedCardSpeed": 92,
+      "matchingStaticComponent": {
+        "role": "mount",
+        "entityKey": "wh_main_brt_mnt_cavalry_fast_blood",
+        "field": "battle_entities_tables.run_speed",
+        "rawRunSpeed": 9.2,
+        "transformationCandidate": "rawSpeed * 10",
+        "calculatedCandidate": 92,
+        "comparison": "MATCH",
+        "selectionBasis": "UNIQUE_COMPONENT_MATCH_TO_USER_CARD_READING"
+      }
+    },
+    {
+      "id": "ca_unit_wh_main_brt_art_field_trebuchet",
+      "mainKey": "wh_main_brt_art_field_trebuchet",
+      "landKey": "wh_main_brt_art_field_trebuchet",
+      "observedCardSpeed": 20,
+      "matchingStaticComponent": {
+        "role": "engine",
+        "entityKey": "wh_main_brt_art_trebuchet",
+        "field": "battle_entities_tables.run_speed",
+        "rawRunSpeed": 2,
+        "transformationCandidate": "rawSpeed * 10",
+        "calculatedCandidate": 20,
+        "comparison": "MATCH",
+        "selectionBasis": "UNIQUE_COMPONENT_MATCH_TO_USER_CARD_READING"
+      }
+    }
+  ]
+}
