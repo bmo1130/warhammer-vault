@@ -62,11 +62,6 @@
       "file": "inputs/script_log_031026_1251.txt",
       "originalPath": "C:/codex/totalwar/generated/wh3/runtime-evidence/manual-ultra-hp/script_log_031026_1251.txt",
       "originalSha256": "8ef0750d5fe07954ca9e604f5d3e98bc1ad4614b02867d242f9a11677e2c3b8e"
-    },
-    {
-      "file": "inputs/script_log_031026_1359.txt",
-      "originalPath": "C:/codex/totalwar/generated/wh3/runtime-evidence/manual-ultra-hp/script_log_031026_1359.txt",
-      "originalSha256": "e30d36fca619cb18fdd894a718181cda61c945a6b809b583441a712238f9acba"
     }
   ],
   "subjects": [
@@ -159,16 +154,6 @@
       "staticSource": "tools/wh3-importer/promotion/partial-sources.json",
       "approved": true,
       "baseUnitSha256": "9f708974006fd96b23694c09d69a5c5300067a317e2268202cfe63d5fea2f794"
-    },
-    {
-      "id": "ca_unit_wh_main_vmp_veh_black_coach",
-      "name": "Black Coach",
-      "mainKey": "wh_main_vmp_veh_black_coach",
-      "landKey": "wh_main_vmp_veh_black_coach",
-      "slug": "sample-14",
-      "staticSource": "tools/wh3-importer/promotion/partial-sources.json",
-      "approved": true,
-      "baseUnitSha256": "7ad1868b36c1382001fff04c1dee44d2ca34e9e071f95a5efe83992fd8fea354"
     }
   ]
 }

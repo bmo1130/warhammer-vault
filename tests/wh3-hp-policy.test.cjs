@@ -20,9 +20,9 @@ test('ULTRA HP clean checkout source → review → explicit admission → Produ
   assert.deepEqual(overlay.applyProductionHP([...staticUnits]),overlay.applyProductionHP(staticUnits));
   assert.deepEqual(units.filter(u=>u.gameVersion==='sample'),staticUnits.filter(u=>u.gameVersion==='sample'));
   assert.equal(units.filter(u=>u.gameVersion!=='sample').length,101);assert.equal(units.filter(u=>u.gameVersion==='sample').length,5);
-  const changed=units.filter((u,i)=>JSON.stringify(u)!==JSON.stringify(staticUnits[i]));assert.equal(changed.length,9);
+  const changed=units.filter((u,i)=>JSON.stringify(u)!==JSON.stringify(staticUnits[i]));assert.equal(changed.length,10);
   for(const unit of changed){const index=units.indexOf(unit),copy=structuredClone(unit);delete copy.entities.totalHealth;assert.deepEqual(copy,staticUnits[index]);}
-  assert.equal(units.filter(u=>u.gameVersion!=='sample'&&u.entities.totalHealth===undefined).length,92);
+  assert.equal(units.filter(u=>u.gameVersion!=='sample'&&u.entities.totalHealth===undefined).length,91);
   const check=spawnSync(process.execPath,['scripts/promote-ultra-hp.mjs','--check'],{encoding:'utf8'});assert.equal(check.status,0,check.stderr);
 });
 
@@ -64,7 +64,7 @@ test('original ULTRA log hashes and static named-field provenance are preserved;
   assert.equal(report.review.find(r=>r.name==='Dread Saurian').totalHealth,15088);
   const chariot=report.review.find(r=>r.name==='Skeleton Chariots');assert.equal(chariot.totalHealth,7032);assert.equal(chariot.candidates[0].NumEntitiesInitial,12);
   assert.deepEqual(chariot.candidates[0].componentCounts,{ManList:24,MountList:24,EngineList:12,EntityList:12});
-  assert.deepEqual(report.admitted.map(a=>a.kind),Array(9).fill('DIRECT_ULTRA_RUNTIME'));
+  assert.deepEqual(report.admitted.map(a=>a.kind),Array(10).fill('DIRECT_ULTRA_RUNTIME'));
 });
 
 test('non-ULTRA, missing declaration, identity/snapshot drift, missing HP/count and malformed capture fail closed',async()=>{

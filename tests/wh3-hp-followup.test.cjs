@@ -39,10 +39,11 @@ test('only four new HP fields change; existing five, Sample and every non-HP byt
   const historical=replayHP(read(research+'five-unit-manifest.json'));
   assert.deepEqual(review.review.slice(0,5),historical.review);assert.deepEqual(review.admitted.slice(0,5),historical.admitted);
   const units=read('src/data/units.json'),previous=structuredClone(units);
+  delete previous.find(u=>u.id==='ca_unit_wh_main_vmp_veh_black_coach').entities.totalHealth;
   for(const [key,hp] of expected){const unit=previous.find(u=>u.id==='ca_unit_'+key);assert.equal(unit.entities.totalHealth,hp);delete unit.entities.totalHealth;}
   assert.equal(byteHash(Buffer.from(JSON.stringify(previous,null,2)+'\n')),'68661de31d19c1660949fa0196422a4b59cdff26d7fba2f7ec70b84a324a45e9');
   assert.deepEqual(units.filter(u=>u.gameVersion==='sample'),previous.filter(u=>u.gameVersion==='sample'));
-  assert.equal(units.filter(u=>u.entities.totalHealth!==undefined&&u.gameVersion!=='sample').length,9);
+  assert.equal(units.filter(u=>u.entities.totalHealth!==undefined&&u.gameVersion!=='sample').length,10);
   const {checkProtectedInputs}=await import('../tools/wh3-importer/hp-research/research.mjs');checkProtectedInputs();
 });
 
@@ -73,13 +74,13 @@ test('all nine HP/count observations replay against scoped research branches; H1
   assert.equal(result.counts.staticDerivationConfident,0);assert.equal(result.counts.staticDerivationAmbiguous,101);
 });
 
-test('101-source search selects only Black Coach for remaining articulated cardinality split; no admission',async()=>{
+test('101-source search selects only Black Coach for historical articulated cardinality split; forecast does not admit HP',async()=>{
   const {buildFollowup,scopedPrediction}=await import('../tools/wh3-importer/hp-research/followup.mjs');
   const result=buildFollowup();assert.equal(result.nextCandidates.length,1);const c=result.nextCandidates[0];
   assert.equal(c.mainKey,'wh_main_vmp_veh_black_coach');assert.equal(c.landKey,c.mainKey);
   assert.equal(c.predictions.V_N.HealthMax,5980);assert.equal(c.predictions.V_UG.HealthMax,5988);
   for(const p of Object.values(c.predictions))assert.equal(p.NumEntitiesInitial,1);
-  assert.equal(c.productionEligible,false);assert(!review.admitted.some(a=>a.id===c.id));
+  assert.equal(c.productionEligible,false);assert.equal(review.admitted.find(a=>a.id===c.id).kind,'DIRECT_ULTRA_RUNTIME');
   const selection=read(research+'selection.json'),skeleton=selection.catalog.find(c=>c.name==='Skeleton Chariots');
   assert.equal(scopedPrediction(skeleton,'N').HealthMax,7032);assert.equal(scopedPrediction(skeleton,'(U*G)').HealthMax,7032);
   assert.equal(scopedPrediction({...skeleton,missing:['articulation.exact_entity_hp']}),null);

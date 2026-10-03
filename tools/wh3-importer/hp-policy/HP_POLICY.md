@@ -140,3 +140,7 @@ still verify their original static outputs and preserve the exact HP overlay.
 ## 2026-10-03 artillery / vehicle direct runtime 편입
 
 기존 policy를 변경하지 않고 원본 ULTRA 로그 4종을 추가했다. Field Trebuchets 4512, Screaming Skull Catapults 4356, Plagueclaw Catapults 5028, Doom-Flayers 6128이 DIRECT_ULTRA_RUNTIME으로 admission되어 Production HP는 9종/공석 92종이다. 기존 5종과 MEDIUM evidence는 보존한다. Static derived admission은 비활성 상태다. 상세 provenance·가설 재평가·재현법은 [후속 조사](../hp-research/ARTILLERY_VEHICLE_FOLLOWUP.md)를 참조한다.
+
+## 2026-10-03 Black Coach direct runtime 편입
+
+원본 ULTRA 로그 script_log_031026_1359.txt의 같은 session 내 snapshot 2개가 5980/Initial 1로 일치하여 기존 DIRECT_ULTRA_RUNTIME policy로 admission했다. Production HP는 10종/공석 91종이며 기존 9종·MEDIUM evidence·비HP 값·정책을 보존한다. Static-derived admission은 구현하지 않았다. 연구의 profile 한정 confidence와 상세 대조는 [재평가 보고서](../hp-research/BLACK_COACH_REASSESSMENT.md)를 참조한다.

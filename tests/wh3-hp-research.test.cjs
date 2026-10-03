@@ -101,7 +101,7 @@ test('101 exact Production chains have research classifications, no unmeasured e
     shapes:{MAN_ONLY:71,MOUNTED:21,ENGINE:7,ARTICULATED:2}});
   const units=read('src/data/units.json').filter(u=>u.gameVersion!=='sample');
   assert.deepEqual(report.catalog.map(c=>c.id),units.map(u=>u.id));
-  assert.equal(units.filter(u=>u.entities.totalHealth!==undefined).length,9);
+  assert.equal(units.filter(u=>u.entities.totalHealth!==undefined).length,10);
   for(const c of report.catalog){assert.equal(c.productionEligible,false);assert(!Object.hasOwn(c,'predictedHealth'));assert(c.source.pointer&&c.mainKey&&c.landKey);}
 });
 

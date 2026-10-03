@@ -22,7 +22,7 @@
     {
       "file": "src/data/unitHpAdmissions.json",
       "hashMode": "BYTES",
-      "sha256": "b7430b1b0845e4a438c8b389b081581021d5dc8cde94a3beeb56d1ea12700ae6"
+      "sha256": "0860eb8149ce28d07bb9779790bbf5219e88466fe18fb0ca269c707d7ed88f38"
     },
     {
       "file": "src/data/unitSharedIdentities.json",
@@ -32,7 +32,7 @@
     {
       "file": "src/data/units.json",
       "hashMode": "BYTES",
-      "sha256": "a61b96fbfbf204b43f3d8583c3c771adfbf0b2b948919998fd95c115b65c0057"
+      "sha256": "3b3b2d84c55db5ff48be01a20fcf269eef0384e6a9eeb83ca571b7ed37b3818a"
     },
     {
       "file": "tools/wh3-importer/hp-policy/inputs/dread-saurian-ultra.log",
@@ -62,12 +62,12 @@
     {
       "file": "tools/wh3-importer/hp-policy/manifest.json",
       "hashMode": "BYTES",
-      "sha256": "c8b11f5f8cde49ff643c4046b223802f5ad075170d86d81d8728eeff598c6474"
+      "sha256": "2cd6086727dbc289e6db776da58498129ea7e2637ffccb8872ddf3a1a46a980d"
     },
     {
       "file": "tools/wh3-importer/hp-policy/overlay.cjs",
       "hashMode": "LF_TEXT",
-      "sha256": "42a622c77cd9eec4311eb75cfb69b69935dd385369fe75332daf2852f3504ad5"
+      "sha256": "16da6dcafeb56b95ad09252a59f6a81b64072335b2274f3f33bb11942c5e9560"
     },
     {
       "file": "tools/wh3-importer/hp-policy/policy.mjs",
@@ -77,7 +77,7 @@
     {
       "file": "tools/wh3-importer/hp-policy/review.json",
       "hashMode": "BYTES",
-      "sha256": "fcd600c1c6698ee324a6a142731ae2ee93813b08701b0993bcbb6921ca8ba5e9"
+      "sha256": "4b094f4fb9ee1898674c68b686eafec22c15545808aa128283d5c62942b8f833"
     },
     {
       "file": "tools/wh3-importer/hp-policy/semantic-fixtures.json",
@@ -165,7 +165,7 @@
       "sha256": "324225c5d1d231cce1c0c4300ff517fb03f805d1f6e494efab5e73f2dc0c65d3"
     }
   ],
-  "currentHpPresent": 9,
-  "guardUpdatedFromCommit": "6428d93e3d28622b64d8e6547ff5862b1d9e9d56",
-  "guardNote": "Authorized four DIRECT_ULTRA_RUNTIME HP projections only; historical five-case cohort remains pinned by five-unit-manifest.json."
+  "currentHpPresent": 10,
+  "guardUpdatedFromCommit": "35fb5f3174328dae303b574875f385ac844640ad",
+  "guardNote": "Authorized Black Coach DIRECT_ULTRA_RUNTIME HP projection only; historical five- and nine-case research cohorts remain pinned."
 }

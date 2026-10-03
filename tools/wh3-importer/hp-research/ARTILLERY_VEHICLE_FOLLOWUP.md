@@ -1,5 +1,7 @@
 # ULTRA HP 후속 조사 — artillery / vehicle, 2026-10-03
 
+> 이 문서는 9종 기준의 과거 연구/Black Coach 측정 전 예측이다. 현재 10종 재대조와 subset 판정은 [BLACK_COACH_REASSESSMENT.md](./BLACK_COACH_REASSESSMENT.md)를 참조한다.
+
 새 raw capture 4종 모두 기존 `DIRECT_ULTRA_RUNTIME` admission을 통과했다. Production 101 / Sample 5를 유지하며 HP 확정은 **5 → 9**, 공석은 **96 → 92**다. 기존 5종 HP, 나머지 Production 값·순서, MEDIUM evidence와 `policy.mjs`는 변경하지 않았다. Static-derived admission은 구현하지 않았다.
 
 기준 commit: `6428d93e3d28622b64d8e6547ff5862b1d9e9d56`. 동일 game `9.0.2.0`, staticSnapshotId `c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5`의 exact static/runtime 자료만 사용한다. 모든 식은 **수치적으로 양립하는 연구 후보**이며 게임의 HP ownership 규칙으로 확정된 것이 아니다.

@@ -1,7 +1,7 @@
 {
   "format": "warhammer-vault-ultra-hp-review-v1",
   "expectedUnitSize": "ULTRA",
-  "manifestSha256": "c8b11f5f8cde49ff643c4046b223802f5ad075170d86d81d8728eeff598c6474",
+  "manifestSha256": "2cd6086727dbc289e6db776da58498129ea7e2637ffccb8872ddf3a1a46a980d",
   "baselineUnitsSha256": "c6f5d9aa1eb13e8b011d618781691f2627904b5da73657bd50869f6862f3e244",
   "review": [
     {
@@ -2621,6 +2621,372 @@
       ],
       "held": [],
       "totalHealth": 6128
+    },
+    {
+      "id": "ca_unit_wh_main_vmp_veh_black_coach",
+      "name": "Black Coach",
+      "approved": true,
+      "staticSource": "tools/wh3-importer/promotion/partial-sources.json",
+      "staticPointer": "sample-14",
+      "staticChain": {
+        "sourceMainKey": "wh_main_vmp_veh_black_coach",
+        "sourceLandKey": "wh_main_vmp_veh_black_coach",
+        "identityFacts": {
+          "main": {
+            "value": "wh_main_vmp_veh_black_coach",
+            "source": {
+              "rowId": "main_units_tables:c79453717a40d3a63d99",
+              "table": "main_units_tables",
+              "rowKey": {
+                "unit": "wh_main_vmp_veh_black_coach"
+              },
+              "field": "unit",
+              "sourcePack": "db.pack",
+              "sourcePackPath": "db.pack",
+              "path": "db/main_units_tables/data__",
+              "schemaVersion": 7,
+              "joins": []
+            }
+          },
+          "land": {
+            "value": "wh_main_vmp_veh_black_coach",
+            "source": {
+              "rowId": "land_units_tables:c6cbf473e00f6659934e",
+              "table": "land_units_tables",
+              "rowKey": {
+                "key": "wh_main_vmp_veh_black_coach"
+              },
+              "field": "key",
+              "sourcePack": "db.pack",
+              "sourcePackPath": "db.pack",
+              "path": "db/land_units_tables/data__",
+              "schemaVersion": 54,
+              "joins": [
+                {
+                  "from": "main_units_tables:c79453717a40d3a63d99",
+                  "field": "land_unit",
+                  "to": "land_units_tables:c6cbf473e00f6659934e",
+                  "targetField": "key",
+                  "value": "wh_main_vmp_veh_black_coach",
+                  "direction": "forward",
+                  "evidence": "RPFM processed schema is_reference",
+                  "traversal": "from-to"
+                }
+              ]
+            }
+          }
+        },
+        "snapshot": {
+          "gameVersion": "9.0.2.0",
+          "schemaSha256": "5d628a0167b34a096752c5c21acd16493834a987c80dc9f02364617f796ba2a4",
+          "packs": [
+            {
+              "name": "db.pack",
+              "sha256": "d0fafac984b3985ec47cec0ea957591424f1077e52ef61941dbf2dc46e6cf723"
+            },
+            {
+              "name": "local_en.pack",
+              "sha256": "f979527a5aaecf293a4e66afc25ed6c760e4107ef4920b73bd56e10e2652fd6a"
+            }
+          ]
+        },
+        "staticSnapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+        "inputs": {
+          "main.num_men": {
+            "value": 1,
+            "source": {
+              "rowId": "main_units_tables:c79453717a40d3a63d99",
+              "table": "main_units_tables",
+              "rowKey": {
+                "unit": "wh_main_vmp_veh_black_coach"
+              },
+              "field": "num_men",
+              "sourcePack": "db.pack",
+              "sourcePackPath": "db.pack",
+              "path": "db/main_units_tables/data__",
+              "schemaVersion": 7,
+              "joins": []
+            }
+          },
+          "land.num_mounts": {
+            "value": 2,
+            "source": {
+              "rowId": "land_units_tables:c6cbf473e00f6659934e",
+              "table": "land_units_tables",
+              "rowKey": {
+                "key": "wh_main_vmp_veh_black_coach"
+              },
+              "field": "num_mounts",
+              "sourcePack": "db.pack",
+              "sourcePackPath": "db.pack",
+              "path": "db/land_units_tables/data__",
+              "schemaVersion": 54,
+              "joins": [
+                {
+                  "from": "main_units_tables:c79453717a40d3a63d99",
+                  "field": "land_unit",
+                  "to": "land_units_tables:c6cbf473e00f6659934e",
+                  "targetField": "key",
+                  "value": "wh_main_vmp_veh_black_coach",
+                  "direction": "forward",
+                  "evidence": "RPFM processed schema is_reference",
+                  "traversal": "from-to"
+                }
+              ]
+            }
+          },
+          "land.num_engines": {
+            "value": 1,
+            "source": {
+              "rowId": "land_units_tables:c6cbf473e00f6659934e",
+              "table": "land_units_tables",
+              "rowKey": {
+                "key": "wh_main_vmp_veh_black_coach"
+              },
+              "field": "num_engines",
+              "sourcePack": "db.pack",
+              "sourcePackPath": "db.pack",
+              "path": "db/land_units_tables/data__",
+              "schemaVersion": 54,
+              "joins": [
+                {
+                  "from": "main_units_tables:c79453717a40d3a63d99",
+                  "field": "land_unit",
+                  "to": "land_units_tables:c6cbf473e00f6659934e",
+                  "targetField": "key",
+                  "value": "wh_main_vmp_veh_black_coach",
+                  "direction": "forward",
+                  "evidence": "RPFM processed schema is_reference",
+                  "traversal": "from-to"
+                }
+              ]
+            }
+          },
+          "land.bonus_hit_points": {
+            "value": 5940,
+            "source": {
+              "rowId": "land_units_tables:c6cbf473e00f6659934e",
+              "table": "land_units_tables",
+              "rowKey": {
+                "key": "wh_main_vmp_veh_black_coach"
+              },
+              "field": "bonus_hit_points",
+              "sourcePack": "db.pack",
+              "sourcePackPath": "db.pack",
+              "path": "db/land_units_tables/data__",
+              "schemaVersion": 54,
+              "joins": [
+                {
+                  "from": "main_units_tables:c79453717a40d3a63d99",
+                  "field": "land_unit",
+                  "to": "land_units_tables:c6cbf473e00f6659934e",
+                  "targetField": "key",
+                  "value": "wh_main_vmp_veh_black_coach",
+                  "direction": "forward",
+                  "evidence": "RPFM processed schema is_reference",
+                  "traversal": "from-to"
+                }
+              ]
+            }
+          },
+          "man.hit_points": {
+            "value": 8,
+            "source": {
+              "rowId": "battle_entities_tables:a55b0426b855f8b82693",
+              "table": "battle_entities_tables",
+              "rowKey": {
+                "key": "wh_main_infantry_standard_blood_dismembers"
+              },
+              "field": "hit_points",
+              "sourcePack": "db.pack",
+              "sourcePackPath": "db.pack",
+              "path": "db/battle_entities_tables/data__",
+              "schemaVersion": 39,
+              "joins": [
+                {
+                  "from": "main_units_tables:c79453717a40d3a63d99",
+                  "field": "land_unit",
+                  "to": "land_units_tables:c6cbf473e00f6659934e",
+                  "targetField": "key",
+                  "value": "wh_main_vmp_veh_black_coach",
+                  "direction": "forward",
+                  "evidence": "RPFM processed schema is_reference",
+                  "traversal": "from-to"
+                },
+                {
+                  "from": "land_units_tables:c6cbf473e00f6659934e",
+                  "field": "man_entity",
+                  "to": "battle_entities_tables:a55b0426b855f8b82693",
+                  "targetField": "key",
+                  "value": "wh_main_infantry_standard_blood_dismembers",
+                  "direction": "forward",
+                  "evidence": "RPFM processed schema is_reference",
+                  "traversal": "from-to"
+                }
+              ]
+            }
+          },
+          "mount.hit_points": {
+            "value": 8,
+            "source": {
+              "rowId": "battle_entities_tables:bb025a2759dc5ea047b6",
+              "table": "battle_entities_tables",
+              "rowKey": {
+                "key": "wh_main_vehicle_vmp_black_coach_chariot_nightmare_draught"
+              },
+              "field": "hit_points",
+              "sourcePack": "db.pack",
+              "sourcePackPath": "db.pack",
+              "path": "db/battle_entities_tables/data__",
+              "schemaVersion": 39,
+              "joins": [
+                {
+                  "from": "main_units_tables:c79453717a40d3a63d99",
+                  "field": "land_unit",
+                  "to": "land_units_tables:c6cbf473e00f6659934e",
+                  "targetField": "key",
+                  "value": "wh_main_vmp_veh_black_coach",
+                  "direction": "forward",
+                  "evidence": "RPFM processed schema is_reference",
+                  "traversal": "from-to"
+                },
+                {
+                  "from": "land_units_tables:c6cbf473e00f6659934e",
+                  "field": "mount",
+                  "to": "mounts_tables:8d0bded181021d27ebe4",
+                  "targetField": "key",
+                  "value": "wh_main_vmp_mnt_coach_nightmare",
+                  "direction": "forward",
+                  "evidence": "RPFM processed schema is_reference",
+                  "traversal": "from-to"
+                },
+                {
+                  "from": "mounts_tables:8d0bded181021d27ebe4",
+                  "field": "entity",
+                  "to": "battle_entities_tables:bb025a2759dc5ea047b6",
+                  "targetField": "key",
+                  "value": "wh_main_vehicle_vmp_black_coach_chariot_nightmare_draught",
+                  "direction": "forward",
+                  "evidence": "RPFM processed schema is_reference",
+                  "traversal": "from-to"
+                }
+              ]
+            }
+          },
+          "engine.hit_points": {
+            "value": 8,
+            "source": {
+              "rowId": "battle_entities_tables:ac563cae4ae9d5fea02a",
+              "table": "battle_entities_tables",
+              "rowKey": {
+                "key": "wh_main_vehicle_vmp_black_coach_chariot"
+              },
+              "field": "hit_points",
+              "sourcePack": "db.pack",
+              "sourcePackPath": "db.pack",
+              "path": "db/battle_entities_tables/data__",
+              "schemaVersion": 39,
+              "joins": [
+                {
+                  "from": "main_units_tables:c79453717a40d3a63d99",
+                  "field": "land_unit",
+                  "to": "land_units_tables:c6cbf473e00f6659934e",
+                  "targetField": "key",
+                  "value": "wh_main_vmp_veh_black_coach",
+                  "direction": "forward",
+                  "evidence": "RPFM processed schema is_reference",
+                  "traversal": "from-to"
+                },
+                {
+                  "from": "land_units_tables:c6cbf473e00f6659934e",
+                  "field": "engine",
+                  "to": "battlefield_engines_tables:9204985e1cc48954d1a4",
+                  "targetField": "key",
+                  "value": "wh_main_vmp_veh_black_coach",
+                  "direction": "forward",
+                  "evidence": "RPFM processed schema is_reference",
+                  "traversal": "from-to"
+                },
+                {
+                  "from": "battlefield_engines_tables:9204985e1cc48954d1a4",
+                  "field": "battle_entity",
+                  "to": "battle_entities_tables:ac563cae4ae9d5fea02a",
+                  "targetField": "key",
+                  "value": "wh_main_vehicle_vmp_black_coach_chariot",
+                  "direction": "forward",
+                  "evidence": "RPFM processed schema is_reference",
+                  "traversal": "from-to"
+                }
+              ]
+            }
+          }
+        },
+        "derivation": {
+          "status": "WITHHELD",
+          "kind": "STATIC_DERIVATION",
+          "reason": "COMBAT_ENTITY_HP_AND_ULTRA_COUNT_SEMANTICS_UNPROVEN",
+          "formula": null
+        }
+      },
+      "status": "REVIEWED_DIRECT_ULTRA_RUNTIME",
+      "candidates": [
+        {
+          "kind": "DIRECT_ULTRA_RUNTIME",
+          "sourceMainKey": "wh_main_vmp_veh_black_coach",
+          "sourceLandKey": "wh_main_vmp_veh_black_coach",
+          "unitSize": "ULTRA",
+          "unitSizeSource": "DECLARED_SETUP",
+          "HealthMax": 5980,
+          "NumEntitiesInitial": 1,
+          "observedHealthPerCombatEntity": 5980,
+          "reference": "inputs/script_log_031026_1359.txt:88",
+          "runId": "[\"287f9a38-3afc-4c82-9d2e-3347b46075b0:table: 00000003C3208E18:<17.4s>:1791003520:4551.4243164063\",\"snapshot-1\"]",
+          "metadata": {
+            "gameVersion": "9.0.2.0",
+            "gameVersionSource": "INSTALLER_EXE_VERSION",
+            "scenarioId": "CCO_P0_CUSTOM_BATTLE",
+            "sessionId": "287f9a38-3afc-4c82-9d2e-3347b46075b0",
+            "staticSnapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+            "unitSize": "ULTRA",
+            "unitSizeSource": "DECLARED_SETUP"
+          },
+          "componentCounts": {
+            "ManList": 1,
+            "MountList": 2,
+            "EngineList": 1,
+            "EntityList": 1
+          }
+        },
+        {
+          "kind": "DIRECT_ULTRA_RUNTIME",
+          "sourceMainKey": "wh_main_vmp_veh_black_coach",
+          "sourceLandKey": "wh_main_vmp_veh_black_coach",
+          "unitSize": "ULTRA",
+          "unitSizeSource": "DECLARED_SETUP",
+          "HealthMax": 5980,
+          "NumEntitiesInitial": 1,
+          "observedHealthPerCombatEntity": 5980,
+          "reference": "inputs/script_log_031026_1359.txt:102",
+          "runId": "[\"287f9a38-3afc-4c82-9d2e-3347b46075b0:table: 00000003C3208E18:<17.4s>:1791003520:4551.4243164063\",\"snapshot-2\"]",
+          "metadata": {
+            "gameVersion": "9.0.2.0",
+            "gameVersionSource": "INSTALLER_EXE_VERSION",
+            "scenarioId": "CCO_P0_CUSTOM_BATTLE",
+            "sessionId": "287f9a38-3afc-4c82-9d2e-3347b46075b0",
+            "staticSnapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+            "unitSize": "ULTRA",
+            "unitSizeSource": "DECLARED_SETUP"
+          },
+          "componentCounts": {
+            "ManList": 1,
+            "MountList": 2,
+            "EngineList": 1,
+            "EntityList": 1
+          }
+        }
+      ],
+      "held": [],
+      "totalHealth": 5980
     }
   ],
   "admitted": [
@@ -2749,6 +3115,21 @@
       "staticSnapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
       "references": [
         "inputs/script_log_031026_1251.txt:83"
+      ]
+    },
+    {
+      "id": "ca_unit_wh_main_vmp_veh_black_coach",
+      "name": "Black Coach",
+      "kind": "DIRECT_ULTRA_RUNTIME",
+      "field": "entities.totalHealth",
+      "value": 5980,
+      "baseUnitSha256": "7ad1868b36c1382001fff04c1dee44d2ca34e9e071f95a5efe83992fd8fea354",
+      "sourceMainKey": "wh_main_vmp_veh_black_coach",
+      "sourceLandKey": "wh_main_vmp_veh_black_coach",
+      "staticSnapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+      "references": [
+        "inputs/script_log_031026_1359.txt:88",
+        "inputs/script_log_031026_1359.txt:102"
       ]
     }
   ]

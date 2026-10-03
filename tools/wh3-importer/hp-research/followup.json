@@ -2,6 +2,10 @@
   "purpose": "RESEARCH_ONLY",
   "productionEligible": false,
   "inputs": {
+    "runtimeManifest": {
+      "file": "tools/wh3-importer/hp-research/nine-unit-manifest.json",
+      "sha256": "c8b11f5f8cde49ff643c4046b223802f5ad075170d86d81d8728eeff598c6474"
+    },
     "runtimeReviewSha256": "fcd600c1c6698ee324a6a142731ae2ee93813b08701b0993bcbb6921ca8ba5e9",
     "historicalResearchSha256": "cde3a364aee6b4ca0bcad74cfb83ff4c9509f06e98a181614abd111a7a8cbfa3",
     "historicalSelectionSha256": "e02245a4511c6ea05ad4b9373ad46f89b79948e888c46d01bd96c7209ced0ac2"

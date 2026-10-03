@@ -833,7 +833,9 @@
       "category": "War Machine",
       "tier": 3
     },
-    "entities": {},
+    "entities": {
+      "totalHealth": 5980
+    },
     "movement": {
       "canSkirmish": false
     },

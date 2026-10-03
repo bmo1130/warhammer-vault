@@ -1,7 +1,7 @@
 {
   "format": "reviewed-unit-ultra-hp-admissions-v1",
   "reviewReference": "tools/wh3-importer/hp-policy/review.json",
-  "reviewSha256": "fcd600c1c6698ee324a6a142731ae2ee93813b08701b0993bcbb6921ca8ba5e9",
+  "reviewSha256": "4b094f4fb9ee1898674c68b686eafec22c15545808aa128283d5c62942b8f833",
   "unitSize": "ULTRA",
   "unitSizeSource": "DECLARED_SETUP",
   "admissions": [
@@ -85,6 +85,15 @@
       "kind": "DIRECT_ULTRA_RUNTIME",
       "field": "entities.totalHealth",
       "value": 6128
+    },
+    {
+      "id": "ca_unit_wh_main_vmp_veh_black_coach",
+      "mainKey": "wh_main_vmp_veh_black_coach",
+      "landKey": "wh_main_vmp_veh_black_coach",
+      "staticSnapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+      "kind": "DIRECT_ULTRA_RUNTIME",
+      "field": "entities.totalHealth",
+      "value": 5980
     }
   ]
 }

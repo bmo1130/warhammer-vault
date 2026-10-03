@@ -38,8 +38,11 @@ export function scopedPrediction(c,articulatedManCount='N') {
 export function buildFollowup() {
   const historical=buildResearch(),selection=buildSelection();
   requireEvidence(serialize(selection)===readFileSync(folder+'selection.json','utf8'),'historical predictions changed');
-  const manifest=read('tools/wh3-importer/hp-policy/manifest.json'),runtime=replayHP(manifest);
-  requireEvidence(isDeepStrictEqual(runtime,read('tools/wh3-importer/hp-policy/review.json')),'direct runtime replay changed');
+  const manifest=read(folder+'nine-unit-manifest.json'),runtime=replayHP(manifest);
+  const current=read('tools/wh3-importer/hp-policy/review.json'),ids=new Set(manifest.subjects.map(s=>s.id));
+  const historicalRuntime={...current,manifestSha256:runtime.manifestSha256,
+    review:current.review.filter(r=>ids.has(r.id)),admitted:current.admitted.filter(r=>ids.has(r.id))};
+  requireEvidence(isDeepStrictEqual(runtime,historicalRuntime),'original nine direct runtime records changed');
   const cache=new Map();
   const staticClues=c=> {
     let bundle=cache.get(c.source.file);
@@ -85,7 +88,8 @@ export function buildFollowup() {
         predictions:{V_N:A,V_UG:B},productionEligible:false}]:[];
   });
   return {purpose:'RESEARCH_ONLY',productionEligible:false,
-    inputs:{runtimeReviewSha256:byteHash(readFileSync('tools/wh3-importer/hp-policy/review.json')),
+    inputs:{runtimeManifest:{file:folder+'nine-unit-manifest.json',sha256:byteHash(readFileSync(folder+'nine-unit-manifest.json'))},
+      runtimeReviewSha256:byteHash(Buffer.from(serialize(runtime))),
       historicalResearchSha256:byteHash(readFileSync(folder+'report.json')),historicalSelectionSha256:byteHash(readFileSync(folder+'selection.json'))},
     rawInputs:manifest.inputs.map(i=>({file:i.file,originalPath:i.originalPath,originalSha256:i.originalSha256})),
     counts:{production:selection.catalog.length,directRuntimeHP:runtime.admitted.length,missingHP:selection.catalog.length-runtime.admitted.length,
