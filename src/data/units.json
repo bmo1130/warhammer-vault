@@ -125,7 +125,8 @@
       "totalHealth": 9856
     },
     "movement": {
-      "canSkirmish": false
+      "canSkirmish": false,
+      "speed": 64
     },
     "defense": {
       "armor": 60,
@@ -187,7 +188,8 @@
       "totalHealth": 8280
     },
     "movement": {
-      "canSkirmish": false
+      "canSkirmish": false,
+      "speed": 30
     },
     "defense": {
       "armor": 30,
@@ -246,7 +248,8 @@
       "totalHealth": 8280
     },
     "movement": {
-      "canSkirmish": false
+      "canSkirmish": false,
+      "speed": 30
     },
     "defense": {
       "armor": 30,
@@ -363,7 +366,8 @@
       "mass": 100
     },
     "movement": {
-      "canSkirmish": false
+      "canSkirmish": false,
+      "speed": 27
     },
     "defense": {
       "armor": 90,
@@ -495,7 +499,8 @@
       "totalHealth": 5520
     },
     "movement": {
-      "canSkirmish": false
+      "canSkirmish": false,
+      "speed": 92
     },
     "defense": {
       "armor": 30,
@@ -654,7 +659,8 @@
       "mass": 150
     },
     "movement": {
-      "canSkirmish": true
+      "canSkirmish": true,
+      "speed": 38
     },
     "defense": {
       "armor": 70,
@@ -732,7 +738,8 @@
       "mass": 90
     },
     "movement": {
-      "canSkirmish": true
+      "canSkirmish": true,
+      "speed": 36
     },
     "defense": {
       "armor": 25,
@@ -1004,7 +1011,8 @@
       "mass": 100
     },
     "movement": {
-      "canSkirmish": false
+      "canSkirmish": false,
+      "speed": 30
     },
     "defense": {
       "armor": 30,
@@ -1176,7 +1184,8 @@
       "mass": 120
     },
     "movement": {
-      "canSkirmish": false
+      "canSkirmish": false,
+      "speed": 28
     },
     "defense": {
       "armor": 70,
@@ -1231,7 +1240,8 @@
       "mass": 100
     },
     "movement": {
-      "canSkirmish": false
+      "canSkirmish": false,
+      "speed": 42
     },
     "defense": {
       "armor": 25,
@@ -1289,7 +1299,8 @@
       "mass": 100
     },
     "movement": {
-      "canSkirmish": false
+      "canSkirmish": false,
+      "speed": 27
     },
     "defense": {
       "armor": 90,
@@ -1452,7 +1463,8 @@
       "mass": 190
     },
     "movement": {
-      "canSkirmish": false
+      "canSkirmish": false,
+      "speed": 31
     },
     "defense": {
       "armor": 60,
@@ -1510,7 +1522,8 @@
       "mass": 160
     },
     "movement": {
-      "canSkirmish": false
+      "canSkirmish": false,
+      "speed": 36
     },
     "defense": {
       "armor": 90,
@@ -1565,7 +1578,8 @@
       "mass": 160
     },
     "movement": {
-      "canSkirmish": false
+      "canSkirmish": false,
+      "speed": 36
     },
     "defense": {
       "armor": 90,
@@ -1620,7 +1634,8 @@
       "mass": 160
     },
     "movement": {
-      "canSkirmish": false
+      "canSkirmish": false,
+      "speed": 28
     },
     "defense": {
       "armor": 120,
@@ -1678,7 +1693,8 @@
       "mass": 160
     },
     "movement": {
-      "canSkirmish": false
+      "canSkirmish": false,
+      "speed": 28
     },
     "defense": {
       "armor": 120,
@@ -1791,7 +1807,8 @@
       "mass": 100
     },
     "movement": {
-      "canSkirmish": false
+      "canSkirmish": false,
+      "speed": 33
     },
     "defense": {
       "armor": 15,
@@ -1846,7 +1863,8 @@
       "mass": 100
     },
     "movement": {
-      "canSkirmish": false
+      "canSkirmish": false,
+      "speed": 30
     },
     "defense": {
       "armor": 30,
@@ -1901,7 +1919,8 @@
       "mass": 100
     },
     "movement": {
-      "canSkirmish": false
+      "canSkirmish": false,
+      "speed": 30
     },
     "defense": {
       "armor": 30,
@@ -1956,7 +1975,8 @@
       "mass": 100
     },
     "movement": {
-      "canSkirmish": false
+      "canSkirmish": false,
+      "speed": 30
     },
     "defense": {
       "armor": 30,
@@ -2011,7 +2031,8 @@
       "mass": 100
     },
     "movement": {
-      "canSkirmish": false
+      "canSkirmish": false,
+      "speed": 30
     },
     "defense": {
       "armor": 30,
@@ -2067,7 +2088,8 @@
       "totalHealth": 8280
     },
     "movement": {
-      "canSkirmish": false
+      "canSkirmish": false,
+      "speed": 30
     },
     "defense": {
       "armor": 30,
@@ -2122,7 +2144,8 @@
       "mass": 90
     },
     "movement": {
-      "canSkirmish": true
+      "canSkirmish": true,
+      "speed": 33
     },
     "defense": {
       "armor": 15,
@@ -2197,7 +2220,8 @@
       "mass": 90
     },
     "movement": {
-      "canSkirmish": true
+      "canSkirmish": true,
+      "speed": 33
     },
     "defense": {
       "armor": 15,
@@ -2272,7 +2296,8 @@
       "mass": 90
     },
     "movement": {
-      "canSkirmish": true
+      "canSkirmish": true,
+      "speed": 33
     },
     "defense": {
       "armor": 15,
@@ -2469,7 +2494,8 @@
     },
     "entities": {},
     "movement": {
-      "canSkirmish": true
+      "canSkirmish": true,
+      "speed": 92
     },
     "defense": {
       "armor": 30,
@@ -2602,7 +2628,8 @@
     },
     "movement": {
       "canSkirmish": false,
-      "canRun": false
+      "canRun": false,
+      "speed": 20
     },
     "defense": {
       "armor": 15,
@@ -2682,7 +2709,8 @@
     },
     "movement": {
       "canSkirmish": false,
-      "canRun": false
+      "canRun": false,
+      "speed": 20
     },
     "defense": {
       "armor": 15,
@@ -2762,7 +2790,8 @@
       "mass": 100
     },
     "movement": {
-      "canSkirmish": false
+      "canSkirmish": false,
+      "speed": 36
     },
     "defense": {
       "armor": 0,
@@ -2817,7 +2846,8 @@
       "mass": 90
     },
     "movement": {
-      "canSkirmish": true
+      "canSkirmish": true,
+      "speed": 33
     },
     "defense": {
       "armor": 20,
@@ -2966,7 +2996,8 @@
       "mass": 90
     },
     "movement": {
-      "canSkirmish": true
+      "canSkirmish": true,
+      "speed": 33
     },
     "defense": {
       "armor": 20,
@@ -3021,7 +3052,8 @@
       "mass": 100
     },
     "movement": {
-      "canSkirmish": true
+      "canSkirmish": true,
+      "speed": 33
     },
     "defense": {
       "armor": 60,
@@ -3079,7 +3111,8 @@
       "mass": 140
     },
     "movement": {
-      "canSkirmish": false
+      "canSkirmish": false,
+      "speed": 28
     },
     "defense": {
       "armor": 90,
@@ -3134,7 +3167,8 @@
       "mass": 100
     },
     "movement": {
-      "canSkirmish": false
+      "canSkirmish": false,
+      "speed": 36
     },
     "defense": {
       "armor": 30,
@@ -3192,7 +3226,8 @@
       "mass": 100
     },
     "movement": {
-      "canSkirmish": false
+      "canSkirmish": false,
+      "speed": 36
     },
     "defense": {
       "armor": 30,
@@ -3305,7 +3340,8 @@
       "mass": 100
     },
     "movement": {
-      "canSkirmish": false
+      "canSkirmish": false,
+      "speed": 42
     },
     "defense": {
       "armor": 25,
@@ -3360,7 +3396,8 @@
       "mass": 100
     },
     "movement": {
-      "canSkirmish": false
+      "canSkirmish": false,
+      "speed": 42
     },
     "defense": {
       "armor": 25,
@@ -3415,7 +3452,8 @@
       "mass": 120
     },
     "movement": {
-      "canSkirmish": false
+      "canSkirmish": false,
+      "speed": 42
     },
     "defense": {
       "armor": 10,
@@ -3476,7 +3514,8 @@
       "mass": 90
     },
     "movement": {
-      "canSkirmish": false
+      "canSkirmish": false,
+      "speed": 54
     },
     "defense": {
       "armor": 20,
@@ -3531,7 +3570,8 @@
       "mass": 600
     },
     "movement": {
-      "canSkirmish": false
+      "canSkirmish": false,
+      "speed": 38
     },
     "defense": {
       "armor": 70,
@@ -3590,7 +3630,8 @@
       "mass": 90
     },
     "movement": {
-      "canSkirmish": true
+      "canSkirmish": true,
+      "speed": 54
     },
     "defense": {
       "armor": 20,
@@ -3645,7 +3686,8 @@
       "mass": 90
     },
     "movement": {
-      "canSkirmish": true
+      "canSkirmish": true,
+      "speed": 54
     },
     "defense": {
       "armor": 20,
@@ -3700,7 +3742,8 @@
       "mass": 90
     },
     "movement": {
-      "canSkirmish": true
+      "canSkirmish": true,
+      "speed": 54
     },
     "defense": {
       "armor": 10,
@@ -3755,7 +3798,8 @@
       "mass": 90
     },
     "movement": {
-      "canSkirmish": true
+      "canSkirmish": true,
+      "speed": 54
     },
     "defense": {
       "armor": 10,
@@ -3810,7 +3854,8 @@
       "mass": 90
     },
     "movement": {
-      "canSkirmish": true
+      "canSkirmish": true,
+      "speed": 54
     },
     "defense": {
       "armor": 20,
@@ -3865,7 +3910,8 @@
       "mass": 90
     },
     "movement": {
-      "canSkirmish": true
+      "canSkirmish": true,
+      "speed": 54
     },
     "defense": {
       "armor": 20,
@@ -3920,7 +3966,8 @@
       "mass": 150
     },
     "movement": {
-      "canSkirmish": true
+      "canSkirmish": true,
+      "speed": 42
     },
     "defense": {
       "armor": 70,
@@ -3999,7 +4046,8 @@
       "mass": 150
     },
     "movement": {
-      "canSkirmish": true
+      "canSkirmish": true,
+      "speed": 38
     },
     "defense": {
       "armor": 100,
@@ -4057,7 +4105,8 @@
       "mass": 150
     },
     "movement": {
-      "canSkirmish": true
+      "canSkirmish": true,
+      "speed": 38
     },
     "defense": {
       "armor": 100,
@@ -4115,7 +4164,8 @@
       "mass": 150
     },
     "movement": {
-      "canSkirmish": true
+      "canSkirmish": true,
+      "speed": 38
     },
     "defense": {
       "armor": 70,
@@ -4173,7 +4223,8 @@
       "mass": 90
     },
     "movement": {
-      "canSkirmish": true
+      "canSkirmish": true,
+      "speed": 42
     },
     "defense": {
       "armor": 0,
@@ -4248,7 +4299,8 @@
       "mass": 150
     },
     "movement": {
-      "canSkirmish": true
+      "canSkirmish": true,
+      "speed": 38
     },
     "defense": {
       "armor": 70,
@@ -4470,7 +4522,8 @@
       "mass": 80
     },
     "movement": {
-      "canSkirmish": true
+      "canSkirmish": true,
+      "speed": 31
     },
     "defense": {
       "armor": 20,
@@ -4525,7 +4578,8 @@
       "mass": 1500
     },
     "movement": {
-      "canSkirmish": true
+      "canSkirmish": true,
+      "speed": 54
     },
     "defense": {
       "armor": 90,
@@ -4602,7 +4656,8 @@
       "mass": 80
     },
     "movement": {
-      "canSkirmish": false
+      "canSkirmish": false,
+      "speed": 28
     },
     "defense": {
       "armor": 45,
@@ -4762,7 +4817,8 @@
       "mass": 190
     },
     "movement": {
-      "canSkirmish": false
+      "canSkirmish": false,
+      "speed": 31
     },
     "defense": {
       "armor": 60,
@@ -4820,7 +4876,8 @@
       "mass": 190
     },
     "movement": {
-      "canSkirmish": false
+      "canSkirmish": false,
+      "speed": 31
     },
     "defense": {
       "armor": 60,
@@ -4875,7 +4932,8 @@
       "mass": 190
     },
     "movement": {
-      "canSkirmish": false
+      "canSkirmish": false,
+      "speed": 31
     },
     "defense": {
       "armor": 60,
@@ -4930,7 +4988,8 @@
       "mass": 80
     },
     "movement": {
-      "canSkirmish": false
+      "canSkirmish": false,
+      "speed": 46
     },
     "defense": {
       "armor": 30,
@@ -4985,7 +5044,8 @@
       "mass": 90
     },
     "movement": {
-      "canSkirmish": false
+      "canSkirmish": false,
+      "speed": 46
     },
     "defense": {
       "armor": 30,
@@ -5040,7 +5100,8 @@
       "mass": 90
     },
     "movement": {
-      "canSkirmish": true
+      "canSkirmish": true,
+      "speed": 46
     },
     "defense": {
       "armor": 30,
@@ -5095,7 +5156,8 @@
       "mass": 70
     },
     "movement": {
-      "canSkirmish": true
+      "canSkirmish": true,
+      "speed": 48
     },
     "defense": {
       "armor": 30,
@@ -5150,7 +5212,8 @@
       "mass": 70
     },
     "movement": {
-      "canSkirmish": true
+      "canSkirmish": true,
+      "speed": 48
     },
     "defense": {
       "armor": 30,
@@ -5205,7 +5268,8 @@
       "mass": 4000
     },
     "movement": {
-      "canSkirmish": false
+      "canSkirmish": false,
+      "speed": 40
     },
     "defense": {
       "armor": 140,
@@ -5261,7 +5325,8 @@
       "mass": 4000
     },
     "movement": {
-      "canSkirmish": false
+      "canSkirmish": false,
+      "speed": 50
     },
     "defense": {
       "armor": 110,
@@ -5317,7 +5382,8 @@
       "mass": 2000
     },
     "movement": {
-      "canSkirmish": false
+      "canSkirmish": false,
+      "speed": 75
     },
     "defense": {
       "armor": 95,
@@ -5611,7 +5677,8 @@
       "mass": 90
     },
     "movement": {
-      "canSkirmish": false
+      "canSkirmish": false,
+      "speed": 48
     },
     "defense": {
       "armor": 0,
@@ -5669,7 +5736,8 @@
       "mass": 1500
     },
     "movement": {
-      "canSkirmish": false
+      "canSkirmish": false,
+      "speed": 42
     },
     "defense": {
       "armor": 30,
@@ -5725,7 +5793,8 @@
       "mass": 150
     },
     "movement": {
-      "canSkirmish": false
+      "canSkirmish": false,
+      "speed": 95
     },
     "defense": {
       "armor": 0,
@@ -5780,7 +5849,8 @@
       "mass": 150
     },
     "movement": {
-      "canSkirmish": true
+      "canSkirmish": true,
+      "speed": 23
     },
     "defense": {
       "armor": 15,
@@ -5856,7 +5926,8 @@
       "mass": 90
     },
     "movement": {
-      "canSkirmish": true
+      "canSkirmish": true,
+      "speed": 23
     },
     "defense": {
       "armor": 15,
@@ -5983,7 +6054,8 @@
       "mass": 210
     },
     "movement": {
-      "canSkirmish": false
+      "canSkirmish": false,
+      "speed": 28
     },
     "defense": {
       "armor": 120,
@@ -6038,7 +6110,8 @@
       "mass": 230
     },
     "movement": {
-      "canSkirmish": false
+      "canSkirmish": false,
+      "speed": 46
     },
     "defense": {
       "armor": 85,
@@ -6097,7 +6170,8 @@
       "mass": 6500
     },
     "movement": {
-      "canSkirmish": false
+      "canSkirmish": false,
+      "speed": 39
     },
     "defense": {
       "armor": 50,

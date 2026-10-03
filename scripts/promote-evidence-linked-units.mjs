@@ -1,4 +1,4 @@
-import hpOverlay from '../tools/wh3-importer/hp-policy/overlay.cjs';
+import hpOverlay from '../tools/wh3-importer/production-overlay.cjs';
 import { readFile,writeFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import { buildEvidenceLinkedBatch } from '../tools/wh3-importer/promotion/evidence-linked-batch.mjs';

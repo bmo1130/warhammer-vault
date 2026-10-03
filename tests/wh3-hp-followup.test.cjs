@@ -1,7 +1,9 @@
 const {test}=require('node:test');
 const assert=require('node:assert/strict');
 const {readFileSync,existsSync}=require('node:fs');
-const read=file=>JSON.parse(readFileSync(file));
+const speedOverlay=require('../tools/wh3-importer/speed-policy/overlay.cjs');
+const rawRead=file=>JSON.parse(readFileSync(file));
+const read=file=>file==='src/data/units.json'?speedOverlay.withoutSpeed(rawRead(file)):rawRead(file);
 const base='tools/wh3-importer/hp-policy/',research='tools/wh3-importer/hp-research/';
 const review=read(base+'review.json'),manifest=read(base+'manifest.json');
 const expected=[

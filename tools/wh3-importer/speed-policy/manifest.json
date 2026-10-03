@@ -1,0 +1,724 @@
+{
+  "format": "explicit-reviewed-74-static-speed-v1",
+  "baselineCommit": "d4964f47365e1ea11106af7f17e3c37b83fec648",
+  "baselineUnitsSha256": "308f7dab9ae339d2629de18d350c07febe7af78bb7fdbc20f598f9a58b7a9511",
+  "staticSnapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+  "inputs": [
+    {
+      "file": "tools/wh3-importer/speed-research/card-validation.json",
+      "sha256": "c8ff40615e8605bf78f5b4f67d19ae486c14c75ab80b1758cacf307bff2e3477"
+    },
+    {
+      "file": "tools/wh3-importer/speed-research/manual-card-evidence.json",
+      "sha256": "0397ecaa264295f0843aac306b43fdf5d9fc5e511cc181d8a283dd1027f9287b"
+    },
+    {
+      "file": "tools/wh3-importer/hp-research/report.json",
+      "sha256": "cde3a364aee6b4ca0bcad74cfb83ff4c9509f06e98a181614abd111a7a8cbfa3"
+    },
+    {
+      "file": "tools/wh3-importer/semantics-findings.json",
+      "sha256": "65b1a6752862f2c4845efa3a623f5a42dafdc464d8698c74871bc479385c55f4"
+    },
+    {
+      "file": "tools/wh3-importer/hp-research/articulation.source.json",
+      "sha256": "ce0519d696e0cd24fa0e063611ca33c615b53ce105891783d2fa5ec5f943658a"
+    },
+    {
+      "file": "tools/wh3-importer/hp-policy/manifest.json",
+      "sha256": "2cd6086727dbc289e6db776da58498129ea7e2637ffccb8872ddf3a1a46a980d"
+    },
+    {
+      "file": "tools/wh3-importer/promotion/dragon-ogres.source.json",
+      "sha256": "8aeed488f27999d35dca994584b90556259642486dadd3c6574b0c6429bc7203"
+    },
+    {
+      "file": "tools/wh3-importer/promotion/partial-sources.json",
+      "sha256": "01da7892494835588d38ee8d116b0d2d556d3888eb638ab793d6dbfc74445a58"
+    },
+    {
+      "file": "tools/wh3-importer/expansion-batch-01/sources.json",
+      "sha256": "645682460963a99dfba2272079c42d2fdd4b89ff66b7ad4d93de170524d0b687"
+    },
+    {
+      "file": "tools/wh3-importer/expansion-batch-02/sources.json",
+      "sha256": "c46bdabe6a496d4f3444b9fd3fe0d8b5e200c7a21c00dc6889e9fd98679a260c"
+    },
+    {
+      "file": "tools/wh3-importer/expansion-batch-03/sources.json",
+      "sha256": "613cc064d33e807b402129ccd6697dfba6428c07b39a1b0c9de9f55b727fe84f"
+    },
+    {
+      "file": "tools/wh3-importer/expansion-batch-04/sources.json",
+      "sha256": "9261983b45913fea9ed68e04f8fa492f6fc3e9dfbc2a6b076461570c1bd909da"
+    }
+  ],
+  "subjects": [
+    {
+      "id": "ca_unit_wh_dlc01_chs_mon_dragon_ogre",
+      "mainKey": "wh_dlc01_chs_mon_dragon_ogre",
+      "landKey": "wh_dlc01_chs_mon_dragon_ogre",
+      "approved": true,
+      "expectedSpeed": 64,
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "baseUnitSha256": "6849a3354611b6dfb028d92e47bce6c53cf3d61b4493709f6f44860bd15bee10"
+    },
+    {
+      "id": "ca_unit_wh_main_emp_inf_swordsmen",
+      "mainKey": "wh_main_emp_inf_swordsmen",
+      "landKey": "wh_main_emp_inf_swordsmen",
+      "approved": true,
+      "expectedSpeed": 30,
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "baseUnitSha256": "8c6f18401de3edbcf1873a18cb2d929f485522d7946ec6e788722668a21954b8"
+    },
+    {
+      "id": "ca_unit_wh_main_emp_inf_spearmen_1",
+      "mainKey": "wh_main_emp_inf_spearmen_1",
+      "landKey": "wh_main_emp_inf_spearmen_1",
+      "approved": true,
+      "expectedSpeed": 30,
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "baseUnitSha256": "7308708894c3f1c04afacb184e1dbe2b487d72f1588494cda3040a3405f5dc45"
+    },
+    {
+      "id": "ca_unit_wh_dlc04_vmp_inf_sternsmen_0",
+      "mainKey": "wh_dlc04_vmp_inf_sternsmen_0",
+      "landKey": "wh_dlc04_vmp_inf_sternsmen_0",
+      "approved": true,
+      "expectedSpeed": 27,
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "baseUnitSha256": "8288656bc97229229d01f2982aaa628804ec20ff36961e900d128f253433cf57"
+    },
+    {
+      "id": "ca_unit_wh_main_brt_cav_mounted_yeomen_0",
+      "mainKey": "wh_main_brt_cav_mounted_yeomen_0",
+      "landKey": "wh_main_brt_cav_mounted_yeomen_0",
+      "approved": true,
+      "expectedSpeed": 92,
+      "profile": "EXACT_MOUNTED_YEOMEN_CHAIN",
+      "baseUnitSha256": "b13570cf796e3bc2549b9bdf1b50525b82d0f879974cc0363b0f811c1fe9e12b"
+    },
+    {
+      "id": "ca_unit_wh2_dlc12_skv_inf_ratling_gun_0",
+      "mainKey": "wh2_dlc12_skv_inf_ratling_gun_0",
+      "landKey": "wh2_dlc12_skv_inf_ratling_gun_0",
+      "approved": true,
+      "expectedSpeed": 38,
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "baseUnitSha256": "1568e7de7e96cbaccfb8a8639cb6c546640115da0b7d9bfe15d8353e3482be34"
+    },
+    {
+      "id": "ca_unit_wh_dlc04_emp_inf_free_company_militia_0",
+      "mainKey": "wh_dlc04_emp_inf_free_company_militia_0",
+      "landKey": "wh_dlc04_emp_inf_free_company_militia_0",
+      "approved": true,
+      "expectedSpeed": 36,
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "baseUnitSha256": "dea9d76837e592e2ef366685d5d17168c4e4927987ae87ea96cc3393b389a356"
+    },
+    {
+      "id": "ca_unit_wh_main_brt_inf_men_at_arms",
+      "mainKey": "wh_main_brt_inf_men_at_arms",
+      "landKey": "wh_main_brt_inf_men_at_arms",
+      "approved": true,
+      "expectedSpeed": 30,
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "baseUnitSha256": "e38434df27813bff190d5ce9f368bcb03a354a78d8599c757cbcb81fa619bdf2"
+    },
+    {
+      "id": "ca_unit_wh_dlc07_brt_inf_foot_squires_0",
+      "mainKey": "wh_dlc07_brt_inf_foot_squires_0",
+      "landKey": "wh_dlc07_brt_inf_foot_squires_0",
+      "approved": true,
+      "expectedSpeed": 28,
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "baseUnitSha256": "b155392ad8e612fbc5827548c77c88114dd629ad28a3dcf3613103d7af2294b6"
+    },
+    {
+      "id": "ca_unit_wh2_main_skv_inf_clanrats_1",
+      "mainKey": "wh2_main_skv_inf_clanrats_1",
+      "landKey": "wh2_main_skv_inf_clanrats_1",
+      "approved": true,
+      "expectedSpeed": 42,
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "baseUnitSha256": "2894992bf7635a87aea9b8258c94d4d2eb066068e9200c03f6798ec9b6361b4b"
+    },
+    {
+      "id": "ca_unit_wh_main_vmp_inf_grave_guard_1",
+      "mainKey": "wh_main_vmp_inf_grave_guard_1",
+      "landKey": "wh_main_vmp_inf_grave_guard_1",
+      "approved": true,
+      "expectedSpeed": 27,
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "baseUnitSha256": "bc77c5de2bb922d70c4b84ef49b3879566598564ac3b6371292067df79b6bc32"
+    },
+    {
+      "id": "ca_unit_wh2_main_lzd_inf_saurus_warriors_1",
+      "mainKey": "wh2_main_lzd_inf_saurus_warriors_1",
+      "landKey": "wh2_main_lzd_inf_saurus_warriors_1",
+      "approved": true,
+      "expectedSpeed": 31,
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "baseUnitSha256": "6c6db63d60dc01232e0f604bbc9d2ab69d48642458eccb55694d533f3c218010"
+    },
+    {
+      "id": "ca_unit_wh2_dlc11_cst_inf_depth_guard_0",
+      "mainKey": "wh2_dlc11_cst_inf_depth_guard_0",
+      "landKey": "wh2_dlc11_cst_inf_depth_guard_0",
+      "approved": true,
+      "expectedSpeed": 36,
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "baseUnitSha256": "6a01aa8fc7575d78c41c5b06248d12bfe9f6a119d5eeeb7e99060159305c2c9d"
+    },
+    {
+      "id": "ca_unit_wh2_dlc11_cst_inf_depth_guard_1",
+      "mainKey": "wh2_dlc11_cst_inf_depth_guard_1",
+      "landKey": "wh2_dlc11_cst_inf_depth_guard_1",
+      "approved": true,
+      "expectedSpeed": 36,
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "baseUnitSha256": "317804788ee8dd4cf88eb100c9ea3d3e5d039fb21a9a8cdb6b764723caf900cd"
+    },
+    {
+      "id": "ca_unit_wh_main_chs_inf_chosen_0",
+      "mainKey": "wh_main_chs_inf_chosen_0",
+      "landKey": "wh_main_chs_inf_chosen_0",
+      "approved": true,
+      "expectedSpeed": 28,
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "baseUnitSha256": "7132a582b95e02a6119ce628667c6218eeec5ba7281599177ede53ec71646076"
+    },
+    {
+      "id": "ca_unit_wh_main_chs_inf_chosen_1",
+      "mainKey": "wh_main_chs_inf_chosen_1",
+      "landKey": "wh_main_chs_inf_chosen_1",
+      "approved": true,
+      "expectedSpeed": 28,
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "baseUnitSha256": "4c69916fbf589c0c54d121c9b956e6f49f6a1e97565eaa396bab3abb7e4bf9a7"
+    },
+    {
+      "id": "ca_unit_wh_dlc07_brt_peasant_mob_0",
+      "mainKey": "wh_dlc07_brt_peasant_mob_0",
+      "landKey": "wh_dlc07_brt_inf_peasant_mob_0",
+      "approved": true,
+      "expectedSpeed": 33,
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "baseUnitSha256": "5097dff5e42ab2c7483136e3830813538f6bdd1b41c99469280e1dc4e29cc990"
+    },
+    {
+      "id": "ca_unit_wh_dlc07_brt_inf_men_at_arms_1",
+      "mainKey": "wh_dlc07_brt_inf_men_at_arms_1",
+      "landKey": "wh_dlc07_brt_inf_men_at_arms_1",
+      "approved": true,
+      "expectedSpeed": 30,
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "baseUnitSha256": "8ebcde3348aec348514cb3b57c24bbef7c53d3fa8a9b6080cd576bc0da0781dd"
+    },
+    {
+      "id": "ca_unit_wh_dlc07_brt_inf_men_at_arms_2",
+      "mainKey": "wh_dlc07_brt_inf_men_at_arms_2",
+      "landKey": "wh_dlc07_brt_inf_men_at_arms_2",
+      "approved": true,
+      "expectedSpeed": 30,
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "baseUnitSha256": "ea8a15a835a049ee275603bd6f651ba375bd05f86de56a013822aa6113814f6f"
+    },
+    {
+      "id": "ca_unit_wh_dlc07_brt_inf_spearmen_at_arms_1",
+      "mainKey": "wh_dlc07_brt_inf_spearmen_at_arms_1",
+      "landKey": "wh_dlc07_brt_inf_spearmen_at_arms_1",
+      "approved": true,
+      "expectedSpeed": 30,
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "baseUnitSha256": "b78a3aa90c67150072c4d61ee9bfaafcf9fff01b097879ab3d48a60f9518d9ed"
+    },
+    {
+      "id": "ca_unit_wh_main_brt_inf_spearmen_at_arms",
+      "mainKey": "wh_main_brt_inf_spearmen_at_arms",
+      "landKey": "wh_main_brt_inf_spearmen_at_arms",
+      "approved": true,
+      "expectedSpeed": 30,
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "baseUnitSha256": "c7a45928a9a74fedbfb4a6bff6d1cb4199070f5d95d82e967719a55b03e10f41"
+    },
+    {
+      "id": "ca_unit_wh_dlc07_brt_inf_battle_pilgrims_0",
+      "mainKey": "wh_dlc07_brt_inf_battle_pilgrims_0",
+      "landKey": "wh_dlc07_brt_inf_battle_pilgrims_0",
+      "approved": true,
+      "expectedSpeed": 30,
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "baseUnitSha256": "5fbb8f0bf4e361f8ddf743d629e8e2933d3e8f24e74ae5d1a0ee2e28d6c2f11c"
+    },
+    {
+      "id": "ca_unit_wh_main_brt_inf_peasant_bowmen",
+      "mainKey": "wh_main_brt_inf_peasant_bowmen",
+      "landKey": "wh_main_brt_inf_peasant_bowmen",
+      "approved": true,
+      "expectedSpeed": 33,
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "baseUnitSha256": "75ad0316fe4230d483a9ac388ccc9175fb799dbe89a53bf4d3b06bd7c343d462"
+    },
+    {
+      "id": "ca_unit_wh_dlc07_brt_inf_peasant_bowmen_1",
+      "mainKey": "wh_dlc07_brt_inf_peasant_bowmen_1",
+      "landKey": "wh_dlc07_brt_inf_peasant_bowmen_1",
+      "approved": true,
+      "expectedSpeed": 33,
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "baseUnitSha256": "50138b5b1b6b4c4e97b76d5a7449d140f127c5cba4a46eed6612ec34e6ca7bca"
+    },
+    {
+      "id": "ca_unit_wh_dlc07_brt_inf_peasant_bowmen_2",
+      "mainKey": "wh_dlc07_brt_inf_peasant_bowmen_2",
+      "landKey": "wh_dlc07_brt_inf_peasant_bowmen_2",
+      "approved": true,
+      "expectedSpeed": 33,
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "baseUnitSha256": "3fbda9f4cd78d6bdd01c74170e4cfe813e5f774d706793e519bedab9e5aad744"
+    },
+    {
+      "id": "ca_unit_wh_main_brt_cav_mounted_yeomen_1",
+      "mainKey": "wh_main_brt_cav_mounted_yeomen_1",
+      "landKey": "wh_main_brt_cav_mounted_yeomen_1",
+      "approved": true,
+      "expectedSpeed": 92,
+      "profile": "EXACT_MOUNTED_YEOMEN_CHAIN",
+      "baseUnitSha256": "54c55b856029aa0b3e63d1106b0efc9b04d5b84fea832b0e079f4aa3f65ff21c"
+    },
+    {
+      "id": "ca_unit_wh_main_brt_art_field_trebuchet",
+      "mainKey": "wh_main_brt_art_field_trebuchet",
+      "landKey": "wh_main_brt_art_field_trebuchet",
+      "approved": true,
+      "expectedSpeed": 20,
+      "profile": "EXACT_FIELD_TREBUCHETS_CHAIN",
+      "baseUnitSha256": "251eb0ad70f0d0149ed67f2b1945ff42cd9bc9a0462a9bf5d8c9c5561694e77d"
+    },
+    {
+      "id": "ca_unit_wh_dlc07_brt_art_blessed_field_trebuchet_0",
+      "mainKey": "wh_dlc07_brt_art_blessed_field_trebuchet_0",
+      "landKey": "wh_dlc07_brt_art_blessed_field_trebuchet_0",
+      "approved": true,
+      "expectedSpeed": 20,
+      "profile": "EXACT_FIELD_TREBUCHETS_CHAIN",
+      "baseUnitSha256": "3d53d02663d5c3557db62cb674a7d81bcf858aa53179415793d46e2289579bb0"
+    },
+    {
+      "id": "ca_unit_wh_dlc04_emp_inf_flagellants_0",
+      "mainKey": "wh_dlc04_emp_inf_flagellants_0",
+      "landKey": "wh_dlc04_emp_inf_flagellants_0",
+      "approved": true,
+      "expectedSpeed": 36,
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "baseUnitSha256": "0b63a49a8ec3bca020ade4473e9659896355fad96cec93004c8ba015bbbdf6c1"
+    },
+    {
+      "id": "ca_unit_wh_main_emp_inf_crossbowmen",
+      "mainKey": "wh_main_emp_inf_crossbowmen",
+      "landKey": "wh_main_emp_inf_crossbowmen",
+      "approved": true,
+      "expectedSpeed": 33,
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "baseUnitSha256": "9e6cf7cb3b22be51f350bec15aba2b0e39e43e2d24fbe25be9afbdce4083cfa8"
+    },
+    {
+      "id": "ca_unit_wh3_dlc25_emp_inf_hochland_long_rifles",
+      "mainKey": "wh3_dlc25_emp_inf_hochland_long_rifles",
+      "landKey": "wh3_dlc25_emp_inf_hochland_long_rifles",
+      "approved": true,
+      "expectedSpeed": 33,
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "baseUnitSha256": "c7a6e04e9b6e7008aa10d82f86ee24ac7bf1c70e8d765f55ef3625fd382556a7"
+    },
+    {
+      "id": "ca_unit_wh3_dlc25_emp_inf_nuln_ironsides",
+      "mainKey": "wh3_dlc25_emp_inf_nuln_ironsides",
+      "landKey": "wh3_dlc25_emp_inf_nuln_ironsides",
+      "approved": true,
+      "expectedSpeed": 33,
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "baseUnitSha256": "ea1aacfa60d0c9b7328088e5591378bb01b76f16951852e108ca46084a362366"
+    },
+    {
+      "id": "ca_unit_wh3_dlc29_emp_inf_teutogen_guard",
+      "mainKey": "wh3_dlc29_emp_inf_teutogen_guard",
+      "landKey": "wh3_dlc29_emp_inf_teutogen_guard",
+      "approved": true,
+      "expectedSpeed": 28,
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "baseUnitSha256": "78d5abb1b208f4202bd661dfb28b7adeded11f07fdae6b37df5377f9cb7ee074"
+    },
+    {
+      "id": "ca_unit_wh3_dlc29_emp_inf_warriors_of_ulric",
+      "mainKey": "wh3_dlc29_emp_inf_warriors_of_ulric",
+      "landKey": "wh3_dlc29_emp_inf_warriors_of_ulric",
+      "approved": true,
+      "expectedSpeed": 36,
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "baseUnitSha256": "f9ac1c525c03597161712c710207690bcbd229e751a9b06331270377f926ca9c"
+    },
+    {
+      "id": "ca_unit_wh3_dlc29_emp_inf_wolf_kin",
+      "mainKey": "wh3_dlc29_emp_inf_wolf_kin",
+      "landKey": "wh3_dlc29_emp_inf_wolf_kin",
+      "approved": true,
+      "expectedSpeed": 36,
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "baseUnitSha256": "cda557137a476bd542f4509611ace1e621188d2b69d57d3905eeb380edf0ffb2"
+    },
+    {
+      "id": "ca_unit_wh2_main_skv_inf_clanrat_spearmen_0",
+      "mainKey": "wh2_main_skv_inf_clanrat_spearmen_0",
+      "landKey": "wh2_main_skv_inf_clanrat_spearmen_0",
+      "approved": true,
+      "expectedSpeed": 42,
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "baseUnitSha256": "d6135e7f88c3dbc06b3b7691068db43bc563a1425f6c9a54cdae5eac091a80dd"
+    },
+    {
+      "id": "ca_unit_wh2_main_skv_inf_clanrat_spearmen_1",
+      "mainKey": "wh2_main_skv_inf_clanrat_spearmen_1",
+      "landKey": "wh2_main_skv_inf_clanrat_spearmen_1",
+      "approved": true,
+      "expectedSpeed": 42,
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "baseUnitSha256": "f7c1402bb697a670efc1f4bb5dfef1b1917a179e2591f15a1b8b6157a987304f"
+    },
+    {
+      "id": "ca_unit_wh2_main_skv_inf_plague_monk_censer_bearer",
+      "mainKey": "wh2_main_skv_inf_plague_monk_censer_bearer",
+      "landKey": "wh2_main_skv_inf_plague_monk_censer_bearer",
+      "approved": true,
+      "expectedSpeed": 42,
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "baseUnitSha256": "293c7ad53f347cb35cc412c714cc1bdfe63108daeb65891bc317f38421ff2598"
+    },
+    {
+      "id": "ca_unit_wh2_dlc14_skv_inf_eshin_triads_0",
+      "mainKey": "wh2_dlc14_skv_inf_eshin_triads_0",
+      "landKey": "wh2_dlc14_skv_inf_eshin_triads_0",
+      "approved": true,
+      "expectedSpeed": 54,
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "baseUnitSha256": "165248110548a40625fd9ed413447d110d4efb78ca74d743ff73323c74b4de7d"
+    },
+    {
+      "id": "ca_unit_wh2_dlc14_skv_inf_warp_grinder_0",
+      "mainKey": "wh2_dlc14_skv_inf_warp_grinder_0",
+      "landKey": "wh2_dlc14_skv_inf_warp_grinder_0",
+      "approved": true,
+      "expectedSpeed": 38,
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "baseUnitSha256": "8abe4c1870015e8757a52df48f782431e09576bb76408c4797d34e56ac9237a6"
+    },
+    {
+      "id": "ca_unit_wh2_main_skv_inf_gutter_runners_0",
+      "mainKey": "wh2_main_skv_inf_gutter_runners_0",
+      "landKey": "wh2_main_skv_inf_gutter_runners_0",
+      "approved": true,
+      "expectedSpeed": 54,
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "baseUnitSha256": "e7b7d85e01217b6b5fe0e1a7d0317872e0fd4460f17575e9e99ec058c9c565a7"
+    },
+    {
+      "id": "ca_unit_wh2_main_skv_inf_gutter_runners_1",
+      "mainKey": "wh2_main_skv_inf_gutter_runners_1",
+      "landKey": "wh2_main_skv_inf_gutter_runners_1",
+      "approved": true,
+      "expectedSpeed": 54,
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "baseUnitSha256": "6e5c949cbe6ca76159343428a76d62b4225a1de2f7126294222d1fb9a56c4efd"
+    },
+    {
+      "id": "ca_unit_wh2_main_skv_inf_night_runners_0",
+      "mainKey": "wh2_main_skv_inf_night_runners_0",
+      "landKey": "wh2_main_skv_inf_night_runners_0",
+      "approved": true,
+      "expectedSpeed": 54,
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "baseUnitSha256": "a2b8b218c1859e8531c5b14ff3bcaca409905b1afc5d7526dc4123f36afbff80"
+    },
+    {
+      "id": "ca_unit_wh2_main_skv_inf_night_runners_1",
+      "mainKey": "wh2_main_skv_inf_night_runners_1",
+      "landKey": "wh2_main_skv_inf_night_runners_1",
+      "approved": true,
+      "expectedSpeed": 54,
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "baseUnitSha256": "27a9f97379f29d08d28f29b175f80a4ade02f48cf89ceeec6c82224ec1e8212a"
+    },
+    {
+      "id": "ca_unit_wh2_main_skv_inf_gutter_runner_slingers_0",
+      "mainKey": "wh2_main_skv_inf_gutter_runner_slingers_0",
+      "landKey": "wh2_main_skv_inf_gutter_runner_slingers_0",
+      "approved": true,
+      "expectedSpeed": 54,
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "baseUnitSha256": "3d798fcb3a5ccd6b270c69f0172ad9c9c98e7386d6616fa264a8f9c5d43e632a"
+    },
+    {
+      "id": "ca_unit_wh2_main_skv_inf_gutter_runner_slingers_1",
+      "mainKey": "wh2_main_skv_inf_gutter_runner_slingers_1",
+      "landKey": "wh2_main_skv_inf_gutter_runner_slingers_1",
+      "approved": true,
+      "expectedSpeed": 54,
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "baseUnitSha256": "3e951e80e4dbaca86b23e0e630cc702b1e6167cef900f73767865ab644378a28"
+    },
+    {
+      "id": "ca_unit_wh2_dlc12_skv_inf_warplock_jezzails_0",
+      "mainKey": "wh2_dlc12_skv_inf_warplock_jezzails_0",
+      "landKey": "wh2_dlc12_skv_inf_warplock_jezzails_0",
+      "approved": true,
+      "expectedSpeed": 42,
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "baseUnitSha256": "d7c0decfd40c5947bb220912d533881f718c7dc7147202180fc6c5057f6efab7"
+    },
+    {
+      "id": "ca_unit_wh2_main_skv_inf_poison_wind_globadiers",
+      "mainKey": "wh2_main_skv_inf_poison_wind_globadiers",
+      "landKey": "wh2_main_skv_inf_poison_wind_globadiers",
+      "approved": true,
+      "expectedSpeed": 38,
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "baseUnitSha256": "cffa84e04a0889c5a88a73a130a105ed900fc79b5cc97844236f21152aca5f16"
+    },
+    {
+      "id": "ca_unit_wh2_main_skv_inf_death_globe_bombardiers",
+      "mainKey": "wh2_main_skv_inf_death_globe_bombardiers",
+      "landKey": "wh2_main_skv_inf_death_globe_bombardiers",
+      "approved": true,
+      "expectedSpeed": 38,
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "baseUnitSha256": "ed8829549e0550e9b65360372d293b5b15fb5bf7db73168154f19541de73cb6e"
+    },
+    {
+      "id": "ca_unit_wh2_dlc14_skv_inf_poison_wind_mortar_0",
+      "mainKey": "wh2_dlc14_skv_inf_poison_wind_mortar_0",
+      "landKey": "wh2_dlc14_skv_inf_poison_wind_mortar_0",
+      "approved": true,
+      "expectedSpeed": 38,
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "baseUnitSha256": "b5c270d34d2d943e8e891fee7cd86c7acdce1e42108aa146c77a76ef5ee96a2b"
+    },
+    {
+      "id": "ca_unit_wh2_main_skv_inf_skavenslave_slingers_0",
+      "mainKey": "wh2_main_skv_inf_skavenslave_slingers_0",
+      "landKey": "wh2_main_skv_inf_skavenslave_slingers_0",
+      "approved": true,
+      "expectedSpeed": 42,
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "baseUnitSha256": "b643d5496fa480b84d9f1c5a6c0a99662d6a3b8fcc5c7459d99e9534b899308c"
+    },
+    {
+      "id": "ca_unit_wh2_main_skv_inf_warpfire_thrower",
+      "mainKey": "wh2_main_skv_inf_warpfire_thrower",
+      "landKey": "wh2_main_skv_inf_warpfire_thrower",
+      "approved": true,
+      "expectedSpeed": 38,
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "baseUnitSha256": "288dc604899e99eb85c83340c6ddebbf92a2ab52edf21cffa0e334f4b963e860"
+    },
+    {
+      "id": "ca_unit_wh2_dlc09_tmb_inf_skeleton_archers_0",
+      "mainKey": "wh2_dlc09_tmb_inf_skeleton_archers_0",
+      "landKey": "wh2_dlc09_tmb_inf_skeleton_archers_0",
+      "approved": true,
+      "expectedSpeed": 31,
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "baseUnitSha256": "83d57cbd7e66e8cf193bebc3d093331fac8eb95ded77e642834b83f484329872"
+    },
+    {
+      "id": "ca_unit_wh2_dlc09_tmb_mon_ushabti_1",
+      "mainKey": "wh2_dlc09_tmb_mon_ushabti_1",
+      "landKey": "wh2_dlc09_tmb_mon_ushabti_1",
+      "approved": true,
+      "expectedSpeed": 54,
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "baseUnitSha256": "b1ea67a481f36684fb813d48befcb92f6010e4cc39c87c20b7eb32373bad140e"
+    },
+    {
+      "id": "ca_unit_wh2_dlc09_tmb_inf_nehekhara_warriors_0",
+      "mainKey": "wh2_dlc09_tmb_inf_nehekhara_warriors_0",
+      "landKey": "wh2_dlc09_tmb_inf_nehekhara_warriors_0",
+      "approved": true,
+      "expectedSpeed": 28,
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "baseUnitSha256": "65790f2cd1fd34623e81bf19e36b6d92c8c4a86b7ec030ea9b50de1f400e65d5"
+    },
+    {
+      "id": "ca_unit_wh2_main_lzd_inf_saurus_warriors_0",
+      "mainKey": "wh2_main_lzd_inf_saurus_warriors_0",
+      "landKey": "wh2_main_lzd_inf_saurus_warriors_0",
+      "approved": true,
+      "expectedSpeed": 31,
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "baseUnitSha256": "0732dfb85c7b87f1eeaf61b66ff5e911311c6fd3287d7ba252142c3ab09eaadc"
+    },
+    {
+      "id": "ca_unit_wh2_main_lzd_inf_saurus_spearmen_0",
+      "mainKey": "wh2_main_lzd_inf_saurus_spearmen_0",
+      "landKey": "wh2_main_lzd_inf_saurus_spearmen_0",
+      "approved": true,
+      "expectedSpeed": 31,
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "baseUnitSha256": "759fc5d0aacfbc5b5bd593544d6ae07f52f0b1accb8c723c16e73572e6f8c14e"
+    },
+    {
+      "id": "ca_unit_wh2_main_lzd_inf_saurus_spearmen_1",
+      "mainKey": "wh2_main_lzd_inf_saurus_spearmen_1",
+      "landKey": "wh2_main_lzd_inf_saurus_spearmen_1",
+      "approved": true,
+      "expectedSpeed": 31,
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "baseUnitSha256": "f9f528e570797c91a418d99601ea01d5707a7bc6e58ca4fa729118ef1f81f376"
+    },
+    {
+      "id": "ca_unit_wh2_dlc12_lzd_inf_skink_red_crested_0",
+      "mainKey": "wh2_dlc12_lzd_inf_skink_red_crested_0",
+      "landKey": "wh2_dlc12_lzd_inf_skink_red_crested_0",
+      "approved": true,
+      "expectedSpeed": 46,
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "baseUnitSha256": "4a8bf3ef67ef347ec6bb67207ca4117e759b0b5b758869caa7b9a2bd2a9938f2"
+    },
+    {
+      "id": "ca_unit_wh2_main_lzd_inf_skink_cohort_0",
+      "mainKey": "wh2_main_lzd_inf_skink_cohort_0",
+      "landKey": "wh2_main_lzd_inf_skink_cohort_0",
+      "approved": true,
+      "expectedSpeed": 46,
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "baseUnitSha256": "a09eadddc6392d72cd3d16020466a5ad1d72522afd42942421302119a85d903c"
+    },
+    {
+      "id": "ca_unit_wh2_main_lzd_inf_skink_cohort_1",
+      "mainKey": "wh2_main_lzd_inf_skink_cohort_1",
+      "landKey": "wh2_main_lzd_inf_skink_cohort_1",
+      "approved": true,
+      "expectedSpeed": 46,
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "baseUnitSha256": "1117188849d2d1bb0f052d97550ceaa194ed820ba72dcff37d223c7b8f1e7b1d"
+    },
+    {
+      "id": "ca_unit_wh2_main_lzd_inf_chameleon_skinks_0",
+      "mainKey": "wh2_main_lzd_inf_chameleon_skinks_0",
+      "landKey": "wh2_main_lzd_inf_chameleon_skinks_0",
+      "approved": true,
+      "expectedSpeed": 48,
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "baseUnitSha256": "1ce4b987c67733573aa89eeaf5bc9cb505390afa40dbf55beb3f1a0bab9e6223"
+    },
+    {
+      "id": "ca_unit_wh2_main_lzd_inf_skink_skirmishers_0",
+      "mainKey": "wh2_main_lzd_inf_skink_skirmishers_0",
+      "landKey": "wh2_main_lzd_inf_skink_skirmishers_0",
+      "approved": true,
+      "expectedSpeed": 48,
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "baseUnitSha256": "8bd3bb431fe124751a70683c9db99b97c20945afb8b2ebd99d1e7922c2f59836"
+    },
+    {
+      "id": "ca_unit_wh2_main_lzd_mon_bastiladon_0",
+      "mainKey": "wh2_main_lzd_mon_bastiladon_0",
+      "landKey": "wh2_main_lzd_mon_bastiladon_0",
+      "approved": true,
+      "expectedSpeed": 40,
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "baseUnitSha256": "db7c3210fb628fca97ff446ac2556843f33debbd3a674169f38a2b51a270df79"
+    },
+    {
+      "id": "ca_unit_wh2_main_lzd_mon_stegadon_0",
+      "mainKey": "wh2_main_lzd_mon_stegadon_0",
+      "landKey": "wh2_main_lzd_mon_stegadon_0",
+      "approved": true,
+      "expectedSpeed": 50,
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "baseUnitSha256": "4edd70386ea1a159e3a95c762e333c1e656653123520b324842f85ca46000991"
+    },
+    {
+      "id": "ca_unit_wh2_dlc12_lzd_mon_ancient_salamander_0",
+      "mainKey": "wh2_dlc12_lzd_mon_ancient_salamander_0",
+      "landKey": "wh2_dlc12_lzd_mon_ancient_salamander_0",
+      "approved": true,
+      "expectedSpeed": 75,
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "baseUnitSha256": "ff1c04e121c1a701a44f1c82717db406515d543b4d1cc28204f0d7f91d018fe7"
+    },
+    {
+      "id": "ca_unit_wh2_dlc11_cst_inf_syreens",
+      "mainKey": "wh2_dlc11_cst_inf_syreens",
+      "landKey": "wh2_dlc11_cst_inf_syreens",
+      "approved": true,
+      "expectedSpeed": 48,
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "baseUnitSha256": "f0627c2f8483ce59657c2af93114c70904ba9c84141b8fee2d454f21f30a04d8"
+    },
+    {
+      "id": "ca_unit_wh2_dlc11_cst_mon_animated_hulks_0",
+      "mainKey": "wh2_dlc11_cst_mon_animated_hulks_0",
+      "landKey": "wh2_dlc11_cst_mon_animated_hulks_0",
+      "approved": true,
+      "expectedSpeed": 42,
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "baseUnitSha256": "a8499d6c2bc6b7bc7497c6c80071a077679c4f60b2bf6222964bc18ea80cbdee"
+    },
+    {
+      "id": "ca_unit_wh2_dlc11_cst_mon_scurvy_dogs",
+      "mainKey": "wh2_dlc11_cst_mon_scurvy_dogs",
+      "landKey": "wh2_dlc11_cst_mon_scurvy_dogs",
+      "approved": true,
+      "expectedSpeed": 95,
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "baseUnitSha256": "1a5aed8ce4c4dd1cb74909c5487d3ebd3226636e122e222670f7b6ec14ba52c7"
+    },
+    {
+      "id": "ca_unit_wh2_dlc11_cst_inf_deck_gunners_0",
+      "mainKey": "wh2_dlc11_cst_inf_deck_gunners_0",
+      "landKey": "wh2_dlc11_cst_inf_deck_gunners_0",
+      "approved": true,
+      "expectedSpeed": 23,
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "baseUnitSha256": "c8acfc48cd89f13e7a882049e0ada8e50f3c6c87bfb8b14829fd8fd1f8d65250"
+    },
+    {
+      "id": "ca_unit_wh2_dlc11_cst_inf_zombie_gunnery_mob_1",
+      "mainKey": "wh2_dlc11_cst_inf_zombie_gunnery_mob_1",
+      "landKey": "wh2_dlc11_cst_inf_zombie_gunnery_mob_1",
+      "approved": true,
+      "expectedSpeed": 23,
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "baseUnitSha256": "4ddce1f7623c513f823ef33cce31e595d5ac99e2a4a4c1ae0a344ebefed11757"
+    },
+    {
+      "id": "ca_unit_wh_dlc01_chs_inf_chosen_2",
+      "mainKey": "wh_dlc01_chs_inf_chosen_2",
+      "landKey": "wh_dlc01_chs_inf_chosen_2",
+      "approved": true,
+      "expectedSpeed": 28,
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "baseUnitSha256": "7a4393194c0176bc5e6b0fc8b750c0743926fdf4ccbcbdd53955bb40f4986bb6"
+    },
+    {
+      "id": "ca_unit_wh_dlc01_chs_inf_forsaken_0",
+      "mainKey": "wh_dlc01_chs_inf_forsaken_0",
+      "landKey": "wh_dlc01_chs_inf_forsaken_0",
+      "approved": true,
+      "expectedSpeed": 46,
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "baseUnitSha256": "1dd4a0c28ada00a9fa0a8827ffd4f30cdbb548249ef674575c38d83b971e6776"
+    },
+    {
+      "id": "ca_unit_wh_main_chs_mon_giant",
+      "mainKey": "wh_main_chs_mon_giant",
+      "landKey": "wh_main_chs_mon_giant",
+      "approved": true,
+      "expectedSpeed": 39,
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "baseUnitSha256": "d0861bc7891e4ae1a60215a843e9e949077df1baafa7d5fa4cc31023d4745a69"
+    }
+  ]
+}

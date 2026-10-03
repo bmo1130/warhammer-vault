@@ -1,4 +1,4 @@
-import hpOverlay from '../tools/wh3-importer/hp-policy/overlay.cjs';
+import hpOverlay from '../tools/wh3-importer/production-overlay.cjs';
 import { readFile, writeFile } from 'node:fs/promises';
 import { buildFirstProductionBatch } from '../tools/wh3-importer/promotion/first-batch.mjs';
 import { loadUnitValidator } from '../tools/wh3-importer/normalization/validation.mjs';

@@ -8,6 +8,7 @@ import {observationContext} from '../observations/context.mjs';
 import {evaluateHypothesis} from '../hypotheses.mjs';
 import {digest,snapshotIdentity} from '../runtime-evidence/contract.mjs';
 import {isReviewedSource} from '../reviewed-snapshots.mjs';
+import speedOverlay from '../speed-policy/overlay.cjs';
 
 const folder='tools/wh3-importer/speed-research/';
 const read=file=>JSON.parse(readFileSync(file));
@@ -71,7 +72,9 @@ export function inspectSpeedTrace(dump,identity,supplement) {
 
 export function buildSpeedResearch() {
   const inputs=[],load=file=>{const bytes=readFileSync(file);inputs.push({file,sha256:hash(bytes)});return JSON.parse(bytes);};
-  const units=load('src/data/units.json');
+  // Replay the research's original pre-Speed view; only approved values strip.
+  const units=speedOverlay.withoutSpeed(read('src/data/units.json'));
+  inputs.push({file:'src/data/units.json',sha256:hash(serialize(units))});
   // Reuse the stored exact source-pointer index only. No HP research function,
   // runtime review or HP calculation is invoked by this inspection.
   const index=load('tools/wh3-importer/hp-research/report.json'),cache=new Map();

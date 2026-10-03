@@ -1,4 +1,4 @@
-const hpOverlay=require('../tools/wh3-importer/hp-policy/overlay.cjs');
+const hpOverlay=require('../tools/wh3-importer/production-overlay.cjs');
 const {test}=require('node:test');
 const assert=require('node:assert/strict');
 const {readFileSync}=require('node:fs');

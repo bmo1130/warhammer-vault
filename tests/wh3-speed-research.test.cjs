@@ -3,6 +3,8 @@ const assert=require('node:assert/strict');
 const {readFileSync,existsSync}=require('node:fs');
 const {createHash}=require('node:crypto');
 const read=f=>JSON.parse(readFileSync(f)),hash=b=>createHash('sha256').update(b).digest('hex');
+const speedOverlay=require('../tools/wh3-importer/speed-policy/overlay.cjs');
+const preSpeedBytes=()=>speedOverlay.serialize(speedOverlay.withoutSpeed(read('src/data/units.json')));
 const folder='tools/wh3-importer/speed-research/',report=read(folder+'report.json');
 const modules=()=>import('../tools/wh3-importer/speed-research/research.mjs');
 const dragon=()=>read('tools/wh3-importer/promotion/dragon-ogres.source.json').dump;
@@ -78,10 +80,10 @@ test('terrain speed effects are conditional source evidence, never silently fold
 });
 
 test('HP, Production/Sample bytes and every existing speed/normalization policy input stay unchanged',()=>{
-  assert.equal(hash(readFileSync('src/data/units.json')),'308f7dab9ae339d2629de18d350c07febe7af78bb7fdbc20f598f9a58b7a9511');
+  assert.equal(hash(preSpeedBytes()),'308f7dab9ae339d2629de18d350c07febe7af78bb7fdbc20f598f9a58b7a9511');
   assert.equal(hash(readFileSync('tools/wh3-importer/hp-policy/review.json')),'4b094f4fb9ee1898674c68b686eafec22c15545808aa128283d5c62942b8f833');
   assert.equal(hash(readFileSync('tools/wh3-importer/hp-policy/static-review.json')),'2a717a9d31c2c1fc2e62fa75bc8d5574a7289cb708efa8dcd415a8d14e361a55');
-  for(const pin of report.inputs)assert.equal(hash(readFileSync(pin.file)),pin.sha256);
+  for(const pin of report.inputs)assert.equal(hash(pin.file==='src/data/units.json'?preSpeedBytes():readFileSync(pin.file)),pin.sha256);
   assert.equal(read('src/data/units.json').filter(u=>u.gameVersion!=='sample'&&u.entities.totalHealth!==undefined).length,13);
 });
 

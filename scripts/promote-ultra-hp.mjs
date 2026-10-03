@@ -2,7 +2,7 @@ import {readFileSync,writeFileSync} from 'node:fs';
 import {isDeepStrictEqual} from 'node:util';
 import {replayHP,byteHash} from '../tools/wh3-importer/hp-policy/policy.mjs';
 import {replayStaticHP} from '../tools/wh3-importer/hp-policy/static-derived.mjs';
-import overlay from '../tools/wh3-importer/hp-policy/overlay.cjs';
+import overlay from '../tools/wh3-importer/production-overlay.cjs';
 import {loadUnitValidator} from '../tools/wh3-importer/normalization/validation.mjs';
 const mode=process.argv[2];
 if(process.argv.length!==3||!['--check','--write'].includes(mode))throw Error('Use --check or --write. No game execution or capture.');

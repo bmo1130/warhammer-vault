@@ -6,6 +6,7 @@ import {decodeSource} from '../expansion-batch-01/compact.mjs';
 import {restoreTrace} from '../promotion/partial-review.mjs';
 import {factSelectors} from '../observations/facts.mjs';
 import {observationContext} from '../observations/context.mjs';
+import speedOverlay from '../speed-policy/overlay.cjs';
 
 const folder='tools/wh3-importer/speed-research/';
 const read=file=>JSON.parse(readFileSync(file)),hash=b=>createHash('sha256').update(b).digest('hex');
@@ -116,7 +117,8 @@ export function buildCardValidation() {
       compareCardAgainst:Object.fromEntries(Object.entries(group[0].roles).map(([role,r])=>[role,{entityKey:r.key,rawRunSpeed:r.facts.run_speed.value,timesTenCandidate:r.facts.run_speed.value*10}])),
       note:'Future reading only. No preferred source selected; coverage conditional on a unique matching card and exact profile.'}));
   return JSON.parse(serialize({purpose:'RESEARCH_CANDIDATES_ONLY',baselineCommit:'2b503dbc0360d88e97503a9b3e7fbde7ee77a451',productionEligible:false,
-    inputs:[folder+'report.json',folder+'manual-card-evidence.json','src/data/units.json'].map(file=>({file,sha256:hash(readFileSync(file))})),
+    inputs:[folder+'report.json',folder+'manual-card-evidence.json','src/data/units.json'].map(file=>({file,sha256:hash(file==='src/data/units.json'?
+      serialize(speedOverlay.withoutSpeed(read(file))):readFileSync(file))})),
     transformation:{formula:'selected run_speed * 10',status:'VALIDATED_FOR_THREE_MANUAL_CARD_ANCHORS',rounding:'UNPROVEN; non-integer outputs withheld',
       universalRule:false,flightInference:false,normalizerPolicyChanged:false,observedGameVersion:manual.observedGameVersion,
       contextModifiers:manual.contextModifiers},anchors,

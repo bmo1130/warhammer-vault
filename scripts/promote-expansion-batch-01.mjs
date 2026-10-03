@@ -1,4 +1,4 @@
-import hpOverlay from '../tools/wh3-importer/hp-policy/overlay.cjs';
+import hpOverlay from '../tools/wh3-importer/production-overlay.cjs';
 import { readFile,writeFile } from 'node:fs/promises';
 import { buildExpansionBatch,expansionAdmissionReport,preservedBytes } from '../tools/wh3-importer/expansion-batch-01/admission.mjs';
 import { byteHash } from '../tools/wh3-importer/expansion-batch-01/projection.mjs';

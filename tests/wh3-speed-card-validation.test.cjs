@@ -3,6 +3,8 @@ const assert=require('node:assert/strict');
 const {readFileSync}=require('node:fs');
 const {createHash}=require('node:crypto');
 const read=f=>JSON.parse(readFileSync(f)),hash=b=>createHash('sha256').update(b).digest('hex');
+const speedOverlay=require('../tools/wh3-importer/speed-policy/overlay.cjs');
+const preSpeedBytes=()=>speedOverlay.serialize(speedOverlay.withoutSpeed(read('src/data/units.json')));
 const folder='tools/wh3-importer/speed-research/',manual=read(folder+'manual-card-evidence.json'),report=read(folder+'card-validation.json');
 const modules=()=>import('../tools/wh3-importer/speed-research/card-validation.mjs');
 let traceCache;const traces=async()=>traceCache??= (await modules()).loadCardTraces();
@@ -92,11 +94,11 @@ test('ambiguity buckets are disjoint and suggestions target exact profiles withi
     assert.equal(Object.keys(s.compareCardAgainst).join(),'man,mount');assert.notEqual(s.compareCardAgainst.man.timesTenCandidate,s.compareCardAgainst.mount.timesTenCandidate);}
 });
 
-test('Production Speed remains absent, HP/non-HP/Sample bytes and old findings remain unchanged',()=>{
-  assert.equal(hash(readFileSync('src/data/units.json')),'308f7dab9ae339d2629de18d350c07febe7af78bb7fdbc20f598f9a58b7a9511');
+test('Pre-Speed research view remains absent, HP/non-HP/Sample bytes and old findings remain unchanged',()=>{
+  assert.equal(hash(preSpeedBytes()),'308f7dab9ae339d2629de18d350c07febe7af78bb7fdbc20f598f9a58b7a9511');
   assert.equal(hash(readFileSync('tools/wh3-importer/hp-policy/review.json')),'4b094f4fb9ee1898674c68b686eafec22c15545808aa128283d5c62942b8f833');
   assert.equal(hash(readFileSync('tools/wh3-importer/hp-policy/static-review.json')),'2a717a9d31c2c1fc2e62fa75bc8d5574a7289cb708efa8dcd415a8d14e361a55');
-  const production=read('src/data/units.json').filter(u=>u.gameVersion!=='sample');assert.equal(production.filter(u=>u.entities.totalHealth!==undefined).length,13);
+  const production=speedOverlay.withoutSpeed(read('src/data/units.json')).filter(u=>u.gameVersion!=='sample');assert.equal(production.filter(u=>u.entities.totalHealth!==undefined).length,13);
   assert(production.every(u=>['speed','groundSpeed','chargeSpeed'].every(f=>!Object.hasOwn(u.movement,f))));
   assert.equal(read('tools/wh3-importer/semantics-findings.json').topics.displaySpeed.safeToNormalize,'NO');
 });

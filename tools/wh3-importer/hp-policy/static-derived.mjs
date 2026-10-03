@@ -10,6 +10,7 @@ import {restoreTrace} from '../promotion/partial-review.mjs';
 import {factSelectors} from '../observations/facts.mjs';
 import {observationContext} from '../observations/context.mjs';
 import {digest} from '../runtime-evidence/contract.mjs';
+import speedOverlay from '../speed-policy/overlay.cjs';
 
 const folder='tools/wh3-importer/hp-policy/',research='tools/wh3-importer/hp-research/';
 const read=file=>JSON.parse(readFileSync(file));
@@ -85,7 +86,7 @@ export function admitStaticHP(subject,c,anchor,assessment,direct,unit,snapshotId
   gate(prediction.NumEntitiesInitial===anchor.runtime.NumEntitiesInitial&&prediction.HealthMax===direct.value&&
     prediction.HealthMax===subject.expectedHP&&subject.expectedHP===scope.value,'derivation differs from explicit approval');
   gate(!Object.hasOwn(unit.entities,'totalHealth')||unit.entities.totalHealth===prediction.HealthMax,'existing Production HP conflict');
-  const base=structuredClone(unit);delete base.entities.totalHealth;
+  const base=speedOverlay.withoutSpeed([unit])[0];delete base.entities.totalHealth;
   gate(byteHash(Buffer.from(serialize(base)))===subject.baseUnitSha256,'non-HP Production drift');
   return {id:c.id,name:c.name,sourceMainKey:c.mainKey,sourceLandKey:c.landKey,staticSnapshotId:c.staticSnapshotId,
     kind:'STATIC_DERIVED_HP',field:'entities.totalHealth',value:prediction.HealthMax,baseUnitSha256:subject.baseUnitSha256,

@@ -1,5 +1,6 @@
 import registry from '../data/unitSharedIdentities.json';
 import hpAdmissions from '../data/unitHpAdmissions.json';
+import speedAdmissions from '../data/unitSpeedAdmissions.json';
 import type { Unit } from '../domain/unit';
 import { unitDiagnosticRepository, type UnitDiagnostic } from './unitDiagnosticRepository';
 
@@ -13,7 +14,7 @@ const canonical = (value: unknown): string => {
 export function assertSharedUnitIdentity(unit: Unit, diagnostic: UnitDiagnostic, snapshot = unitDiagnosticRepository.snapshot) {
   const link=registry.links.find(link=>link.productionId===unit.id);
   const identity=link?.partialReviewIdentity;
-  // Keep the exact static identity anchor; permit only replay-approved ULTRA HP.
+  // Keep the exact static identity anchor; strip only explicit field admissions.
   const hp=hpAdmissions.admissions.find(admission=>admission.id===unit.id);
   let staticUnit: Unit=unit;
   if (hp && unit.entities.totalHealth!==undefined && hpAdmissions.unitSize==='ULTRA' &&
@@ -22,6 +23,13 @@ export function assertSharedUnitIdentity(unit: Unit, diagnostic: UnitDiagnostic,
     hp.staticSnapshotId===snapshot.staticSnapshotId && unit.entities.totalHealth===hp.value) {
     staticUnit={...unit,entities:{...unit.entities}};
     delete staticUnit.entities.totalHealth;
+  }
+  const speed=speedAdmissions.admissions.find(admission=>admission.id===unit.id);
+  if (speed && unit.movement.speed!==undefined && speed.kind==='STATIC_DERIVED_SPEED' &&
+    speed.field==='movement.speed' && speed.mainKey===link?.mainKey && speed.landKey===link?.landKey &&
+    speed.staticSnapshotId===snapshot.staticSnapshotId && speed.value===unit.movement.speed) {
+    staticUnit={...staticUnit,movement:{...staticUnit.movement}};
+    delete staticUnit.movement.speed;
   }
   if (!link || link.diagnosticId!==diagnostic.id || link.productionId!==diagnostic.id ||
     link.mainKey!==diagnostic.sourceMainKey || link.landKey!==diagnostic.sourceLandKey ||

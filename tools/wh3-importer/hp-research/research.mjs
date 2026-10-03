@@ -10,6 +10,7 @@ import {requireSameSource} from '../blocker-review/evidence.mjs';
 import {isReviewedSource} from '../reviewed-snapshots.mjs';
 import {evidenceHash} from '../promotion/first-batch.mjs';
 import {digest,snapshotIdentity} from '../runtime-evidence/contract.mjs';
+import speedOverlay from '../speed-policy/overlay.cjs';
 
 const folder='tools/wh3-importer/hp-research/';
 export const serialize=value=>JSON.stringify(value,null,2)+'\n';
@@ -20,7 +21,9 @@ export function checkProtectedInputs({root='.'}={}) {
   const baseline=json(folder+'baseline.json',root);
   for(const input of baseline.protectedFiles) {
     const bytes=readFileSync(`${root}/${input.file}`);
-    const content=input.hashMode==='LF_TEXT'?Buffer.from(bytes.toString('utf8').replace(/\r\n/g,'\n')):bytes;
+    // Preserve historical HP pins against the exact pre-Speed view.
+    const content=input.file==='src/data/units.json'?Buffer.from(serialize(speedOverlay.withoutSpeed(JSON.parse(bytes)))):
+      input.hashMode==='LF_TEXT'?Buffer.from(bytes.toString('utf8').replace(/\r\n/g,'\n')):bytes;
     requireFact(byteHash(content)===input.sha256,`protected input changed: ${input.file}`);
   }
   return baseline;
