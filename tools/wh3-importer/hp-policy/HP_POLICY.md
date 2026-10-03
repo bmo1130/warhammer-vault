@@ -136,3 +136,7 @@ still verify their original static outputs and preserve the exact HP overlay.
 - `tools/wh3-importer/runtime-evidence/cco-probe/ingest.mjs`
 - `tools/wh3-importer/runtime-evidence/cco-probe/install.ps1`
 - `tools/wh3-importer/runtime-evidence/cco-probe/jobs.mjs`
+
+## 2026-10-03 artillery / vehicle direct runtime 편입
+
+기존 policy를 변경하지 않고 원본 ULTRA 로그 4종을 추가했다. Field Trebuchets 4512, Screaming Skull Catapults 4356, Plagueclaw Catapults 5028, Doom-Flayers 6128이 DIRECT_ULTRA_RUNTIME으로 admission되어 Production HP는 9종/공석 92종이다. 기존 5종과 MEDIUM evidence는 보존한다. Static derived admission은 비활성 상태다. 상세 provenance·가설 재평가·재현법은 [후속 조사](../hp-research/ARTILLERY_VEHICLE_FOLLOWUP.md)를 참조한다.

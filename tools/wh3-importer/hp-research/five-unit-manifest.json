@@ -11,10 +11,6 @@
     {
       "file": "tools/wh3-importer/promotion/dragon-ogres.source.json",
       "sha256": "8aeed488f27999d35dca994584b90556259642486dadd3c6574b0c6429bc7203"
-    },
-    {
-      "file": "tools/wh3-importer/hp-policy/artillery-sources.json",
-      "sha256": "2c2831f34a714e2df8b29769870e4bb967dbba4bffc19d6c541540c6d953c829"
     }
   ],
   "inputs": [
@@ -42,26 +38,6 @@
       "file": "inputs/script_log_021026_1942.txt",
       "originalPath": "C:/codex/totalwar/generated/wh3/runtime-evidence/manual-ultra-hp/ultra_hp_raw_logs_3/script_log_021026_1942.txt",
       "originalSha256": "3d2abc2b55f5d5344ff6111f31c0ac326adb24d9c9ab250d6085bdcca5290568"
-    },
-    {
-      "file": "inputs/script_log_031026_1244.txt",
-      "originalPath": "C:/codex/totalwar/generated/wh3/runtime-evidence/manual-ultra-hp/script_log_031026_1244.txt",
-      "originalSha256": "5008fd675f527b34ee84360bce39a626d54628bf151ec4866d998abe782e821d"
-    },
-    {
-      "file": "inputs/script_log_031026_1246.txt",
-      "originalPath": "C:/codex/totalwar/generated/wh3/runtime-evidence/manual-ultra-hp/script_log_031026_1246.txt",
-      "originalSha256": "290354820216f6cfd25c5618f01924c5e3b5e87b43885a0bd601be683bb233f4"
-    },
-    {
-      "file": "inputs/script_log_031026_1248.txt",
-      "originalPath": "C:/codex/totalwar/generated/wh3/runtime-evidence/manual-ultra-hp/script_log_031026_1248.txt",
-      "originalSha256": "2fa921c196822092101ea982ec3868190d9089f1460278f9ef07efa81d78df42"
-    },
-    {
-      "file": "inputs/script_log_031026_1251.txt",
-      "originalPath": "C:/codex/totalwar/generated/wh3/runtime-evidence/manual-ultra-hp/script_log_031026_1251.txt",
-      "originalSha256": "8ef0750d5fe07954ca9e604f5d3e98bc1ad4614b02867d242f9a11677e2c3b8e"
     }
   ],
   "subjects": [
@@ -114,46 +90,6 @@
       "staticSource": "tools/wh3-importer/promotion/partial-sources.json",
       "approved": true,
       "baseUnitSha256": "0b8ac7c8ff0cae1de31d4fe9a026c8eed8fc62d567c7143a26bc1ef3a52c39ec"
-    },
-    {
-      "id": "ca_unit_wh_main_brt_art_field_trebuchet",
-      "name": "Field Trebuchets",
-      "mainKey": "wh_main_brt_art_field_trebuchet",
-      "landKey": "wh_main_brt_art_field_trebuchet",
-      "slug": "expansion-02-14",
-      "staticSource": "tools/wh3-importer/hp-policy/artillery-sources.json",
-      "approved": true,
-      "baseUnitSha256": "06c784a29bce1c87adaed7077a86dc44e0fba1a2230d0e1a8fe6b2d074179101"
-    },
-    {
-      "id": "ca_unit_wh2_dlc09_tmb_art_screaming_skull_catapult_0",
-      "name": "Screaming Skull Catapults",
-      "mainKey": "wh2_dlc09_tmb_art_screaming_skull_catapult_0",
-      "landKey": "wh2_dlc09_tmb_art_screaming_skull_catapult_0",
-      "slug": "expansion-03-24",
-      "staticSource": "tools/wh3-importer/hp-policy/artillery-sources.json",
-      "approved": true,
-      "baseUnitSha256": "fe51a9457a7e0eeb086c88da9921597bafc2310546381a557d3851ab755f55a6"
-    },
-    {
-      "id": "ca_unit_wh2_main_skv_art_plagueclaw_catapult",
-      "name": "Plagueclaw Catapults",
-      "mainKey": "wh2_main_skv_art_plagueclaw_catapult",
-      "landKey": "wh2_main_skv_art_plagueclaw_catapult",
-      "slug": "expansion-03-18",
-      "staticSource": "tools/wh3-importer/hp-policy/artillery-sources.json",
-      "approved": true,
-      "baseUnitSha256": "d868da3092bbc27aacbe09227778148fe2c48f1abb5528e3ab0bd494f00aa15c"
-    },
-    {
-      "id": "ca_unit_wh2_dlc12_skv_veh_doom_flayer_0",
-      "name": "Doom-Flayers",
-      "mainKey": "wh2_dlc12_skv_veh_doom_flayer_0",
-      "landKey": "wh2_dlc12_skv_veh_doom_flayer_0",
-      "slug": "sample-17",
-      "staticSource": "tools/wh3-importer/promotion/partial-sources.json",
-      "approved": true,
-      "baseUnitSha256": "9f708974006fd96b23694c09d69a5c5300067a317e2268202cfe63d5fea2f794"
     }
   ]
 }

@@ -20,9 +20,9 @@ test('ULTRA HP clean checkout source → review → explicit admission → Produ
   assert.deepEqual(overlay.applyProductionHP([...staticUnits]),overlay.applyProductionHP(staticUnits));
   assert.deepEqual(units.filter(u=>u.gameVersion==='sample'),staticUnits.filter(u=>u.gameVersion==='sample'));
   assert.equal(units.filter(u=>u.gameVersion!=='sample').length,101);assert.equal(units.filter(u=>u.gameVersion==='sample').length,5);
-  const changed=units.filter((u,i)=>JSON.stringify(u)!==JSON.stringify(staticUnits[i]));assert.equal(changed.length,5);
+  const changed=units.filter((u,i)=>JSON.stringify(u)!==JSON.stringify(staticUnits[i]));assert.equal(changed.length,9);
   for(const unit of changed){const index=units.indexOf(unit),copy=structuredClone(unit);delete copy.entities.totalHealth;assert.deepEqual(copy,staticUnits[index]);}
-  assert.equal(units.filter(u=>u.gameVersion!=='sample'&&u.entities.totalHealth===undefined).length,96);
+  assert.equal(units.filter(u=>u.gameVersion!=='sample'&&u.entities.totalHealth===undefined).length,92);
   const check=spawnSync(process.execPath,['scripts/promote-ultra-hp.mjs','--check'],{encoding:'utf8'});assert.equal(check.status,0,check.stderr);
 });
 
@@ -64,7 +64,7 @@ test('original ULTRA log hashes and static named-field provenance are preserved;
   assert.equal(report.review.find(r=>r.name==='Dread Saurian').totalHealth,15088);
   const chariot=report.review.find(r=>r.name==='Skeleton Chariots');assert.equal(chariot.totalHealth,7032);assert.equal(chariot.candidates[0].NumEntitiesInitial,12);
   assert.deepEqual(chariot.candidates[0].componentCounts,{ManList:24,MountList:24,EngineList:12,EntityList:12});
-  assert.deepEqual(report.admitted.map(a=>a.kind),Array(5).fill('DIRECT_ULTRA_RUNTIME'));
+  assert.deepEqual(report.admitted.map(a=>a.kind),Array(9).fill('DIRECT_ULTRA_RUNTIME'));
 });
 
 test('non-ULTRA, missing declaration, identity/snapshot drift, missing HP/count and malformed capture fail closed',async()=>{
@@ -105,7 +105,7 @@ test('HP overlay refuses changed HP or unrelated static fields and does not muta
     const changed=structuredClone(units);mutate(changed.find(u=>u.name==='Skeleton Chariots'));assert.throws(()=>overlay.staticProductionView(changed));}
 });
 
-test('shared identity accepts only the two exact HP projections and keeps diagnostic/source identity intact',()=>{
+test('shared identity accepts only the exact HP projections and keeps diagnostic/source identity intact',()=>{
   const {assertSharedUnitIdentity}=require('../.test-build/src/repositories/unitSharedIdentity.js');
   const {unitDiagnosticRepository:diagnostics}=require('../.test-build/src/repositories/unitDiagnosticRepository.js');
   const units=read('src/data/units.json');
@@ -120,6 +120,7 @@ test('three original ULTRA captures admit exact totals; only their HP fields cha
   const {replayHP,byteHash}=await modules(),report=replayHP(manifest),units=read('src/data/units.json');
   const expected=[['wh_main_emp_inf_swordsmen',8280,120],['wh_main_brt_cav_mounted_yeomen_0',5520,60],['wh_dlc01_chs_mon_dragon_ogre',9856,16]];
   const previous=structuredClone(units);
+  for(const admission of committed.admitted.slice(5))delete previous.find(u=>u.id===admission.id).entities.totalHealth;
   for(const [main,hp,count] of expected){
     const r=report.review.find(r=>r.staticChain.sourceMainKey===main);
     assert.equal(r.status,'REVIEWED_DIRECT_ULTRA_RUNTIME');assert.equal(r.approved,true);assert.equal(r.totalHealth,hp);assert.deepEqual(r.held,[]);
@@ -135,7 +136,7 @@ test('three original ULTRA captures admit exact totals; only their HP fields cha
   assert.equal(byteHash(Buffer.from(overlay.serialize(previous))),'077fc0ca25e6926817ed57d5e7e9e0c37ea1abbef31ec5b38c8445b2e1eb5bfa');
   // Removing the new raw sources must still fail the same unchanged policy.
   const missing=structuredClone(manifest);missing.inputs=missing.inputs.slice(0,2);
-  for(const subject of missing.subjects.slice(0,3))subject.approved=false;
+  for(const subject of missing.subjects)if(subject.id!==manifest.subjects[3].id&&subject.id!==manifest.subjects[4].id)subject.approved=false;
   const held=replayHP(missing);
   for(const [main] of expected){const r=held.review.find(r=>r.staticChain.sourceMainKey===main);
     assert.equal(r.status,'WITHHELD');assert.deepEqual(r.held,[{reason:'NO_MATCHING_ULTRA_RECORD'}]);assert.equal(r.totalHealth,undefined);

@@ -1,7 +1,7 @@
 {
   "format": "reviewed-unit-ultra-hp-admissions-v1",
   "reviewReference": "tools/wh3-importer/hp-policy/review.json",
-  "reviewSha256": "be22e2048618991e6afd9a1a023bf0d92f9521c757e06a561cc3dcfac30f65fe",
+  "reviewSha256": "fcd600c1c6698ee324a6a142731ae2ee93813b08701b0993bcbb6921ca8ba5e9",
   "unitSize": "ULTRA",
   "unitSizeSource": "DECLARED_SETUP",
   "admissions": [
@@ -49,6 +49,42 @@
       "kind": "DIRECT_ULTRA_RUNTIME",
       "field": "entities.totalHealth",
       "value": 7032
+    },
+    {
+      "id": "ca_unit_wh_main_brt_art_field_trebuchet",
+      "mainKey": "wh_main_brt_art_field_trebuchet",
+      "landKey": "wh_main_brt_art_field_trebuchet",
+      "staticSnapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+      "kind": "DIRECT_ULTRA_RUNTIME",
+      "field": "entities.totalHealth",
+      "value": 4512
+    },
+    {
+      "id": "ca_unit_wh2_dlc09_tmb_art_screaming_skull_catapult_0",
+      "mainKey": "wh2_dlc09_tmb_art_screaming_skull_catapult_0",
+      "landKey": "wh2_dlc09_tmb_art_screaming_skull_catapult_0",
+      "staticSnapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+      "kind": "DIRECT_ULTRA_RUNTIME",
+      "field": "entities.totalHealth",
+      "value": 4356
+    },
+    {
+      "id": "ca_unit_wh2_main_skv_art_plagueclaw_catapult",
+      "mainKey": "wh2_main_skv_art_plagueclaw_catapult",
+      "landKey": "wh2_main_skv_art_plagueclaw_catapult",
+      "staticSnapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+      "kind": "DIRECT_ULTRA_RUNTIME",
+      "field": "entities.totalHealth",
+      "value": 5028
+    },
+    {
+      "id": "ca_unit_wh2_dlc12_skv_veh_doom_flayer_0",
+      "mainKey": "wh2_dlc12_skv_veh_doom_flayer_0",
+      "landKey": "wh2_dlc12_skv_veh_doom_flayer_0",
+      "staticSnapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+      "kind": "DIRECT_ULTRA_RUNTIME",
+      "field": "entities.totalHealth",
+      "value": 6128
     }
   ]
 }

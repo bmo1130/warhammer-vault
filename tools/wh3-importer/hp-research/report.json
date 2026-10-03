@@ -19,7 +19,7 @@
   "staticSnapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
   "inputs": [
     {
-      "file": "tools/wh3-importer/hp-policy/manifest.json",
+      "file": "tools/wh3-importer/hp-research/five-unit-manifest.json",
       "bytesSha256": "49630e6a9dda197941c6aded249c0e84a4c1c7595a42cfe94e3c6e2dd1a29d50"
     },
     {

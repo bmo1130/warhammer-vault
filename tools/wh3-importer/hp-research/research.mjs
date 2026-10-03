@@ -104,8 +104,10 @@ export function compareCandidates(mainKey,facts,runtime) {
 export function buildResearch({root='.'}={}) {
   const baseline=checkProtectedInputs({root}),inputs=[],all=[];
   const read=file=>{const bytes=readFileSync(`${root}/${file}`);inputs.push({file,bytesSha256:byteHash(bytes)});return JSON.parse(bytes);};
-  const manifest=read('tools/wh3-importer/hp-policy/manifest.json'),runtime=replayHP(manifest,{root});
-  requireFact(isDeepStrictEqual(runtime,json('tools/wh3-importer/hp-policy/review.json',root)),'runtime replay changed');
+  const manifest=read(folder+'five-unit-manifest.json'),runtime=replayHP(manifest,{root});
+  const current=json('tools/wh3-importer/hp-policy/review.json',root),ids=new Set(manifest.subjects.map(s=>s.id));
+  const historical={...current,manifestSha256:runtime.manifestSha256,review:current.review.filter(r=>ids.has(r.id)),admitted:current.admitted.filter(r=>ids.has(r.id))};
+  requireFact(isDeepStrictEqual(runtime,historical),'original five runtime records changed');
   const first=read('tools/wh3-importer/promotion/dragon-ogres.source.json');
   all.push({id:manifest.subjects.find(s=>s.mainKey===first.dump.unit.caKey).id,file:inputs.at(-1).file,pointer:'/dump',dump:first.dump});
   const partialFile='tools/wh3-importer/promotion/partial-sources.json',partial=read(partialFile);

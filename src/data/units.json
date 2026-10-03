@@ -300,7 +300,9 @@
       "category": "War Machine",
       "tier": 3
     },
-    "entities": {},
+    "entities": {
+      "totalHealth": 6128
+    },
     "movement": {
       "canSkirmish": false
     },
@@ -2591,7 +2593,9 @@
       "category": "Siege Engine",
       "tier": 2
     },
-    "entities": {},
+    "entities": {
+      "totalHealth": 4512
+    },
     "movement": {
       "canSkirmish": false,
       "canRun": false
@@ -4291,7 +4295,9 @@
       "category": "Siege Engine",
       "tier": 2
     },
-    "entities": {},
+    "entities": {
+      "totalHealth": 5028
+    },
     "movement": {
       "canSkirmish": false,
       "canRun": false
@@ -4691,7 +4697,9 @@
       "category": "Siege Engine",
       "tier": 2
     },
-    "entities": {},
+    "entities": {
+      "totalHealth": 4356
+    },
     "movement": {
       "canSkirmish": false,
       "canRun": false

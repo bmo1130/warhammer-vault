@@ -1,5 +1,7 @@
 # HP 가설 판별용 최소 표본 선정 — 2026-10-03
 
+> 이 문서는 5종 기반의 과거 조사/측정 전 예측이다. 신규 4종 실측과 H1–H4 재평가는 [ARTILLERY_VEHICLE_FOLLOWUP.md](./ARTILLERY_VEHICLE_FOLLOWUP.md)를 참조한다. 현재 직접 runtime HP는 9종이며 기존 숫자 예측은 보존한다.
+
 Tier 1은 **Field Trebuchets + Screaming Skull Catapults**다. Tier 2는 조건부 **Plagueclaw Catapults + Doom-Flayers**다. 총 4종 중 첫 1종만으로 아래 네 engine-only 확장 가설을 구분할 수 있고, 두 번째는 다른 engine HP 값에서 교차 검증한다. 이 선정만으로 WH3 범용 HP 규칙을 확정할 수는 없다.
 
 이번 작업은 static 조사·후보 선정이다. 실제 측정/게임 실행/새 runtime evidence/인게임 작업을 요구하는 코드·workflow 변경이 없다. Production 101 / Sample 5 / 직접 ULTRA HP 5 / 공석 96, HP policy와 모든 기존 evidence를 유지한다. 본 문서의 숫자는 **미검증 예측**이며 admission 입력이 아니다.

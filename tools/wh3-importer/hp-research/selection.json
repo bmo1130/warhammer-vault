@@ -2,7 +2,7 @@
   "purpose": "RESEARCH_SAMPLE_SELECTION_ONLY",
   "productionEligible": false,
   "baselineCommit": "88e11e5cb1c121929ae6a582e17863a844ecb34d",
-  "sourceResearchSha256": "e161336639c98b7346ac7c9985bacb24215013328adc420f77964c6a4ee165d2",
+  "sourceResearchSha256": "cde3a364aee6b4ca0bcad74cfb83ff4c9509f06e98a181614abd111a7a8cbfa3",
   "staticSnapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
   "hypotheses": {
     "engineOnlyExtensions": [

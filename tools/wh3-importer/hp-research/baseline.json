@@ -22,7 +22,7 @@
     {
       "file": "src/data/unitHpAdmissions.json",
       "hashMode": "BYTES",
-      "sha256": "571fac38fcf84504f975b530aa2e3c4956edd197aa6a15b5653105cdc6651628"
+      "sha256": "b7430b1b0845e4a438c8b389b081581021d5dc8cde94a3beeb56d1ea12700ae6"
     },
     {
       "file": "src/data/unitSharedIdentities.json",
@@ -32,7 +32,7 @@
     {
       "file": "src/data/units.json",
       "hashMode": "BYTES",
-      "sha256": "68661de31d19c1660949fa0196422a4b59cdff26d7fba2f7ec70b84a324a45e9"
+      "sha256": "a61b96fbfbf204b43f3d8583c3c771adfbf0b2b948919998fd95c115b65c0057"
     },
     {
       "file": "tools/wh3-importer/hp-policy/inputs/dread-saurian-ultra.log",
@@ -62,12 +62,12 @@
     {
       "file": "tools/wh3-importer/hp-policy/manifest.json",
       "hashMode": "BYTES",
-      "sha256": "49630e6a9dda197941c6aded249c0e84a4c1c7595a42cfe94e3c6e2dd1a29d50"
+      "sha256": "c8b11f5f8cde49ff643c4046b223802f5ad075170d86d81d8728eeff598c6474"
     },
     {
       "file": "tools/wh3-importer/hp-policy/overlay.cjs",
       "hashMode": "LF_TEXT",
-      "sha256": "fedbe19c9c7e495e0c27e0c99b80b262d97ff10650ed5dc1f56783248017ea24"
+      "sha256": "42a622c77cd9eec4311eb75cfb69b69935dd385369fe75332daf2852f3504ad5"
     },
     {
       "file": "tools/wh3-importer/hp-policy/policy.mjs",
@@ -77,7 +77,7 @@
     {
       "file": "tools/wh3-importer/hp-policy/review.json",
       "hashMode": "BYTES",
-      "sha256": "be22e2048618991e6afd9a1a023bf0d92f9521c757e06a561cc3dcfac30f65fe"
+      "sha256": "fcd600c1c6698ee324a6a142731ae2ee93813b08701b0993bcbb6921ca8ba5e9"
     },
     {
       "file": "tools/wh3-importer/hp-policy/semantic-fixtures.json",
@@ -164,5 +164,8 @@
       "hashMode": "LF_TEXT",
       "sha256": "324225c5d1d231cce1c0c4300ff517fb03f805d1f6e494efab5e73f2dc0c65d3"
     }
-  ]
+  ],
+  "currentHpPresent": 9,
+  "guardUpdatedFromCommit": "6428d93e3d28622b64d8e6547ff5862b1d9e9d56",
+  "guardNote": "Authorized four DIRECT_ULTRA_RUNTIME HP projections only; historical five-case cohort remains pinned by five-unit-manifest.json."
 }

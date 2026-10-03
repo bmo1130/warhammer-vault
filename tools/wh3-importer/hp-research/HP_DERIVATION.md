@@ -1,5 +1,7 @@
 # WH3 static HP 조사 — 2026-10-03
 
+> 이 문서는 5종 기반의 과거 조사/측정 전 예측이다. 신규 4종 실측과 H1–H4 재평가는 [ARTILLERY_VEHICLE_FOLLOWUP.md](./ARTILLERY_VEHICLE_FOLLOWUP.md)를 참조한다. 현재 직접 runtime HP는 9종이며 기존 숫자 예측은 보존한다.
+
 5개 실제 ULTRA capture의 HealthMax를 모두 재현하는 **계산 후보**를 찾았다. 그러나 현재 자료만으로 static field의 기여도·component multiplicity·전체 catalog의 ULTRA count mapping을 유일하게 결정할 수 없다. 수치 일치와 의미 확정을 구분하며, 새 Production HP 및 static admission은 없다.
 
 기준 commit: `69f23ddf001222915087a09e094dea68c53868b9`. Production 101 / Sample 5, 직접 runtime HP 5 / 공석 96, 기존 HP policy와 MEDIUM evidence를 보존한다.

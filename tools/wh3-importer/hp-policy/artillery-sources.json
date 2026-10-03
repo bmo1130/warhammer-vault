@@ -1,0 +1,2602 @@
+{
+  "format": "warhammer-vault-partial-review-source-v1",
+  "sourceProjection": [
+    {
+      "file": "tools/wh3-importer/expansion-batch-02/sources.json",
+      "bytesSha256": "c46bdabe6a496d4f3444b9fd3fe0d8b5e200c7a21c00dc6889e9fd98679a260c",
+      "compactSha256": "749983d2749ab17a85bd989245c7919cd5bd9a1478cba235548a699b4f44ab8d",
+      "expandedSha256": "27dc903fc231c84f4e9a7bb197ff99a3fc104c84756b8748b597d2ec7a3aadd6"
+    },
+    {
+      "file": "tools/wh3-importer/expansion-batch-03/sources.json",
+      "bytesSha256": "613cc064d33e807b402129ccd6697dfba6428c07b39a1b0c9de9f55b727fe84f",
+      "compactSha256": "3859702f4598c083291ffa4816c7ca880ddd7909ac20dcc7fc11e88579bcecfe",
+      "expandedSha256": "ae5df25d0a9787cf0e2da4a563ba7bf838ace9576b0ae08999841c4850547eb5"
+    }
+  ],
+  "schemas": [
+    {
+      "table": "main_units_tables",
+      "version": 7,
+      "fields": [
+        {
+          "name": "additional_building_requirement",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": [
+            "building_levels",
+            "level_name"
+          ]
+        },
+        {
+          "name": "campaign_cap",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "caste",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "unit_castes",
+            "caste"
+          ]
+        },
+        {
+          "name": "create_time",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "is_naval",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "land_unit",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "land_units",
+            "key"
+          ]
+        },
+        {
+          "name": "num_men",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "multiplayer_cap",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "multiplayer_cost",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "naval_unit",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": [
+            "naval_units",
+            "key"
+          ]
+        },
+        {
+          "name": "num_ships",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "min_men_per_ship",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "max_men_per_ship",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "recruitment_cost",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "unit",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": null
+        },
+        {
+          "name": "upkeep_cost",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "weight",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": [
+            "unit_weights",
+            "key"
+          ]
+        },
+        {
+          "name": "resource_requirement",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": [
+            "resources",
+            "key"
+          ]
+        },
+        {
+          "name": "special_edition_mask",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "in_encyclopedia",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "audio_voiceover_culture",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "audio_voiceover_cultures",
+            "name"
+          ]
+        },
+        {
+          "name": "ui_unit_group_land",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "ui_unit_groupings",
+            "key"
+          ]
+        },
+        {
+          "name": "tier",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "is_high_threat",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "porthole_camera",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "unit_porthole_camera_settings",
+            "key"
+          ]
+        },
+        {
+          "name": "mount",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": [
+            "campaign_mounts",
+            "model"
+          ]
+        },
+        {
+          "name": "use_hitpoints_in_campaign",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "porthole_composite_scene",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "melee_cp",
+          "field_type": "F32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "missile_cp",
+          "field_type": "F32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "can_siege",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "audio_voiceover_culture_override",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "audio_voiceover_cultures",
+            "name"
+          ]
+        },
+        {
+          "name": "restrict_xp_gain_in_campaign",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "audio_voiceover_actor_group",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "audio_vo_actor_groups",
+            "name"
+          ]
+        },
+        {
+          "name": "food_cost",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "has_spoken_vo",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "is_monstrous",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "multiplayer_qb_cap",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "vo_is_dragon",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "vo_is_dinosaur",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "optional_ui_element",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "barrier_health",
+          "field_type": "F32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "can_be_bribed",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "point_allowance_weight",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "is_renown",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        }
+      ],
+      "localisedFields": []
+    },
+    {
+      "table": "land_units_tables",
+      "version": 54,
+      "fields": [
+        {
+          "name": "accuracy",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "armour",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "unit_armour_types",
+            "key"
+          ]
+        },
+        {
+          "name": "campaign_action_points",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "category",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "unit_category",
+            "key"
+          ]
+        },
+        {
+          "name": "charge_bonus",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "class",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "unit_class",
+            "key"
+          ]
+        },
+        {
+          "name": "historical_description_text",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "unit_description_historical_texts",
+            "key"
+          ]
+        },
+        {
+          "name": "key",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": null
+        },
+        {
+          "name": "man_animation",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": [
+            "battle_animations_table",
+            "key"
+          ]
+        },
+        {
+          "name": "man_entity",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "battle_entities",
+            "key"
+          ]
+        },
+        {
+          "name": "melee_attack",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "melee_defence",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "morale",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "bonus_hit_points",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "mount",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": [
+            "mounts",
+            "key"
+          ]
+        },
+        {
+          "name": "num_mounts",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "primary_melee_weapon",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "melee_weapons",
+            "key"
+          ]
+        },
+        {
+          "name": "primary_missile_weapon",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": [
+            "missile_weapons",
+            "key"
+          ]
+        },
+        {
+          "name": "rank_depth",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "shield",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "unit_shield_types",
+            "key"
+          ]
+        },
+        {
+          "name": "short_description_text",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "unit_description_short_texts",
+            "key"
+          ]
+        },
+        {
+          "name": "spacing",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "unit_spacings",
+            "key"
+          ]
+        },
+        {
+          "name": "training_level",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "unit_training_level_enum",
+            "key"
+          ]
+        },
+        {
+          "name": "articulated_record",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": [
+            "land_unit_articulated_vehicles",
+            "key"
+          ]
+        },
+        {
+          "name": "engine",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": [
+            "battlefield_engines",
+            "key"
+          ]
+        },
+        {
+          "name": "is_male",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "visibility_spotting_range_min",
+          "field_type": "F32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "visibility_spotting_range_max",
+          "field_type": "F32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "attribute_group",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": [
+            "unit_attributes_groups",
+            "group_name"
+          ]
+        },
+        {
+          "name": "spot_dist_tree",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "spot_dist_scrub",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "reload",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "selection_vo",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "audio_vo_selected_switches",
+            "key"
+          ]
+        },
+        {
+          "name": "selected_vo_secondary",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "audio_vo_selected_switches",
+            "key"
+          ]
+        },
+        {
+          "name": "selected_vo_tertiary",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "audio_vo_selected_switches",
+            "key"
+          ]
+        },
+        {
+          "name": "hiding_scalar",
+          "field_type": "F32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "ground_stat_effect_group",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": [
+            "ground_type_stat_effect_groups",
+            "group_name"
+          ]
+        },
+        {
+          "name": "secondary_ammo",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "primary_ammo",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "damage_mod_flame",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "damage_mod_magic",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "num_engines",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "damage_mod_physical",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "damage_mod_missile",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "damage_mod_all",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "ai_usage_group",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "ai_usage_groups",
+            "key"
+          ]
+        },
+        {
+          "name": "can_skirmish",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "can_brace",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "mounted_draughts",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "sync_locomotion",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "capture_tier",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "capture_tier_to_power",
+            "key"
+          ]
+        },
+        {
+          "name": "key_building_capture_tier",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "capture_tier_to_power",
+            "key"
+          ]
+        },
+        {
+          "name": "score_capture_tier",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "capture_tier_to_power",
+            "key"
+          ]
+        },
+        {
+          "name": "harmony_amplification_type",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": [
+            "harmony_amplification_types",
+            "key"
+          ]
+        },
+        {
+          "name": "first_person",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": [
+            "first_person_engines",
+            "key"
+          ]
+        },
+        {
+          "name": "ar_unit_category",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": [
+            "autoresolver_unit_group_categories_enums",
+            "key"
+          ]
+        },
+        {
+          "name": "healing_power",
+          "field_type": "F32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "spell_mastery",
+          "field_type": "F32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "infinite_secondary_ammo",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "default_guard_mode",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        }
+      ],
+      "localisedFields": [
+        {
+          "name": "onscreen_name",
+          "field_type": "StringU8",
+          "is_key": false,
+          "default_value": null,
+          "is_filename": false,
+          "filename_relative_path": null,
+          "is_reference": null,
+          "lookup": null,
+          "description": "",
+          "ca_order": -1,
+          "is_bitwise": 0,
+          "enum_values": {},
+          "is_part_of_colour": null
+        },
+        {
+          "name": "concealed_name",
+          "field_type": "StringU8",
+          "is_key": false,
+          "default_value": null,
+          "is_filename": false,
+          "filename_relative_path": null,
+          "is_reference": null,
+          "lookup": null,
+          "description": "This name is used in battle for enemy units when it is present (for goblin fanatics for example will show them as regular goblins, but want player who has these units to tell difference)",
+          "ca_order": -1,
+          "is_bitwise": 0,
+          "enum_values": {},
+          "is_part_of_colour": null
+        }
+      ]
+    },
+    {
+      "table": "battle_entities_tables",
+      "version": 39,
+      "fields": [
+        {
+          "name": "key",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": null
+        },
+        {
+          "name": "type",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "battle_entities_types_enum",
+            "key"
+          ]
+        },
+        {
+          "name": "walk_speed",
+          "field_type": "F32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "run_speed",
+          "field_type": "F32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "acceleration",
+          "field_type": "F32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "deceleration",
+          "field_type": "F32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "charge_speed",
+          "field_type": "F32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "charge_distance_commence_run",
+          "field_type": "F32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "charge_distance_adopt_charge_pose",
+          "field_type": "F32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "charge_distance_pick_target",
+          "field_type": "F32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "radius",
+          "field_type": "F32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "shape",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "battle_entities_shape_enum",
+            "key"
+          ]
+        },
+        {
+          "name": "radii_ratio",
+          "field_type": "F32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "mass",
+          "field_type": "F32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "height",
+          "field_type": "F32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "fire_arc_close",
+          "field_type": "F32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "turn_speed",
+          "field_type": "F32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "hit_points",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "allow_turn_to_move_anim",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "allow_static_turn_anim",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "min_turning_speed",
+          "field_type": "F32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "fly_speed",
+          "field_type": "F32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "flying_charge_speed",
+          "field_type": "F32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "size",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "battle_entities_size_enums",
+            "key"
+          ]
+        },
+        {
+          "name": "strafe_speed",
+          "field_type": "F32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "gradient_strategy",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "battle_entities_gradient_strategy_enums",
+            "key"
+          ]
+        },
+        {
+          "name": "audio_entity_type",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "audio_entity_types",
+            "key"
+          ]
+        },
+        {
+          "name": "combat_reaction_radius",
+          "field_type": "F32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "entity_effects",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "battle_entity_effects_junctions",
+            "key"
+          ]
+        },
+        {
+          "name": "hit_reactions_ignore_chance",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "knock_interrupts_ignore_chance",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "soft_collision_offset_z",
+          "field_type": "F32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "can_climb_ladder_and_stair_pipes",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "projectile_intersection_radius_ratio",
+          "field_type": "F32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "projectile_penetration_speed_change",
+          "field_type": "F32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "projectile_penetration_resistance",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "aura_vfx",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "porthole_camera",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": [
+            "unit_porthole_camera_settings",
+            "key"
+          ]
+        },
+        {
+          "name": "min_tracking_ratio",
+          "field_type": "F32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "max_tracking_ratio",
+          "field_type": "F32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "vfx_filter_id",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "can_cast_projectile",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "porthole_composite_scene",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "has_blood",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "can_dismember",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "combat_camera_shake",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": [
+            "battle_camera_shake_parameters",
+            "key"
+          ]
+        },
+        {
+          "name": "dismember_head_alive_hp_ratio",
+          "field_type": "F32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "dismember_arms_alive_hp_ratio",
+          "field_type": "F32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "jump_attack_chance",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "locomotion_constants",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "battle_entity_locomotion_constants",
+            "key"
+          ]
+        },
+        {
+          "name": "enable_engine_crew_turn_in_movement_direction",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "dealt_collision_knocked_flying_threshold_multiplier",
+          "field_type": "F32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "dealt_collision_knocked_down_threshold_multiplier",
+          "field_type": "F32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "dealt_collision_knocked_back_threshold_multiplier",
+          "field_type": "F32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "anim_lod_distance_multiplier",
+          "field_type": "F32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "size_for_animation_lod",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": [
+            "battle_entities_size_enums",
+            "key"
+          ]
+        },
+        {
+          "name": "leaves_collision_when_dies",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "stop_before_turn",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        }
+      ],
+      "localisedFields": []
+    },
+    {
+      "table": "battlefield_engines_tables",
+      "version": 24,
+      "fields": [
+        {
+          "name": "destroyed_model",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "destruction_animation",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": [
+            "warscape_animated",
+            "key"
+          ]
+        },
+        {
+          "name": "engine_type",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "gun_types_enum",
+            "key"
+          ]
+        },
+        {
+          "name": "gun_animation_table",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "battle_animations_table",
+            "key"
+          ]
+        },
+        {
+          "name": "key",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": null
+        },
+        {
+          "name": "missile_weapon",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": [
+            "missile_weapons",
+            "key"
+          ]
+        },
+        {
+          "name": "model",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "warscape_animated",
+            "key"
+          ]
+        },
+        {
+          "name": "battle_entity",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "battle_entities",
+            "key"
+          ]
+        },
+        {
+          "name": "asset_folder",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "variant",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": [
+            "variants",
+            "variant_name"
+          ]
+        },
+        {
+          "name": "draught_attachment_point",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "tech_folder",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "rider_attachment_point",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "destruct_model",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "destruct_anim",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "destruct_meta",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "audio_armour_type",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": [
+            "audio_armour_types",
+            "key"
+          ]
+        },
+        {
+          "name": "riders_shoot_behaviour",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "battlefield_engines_riders_shoot_behaviours",
+            "key"
+          ]
+        },
+        {
+          "name": "scale",
+          "field_type": "F32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "crew_reserve_distance_offset",
+          "field_type": "F32",
+          "is_key": false,
+          "is_reference": null
+        }
+      ],
+      "localisedFields": []
+    }
+  ],
+  "candidates": [
+    {
+      "slug": "expansion-02-14",
+      "identity": {
+        "internalId": "ca_unit_wh_main_brt_art_field_trebuchet",
+        "caMainUnitKey": "wh_main_brt_art_field_trebuchet",
+        "caLandUnitKey": "wh_main_brt_art_field_trebuchet",
+        "primaryCatalogGroup": "wh_main_group_bretonnia",
+        "candidateMilitaryGroups": [
+          "wh2_main_rogue_bernhoffs_brigands",
+          "wh_main_group_bretonnia"
+        ]
+      },
+      "source": {
+        "reference": "generated/wh3/expansion-batch-02/units/expansion-02-14.result.json",
+        "sha256": "50b70171db5cf94c6f512c7a4834a391e1c87551884df39b33548d5883192698"
+      },
+      "dump": {
+        "format": "warhammer-vault-wh3-raw-v1",
+        "sourceKind": "ca-pack",
+        "unit": {
+          "displayName": "Field Trebuchets",
+          "caKey": "wh_main_brt_art_field_trebuchet",
+          "gameVersion": "9.0.2.0",
+          "extractedAt": "2026-10-02T06:31:43.695Z"
+        },
+        "provenance": {
+          "sourceKind": "ca-pack",
+          "gameVersion": "9.0.2.0",
+          "gameVersionSource": "Warhammer3.exe ProductVersion resource (not inferred from a wiki/Steam build)",
+          "rpfmVersion": "5.1.0",
+          "mcpServerInfo": {
+            "name": "rmcp",
+            "version": "3.1.0"
+          },
+          "schemaFormatVersion": 5,
+          "schemaSha256": "5d628a0167b34a096752c5c21acd16493834a987c80dc9f02364617f796ba2a4",
+          "packs": [
+            {
+              "file_name": "db.pack",
+              "pfh_version": "PFH5",
+              "pfh_file_type": "Release",
+              "bitmask": "",
+              "compress": "Zstd",
+              "timestamp": 0,
+              "sizeBytes": 8663017,
+              "sha256": "d0fafac984b3985ec47cec0ea957591424f1077e52ef61941dbf2dc46e6cf723"
+            },
+            {
+              "file_name": "local_en.pack",
+              "pfh_version": "PFH5",
+              "pfh_file_type": "Release",
+              "bitmask": "",
+              "compress": "Zstd",
+              "timestamp": 1645478083,
+              "sizeBytes": 33435496,
+              "sha256": "f979527a5aaecf293a4e66afc25ed6c760e4107ef4920b73bd56e10e2652fd6a"
+            }
+          ],
+          "accessMethod": "RPFM MCP / decode_packed_file source=PackFile, directly opened CA Release/Patch packs",
+          "extractionSource": "Direct PackFile decode; no dependency-cache rows, no mod merge, no Unit normalization"
+        },
+        "rootRow": "main_units_tables:ec2c71155b40c8fed0c5",
+        "rows": [
+          {
+            "id": "main_units_tables:ec2c71155b40c8fed0c5",
+            "table": "main_units_tables",
+            "key": {
+              "unit": "wh_main_brt_art_field_trebuchet"
+            },
+            "sourcePack": "db.pack",
+            "path": "db/main_units_tables/data__",
+            "tableVersion": 7,
+            "row": {
+              "additional_building_requirement": "",
+              "campaign_cap": -1,
+              "caste": "warmachine",
+              "create_time": 1,
+              "is_naval": false,
+              "land_unit": "wh_main_brt_art_field_trebuchet",
+              "num_men": 44,
+              "multiplayer_cap": 0,
+              "multiplayer_cost": 600,
+              "naval_unit": "wh_main_shp_transport",
+              "num_ships": 1,
+              "min_men_per_ship": 1,
+              "max_men_per_ship": 44,
+              "recruitment_cost": 650,
+              "unit": "wh_main_brt_art_field_trebuchet",
+              "upkeep_cost": 163,
+              "weight": "very_heavy",
+              "resource_requirement": "",
+              "special_edition_mask": 0,
+              "in_encyclopedia": true,
+              "audio_voiceover_culture": "wh_main_vo_culture_Bretonnian",
+              "ui_unit_group_land": "catapult",
+              "tier": 2,
+              "is_high_threat": false,
+              "porthole_camera": "emp_soldier_15_degrees",
+              "mount": "",
+              "use_hitpoints_in_campaign": false,
+              "porthole_composite_scene": "",
+              "melee_cp": 70,
+              "missile_cp": 630,
+              "can_siege": true,
+              "audio_voiceover_culture_override": "vo_culture_None",
+              "restrict_xp_gain_in_campaign": false,
+              "audio_voiceover_actor_group": "wh_main_vo_actor_Bretonnian_Infantry",
+              "food_cost": 0,
+              "has_spoken_vo": true,
+              "is_monstrous": false,
+              "multiplayer_qb_cap": 6,
+              "vo_is_dragon": false,
+              "vo_is_dinosaur": false,
+              "optional_ui_element": "",
+              "barrier_health": 0,
+              "can_be_bribed": true,
+              "point_allowance_weight": 1,
+              "is_renown": false
+            },
+            "sourcePackPath": "db.pack"
+          },
+          {
+            "id": "land_units_tables:936e9c9afe6a9ca1ddba",
+            "table": "land_units_tables",
+            "key": {
+              "key": "wh_main_brt_art_field_trebuchet"
+            },
+            "sourcePack": "db.pack",
+            "path": "db/land_units_tables/data__",
+            "tableVersion": 54,
+            "row": {
+              "accuracy": 10,
+              "armour": "wh2_main_leather_15",
+              "campaign_action_points": 2100,
+              "category": "artillery",
+              "charge_bonus": 5,
+              "class": "art_fld",
+              "historical_description_text": "wh_main_unit_long_text_brt_field_trebuchet",
+              "key": "wh_main_brt_art_field_trebuchet",
+              "man_animation": "hu1_empire_hammer",
+              "man_entity": "wh2_dlc16_infantry_standard_crew_blood_dismembers",
+              "melee_attack": 10,
+              "melee_defence": 6,
+              "morale": 40,
+              "bonus_hit_points": 45,
+              "mount": "",
+              "num_mounts": 0,
+              "primary_melee_weapon": "wh_main_brt_hammer",
+              "primary_missile_weapon": "",
+              "rank_depth": 5,
+              "shield": "none",
+              "short_description_text": "wh_main_unit_short_text_brt_field_trebuchet",
+              "spacing": "wh_main_artillery",
+              "training_level": "trained",
+              "articulated_record": "",
+              "engine": "wh_main_brt_art_field_trebuchet",
+              "is_male": true,
+              "visibility_spotting_range_min": 40,
+              "visibility_spotting_range_max": 1500,
+              "attribute_group": "wh_main_brt_art_field_trebuchet",
+              "spot_dist_tree": 60,
+              "spot_dist_scrub": 80,
+              "reload": 0,
+              "selection_vo": "vo_sel_bretonnian_field_trebuchet",
+              "selected_vo_secondary": "vo_sel_artillery",
+              "selected_vo_tertiary": "vo_sel_culture",
+              "hiding_scalar": 1,
+              "ground_stat_effect_group": "small",
+              "secondary_ammo": 0,
+              "primary_ammo": 22,
+              "damage_mod_flame": 0,
+              "damage_mod_magic": 0,
+              "num_engines": 4,
+              "damage_mod_physical": 0,
+              "damage_mod_missile": 0,
+              "damage_mod_all": 0,
+              "ai_usage_group": "ranged_indirect_arty",
+              "can_skirmish": false,
+              "can_brace": false,
+              "mounted_draughts": false,
+              "sync_locomotion": false,
+              "capture_tier": "medium",
+              "key_building_capture_tier": "medium",
+              "score_capture_tier": "domination_artillery",
+              "harmony_amplification_type": "",
+              "first_person": "brt_field_trebuchet",
+              "ar_unit_category": "artillery",
+              "healing_power": 1,
+              "spell_mastery": 1,
+              "infinite_secondary_ammo": false,
+              "default_guard_mode": false
+            },
+            "sourcePackPath": "db.pack"
+          },
+          {
+            "id": "battle_entities_tables:c082c3a7d4ecadca012b",
+            "table": "battle_entities_tables",
+            "key": {
+              "key": "wh2_dlc16_infantry_standard_crew_blood_dismembers"
+            },
+            "sourcePack": "db.pack",
+            "path": "db/battle_entities_tables/data__",
+            "tableVersion": 39,
+            "row": {
+              "key": "wh2_dlc16_infantry_standard_crew_blood_dismembers",
+              "type": "man",
+              "walk_speed": 2,
+              "run_speed": 3,
+              "acceleration": 3,
+              "deceleration": 4,
+              "charge_speed": 3.8,
+              "charge_distance_commence_run": 30,
+              "charge_distance_adopt_charge_pose": 25,
+              "charge_distance_pick_target": 25,
+              "radius": 0.65,
+              "shape": "circle",
+              "radii_ratio": 1,
+              "mass": 100,
+              "height": 1.8,
+              "fire_arc_close": 60,
+              "turn_speed": 120,
+              "hit_points": 8,
+              "allow_turn_to_move_anim": true,
+              "allow_static_turn_anim": true,
+              "min_turning_speed": 0,
+              "fly_speed": 0,
+              "flying_charge_speed": 0,
+              "size": "small",
+              "strafe_speed": 1,
+              "gradient_strategy": "ignore",
+              "audio_entity_type": "wh_human_male",
+              "combat_reaction_radius": 0,
+              "entity_effects": "infantry_light_effects",
+              "hit_reactions_ignore_chance": 0,
+              "knock_interrupts_ignore_chance": 0,
+              "soft_collision_offset_z": 0,
+              "can_climb_ladder_and_stair_pipes": true,
+              "projectile_intersection_radius_ratio": 1,
+              "projectile_penetration_speed_change": 0.8999999,
+              "projectile_penetration_resistance": 1,
+              "aura_vfx": "",
+              "porthole_camera": "",
+              "min_tracking_ratio": 0.5,
+              "max_tracking_ratio": 1.6,
+              "vfx_filter_id": 0,
+              "can_cast_projectile": false,
+              "porthole_composite_scene": "",
+              "has_blood": true,
+              "can_dismember": true,
+              "combat_camera_shake": "wh_main_unit_combat",
+              "dismember_head_alive_hp_ratio": -1,
+              "dismember_arms_alive_hp_ratio": -1,
+              "jump_attack_chance": 20,
+              "locomotion_constants": "small_entity",
+              "enable_engine_crew_turn_in_movement_direction": false,
+              "dealt_collision_knocked_flying_threshold_multiplier": 1,
+              "dealt_collision_knocked_down_threshold_multiplier": 1,
+              "dealt_collision_knocked_back_threshold_multiplier": 1,
+              "anim_lod_distance_multiplier": 1,
+              "size_for_animation_lod": "",
+              "leaves_collision_when_dies": false,
+              "stop_before_turn": false
+            },
+            "sourcePackPath": "db.pack"
+          },
+          {
+            "id": "battlefield_engines_tables:65629a2f3f18974424dc",
+            "table": "battlefield_engines_tables",
+            "key": {
+              "key": "wh_main_brt_art_field_trebuchet"
+            },
+            "sourcePack": "db.pack",
+            "path": "db/battlefield_engines_tables/data__",
+            "tableVersion": 24,
+            "row": {
+              "destroyed_model": "warmachines\\engines\\brt_trebuchet\\brt_trebuchet_01_destroyed.rigid_model_v2",
+              "destruction_animation": "brt_trebuchet_destruct",
+              "engine_type": "Generic_3_Crew",
+              "gun_animation_table": "wm_trebuchet01",
+              "key": "wh_main_brt_art_field_trebuchet",
+              "missile_weapon": "wh_main_brt_trebuchet",
+              "model": "brt_trebuchet",
+              "battle_entity": "wh_main_brt_art_trebuchet",
+              "asset_folder": "",
+              "variant": "",
+              "draught_attachment_point": "",
+              "tech_folder": "",
+              "rider_attachment_point": "",
+              "destruct_model": "",
+              "destruct_anim": "",
+              "destruct_meta": "",
+              "audio_armour_type": "",
+              "riders_shoot_behaviour": "all_riders_shooting",
+              "scale": 1,
+              "crew_reserve_distance_offset": 0
+            },
+            "sourcePackPath": "db.pack"
+          },
+          {
+            "id": "battle_entities_tables:41e22987aa7315020b3d",
+            "table": "battle_entities_tables",
+            "key": {
+              "key": "wh_main_brt_art_trebuchet"
+            },
+            "sourcePack": "db.pack",
+            "path": "db/battle_entities_tables/data__",
+            "tableVersion": 39,
+            "row": {
+              "key": "wh_main_brt_art_trebuchet",
+              "type": "artillery",
+              "walk_speed": 2,
+              "run_speed": 2,
+              "acceleration": 2,
+              "deceleration": 3,
+              "charge_speed": 2,
+              "charge_distance_commence_run": 30,
+              "charge_distance_adopt_charge_pose": 20,
+              "charge_distance_pick_target": 20,
+              "radius": 3,
+              "shape": "capsule",
+              "radii_ratio": 0.65,
+              "mass": 2000,
+              "height": 3.8,
+              "fire_arc_close": 50,
+              "turn_speed": 45,
+              "hit_points": 500,
+              "allow_turn_to_move_anim": false,
+              "allow_static_turn_anim": false,
+              "min_turning_speed": 0,
+              "fly_speed": 0,
+              "flying_charge_speed": 0,
+              "size": "large",
+              "strafe_speed": 1.2,
+              "gradient_strategy": "rotation",
+              "audio_entity_type": "wh_war_machine_wood_medium",
+              "combat_reaction_radius": 0,
+              "entity_effects": "artillery_effects",
+              "hit_reactions_ignore_chance": 0,
+              "knock_interrupts_ignore_chance": 0,
+              "soft_collision_offset_z": 0,
+              "can_climb_ladder_and_stair_pipes": false,
+              "projectile_intersection_radius_ratio": 0.8999999,
+              "projectile_penetration_speed_change": 0.7,
+              "projectile_penetration_resistance": 4,
+              "aura_vfx": "",
+              "porthole_camera": "",
+              "min_tracking_ratio": 0.5,
+              "max_tracking_ratio": 1.4499999,
+              "vfx_filter_id": 0,
+              "can_cast_projectile": false,
+              "porthole_composite_scene": "composite_scene\\porthole\\trebuchet_porthole_01.csc",
+              "has_blood": false,
+              "can_dismember": false,
+              "combat_camera_shake": "wh_main_unit_combat",
+              "dismember_head_alive_hp_ratio": -1,
+              "dismember_arms_alive_hp_ratio": -1,
+              "jump_attack_chance": 20,
+              "locomotion_constants": "wheeled_entity",
+              "enable_engine_crew_turn_in_movement_direction": true,
+              "dealt_collision_knocked_flying_threshold_multiplier": 1,
+              "dealt_collision_knocked_down_threshold_multiplier": 1,
+              "dealt_collision_knocked_back_threshold_multiplier": 1,
+              "anim_lod_distance_multiplier": 1,
+              "size_for_animation_lod": "",
+              "leaves_collision_when_dies": false,
+              "stop_before_turn": false
+            },
+            "sourcePackPath": "db.pack"
+          }
+        ],
+        "relationships": [
+          {
+            "from": "main_units_tables:ec2c71155b40c8fed0c5",
+            "field": "land_unit",
+            "to": "land_units_tables:936e9c9afe6a9ca1ddba",
+            "targetField": "key",
+            "value": "wh_main_brt_art_field_trebuchet",
+            "direction": "forward",
+            "evidence": "RPFM processed schema is_reference"
+          },
+          {
+            "from": "land_units_tables:936e9c9afe6a9ca1ddba",
+            "field": "man_entity",
+            "to": "battle_entities_tables:c082c3a7d4ecadca012b",
+            "targetField": "key",
+            "value": "wh2_dlc16_infantry_standard_crew_blood_dismembers",
+            "direction": "forward",
+            "evidence": "RPFM processed schema is_reference"
+          },
+          {
+            "from": "land_units_tables:936e9c9afe6a9ca1ddba",
+            "field": "engine",
+            "to": "battlefield_engines_tables:65629a2f3f18974424dc",
+            "targetField": "key",
+            "value": "wh_main_brt_art_field_trebuchet",
+            "direction": "forward",
+            "evidence": "RPFM processed schema is_reference"
+          },
+          {
+            "from": "battlefield_engines_tables:65629a2f3f18974424dc",
+            "field": "battle_entity",
+            "to": "battle_entities_tables:41e22987aa7315020b3d",
+            "targetField": "key",
+            "value": "wh_main_brt_art_trebuchet",
+            "direction": "forward",
+            "evidence": "RPFM processed schema is_reference"
+          }
+        ],
+        "schemaRefs": [
+          "main_units_tables:7",
+          "land_units_tables:54",
+          "battle_entities_tables:39",
+          "battlefield_engines_tables:24"
+        ]
+      }
+    },
+    {
+      "slug": "expansion-03-24",
+      "identity": {
+        "internalId": "ca_unit_wh2_dlc09_tmb_art_screaming_skull_catapult_0",
+        "caMainUnitKey": "wh2_dlc09_tmb_art_screaming_skull_catapult_0",
+        "caLandUnitKey": "wh2_dlc09_tmb_art_screaming_skull_catapult_0",
+        "primaryCatalogGroup": "wh2_dlc09_tomb_kings",
+        "candidateMilitaryGroups": [
+          "wh2_dlc09_tomb_kings",
+          "wh2_dlc09_tomb_kings_arkhan",
+          "wh3_dlc29_nag_group_undead_legions"
+        ]
+      },
+      "source": {
+        "reference": "generated/wh3/expansion-batch-03/units/expansion-03-24.result.json",
+        "sha256": "999f0d2be225f839263122a7059d2b4e567588d8c0db2838b4afacad61f2b6e0"
+      },
+      "dump": {
+        "format": "warhammer-vault-wh3-raw-v1",
+        "sourceKind": "ca-pack",
+        "unit": {
+          "displayName": "Screaming Skull Catapults",
+          "caKey": "wh2_dlc09_tmb_art_screaming_skull_catapult_0",
+          "gameVersion": "9.0.2.0",
+          "extractedAt": "2026-10-02T06:33:20.340Z"
+        },
+        "provenance": {
+          "sourceKind": "ca-pack",
+          "gameVersion": "9.0.2.0",
+          "gameVersionSource": "Warhammer3.exe ProductVersion resource (not inferred from a wiki/Steam build)",
+          "rpfmVersion": "5.1.0",
+          "mcpServerInfo": {
+            "name": "rmcp",
+            "version": "3.1.0"
+          },
+          "schemaFormatVersion": 5,
+          "schemaSha256": "5d628a0167b34a096752c5c21acd16493834a987c80dc9f02364617f796ba2a4",
+          "packs": [
+            {
+              "file_name": "db.pack",
+              "pfh_version": "PFH5",
+              "pfh_file_type": "Release",
+              "bitmask": "",
+              "compress": "Zstd",
+              "timestamp": 0,
+              "sizeBytes": 8663017,
+              "sha256": "d0fafac984b3985ec47cec0ea957591424f1077e52ef61941dbf2dc46e6cf723"
+            },
+            {
+              "file_name": "local_en.pack",
+              "pfh_version": "PFH5",
+              "pfh_file_type": "Release",
+              "bitmask": "",
+              "compress": "Zstd",
+              "timestamp": 1645478083,
+              "sizeBytes": 33435496,
+              "sha256": "f979527a5aaecf293a4e66afc25ed6c760e4107ef4920b73bd56e10e2652fd6a"
+            }
+          ],
+          "accessMethod": "RPFM MCP / decode_packed_file source=PackFile, directly opened CA Release/Patch packs",
+          "extractionSource": "Direct PackFile decode; no dependency-cache rows, no mod merge, no Unit normalization"
+        },
+        "rootRow": "main_units_tables:6346748384f16faa41c0",
+        "rows": [
+          {
+            "id": "main_units_tables:6346748384f16faa41c0",
+            "table": "main_units_tables",
+            "key": {
+              "unit": "wh2_dlc09_tmb_art_screaming_skull_catapult_0"
+            },
+            "sourcePack": "db.pack",
+            "path": "db/main_units_tables/data__",
+            "tableVersion": 7,
+            "row": {
+              "additional_building_requirement": "",
+              "campaign_cap": 0,
+              "caste": "warmachine",
+              "create_time": 1,
+              "is_naval": false,
+              "land_unit": "wh2_dlc09_tmb_art_screaming_skull_catapult_0",
+              "num_men": 44,
+              "multiplayer_cap": 0,
+              "multiplayer_cost": 800,
+              "naval_unit": "wh_main_shp_transport",
+              "num_ships": 1,
+              "min_men_per_ship": 1,
+              "max_men_per_ship": 44,
+              "recruitment_cost": 0,
+              "unit": "wh2_dlc09_tmb_art_screaming_skull_catapult_0",
+              "upkeep_cost": 0,
+              "weight": "very_heavy",
+              "resource_requirement": "",
+              "special_edition_mask": 0,
+              "in_encyclopedia": true,
+              "audio_voiceover_culture": "wh2_dlc09_vo_culture_Tomb_Kings",
+              "ui_unit_group_land": "catapult",
+              "tier": 2,
+              "is_high_threat": false,
+              "porthole_camera": "tmb_skeleton_warriors",
+              "mount": "",
+              "use_hitpoints_in_campaign": false,
+              "porthole_composite_scene": "",
+              "melee_cp": 80,
+              "missile_cp": 720,
+              "can_siege": true,
+              "audio_voiceover_culture_override": "wh2_dlc09_vo_culture_Tomb_Kings_Creature_Order_Giver",
+              "restrict_xp_gain_in_campaign": false,
+              "audio_voiceover_actor_group": "wh_main_vo_actor_default",
+              "food_cost": 0,
+              "has_spoken_vo": false,
+              "is_monstrous": false,
+              "multiplayer_qb_cap": 6,
+              "vo_is_dragon": false,
+              "vo_is_dinosaur": false,
+              "optional_ui_element": "",
+              "barrier_health": 0,
+              "can_be_bribed": true,
+              "point_allowance_weight": 1,
+              "is_renown": false
+            },
+            "sourcePackPath": "db.pack"
+          },
+          {
+            "id": "land_units_tables:c5a3d87980322dcd2f1f",
+            "table": "land_units_tables",
+            "key": {
+              "key": "wh2_dlc09_tmb_art_screaming_skull_catapult_0"
+            },
+            "sourcePack": "db.pack",
+            "path": "db/land_units_tables/data__",
+            "tableVersion": 54,
+            "row": {
+              "accuracy": 10,
+              "armour": "wh2_main_bone_20",
+              "campaign_action_points": 2100,
+              "category": "artillery",
+              "charge_bonus": 5,
+              "class": "art_fld",
+              "historical_description_text": "wh2_dlc09_tmb_art_screaming_skull_catapult",
+              "key": "wh2_dlc09_tmb_art_screaming_skull_catapult_0",
+              "man_animation": "hu1_tomb_skeleton_sword",
+              "man_entity": "wh2_dlc16_tmb_skeleton_crew",
+              "melee_attack": 10,
+              "melee_defence": 6,
+              "morale": 40,
+              "bonus_hit_points": 48,
+              "mount": "",
+              "num_mounts": 0,
+              "primary_melee_weapon": "wh2_dlc09_tmb_sword_short",
+              "primary_missile_weapon": "",
+              "rank_depth": 5,
+              "shield": "none",
+              "short_description_text": "wh2_dlc09_tmb_art_screaming_skull_catapult",
+              "spacing": "wh_main_artillery",
+              "training_level": "trained",
+              "articulated_record": "",
+              "engine": "wh2_dlc09_tmb_art_screaming_skull_catapult",
+              "is_male": true,
+              "visibility_spotting_range_min": 40,
+              "visibility_spotting_range_max": 1500,
+              "attribute_group": "wh2_dlc09_tmb_art_screaming_skull_catapult_0",
+              "spot_dist_tree": 60,
+              "spot_dist_scrub": 80,
+              "reload": 0,
+              "selection_vo": "vo_sel_bretonnian_field_trebuchet",
+              "selected_vo_secondary": "vo_sel_artillery",
+              "selected_vo_tertiary": "vo_sel_culture",
+              "hiding_scalar": 1,
+              "ground_stat_effect_group": "small",
+              "secondary_ammo": 0,
+              "primary_ammo": 22,
+              "damage_mod_flame": 0,
+              "damage_mod_magic": 0,
+              "num_engines": 4,
+              "damage_mod_physical": 0,
+              "damage_mod_missile": 0,
+              "damage_mod_all": 0,
+              "ai_usage_group": "ranged_indirect_arty_undead",
+              "can_skirmish": false,
+              "can_brace": false,
+              "mounted_draughts": false,
+              "sync_locomotion": false,
+              "capture_tier": "medium",
+              "key_building_capture_tier": "medium",
+              "score_capture_tier": "domination_artillery",
+              "harmony_amplification_type": "",
+              "first_person": "dwf_grudge_thrower",
+              "ar_unit_category": "artillery",
+              "healing_power": 1,
+              "spell_mastery": 1,
+              "infinite_secondary_ammo": false,
+              "default_guard_mode": false
+            },
+            "sourcePackPath": "db.pack"
+          },
+          {
+            "id": "battle_entities_tables:994ed7922c4777f71292",
+            "table": "battle_entities_tables",
+            "key": {
+              "key": "wh2_dlc16_tmb_skeleton_crew"
+            },
+            "sourcePack": "db.pack",
+            "path": "db/battle_entities_tables/data__",
+            "tableVersion": 39,
+            "row": {
+              "key": "wh2_dlc16_tmb_skeleton_crew",
+              "type": "man",
+              "walk_speed": 2.2,
+              "run_speed": 2.8,
+              "acceleration": 2,
+              "deceleration": 3,
+              "charge_speed": 3.1,
+              "charge_distance_commence_run": 30,
+              "charge_distance_adopt_charge_pose": 25,
+              "charge_distance_pick_target": 25,
+              "radius": 0.6,
+              "shape": "circle",
+              "radii_ratio": 1,
+              "mass": 80,
+              "height": 1.8,
+              "fire_arc_close": 60,
+              "turn_speed": 120,
+              "hit_points": 8,
+              "allow_turn_to_move_anim": true,
+              "allow_static_turn_anim": true,
+              "min_turning_speed": 0,
+              "fly_speed": 0,
+              "flying_charge_speed": 0,
+              "size": "small",
+              "strafe_speed": 1,
+              "gradient_strategy": "ignore",
+              "audio_entity_type": "wh_human_male",
+              "combat_reaction_radius": 0,
+              "entity_effects": "infantry_light_effects",
+              "hit_reactions_ignore_chance": 0,
+              "knock_interrupts_ignore_chance": 0,
+              "soft_collision_offset_z": 0,
+              "can_climb_ladder_and_stair_pipes": true,
+              "projectile_intersection_radius_ratio": 1,
+              "projectile_penetration_speed_change": 0.8999999,
+              "projectile_penetration_resistance": 2,
+              "aura_vfx": "",
+              "porthole_camera": "",
+              "min_tracking_ratio": 0.5,
+              "max_tracking_ratio": 1.4499999,
+              "vfx_filter_id": 0,
+              "can_cast_projectile": false,
+              "porthole_composite_scene": "",
+              "has_blood": false,
+              "can_dismember": false,
+              "combat_camera_shake": "wh_main_unit_combat",
+              "dismember_head_alive_hp_ratio": -1,
+              "dismember_arms_alive_hp_ratio": -1,
+              "jump_attack_chance": 30,
+              "locomotion_constants": "small_entity",
+              "enable_engine_crew_turn_in_movement_direction": false,
+              "dealt_collision_knocked_flying_threshold_multiplier": 1,
+              "dealt_collision_knocked_down_threshold_multiplier": 1,
+              "dealt_collision_knocked_back_threshold_multiplier": 1,
+              "anim_lod_distance_multiplier": 1,
+              "size_for_animation_lod": "",
+              "leaves_collision_when_dies": false,
+              "stop_before_turn": false
+            },
+            "sourcePackPath": "db.pack"
+          },
+          {
+            "id": "battlefield_engines_tables:8b89b30ba5537b684ea6",
+            "table": "battlefield_engines_tables",
+            "key": {
+              "key": "wh2_dlc09_tmb_art_screaming_skull_catapult"
+            },
+            "sourcePack": "db.pack",
+            "path": "db/battlefield_engines_tables/data__",
+            "tableVersion": 24,
+            "row": {
+              "destroyed_model": "warmachines\\engines\\tmb_skull_catapult/tmb_screaming_skull_catapult_01_destroyed.wsmodel",
+              "destruction_animation": "tmb_skull_catapult_destruct",
+              "engine_type": "Generic_3_Crew",
+              "gun_animation_table": "wm_catapult01",
+              "key": "wh2_dlc09_tmb_art_screaming_skull_catapult",
+              "missile_weapon": "wh2_dlc09_tmb_screaming_skull",
+              "model": "tmb_skull_catapult",
+              "battle_entity": "wh2_dlc09_tmb_art_screaming_skull_catapult",
+              "asset_folder": "",
+              "variant": "",
+              "draught_attachment_point": "",
+              "tech_folder": "",
+              "rider_attachment_point": "",
+              "destruct_model": "",
+              "destruct_anim": "",
+              "destruct_meta": "",
+              "audio_armour_type": "",
+              "riders_shoot_behaviour": "all_riders_shooting",
+              "scale": 1,
+              "crew_reserve_distance_offset": 0
+            },
+            "sourcePackPath": "db.pack"
+          },
+          {
+            "id": "battle_entities_tables:d5b609676c9c659f6633",
+            "table": "battle_entities_tables",
+            "key": {
+              "key": "wh2_dlc09_tmb_art_screaming_skull_catapult"
+            },
+            "sourcePack": "db.pack",
+            "path": "db/battle_entities_tables/data__",
+            "tableVersion": 39,
+            "row": {
+              "key": "wh2_dlc09_tmb_art_screaming_skull_catapult",
+              "type": "man",
+              "walk_speed": 2,
+              "run_speed": 2,
+              "acceleration": 2,
+              "deceleration": 3,
+              "charge_speed": 2,
+              "charge_distance_commence_run": 30,
+              "charge_distance_adopt_charge_pose": 20,
+              "charge_distance_pick_target": 20,
+              "radius": 2.6,
+              "shape": "capsule",
+              "radii_ratio": 0.5,
+              "mass": 2000,
+              "height": 2,
+              "fire_arc_close": 50,
+              "turn_speed": 45,
+              "hit_points": 425,
+              "allow_turn_to_move_anim": true,
+              "allow_static_turn_anim": true,
+              "min_turning_speed": 0,
+              "fly_speed": 0,
+              "flying_charge_speed": 0,
+              "size": "large",
+              "strafe_speed": 1.2,
+              "gradient_strategy": "rotation",
+              "audio_entity_type": "wh2_wm_screaming_skull_catapult",
+              "combat_reaction_radius": 0,
+              "entity_effects": "artillery_effects",
+              "hit_reactions_ignore_chance": 0,
+              "knock_interrupts_ignore_chance": 0,
+              "soft_collision_offset_z": 0,
+              "can_climb_ladder_and_stair_pipes": false,
+              "projectile_intersection_radius_ratio": 1,
+              "projectile_penetration_speed_change": 0.75,
+              "projectile_penetration_resistance": 5,
+              "aura_vfx": "",
+              "porthole_camera": "emp_great_cannon",
+              "min_tracking_ratio": 0.5,
+              "max_tracking_ratio": 1.4499999,
+              "vfx_filter_id": 0,
+              "can_cast_projectile": false,
+              "porthole_composite_scene": "composite_scene\\porthole\\tmb_screaming_skull_catapult_porthole_01.csc",
+              "has_blood": false,
+              "can_dismember": false,
+              "combat_camera_shake": "wh_main_unit_combat",
+              "dismember_head_alive_hp_ratio": -1,
+              "dismember_arms_alive_hp_ratio": -1,
+              "jump_attack_chance": 30,
+              "locomotion_constants": "wheeled_entity",
+              "enable_engine_crew_turn_in_movement_direction": true,
+              "dealt_collision_knocked_flying_threshold_multiplier": 1,
+              "dealt_collision_knocked_down_threshold_multiplier": 1,
+              "dealt_collision_knocked_back_threshold_multiplier": 1,
+              "anim_lod_distance_multiplier": 1,
+              "size_for_animation_lod": "",
+              "leaves_collision_when_dies": false,
+              "stop_before_turn": false
+            },
+            "sourcePackPath": "db.pack"
+          }
+        ],
+        "relationships": [
+          {
+            "from": "main_units_tables:6346748384f16faa41c0",
+            "field": "land_unit",
+            "to": "land_units_tables:c5a3d87980322dcd2f1f",
+            "targetField": "key",
+            "value": "wh2_dlc09_tmb_art_screaming_skull_catapult_0",
+            "direction": "forward",
+            "evidence": "RPFM processed schema is_reference"
+          },
+          {
+            "from": "land_units_tables:c5a3d87980322dcd2f1f",
+            "field": "man_entity",
+            "to": "battle_entities_tables:994ed7922c4777f71292",
+            "targetField": "key",
+            "value": "wh2_dlc16_tmb_skeleton_crew",
+            "direction": "forward",
+            "evidence": "RPFM processed schema is_reference"
+          },
+          {
+            "from": "land_units_tables:c5a3d87980322dcd2f1f",
+            "field": "engine",
+            "to": "battlefield_engines_tables:8b89b30ba5537b684ea6",
+            "targetField": "key",
+            "value": "wh2_dlc09_tmb_art_screaming_skull_catapult",
+            "direction": "forward",
+            "evidence": "RPFM processed schema is_reference"
+          },
+          {
+            "from": "battlefield_engines_tables:8b89b30ba5537b684ea6",
+            "field": "battle_entity",
+            "to": "battle_entities_tables:d5b609676c9c659f6633",
+            "targetField": "key",
+            "value": "wh2_dlc09_tmb_art_screaming_skull_catapult",
+            "direction": "forward",
+            "evidence": "RPFM processed schema is_reference"
+          }
+        ],
+        "schemaRefs": [
+          "main_units_tables:7",
+          "land_units_tables:54",
+          "battle_entities_tables:39",
+          "battlefield_engines_tables:24"
+        ]
+      }
+    },
+    {
+      "slug": "expansion-03-18",
+      "identity": {
+        "internalId": "ca_unit_wh2_main_skv_art_plagueclaw_catapult",
+        "caMainUnitKey": "wh2_main_skv_art_plagueclaw_catapult",
+        "caLandUnitKey": "wh2_main_skv_art_plagueclaw_catapult",
+        "primaryCatalogGroup": "wh2_main_skv",
+        "candidateMilitaryGroups": [
+          "wh2_main_skv",
+          "wh2_main_skv_ikit",
+          "wh3_dlc29_group_endgame_skaven"
+        ]
+      },
+      "source": {
+        "reference": "generated/wh3/expansion-batch-03/units/expansion-03-18.result.json",
+        "sha256": "7c1492187b831e22b8bc1ea8b954f888f5f6be59679220819ce193814d318232"
+      },
+      "dump": {
+        "format": "warhammer-vault-wh3-raw-v1",
+        "sourceKind": "ca-pack",
+        "unit": {
+          "displayName": "Plagueclaw Catapults",
+          "caKey": "wh2_main_skv_art_plagueclaw_catapult",
+          "gameVersion": "9.0.2.0",
+          "extractedAt": "2026-10-02T06:33:19.522Z"
+        },
+        "provenance": {
+          "sourceKind": "ca-pack",
+          "gameVersion": "9.0.2.0",
+          "gameVersionSource": "Warhammer3.exe ProductVersion resource (not inferred from a wiki/Steam build)",
+          "rpfmVersion": "5.1.0",
+          "mcpServerInfo": {
+            "name": "rmcp",
+            "version": "3.1.0"
+          },
+          "schemaFormatVersion": 5,
+          "schemaSha256": "5d628a0167b34a096752c5c21acd16493834a987c80dc9f02364617f796ba2a4",
+          "packs": [
+            {
+              "file_name": "db.pack",
+              "pfh_version": "PFH5",
+              "pfh_file_type": "Release",
+              "bitmask": "",
+              "compress": "Zstd",
+              "timestamp": 0,
+              "sizeBytes": 8663017,
+              "sha256": "d0fafac984b3985ec47cec0ea957591424f1077e52ef61941dbf2dc46e6cf723"
+            },
+            {
+              "file_name": "local_en.pack",
+              "pfh_version": "PFH5",
+              "pfh_file_type": "Release",
+              "bitmask": "",
+              "compress": "Zstd",
+              "timestamp": 1645478083,
+              "sizeBytes": 33435496,
+              "sha256": "f979527a5aaecf293a4e66afc25ed6c760e4107ef4920b73bd56e10e2652fd6a"
+            }
+          ],
+          "accessMethod": "RPFM MCP / decode_packed_file source=PackFile, directly opened CA Release/Patch packs",
+          "extractionSource": "Direct PackFile decode; no dependency-cache rows, no mod merge, no Unit normalization"
+        },
+        "rootRow": "main_units_tables:a2691f0f3e96e6a3c623",
+        "rows": [
+          {
+            "id": "main_units_tables:a2691f0f3e96e6a3c623",
+            "table": "main_units_tables",
+            "key": {
+              "unit": "wh2_main_skv_art_plagueclaw_catapult"
+            },
+            "sourcePack": "db.pack",
+            "path": "db/main_units_tables/data__",
+            "tableVersion": 7,
+            "row": {
+              "additional_building_requirement": "",
+              "campaign_cap": -1,
+              "caste": "warmachine",
+              "create_time": 1,
+              "is_naval": false,
+              "land_unit": "wh2_main_skv_art_plagueclaw_catapult",
+              "num_men": 56,
+              "multiplayer_cap": 0,
+              "multiplayer_cost": 900,
+              "naval_unit": "wh_main_shp_transport",
+              "num_ships": 1,
+              "min_men_per_ship": 1,
+              "max_men_per_ship": 56,
+              "recruitment_cost": 900,
+              "unit": "wh2_main_skv_art_plagueclaw_catapult",
+              "upkeep_cost": 225,
+              "weight": "medium",
+              "resource_requirement": "",
+              "special_edition_mask": 0,
+              "in_encyclopedia": true,
+              "audio_voiceover_culture": "wh2_main_vo_culture_Skaven",
+              "ui_unit_group_land": "catapult",
+              "tier": 2,
+              "is_high_threat": false,
+              "porthole_camera": "skv_clan_rats",
+              "mount": "",
+              "use_hitpoints_in_campaign": false,
+              "porthole_composite_scene": "",
+              "melee_cp": 90,
+              "missile_cp": 810,
+              "can_siege": true,
+              "audio_voiceover_culture_override": "wh2_main_vo_culture_Skaven",
+              "restrict_xp_gain_in_campaign": false,
+              "audio_voiceover_actor_group": "wh2_main_vo_actor_Skaven_Unit",
+              "food_cost": 0,
+              "has_spoken_vo": true,
+              "is_monstrous": false,
+              "multiplayer_qb_cap": 6,
+              "vo_is_dragon": false,
+              "vo_is_dinosaur": false,
+              "optional_ui_element": "",
+              "barrier_health": 0,
+              "can_be_bribed": true,
+              "point_allowance_weight": 1,
+              "is_renown": false
+            },
+            "sourcePackPath": "db.pack"
+          },
+          {
+            "id": "land_units_tables:3b284a43ae98b5c75e01",
+            "table": "land_units_tables",
+            "key": {
+              "key": "wh2_main_skv_art_plagueclaw_catapult"
+            },
+            "sourcePack": "db.pack",
+            "path": "db/land_units_tables/data__",
+            "tableVersion": 54,
+            "row": {
+              "accuracy": 10,
+              "armour": "wh2_main_leather_30",
+              "campaign_action_points": 2100,
+              "category": "artillery",
+              "charge_bonus": 2,
+              "class": "art_fld",
+              "historical_description_text": "wh2_main_unit_long_text_skv_art_plagueclaw_catapult",
+              "key": "wh2_main_skv_art_plagueclaw_catapult",
+              "man_animation": "hu17_skaven_sword",
+              "man_entity": "wh2_dlc16_skv_infantry_crew",
+              "melee_attack": 15,
+              "melee_defence": 17,
+              "morale": 54,
+              "bonus_hit_points": 43,
+              "mount": "",
+              "num_mounts": 0,
+              "primary_melee_weapon": "wh2_main_skv_sword",
+              "primary_missile_weapon": "",
+              "rank_depth": 4,
+              "shield": "none",
+              "short_description_text": "wh2_main_unit_short_text_skv_art_plagueclaw_catapult",
+              "spacing": "wh_main_artillery",
+              "training_level": "trained",
+              "articulated_record": "",
+              "engine": "wh2_main_skv_art_plagueclaw_catapult",
+              "is_male": true,
+              "visibility_spotting_range_min": 40,
+              "visibility_spotting_range_max": 1500,
+              "attribute_group": "wh2_main_skv_art_plagueclaw_catapult",
+              "spot_dist_tree": 60,
+              "spot_dist_scrub": 80,
+              "reload": 0,
+              "selection_vo": "vo_sel_skv_Plagueclaw_Catapult",
+              "selected_vo_secondary": "vo_sel_generic",
+              "selected_vo_tertiary": "vo_sel_culture",
+              "hiding_scalar": 1,
+              "ground_stat_effect_group": "small",
+              "secondary_ammo": 0,
+              "primary_ammo": 22,
+              "damage_mod_flame": 0,
+              "damage_mod_magic": 0,
+              "num_engines": 4,
+              "damage_mod_physical": 0,
+              "damage_mod_missile": 0,
+              "damage_mod_all": 0,
+              "ai_usage_group": "ranged_indirect_arty",
+              "can_skirmish": false,
+              "can_brace": false,
+              "mounted_draughts": false,
+              "sync_locomotion": false,
+              "capture_tier": "medium",
+              "key_building_capture_tier": "medium",
+              "score_capture_tier": "domination_artillery",
+              "harmony_amplification_type": "",
+              "first_person": "wh2_main_skv_art_plagueclaw_catapult",
+              "ar_unit_category": "artillery",
+              "healing_power": 1,
+              "spell_mastery": 1,
+              "infinite_secondary_ammo": false,
+              "default_guard_mode": false
+            },
+            "sourcePackPath": "db.pack"
+          },
+          {
+            "id": "battle_entities_tables:8f1143a2371027b5a452",
+            "table": "battle_entities_tables",
+            "key": {
+              "key": "wh2_dlc16_skv_infantry_crew"
+            },
+            "sourcePack": "db.pack",
+            "path": "db/battle_entities_tables/data__",
+            "tableVersion": 39,
+            "row": {
+              "key": "wh2_dlc16_skv_infantry_crew",
+              "type": "man",
+              "walk_speed": 2,
+              "run_speed": 4.2,
+              "acceleration": 2,
+              "deceleration": 4,
+              "charge_speed": 4.8,
+              "charge_distance_commence_run": 30,
+              "charge_distance_adopt_charge_pose": 25,
+              "charge_distance_pick_target": 25,
+              "radius": 0.65,
+              "shape": "circle",
+              "radii_ratio": 1,
+              "mass": 100,
+              "height": 1.5,
+              "fire_arc_close": 60,
+              "turn_speed": 120,
+              "hit_points": 8,
+              "allow_turn_to_move_anim": true,
+              "allow_static_turn_anim": true,
+              "min_turning_speed": 0,
+              "fly_speed": 0,
+              "flying_charge_speed": 0,
+              "size": "small",
+              "strafe_speed": 1,
+              "gradient_strategy": "ignore",
+              "audio_entity_type": "none",
+              "combat_reaction_radius": 0,
+              "entity_effects": "infantry_light_effects",
+              "hit_reactions_ignore_chance": 0,
+              "knock_interrupts_ignore_chance": 0,
+              "soft_collision_offset_z": 0,
+              "can_climb_ladder_and_stair_pipes": true,
+              "projectile_intersection_radius_ratio": 1,
+              "projectile_penetration_speed_change": 0.95,
+              "projectile_penetration_resistance": 1,
+              "aura_vfx": "",
+              "porthole_camera": "",
+              "min_tracking_ratio": 0.5,
+              "max_tracking_ratio": 1.6,
+              "vfx_filter_id": 0,
+              "can_cast_projectile": false,
+              "porthole_composite_scene": "",
+              "has_blood": true,
+              "can_dismember": true,
+              "combat_camera_shake": "wh_main_unit_combat",
+              "dismember_head_alive_hp_ratio": -1,
+              "dismember_arms_alive_hp_ratio": -1,
+              "jump_attack_chance": 30,
+              "locomotion_constants": "small_entity",
+              "enable_engine_crew_turn_in_movement_direction": false,
+              "dealt_collision_knocked_flying_threshold_multiplier": 1,
+              "dealt_collision_knocked_down_threshold_multiplier": 1,
+              "dealt_collision_knocked_back_threshold_multiplier": 1,
+              "anim_lod_distance_multiplier": 1,
+              "size_for_animation_lod": "",
+              "leaves_collision_when_dies": false,
+              "stop_before_turn": false
+            },
+            "sourcePackPath": "db.pack"
+          },
+          {
+            "id": "battlefield_engines_tables:4cdd6e4f8e8385c52fe4",
+            "table": "battlefield_engines_tables",
+            "key": {
+              "key": "wh2_main_skv_art_plagueclaw_catapult"
+            },
+            "sourcePack": "db.pack",
+            "path": "db/battlefield_engines_tables/data__",
+            "tableVersion": 24,
+            "row": {
+              "destroyed_model": "warmachines/engines/skv_plagueclaw/skv_plagueclaw_01_destroyed.rigid_model_v2",
+              "destruction_animation": "skv_plagueclaw_catapult_destruct",
+              "engine_type": "Generic_3_Crew",
+              "gun_animation_table": "wm_plagueclaw_catapult01",
+              "key": "wh2_main_skv_art_plagueclaw_catapult",
+              "missile_weapon": "wh2_main_skv_plagueclaw_catapult",
+              "model": "skv_plagueclaw_catapult",
+              "battle_entity": "wh2_main_skv_art_plagueclaw_catapult",
+              "asset_folder": "",
+              "variant": "",
+              "draught_attachment_point": "",
+              "tech_folder": "",
+              "rider_attachment_point": "",
+              "destruct_model": "",
+              "destruct_anim": "",
+              "destruct_meta": "",
+              "audio_armour_type": "",
+              "riders_shoot_behaviour": "all_riders_shooting",
+              "scale": 1,
+              "crew_reserve_distance_offset": 0
+            },
+            "sourcePackPath": "db.pack"
+          },
+          {
+            "id": "battle_entities_tables:7070942ed1e46ad350d9",
+            "table": "battle_entities_tables",
+            "key": {
+              "key": "wh2_main_skv_art_plagueclaw_catapult"
+            },
+            "sourcePack": "db.pack",
+            "path": "db/battle_entities_tables/data__",
+            "tableVersion": 39,
+            "row": {
+              "key": "wh2_main_skv_art_plagueclaw_catapult",
+              "type": "artillery",
+              "walk_speed": 2,
+              "run_speed": 2,
+              "acceleration": 2,
+              "deceleration": 3,
+              "charge_speed": 2,
+              "charge_distance_commence_run": 30,
+              "charge_distance_adopt_charge_pose": 20,
+              "charge_distance_pick_target": 20,
+              "radius": 3,
+              "shape": "capsule",
+              "radii_ratio": 0.5,
+              "mass": 2000,
+              "height": 5.5,
+              "fire_arc_close": 50,
+              "turn_speed": 45,
+              "hit_points": 500,
+              "allow_turn_to_move_anim": false,
+              "allow_static_turn_anim": false,
+              "min_turning_speed": 0,
+              "fly_speed": 0,
+              "flying_charge_speed": 0,
+              "size": "large",
+              "strafe_speed": 1.2,
+              "gradient_strategy": "rotation",
+              "audio_entity_type": "wh_war_machine_wood_medium",
+              "combat_reaction_radius": 0,
+              "entity_effects": "artillery_effects",
+              "hit_reactions_ignore_chance": 0,
+              "knock_interrupts_ignore_chance": 0,
+              "soft_collision_offset_z": 0,
+              "can_climb_ladder_and_stair_pipes": false,
+              "projectile_intersection_radius_ratio": 1,
+              "projectile_penetration_speed_change": 0.75,
+              "projectile_penetration_resistance": 5,
+              "aura_vfx": "",
+              "porthole_camera": "dwf_grudgethrower",
+              "min_tracking_ratio": 0.5,
+              "max_tracking_ratio": 1.4499999,
+              "vfx_filter_id": 0,
+              "can_cast_projectile": false,
+              "porthole_composite_scene": "composite_scene\\porthole\\plagueclaw_catapult_porthole_01.csc",
+              "has_blood": false,
+              "can_dismember": false,
+              "combat_camera_shake": "wh_main_unit_combat",
+              "dismember_head_alive_hp_ratio": -1,
+              "dismember_arms_alive_hp_ratio": -1,
+              "jump_attack_chance": 20,
+              "locomotion_constants": "wheeled_entity",
+              "enable_engine_crew_turn_in_movement_direction": true,
+              "dealt_collision_knocked_flying_threshold_multiplier": 1,
+              "dealt_collision_knocked_down_threshold_multiplier": 1,
+              "dealt_collision_knocked_back_threshold_multiplier": 1,
+              "anim_lod_distance_multiplier": 1,
+              "size_for_animation_lod": "",
+              "leaves_collision_when_dies": false,
+              "stop_before_turn": false
+            },
+            "sourcePackPath": "db.pack"
+          }
+        ],
+        "relationships": [
+          {
+            "from": "main_units_tables:a2691f0f3e96e6a3c623",
+            "field": "land_unit",
+            "to": "land_units_tables:3b284a43ae98b5c75e01",
+            "targetField": "key",
+            "value": "wh2_main_skv_art_plagueclaw_catapult",
+            "direction": "forward",
+            "evidence": "RPFM processed schema is_reference"
+          },
+          {
+            "from": "land_units_tables:3b284a43ae98b5c75e01",
+            "field": "man_entity",
+            "to": "battle_entities_tables:8f1143a2371027b5a452",
+            "targetField": "key",
+            "value": "wh2_dlc16_skv_infantry_crew",
+            "direction": "forward",
+            "evidence": "RPFM processed schema is_reference"
+          },
+          {
+            "from": "land_units_tables:3b284a43ae98b5c75e01",
+            "field": "engine",
+            "to": "battlefield_engines_tables:4cdd6e4f8e8385c52fe4",
+            "targetField": "key",
+            "value": "wh2_main_skv_art_plagueclaw_catapult",
+            "direction": "forward",
+            "evidence": "RPFM processed schema is_reference"
+          },
+          {
+            "from": "battlefield_engines_tables:4cdd6e4f8e8385c52fe4",
+            "field": "battle_entity",
+            "to": "battle_entities_tables:7070942ed1e46ad350d9",
+            "targetField": "key",
+            "value": "wh2_main_skv_art_plagueclaw_catapult",
+            "direction": "forward",
+            "evidence": "RPFM processed schema is_reference"
+          }
+        ],
+        "schemaRefs": [
+          "main_units_tables:7",
+          "land_units_tables:54",
+          "battle_entities_tables:39",
+          "battlefield_engines_tables:24"
+        ]
+      }
+    }
+  ]
+}
