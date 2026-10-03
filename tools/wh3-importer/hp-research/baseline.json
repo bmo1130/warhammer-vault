@@ -1,0 +1,168 @@
+{
+  "baselineCommit": "69f23ddf001222915087a09e094dea68c53868b9",
+  "production": 101,
+  "sample": 5,
+  "hpPresent": 5,
+  "protectedFiles": [
+    {
+      "file": "src/data/factions.json",
+      "hashMode": "BYTES",
+      "sha256": "a0868547e7a96b69649e470bb024eaa9bb55813139df04d3ff01d5d94e8d650e"
+    },
+    {
+      "file": "src/data/lords.json",
+      "hashMode": "BYTES",
+      "sha256": "20f98108ea724f8e802c93201ec3b3c3a4055e23ac844840e2f464b138881b8a"
+    },
+    {
+      "file": "src/data/unitDiagnostics.json",
+      "hashMode": "BYTES",
+      "sha256": "1abbe4b8251320e86dbe7470bf3cf3729b7759c7c71af2af2b5b9f4ce680bb1f"
+    },
+    {
+      "file": "src/data/unitHpAdmissions.json",
+      "hashMode": "BYTES",
+      "sha256": "571fac38fcf84504f975b530aa2e3c4956edd197aa6a15b5653105cdc6651628"
+    },
+    {
+      "file": "src/data/unitSharedIdentities.json",
+      "hashMode": "BYTES",
+      "sha256": "3e256bf5c850df65e70a539062a5109a36c75757f8f3a34bc75d8b492aa9d13e"
+    },
+    {
+      "file": "src/data/units.json",
+      "hashMode": "BYTES",
+      "sha256": "68661de31d19c1660949fa0196422a4b59cdff26d7fba2f7ec70b84a324a45e9"
+    },
+    {
+      "file": "tools/wh3-importer/hp-policy/inputs/dread-saurian-ultra.log",
+      "hashMode": "BYTES",
+      "sha256": "ce248957f182f3b9050054adf54bd3e83db3e5d996b335140c8636216f54e358"
+    },
+    {
+      "file": "tools/wh3-importer/hp-policy/inputs/script_log_021026_1931.txt",
+      "hashMode": "BYTES",
+      "sha256": "5e027c6eb9a82780285e305308831e9f13d23afdb4bf58fd655804a2696c4420"
+    },
+    {
+      "file": "tools/wh3-importer/hp-policy/inputs/script_log_021026_1937.txt",
+      "hashMode": "BYTES",
+      "sha256": "ceca024b6c146e73e1f1fedea047229c5bcb0ec921fa570b8f49d443680b78c7"
+    },
+    {
+      "file": "tools/wh3-importer/hp-policy/inputs/script_log_021026_1942.txt",
+      "hashMode": "BYTES",
+      "sha256": "3d2abc2b55f5d5344ff6111f31c0ac326adb24d9c9ab250d6085bdcca5290568"
+    },
+    {
+      "file": "tools/wh3-importer/hp-policy/inputs/skeleton-chariots-ultra.log",
+      "hashMode": "BYTES",
+      "sha256": "4d2f91fcd84a09058aaefd39ee6c0fb78b6a69b641af32620394c3fc3dd4e0a3"
+    },
+    {
+      "file": "tools/wh3-importer/hp-policy/manifest.json",
+      "hashMode": "BYTES",
+      "sha256": "49630e6a9dda197941c6aded249c0e84a4c1c7595a42cfe94e3c6e2dd1a29d50"
+    },
+    {
+      "file": "tools/wh3-importer/hp-policy/overlay.cjs",
+      "hashMode": "LF_TEXT",
+      "sha256": "fedbe19c9c7e495e0c27e0c99b80b262d97ff10650ed5dc1f56783248017ea24"
+    },
+    {
+      "file": "tools/wh3-importer/hp-policy/policy.mjs",
+      "hashMode": "LF_TEXT",
+      "sha256": "ce13f0ec90cc3e13003515ed7446d2f6927f3cd7341493a179562d46e22ef37a"
+    },
+    {
+      "file": "tools/wh3-importer/hp-policy/review.json",
+      "hashMode": "BYTES",
+      "sha256": "be22e2048618991e6afd9a1a023bf0d92f9521c757e06a561cc3dcfac30f65fe"
+    },
+    {
+      "file": "tools/wh3-importer/hp-policy/semantic-fixtures.json",
+      "hashMode": "BYTES",
+      "sha256": "577595d678d50ca817fc3755cdf0129e258ce9f240ff700704edfdfd336774f8"
+    },
+    {
+      "file": "tools/wh3-importer/runtime-evidence/cco-probe/batch-2026-10-01.json",
+      "hashMode": "BYTES",
+      "sha256": "3588fa67f0a4a6176c463690c7319e3995e4c97c928c644a8fdfbe45ca986682"
+    },
+    {
+      "file": "tools/wh3-importer/runtime-evidence/cco-probe/batch.mjs",
+      "hashMode": "LF_TEXT",
+      "sha256": "4c7c036d7c58a8a8b28c07a21200a0d84e52963924c17e1f04621a07e8825aea"
+    },
+    {
+      "file": "tools/wh3-importer/runtime-evidence/cco-probe/candidates.mjs",
+      "hashMode": "LF_TEXT",
+      "sha256": "ff29acfaa88508cf1ecccb6a078e0b927a4ba6cffe31bf5a16b4825eb3be73f4"
+    },
+    {
+      "file": "tools/wh3-importer/runtime-evidence/cco-probe/cli.mjs",
+      "hashMode": "LF_TEXT",
+      "sha256": "41383879625fa64c7a30e8fa1e7cbc9f756914f6b3f9e372ca441587e4c90dbb"
+    },
+    {
+      "file": "tools/wh3-importer/runtime-evidence/cco-probe/exec_battle.lua",
+      "hashMode": "LF_TEXT",
+      "sha256": "e241991f5ca9ba5ad687d7f76239b4616ed4c0d870f15a0fb568bff15bf7b301"
+    },
+    {
+      "file": "tools/wh3-importer/runtime-evidence/cco-probe/ingest.mjs",
+      "hashMode": "LF_TEXT",
+      "sha256": "a0cf097f6201fb5ba70e3ca80c880cd2448faf3f05396543b0d5a54e858005bd"
+    },
+    {
+      "file": "tools/wh3-importer/runtime-evidence/cco-probe/install.ps1",
+      "hashMode": "LF_TEXT",
+      "sha256": "7a92ff5dc9d4e037198e019ab12a41c31ca20c36729d64beb1464a94c60fed9f"
+    },
+    {
+      "file": "tools/wh3-importer/runtime-evidence/cco-probe/jobs.mjs",
+      "hashMode": "LF_TEXT",
+      "sha256": "8e390dbe682ffb52a458fe367f1b34a5957bfcbe4157397cecb8261e5c3e9c47"
+    },
+    {
+      "file": "tools/wh3-importer/runtime-evidence/cli.mjs",
+      "hashMode": "LF_TEXT",
+      "sha256": "cc98f3fb0daec47f870a1220190e8307d6c795ac42793cc128bfcb81c24fc1d0"
+    },
+    {
+      "file": "tools/wh3-importer/runtime-evidence/contract.d.mts",
+      "hashMode": "LF_TEXT",
+      "sha256": "2787d4aa06121414119ee3ccf15e807d43138fdaae747f60c86b493e7ae64663"
+    },
+    {
+      "file": "tools/wh3-importer/runtime-evidence/contract.mjs",
+      "hashMode": "LF_TEXT",
+      "sha256": "9212c77e84d40b27b6f98395d86ff4e117d50e88f7d20a37524fae45929d692f"
+    },
+    {
+      "file": "tools/wh3-importer/runtime-evidence/jobs.mjs",
+      "hashMode": "LF_TEXT",
+      "sha256": "f6fd5d307083c79b7551b818ab85eda33b40b463a7dc023f46e9177d9462f551"
+    },
+    {
+      "file": "tools/wh3-importer/runtime-evidence/record.mjs",
+      "hashMode": "LF_TEXT",
+      "sha256": "82ab72244fb89fd37a9c47318f3ab99bf36c0844c91b93dc7c93564440d2c8f9"
+    },
+    {
+      "file": "tools/wh3-importer/runtime-evidence/static-index.mjs",
+      "hashMode": "LF_TEXT",
+      "sha256": "b9d586d2cafa4c0da099a8cf316c66597fa23ac00fa95e4d5a938a029d1ceeac"
+    },
+    {
+      "file": "tools/wh3-importer/runtime-evidence/triage.mjs",
+      "hashMode": "LF_TEXT",
+      "sha256": "66882f3775a29588542b21063257ed67a5e381c4a941f901a40a339d8bf0b44e"
+    },
+    {
+      "file": "tools/wh3-importer/runtime-evidence/validate.mjs",
+      "hashMode": "LF_TEXT",
+      "sha256": "324225c5d1d231cce1c0c4300ff517fb03f805d1f6e494efab5e73f2dc0c65d3"
+    }
+  ]
+}
