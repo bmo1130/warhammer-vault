@@ -6,3 +6,4 @@ tools/wh3-importer/**/*.md text eol=lf
 tools/wh3-importer/pilot-catalog.mjs text eol=lf
 # Original runtime capture bytes are evidence, including their line endings.
 tools/wh3-importer/hp-policy/inputs/*.log -text -whitespace
+tools/wh3-importer/hp-policy/inputs/*.txt -text -whitespace

@@ -12,9 +12,9 @@ which HP inputs form combat-entity HP or which count means ULTRA entities.
 
 | Exact static subject | num_men | bonus_hit_points | man HP | mount HP | engine HP | Observed combat entities / total HP |
 | --- | ---: | ---: | ---: | ---: | ---: | --- |
-| Swordsmen | 120 | 61 | 8 | absent | absent | 120 / 8,280 (user report) |
-| Mounted Yeomen | 60 | 76 | 8 | 8 | absent | 60 / 5,520 (user report) |
-| Dragon Ogres | 16 | 608 | 8 | absent | absent | 16 / 9,856 (user report) |
+| Swordsmen | 120 | 61 | 8 | absent | absent | 120 / 8,280 (original log) |
+| Mounted Yeomen | 60 | 76 | 8 | 8 | absent | 60 / 5,520 (original log) |
+| Dragon Ogres | 16 | 608 | 8 | absent | absent | 16 / 9,856 (original log) |
 | Dread Saurian | 12 | 14,984 | 8 | 8 | absent | 1 / 15,088 (original log) |
 | Skeleton Chariots | 24 | 538 | 8 | 8 | 8 | 12 / 7,032 (original log) |
 
@@ -54,48 +54,50 @@ overlay and restores it after the original unchanged static gates succeed.
 
 ## Available evidence
 
-The two original Desktop logs for Dread Saurian and Skeleton Chariots are copied
-byte-for-byte into inputs, with original SHA256 and event/line references. Logs
-are treated as bytes by Git. Existing MEDIUM files and installed probe are read
-only. Swordsmen, Mounted Yeomen and Dragon Ogres numbers supplied by the user are
-USER_REPORTED semantic fixtures, not fabricated probe logs or admission sources;
-their original ULTRA records were not present in the inspected capture locations.
+The two original Desktop logs and three subsequently supplied raw logs from
+`generated/wh3/runtime-evidence/manual-ultra-hp/ultra_hp_raw_logs_3` are copied
+byte-for-byte into inputs with original paths, file names, SHA256 and event/line
+references. Logs are treated as bytes by Git. Existing MEDIUM files and installed
+probe are read only. The original USER_REPORTED semantic fixtures stay separate;
+all five admissions now use actual raw captures, never those fixtures.
 
 Replay: `node scripts/promote-ultra-hp.mjs --check`. No game, RPFM, ignored bundle
-or newly measured evidence is required. `--write` applies only the two approved HP
+or newly measured evidence is required. `--write` applies only the approved HP
 fields after source/review equality checks. Historical promotion replay commands
 still verify their original static outputs and preserve the exact HP overlay.
 
 ## Result and verification
 
 - Production 101 / Sample 5 unchanged in number, IDs and order.
-- Only Dread Saurian totalHealth=15088 and Skeleton Chariots totalHealth=7032
-  changed in units.json. The original file has only two small entities diffs;
-  removing those exact approved fields restores the entire baseline byte hash
+- Five admitted totals: Swordsmen 8280, Mounted Yeomen 5520, Dragon Ogres 9856,
+  Dread Saurian 15088, Skeleton Chariots 7032. Three new HP fields are the only
+  differences from the preceding two-HP Production file. Removing just those
+  fields restores byte SHA256
+  `077fc0ca25e6926817ed57d5e7e9e0c37ea1abbef31ec5b38c8445b2e1eb5bfa`.
+  Removing all five approved HP fields restores the original static baseline hash
   `c6f5d9aa1eb13e8b011d618781691f2627904b5da73657bd50869f6862f3e244`.
-- 99 Production HP values remain absent. Three supplied reference cases lack
-  original matching ULTRA records; the other identities lack eligible captures
-  and no static combat-entity HP/count formula is proven.
+- 96 Production HP values remain absent: no eligible direct ULTRA captures and
+  no proven static combat-entity HP/count formula.
 - The app uses the small unitHpAdmissions.json projection solely to verify the
-  two approved field differences against the unchanged shared identity record.
+  approved field differences against the unchanged shared identity record.
   Diagnostic/shared identity JSON, all old source/reviews, MEDIUM evidence,
   factions, Unit schema, speed and missile policies are unchanged.
-- Full tests 308/308; HP tests 7/7; build PASS. All six historical Production
+- Initial two-capture implementation: full tests 308/308; HP tests 7/7; build PASS. All six historical Production
   admission replays and the HP review/admission/projection replay PASS.
 - Actual RPFM static integration 6/6; stored context/runtime/CCO 16/16.
   Historical capture replay retained exact comparison/runtime/validation/proposal
   outputs (5,200 events, 51 captures, 316 observations); original 51 files stayed
   byte-identical. No original evidence was regenerated or written.
-- Clean source snapshot without .local or generated: all admission/review replay
+- Initial two-capture clean source snapshot without .local or generated: all admission/review replay
   checks PASS; tests 307 PASS / 1 optional local display-projection test skipped;
   build PASS with `--configLoader runner` (the shared dependency junction prevents
   Vite's default temporary-config write in the sandbox; output bundle identical).
   Only installed npm dependencies were shared, not game/staging evidence.
-- This commit includes the previously completed, uncommitted explicit Unit Size
+- The initial HP commit included the previously completed explicit Unit Size
   installer/probe/ingest changes as the prerequisite for size-bound evidence.
   No game executable was launched and no new runtime measurements were requested.
 
-## Files in this commit
+## Files in the initial HP commit
 
 - `.gitattributes`
 - `README.md`

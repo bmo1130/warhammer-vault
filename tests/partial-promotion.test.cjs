@@ -123,7 +123,7 @@ test('bounded partial production appends only four reviewed identities and is id
   assert.equal(units.filter(u=>u.gameVersion==='sample').length,5);assert.equal(catalog.list().filter(e=>e.hasProduction&&!e.isSample).length,101);
   assert.equal(units.slice(0,34).filter(u=>u.factionId==='empire').length,4);assert.equal(units.slice(0,34).filter(u=>u.factionId==='skaven').length,3);
   assert.equal(units.slice(0,34).filter(u=>u.factionId==='vampire_counts'&&u.gameVersion!=='sample').length,5);
-  for(const id of ['empire','skaven','vampire_counts'])assert.deepEqual(game.getFactionUnits(id),units.filter(u=>u.factionId===id));
+  for(const id of ['empire','skaven','vampire_counts'])assert.deepEqual(game.getFactionUnits(id),hpOverlay.applyProductionHP(units.filter(u=>u.factionId===id)));
   for(const d of diagnostics.entries)assert(game.getUnit(d.id) && d.productionEligible===false);
 });
 
@@ -142,7 +142,7 @@ test('partial gates refuse source/identity drift, speculative representatives, u
 
 test('new production detail routes retain verified stats, omissions and existing personal controls',async()=>{
   const {buildPartialProductionBatch}=await import('../tools/wh3-importer/promotion/partial-batch.mjs');
-  for(const {unit} of buildPartialProductionBatch(options()).admitted){assert.deepEqual(game.getUnit(unit.id),unit);const html=render(unit.id);
+  for(const {unit} of buildPartialProductionBatch(options()).admitted){assert.deepEqual(game.getUnit(unit.id),hpOverlay.applyProductionHP([unit])[0]);const html=render(unit.id);
     for(const text of ['>Production<','근접 피해','출처·버전·생략 범위','미입력','내 기록','즐겨찾기 추가'])assert(html.includes(text),`${unit.name}/${text}`);
     assert(!html.includes('Production data unavailable')&&!html.includes('>Sample<'));
     assert(html.includes(String(unit.melee.meleeAttack))&&html.includes(String(unit.melee.damage.armorPiercing)));

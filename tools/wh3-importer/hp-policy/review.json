@@ -1,13 +1,13 @@
 {
   "format": "warhammer-vault-ultra-hp-review-v1",
   "expectedUnitSize": "ULTRA",
-  "manifestSha256": "e6438e1fd16eb64ce597f46aa33cd7c49d16c305ee0e085d80131e76c331ff46",
+  "manifestSha256": "49630e6a9dda197941c6aded249c0e84a4c1c7595a42cfe94e3c6e2dd1a29d50",
   "baselineUnitsSha256": "c6f5d9aa1eb13e8b011d618781691f2627904b5da73657bd50869f6862f3e244",
   "review": [
     {
       "id": "ca_unit_wh_main_emp_inf_swordsmen",
       "name": "Swordsmen",
-      "approved": false,
+      "approved": true,
       "staticSource": "tools/wh3-importer/promotion/partial-sources.json",
       "staticPointer": "sample-04",
       "staticChain": {
@@ -218,18 +218,43 @@
           "formula": null
         }
       },
-      "status": "WITHHELD",
-      "candidates": [],
-      "held": [
+      "status": "REVIEWED_DIRECT_ULTRA_RUNTIME",
+      "candidates": [
         {
-          "reason": "NO_MATCHING_ULTRA_RECORD"
+          "kind": "DIRECT_ULTRA_RUNTIME",
+          "sourceMainKey": "wh_main_emp_inf_swordsmen",
+          "sourceLandKey": "wh_main_emp_inf_swordsmen",
+          "unitSize": "ULTRA",
+          "unitSizeSource": "DECLARED_SETUP",
+          "HealthMax": 8280,
+          "NumEntitiesInitial": 120,
+          "observedHealthPerCombatEntity": 69,
+          "reference": "inputs/script_log_021026_1931.txt:83",
+          "runId": "[\"287f9a38-3afc-4c82-9d2e-3347b46075b0:table: 00000000C3D78E98:<19.5s>:1790937088:75.147003173828\",\"snapshot-1\"]",
+          "metadata": {
+            "gameVersion": "9.0.2.0",
+            "gameVersionSource": "INSTALLER_EXE_VERSION",
+            "scenarioId": "CCO_P0_CUSTOM_BATTLE",
+            "sessionId": "287f9a38-3afc-4c82-9d2e-3347b46075b0",
+            "staticSnapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+            "unitSize": "ULTRA",
+            "unitSizeSource": "DECLARED_SETUP"
+          },
+          "componentCounts": {
+            "ManList": 120,
+            "MountList": 0,
+            "EngineList": 0,
+            "EntityList": 120
+          }
         }
-      ]
+      ],
+      "held": [],
+      "totalHealth": 8280
     },
     {
       "id": "ca_unit_wh_main_brt_cav_mounted_yeomen_0",
       "name": "Mounted Yeomen",
-      "approved": false,
+      "approved": true,
       "staticSource": "tools/wh3-importer/promotion/partial-sources.json",
       "staticPointer": "sample-08",
       "staticChain": {
@@ -486,18 +511,43 @@
           "formula": null
         }
       },
-      "status": "WITHHELD",
-      "candidates": [],
-      "held": [
+      "status": "REVIEWED_DIRECT_ULTRA_RUNTIME",
+      "candidates": [
         {
-          "reason": "NO_MATCHING_ULTRA_RECORD"
+          "kind": "DIRECT_ULTRA_RUNTIME",
+          "sourceMainKey": "wh_main_brt_cav_mounted_yeomen_0",
+          "sourceLandKey": "wh_main_brt_cav_mounted_yeomen_0",
+          "unitSize": "ULTRA",
+          "unitSizeSource": "DECLARED_SETUP",
+          "HealthMax": 5520,
+          "NumEntitiesInitial": 60,
+          "observedHealthPerCombatEntity": 92,
+          "reference": "inputs/script_log_021026_1937.txt:83",
+          "runId": "[\"287f9a38-3afc-4c82-9d2e-3347b46075b0:table: 00000000C3D7F2A0:<23.9s>:1790937472:390.30902099609\",\"snapshot-1\"]",
+          "metadata": {
+            "gameVersion": "9.0.2.0",
+            "gameVersionSource": "INSTALLER_EXE_VERSION",
+            "scenarioId": "CCO_P0_CUSTOM_BATTLE",
+            "sessionId": "287f9a38-3afc-4c82-9d2e-3347b46075b0",
+            "staticSnapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+            "unitSize": "ULTRA",
+            "unitSizeSource": "DECLARED_SETUP"
+          },
+          "componentCounts": {
+            "ManList": 60,
+            "MountList": 60,
+            "EngineList": 0,
+            "EntityList": 60
+          }
         }
-      ]
+      ],
+      "held": [],
+      "totalHealth": 5520
     },
     {
       "id": "ca_unit_wh_dlc01_chs_mon_dragon_ogre",
       "name": "Dragon Ogres",
-      "approved": false,
+      "approved": true,
       "staticSource": "tools/wh3-importer/promotion/dragon-ogres.source.json",
       "staticPointer": "dump",
       "staticChain": {
@@ -708,13 +758,65 @@
           "formula": null
         }
       },
-      "status": "WITHHELD",
-      "candidates": [],
-      "held": [
+      "status": "REVIEWED_DIRECT_ULTRA_RUNTIME",
+      "candidates": [
         {
-          "reason": "NO_MATCHING_ULTRA_RECORD"
+          "kind": "DIRECT_ULTRA_RUNTIME",
+          "sourceMainKey": "wh_dlc01_chs_mon_dragon_ogre",
+          "sourceLandKey": "wh_dlc01_chs_mon_dragon_ogre",
+          "unitSize": "ULTRA",
+          "unitSizeSource": "DECLARED_SETUP",
+          "HealthMax": 9856,
+          "NumEntitiesInitial": 16,
+          "observedHealthPerCombatEntity": 616,
+          "reference": "inputs/script_log_021026_1942.txt:103",
+          "runId": "[\"287f9a38-3afc-4c82-9d2e-3347b46075b0:table: 000000005E93EF30:<23.5s>:1790937728:696.47406005859\",\"snapshot-1\"]",
+          "metadata": {
+            "gameVersion": "9.0.2.0",
+            "gameVersionSource": "INSTALLER_EXE_VERSION",
+            "scenarioId": "CCO_P0_CUSTOM_BATTLE",
+            "sessionId": "287f9a38-3afc-4c82-9d2e-3347b46075b0",
+            "staticSnapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+            "unitSize": "ULTRA",
+            "unitSizeSource": "DECLARED_SETUP"
+          },
+          "componentCounts": {
+            "ManList": 16,
+            "MountList": 0,
+            "EngineList": 0,
+            "EntityList": 16
+          }
+        },
+        {
+          "kind": "DIRECT_ULTRA_RUNTIME",
+          "sourceMainKey": "wh_dlc01_chs_mon_dragon_ogre",
+          "sourceLandKey": "wh_dlc01_chs_mon_dragon_ogre",
+          "unitSize": "ULTRA",
+          "unitSizeSource": "DECLARED_SETUP",
+          "HealthMax": 9856,
+          "NumEntitiesInitial": 16,
+          "observedHealthPerCombatEntity": 616,
+          "reference": "inputs/script_log_021026_1942.txt:151",
+          "runId": "[\"287f9a38-3afc-4c82-9d2e-3347b46075b0:table: 000000005E93EF30:<23.5s>:1790937728:696.47406005859\",\"snapshot-2\"]",
+          "metadata": {
+            "gameVersion": "9.0.2.0",
+            "gameVersionSource": "INSTALLER_EXE_VERSION",
+            "scenarioId": "CCO_P0_CUSTOM_BATTLE",
+            "sessionId": "287f9a38-3afc-4c82-9d2e-3347b46075b0",
+            "staticSnapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+            "unitSize": "ULTRA",
+            "unitSizeSource": "DECLARED_SETUP"
+          },
+          "componentCounts": {
+            "ManList": 16,
+            "MountList": 0,
+            "EngineList": 0,
+            "EntityList": 16
+          }
         }
-      ]
+      ],
+      "held": [],
+      "totalHealth": 9856
     },
     {
       "id": "ca_unit_wh2_dlc13_lzd_mon_dread_saurian_1",
@@ -1350,6 +1452,49 @@
     }
   ],
   "admitted": [
+    {
+      "id": "ca_unit_wh_main_emp_inf_swordsmen",
+      "name": "Swordsmen",
+      "kind": "DIRECT_ULTRA_RUNTIME",
+      "field": "entities.totalHealth",
+      "value": 8280,
+      "baseUnitSha256": "26738bd3222bc56bf2a35f9acbde3991c6dfd5fc7065706c2e031df5edaf30e5",
+      "sourceMainKey": "wh_main_emp_inf_swordsmen",
+      "sourceLandKey": "wh_main_emp_inf_swordsmen",
+      "staticSnapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+      "references": [
+        "inputs/script_log_021026_1931.txt:83"
+      ]
+    },
+    {
+      "id": "ca_unit_wh_main_brt_cav_mounted_yeomen_0",
+      "name": "Mounted Yeomen",
+      "kind": "DIRECT_ULTRA_RUNTIME",
+      "field": "entities.totalHealth",
+      "value": 5520,
+      "baseUnitSha256": "07f3404951a6637d266e0a1a2988ba7dea5e8dace320ddbf728f37501e81eefa",
+      "sourceMainKey": "wh_main_brt_cav_mounted_yeomen_0",
+      "sourceLandKey": "wh_main_brt_cav_mounted_yeomen_0",
+      "staticSnapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+      "references": [
+        "inputs/script_log_021026_1937.txt:83"
+      ]
+    },
+    {
+      "id": "ca_unit_wh_dlc01_chs_mon_dragon_ogre",
+      "name": "Dragon Ogres",
+      "kind": "DIRECT_ULTRA_RUNTIME",
+      "field": "entities.totalHealth",
+      "value": 9856,
+      "baseUnitSha256": "1f37c1a0a723652e47aacfdb4e83f92c19f50c2efec3c7ef1e2e10cd623fce96",
+      "sourceMainKey": "wh_dlc01_chs_mon_dragon_ogre",
+      "sourceLandKey": "wh_dlc01_chs_mon_dragon_ogre",
+      "staticSnapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+      "references": [
+        "inputs/script_log_021026_1942.txt:103",
+        "inputs/script_log_021026_1942.txt:151"
+      ]
+    },
     {
       "id": "ca_unit_wh2_dlc13_lzd_mon_dread_saurian_1",
       "name": "Dread Saurian",

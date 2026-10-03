@@ -20,9 +20,9 @@ test('ULTRA HP clean checkout source → review → explicit admission → Produ
   assert.deepEqual(overlay.applyProductionHP([...staticUnits]),overlay.applyProductionHP(staticUnits));
   assert.deepEqual(units.filter(u=>u.gameVersion==='sample'),staticUnits.filter(u=>u.gameVersion==='sample'));
   assert.equal(units.filter(u=>u.gameVersion!=='sample').length,101);assert.equal(units.filter(u=>u.gameVersion==='sample').length,5);
-  const changed=units.filter((u,i)=>JSON.stringify(u)!==JSON.stringify(staticUnits[i]));assert.equal(changed.length,2);
+  const changed=units.filter((u,i)=>JSON.stringify(u)!==JSON.stringify(staticUnits[i]));assert.equal(changed.length,5);
   for(const unit of changed){const index=units.indexOf(unit),copy=structuredClone(unit);delete copy.entities.totalHealth;assert.deepEqual(copy,staticUnits[index]);}
-  assert.equal(units.filter(u=>u.gameVersion!=='sample'&&u.entities.totalHealth===undefined).length,99);
+  assert.equal(units.filter(u=>u.gameVersion!=='sample'&&u.entities.totalHealth===undefined).length,96);
   const check=spawnSync(process.execPath,['scripts/promote-ultra-hp.mjs','--check'],{encoding:'utf8'});assert.equal(check.status,0,check.stderr);
 });
 
@@ -47,7 +47,7 @@ test('five user-confirmed ULTRA semantic fixtures match exact totals without tre
   assert.notEqual(chariot.componentCounts.ManList*586,chariot.HealthMax);
   assert.notEqual(Object.values(chariot.componentCounts).reduce((a,b)=>a+b,0)*586,chariot.HealthMax);
   const saurian=fixture.cases.find(c=>c.name==='Dread Saurian');assert.equal(saurian.NumEntitiesInitial,1);assert.notEqual(saurian.componentCounts.ManList*15088,saurian.HealthMax);
-  const {replayHP}=await modules(),unapproved=structuredClone(manifest);unapproved.subjects[0].approved=true;
+  const {replayHP}=await modules(),unapproved=structuredClone(manifest);unapproved.inputs=unapproved.inputs.slice(0,2);
   assert.throws(()=>replayHP(unapproved),/approved HP failed replay/);
 });
 
@@ -64,7 +64,7 @@ test('original ULTRA log hashes and static named-field provenance are preserved;
   assert.equal(report.review.find(r=>r.name==='Dread Saurian').totalHealth,15088);
   const chariot=report.review.find(r=>r.name==='Skeleton Chariots');assert.equal(chariot.totalHealth,7032);assert.equal(chariot.candidates[0].NumEntitiesInitial,12);
   assert.deepEqual(chariot.candidates[0].componentCounts,{ManList:24,MountList:24,EngineList:12,EntityList:12});
-  assert.deepEqual(report.admitted.map(a=>a.kind),['DIRECT_ULTRA_RUNTIME','DIRECT_ULTRA_RUNTIME']);
+  assert.deepEqual(report.admitted.map(a=>a.kind),Array(5).fill('DIRECT_ULTRA_RUNTIME'));
 });
 
 test('non-ULTRA, missing declaration, identity/snapshot drift, missing HP/count and malformed capture fail closed',async()=>{
@@ -109,32 +109,35 @@ test('shared identity accepts only the two exact HP projections and keeps diagno
   const {assertSharedUnitIdentity}=require('../.test-build/src/repositories/unitSharedIdentity.js');
   const {unitDiagnosticRepository:diagnostics}=require('../.test-build/src/repositories/unitDiagnosticRepository.js');
   const units=read('src/data/units.json');
-  for(const admission of committed.admitted){const unit=units.find(u=>u.id===admission.id),diagnostic=diagnostics.get(unit.id);
+  for(const admission of committed.admitted){const unit=units.find(u=>u.id===admission.id),diagnostic=diagnostics.get(unit.id);if(!diagnostic)continue;
     assert.doesNotThrow(()=>assertSharedUnitIdentity(unit,diagnostic));
     for(const mutate of [u=>{u.entities.totalHealth++;},u=>{u.movement.speed=99;},u=>{u.entities.count=12;}]){
       const changed=structuredClone(unit);mutate(changed);assert.throws(()=>assertSharedUnitIdentity(changed,diagnostic),/collision/);}
   }
 });
 
-test('three reported ULTRA totals remain withheld without matching raw records; existing HP and Production bytes are unchanged',async()=>{
+test('three original ULTRA captures admit exact totals; only their HP fields change from the two-HP baseline',async()=>{
   const {replayHP,byteHash}=await modules(),report=replayHP(manifest),units=read('src/data/units.json');
   const expected=[['wh_main_emp_inf_swordsmen',8280,120],['wh_main_brt_cav_mounted_yeomen_0',5520,60],['wh_dlc01_chs_mon_dragon_ogre',9856,16]];
-  const fixtures=read(base+'semantic-fixtures.json');
+  const previous=structuredClone(units);
   for(const [main,hp,count] of expected){
-    const fixture=fixtures.cases.find(c=>c.mainKey===main);assert.equal(fixture.HealthMax,hp);assert.equal(fixture.NumEntitiesInitial,count);
-    const review=report.review.find(r=>r.staticChain.sourceMainKey===main);
-    assert.equal(review.status,'WITHHELD');assert.deepEqual(review.held,[{reason:'NO_MATCHING_ULTRA_RECORD'}]);
-    assert.deepEqual(review.candidates,[]);assert.equal(review.approved,false);assert.equal(review.totalHealth,undefined);
-    assert(!report.admitted.some(a=>a.sourceMainKey===main));
-    assert(!Object.hasOwn(units.find(u=>u.id==='ca_unit_'+main).entities,'totalHealth'));
-    const forced=structuredClone(manifest);forced.subjects.find(s=>s.mainKey===main).approved=true;
-    assert.throws(()=>replayHP(forced),/approved HP failed replay/);
+    const r=report.review.find(r=>r.staticChain.sourceMainKey===main);
+    assert.equal(r.status,'REVIEWED_DIRECT_ULTRA_RUNTIME');assert.equal(r.approved,true);assert.equal(r.totalHealth,hp);assert.deepEqual(r.held,[]);
+    assert(r.candidates.length>0);
+    for(const c of r.candidates){assert.equal(c.kind,'DIRECT_ULTRA_RUNTIME');assert.equal(c.HealthMax,hp);assert.equal(c.NumEntitiesInitial,count);
+      assert.equal(c.metadata.unitSize,'ULTRA');assert.equal(c.metadata.unitSizeSource,'DECLARED_SETUP');assert.equal(c.metadata.staticSnapshotId,r.staticChain.staticSnapshotId);}
+    const unit=units.find(u=>u.id==='ca_unit_'+main);assert.equal(unit.entities.totalHealth,hp);assert.equal(unit.entities.healthPerEntity,undefined);
+    delete previous.find(u=>u.id===unit.id).entities.totalHealth;
   }
+  assert.equal(report.review.find(r=>r.name==='Dragon Ogres').candidates.length,2);
   assert.equal(units.find(u=>u.name==='Dread Saurian').entities.totalHealth,15088);
   assert.equal(units.find(u=>u.name==='Skeleton Chariots').entities.totalHealth,7032);
-  // Exact file anchor for this admission attempt: even unrelated whitespace or
-  // non-HP values must remain unchanged when no additional source exists.
-  assert.equal(byteHash(readFileSync('src/data/units.json')),'077fc0ca25e6926817ed57d5e7e9e0c37ea1abbef31ec5b38c8445b2e1eb5bfa');
-  assert.equal(byteHash(readFileSync(base+'manifest.json')),'e6438e1fd16eb64ce597f46aa33cd7c49d16c305ee0e085d80131e76c331ff46');
-  assert.equal(byteHash(readFileSync(base+'review.json')),'ca7464c158ca4711cf8e95ab2ffccf46b6754cc0def1ef22ce02ee46c80dd5b0');
+  assert.equal(byteHash(Buffer.from(overlay.serialize(previous))),'077fc0ca25e6926817ed57d5e7e9e0c37ea1abbef31ec5b38c8445b2e1eb5bfa');
+  // Removing the new raw sources must still fail the same unchanged policy.
+  const missing=structuredClone(manifest);missing.inputs=missing.inputs.slice(0,2);
+  for(const subject of missing.subjects.slice(0,3))subject.approved=false;
+  const held=replayHP(missing);
+  for(const [main] of expected){const r=held.review.find(r=>r.staticChain.sourceMainKey===main);
+    assert.equal(r.status,'WITHHELD');assert.deepEqual(r.held,[{reason:'NO_MATCHING_ULTRA_RECORD'}]);assert.equal(r.totalHealth,undefined);
+    const forced=structuredClone(missing);forced.subjects.find(s=>s.mainKey===main).approved=true;assert.throws(()=>replayHP(forced),/approved HP failed replay/);}
 });

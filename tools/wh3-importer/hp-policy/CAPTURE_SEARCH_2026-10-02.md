@@ -94,3 +94,35 @@ remains 2, with Dread Saurian 15088 / Skeleton Chariots 7032 unchanged.
 
 This recheck changes only this document. No Production field, HP policy,
 manifest/review/projection, runtime source, test, or unrelated importer code changes.
+
+## Resolved after raw-source delivery: 2026-10-03
+
+The user subsequently supplied the missing captures under
+`generated/wh3/runtime-evidence/manual-ultra-hp/ultra_hp_raw_logs_3`. These files
+were not in the earlier search inventory. The previous no-source findings above
+remain historical; the current admissions now include all three.
+
+| Original filename | Exact subject | Initial count / HealthMax | Capture records | Result |
+| --- | --- | --- | --- | --- |
+| script_log_021026_1931.txt | wh_main_emp_inf_swordsmen | 120 / 8280 | 249; 1 snapshot | PASS |
+| script_log_021026_1937.txt | wh_main_brt_cav_mounted_yeomen_0 | 60 / 5520 | 189; 1 snapshot | PASS |
+| script_log_021026_1942.txt | wh_dlc01_chs_mon_dragon_ogre | 16 / 9856 | 82; 2 agreeing snapshots | PASS |
+
+All record metadata is ULTRA / DECLARED_SETUP, game 9.0.2.0 and the existing
+static snapshot c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5.
+All completed captures have exact main/land identity and VALUE HP/count; parser
+and reconstructed runs report no problems or conflicting observations.
+
+Each source is committed once to the existing HP inputs with its original
+filename and unchanged bytes; original location and SHA256 are in manifest.json.
+The provided generated files and existing two logs are untouched. Only approval
+flags/source entries and deterministic review/projection pins change;
+`policy.mjs` is unchanged. Production HP now covers 5 of 101 units; 96 remain
+empty. Dread Saurian 15088 and Skeleton Chariots 7032 remain exact.
+
+Current five-HP validation: full tests 309/309, HP tests 8/8, build PASS, stored
+context/runtime/CCO 16/16. All six historical Production replay commands and HP
+replay/projection PASS in a clean source snapshot without .local/generated;
+clean snapshot build also PASS (shared dependencies, configLoader runner).
+Provided source/copy hashes, old two raw logs and all original historical
+runtime files remain identical; no unrelated Production value or ordering changes.

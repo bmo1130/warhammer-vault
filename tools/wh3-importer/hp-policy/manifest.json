@@ -23,6 +23,21 @@
       "file": "inputs/skeleton-chariots-ultra.log",
       "originalPath": "C:/Users/lsh12/OneDrive/Desktop/script_log_021026_1950.txt",
       "originalSha256": "4d2f91fcd84a09058aaefd39ee6c0fb78b6a69b641af32620394c3fc3dd4e0a3"
+    },
+    {
+      "file": "inputs/script_log_021026_1931.txt",
+      "originalPath": "C:/codex/totalwar/generated/wh3/runtime-evidence/manual-ultra-hp/ultra_hp_raw_logs_3/script_log_021026_1931.txt",
+      "originalSha256": "5e027c6eb9a82780285e305308831e9f13d23afdb4bf58fd655804a2696c4420"
+    },
+    {
+      "file": "inputs/script_log_021026_1937.txt",
+      "originalPath": "C:/codex/totalwar/generated/wh3/runtime-evidence/manual-ultra-hp/ultra_hp_raw_logs_3/script_log_021026_1937.txt",
+      "originalSha256": "ceca024b6c146e73e1f1fedea047229c5bcb0ec921fa570b8f49d443680b78c7"
+    },
+    {
+      "file": "inputs/script_log_021026_1942.txt",
+      "originalPath": "C:/codex/totalwar/generated/wh3/runtime-evidence/manual-ultra-hp/ultra_hp_raw_logs_3/script_log_021026_1942.txt",
+      "originalSha256": "3d2abc2b55f5d5344ff6111f31c0ac326adb24d9c9ab250d6085bdcca5290568"
     }
   ],
   "subjects": [
@@ -33,7 +48,7 @@
       "landKey": "wh_main_emp_inf_swordsmen",
       "slug": "sample-04",
       "staticSource": "tools/wh3-importer/promotion/partial-sources.json",
-      "approved": false,
+      "approved": true,
       "baseUnitSha256": "26738bd3222bc56bf2a35f9acbde3991c6dfd5fc7065706c2e031df5edaf30e5"
     },
     {
@@ -43,7 +58,7 @@
       "landKey": "wh_main_brt_cav_mounted_yeomen_0",
       "slug": "sample-08",
       "staticSource": "tools/wh3-importer/promotion/partial-sources.json",
-      "approved": false,
+      "approved": true,
       "baseUnitSha256": "07f3404951a6637d266e0a1a2988ba7dea5e8dace320ddbf728f37501e81eefa"
     },
     {
@@ -53,7 +68,7 @@
       "landKey": "wh_dlc01_chs_mon_dragon_ogre",
       "slug": null,
       "staticSource": "tools/wh3-importer/promotion/dragon-ogres.source.json",
-      "approved": false,
+      "approved": true,
       "baseUnitSha256": "1f37c1a0a723652e47aacfdb4e83f92c19f50c2efec3c7ef1e2e10cd623fce96"
     },
     {

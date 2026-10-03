@@ -4,7 +4,7 @@ const {join}=require('node:path');
 const hash=bytes=>createHash('sha256').update(bytes).digest('hex');
 const serialize=value=>JSON.stringify(value,null,2)+'\n';
 const reportBytes=readFileSync(join(__dirname,'review.json'));
-const reviewSha256='ca7464c158ca4711cf8e95ab2ffccf46b6754cc0def1ef22ce02ee46c80dd5b0';
+const reviewSha256='be22e2048618991e6afd9a1a023bf0d92f9521c757e06a561cc3dcfac30f65fe';
 if(hash(reportBytes)!==reviewSha256)throw Error('ULTRA HP review hash changed; explicit review required.');
 const report=JSON.parse(reportBytes);
 // This narrow overlay lets historical static admissions keep their original

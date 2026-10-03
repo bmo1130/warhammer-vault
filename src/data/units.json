@@ -121,7 +121,8 @@
     },
     "entities": {
       "entitySize": "large",
-      "mass": 1700
+      "mass": 1700,
+      "totalHealth": 9856
     },
     "movement": {
       "canSkirmish": false
@@ -182,7 +183,8 @@
     },
     "entities": {
       "entitySize": "small",
-      "mass": 100
+      "mass": 100,
+      "totalHealth": 8280
     },
     "movement": {
       "canSkirmish": false
@@ -486,7 +488,9 @@
       "category": "Cavalry",
       "tier": 1
     },
-    "entities": {},
+    "entities": {
+      "totalHealth": 5520
+    },
     "movement": {
       "canSkirmish": false
     },
