@@ -13,6 +13,13 @@ npm run dev
 
 ## 구조
 
+홈의 **유닛 비교**에서 Production 유닛 두 개의 기본 스탯을 비교할 수 있습니다.
+`/compare?left=<unitId>&right=<unitId>`에 선택 상태를 보존하며, 이름·ID로
+검색할 수 있습니다. Sample은 제외하고 Production · Evidence는 포함합니다.
+미확인 값은 `—`, 실제 0은 `0`이며 차이는 왼쪽 − 오른쪽입니다. 총 무기
+피해만 기존 기본 + 관통 helper를 사용하고 다른 값을 추정하지 않습니다.
+모바일에서는 비교 표 내부를 가로로 스크롤할 수 있습니다.
+
 - `src/data`: 읽기 전용 WH3 Unit JSON과 별도의 diagnostic 표시 자료. 구조 검증용 샘플 수치는 비워 두고, 검토된 production 부분집합만 실제 기본값을 포함합니다.
 - `src/domain/types.ts`: WH3 엔티티와 향후 Modifier, ModProfile, CampaignProfile, Roster 타입. 팩션 소속 관계는 각 엔티티의 `factionId`만 사용합니다.
 - `src/domain/unit.ts`: 의미별 유닛 스키마와 원본 숫자 필드의 `UnitStatPath` 타입.
