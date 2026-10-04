@@ -32,6 +32,8 @@ const paths = {
   'customBattle.cost': true,
 } satisfies Record<UnitStatPath, true>;
 
+export const modifierStatPaths = Object.freeze(Object.keys(paths) as UnitStatPath[]);
+
 function assertPath(stat: UnitStatPath) {
   if (!Object.hasOwn(paths, stat)) throw new Error(`Invalid numeric UnitStatPath: ${stat}`);
 }

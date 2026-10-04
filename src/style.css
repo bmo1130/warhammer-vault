@@ -66,3 +66,12 @@
 .comparison-table thead a{display:block;color:#e2c999;margin-bottom:8px}.comparison-table td{font-variant-numeric:tabular-nums;color:#dfd2b5}
 .comparison-table .comparison-delta{color:#aeb8aa}.comparison-prompt{padding:24px 0;color:#aeb8aa;font-size:13px}
 @media(max-width:680px){.comparison-selectors{grid-template-columns:1fr}.comparison-selector{padding:15px}.comparison-table th,.comparison-table td{padding:12px 10px}}
+.calculator-profile{padding:20px;display:grid;gap:15px;min-width:0}
+.calculator-profile label,.calculator-row label{display:grid;gap:8px;color:#bfc7b8;font-size:12px;min-width:0}
+.calculator-profile input,.calculator-profile select,.calculator-row input,.calculator-row select{width:100%;min-width:0;min-height:44px;background:#192119;color:#ecefe5;border:1px solid #586355;border-radius:5px;padding:10px}
+.calculator-row{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr) minmax(0,1fr) auto;gap:12px;padding:16px;margin:0 0 16px;min-width:0;align-items:end}
+.calculator-row legend{font-size:12px;color:#d7bd8d;padding:0 5px}.calculator-row .data-note{grid-column:1/-1}
+.calculator-table{min-width:640px}.calculator-table th:first-child{width:25%}.calculator-table th:nth-child(3){width:35%}
+.calculator-table details{text-align:left;font-size:12px}.calculator-table summary{cursor:pointer;color:#d7bd8d}
+.calculator-breakdown{margin-top:12px;line-height:1.7}.calculator-breakdown ul{padding-left:16px}.calculator-breakdown small{display:block;font-size:10px}
+@media(max-width:680px){.calculator-row{grid-template-columns:1fr}.calculator-profile{padding:15px}.calculator-row .button{justify-self:start}}

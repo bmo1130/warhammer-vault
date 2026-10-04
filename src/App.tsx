@@ -9,6 +9,7 @@ import FactionPage from './pages/FactionPage';
 import UnitPage from './pages/UnitPage';
 import UnitsPage from './pages/UnitsPage';
 import ComparePage from './pages/ComparePage';
+import CalculatorPage from './pages/CalculatorPage';
 import LordPage from './pages/LordPage';
 import NotesPage from './pages/NotesPage';
 import SettingsPage from './pages/SettingsPage';
@@ -31,6 +32,7 @@ export default function AppShell() {
           <Route path={`/${entityRoutes.lord}/:id`} element={<LordPage/>}/>
           <Route path="/notes" element={<NotesPage/>}/>
           <Route path="/compare" element={<ComparePage/>}/>
+          <Route path="/calculator" element={<CalculatorPage/>}/>
           <Route path="/settings" element={<SettingsPage/>}/>
           <Route path="*" element={<NotFound/>}/>
         </Routes>

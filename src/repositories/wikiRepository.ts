@@ -2,21 +2,26 @@ import type { ArticleTarget, Bookmark, RecentView, UserBackup, UserNote, WikiArt
 
 import { APP_ID, BACKUP_FORMAT } from '../domain/appIdentity';
 import { entityRoutes } from '../domain/entities';
+import { parseManualModifierProfile, type ManualModifierProfile } from '../domain/manualModifierProfile';
+import { comparisonUnit } from './productionUnitSelection';
+import type { UnitStatModifier } from '../domain/unitModifiers';
 
 const DB_NAME = APP_ID;
-const DB_VERSION = 1;
-type StoreName = 'articles' | 'notes' | 'bookmarks' | 'recentViews';
+const DB_VERSION = 2;
+type StoreName = 'articles' | 'notes' | 'bookmarks' | 'recentViews' | 'manualModifierProfiles';
 
 function openDb(): Promise<IDBDatabase> {
   return new Promise((resolve, reject) => {
     const request = indexedDB.open(DB_NAME, DB_VERSION);
+    let blocked = false;
     request.onupgradeneeded = () => {
       const db = request.result;
-      for (const name of ['articles', 'notes', 'bookmarks', 'recentViews'] as StoreName[]) {
+      for (const name of ['articles', 'notes', 'bookmarks', 'recentViews', 'manualModifierProfiles'] as StoreName[]) {
         if (!db.objectStoreNames.contains(name)) db.createObjectStore(name, { keyPath: 'id' });
       }
     };
-    request.onsuccess = () => resolve(request.result);
+    request.onsuccess = () => { if (blocked) { request.result.close(); return; } request.result.onversionchange = () => request.result.close(); resolve(request.result); };
+    request.onblocked = () => { blocked = true; reject(new Error('다른 탭을 닫거나 새로고침한 뒤 다시 시도하세요.')); };
     request.onerror = () => reject(request.error);
   });
 }
@@ -72,7 +77,10 @@ export function parseBackup(value: unknown): UserBackup {
   if (!isRecord(value) || value.format !== BACKUP_FORMAT || value.version !== 1 || !isString(value.exportedAt) || !Array.isArray(value.articles) || !value.articles.every(validArticle) || !Array.isArray(value.notes) || !value.notes.every(validNote) || !Array.isArray(value.bookmarks) || !value.bookmarks.every(validBookmark) || !Array.isArray(value.recentViews) || !value.recentViews.every(validRecent)) {
     throw new Error('이 앱의 백업 파일 형식이 아닙니다.');
   }
-  return value as UserBackup;
+  if (value.manualModifierProfiles !== undefined && !Array.isArray(value.manualModifierProfiles)) throw new Error('잘못된 수동 Profile 백업입니다.');
+  const profiles = (value.manualModifierProfiles as unknown[] | undefined ?? []).map(p => parseManualModifierProfile(p, comparisonUnit));
+  if (new Set(profiles.map(p => p.id)).size !== profiles.length) throw new Error('중복된 Profile ID입니다.');
+  return { ...value, manualModifierProfiles: profiles } as UserBackup;
 }
 
 export const wikiRepository = {
@@ -93,16 +101,38 @@ export const wikiRepository = {
   setBookmark: (target: ArticleTarget, enabled: boolean) => enabled ? put<Bookmark>('bookmarks', { ...target, id: targetId(target), createdAt: new Date().toISOString() }) : remove('bookmarks', targetId(target)),
   listRecent: async () => (await all<RecentView>('recentViews')).sort((a, b) => b.viewedAt.localeCompare(a.viewedAt)).slice(0, 8),
   recordView: (target: ArticleTarget) => put<RecentView>('recentViews', { ...target, id: targetId(target), viewedAt: new Date().toISOString() }),
+  async listManualProfiles() {
+    const profiles: ManualModifierProfile[] = [];
+    let invalidCount = 0;
+    for (const raw of await all<unknown>('manualModifierProfiles')) {
+      try { profiles.push(parseManualModifierProfile(raw, comparisonUnit)); } catch { invalidCount++; }
+    }
+    return { profiles: profiles.sort((a, b) => b.updatedAt.localeCompare(a.updatedAt)), invalidCount };
+  },
+  async getManualProfile(id: string) {
+    const raw = await get<unknown>('manualModifierProfiles', id);
+    return raw === undefined ? undefined : parseManualModifierProfile(raw, comparisonUnit);
+  },
+  async saveManualProfile(input: { id?: string; name: string; unitId: string; modifiers: UnitStatModifier[] }) {
+    const previous = input.id ? await get<ManualModifierProfile>('manualModifierProfiles', input.id) : undefined;
+    if (input.id && !previous) throw new Error('저장된 Profile을 찾을 수 없습니다. 새 Profile로 저장하세요.');
+    if (previous && previous.unitId !== input.unitId) throw new Error('Profile의 연결 유닛은 변경할 수 없습니다. 새 Profile을 만드세요.');
+    const now = new Date().toISOString();
+    const profile = parseManualModifierProfile({ id: input.id ?? crypto.randomUUID(), name: input.name, unitId: input.unitId, modifiers: input.modifiers, createdAt: previous?.createdAt ?? now, updatedAt: now }, comparisonUnit);
+    await put('manualModifierProfiles', profile);
+    return profile;
+  },
+  deleteManualProfile: (id: string) => remove('manualModifierProfiles', id),
   async exportBackup(): Promise<UserBackup> {
-    const [articles, notes, bookmarks, recentViews] = await Promise.all([all<WikiArticle>('articles'), all<UserNote>('notes'), all<Bookmark>('bookmarks'), all<RecentView>('recentViews')]);
-    return { format: BACKUP_FORMAT, version: 1, exportedAt: new Date().toISOString(), articles, notes, bookmarks, recentViews };
+    const [articles, notes, bookmarks, recentViews, manualModifierProfiles] = await Promise.all([all<WikiArticle>('articles'), all<UserNote>('notes'), all<Bookmark>('bookmarks'), all<RecentView>('recentViews'), all<unknown>('manualModifierProfiles')]);
+    return parseBackup({ format: BACKUP_FORMAT, version: 1, exportedAt: new Date().toISOString(), articles, notes, bookmarks, recentViews, manualModifierProfiles });
   },
   async importBackup(raw: unknown): Promise<void> {
     const backup = parseBackup(raw);
     const db = await openDb();
     await new Promise<void>((resolve, reject) => {
-      const tx = db.transaction(['articles', 'notes', 'bookmarks', 'recentViews'], 'readwrite');
-      for (const [name, entries] of [['articles', backup.articles], ['notes', backup.notes], ['bookmarks', backup.bookmarks], ['recentViews', backup.recentViews]] as const) {
+      const tx = db.transaction(['articles', 'notes', 'bookmarks', 'recentViews', 'manualModifierProfiles'], 'readwrite');
+      for (const [name, entries] of [['articles', backup.articles], ['notes', backup.notes], ['bookmarks', backup.bookmarks], ['recentViews', backup.recentViews], ['manualModifierProfiles', backup.manualModifierProfiles ?? []]] as const) {
         const store = tx.objectStore(name);
         store.clear();
         for (const entry of entries) store.put(entry);

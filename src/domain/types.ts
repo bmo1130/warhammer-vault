@@ -2,6 +2,7 @@ import type { BACKUP_FORMAT } from './appIdentity';
 export type { EntityType } from './entities';
 import type { EntityType } from './entities';
 import type { UnitStatPath } from './unit';
+import type { ManualModifierProfile } from './manualModifierProfile';
 export type * from './unit';
 export type SourceInfo = { gameVersion: string; source: string; tags: string[]; updatedAt?: string };
 export type Faction = SourceInfo & { id: string; name: string; subtitle: string; description: string };
@@ -26,4 +27,4 @@ export type CampaignArmy = { lordId: string; units: { unitId: string; rank: numb
 export type CampaignProfile = { id: string; name: string; gameVersion: string; factionId: string; turn: number; modProfileIds: string[]; completedResearchIds: string[]; ownedBuildingIds: string[]; activeLandmarkIds: string[]; lords: CampaignLord[]; armies: CampaignArmy[]; createdAt: string; updatedAt: string };
 export type RosterEntry = { entityId: string; entityType: 'unit' | 'hero'; count: number };
 export type Roster = { id: string; name: string; lordId: string; entries: RosterEntry[]; createdAt: string; updatedAt: string };
-export type UserBackup = { format: typeof BACKUP_FORMAT; version: 1; exportedAt: string; articles: WikiArticle[]; notes: UserNote[]; bookmarks: Bookmark[]; recentViews: RecentView[] };
+export type UserBackup = { format: typeof BACKUP_FORMAT; version: 1; exportedAt: string; articles: WikiArticle[]; notes: UserNote[]; bookmarks: Bookmark[]; recentViews: RecentView[]; manualModifierProfiles?: ManualModifierProfile[] };

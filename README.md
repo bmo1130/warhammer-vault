@@ -20,6 +20,21 @@ npm run dev
 피해만 기존 기본 + 관통 helper를 사용하고 다른 값을 추정하지 않습니다.
 모바일에서는 비교 표 내부를 가로로 스크롤할 수 있습니다.
 
+홈의 **스탯 계산기**는 `/calculator?unit=<unitId>`에서 한 Production 유닛의
+Base / Modifier / Result를 확인합니다. 수동 행의 `+ Flat`, `%`, `Set`은 기존
+엔진의 SET → Flat 합산 → Percent 합산 계약을 사용하며 unknown은 그대로
+`—`입니다. 숫자 오류·서로 다른 SET 충돌은 계산과 저장을 막고 안내합니다.
+총 무기 피해는 수정된 base/AP를 기존 helper로 합산하며 직접 수정할 수 없습니다.
+
+Manual Modifier Profile은 exact Unit ID에 연결된 개인 IndexedDB 데이터입니다.
+이름·행·유닛을 저장/불러오기/수정/삭제할 수 있으며 JSON 백업에도 포함됩니다.
+IndexedDB v2는 기존 v1 store를 보존하며 `manualModifierProfiles`만 추가합니다.
+JSON 백업은 v1을 유지하고 선택 필드 `manualModifierProfiles`를 추가했습니다.
+이전 백업의 누락 필드는 빈 목록으로 복원되므로 기존 Profile도 비워집니다.
+잘못된 Profile이 포함된 백업은 개인 데이터를 교체하기 전에 거부합니다.
+실제 WH3 연구·스킬·랜드마크 effect나 scope는 연결하지 않았으며 계산 결과는
+Production 원본 및 admission을 변경하지 않습니다.
+
 - `src/data`: 읽기 전용 WH3 Unit JSON과 별도의 diagnostic 표시 자료. 구조 검증용 샘플 수치는 비워 두고, 검토된 production 부분집합만 실제 기본값을 포함합니다.
 - `src/domain/types.ts`: WH3 엔티티와 향후 Modifier, ModProfile, CampaignProfile, Roster 타입. 팩션 소속 관계는 각 엔티티의 `factionId`만 사용합니다.
 - `src/domain/unit.ts`: 의미별 유닛 스키마와 원본 숫자 필드의 `UnitStatPath` 타입.
@@ -37,7 +52,7 @@ npm run dev
 - `src/components`: 검색, 목록 행, 개인 기록 편집기 등 공통 UI.
 - `src/hooks`: 즐겨찾기 조회·토글(`useBookmark`), 상세 페이지 방문 기록(`useRecordView`).
 
-내부 식별자는 `warhammer-vault`입니다. IndexedDB는 `warhammer-vault`, JSON 백업 형식은 `warhammer-vault-backup`, 파일 이름은 `warhammer-vault-backup.json`을 사용합니다. 초기 버전의 기존 저장소 마이그레이션은 제공하지 않습니다.
+내부 식별자는 `warhammer-vault`입니다. IndexedDB는 `warhammer-vault`, JSON 백업 형식은 `warhammer-vault-backup`, 파일 이름은 `warhammer-vault-backup.json`을 사용합니다. IndexedDB v1→v2 업그레이드에서 기존 개인 기록을 보존합니다.
 
 ## 유닛 데이터 계약
 
@@ -65,7 +80,8 @@ modifier는 변경하지 않으며 결과의 중첩 객체도 독립된 복사�
 scope/조건/태그 판정 및 실제 WH3 effect 데이터는 아직 연결하지 않았습니다.
 향후 연구·스킬·랜드마크 연결 계층이 대상 목록을 결정해 이 엔진을 사용할 수 있습니다.
 테스트용 Offensive/Defensive/Economy/Mobility profile은 `tests/fixtures/modifiers.ts`
-에만 있으며 Production 데이터와 UI에는 포함되지 않습니다.
+에만 있으며 Production 데이터와 UI에는 포함되지 않습니다. 계산기 UI에서는
+이 fixture 대신 사용자가 직접 입력한 수동 행만 사용합니다.
 
 ID, 이름, `factionId`, 설명과 출처 메타데이터는 최상위에 유지합니다. 전투·캠페인 원본값은 다음 그룹으로 나눕니다.
 

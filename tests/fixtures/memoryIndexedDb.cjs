@@ -3,6 +3,7 @@
 // Not an IndexedDB polyfill: no claim about quota, locking or durability behavior.
 exports.memoryIndexedDb = function memoryIndexedDb() {
   const stores = new Map();
+  let currentVersion = 0;
   const database = {
     objectStoreNames: { contains: name => stores.has(name) },
     createObjectStore: name => { stores.set(name, new Map()); },
@@ -34,9 +35,9 @@ exports.memoryIndexedDb = function memoryIndexedDb() {
     },
   };
   return {
-    open() {
+    open(_name, version = 1) {
       const request = { result: database };
-      setImmediate(() => { if (!stores.size) request.onupgradeneeded?.(); request.onsuccess?.(); });
+      setImmediate(() => { if (version > currentVersion) { request.onupgradeneeded?.({ oldVersion: currentVersion, newVersion: version }); currentVersion = version; } request.onsuccess?.(); });
       return request;
     },
   };
