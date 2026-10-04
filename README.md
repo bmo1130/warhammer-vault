@@ -50,6 +50,13 @@ historical projection으로 보존하며 새 projection에서 exact 의미 일�
 151 REVIEW_REQUIRED 효과는 승인하지 않습니다. 연구 하나의 선택은 현재 유닛에
 승인된 효과만 적용하며, 부분 적용 기술 5개는 제외 효과를 상세에 표시합니다.
 
+Character Skills의 첫 slice는 Alberic de Bordeleaux 전용 **Champions of Bordeleaux**
+Rank 1입니다. exact Knights of the Realm에 대형 보너스 +15 / 리더십 +5를 적용하며,
+해당 군주가 자신의 군대를 지휘한다는 조건을 표시합니다. `CA_SKILL`, `CA_RESEARCH`,
+Manual이 기존 Modifier 엔진을 함께 사용합니다. Skill rank 0은 비활성이며 선택은
+Profile/IndexedDB/백업에 저장하지 않습니다. [Owner/rank/scope/target 검토 근거](tools/wh3-importer/skill-slice-01/REVIEW.md)와
+admission·앱 projection은 `node scripts/review-skill-slice-01.mjs`로 게임/RPFM 없이 재현합니다.
+
 - `src/data`: 읽기 전용 WH3 Unit JSON과 별도의 diagnostic 표시 자료. 구조 검증용 샘플 수치는 비워 두고, 검토된 production 부분집합만 실제 기본값을 포함합니다.
 - `src/domain/types.ts`: WH3 엔티티와 향후 Modifier, ModProfile, CampaignProfile, Roster 타입. 팩션 소속 관계는 각 엔티티의 `factionId`만 사용합니다.
 - `src/domain/unit.ts`: 의미별 유닛 스키마와 원본 숫자 필드의 `UnitStatPath` 타입.

@@ -1,0 +1,26 @@
+{
+  "selectedSkill": "wh_dlc07_skill_brt_alberic_battle_champions_of_bordeleaux",
+  "name": "Champions of Bordeleaux",
+  "owner": "wh_dlc07_brt_alberic",
+  "ownerType": "legendary_lord",
+  "maxRank": 1,
+  "effects": 2,
+  "target": "Explicit dlc07_brt_knights_realm membership: one Production Unit and one omitted RoR",
+  "reason": "Single exact CA level, two flat numeric bonuses supported by existing UnitStatPath/add, explicit unconditional unit-set and exact owner commanding-own-force scope. No new stat or rank accumulation semantics required.",
+  "comparison": [
+    {
+      "skillKey": "wh_dlc07_skill_brt_alberic_battle_aspiring_knights",
+      "decision": "Not selected",
+      "reason": "Three effect junctions at level 1, including weapon strength requiring two damage paths. Champions requires only two flat modifiers."
+    },
+    {
+      "skillKey": "wh_main_skill_brt_lord_unique_louen_the_ladys_champion",
+      "decision": "Not selected",
+      "reason": "Its single effect enables an ability; outside the numeric Unit-stat slice."
+    }
+  ],
+  "discoveryBoundary": "Limited owner-node discovery for Louen and Alberic plus selected single-level candidates; not a full Bretonnia skill/effect scan. Non-selected discovery stays ignored and is not admission input.",
+  "selectedEvidence": "source.json",
+  "review": "review.json",
+  "replay": "node scripts/review-skill-slice-01.mjs"
+}

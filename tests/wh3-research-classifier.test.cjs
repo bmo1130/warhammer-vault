@@ -171,7 +171,7 @@ test('app Research, Production 101/Sample5, HP/Speed, diagnostic/shared and orig
     'src/data/unitSharedIdentities.json':'3e256bf5c850df65e70a539062a5109a36c75757f8f3a34bc75d8b492aa9d13e',
     [dir+'source.json']:(await policy).pins.sourceSha256,
   };
-  const {verifyProtected}=await import('../tools/wh3-importer/research-admission-batch-01/protected.mjs');
+  const {verifyProtected}=await import('../tools/wh3-importer/skill-slice-01/protected.mjs');
   for(const [path,expected] of Object.entries(protectedHashes)) verifyProtected(path,expected);
   assert.equal(units.filter(u=>u.gameVersion!=='sample').length,101);
   assert.equal(units.filter(u=>u.gameVersion==='sample').length,5);

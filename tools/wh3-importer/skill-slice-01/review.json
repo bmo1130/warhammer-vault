@@ -1,0 +1,237 @@
+{
+  "format": "wh3-reviewed-skill-slice-v1",
+  "sourceKind": "CA_SKILL",
+  "skillKey": "wh_dlc07_skill_brt_alberic_battle_champions_of_bordeleaux",
+  "name": "Champions of Bordeleaux",
+  "owner": {
+    "key": "wh_dlc07_brt_alberic",
+    "name": "Alberic de Bordeleaux",
+    "agentType": "general",
+    "characterType": "legendary_lord",
+    "mainKey": "wh_dlc07_brt_cha_alberic_bordeleaux_0",
+    "landKey": "wh_dlc07_brt_cha_alberic_bordeleaux_0",
+    "factionKey": "wh_main_brt_bordeleaux",
+    "cultureKey": "wh_main_brt_bretonnia",
+    "skillNodeSet": "wh_dlc07_skill_node_set_brt_alberic",
+    "skillNodeKey": "wh_dlc07_skill_node_brt_alberic_unique_12"
+  },
+  "ownerTrace": [
+    [
+      "character_skill_nodes_tables:afd599be227fc129f250",
+      "character_skill_key",
+      "character_skills_tables:49c9c26663fdd6c2914b"
+    ],
+    [
+      "character_skill_node_set_items_tables:2d750b41d0d515e009e9",
+      "item",
+      "character_skill_nodes_tables:afd599be227fc129f250"
+    ],
+    [
+      "character_skill_node_set_items_tables:2d750b41d0d515e009e9",
+      "set",
+      "character_skill_node_sets_tables:2a9ab7eac5eed5e47016"
+    ],
+    [
+      "character_skill_node_sets_tables:2a9ab7eac5eed5e47016",
+      "agent_subtype_key",
+      "agent_subtypes_tables:067864922eeaebc662b0"
+    ],
+    [
+      "character_skill_node_sets_tables:2a9ab7eac5eed5e47016",
+      "agent_key",
+      "agents_tables:073101e312bbb9038fea"
+    ],
+    [
+      "agent_subtypes_tables:067864922eeaebc662b0",
+      "recruitment_category",
+      "agent_recruitment_categories_tables:d6b7b9922551ae15cb45"
+    ],
+    [
+      "agent_subtypes_tables:067864922eeaebc662b0",
+      "associated_unit_override",
+      "main_units_tables:25bb23a5ee4da29017b1"
+    ],
+    [
+      "main_units_tables:25bb23a5ee4da29017b1",
+      "land_unit",
+      "land_units_tables:2c8770cc0bc5569f5978"
+    ],
+    [
+      "frontend_faction_leaders_tables:ecc3b733f065a1fcb8e6",
+      "agent_subtype_record",
+      "agent_subtypes_tables:067864922eeaebc662b0"
+    ],
+    [
+      "frontend_faction_leaders_tables:ecc3b733f065a1fcb8e6",
+      "faction",
+      "factions_tables:ac7c67727920bad90634"
+    ],
+    [
+      "factions_tables:ac7c67727920bad90634",
+      "subculture",
+      "cultures_subcultures_tables:a39a45a3ce0902803566"
+    ],
+    [
+      "cultures_subcultures_tables:a39a45a3ce0902803566",
+      "culture",
+      "cultures_tables:02de964c4aedfcd11e1c"
+    ]
+  ],
+  "rankTrace": {
+    "maxRank": 1,
+    "levels": [
+      1
+    ],
+    "junctionRowIds": [
+      "character_skill_level_to_effects_junctions_tables:60cdd11481fb67391711",
+      "character_skill_level_to_effects_junctions_tables:ab410475f559e9d391ab"
+    ],
+    "semantics": "SINGLE_LEVEL_EXACT_VALUE_NO_ACCUMULATION",
+    "overrides": [],
+    "unlockedAtCharacterRank": 0
+  },
+  "scopeTrace": {
+    "record": {
+      "key": "general_to_force_own",
+      "location": "forcewide_when_commanding",
+      "ownership": "yours",
+      "source": "character",
+      "target": "force",
+      "territory": "any"
+    },
+    "rowId": "campaign_effect_scopes_tables:ac8ad42676de36b22a6c",
+    "condition": "Exact owner commanding the owning force; not factionwide or character-self"
+  },
+  "effects": [
+    {
+      "effectKey": "wh_dlc07_effect_force_stat_bonus_vs_large_kotr",
+      "bonus": "damage_vs_large_entities",
+      "stat": "melee.damage.bonusVsLarge",
+      "operation": "add",
+      "value": 15,
+      "description": "Bonus vs Large: %+n for Knights of the Realm units",
+      "level": 1,
+      "junctionRowId": "character_skill_level_to_effects_junctions_tables:60cdd11481fb67391711",
+      "effectRowId": "effects_tables:a3d3cc08300c327b465c",
+      "localisationRowId": "Loc:c8a245562e721d97f95d",
+      "targetRowId": "effect_bonus_value_ids_unit_sets_tables:97cbde1cedbcdfd4c070",
+      "joins": [
+        [
+          "character_skill_level_to_effects_junctions_tables:60cdd11481fb67391711",
+          "character_skill_key",
+          "character_skills_tables:49c9c26663fdd6c2914b"
+        ],
+        [
+          "character_skill_level_to_effects_junctions_tables:60cdd11481fb67391711",
+          "effect_key",
+          "effects_tables:a3d3cc08300c327b465c"
+        ],
+        [
+          "character_skill_level_to_effects_junctions_tables:60cdd11481fb67391711",
+          "effect_scope",
+          "campaign_effect_scopes_tables:ac8ad42676de36b22a6c"
+        ],
+        [
+          "effect_bonus_value_ids_unit_sets_tables:97cbde1cedbcdfd4c070",
+          "effect",
+          "effects_tables:a3d3cc08300c327b465c"
+        ],
+        [
+          "effect_bonus_value_ids_unit_sets_tables:97cbde1cedbcdfd4c070",
+          "unit_set",
+          "unit_sets_tables:cebe06aa803cdf364fb7"
+        ]
+      ]
+    },
+    {
+      "effectKey": "wh_dlc07_effect_force_stat_leadership_kotr",
+      "bonus": "morale",
+      "stat": "defense.leadership",
+      "operation": "add",
+      "value": 5,
+      "description": "Leadership: %+n for Knight of the Realm units",
+      "level": 1,
+      "junctionRowId": "character_skill_level_to_effects_junctions_tables:ab410475f559e9d391ab",
+      "effectRowId": "effects_tables:714f9940a6955ef7c5ad",
+      "localisationRowId": "Loc:f1824a78f61f0b0a9e25",
+      "targetRowId": "effect_bonus_value_ids_unit_sets_tables:24232178a806d5f14a59",
+      "joins": [
+        [
+          "character_skill_level_to_effects_junctions_tables:ab410475f559e9d391ab",
+          "character_skill_key",
+          "character_skills_tables:49c9c26663fdd6c2914b"
+        ],
+        [
+          "character_skill_level_to_effects_junctions_tables:ab410475f559e9d391ab",
+          "effect_key",
+          "effects_tables:714f9940a6955ef7c5ad"
+        ],
+        [
+          "character_skill_level_to_effects_junctions_tables:ab410475f559e9d391ab",
+          "effect_scope",
+          "campaign_effect_scopes_tables:ac8ad42676de36b22a6c"
+        ],
+        [
+          "effect_bonus_value_ids_unit_sets_tables:24232178a806d5f14a59",
+          "effect",
+          "effects_tables:714f9940a6955ef7c5ad"
+        ],
+        [
+          "effect_bonus_value_ids_unit_sets_tables:24232178a806d5f14a59",
+          "unit_set",
+          "unit_sets_tables:cebe06aa803cdf364fb7"
+        ]
+      ]
+    }
+  ],
+  "targetTrace": [
+    {
+      "mainKey": "wh_main_brt_cav_knights_of_the_realm",
+      "landKey": "wh_main_brt_cav_knights_of_the_realm",
+      "membershipRowId": "unit_set_to_unit_junctions_tables:e4e4c6ddd0b0dd2f50f8",
+      "mainRowId": "main_units_tables:7411499650e816114558",
+      "landRowId": "land_units_tables:0dade6b083f9c0a1ae1d",
+      "joins": [
+        [
+          "unit_set_to_unit_junctions_tables:e4e4c6ddd0b0dd2f50f8",
+          "unit_set",
+          "unit_sets_tables:cebe06aa803cdf364fb7"
+        ],
+        [
+          "unit_set_to_unit_junctions_tables:e4e4c6ddd0b0dd2f50f8",
+          "unit_record",
+          "main_units_tables:7411499650e816114558"
+        ],
+        [
+          "main_units_tables:7411499650e816114558",
+          "land_unit",
+          "land_units_tables:0dade6b083f9c0a1ae1d"
+        ]
+      ]
+    },
+    {
+      "mainKey": "wh_pro04_brt_cav_knights_of_the_realm_ror_0",
+      "landKey": "wh_pro04_brt_cav_knights_of_the_realm_ror_0",
+      "membershipRowId": "unit_set_to_unit_junctions_tables:93a31c81ff9c20d354aa",
+      "mainRowId": "main_units_tables:a056e48d5ca3165e0bae",
+      "landRowId": "land_units_tables:bfca8e78225ba5c49386",
+      "joins": [
+        [
+          "unit_set_to_unit_junctions_tables:93a31c81ff9c20d354aa",
+          "unit_set",
+          "unit_sets_tables:cebe06aa803cdf364fb7"
+        ],
+        [
+          "unit_set_to_unit_junctions_tables:93a31c81ff9c20d354aa",
+          "unit_record",
+          "main_units_tables:a056e48d5ca3165e0bae"
+        ],
+        [
+          "main_units_tables:a056e48d5ca3165e0bae",
+          "land_unit",
+          "land_units_tables:bfca8e78225ba5c49386"
+        ]
+      ]
+    }
+  ]
+}

@@ -153,10 +153,10 @@ test('existing own-force 15 effects/96 candidates and all prior Research/code/da
   const {sha256,classifyBatch}=await core,p=await policy;
   assert.equal(all.filter(e=>e.status==='DIRECT_CANDIDATE'&&e.scope===p.ownForceScope.key).length,15);
   assert.equal(all.flatMap(e=>e.candidates).length,96);
-  for(const [path,hash] of Object.entries(manifest.unchangedFiles)) (await import('../tools/wh3-importer/research-admission-batch-01/protected.mjs')).verifyProtected(path,hash);
+  for(const [path,hash] of Object.entries(manifest.unchangedFiles)) (await import('../tools/wh3-importer/skill-slice-01/protected.mjs')).verifyProtected(path,hash);
   const protectedFiles=json(manifest.protectedManifestPath).protectedFiles;
   for(const [path,hash] of Object.entries(protectedFiles)) {
-    (await import('../tools/wh3-importer/research-admission-batch-01/protected.mjs')).verifyProtected(path,hash);
+    (await import('../tools/wh3-importer/skill-slice-01/protected.mjs')).verifyProtected(path,hash);
   }
   const batch=classifyBatch(readFileSync('tools/wh3-importer/research-batch-01/source.json'),unitsBytes);
   assert.deepEqual([batch.summary.technologyCount,batch.summary.effectCount,batch.summary.DIRECT_CANDIDATE,batch.summary.REVIEW_REQUIRED,batch.summary.UNSUPPORTED,batch.summary.NON_UNIT_STAT,batch.summary.candidateCount],[8,17,9,4,1,3,54]);

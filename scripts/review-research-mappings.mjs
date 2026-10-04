@@ -1,4 +1,4 @@
-import {verifyProtected} from '../tools/wh3-importer/research-admission-batch-01/protected.mjs';
+import {verifyProtected} from '../tools/wh3-importer/skill-slice-01/protected.mjs';
 import {readFileSync as read,writeFileSync as write} from 'node:fs';
 import assert from 'node:assert/strict';
 import {reviewMappings,verifyBatchRegression,sourceSha256} from '../tools/wh3-importer/research-mapping-review-01/review.mjs';

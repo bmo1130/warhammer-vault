@@ -1,0 +1,27 @@
+{
+  "format": "wh3-skill-admission-v1",
+  "baselineCommit": "2284181f3542fed28111e2a0b86758c343c3ad34",
+  "sourceSha256": "11f0e4088f6d3cbe3d46e7bbd4a240f3e21bc7250c6e0b8f0894f3393c2d4f27",
+  "originalExtractionSha256": "40d23b49310b7fb0ac8bd105d857caaee9269aa0fad918d3bccb967d0c52b9bb",
+  "processedSchemasSha256": "1780491e25d087e78c81d484354e6571619c93f62ba2eefb5d694984931d087e",
+  "skillKey": "wh_dlc07_skill_brt_alberic_battle_champions_of_bordeleaux",
+  "ownerKey": "wh_dlc07_brt_alberic",
+  "snapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+  "unitsSha256": "da22d7eb4d6af13856274e3f81fe18c789ed6588b6e0c956cbf97583f1350dc1",
+  "replay": "node scripts/review-skill-slice-01.mjs",
+  "forwardFiles": {
+    "src/pages/CalculatorPage.tsx": {
+      "before": "89bb7b79c9c4d952c4e72a986d9e907d3fbc2d54c12f83ce0fcef2c5bcc4d6ff",
+      "after": "b64e255fa5e41b094774944b6fe4b1a9e7b56d81e66f80cb5a16d54303ea6b73"
+    },
+    "scripts/review-research-mappings.mjs": {
+      "before": "9a3219eb43645ab56b30c1bdb448c78974aea09c876dbcf590ac5b3122e7d251",
+      "after": "7359f5d1a51c6fb9379db21b92d54e581dc5ba9b2709120f0b9d375735e536b0"
+    }
+  },
+  "outputs": {
+    "review.json": "ef5e144a455815fbe38b637f47887c363c33c590857ac5d779e6f149c2680be1",
+    "admission.json": "d4b087b7c45cdc70f167992e4e463ef2338ec545daefbc741cbb7991d62579d4",
+    "projection.json": "f12ddeaf15cd6270ca417521e8ae0d632a9574547a563309cedd2cb362110831"
+  }
+}

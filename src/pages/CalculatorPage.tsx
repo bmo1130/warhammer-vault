@@ -3,7 +3,8 @@ import { Link, useSearchParams } from 'react-router-dom';
 import { comparisonUnit } from '../repositories/productionUnitSelection';
 import { wikiRepository } from '../repositories/wikiRepository';
 import { type DraftModifierRow, type ManualModifierProfile } from '../domain/manualModifierProfile';
-import { calculateResearchAndManual, modifierSourceLabel, researchesForUnit } from '../domain/caResearchEffect';
+import { researchesForUnit } from '../domain/caResearchEffect';
+import { calculateWithSkills, calculatorSourceLabel, skillsForUnit, type SkillSelection } from '../domain/caSkillEffect';
 import { getStatValue, modifierStatPaths } from '../domain/unitModifiers';
 import { modifierStatLabels } from '../domain/modifierStatLabels';
 import { getMeleeWeaponDamage } from '../domain/unitCalculations';
@@ -29,8 +30,11 @@ export default function CalculatorPage() {
   const [message, setMessage] = useState(''), [busy, setBusy] = useState(false);
   const [invalidCount, setInvalidCount] = useState(0);
   const [selectedResearch, setSelectedResearch] = useState<string[]>([]);
+  const [skillRank, setSkillRank] = useState(0);
   const availableResearch = unit ? researchesForUnit(unit) : [];
-  const calculation = unit && unitId === draftUnitId ? calculateResearchAndManual(unit, rows, selectedResearch) : undefined;
+  const availableSkills = unit ? skillsForUnit(unit) : [];
+  const selectedSkills: SkillSelection[] = skillRank && availableSkills.length ? [{skillKey:availableSkills[0].skillKey,ownerKey:availableSkills[0].owner.key,rank:skillRank}] : [];
+  const calculation = unit && unitId === draftUnitId ? calculateWithSkills(unit, rows, selectedResearch, selectedSkills) : undefined;
   const modified = calculation?.unit;
   const breakdown = calculation?.breakdown ?? [];
   const refresh = async () => {
@@ -44,9 +48,9 @@ export default function CalculatorPage() {
   }, []);
   // Browser back/forward must not silently apply another unit's saved rows.
   useEffect(() => {
-    if (unitId !== draftUnitId) { setRows([]); setName(''); setProfileId(''); setMessage(''); setSelectedResearch([]); setDraftUnitId(unitId); }
+    if (unitId !== draftUnitId) { setRows([]); setName(''); setProfileId(''); setMessage(''); setSelectedResearch([]); setSkillRank(0); setDraftUnitId(unitId); }
   }, [unitId, draftUnitId]);
-  const reset = () => { setRows([]); setName(''); setProfileId(''); setMessage(''); setSelectedResearch([]); };
+  const reset = () => { setRows([]); setName(''); setProfileId(''); setMessage(''); setSelectedResearch([]); setSkillRank(0); };
   const selectUnit = (id: string) => { reset(); setDraftUnitId(id); setParams(id ? { unit: id } : {}); };
   const updateRow = (id: string, update: Partial<DraftModifierRow>) => setRows(current => current.map(row => row.id === id ? { ...row, ...update } : row));
   const load = async (id: string) => {
@@ -58,6 +62,7 @@ export default function CalculatorPage() {
       setDraftUnitId(profile.unitId); setParams({ unit: profile.unitId }); setProfileId(profile.id); setName(profile.name);
       setRows(profile.modifiers.map(m => ({ ...m, value: String(m.value) })));
       setSelectedResearch([]);
+      setSkillRank(0);
       setMessage('Profile을 불러왔습니다.');
     } catch (error) { setMessage(error instanceof Error ? error.message : 'Profile을 불러오지 못했습니다.'); }
     finally { setBusy(false); }
@@ -80,7 +85,7 @@ export default function CalculatorPage() {
   };
   const shownStats = unit ? modifierStatPaths.filter(stat => primary.includes(stat) || rows.some(row => row.stat === stat) || getStatValue(unit, stat) !== undefined) : [];
   return <>
-    <PageIntro eyebrow="MODIFIER CALCULATOR" title="스탯 계산기" description="수동 Modifier와 검토된 WH3 연구를 선택해 기본값과 계산 결과를 확인하세요."/>
+    <PageIntro eyebrow="MODIFIER CALCULATOR" title="스탯 계산기" description="수동 Modifier와 검토된 WH3 연구·캐릭터 스킬을 선택해 기본값과 계산 결과를 확인하세요."/>
     <ProductionUnitSelector label="계산할 유닛" id={unitId} onSelect={selectUnit} disabled={busy}/>
     {availableResearch.length > 0 && <section className="panel calculator-research section" aria-label="WH3 Research">
       <h2>WH3 Research</h2>
@@ -92,6 +97,18 @@ export default function CalculatorPage() {
         <details><summary>{research.name} · CA source · read-only</summary><p className="data-note">{research.researchKey}<br/>main: {research.mainKey}<br/>land: {research.landKey}<br/>Scope: factionwide · own forces<br/>WH3 {research.gameVersion}<br/>Reviewed source SHA256: {research.sourceSha256}<br/>Snapshot: {research.snapshotId}</p>
           {research.modifiers.map(m => <p className="data-note" key={m.id}>{m.source}<br/>{modifierStatLabels[m.stat as UnitStatPath]} · {operationLabels[m.operation as keyof typeof operationLabels]} · {signed(m.value)}{m.operation === 'multiply' ? '%' : ''}</p>)}
           {research.omittedEffects?.map(effect => <p className="data-note" key={effect.effectKey}>계산 제외: {effect.effectKey} · {effect.classification} · {effect.reason}</p>)}
+        </details>
+      </div>)}
+    </section>}
+    {availableSkills.length > 0 && <section className="panel calculator-research section" aria-label="Character Skills">
+      <h2>Character Skills</h2>
+      {availableSkills.map(skill => <div className="research-entry" key={skill.skillKey}>
+        <h3>{skill.name}</h3>
+        <p className="data-note">Owner: {skill.owner.name} · Legendary Lord<br/>{skill.owner.key}<br/>이 exact 군주가 본인 군대를 지휘하는 조건입니다. 선택은 Profile에 저장되지 않습니다.</p>
+        <label>{skill.name} Rank <select value={skillRank} disabled={busy} onChange={event => setSkillRank(Number(event.target.value))}><option value={0}>0 · 비활성</option><option value={1}>1 · 활성</option></select></label>
+        <p className="data-note">{skill.ranks[0].effects.map(e => `${modifierStatLabels[e.stat as UnitStatPath]} ${signed(e.value)}`).join(' · ')}</p>
+        <details><summary>{skill.name} · CA_SKILL · read-only</summary><p className="data-note">{skill.skillKey}<br/>Rank 1 · 단일 level의 exact 값 (누적 없음)<br/>Scope: forcewide_when_commanding · own force<br/>WH3 {skill.gameVersion}<br/>Source SHA256: {skill.provenance.sourceSha256}<br/>Snapshot: {skill.provenance.snapshotId}</p>
+          {skill.ranks[0].effects.map(e => <p className="data-note" key={e.effectKey}>CA_SKILL · {e.effectKey}<br/>{modifierStatLabels[e.stat as UnitStatPath]} · {operationLabels[e.operation as keyof typeof operationLabels]} · {signed(e.value)}</p>)}
         </details>
       </div>)}
     </section>}
@@ -133,7 +150,7 @@ export default function CalculatorPage() {
             return <tr key={stat}><th scope="row">{modifierStatLabels[stat]}</th><td>{display(getStatValue(unit, stat))}</td>
               <td>{detail ? <details><summary>{detail.set !== undefined ? `SET ${display(detail.set)} · ` : ''}Flat {signed(detail.flat)} · {signed(detail.percent)}%{detail.status === 'unknown' ? ' · 기본값 미확인' : ''}</summary>
                 <div className="calculator-breakdown">Base {display(detail.base)}<br/>SET {display(detail.set)}<br/>Flat {signed(detail.flat)}<br/>Percent {signed(detail.percent)}%<br/>Result {display(detail.result)}
-                  <ul>{detail.modifiers.map(m => <li key={m.id}>{modifierSourceLabel(m.id, selectedResearch)} · {modifierStatLabels[m.stat]} {operationLabels[m.operation]} {m.value}<small>ID: {m.id}</small></li>)}</ul>
+                  <ul>{detail.modifiers.map(m => <li key={m.id}>{calculatorSourceLabel(m.id, selectedResearch, selectedSkills)} · {modifierStatLabels[m.stat]} {operationLabels[m.operation]} {m.value}<small>ID: {m.id}</small></li>)}</ul>
                 </div></details> : '—'}</td><td>{modified ? display(getStatValue(modified, stat)) : '—'}</td></tr>;
           })}<tr><th scope="row">총 무기 피해 (derived)</th><td>{display(getMeleeWeaponDamage(unit))}</td><td>수정된 기본 + 관통</td><td>{modified ? display(getMeleeWeaponDamage(modified)) : '—'}</td></tr></tbody>
         </table>

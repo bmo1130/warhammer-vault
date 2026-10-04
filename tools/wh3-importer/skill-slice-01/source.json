@@ -1,0 +1,7035 @@
+{
+  "format": "wh3-skill-source-v1",
+  "skillKey": "wh_dlc07_skill_brt_alberic_battle_champions_of_bordeleaux",
+  "originalExtraction": {
+    "path": "generated/wh3/skill-slice-01/raw.json",
+    "sha256": "40d23b49310b7fb0ac8bd105d857caaee9269aa0fad918d3bccb967d0c52b9bb",
+    "extractedAt": "2026-10-04T10:48:07.552Z"
+  },
+  "provenance": {
+    "sourceKind": "ca-pack",
+    "gameVersion": "9.0.2.0",
+    "gameVersionSource": "Warhammer3.exe ProductVersion resource (not inferred from a wiki/Steam build)",
+    "rpfmVersion": "5.1.0",
+    "mcpServerInfo": {
+      "name": "rmcp",
+      "version": "3.1.0"
+    },
+    "schemaFormatVersion": 5,
+    "schemaSha256": "5d628a0167b34a096752c5c21acd16493834a987c80dc9f02364617f796ba2a4",
+    "packs": [
+      {
+        "file_name": "db.pack",
+        "file_path": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+        "pfh_version": "PFH5",
+        "pfh_file_type": "Release",
+        "bitmask": "",
+        "compress": "Zstd",
+        "timestamp": 0,
+        "sizeBytes": 8663017,
+        "filesystemModifiedAt": "2026-10-01T10:08:40.330Z",
+        "sha256": "d0fafac984b3985ec47cec0ea957591424f1077e52ef61941dbf2dc46e6cf723"
+      },
+      {
+        "file_name": "local_en.pack",
+        "file_path": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/local_en.pack",
+        "pfh_version": "PFH5",
+        "pfh_file_type": "Release",
+        "bitmask": "",
+        "compress": "Zstd",
+        "timestamp": 1645478083,
+        "sizeBytes": 33435496,
+        "filesystemModifiedAt": "2026-10-01T10:08:40.330Z",
+        "sha256": "f979527a5aaecf293a4e66afc25ed6c760e4107ef4920b73bd56e10e2652fd6a"
+      }
+    ],
+    "accessMethod": "RPFM MCP / decode_packed_file source=PackFile, directly opened CA Release/Patch packs"
+  },
+  "relationTables": [
+    "effect_bonus_value_agent_action_record_junctions_tables",
+    "effect_bonus_value_agent_junction_tables",
+    "effect_bonus_value_agent_subtype_junctions_tables",
+    "effect_bonus_value_armory_item_category_junctions_tables",
+    "effect_bonus_value_attrition_record_junctions_tables",
+    "effect_bonus_value_basic_junction_tables",
+    "effect_bonus_value_battle_context_army_special_ability_junctions_tables",
+    "effect_bonus_value_battle_context_unit_attribute_junctions_tables",
+    "effect_bonus_value_building_chain_junctions_tables",
+    "effect_bonus_value_building_set_junctions_tables",
+    "effect_bonus_value_cai_deal_component_junctions_tables",
+    "effect_bonus_value_chaotic_plan_junctions_tables",
+    "effect_bonus_value_chaotic_plan_token_junctions_tables",
+    "effect_bonus_value_character_training_group_junctions_tables",
+    "effect_bonus_value_diplomacy_manipulation_category_junctions_tables",
+    "effect_bonus_value_faction_junctions_tables",
+    "effect_bonus_value_id_action_results_additional_outcomes_junctions_tables",
+    "effect_bonus_value_ids_unit_sets_tables",
+    "effect_bonus_value_initiative_junctions_tables",
+    "effect_bonus_value_initiative_set_categories_junctions_tables",
+    "effect_bonus_value_initiative_set_junctions_tables",
+    "effect_bonus_value_loyalty_event_junctions_tables",
+    "effect_bonus_value_military_force_ability_junctions_tables",
+    "effect_bonus_value_missile_weapon_junctions_tables",
+    "effect_bonus_value_name_record_junctions_tables",
+    "effect_bonus_value_plague_component_junctions_tables",
+    "effect_bonus_value_plague_junctions_tables",
+    "effect_bonus_value_pooled_resource_factor_junctions_tables",
+    "effect_bonus_value_pooled_resource_junctions_tables",
+    "effect_bonus_value_pre_battle_unit_targeted_ability_junctions_tables",
+    "effect_bonus_value_province_growth_factor_junctions_tables",
+    "effect_bonus_value_provincial_initiative_effect_record_junctions_tables",
+    "effect_bonus_value_public_order_provider_junctions_tables",
+    "effect_bonus_value_recruitment_source_junctions_tables",
+    "effect_bonus_value_resource_junction_tables",
+    "effect_bonus_value_ritual_category_junctions_tables",
+    "effect_bonus_value_ritual_chains_junctions_tables",
+    "effect_bonus_value_ritual_junctions_tables",
+    "effect_bonus_value_scripted_junctions_tables",
+    "effect_bonus_value_settlement_type_junctions_tables",
+    "effect_bonus_value_siege_item_junctions_tables",
+    "effect_bonus_value_special_ability_group_junctions_tables",
+    "effect_bonus_value_special_ability_phase_record_junctions_tables",
+    "effect_bonus_value_stance_junctions_tables",
+    "effect_bonus_value_subculture_junctions_tables",
+    "effect_bonus_value_teleportation_node_template_junctions_tables",
+    "effect_bonus_value_unit_ability_junctions_tables",
+    "effect_bonus_value_unit_attribute_junctions_tables",
+    "effect_bonus_value_unit_class_stat_modifiers_junctions_tables",
+    "effect_bonus_value_unit_components_animation_table_override_junctions_tables",
+    "effect_bonus_value_unit_list_junctions_tables",
+    "effect_bonus_value_unit_record_junctions_tables",
+    "effect_bonus_value_unit_recruitment_queue_set_junctions_tables",
+    "effect_bonus_value_unit_set_special_ability_phase_junctions_tables",
+    "effect_bonus_value_unit_set_unit_ability_junctions_tables",
+    "effect_bonus_value_unit_set_unit_attribute_junctions_tables",
+    "effect_bonus_value_unit_upgrade_to_unit_group_junctions_tables"
+  ],
+  "schemas": [
+    {
+      "table": "character_skills_tables",
+      "version": 5,
+      "fields": [
+        {
+          "name": "image_path",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "key",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": null
+        },
+        {
+          "name": "localised_description",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "localised_name",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "unlocked_at_rank",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "is_background_skill",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "is_female_only_background_skill",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "is_male_only_background_skill",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "background_weighting",
+          "field_type": "F32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "influence_cost",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        }
+      ],
+      "localisedFields": [
+        "localised_name",
+        "localised_description"
+      ]
+    },
+    {
+      "table": "character_skill_nodes_tables",
+      "version": 6,
+      "fields": [
+        {
+          "name": "campaign_key",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": [
+            "campaigns",
+            "campaign_name"
+          ]
+        },
+        {
+          "name": "character_skill_key",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "character_skills",
+            "key"
+          ]
+        },
+        {
+          "name": "faction_key",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": [
+            "factions",
+            "key"
+          ]
+        },
+        {
+          "name": "indent",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "key",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": null
+        },
+        {
+          "name": "tier",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "subculture",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": [
+            "cultures_subcultures",
+            "subculture"
+          ]
+        },
+        {
+          "name": "points_on_creation",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "required_num_parents",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "visible_in_ui",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        }
+      ],
+      "localisedFields": []
+    },
+    {
+      "table": "character_skill_node_set_items_tables",
+      "version": 0,
+      "fields": [
+        {
+          "name": "set",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "character_skill_node_sets",
+            "key"
+          ]
+        },
+        {
+          "name": "item",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "character_skill_nodes",
+            "key"
+          ]
+        },
+        {
+          "name": "mod_disabled",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        }
+      ],
+      "localisedFields": []
+    },
+    {
+      "table": "character_skill_node_sets_tables",
+      "version": 0,
+      "fields": [
+        {
+          "name": "agent_key",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": [
+            "agents",
+            "key"
+          ]
+        },
+        {
+          "name": "for_army",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "faction_key",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": [
+            "factions",
+            "key"
+          ]
+        },
+        {
+          "name": "key",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": null
+        },
+        {
+          "name": "subculture",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": [
+            "cultures_subcultures",
+            "subculture"
+          ]
+        },
+        {
+          "name": "for_navy",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "campaign_key",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": [
+            "campaigns",
+            "campaign_name"
+          ]
+        },
+        {
+          "name": "agent_subtype_key",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": [
+            "agent_subtypes",
+            "key"
+          ]
+        }
+      ],
+      "localisedFields": [
+        "enc_title"
+      ]
+    },
+    {
+      "table": "agent_subtypes_tables",
+      "version": 3,
+      "fields": [
+        {
+          "name": "key",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": null
+        },
+        {
+          "name": "auto_generate",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "is_caster",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "small_icon",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "associated_unit_override",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": [
+            "main_units",
+            "unit"
+          ]
+        },
+        {
+          "name": "audio_voiceover_actor_group",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "audio_vo_actor_groups",
+            "name"
+          ]
+        },
+        {
+          "name": "show_in_ui",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "cap",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "has_female_name",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "can_gain_xp",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "loyalty_is_applicable",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "contributes_to_agent_cap",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "recruitment_category",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": [
+            "agent_recruitment_categories",
+            "key"
+          ]
+        },
+        {
+          "name": "magic_lore",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": [
+            "special_ability_groups",
+            "ability_group"
+          ]
+        },
+        {
+          "name": "names_group",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": [
+            "names_groups",
+            "key"
+          ]
+        },
+        {
+          "name": "can_be_loaned",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "recruitable",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "saving_settings",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "character_saving_settings",
+            "key"
+          ]
+        },
+        {
+          "name": "audio_vo_culture_override",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "spam_click_vo_enabled",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "can_equip_ancillaries",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "cost",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "recruitment_button_active_icon_path",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "recruitment_button_background_icon_path",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "audio_force_contextual_vo",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        }
+      ],
+      "localisedFields": [
+        "onscreen_name_override",
+        "description_text_override"
+      ]
+    },
+    {
+      "table": "agents_tables",
+      "version": 0,
+      "fields": [
+        {
+          "name": "key",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": null
+        },
+        {
+          "name": "move_points",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "line_of_sight",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "playable",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "portrait_override",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "primary_attribute",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "agent_attributes",
+            "key"
+          ]
+        },
+        {
+          "name": "faction_total_cap",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "in_encyclopedia",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "encyclopedia_url",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": null
+        }
+      ],
+      "localisedFields": []
+    },
+    {
+      "table": "main_units_tables",
+      "version": 7,
+      "fields": [
+        {
+          "name": "additional_building_requirement",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": [
+            "building_levels",
+            "level_name"
+          ]
+        },
+        {
+          "name": "campaign_cap",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "caste",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "unit_castes",
+            "caste"
+          ]
+        },
+        {
+          "name": "create_time",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "is_naval",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "land_unit",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "land_units",
+            "key"
+          ]
+        },
+        {
+          "name": "num_men",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "multiplayer_cap",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "multiplayer_cost",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "naval_unit",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": [
+            "naval_units",
+            "key"
+          ]
+        },
+        {
+          "name": "num_ships",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "min_men_per_ship",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "max_men_per_ship",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "recruitment_cost",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "unit",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": null
+        },
+        {
+          "name": "upkeep_cost",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "weight",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": [
+            "unit_weights",
+            "key"
+          ]
+        },
+        {
+          "name": "resource_requirement",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": [
+            "resources",
+            "key"
+          ]
+        },
+        {
+          "name": "special_edition_mask",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "in_encyclopedia",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "audio_voiceover_culture",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "audio_voiceover_cultures",
+            "name"
+          ]
+        },
+        {
+          "name": "ui_unit_group_land",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "ui_unit_groupings",
+            "key"
+          ]
+        },
+        {
+          "name": "tier",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "is_high_threat",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "porthole_camera",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "unit_porthole_camera_settings",
+            "key"
+          ]
+        },
+        {
+          "name": "mount",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": [
+            "campaign_mounts",
+            "model"
+          ]
+        },
+        {
+          "name": "use_hitpoints_in_campaign",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "porthole_composite_scene",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "melee_cp",
+          "field_type": "F32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "missile_cp",
+          "field_type": "F32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "can_siege",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "audio_voiceover_culture_override",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "audio_voiceover_cultures",
+            "name"
+          ]
+        },
+        {
+          "name": "restrict_xp_gain_in_campaign",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "audio_voiceover_actor_group",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "audio_vo_actor_groups",
+            "name"
+          ]
+        },
+        {
+          "name": "food_cost",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "has_spoken_vo",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "is_monstrous",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "multiplayer_qb_cap",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "vo_is_dragon",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "vo_is_dinosaur",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "optional_ui_element",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "barrier_health",
+          "field_type": "F32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "can_be_bribed",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "point_allowance_weight",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "is_renown",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        }
+      ],
+      "localisedFields": []
+    },
+    {
+      "table": "land_units_tables",
+      "version": 54,
+      "fields": [
+        {
+          "name": "accuracy",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "armour",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "unit_armour_types",
+            "key"
+          ]
+        },
+        {
+          "name": "campaign_action_points",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "category",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "unit_category",
+            "key"
+          ]
+        },
+        {
+          "name": "charge_bonus",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "class",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "unit_class",
+            "key"
+          ]
+        },
+        {
+          "name": "historical_description_text",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "unit_description_historical_texts",
+            "key"
+          ]
+        },
+        {
+          "name": "key",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": null
+        },
+        {
+          "name": "man_animation",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": [
+            "battle_animations_table",
+            "key"
+          ]
+        },
+        {
+          "name": "man_entity",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "battle_entities",
+            "key"
+          ]
+        },
+        {
+          "name": "melee_attack",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "melee_defence",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "morale",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "bonus_hit_points",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "mount",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": [
+            "mounts",
+            "key"
+          ]
+        },
+        {
+          "name": "num_mounts",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "primary_melee_weapon",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "melee_weapons",
+            "key"
+          ]
+        },
+        {
+          "name": "primary_missile_weapon",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": [
+            "missile_weapons",
+            "key"
+          ]
+        },
+        {
+          "name": "rank_depth",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "shield",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "unit_shield_types",
+            "key"
+          ]
+        },
+        {
+          "name": "short_description_text",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "unit_description_short_texts",
+            "key"
+          ]
+        },
+        {
+          "name": "spacing",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "unit_spacings",
+            "key"
+          ]
+        },
+        {
+          "name": "training_level",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "unit_training_level_enum",
+            "key"
+          ]
+        },
+        {
+          "name": "articulated_record",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": [
+            "land_unit_articulated_vehicles",
+            "key"
+          ]
+        },
+        {
+          "name": "engine",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": [
+            "battlefield_engines",
+            "key"
+          ]
+        },
+        {
+          "name": "is_male",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "visibility_spotting_range_min",
+          "field_type": "F32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "visibility_spotting_range_max",
+          "field_type": "F32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "attribute_group",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": [
+            "unit_attributes_groups",
+            "group_name"
+          ]
+        },
+        {
+          "name": "spot_dist_tree",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "spot_dist_scrub",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "reload",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "selection_vo",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "audio_vo_selected_switches",
+            "key"
+          ]
+        },
+        {
+          "name": "selected_vo_secondary",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "audio_vo_selected_switches",
+            "key"
+          ]
+        },
+        {
+          "name": "selected_vo_tertiary",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "audio_vo_selected_switches",
+            "key"
+          ]
+        },
+        {
+          "name": "hiding_scalar",
+          "field_type": "F32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "ground_stat_effect_group",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": [
+            "ground_type_stat_effect_groups",
+            "group_name"
+          ]
+        },
+        {
+          "name": "secondary_ammo",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "primary_ammo",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "damage_mod_flame",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "damage_mod_magic",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "num_engines",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "damage_mod_physical",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "damage_mod_missile",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "damage_mod_all",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "ai_usage_group",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "ai_usage_groups",
+            "key"
+          ]
+        },
+        {
+          "name": "can_skirmish",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "can_brace",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "mounted_draughts",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "sync_locomotion",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "capture_tier",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "capture_tier_to_power",
+            "key"
+          ]
+        },
+        {
+          "name": "key_building_capture_tier",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "capture_tier_to_power",
+            "key"
+          ]
+        },
+        {
+          "name": "score_capture_tier",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "capture_tier_to_power",
+            "key"
+          ]
+        },
+        {
+          "name": "harmony_amplification_type",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": [
+            "harmony_amplification_types",
+            "key"
+          ]
+        },
+        {
+          "name": "first_person",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": [
+            "first_person_engines",
+            "key"
+          ]
+        },
+        {
+          "name": "ar_unit_category",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": [
+            "autoresolver_unit_group_categories_enums",
+            "key"
+          ]
+        },
+        {
+          "name": "healing_power",
+          "field_type": "F32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "spell_mastery",
+          "field_type": "F32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "infinite_secondary_ammo",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "default_guard_mode",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        }
+      ],
+      "localisedFields": [
+        "onscreen_name",
+        "concealed_name"
+      ]
+    },
+    {
+      "table": "agent_recruitment_categories_tables",
+      "version": 2,
+      "fields": [
+        {
+          "name": "key",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": null
+        },
+        {
+          "name": "order",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "icon_file_path",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "show_in_recruitment",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "counts_towards_caps_when_off_the_map",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        }
+      ],
+      "localisedFields": [
+        "onscreen_name",
+        "onscreen_description"
+      ]
+    },
+    {
+      "table": "frontend_faction_leaders_tables",
+      "version": 1,
+      "fields": [
+        {
+          "name": "uniform",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "x_offset",
+          "field_type": "F32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "y_offset",
+          "field_type": "F32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "key",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": null
+        },
+        {
+          "name": "character_image",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "prelude_battle",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": [
+            "battles",
+            "key"
+          ]
+        },
+        {
+          "name": "video",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "videos",
+            "video_name"
+          ]
+        },
+        {
+          "name": "loading_screen_image",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "loading_screen_intro_video",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": [
+            "videos",
+            "video_name"
+          ]
+        },
+        {
+          "name": "override_force_location_x",
+          "field_type": "F32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "override_force_location_y",
+          "field_type": "F32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "voiceover",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "audio_vo_actors",
+            "key"
+          ]
+        },
+        {
+          "name": "show_full_intro_option",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "difficulty",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "startpos_map",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "agent_subtype_record",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "agent_subtypes",
+            "key"
+          ]
+        },
+        {
+          "name": "faction",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "factions",
+            "key"
+          ]
+        }
+      ],
+      "localisedFields": [
+        "localised_description",
+        "localised_action_points",
+        "loading_screen_text",
+        "frontend_description"
+      ]
+    },
+    {
+      "table": "factions_tables",
+      "version": 6,
+      "fields": [
+        {
+          "name": "key",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": null
+        },
+        {
+          "name": "index",
+          "field_type": "I64",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "subculture",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "cultures_subcultures",
+            "subculture"
+          ]
+        },
+        {
+          "name": "category",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "name_group",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "names_groups",
+            "key"
+          ]
+        },
+        {
+          "name": "skin",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "unit_banners",
+            "key"
+          ]
+        },
+        {
+          "name": "ui_skin",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "is_rebel",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "flags_path",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "military_group",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "groupings_military",
+            "military_group"
+          ]
+        },
+        {
+          "name": "movie_death_event",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": [
+            "movie_event_strings",
+            "id"
+          ]
+        },
+        {
+          "name": "unit_regiment_name_group",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "names_groups",
+            "key"
+          ]
+        },
+        {
+          "name": "ship_name_group",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "names_groups",
+            "key"
+          ]
+        },
+        {
+          "name": "pre_battle_speech_parameter",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "pre_battle_speech_parameters_enum",
+            "key"
+          ]
+        },
+        {
+          "name": "audio_voiceover_culture",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "audio_voiceover_cultures",
+            "name"
+          ]
+        },
+        {
+          "name": "mp_force_gen_template",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "mp_force_gen_templates",
+            "key"
+          ]
+        },
+        {
+          "name": "faction_swapping_id",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "win_movie",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": [
+            "movie_events",
+            "event"
+          ]
+        },
+        {
+          "name": "waaagh_faction",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": [
+            "factions",
+            "key"
+          ]
+        },
+        {
+          "name": "waaagh_general_unit",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": [
+            "main_units",
+            "unit"
+          ]
+        },
+        {
+          "name": "is_quest_faction",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "cdir_military_generator_config",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "cdir_military_generator_configs",
+            "key"
+          ]
+        },
+        {
+          "name": "feature_forest",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "faction_feature_forests",
+            "key"
+          ]
+        },
+        {
+          "name": "default_audio_actor_vo_group",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "audio_vo_actor_groups",
+            "name"
+          ]
+        },
+        {
+          "name": "text_replacement_key",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "neutral_reinforcement_factions",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "faction_sets",
+            "key"
+          ]
+        },
+        {
+          "name": "can_accept_gifts_when_dead",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "uniform_colour_primary",
+          "field_type": "ColourRGB",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "uniform_colour_secondary",
+          "field_type": "ColourRGB",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "uniform_colour_tertiary",
+          "field_type": "ColourRGB",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "banner_colour_primary",
+          "field_type": "ColourRGB",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "banner_colour_secondary",
+          "field_type": "ColourRGB",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "banner_colour_tertiary",
+          "field_type": "ColourRGB",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "primary_colour",
+          "field_type": "ColourRGB",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "override_target_unit_vo_culture",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "music_feedback_group",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "audio_music_feedback_factions",
+            "key"
+          ]
+        },
+        {
+          "name": "ui_main_theme_skin",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "ui_main_theme_options",
+            "main_theme"
+          ]
+        },
+        {
+          "name": "primary_colour_hex",
+          "field_type": "ColourRGB",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "alt_primary_colour_hex",
+          "field_type": "ColourRGB",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "secondary_colour_hex",
+          "field_type": "ColourRGB",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "alt_secondary_colour_hex",
+          "field_type": "ColourRGB",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "rebel_colour_hex",
+          "field_type": "ColourRGB",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "uniform_colour_hex",
+          "field_type": "ColourRGB",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "alt_uniform_colour_hex",
+          "field_type": "ColourRGB",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "card_colour_hex",
+          "field_type": "ColourRGB",
+          "is_key": false,
+          "is_reference": null
+        }
+      ],
+      "localisedFields": [
+        "screen_name",
+        "screen_name_when_rebels",
+        "screen_adjective",
+        "attack_desc",
+        "defend_desc"
+      ]
+    },
+    {
+      "table": "cultures_subcultures_tables",
+      "version": 6,
+      "fields": [
+        {
+          "name": "subculture",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": null
+        },
+        {
+          "name": "culture",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "cultures",
+            "key"
+          ]
+        },
+        {
+          "name": "index",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "audio_state_override",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "audio_corruption_state_override",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "audio_rtpc_override",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "region_owner_audio_switch",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": null
+        }
+      ],
+      "localisedFields": [
+        "name",
+        "confederation_screen_name",
+        "confederation_summary_name",
+        "battle_playstyle_description"
+      ]
+    },
+    {
+      "table": "cultures_tables",
+      "version": 12,
+      "fields": [
+        {
+          "name": "key",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": null
+        },
+        {
+          "name": "index",
+          "field_type": "I64",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "fallback_ui_culture",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "ui_background_image",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "audio_state",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "ui_group_by_culture",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "audio_rtpc",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "audio_corruption_state",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "devastation_state",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": [
+            "devastation_states",
+            "key"
+          ]
+        }
+      ],
+      "localisedFields": [
+        "name",
+        "frontend_description"
+      ]
+    },
+    {
+      "table": "campaign_to_agent_subtypes_tables",
+      "version": 0,
+      "fields": [
+        {
+          "name": "agent_subtype",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "agent_subtypes",
+            "key"
+          ]
+        },
+        {
+          "name": "campaign_type",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "campaigns",
+            "campaign_name"
+          ]
+        }
+      ],
+      "localisedFields": []
+    },
+    {
+      "table": "character_skill_level_details_tables",
+      "version": 1,
+      "fields": [
+        {
+          "name": "campaign_key",
+          "field_type": "OptionalStringU8",
+          "is_key": true,
+          "is_reference": [
+            "campaigns",
+            "campaign_name"
+          ]
+        },
+        {
+          "name": "faction_key",
+          "field_type": "OptionalStringU8",
+          "is_key": true,
+          "is_reference": [
+            "factions",
+            "key"
+          ]
+        },
+        {
+          "name": "image_path",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "level",
+          "field_type": "I32",
+          "is_key": true,
+          "is_reference": null
+        },
+        {
+          "name": "skill_key",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "character_skills",
+            "key"
+          ]
+        },
+        {
+          "name": "subculture_key",
+          "field_type": "OptionalStringU8",
+          "is_key": true,
+          "is_reference": [
+            "cultures_subcultures",
+            "subculture"
+          ]
+        },
+        {
+          "name": "unlocked_at_rank",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        }
+      ],
+      "localisedFields": [
+        "localised_name",
+        "localised_description"
+      ]
+    },
+    {
+      "table": "character_skill_level_to_ancillaries_junctions_tables",
+      "version": 1,
+      "fields": [
+        {
+          "name": "granted_ancillary",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "ancillaries",
+            "key"
+          ]
+        },
+        {
+          "name": "skill",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "character_skills",
+            "key"
+          ]
+        },
+        {
+          "name": "level",
+          "field_type": "I32",
+          "is_key": true,
+          "is_reference": null
+        }
+      ],
+      "localisedFields": []
+    },
+    {
+      "table": "character_skill_level_to_dilemmas_junctions_tables",
+      "version": 1,
+      "fields": [
+        {
+          "name": "character_skill_key",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "character_skills",
+            "key"
+          ]
+        },
+        {
+          "name": "dilemma_key",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "dilemmas",
+            "key"
+          ]
+        },
+        {
+          "name": "level",
+          "field_type": "I32",
+          "is_key": true,
+          "is_reference": null
+        },
+        {
+          "name": "random_selection",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        }
+      ],
+      "localisedFields": []
+    },
+    {
+      "table": "character_skills_to_level_reached_criterias_tables",
+      "version": 0,
+      "fields": [
+        {
+          "name": "character_skill",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "character_skills",
+            "key"
+          ]
+        },
+        {
+          "name": "character_level",
+          "field_type": "I32",
+          "is_key": true,
+          "is_reference": null
+        },
+        {
+          "name": "upgrade_to_skill_level",
+          "field_type": "I32",
+          "is_key": true,
+          "is_reference": null
+        }
+      ],
+      "localisedFields": []
+    },
+    {
+      "table": "character_skill_level_to_effects_junctions_tables",
+      "version": 1,
+      "fields": [
+        {
+          "name": "character_skill_key",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "character_skills",
+            "key"
+          ]
+        },
+        {
+          "name": "effect_key",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "effects",
+            "effect"
+          ]
+        },
+        {
+          "name": "effect_scope",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "campaign_effect_scopes",
+            "key"
+          ]
+        },
+        {
+          "name": "level",
+          "field_type": "I32",
+          "is_key": true,
+          "is_reference": null
+        },
+        {
+          "name": "value",
+          "field_type": "F32",
+          "is_key": false,
+          "is_reference": null
+        }
+      ],
+      "localisedFields": []
+    },
+    {
+      "table": "effects_tables",
+      "version": 0,
+      "fields": [
+        {
+          "name": "effect",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": null
+        },
+        {
+          "name": "icon",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "priority",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "icon_negative",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "category",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "effect_categories",
+            "key"
+          ]
+        },
+        {
+          "name": "is_positive_value_good",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        }
+      ],
+      "localisedFields": [
+        "description"
+      ]
+    },
+    {
+      "table": "campaign_effect_scopes_tables",
+      "version": 2,
+      "fields": [
+        {
+          "name": "key",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": null
+        },
+        {
+          "name": "location",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "campaign_effect_scope_locations",
+            "key"
+          ]
+        },
+        {
+          "name": "ownership",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": [
+            "campaign_effect_scope_ownerships",
+            "key"
+          ]
+        },
+        {
+          "name": "source",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "campaign_effect_scope_objects",
+            "key"
+          ]
+        },
+        {
+          "name": "target",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "campaign_effect_scope_objects",
+            "key"
+          ]
+        },
+        {
+          "name": "territory",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": [
+            "campaign_effect_scope_territories",
+            "key"
+          ]
+        }
+      ],
+      "localisedFields": [
+        "localised_text"
+      ]
+    },
+    {
+      "table": "effect_bonus_value_agent_action_record_junctions_tables",
+      "version": 0,
+      "fields": [
+        {
+          "name": "bonus_value_id",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "campaign_bonus_value_ids_agent_action_records",
+            "key"
+          ]
+        },
+        {
+          "name": "effect",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "effects",
+            "effect"
+          ]
+        },
+        {
+          "name": "agent_action_record",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "agent_actions",
+            "unique_id"
+          ]
+        }
+      ],
+      "localisedFields": []
+    },
+    {
+      "table": "effect_bonus_value_agent_junction_tables",
+      "version": 0,
+      "fields": [
+        {
+          "name": "effect",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "effects",
+            "effect"
+          ]
+        },
+        {
+          "name": "bonus_value_id",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "campaign_bonus_value_ids_agent",
+            "key"
+          ]
+        },
+        {
+          "name": "agent",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "agents",
+            "key"
+          ]
+        }
+      ],
+      "localisedFields": []
+    },
+    {
+      "table": "effect_bonus_value_agent_subtype_junctions_tables",
+      "version": 0,
+      "fields": [
+        {
+          "name": "bonus_value_id",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "campaign_bonus_value_ids_agent_subtypes",
+            "key"
+          ]
+        },
+        {
+          "name": "effect",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "effects",
+            "effect"
+          ]
+        },
+        {
+          "name": "subtype",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "agent_subtypes",
+            "key"
+          ]
+        }
+      ],
+      "localisedFields": []
+    },
+    {
+      "table": "effect_bonus_value_armory_item_category_junctions_tables",
+      "version": 0,
+      "fields": [
+        {
+          "name": "armory_item_category",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "armory_item_categories",
+            "key"
+          ]
+        },
+        {
+          "name": "bonus_value_id",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "campaign_bonus_value_ids_armory_item_categories",
+            "key"
+          ]
+        },
+        {
+          "name": "effect",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "effects",
+            "effect"
+          ]
+        }
+      ],
+      "localisedFields": []
+    },
+    {
+      "table": "effect_bonus_value_attrition_record_junctions_tables",
+      "version": 0,
+      "fields": [
+        {
+          "name": "attrition_record",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "campaign_map_attritions",
+            "key"
+          ]
+        },
+        {
+          "name": "bonus_value_id",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "campaign_bonus_value_ids_attrition_records",
+            "key"
+          ]
+        },
+        {
+          "name": "effect",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "effects",
+            "effect"
+          ]
+        }
+      ],
+      "localisedFields": []
+    },
+    {
+      "table": "effect_bonus_value_basic_junction_tables",
+      "version": 0,
+      "fields": [
+        {
+          "name": "effect",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "effects",
+            "effect"
+          ]
+        },
+        {
+          "name": "bonus_value_id",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "campaign_bonus_value_ids_basic",
+            "key"
+          ]
+        }
+      ],
+      "localisedFields": []
+    },
+    {
+      "table": "effect_bonus_value_battle_context_army_special_ability_junctions_tables",
+      "version": 0,
+      "fields": [
+        {
+          "name": "battle_context_army_special_ability",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "battle_context_army_special_ability_junctions",
+            "key"
+          ]
+        },
+        {
+          "name": "bonus_value_id",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "campaign_bonus_value_ids_battle_context_army_special_abilities",
+            "key"
+          ]
+        },
+        {
+          "name": "effect",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "effects",
+            "effect"
+          ]
+        }
+      ],
+      "localisedFields": []
+    },
+    {
+      "table": "effect_bonus_value_battle_context_unit_attribute_junctions_tables",
+      "version": 0,
+      "fields": [
+        {
+          "name": "battle_context_unit_attribute",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "battle_context_unit_attribute_junctions",
+            "key"
+          ]
+        },
+        {
+          "name": "bonus_value_id",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "campaign_bonus_value_ids_battle_context_unit_attributes",
+            "key"
+          ]
+        },
+        {
+          "name": "effect",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "effects",
+            "effect"
+          ]
+        }
+      ],
+      "localisedFields": []
+    },
+    {
+      "table": "effect_bonus_value_building_chain_junctions_tables",
+      "version": 0,
+      "fields": [
+        {
+          "name": "effect",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "effects",
+            "effect"
+          ]
+        },
+        {
+          "name": "bonus_value_id",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "campaign_bonus_value_ids_building_chain",
+            "key"
+          ]
+        },
+        {
+          "name": "building_chain",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "building_chains",
+            "key"
+          ]
+        }
+      ],
+      "localisedFields": []
+    },
+    {
+      "table": "effect_bonus_value_building_set_junctions_tables",
+      "version": 0,
+      "fields": [
+        {
+          "name": "bonus_value_id",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "campaign_bonus_value_ids_building_sets",
+            "key"
+          ]
+        },
+        {
+          "name": "building_set",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "building_sets",
+            "key"
+          ]
+        },
+        {
+          "name": "effect",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "effects",
+            "effect"
+          ]
+        }
+      ],
+      "localisedFields": []
+    },
+    {
+      "table": "effect_bonus_value_cai_deal_component_junctions_tables",
+      "version": 0,
+      "fields": [
+        {
+          "name": "cai_deal_component",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "cai_personality_deal_evaluation_deal_component_names",
+            "id"
+          ]
+        },
+        {
+          "name": "effect",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "effects",
+            "effect"
+          ]
+        },
+        {
+          "name": "bonus_value_id",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "campaign_bonus_value_ids_cai_deal_components",
+            "key"
+          ]
+        }
+      ],
+      "localisedFields": []
+    },
+    {
+      "table": "effect_bonus_value_chaotic_plan_junctions_tables",
+      "version": 0,
+      "fields": [
+        {
+          "name": "chaotic_plan",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "chaotic_plans",
+            "key"
+          ]
+        },
+        {
+          "name": "effect",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "effects",
+            "effect"
+          ]
+        },
+        {
+          "name": "bonus_value_id",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "campaign_bonus_value_ids_chaotic_plans",
+            "key"
+          ]
+        }
+      ],
+      "localisedFields": []
+    },
+    {
+      "table": "effect_bonus_value_chaotic_plan_token_junctions_tables",
+      "version": 0,
+      "fields": [
+        {
+          "name": "bonus_value_id",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "campaign_bonus_value_ids_chaotic_plan_tokens",
+            "key"
+          ]
+        },
+        {
+          "name": "effect",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "effects",
+            "effect"
+          ]
+        },
+        {
+          "name": "chaotic_plan_token",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "chaotic_plan_tokens",
+            "key"
+          ]
+        }
+      ],
+      "localisedFields": []
+    },
+    {
+      "table": "effect_bonus_value_character_training_group_junctions_tables",
+      "version": 0,
+      "fields": [
+        {
+          "name": "bonus_value_id",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "campaign_bonus_value_ids_character_training_groups",
+            "key"
+          ]
+        },
+        {
+          "name": "effect",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "effects",
+            "effect"
+          ]
+        },
+        {
+          "name": "group_key",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "character_training_groups",
+            "key"
+          ]
+        }
+      ],
+      "localisedFields": []
+    },
+    {
+      "table": "effect_bonus_value_diplomacy_manipulation_category_junctions_tables",
+      "version": 0,
+      "fields": [
+        {
+          "name": "bonus_value_id",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "campaign_bonus_value_ids_diplomacy_manipulations",
+            "key"
+          ]
+        },
+        {
+          "name": "diplomacy_manipulation_category",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "diplomatic_manipulation_categories",
+            "category"
+          ]
+        },
+        {
+          "name": "effect",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "effects",
+            "effect"
+          ]
+        }
+      ],
+      "localisedFields": []
+    },
+    {
+      "table": "effect_bonus_value_faction_junctions_tables",
+      "version": 0,
+      "fields": [
+        {
+          "name": "bonus_value_id",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "campaign_bonus_value_ids_factions",
+            "key"
+          ]
+        },
+        {
+          "name": "effect",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "effects",
+            "effect"
+          ]
+        },
+        {
+          "name": "faction",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "factions",
+            "key"
+          ]
+        }
+      ],
+      "localisedFields": []
+    },
+    {
+      "table": "effect_bonus_value_id_action_results_additional_outcomes_junctions_tables",
+      "version": 0,
+      "fields": [
+        {
+          "name": "action_results_additional_outcome_record",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "action_results_additional_outcomes",
+            "key"
+          ]
+        },
+        {
+          "name": "bonus_value_id",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "campaign_bonus_value_ids_action_results_additional_outcomes",
+            "key"
+          ]
+        },
+        {
+          "name": "effect",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "effects",
+            "effect"
+          ]
+        }
+      ],
+      "localisedFields": []
+    },
+    {
+      "table": "effect_bonus_value_ids_unit_sets_tables",
+      "version": 0,
+      "fields": [
+        {
+          "name": "bonus_value_id",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "campaign_bonus_value_ids_unit_sets",
+            "key"
+          ]
+        },
+        {
+          "name": "effect",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "effects",
+            "effect"
+          ]
+        },
+        {
+          "name": "unit_set",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "unit_sets",
+            "key"
+          ]
+        }
+      ],
+      "localisedFields": []
+    },
+    {
+      "table": "effect_bonus_value_initiative_junctions_tables",
+      "version": 0,
+      "fields": [
+        {
+          "name": "bonus_value_id",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "campaign_bonus_value_ids_initiatives",
+            "key"
+          ]
+        },
+        {
+          "name": "effect",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "effects",
+            "effect"
+          ]
+        },
+        {
+          "name": "initiative",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "initiatives",
+            "key"
+          ]
+        }
+      ],
+      "localisedFields": []
+    },
+    {
+      "table": "effect_bonus_value_initiative_set_categories_junctions_tables",
+      "version": 0,
+      "fields": [
+        {
+          "name": "effect",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "effects",
+            "effect"
+          ]
+        },
+        {
+          "name": "initiative_set_category",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "initiative_set_categories",
+            "key"
+          ]
+        },
+        {
+          "name": "bonus_value_id",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "campaign_bonus_value_ids_initiative_set_categories",
+            "key"
+          ]
+        }
+      ],
+      "localisedFields": []
+    },
+    {
+      "table": "effect_bonus_value_initiative_set_junctions_tables",
+      "version": 0,
+      "fields": [
+        {
+          "name": "bonus_value_id",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "campaign_bonus_value_ids_initiative_sets",
+            "key"
+          ]
+        },
+        {
+          "name": "effect",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "effects",
+            "effect"
+          ]
+        },
+        {
+          "name": "initiative_set",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "initiative_sets",
+            "key"
+          ]
+        }
+      ],
+      "localisedFields": []
+    },
+    {
+      "table": "effect_bonus_value_loyalty_event_junctions_tables",
+      "version": 0,
+      "fields": [
+        {
+          "name": "bonus_value_id",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "campaign_bonus_value_ids_loyalty_events",
+            "id"
+          ]
+        },
+        {
+          "name": "effect",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "effects",
+            "effect"
+          ]
+        },
+        {
+          "name": "loyallty_event",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "loyalty_event_effects",
+            "event"
+          ]
+        }
+      ],
+      "localisedFields": []
+    },
+    {
+      "table": "effect_bonus_value_military_force_ability_junctions_tables",
+      "version": 0,
+      "fields": [
+        {
+          "name": "bonus_value_id",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "campaign_bonus_value_ids_military_force_abilitys",
+            "key"
+          ]
+        },
+        {
+          "name": "effect",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "effects",
+            "effect"
+          ]
+        },
+        {
+          "name": "force_ability",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "army_special_abilities",
+            "army_special_ability"
+          ]
+        }
+      ],
+      "localisedFields": []
+    },
+    {
+      "table": "effect_bonus_value_missile_weapon_junctions_tables",
+      "version": 0,
+      "fields": [
+        {
+          "name": "bonus_value_id",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "campaign_bonus_value_id_unit_missile_weapons",
+            "id"
+          ]
+        },
+        {
+          "name": "effect",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "effects",
+            "effect"
+          ]
+        },
+        {
+          "name": "missile_weapon_junction",
+          "field_type": "I32",
+          "is_key": true,
+          "is_reference": [
+            "unit_missile_weapon_junctions",
+            "id"
+          ]
+        }
+      ],
+      "localisedFields": []
+    },
+    {
+      "table": "effect_bonus_value_name_record_junctions_tables",
+      "version": 1,
+      "fields": [
+        {
+          "name": "bonus_value_id",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "campaign_bonus_value_ids_name_records",
+            "key"
+          ]
+        },
+        {
+          "name": "effect",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "effects",
+            "effect"
+          ]
+        },
+        {
+          "name": "name_record",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "names",
+            "id"
+          ]
+        }
+      ],
+      "localisedFields": []
+    },
+    {
+      "table": "effect_bonus_value_plague_component_junctions_tables",
+      "version": 0,
+      "fields": [
+        {
+          "name": "bonus_value_id",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "campaign_bonus_value_ids_plague_components",
+            "key"
+          ]
+        },
+        {
+          "name": "effect",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "effects",
+            "effect"
+          ]
+        },
+        {
+          "name": "plague_component",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "plague_components",
+            "key"
+          ]
+        }
+      ],
+      "localisedFields": []
+    },
+    {
+      "table": "effect_bonus_value_plague_junctions_tables",
+      "version": 0,
+      "fields": [
+        {
+          "name": "bonus_value_id",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "campaign_bonus_value_ids_plagues",
+            "key"
+          ]
+        },
+        {
+          "name": "effect",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "effects",
+            "effect"
+          ]
+        },
+        {
+          "name": "plague",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "plagues",
+            "name"
+          ]
+        }
+      ],
+      "localisedFields": []
+    },
+    {
+      "table": "effect_bonus_value_pooled_resource_factor_junctions_tables",
+      "version": 0,
+      "fields": [
+        {
+          "name": "bonus_value_id",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "campaign_bonus_value_ids_pooled_resource_factors",
+            "key"
+          ]
+        },
+        {
+          "name": "effect",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "effects",
+            "effect"
+          ]
+        },
+        {
+          "name": "resource_factor",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "pooled_resource_factor_junctions",
+            "unique_id"
+          ]
+        }
+      ],
+      "localisedFields": []
+    },
+    {
+      "table": "effect_bonus_value_pooled_resource_junctions_tables",
+      "version": 0,
+      "fields": [
+        {
+          "name": "bonus_value_id",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "campaign_bonus_value_ids_pooled_resources",
+            "key"
+          ]
+        },
+        {
+          "name": "effect",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "effects",
+            "effect"
+          ]
+        },
+        {
+          "name": "pooled_resource",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "pooled_resources",
+            "key"
+          ]
+        }
+      ],
+      "localisedFields": []
+    },
+    {
+      "table": "effect_bonus_value_pre_battle_unit_targeted_ability_junctions_tables",
+      "version": 0,
+      "fields": [
+        {
+          "name": "bonus_value_id",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "campaign_bonus_value_ids_pre_battle_unit_targeted_abilities",
+            "key"
+          ]
+        },
+        {
+          "name": "effect",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "effects",
+            "effect"
+          ]
+        },
+        {
+          "name": "pre_battle_unit_targeted_ability",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "pre_battle_unit_targeted_abilities",
+            "key"
+          ]
+        }
+      ],
+      "localisedFields": []
+    },
+    {
+      "table": "effect_bonus_value_province_growth_factor_junctions_tables",
+      "version": 0,
+      "fields": [
+        {
+          "name": "bonus_value_id",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "province_growth_factor_bonus_value_ids",
+            "key"
+          ]
+        },
+        {
+          "name": "effect",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "effects",
+            "effect"
+          ]
+        },
+        {
+          "name": "province_growth_factor",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "province_growth_factors",
+            "key"
+          ]
+        }
+      ],
+      "localisedFields": []
+    },
+    {
+      "table": "effect_bonus_value_provincial_initiative_effect_record_junctions_tables",
+      "version": 1,
+      "fields": [
+        {
+          "name": "bonus_value_id",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "campaign_bonus_value_ids_provincial_initiative_effect_records",
+            "key"
+          ]
+        },
+        {
+          "name": "effect",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "effects",
+            "effect"
+          ]
+        },
+        {
+          "name": "effect_bonus_will_modify",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "effects",
+            "effect"
+          ]
+        }
+      ],
+      "localisedFields": []
+    },
+    {
+      "table": "effect_bonus_value_public_order_provider_junctions_tables",
+      "version": 0,
+      "fields": [
+        {
+          "name": "bonus_value_id",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "campaign_bonus_value_ids_public_orders",
+            "key"
+          ]
+        },
+        {
+          "name": "effect",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "effects",
+            "effect"
+          ]
+        },
+        {
+          "name": "public_order_provider",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "public_order_providers",
+            "key"
+          ]
+        }
+      ],
+      "localisedFields": []
+    },
+    {
+      "table": "effect_bonus_value_recruitment_source_junctions_tables",
+      "version": 0,
+      "fields": [
+        {
+          "name": "recruitment_source",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "recruitment_sources",
+            "key"
+          ]
+        },
+        {
+          "name": "bonus_value",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "campaign_bonus_value_ids_recruitment_sources",
+            "key"
+          ]
+        },
+        {
+          "name": "effect",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "effects",
+            "effect"
+          ]
+        }
+      ],
+      "localisedFields": []
+    },
+    {
+      "table": "effect_bonus_value_resource_junction_tables",
+      "version": 0,
+      "fields": [
+        {
+          "name": "effect",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "effects",
+            "effect"
+          ]
+        },
+        {
+          "name": "bonus_value_id",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "campaign_bonus_value_ids_resource",
+            "key"
+          ]
+        },
+        {
+          "name": "resource",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "resources",
+            "key"
+          ]
+        }
+      ],
+      "localisedFields": []
+    },
+    {
+      "table": "effect_bonus_value_ritual_category_junctions_tables",
+      "version": 0,
+      "fields": [
+        {
+          "name": "bonus_value_id",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "campaign_bonus_value_ids_ritual_categories",
+            "key"
+          ]
+        },
+        {
+          "name": "effect",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "effects",
+            "effect"
+          ]
+        },
+        {
+          "name": "ritual_category",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "ritual_categories",
+            "id"
+          ]
+        }
+      ],
+      "localisedFields": []
+    },
+    {
+      "table": "effect_bonus_value_ritual_chains_junctions_tables",
+      "version": 0,
+      "fields": [
+        {
+          "name": "bonus_value_id",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "campaign_bonus_value_ids_ritual_chains",
+            "key"
+          ]
+        },
+        {
+          "name": "effect",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "effects",
+            "effect"
+          ]
+        },
+        {
+          "name": "ritual_chain",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "ritual_chains",
+            "key"
+          ]
+        }
+      ],
+      "localisedFields": []
+    },
+    {
+      "table": "effect_bonus_value_ritual_junctions_tables",
+      "version": 0,
+      "fields": [
+        {
+          "name": "bonus_value_id",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "campaign_bonus_value_ids_rituals",
+            "key"
+          ]
+        },
+        {
+          "name": "effect",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "effects",
+            "effect"
+          ]
+        },
+        {
+          "name": "ritual",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "rituals",
+            "key"
+          ]
+        }
+      ],
+      "localisedFields": []
+    },
+    {
+      "table": "effect_bonus_value_scripted_junctions_tables",
+      "version": 0,
+      "fields": [
+        {
+          "name": "bonus_value_id",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "campaign_bonus_value_ids_scripteds",
+            "key"
+          ]
+        },
+        {
+          "name": "effect",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "effects",
+            "effect"
+          ]
+        },
+        {
+          "name": "scripted_record",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "scripted_bonus_value_ids",
+            "key"
+          ]
+        }
+      ],
+      "localisedFields": []
+    },
+    {
+      "table": "effect_bonus_value_settlement_type_junctions_tables",
+      "version": 0,
+      "fields": [
+        {
+          "name": "settlement_type",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "settlement_types",
+            "key"
+          ]
+        },
+        {
+          "name": "bonus_value_id",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "campaign_bonus_value_ids_settlement_types",
+            "key"
+          ]
+        },
+        {
+          "name": "effect",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "effects",
+            "effect"
+          ]
+        }
+      ],
+      "localisedFields": []
+    },
+    {
+      "table": "effect_bonus_value_siege_item_junctions_tables",
+      "version": 0,
+      "fields": [
+        {
+          "name": "bonus_value_id",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "campaign_bonus_value_ids_siege_items",
+            "key"
+          ]
+        },
+        {
+          "name": "effect",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "effects",
+            "effect"
+          ]
+        },
+        {
+          "name": "siege_item",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "battlefield_deployable_siege_items",
+            "key"
+          ]
+        }
+      ],
+      "localisedFields": []
+    },
+    {
+      "table": "effect_bonus_value_special_ability_group_junctions_tables",
+      "version": 0,
+      "fields": [
+        {
+          "name": "bonus_value_id",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "campaign_bonus_value_ids_special_ability_groups",
+            "key"
+          ]
+        },
+        {
+          "name": "effect",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "effects",
+            "effect"
+          ]
+        },
+        {
+          "name": "special_ability_group",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "special_ability_groups",
+            "ability_group"
+          ]
+        }
+      ],
+      "localisedFields": []
+    },
+    {
+      "table": "effect_bonus_value_special_ability_phase_record_junctions_tables",
+      "version": 0,
+      "fields": [
+        {
+          "name": "bonus_value_id",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "campaign_bonus_value_ids_special_ability_phases",
+            "key"
+          ]
+        },
+        {
+          "name": "effect",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "effects",
+            "effect"
+          ]
+        },
+        {
+          "name": "special_ability_phase",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "special_ability_phases",
+            "id"
+          ]
+        }
+      ],
+      "localisedFields": []
+    },
+    {
+      "table": "effect_bonus_value_stance_junctions_tables",
+      "version": 0,
+      "fields": [
+        {
+          "name": "bonus_value_id",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "campaign_bonus_value_ids_stances",
+            "key"
+          ]
+        },
+        {
+          "name": "effect",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "effects",
+            "effect"
+          ]
+        },
+        {
+          "name": "stance",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "campaign_stances",
+            "key"
+          ]
+        }
+      ],
+      "localisedFields": []
+    },
+    {
+      "table": "effect_bonus_value_subculture_junctions_tables",
+      "version": 0,
+      "fields": [
+        {
+          "name": "bonus_value_id",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "campaign_bonus_value_ids_subcultures",
+            "key"
+          ]
+        },
+        {
+          "name": "effect",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "effects",
+            "effect"
+          ]
+        },
+        {
+          "name": "subculture",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "cultures_subcultures",
+            "subculture"
+          ]
+        }
+      ],
+      "localisedFields": []
+    },
+    {
+      "table": "effect_bonus_value_teleportation_node_template_junctions_tables",
+      "version": 0,
+      "fields": [
+        {
+          "name": "bonus_value_id",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "campaign_bonus_value_ids_teleportation_node_templates",
+            "key"
+          ]
+        },
+        {
+          "name": "effect",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "effects",
+            "effect"
+          ]
+        },
+        {
+          "name": "teleportation_node_template",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "teleportation_node_templates",
+            "key"
+          ]
+        }
+      ],
+      "localisedFields": []
+    },
+    {
+      "table": "effect_bonus_value_unit_ability_junctions_tables",
+      "version": 0,
+      "fields": [
+        {
+          "name": "effect",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "effects",
+            "effect"
+          ]
+        },
+        {
+          "name": "bonus_value_id",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "campaign_bonus_value_ids_unit_ability",
+            "key"
+          ]
+        },
+        {
+          "name": "unit_ability",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "unit_abilities",
+            "key"
+          ]
+        }
+      ],
+      "localisedFields": []
+    },
+    {
+      "table": "effect_bonus_value_unit_attribute_junctions_tables",
+      "version": 0,
+      "fields": [
+        {
+          "name": "bonus_value_id",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "campaign_bonus_value_ids_unit_attributes",
+            "key"
+          ]
+        },
+        {
+          "name": "effect",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "effects",
+            "effect"
+          ]
+        },
+        {
+          "name": "unit_attribute",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "unit_attributes",
+            "key"
+          ]
+        }
+      ],
+      "localisedFields": []
+    },
+    {
+      "table": "effect_bonus_value_unit_class_stat_modifiers_junctions_tables",
+      "version": 0,
+      "fields": [
+        {
+          "name": "class",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "unit_class",
+            "key"
+          ]
+        },
+        {
+          "name": "effect",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "effects",
+            "effect"
+          ]
+        },
+        {
+          "name": "stat_modifier",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "unit_stat_modifiers",
+            "key"
+          ]
+        }
+      ],
+      "localisedFields": []
+    },
+    {
+      "table": "effect_bonus_value_unit_components_animation_table_override_junctions_tables",
+      "version": 0,
+      "fields": [
+        {
+          "name": "effect",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "effects",
+            "effect"
+          ]
+        },
+        {
+          "name": "bonus_value_id",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "campaign_bonus_value_ids_battle_animation_table_overrides",
+            "id"
+          ]
+        },
+        {
+          "name": "unit_component_animation_table_junction",
+          "field_type": "I32",
+          "is_key": true,
+          "is_reference": [
+            "unit_component_animation_table_junctions",
+            "id"
+          ]
+        }
+      ],
+      "localisedFields": []
+    },
+    {
+      "table": "effect_bonus_value_unit_list_junctions_tables",
+      "version": 0,
+      "fields": [
+        {
+          "name": "bonus_value_id",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "campaign_bonus_value_ids_unit_lists",
+            "key"
+          ]
+        },
+        {
+          "name": "unit_list",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "unit_lists",
+            "key"
+          ]
+        },
+        {
+          "name": "effect",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "effects",
+            "effect"
+          ]
+        }
+      ],
+      "localisedFields": []
+    },
+    {
+      "table": "effect_bonus_value_unit_record_junctions_tables",
+      "version": 0,
+      "fields": [
+        {
+          "name": "bonus_value_id",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "campaign_bonus_value_ids_unit_records",
+            "key"
+          ]
+        },
+        {
+          "name": "effect",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "effects",
+            "effect"
+          ]
+        },
+        {
+          "name": "unit_record_key",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "main_units",
+            "unit"
+          ]
+        }
+      ],
+      "localisedFields": []
+    },
+    {
+      "table": "effect_bonus_value_unit_recruitment_queue_set_junctions_tables",
+      "version": 0,
+      "fields": [
+        {
+          "name": "unit_recruitment_queue_set",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "unit_recruitment_queue_sets",
+            "key"
+          ]
+        },
+        {
+          "name": "effect",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "effects",
+            "effect"
+          ]
+        },
+        {
+          "name": "bonus_value_id",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "campaign_bonus_value_ids_unit_recruitment_queue_sets",
+            "key"
+          ]
+        }
+      ],
+      "localisedFields": []
+    },
+    {
+      "table": "effect_bonus_value_unit_set_special_ability_phase_junctions_tables",
+      "version": 1,
+      "fields": [
+        {
+          "name": "bonus_value_id",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "campaign_bonus_value_ids_unit_set_special_ability_phases",
+            "key"
+          ]
+        },
+        {
+          "name": "effect",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "effects",
+            "effect"
+          ]
+        },
+        {
+          "name": "unit_set_special_ability_phase_junction",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "unit_set_special_ability_phase_junctions",
+            "key"
+          ]
+        }
+      ],
+      "localisedFields": []
+    },
+    {
+      "table": "effect_bonus_value_unit_set_unit_ability_junctions_tables",
+      "version": 0,
+      "fields": [
+        {
+          "name": "bonus_value_id",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "campaign_bonus_value_ids_unit_set_unit_abilities",
+            "key"
+          ]
+        },
+        {
+          "name": "effect",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "effects",
+            "effect"
+          ]
+        },
+        {
+          "name": "unit_set_ability",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "unit_set_unit_ability_junctions",
+            "key"
+          ]
+        }
+      ],
+      "localisedFields": []
+    },
+    {
+      "table": "effect_bonus_value_unit_set_unit_attribute_junctions_tables",
+      "version": 0,
+      "fields": [
+        {
+          "name": "bonus_value_id",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "campaign_bonus_value_ids_unit_set_unit_attributes",
+            "key"
+          ]
+        },
+        {
+          "name": "effect",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "effects",
+            "effect"
+          ]
+        },
+        {
+          "name": "unit_set_attribute",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "unit_set_unit_attribute_junctions",
+            "key"
+          ]
+        }
+      ],
+      "localisedFields": []
+    },
+    {
+      "table": "effect_bonus_value_unit_upgrade_to_unit_group_junctions_tables",
+      "version": 0,
+      "fields": [
+        {
+          "name": "bonus_value_id",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "campaign_bonus_value_ids_unit_upgrade_to_unit_groups",
+            "key"
+          ]
+        },
+        {
+          "name": "effect",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "effects",
+            "effect"
+          ]
+        },
+        {
+          "name": "unit_upgrade_to_unit_group",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "unit_upgrade_to_unit_groups",
+            "upgrade_key"
+          ]
+        }
+      ],
+      "localisedFields": []
+    },
+    {
+      "table": "unit_sets_tables",
+      "version": 2,
+      "fields": [
+        {
+          "name": "key",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": null
+        },
+        {
+          "name": "use_unit_exp_level_range",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "min_unit_exp_level_inclusive",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "max_unit_exp_level_inclusive",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "special_category",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": [
+            "special_unit_categories",
+            "category"
+          ]
+        }
+      ],
+      "localisedFields": []
+    },
+    {
+      "table": "unit_set_to_unit_junctions_tables",
+      "version": 1,
+      "fields": [
+        {
+          "name": "exclude",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "unit_caste",
+          "field_type": "OptionalStringU8",
+          "is_key": true,
+          "is_reference": [
+            "unit_castes",
+            "caste"
+          ]
+        },
+        {
+          "name": "unit_category",
+          "field_type": "OptionalStringU8",
+          "is_key": true,
+          "is_reference": [
+            "unit_category",
+            "key"
+          ]
+        },
+        {
+          "name": "unit_class",
+          "field_type": "OptionalStringU8",
+          "is_key": true,
+          "is_reference": [
+            "unit_class",
+            "key"
+          ]
+        },
+        {
+          "name": "unit_record",
+          "field_type": "OptionalStringU8",
+          "is_key": true,
+          "is_reference": [
+            "main_units",
+            "unit"
+          ]
+        },
+        {
+          "name": "unit_set",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "unit_sets",
+            "key"
+          ]
+        }
+      ],
+      "localisedFields": []
+    },
+    {
+      "table": "Loc",
+      "version": 1,
+      "fields": [
+        {
+          "name": "key",
+          "field_type": "StringU16",
+          "is_key": true,
+          "is_reference": null
+        },
+        {
+          "name": "text",
+          "field_type": "StringU16",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "tooltip",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        }
+      ],
+      "localisedFields": []
+    }
+  ],
+  "rows": [
+    {
+      "id": "character_skills_tables:49c9c26663fdd6c2914b",
+      "table": "character_skills_tables",
+      "key": {
+        "key": "wh_dlc07_skill_brt_alberic_battle_champions_of_bordeleaux"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/character_skills_tables/data__",
+      "tableVersion": 5,
+      "row": {
+        "image_path": "character_morale.png",
+        "key": "wh_dlc07_skill_brt_alberic_battle_champions_of_bordeleaux",
+        "localised_description": "Clean sea air and a shrine to Manann; the Knights of Bordeleaux require no greater succour.",
+        "localised_name": "Champions of Bordeleaux",
+        "unlocked_at_rank": 0,
+        "is_background_skill": false,
+        "is_female_only_background_skill": false,
+        "is_male_only_background_skill": false,
+        "background_weighting": 0,
+        "influence_cost": 0
+      }
+    },
+    {
+      "id": "character_skill_nodes_tables:afd599be227fc129f250",
+      "table": "character_skill_nodes_tables",
+      "key": {
+        "key": "wh_dlc07_skill_node_brt_alberic_unique_12"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/character_skill_nodes_tables/data__",
+      "tableVersion": 6,
+      "row": {
+        "campaign_key": "",
+        "character_skill_key": "wh_dlc07_skill_brt_alberic_battle_champions_of_bordeleaux",
+        "faction_key": "",
+        "indent": 0,
+        "key": "wh_dlc07_skill_node_brt_alberic_unique_12",
+        "tier": 7,
+        "subculture": "",
+        "points_on_creation": 0,
+        "required_num_parents": 0,
+        "visible_in_ui": true
+      }
+    },
+    {
+      "id": "character_skill_node_set_items_tables:2d750b41d0d515e009e9",
+      "table": "character_skill_node_set_items_tables",
+      "key": {
+        "set": "wh_dlc07_skill_node_set_brt_alberic",
+        "item": "wh_dlc07_skill_node_brt_alberic_unique_12"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/character_skill_node_set_items_tables/data__",
+      "tableVersion": 0,
+      "row": {
+        "set": "wh_dlc07_skill_node_set_brt_alberic",
+        "item": "wh_dlc07_skill_node_brt_alberic_unique_12",
+        "mod_disabled": false
+      }
+    },
+    {
+      "id": "character_skill_node_sets_tables:2a9ab7eac5eed5e47016",
+      "table": "character_skill_node_sets_tables",
+      "key": {
+        "key": "wh_dlc07_skill_node_set_brt_alberic"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/character_skill_node_sets_tables/data__",
+      "tableVersion": 0,
+      "row": {
+        "agent_key": "general",
+        "for_army": false,
+        "faction_key": "",
+        "key": "wh_dlc07_skill_node_set_brt_alberic",
+        "subculture": "",
+        "for_navy": false,
+        "campaign_key": "",
+        "agent_subtype_key": "wh_dlc07_brt_alberic"
+      }
+    },
+    {
+      "id": "agent_subtypes_tables:067864922eeaebc662b0",
+      "table": "agent_subtypes_tables",
+      "key": {
+        "key": "wh_dlc07_brt_alberic"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/agent_subtypes_tables/data__",
+      "tableVersion": 3,
+      "row": {
+        "key": "wh_dlc07_brt_alberic",
+        "auto_generate": false,
+        "is_caster": false,
+        "small_icon": "",
+        "associated_unit_override": "wh_dlc07_brt_cha_alberic_bordeleaux_0",
+        "audio_voiceover_actor_group": "wh3_dlc27_vo_actor_Bretonnia_Alberic",
+        "show_in_ui": true,
+        "cap": -1,
+        "has_female_name": false,
+        "can_gain_xp": true,
+        "loyalty_is_applicable": false,
+        "contributes_to_agent_cap": true,
+        "recruitment_category": "legendary_lords",
+        "magic_lore": "",
+        "names_group": "",
+        "can_be_loaned": false,
+        "recruitable": true,
+        "saving_settings": "cannot_be_loaded_in_campaign",
+        "audio_vo_culture_override": "",
+        "spam_click_vo_enabled": false,
+        "can_equip_ancillaries": true,
+        "cost": 750,
+        "recruitment_button_active_icon_path": "",
+        "recruitment_button_background_icon_path": "",
+        "audio_force_contextual_vo": false
+      }
+    },
+    {
+      "id": "agents_tables:073101e312bbb9038fea",
+      "table": "agents_tables",
+      "key": {
+        "key": "general"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/agents_tables/data__",
+      "tableVersion": 0,
+      "row": {
+        "key": "general",
+        "move_points": 3150,
+        "line_of_sight": 14,
+        "playable": true,
+        "portrait_override": "",
+        "primary_attribute": "authority",
+        "faction_total_cap": 100,
+        "in_encyclopedia": true,
+        "encyclopedia_url": ""
+      }
+    },
+    {
+      "id": "main_units_tables:25bb23a5ee4da29017b1",
+      "table": "main_units_tables",
+      "key": {
+        "unit": "wh_dlc07_brt_cha_alberic_bordeleaux_0"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/main_units_tables/data__",
+      "tableVersion": 7,
+      "row": {
+        "additional_building_requirement": "",
+        "campaign_cap": -1,
+        "caste": "lord",
+        "create_time": 1,
+        "is_naval": false,
+        "land_unit": "wh_dlc07_brt_cha_alberic_bordeleaux_0",
+        "num_men": 1,
+        "multiplayer_cap": 0,
+        "multiplayer_cost": 750,
+        "naval_unit": "wh_main_shp_transport",
+        "num_ships": 1,
+        "min_men_per_ship": 1,
+        "max_men_per_ship": 1,
+        "recruitment_cost": 1000,
+        "unit": "wh_dlc07_brt_cha_alberic_bordeleaux_0",
+        "upkeep_cost": 250,
+        "weight": "medium",
+        "resource_requirement": "",
+        "special_edition_mask": 0,
+        "in_encyclopedia": false,
+        "audio_voiceover_culture": "wh_main_vo_culture_Bretonnian",
+        "ui_unit_group_land": "lord",
+        "tier": 0,
+        "is_high_threat": true,
+        "porthole_camera": "emp_general_foot",
+        "mount": "",
+        "use_hitpoints_in_campaign": true,
+        "porthole_composite_scene": "",
+        "melee_cp": 750,
+        "missile_cp": 0,
+        "can_siege": true,
+        "audio_voiceover_culture_override": "vo_culture_None",
+        "restrict_xp_gain_in_campaign": true,
+        "audio_voiceover_actor_group": "wh3_dlc27_vo_actor_Bretonnia_Alberic",
+        "food_cost": 0,
+        "has_spoken_vo": true,
+        "is_monstrous": false,
+        "multiplayer_qb_cap": 0,
+        "vo_is_dragon": false,
+        "vo_is_dinosaur": false,
+        "optional_ui_element": "",
+        "barrier_health": 0,
+        "can_be_bribed": false,
+        "point_allowance_weight": 1,
+        "is_renown": false
+      }
+    },
+    {
+      "id": "land_units_tables:2c8770cc0bc5569f5978",
+      "table": "land_units_tables",
+      "key": {
+        "key": "wh_dlc07_brt_cha_alberic_bordeleaux_0"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/land_units_tables/data__",
+      "tableVersion": 54,
+      "row": {
+        "accuracy": 10,
+        "armour": "wh2_main_plate_90",
+        "campaign_action_points": 2100,
+        "category": "inf_melee",
+        "charge_bonus": 60,
+        "class": "com",
+        "historical_description_text": "wh_main_unit_long_text_brt_alberic_of_bordeleaux",
+        "key": "wh_dlc07_brt_cha_alberic_bordeleaux_0",
+        "man_animation": "hu1_empire_spear_and_shield",
+        "man_entity": "wh_main_infantry_standard_hero_blood",
+        "melee_attack": 57,
+        "melee_defence": 40,
+        "morale": 75,
+        "bonus_hit_points": 4160,
+        "mount": "",
+        "num_mounts": 0,
+        "primary_melee_weapon": "wh_dlc07_brt_alberic_sword",
+        "primary_missile_weapon": "",
+        "rank_depth": 1,
+        "shield": "wh_missile_block_35_wood",
+        "short_description_text": "wh_dlc07_unit_short_text_brt_alberic",
+        "spacing": "wh_main_infantry",
+        "training_level": "trained",
+        "articulated_record": "",
+        "engine": "",
+        "is_male": true,
+        "visibility_spotting_range_min": 40,
+        "visibility_spotting_range_max": 1500,
+        "attribute_group": "wh_dlc07_brt_cha_alberic_bordeleaux_0",
+        "spot_dist_tree": 60,
+        "spot_dist_scrub": 80,
+        "reload": 0,
+        "selection_vo": "vo_sel_default",
+        "selected_vo_secondary": "vo_sel_generic",
+        "selected_vo_tertiary": "vo_sel_culture",
+        "hiding_scalar": 1,
+        "ground_stat_effect_group": "small",
+        "secondary_ammo": 0,
+        "primary_ammo": 0,
+        "damage_mod_flame": 0,
+        "damage_mod_magic": 0,
+        "num_engines": 0,
+        "damage_mod_physical": 0,
+        "damage_mod_missile": 15,
+        "damage_mod_all": 0,
+        "ai_usage_group": "melee_highvalue",
+        "can_skirmish": false,
+        "can_brace": true,
+        "mounted_draughts": false,
+        "sync_locomotion": false,
+        "capture_tier": "high",
+        "key_building_capture_tier": "high",
+        "score_capture_tier": "domination_characters",
+        "harmony_amplification_type": "",
+        "first_person": "",
+        "ar_unit_category": "melee",
+        "healing_power": 1,
+        "spell_mastery": 1,
+        "infinite_secondary_ammo": false,
+        "default_guard_mode": false
+      }
+    },
+    {
+      "id": "agent_recruitment_categories_tables:d6b7b9922551ae15cb45",
+      "table": "agent_recruitment_categories_tables",
+      "key": {
+        "key": "legendary_lords"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/agent_recruitment_categories_tables/data__",
+      "tableVersion": 2,
+      "row": {
+        "key": "legendary_lords",
+        "order": 0,
+        "icon_file_path": "UI\\Common UI\\unit_category_icons\\commander.png",
+        "show_in_recruitment": true,
+        "counts_towards_caps_when_off_the_map": true
+      }
+    },
+    {
+      "id": "frontend_faction_leaders_tables:ecc3b733f065a1fcb8e6",
+      "table": "frontend_faction_leaders_tables",
+      "key": {
+        "key": "wh_dlc07_political_party_bretonnia_alberic"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/frontend_faction_leaders_tables/data__",
+      "tableVersion": 1,
+      "row": {
+        "uniform": "composite_scene\\lord_selection\\bretonnian_kingdoms\\alberic_bordeleaux.csc",
+        "x_offset": 0,
+        "y_offset": 0,
+        "key": "wh_dlc07_political_party_bretonnia_alberic",
+        "character_image": "UI\\Portraits\\Faction_leaders\\brt_alberic_bordeleaux_0.png",
+        "prelude_battle": "",
+        "video": "Front_end_selection_movies/alberic_front_end",
+        "loading_screen_image": "ui/loading_ui/load_images/campaign_bretonnia1.png",
+        "loading_screen_intro_video": "",
+        "override_force_location_x": -1,
+        "override_force_location_y": -1,
+        "voiceover": "wh3_dlc27_vo_actor_Bretonnia_Alberic",
+        "show_full_intro_option": false,
+        "difficulty": "",
+        "startpos_map": "wh_dlc07_political_party_bretonnia_alberic",
+        "agent_subtype_record": "wh_dlc07_brt_alberic",
+        "faction": "wh_main_brt_bordeleaux"
+      }
+    },
+    {
+      "id": "factions_tables:ac7c67727920bad90634",
+      "table": "factions_tables",
+      "key": {
+        "key": "wh_main_brt_bordeleaux"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/factions_tables/data__",
+      "tableVersion": 6,
+      "row": {
+        "key": "wh_main_brt_bordeleaux",
+        "index": 2041769569,
+        "subculture": "wh_main_sc_brt_bretonnia",
+        "category": "",
+        "name_group": "names_brt_bretonnia",
+        "skin": "wh_main_brt_bretonnia",
+        "ui_skin": "wh_main_brt_bretonnia",
+        "is_rebel": false,
+        "flags_path": "ui\\flags\\wh_main_brt_bordeleaux",
+        "military_group": "wh_main_group_bretonnia",
+        "movie_death_event": "0",
+        "unit_regiment_name_group": "names_brt_bretonnia",
+        "ship_name_group": "names_brt_bretonnia",
+        "pre_battle_speech_parameter": "FACTION_CHOSOKABE",
+        "audio_voiceover_culture": "wh_main_vo_culture_Bretonnian",
+        "mp_force_gen_template": "wh_mp_force_gen_bretonnia",
+        "faction_swapping_id": "brt",
+        "win_movie": "",
+        "waaagh_faction": "",
+        "waaagh_general_unit": "",
+        "is_quest_faction": false,
+        "cdir_military_generator_config": "WH_Bretonnia",
+        "feature_forest": "LOCKED_STANDARD",
+        "default_audio_actor_vo_group": "wh_main_vo_actor_Bretonnian_Lord",
+        "text_replacement_key": "",
+        "neutral_reinforcement_factions": "all",
+        "can_accept_gifts_when_dead": false,
+        "uniform_colour_primary": "49579A",
+        "uniform_colour_secondary": "DAB86C",
+        "uniform_colour_tertiary": "FFFFFF",
+        "banner_colour_primary": "49579A",
+        "banner_colour_secondary": "DAB86C",
+        "banner_colour_tertiary": "49579A",
+        "primary_colour": "49579A",
+        "override_target_unit_vo_culture": false,
+        "music_feedback_group": "Feedback_Alignment_Good_Faction",
+        "ui_main_theme_skin": "wh3_main_theme_caledor_sky",
+        "primary_colour_hex": "49579A",
+        "alt_primary_colour_hex": "000000",
+        "secondary_colour_hex": "E4B409",
+        "alt_secondary_colour_hex": "000000",
+        "rebel_colour_hex": "000000",
+        "uniform_colour_hex": "000000",
+        "alt_uniform_colour_hex": "000000",
+        "card_colour_hex": "000000"
+      }
+    },
+    {
+      "id": "cultures_subcultures_tables:a39a45a3ce0902803566",
+      "table": "cultures_subcultures_tables",
+      "key": {
+        "subculture": "wh_main_sc_brt_bretonnia"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/cultures_subcultures_tables/data__",
+      "tableVersion": 6,
+      "row": {
+        "subculture": "wh_main_sc_brt_bretonnia",
+        "culture": "wh_main_brt_bretonnia",
+        "index": 1851343786,
+        "audio_state_override": "",
+        "audio_corruption_state_override": "",
+        "audio_rtpc_override": "",
+        "region_owner_audio_switch": "Bretonnia"
+      }
+    },
+    {
+      "id": "cultures_tables:02de964c4aedfcd11e1c",
+      "table": "cultures_tables",
+      "key": {
+        "key": "wh_main_brt_bretonnia"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/cultures_tables/data__",
+      "tableVersion": 12,
+      "row": {
+        "key": "wh_main_brt_bretonnia",
+        "index": 1249291663,
+        "fallback_ui_culture": "",
+        "ui_background_image": "UI/skins/default/panorama_bretonia.png",
+        "audio_state": "Bretonnia",
+        "ui_group_by_culture": false,
+        "audio_rtpc": "",
+        "audio_corruption_state": "",
+        "devastation_state": ""
+      }
+    },
+    {
+      "id": "campaign_to_agent_subtypes_tables:fc24c8be3541e5030aa8",
+      "table": "campaign_to_agent_subtypes_tables",
+      "key": {
+        "agent_subtype": "wh_dlc07_brt_alberic",
+        "campaign_type": "wh3_main_combi"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/campaign_to_agent_subtypes_tables/data__",
+      "tableVersion": 0,
+      "row": {
+        "agent_subtype": "wh_dlc07_brt_alberic",
+        "campaign_type": "wh3_main_combi"
+      }
+    },
+    {
+      "id": "character_skill_level_to_effects_junctions_tables:60cdd11481fb67391711",
+      "table": "character_skill_level_to_effects_junctions_tables",
+      "key": {
+        "character_skill_key": "wh_dlc07_skill_brt_alberic_battle_champions_of_bordeleaux",
+        "effect_key": "wh_dlc07_effect_force_stat_bonus_vs_large_kotr",
+        "level": 1
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/character_skill_level_to_effects_junctions_tables/data__",
+      "tableVersion": 1,
+      "row": {
+        "character_skill_key": "wh_dlc07_skill_brt_alberic_battle_champions_of_bordeleaux",
+        "effect_key": "wh_dlc07_effect_force_stat_bonus_vs_large_kotr",
+        "effect_scope": "general_to_force_own",
+        "level": 1,
+        "value": 15
+      }
+    },
+    {
+      "id": "character_skill_level_to_effects_junctions_tables:ab410475f559e9d391ab",
+      "table": "character_skill_level_to_effects_junctions_tables",
+      "key": {
+        "character_skill_key": "wh_dlc07_skill_brt_alberic_battle_champions_of_bordeleaux",
+        "effect_key": "wh_dlc07_effect_force_stat_leadership_kotr",
+        "level": 1
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/character_skill_level_to_effects_junctions_tables/data__",
+      "tableVersion": 1,
+      "row": {
+        "character_skill_key": "wh_dlc07_skill_brt_alberic_battle_champions_of_bordeleaux",
+        "effect_key": "wh_dlc07_effect_force_stat_leadership_kotr",
+        "effect_scope": "general_to_force_own",
+        "level": 1,
+        "value": 5
+      }
+    },
+    {
+      "id": "effects_tables:a3d3cc08300c327b465c",
+      "table": "effects_tables",
+      "key": {
+        "effect": "wh_dlc07_effect_force_stat_bonus_vs_large_kotr"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/effects_tables/data__",
+      "tableVersion": 0,
+      "row": {
+        "effect": "wh_dlc07_effect_force_stat_bonus_vs_large_kotr",
+        "icon": "bonus_vs_large.png",
+        "priority": 491,
+        "icon_negative": "bonus_vs_large.png",
+        "category": "battle",
+        "is_positive_value_good": true
+      }
+    },
+    {
+      "id": "effects_tables:714f9940a6955ef7c5ad",
+      "table": "effects_tables",
+      "key": {
+        "effect": "wh_dlc07_effect_force_stat_leadership_kotr"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/effects_tables/data__",
+      "tableVersion": 0,
+      "row": {
+        "effect": "wh_dlc07_effect_force_stat_leadership_kotr",
+        "icon": "morale.png",
+        "priority": 411,
+        "icon_negative": "morale.png",
+        "category": "battle",
+        "is_positive_value_good": true
+      }
+    },
+    {
+      "id": "campaign_effect_scopes_tables:ac8ad42676de36b22a6c",
+      "table": "campaign_effect_scopes_tables",
+      "key": {
+        "key": "general_to_force_own"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/campaign_effect_scopes_tables/data__",
+      "tableVersion": 2,
+      "row": {
+        "key": "general_to_force_own",
+        "location": "forcewide_when_commanding",
+        "ownership": "yours",
+        "source": "character",
+        "target": "force",
+        "territory": "any"
+      }
+    },
+    {
+      "id": "effect_bonus_value_ids_unit_sets_tables:97cbde1cedbcdfd4c070",
+      "table": "effect_bonus_value_ids_unit_sets_tables",
+      "key": {
+        "bonus_value_id": "damage_vs_large_entities",
+        "effect": "wh_dlc07_effect_force_stat_bonus_vs_large_kotr",
+        "unit_set": "dlc07_brt_knights_realm"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/effect_bonus_value_ids_unit_sets_tables/data__",
+      "tableVersion": 0,
+      "row": {
+        "bonus_value_id": "damage_vs_large_entities",
+        "effect": "wh_dlc07_effect_force_stat_bonus_vs_large_kotr",
+        "unit_set": "dlc07_brt_knights_realm"
+      }
+    },
+    {
+      "id": "effect_bonus_value_ids_unit_sets_tables:24232178a806d5f14a59",
+      "table": "effect_bonus_value_ids_unit_sets_tables",
+      "key": {
+        "bonus_value_id": "morale",
+        "effect": "wh_dlc07_effect_force_stat_leadership_kotr",
+        "unit_set": "dlc07_brt_knights_realm"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/effect_bonus_value_ids_unit_sets_tables/data__",
+      "tableVersion": 0,
+      "row": {
+        "bonus_value_id": "morale",
+        "effect": "wh_dlc07_effect_force_stat_leadership_kotr",
+        "unit_set": "dlc07_brt_knights_realm"
+      }
+    },
+    {
+      "id": "unit_sets_tables:cebe06aa803cdf364fb7",
+      "table": "unit_sets_tables",
+      "key": {
+        "key": "dlc07_brt_knights_realm"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/unit_sets_tables/data__",
+      "tableVersion": 2,
+      "row": {
+        "key": "dlc07_brt_knights_realm",
+        "use_unit_exp_level_range": false,
+        "min_unit_exp_level_inclusive": -1,
+        "max_unit_exp_level_inclusive": -1,
+        "special_category": ""
+      }
+    },
+    {
+      "id": "unit_set_to_unit_junctions_tables:e4e4c6ddd0b0dd2f50f8",
+      "table": "unit_set_to_unit_junctions_tables",
+      "key": {
+        "unit_caste": "",
+        "unit_category": "",
+        "unit_class": "",
+        "unit_record": "wh_main_brt_cav_knights_of_the_realm",
+        "unit_set": "dlc07_brt_knights_realm"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/unit_set_to_unit_junctions_tables/data__",
+      "tableVersion": 1,
+      "row": {
+        "exclude": false,
+        "unit_caste": "",
+        "unit_category": "",
+        "unit_class": "",
+        "unit_record": "wh_main_brt_cav_knights_of_the_realm",
+        "unit_set": "dlc07_brt_knights_realm"
+      }
+    },
+    {
+      "id": "unit_set_to_unit_junctions_tables:93a31c81ff9c20d354aa",
+      "table": "unit_set_to_unit_junctions_tables",
+      "key": {
+        "unit_caste": "",
+        "unit_category": "",
+        "unit_class": "",
+        "unit_record": "wh_pro04_brt_cav_knights_of_the_realm_ror_0",
+        "unit_set": "dlc07_brt_knights_realm"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/unit_set_to_unit_junctions_tables/data__",
+      "tableVersion": 1,
+      "row": {
+        "exclude": false,
+        "unit_caste": "",
+        "unit_category": "",
+        "unit_class": "",
+        "unit_record": "wh_pro04_brt_cav_knights_of_the_realm_ror_0",
+        "unit_set": "dlc07_brt_knights_realm"
+      }
+    },
+    {
+      "id": "main_units_tables:7411499650e816114558",
+      "table": "main_units_tables",
+      "key": {
+        "unit": "wh_main_brt_cav_knights_of_the_realm"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/main_units_tables/data__",
+      "tableVersion": 7,
+      "row": {
+        "additional_building_requirement": "",
+        "campaign_cap": -1,
+        "caste": "melee_cavalry",
+        "create_time": 1,
+        "is_naval": false,
+        "land_unit": "wh_main_brt_cav_knights_of_the_realm",
+        "num_men": 60,
+        "multiplayer_cap": 0,
+        "multiplayer_cost": 950,
+        "naval_unit": "wh_main_shp_transport",
+        "num_ships": 1,
+        "min_men_per_ship": 1,
+        "max_men_per_ship": 60,
+        "recruitment_cost": 950,
+        "unit": "wh_main_brt_cav_knights_of_the_realm",
+        "upkeep_cost": 238,
+        "weight": "heavy",
+        "resource_requirement": "",
+        "special_edition_mask": 0,
+        "in_encyclopedia": true,
+        "audio_voiceover_culture": "wh_main_vo_culture_Bretonnian",
+        "ui_unit_group_land": "shock_cavalry",
+        "tier": 2,
+        "is_high_threat": false,
+        "porthole_camera": "emp_reiksguard",
+        "mount": "",
+        "use_hitpoints_in_campaign": false,
+        "porthole_composite_scene": "",
+        "melee_cp": 950,
+        "missile_cp": 0,
+        "can_siege": false,
+        "audio_voiceover_culture_override": "vo_culture_None",
+        "restrict_xp_gain_in_campaign": false,
+        "audio_voiceover_actor_group": "wh_main_vo_actor_Bretonnian_Knight",
+        "food_cost": 0,
+        "has_spoken_vo": true,
+        "is_monstrous": false,
+        "multiplayer_qb_cap": 6,
+        "vo_is_dragon": false,
+        "vo_is_dinosaur": false,
+        "optional_ui_element": "",
+        "barrier_health": 0,
+        "can_be_bribed": true,
+        "point_allowance_weight": 1,
+        "is_renown": false
+      }
+    },
+    {
+      "id": "main_units_tables:a056e48d5ca3165e0bae",
+      "table": "main_units_tables",
+      "key": {
+        "unit": "wh_pro04_brt_cav_knights_of_the_realm_ror_0"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/main_units_tables/data__",
+      "tableVersion": 7,
+      "row": {
+        "additional_building_requirement": "",
+        "campaign_cap": 1,
+        "caste": "melee_cavalry",
+        "create_time": 1,
+        "is_naval": false,
+        "land_unit": "wh_pro04_brt_cav_knights_of_the_realm_ror_0",
+        "num_men": 60,
+        "multiplayer_cap": 1,
+        "multiplayer_cost": 1200,
+        "naval_unit": "wh_main_shp_transport",
+        "num_ships": 1,
+        "min_men_per_ship": 1,
+        "max_men_per_ship": 60,
+        "recruitment_cost": 1200,
+        "unit": "wh_pro04_brt_cav_knights_of_the_realm_ror_0",
+        "upkeep_cost": 300,
+        "weight": "heavy",
+        "resource_requirement": "",
+        "special_edition_mask": 0,
+        "in_encyclopedia": true,
+        "audio_voiceover_culture": "wh_main_vo_culture_Bretonnian",
+        "ui_unit_group_land": "shock_cavalry",
+        "tier": 3,
+        "is_high_threat": false,
+        "porthole_camera": "emp_reiksguard",
+        "mount": "",
+        "use_hitpoints_in_campaign": false,
+        "porthole_composite_scene": "",
+        "melee_cp": 1200,
+        "missile_cp": 0,
+        "can_siege": false,
+        "audio_voiceover_culture_override": "vo_culture_None",
+        "restrict_xp_gain_in_campaign": true,
+        "audio_voiceover_actor_group": "wh_main_vo_actor_Bretonnian_Knight",
+        "food_cost": 0,
+        "has_spoken_vo": true,
+        "is_monstrous": false,
+        "multiplayer_qb_cap": 1,
+        "vo_is_dragon": false,
+        "vo_is_dinosaur": false,
+        "optional_ui_element": "",
+        "barrier_health": 0,
+        "can_be_bribed": true,
+        "point_allowance_weight": 1,
+        "is_renown": true
+      }
+    },
+    {
+      "id": "land_units_tables:0dade6b083f9c0a1ae1d",
+      "table": "land_units_tables",
+      "key": {
+        "key": "wh_main_brt_cav_knights_of_the_realm"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/land_units_tables/data__",
+      "tableVersion": 54,
+      "row": {
+        "accuracy": 10,
+        "armour": "wh2_main_plate_100",
+        "campaign_action_points": 2100,
+        "category": "cavalry",
+        "charge_bonus": 65,
+        "class": "cav_shk",
+        "historical_description_text": "wh_main_unit_long_text_brt_knights_of_the_realm",
+        "key": "wh_main_brt_cav_knights_of_the_realm",
+        "man_animation": "hu1_empire_hr1_warhorse_lance_sword_shield",
+        "man_entity": "wh_main_cavalry_rider_standard_blood",
+        "melee_attack": 32,
+        "melee_defence": 28,
+        "morale": 75,
+        "bonus_hit_points": 96,
+        "mount": "wh_main_brt_mnt_warhorse_knights",
+        "num_mounts": 60,
+        "primary_melee_weapon": "wh_main_brt_lance",
+        "primary_missile_weapon": "",
+        "rank_depth": 4,
+        "shield": "wh_missile_block_35_wood",
+        "short_description_text": "wh_main_unit_short_text_brt_knights_of_the_realm",
+        "spacing": "wh_main_cavalry_ordered",
+        "training_level": "trained",
+        "articulated_record": "",
+        "engine": "",
+        "is_male": true,
+        "visibility_spotting_range_min": 40,
+        "visibility_spotting_range_max": 1500,
+        "attribute_group": "wh_main_brt_cav_knights_of_the_realm",
+        "spot_dist_tree": 60,
+        "spot_dist_scrub": 80,
+        "reload": 0,
+        "selection_vo": "vo_sel_bretonnian_knights_realm",
+        "selected_vo_secondary": "vo_sel_cavalry",
+        "selected_vo_tertiary": "vo_sel_culture",
+        "hiding_scalar": 1,
+        "ground_stat_effect_group": "large",
+        "secondary_ammo": 0,
+        "primary_ammo": 0,
+        "damage_mod_flame": 0,
+        "damage_mod_magic": 0,
+        "num_engines": 0,
+        "damage_mod_physical": 0,
+        "damage_mod_missile": 0,
+        "damage_mod_all": 0,
+        "ai_usage_group": "melee_flanker_shock",
+        "can_skirmish": false,
+        "can_brace": false,
+        "mounted_draughts": false,
+        "sync_locomotion": false,
+        "capture_tier": "low",
+        "key_building_capture_tier": "low",
+        "score_capture_tier": "domination_cav",
+        "harmony_amplification_type": "",
+        "first_person": "",
+        "ar_unit_category": "melee",
+        "healing_power": 1,
+        "spell_mastery": 1,
+        "infinite_secondary_ammo": false,
+        "default_guard_mode": false
+      }
+    },
+    {
+      "id": "land_units_tables:bfca8e78225ba5c49386",
+      "table": "land_units_tables",
+      "key": {
+        "key": "wh_pro04_brt_cav_knights_of_the_realm_ror_0"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/land_units_tables/data__",
+      "tableVersion": 54,
+      "row": {
+        "accuracy": 10,
+        "armour": "wh2_main_plate_100",
+        "campaign_action_points": 2100,
+        "category": "cavalry",
+        "charge_bonus": 65,
+        "class": "cav_shk",
+        "historical_description_text": "wh_main_unit_long_text_brt_knights_of_the_realm",
+        "key": "wh_pro04_brt_cav_knights_of_the_realm_ror_0",
+        "man_animation": "hu1_grail_hr1_warhorse_lance_sword_shield",
+        "man_entity": "wh_main_cavalry_rider_standard_blood",
+        "melee_attack": 41,
+        "melee_defence": 36,
+        "morale": 85,
+        "bonus_hit_points": 96,
+        "mount": "wh_main_brt_mnt_warhorse_knights_ror",
+        "num_mounts": 60,
+        "primary_melee_weapon": "wh_dlc08_brt_lance_ror",
+        "primary_missile_weapon": "",
+        "rank_depth": 4,
+        "shield": "wh_missile_block_35_wood",
+        "short_description_text": "wh_pro04_unit_short_text_brt_cav_knights_of_the_realm_ror",
+        "spacing": "wh_main_cavalry_ordered",
+        "training_level": "trained",
+        "articulated_record": "",
+        "engine": "",
+        "is_male": true,
+        "visibility_spotting_range_min": 40,
+        "visibility_spotting_range_max": 1500,
+        "attribute_group": "wh_pro04_brt_cav_knights_of_the_realm_ror_0",
+        "spot_dist_tree": 60,
+        "spot_dist_scrub": 80,
+        "reload": 0,
+        "selection_vo": "vo_sel_bretonnian_knights_realm",
+        "selected_vo_secondary": "vo_sel_cavalry",
+        "selected_vo_tertiary": "vo_sel_culture",
+        "hiding_scalar": 1,
+        "ground_stat_effect_group": "large",
+        "secondary_ammo": 0,
+        "primary_ammo": 0,
+        "damage_mod_flame": 0,
+        "damage_mod_magic": 0,
+        "num_engines": 0,
+        "damage_mod_physical": 0,
+        "damage_mod_missile": 0,
+        "damage_mod_all": 0,
+        "ai_usage_group": "melee_flanker_shock",
+        "can_skirmish": false,
+        "can_brace": false,
+        "mounted_draughts": false,
+        "sync_locomotion": false,
+        "capture_tier": "low",
+        "key_building_capture_tier": "low",
+        "score_capture_tier": "domination_cav",
+        "harmony_amplification_type": "",
+        "first_person": "",
+        "ar_unit_category": "melee",
+        "healing_power": 1,
+        "spell_mastery": 1,
+        "infinite_secondary_ammo": false,
+        "default_guard_mode": false
+      }
+    },
+    {
+      "id": "Loc:7ce24e47356a3398e870",
+      "table": "Loc",
+      "key": {
+        "key": "character_skills_localised_name_wh_dlc07_skill_brt_alberic_battle_champions_of_bordeleaux"
+      },
+      "sourcePack": "local_en.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/local_en.pack",
+      "path": "text/db/character_skills__.loc",
+      "tableVersion": 1,
+      "row": {
+        "key": "character_skills_localised_name_wh_dlc07_skill_brt_alberic_battle_champions_of_bordeleaux",
+        "text": "Champions of Bordeleaux",
+        "tooltip": false
+      }
+    },
+    {
+      "id": "Loc:c8a245562e721d97f95d",
+      "table": "Loc",
+      "key": {
+        "key": "effects_description_wh_dlc07_effect_force_stat_bonus_vs_large_kotr"
+      },
+      "sourcePack": "local_en.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/local_en.pack",
+      "path": "text/db/effects__.loc",
+      "tableVersion": 1,
+      "row": {
+        "key": "effects_description_wh_dlc07_effect_force_stat_bonus_vs_large_kotr",
+        "text": "Bonus vs Large: %+n for Knights of the Realm units",
+        "tooltip": false
+      }
+    },
+    {
+      "id": "Loc:f1824a78f61f0b0a9e25",
+      "table": "Loc",
+      "key": {
+        "key": "effects_description_wh_dlc07_effect_force_stat_leadership_kotr"
+      },
+      "sourcePack": "local_en.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/local_en.pack",
+      "path": "text/db/effects__.loc",
+      "tableVersion": 1,
+      "row": {
+        "key": "effects_description_wh_dlc07_effect_force_stat_leadership_kotr",
+        "text": "Leadership: %+n for Knight of the Realm units",
+        "tooltip": false
+      }
+    },
+    {
+      "id": "Loc:70a7a36e3ddd94b63f2f",
+      "table": "Loc",
+      "key": {
+        "key": "land_units_onscreen_name_wh_dlc07_brt_cha_alberic_bordeleaux_0"
+      },
+      "sourcePack": "local_en.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/local_en.pack",
+      "path": "text/db/land_units__.loc",
+      "tableVersion": 1,
+      "row": {
+        "key": "land_units_onscreen_name_wh_dlc07_brt_cha_alberic_bordeleaux_0",
+        "text": "Alberic de Bordeleaux",
+        "tooltip": false
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "from": "character_skill_nodes_tables:afd599be227fc129f250",
+      "field": "character_skill_key",
+      "to": "character_skills_tables:49c9c26663fdd6c2914b",
+      "targetField": "key",
+      "value": "wh_dlc07_skill_brt_alberic_battle_champions_of_bordeleaux",
+      "evidence": "RPFM processed schema is_reference"
+    },
+    {
+      "from": "character_skill_node_set_items_tables:2d750b41d0d515e009e9",
+      "field": "set",
+      "to": "character_skill_node_sets_tables:2a9ab7eac5eed5e47016",
+      "targetField": "key",
+      "value": "wh_dlc07_skill_node_set_brt_alberic",
+      "evidence": "RPFM processed schema is_reference"
+    },
+    {
+      "from": "character_skill_node_set_items_tables:2d750b41d0d515e009e9",
+      "field": "item",
+      "to": "character_skill_nodes_tables:afd599be227fc129f250",
+      "targetField": "key",
+      "value": "wh_dlc07_skill_node_brt_alberic_unique_12",
+      "evidence": "RPFM processed schema is_reference"
+    },
+    {
+      "from": "character_skill_node_sets_tables:2a9ab7eac5eed5e47016",
+      "field": "agent_key",
+      "to": "agents_tables:073101e312bbb9038fea",
+      "targetField": "key",
+      "value": "general",
+      "evidence": "RPFM processed schema is_reference"
+    },
+    {
+      "from": "character_skill_node_sets_tables:2a9ab7eac5eed5e47016",
+      "field": "agent_subtype_key",
+      "to": "agent_subtypes_tables:067864922eeaebc662b0",
+      "targetField": "key",
+      "value": "wh_dlc07_brt_alberic",
+      "evidence": "RPFM processed schema is_reference"
+    },
+    {
+      "from": "agent_subtypes_tables:067864922eeaebc662b0",
+      "field": "associated_unit_override",
+      "to": "main_units_tables:25bb23a5ee4da29017b1",
+      "targetField": "unit",
+      "value": "wh_dlc07_brt_cha_alberic_bordeleaux_0",
+      "evidence": "RPFM processed schema is_reference"
+    },
+    {
+      "from": "agent_subtypes_tables:067864922eeaebc662b0",
+      "field": "recruitment_category",
+      "to": "agent_recruitment_categories_tables:d6b7b9922551ae15cb45",
+      "targetField": "key",
+      "value": "legendary_lords",
+      "evidence": "RPFM processed schema is_reference"
+    },
+    {
+      "from": "main_units_tables:25bb23a5ee4da29017b1",
+      "field": "land_unit",
+      "to": "land_units_tables:2c8770cc0bc5569f5978",
+      "targetField": "key",
+      "value": "wh_dlc07_brt_cha_alberic_bordeleaux_0",
+      "evidence": "RPFM processed schema is_reference"
+    },
+    {
+      "from": "frontend_faction_leaders_tables:ecc3b733f065a1fcb8e6",
+      "field": "agent_subtype_record",
+      "to": "agent_subtypes_tables:067864922eeaebc662b0",
+      "targetField": "key",
+      "value": "wh_dlc07_brt_alberic",
+      "evidence": "RPFM processed schema is_reference"
+    },
+    {
+      "from": "frontend_faction_leaders_tables:ecc3b733f065a1fcb8e6",
+      "field": "faction",
+      "to": "factions_tables:ac7c67727920bad90634",
+      "targetField": "key",
+      "value": "wh_main_brt_bordeleaux",
+      "evidence": "RPFM processed schema is_reference"
+    },
+    {
+      "from": "factions_tables:ac7c67727920bad90634",
+      "field": "subculture",
+      "to": "cultures_subcultures_tables:a39a45a3ce0902803566",
+      "targetField": "subculture",
+      "value": "wh_main_sc_brt_bretonnia",
+      "evidence": "RPFM processed schema is_reference"
+    },
+    {
+      "from": "cultures_subcultures_tables:a39a45a3ce0902803566",
+      "field": "culture",
+      "to": "cultures_tables:02de964c4aedfcd11e1c",
+      "targetField": "key",
+      "value": "wh_main_brt_bretonnia",
+      "evidence": "RPFM processed schema is_reference"
+    },
+    {
+      "from": "campaign_to_agent_subtypes_tables:fc24c8be3541e5030aa8",
+      "field": "agent_subtype",
+      "to": "agent_subtypes_tables:067864922eeaebc662b0",
+      "targetField": "key",
+      "value": "wh_dlc07_brt_alberic",
+      "evidence": "RPFM processed schema is_reference"
+    },
+    {
+      "from": "character_skill_level_to_effects_junctions_tables:60cdd11481fb67391711",
+      "field": "character_skill_key",
+      "to": "character_skills_tables:49c9c26663fdd6c2914b",
+      "targetField": "key",
+      "value": "wh_dlc07_skill_brt_alberic_battle_champions_of_bordeleaux",
+      "evidence": "RPFM processed schema is_reference"
+    },
+    {
+      "from": "character_skill_level_to_effects_junctions_tables:60cdd11481fb67391711",
+      "field": "effect_key",
+      "to": "effects_tables:a3d3cc08300c327b465c",
+      "targetField": "effect",
+      "value": "wh_dlc07_effect_force_stat_bonus_vs_large_kotr",
+      "evidence": "RPFM processed schema is_reference"
+    },
+    {
+      "from": "character_skill_level_to_effects_junctions_tables:60cdd11481fb67391711",
+      "field": "effect_scope",
+      "to": "campaign_effect_scopes_tables:ac8ad42676de36b22a6c",
+      "targetField": "key",
+      "value": "general_to_force_own",
+      "evidence": "RPFM processed schema is_reference"
+    },
+    {
+      "from": "character_skill_level_to_effects_junctions_tables:ab410475f559e9d391ab",
+      "field": "character_skill_key",
+      "to": "character_skills_tables:49c9c26663fdd6c2914b",
+      "targetField": "key",
+      "value": "wh_dlc07_skill_brt_alberic_battle_champions_of_bordeleaux",
+      "evidence": "RPFM processed schema is_reference"
+    },
+    {
+      "from": "character_skill_level_to_effects_junctions_tables:ab410475f559e9d391ab",
+      "field": "effect_key",
+      "to": "effects_tables:714f9940a6955ef7c5ad",
+      "targetField": "effect",
+      "value": "wh_dlc07_effect_force_stat_leadership_kotr",
+      "evidence": "RPFM processed schema is_reference"
+    },
+    {
+      "from": "character_skill_level_to_effects_junctions_tables:ab410475f559e9d391ab",
+      "field": "effect_scope",
+      "to": "campaign_effect_scopes_tables:ac8ad42676de36b22a6c",
+      "targetField": "key",
+      "value": "general_to_force_own",
+      "evidence": "RPFM processed schema is_reference"
+    },
+    {
+      "from": "effect_bonus_value_ids_unit_sets_tables:97cbde1cedbcdfd4c070",
+      "field": "effect",
+      "to": "effects_tables:a3d3cc08300c327b465c",
+      "targetField": "effect",
+      "value": "wh_dlc07_effect_force_stat_bonus_vs_large_kotr",
+      "evidence": "RPFM processed schema is_reference"
+    },
+    {
+      "from": "effect_bonus_value_ids_unit_sets_tables:97cbde1cedbcdfd4c070",
+      "field": "unit_set",
+      "to": "unit_sets_tables:cebe06aa803cdf364fb7",
+      "targetField": "key",
+      "value": "dlc07_brt_knights_realm",
+      "evidence": "RPFM processed schema is_reference"
+    },
+    {
+      "from": "effect_bonus_value_ids_unit_sets_tables:24232178a806d5f14a59",
+      "field": "effect",
+      "to": "effects_tables:714f9940a6955ef7c5ad",
+      "targetField": "effect",
+      "value": "wh_dlc07_effect_force_stat_leadership_kotr",
+      "evidence": "RPFM processed schema is_reference"
+    },
+    {
+      "from": "effect_bonus_value_ids_unit_sets_tables:24232178a806d5f14a59",
+      "field": "unit_set",
+      "to": "unit_sets_tables:cebe06aa803cdf364fb7",
+      "targetField": "key",
+      "value": "dlc07_brt_knights_realm",
+      "evidence": "RPFM processed schema is_reference"
+    },
+    {
+      "from": "unit_set_to_unit_junctions_tables:e4e4c6ddd0b0dd2f50f8",
+      "field": "unit_record",
+      "to": "main_units_tables:7411499650e816114558",
+      "targetField": "unit",
+      "value": "wh_main_brt_cav_knights_of_the_realm",
+      "evidence": "RPFM processed schema is_reference"
+    },
+    {
+      "from": "unit_set_to_unit_junctions_tables:e4e4c6ddd0b0dd2f50f8",
+      "field": "unit_set",
+      "to": "unit_sets_tables:cebe06aa803cdf364fb7",
+      "targetField": "key",
+      "value": "dlc07_brt_knights_realm",
+      "evidence": "RPFM processed schema is_reference"
+    },
+    {
+      "from": "unit_set_to_unit_junctions_tables:93a31c81ff9c20d354aa",
+      "field": "unit_record",
+      "to": "main_units_tables:a056e48d5ca3165e0bae",
+      "targetField": "unit",
+      "value": "wh_pro04_brt_cav_knights_of_the_realm_ror_0",
+      "evidence": "RPFM processed schema is_reference"
+    },
+    {
+      "from": "unit_set_to_unit_junctions_tables:93a31c81ff9c20d354aa",
+      "field": "unit_set",
+      "to": "unit_sets_tables:cebe06aa803cdf364fb7",
+      "targetField": "key",
+      "value": "dlc07_brt_knights_realm",
+      "evidence": "RPFM processed schema is_reference"
+    },
+    {
+      "from": "main_units_tables:7411499650e816114558",
+      "field": "land_unit",
+      "to": "land_units_tables:0dade6b083f9c0a1ae1d",
+      "targetField": "key",
+      "value": "wh_main_brt_cav_knights_of_the_realm",
+      "evidence": "RPFM processed schema is_reference"
+    },
+    {
+      "from": "main_units_tables:a056e48d5ca3165e0bae",
+      "field": "land_unit",
+      "to": "land_units_tables:bfca8e78225ba5c49386",
+      "targetField": "key",
+      "value": "wh_pro04_brt_cav_knights_of_the_realm_ror_0",
+      "evidence": "RPFM processed schema is_reference"
+    },
+    {
+      "from": "character_skills_tables:49c9c26663fdd6c2914b",
+      "field": "localised_name",
+      "to": "Loc:7ce24e47356a3398e870",
+      "targetField": "key",
+      "value": "character_skills_localised_name_wh_dlc07_skill_brt_alberic_battle_champions_of_bordeleaux",
+      "evidence": "RPFM schema localised_fields + verified single-key Loc convention"
+    },
+    {
+      "from": "land_units_tables:2c8770cc0bc5569f5978",
+      "field": "onscreen_name",
+      "to": "Loc:70a7a36e3ddd94b63f2f",
+      "targetField": "key",
+      "value": "land_units_onscreen_name_wh_dlc07_brt_cha_alberic_bordeleaux_0",
+      "evidence": "RPFM schema localised_fields + verified single-key Loc convention"
+    },
+    {
+      "from": "effects_tables:a3d3cc08300c327b465c",
+      "field": "description",
+      "to": "Loc:c8a245562e721d97f95d",
+      "targetField": "key",
+      "value": "effects_description_wh_dlc07_effect_force_stat_bonus_vs_large_kotr",
+      "evidence": "RPFM schema localised_fields + verified single-key Loc convention"
+    },
+    {
+      "from": "effects_tables:714f9940a6955ef7c5ad",
+      "field": "description",
+      "to": "Loc:f1824a78f61f0b0a9e25",
+      "targetField": "key",
+      "value": "effects_description_wh_dlc07_effect_force_stat_leadership_kotr",
+      "evidence": "RPFM schema localised_fields + verified single-key Loc convention"
+    }
+  ],
+  "coverage": [
+    {
+      "query": {
+        "table": "character_skills_tables",
+        "where": [
+          {
+            "field": "key",
+            "op": "eq",
+            "value": "wh_dlc07_skill_brt_alberic_battle_champions_of_bordeleaux"
+          }
+        ]
+      },
+      "matchedRows": 1,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "character_skill_nodes_tables",
+        "where": [
+          {
+            "field": "character_skill_key",
+            "op": "eq",
+            "value": "wh_dlc07_skill_brt_alberic_battle_champions_of_bordeleaux"
+          }
+        ]
+      },
+      "matchedRows": 1,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "character_skill_node_set_items_tables",
+        "where": [
+          {
+            "field": "item",
+            "op": "oneOf",
+            "value": [
+              "wh_dlc07_skill_node_brt_alberic_unique_12"
+            ]
+          }
+        ]
+      },
+      "matchedRows": 1,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "character_skill_node_sets_tables",
+        "where": [
+          {
+            "field": "key",
+            "op": "oneOf",
+            "value": [
+              "wh_dlc07_skill_node_set_brt_alberic"
+            ]
+          }
+        ]
+      },
+      "matchedRows": 1,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "agent_subtypes_tables",
+        "where": [
+          {
+            "field": "key",
+            "op": "oneOf",
+            "value": [
+              "wh_dlc07_brt_alberic"
+            ]
+          }
+        ]
+      },
+      "matchedRows": 1,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "agents_tables",
+        "where": [
+          {
+            "field": "key",
+            "op": "oneOf",
+            "value": [
+              "general"
+            ]
+          }
+        ]
+      },
+      "matchedRows": 1,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "agent_subtypes_tables",
+        "where": [
+          {
+            "field": "key",
+            "op": "eq",
+            "value": "wh_dlc07_brt_alberic"
+          }
+        ]
+      },
+      "matchedRows": 1,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "main_units_tables",
+        "where": [
+          {
+            "field": "unit",
+            "op": "eq",
+            "value": "wh_dlc07_brt_cha_alberic_bordeleaux_0"
+          }
+        ]
+      },
+      "matchedRows": 1,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "land_units_tables",
+        "where": [
+          {
+            "field": "key",
+            "op": "oneOf",
+            "value": [
+              "wh_dlc07_brt_cha_alberic_bordeleaux_0"
+            ]
+          }
+        ]
+      },
+      "matchedRows": 1,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "agent_recruitment_categories_tables",
+        "where": [
+          {
+            "field": "key",
+            "op": "eq",
+            "value": "legendary_lords"
+          }
+        ]
+      },
+      "matchedRows": 1,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "frontend_faction_leaders_tables",
+        "where": [
+          {
+            "field": "agent_subtype_record",
+            "op": "eq",
+            "value": "wh_dlc07_brt_alberic"
+          }
+        ]
+      },
+      "matchedRows": 1,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "factions_tables",
+        "where": [
+          {
+            "field": "key",
+            "op": "oneOf",
+            "value": [
+              "wh_main_brt_bordeleaux"
+            ]
+          }
+        ]
+      },
+      "matchedRows": 1,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "cultures_subcultures_tables",
+        "where": [
+          {
+            "field": "subculture",
+            "op": "oneOf",
+            "value": [
+              "wh_main_sc_brt_bretonnia"
+            ]
+          }
+        ]
+      },
+      "matchedRows": 1,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "cultures_tables",
+        "where": [
+          {
+            "field": "key",
+            "op": "oneOf",
+            "value": [
+              "wh_main_brt_bretonnia"
+            ]
+          }
+        ]
+      },
+      "matchedRows": 1,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "campaign_to_agent_subtypes_tables",
+        "where": [
+          {
+            "field": "agent_subtype",
+            "op": "eq",
+            "value": "wh_dlc07_brt_alberic"
+          }
+        ]
+      },
+      "matchedRows": 1,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "character_skill_level_details_tables",
+        "where": [
+          {
+            "field": "skill_key",
+            "op": "eq",
+            "value": "wh_dlc07_skill_brt_alberic_battle_champions_of_bordeleaux"
+          }
+        ]
+      },
+      "matchedRows": 0,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "character_skill_level_to_ancillaries_junctions_tables",
+        "where": [
+          {
+            "field": "skill",
+            "op": "eq",
+            "value": "wh_dlc07_skill_brt_alberic_battle_champions_of_bordeleaux"
+          }
+        ]
+      },
+      "matchedRows": 0,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "character_skill_level_to_dilemmas_junctions_tables",
+        "where": [
+          {
+            "field": "character_skill_key",
+            "op": "eq",
+            "value": "wh_dlc07_skill_brt_alberic_battle_champions_of_bordeleaux"
+          }
+        ]
+      },
+      "matchedRows": 0,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "character_skills_to_level_reached_criterias_tables",
+        "where": [
+          {
+            "field": "character_skill",
+            "op": "eq",
+            "value": "wh_dlc07_skill_brt_alberic_battle_champions_of_bordeleaux"
+          }
+        ]
+      },
+      "matchedRows": 0,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "character_skill_level_to_effects_junctions_tables",
+        "where": [
+          {
+            "field": "character_skill_key",
+            "op": "eq",
+            "value": "wh_dlc07_skill_brt_alberic_battle_champions_of_bordeleaux"
+          }
+        ]
+      },
+      "matchedRows": 2,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "effects_tables",
+        "where": [
+          {
+            "field": "effect",
+            "op": "oneOf",
+            "value": [
+              "wh_dlc07_effect_force_stat_bonus_vs_large_kotr",
+              "wh_dlc07_effect_force_stat_leadership_kotr"
+            ]
+          }
+        ]
+      },
+      "matchedRows": 2,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "campaign_effect_scopes_tables",
+        "where": [
+          {
+            "field": "key",
+            "op": "oneOf",
+            "value": [
+              "general_to_force_own"
+            ]
+          }
+        ]
+      },
+      "matchedRows": 1,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "effect_bonus_value_agent_action_record_junctions_tables",
+        "where": [
+          {
+            "field": "effect",
+            "op": "oneOf",
+            "value": [
+              "wh_dlc07_effect_force_stat_bonus_vs_large_kotr",
+              "wh_dlc07_effect_force_stat_leadership_kotr"
+            ]
+          }
+        ]
+      },
+      "matchedRows": 0,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "effect_bonus_value_agent_junction_tables",
+        "where": [
+          {
+            "field": "effect",
+            "op": "oneOf",
+            "value": [
+              "wh_dlc07_effect_force_stat_bonus_vs_large_kotr",
+              "wh_dlc07_effect_force_stat_leadership_kotr"
+            ]
+          }
+        ]
+      },
+      "matchedRows": 0,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "effect_bonus_value_agent_subtype_junctions_tables",
+        "where": [
+          {
+            "field": "effect",
+            "op": "oneOf",
+            "value": [
+              "wh_dlc07_effect_force_stat_bonus_vs_large_kotr",
+              "wh_dlc07_effect_force_stat_leadership_kotr"
+            ]
+          }
+        ]
+      },
+      "matchedRows": 0,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "effect_bonus_value_armory_item_category_junctions_tables",
+        "where": [
+          {
+            "field": "effect",
+            "op": "oneOf",
+            "value": [
+              "wh_dlc07_effect_force_stat_bonus_vs_large_kotr",
+              "wh_dlc07_effect_force_stat_leadership_kotr"
+            ]
+          }
+        ]
+      },
+      "matchedRows": 0,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "effect_bonus_value_attrition_record_junctions_tables",
+        "where": [
+          {
+            "field": "effect",
+            "op": "oneOf",
+            "value": [
+              "wh_dlc07_effect_force_stat_bonus_vs_large_kotr",
+              "wh_dlc07_effect_force_stat_leadership_kotr"
+            ]
+          }
+        ]
+      },
+      "matchedRows": 0,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "effect_bonus_value_basic_junction_tables",
+        "where": [
+          {
+            "field": "effect",
+            "op": "oneOf",
+            "value": [
+              "wh_dlc07_effect_force_stat_bonus_vs_large_kotr",
+              "wh_dlc07_effect_force_stat_leadership_kotr"
+            ]
+          }
+        ]
+      },
+      "matchedRows": 0,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "effect_bonus_value_battle_context_army_special_ability_junctions_tables",
+        "where": [
+          {
+            "field": "effect",
+            "op": "oneOf",
+            "value": [
+              "wh_dlc07_effect_force_stat_bonus_vs_large_kotr",
+              "wh_dlc07_effect_force_stat_leadership_kotr"
+            ]
+          }
+        ]
+      },
+      "matchedRows": 0,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "effect_bonus_value_battle_context_unit_attribute_junctions_tables",
+        "where": [
+          {
+            "field": "effect",
+            "op": "oneOf",
+            "value": [
+              "wh_dlc07_effect_force_stat_bonus_vs_large_kotr",
+              "wh_dlc07_effect_force_stat_leadership_kotr"
+            ]
+          }
+        ]
+      },
+      "matchedRows": 0,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "effect_bonus_value_building_chain_junctions_tables",
+        "where": [
+          {
+            "field": "effect",
+            "op": "oneOf",
+            "value": [
+              "wh_dlc07_effect_force_stat_bonus_vs_large_kotr",
+              "wh_dlc07_effect_force_stat_leadership_kotr"
+            ]
+          }
+        ]
+      },
+      "matchedRows": 0,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "effect_bonus_value_building_set_junctions_tables",
+        "where": [
+          {
+            "field": "effect",
+            "op": "oneOf",
+            "value": [
+              "wh_dlc07_effect_force_stat_bonus_vs_large_kotr",
+              "wh_dlc07_effect_force_stat_leadership_kotr"
+            ]
+          }
+        ]
+      },
+      "matchedRows": 0,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "effect_bonus_value_cai_deal_component_junctions_tables",
+        "where": [
+          {
+            "field": "effect",
+            "op": "oneOf",
+            "value": [
+              "wh_dlc07_effect_force_stat_bonus_vs_large_kotr",
+              "wh_dlc07_effect_force_stat_leadership_kotr"
+            ]
+          }
+        ]
+      },
+      "matchedRows": 0,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "effect_bonus_value_chaotic_plan_junctions_tables",
+        "where": [
+          {
+            "field": "effect",
+            "op": "oneOf",
+            "value": [
+              "wh_dlc07_effect_force_stat_bonus_vs_large_kotr",
+              "wh_dlc07_effect_force_stat_leadership_kotr"
+            ]
+          }
+        ]
+      },
+      "matchedRows": 0,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "effect_bonus_value_chaotic_plan_token_junctions_tables",
+        "where": [
+          {
+            "field": "effect",
+            "op": "oneOf",
+            "value": [
+              "wh_dlc07_effect_force_stat_bonus_vs_large_kotr",
+              "wh_dlc07_effect_force_stat_leadership_kotr"
+            ]
+          }
+        ]
+      },
+      "matchedRows": 0,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "effect_bonus_value_character_training_group_junctions_tables",
+        "where": [
+          {
+            "field": "effect",
+            "op": "oneOf",
+            "value": [
+              "wh_dlc07_effect_force_stat_bonus_vs_large_kotr",
+              "wh_dlc07_effect_force_stat_leadership_kotr"
+            ]
+          }
+        ]
+      },
+      "matchedRows": 0,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "effect_bonus_value_diplomacy_manipulation_category_junctions_tables",
+        "where": [
+          {
+            "field": "effect",
+            "op": "oneOf",
+            "value": [
+              "wh_dlc07_effect_force_stat_bonus_vs_large_kotr",
+              "wh_dlc07_effect_force_stat_leadership_kotr"
+            ]
+          }
+        ]
+      },
+      "matchedRows": 0,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "effect_bonus_value_faction_junctions_tables",
+        "where": [
+          {
+            "field": "effect",
+            "op": "oneOf",
+            "value": [
+              "wh_dlc07_effect_force_stat_bonus_vs_large_kotr",
+              "wh_dlc07_effect_force_stat_leadership_kotr"
+            ]
+          }
+        ]
+      },
+      "matchedRows": 0,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "effect_bonus_value_id_action_results_additional_outcomes_junctions_tables",
+        "where": [
+          {
+            "field": "effect",
+            "op": "oneOf",
+            "value": [
+              "wh_dlc07_effect_force_stat_bonus_vs_large_kotr",
+              "wh_dlc07_effect_force_stat_leadership_kotr"
+            ]
+          }
+        ]
+      },
+      "matchedRows": 0,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "effect_bonus_value_ids_unit_sets_tables",
+        "where": [
+          {
+            "field": "effect",
+            "op": "oneOf",
+            "value": [
+              "wh_dlc07_effect_force_stat_bonus_vs_large_kotr",
+              "wh_dlc07_effect_force_stat_leadership_kotr"
+            ]
+          }
+        ]
+      },
+      "matchedRows": 2,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "effect_bonus_value_initiative_junctions_tables",
+        "where": [
+          {
+            "field": "effect",
+            "op": "oneOf",
+            "value": [
+              "wh_dlc07_effect_force_stat_bonus_vs_large_kotr",
+              "wh_dlc07_effect_force_stat_leadership_kotr"
+            ]
+          }
+        ]
+      },
+      "matchedRows": 0,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "effect_bonus_value_initiative_set_categories_junctions_tables",
+        "where": [
+          {
+            "field": "effect",
+            "op": "oneOf",
+            "value": [
+              "wh_dlc07_effect_force_stat_bonus_vs_large_kotr",
+              "wh_dlc07_effect_force_stat_leadership_kotr"
+            ]
+          }
+        ]
+      },
+      "matchedRows": 0,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "effect_bonus_value_initiative_set_junctions_tables",
+        "where": [
+          {
+            "field": "effect",
+            "op": "oneOf",
+            "value": [
+              "wh_dlc07_effect_force_stat_bonus_vs_large_kotr",
+              "wh_dlc07_effect_force_stat_leadership_kotr"
+            ]
+          }
+        ]
+      },
+      "matchedRows": 0,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "effect_bonus_value_loyalty_event_junctions_tables",
+        "where": [
+          {
+            "field": "effect",
+            "op": "oneOf",
+            "value": [
+              "wh_dlc07_effect_force_stat_bonus_vs_large_kotr",
+              "wh_dlc07_effect_force_stat_leadership_kotr"
+            ]
+          }
+        ]
+      },
+      "matchedRows": 0,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "effect_bonus_value_military_force_ability_junctions_tables",
+        "where": [
+          {
+            "field": "effect",
+            "op": "oneOf",
+            "value": [
+              "wh_dlc07_effect_force_stat_bonus_vs_large_kotr",
+              "wh_dlc07_effect_force_stat_leadership_kotr"
+            ]
+          }
+        ]
+      },
+      "matchedRows": 0,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "effect_bonus_value_missile_weapon_junctions_tables",
+        "where": [
+          {
+            "field": "effect",
+            "op": "oneOf",
+            "value": [
+              "wh_dlc07_effect_force_stat_bonus_vs_large_kotr",
+              "wh_dlc07_effect_force_stat_leadership_kotr"
+            ]
+          }
+        ]
+      },
+      "matchedRows": 0,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "effect_bonus_value_name_record_junctions_tables",
+        "where": [
+          {
+            "field": "effect",
+            "op": "oneOf",
+            "value": [
+              "wh_dlc07_effect_force_stat_bonus_vs_large_kotr",
+              "wh_dlc07_effect_force_stat_leadership_kotr"
+            ]
+          }
+        ]
+      },
+      "matchedRows": 0,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "effect_bonus_value_plague_component_junctions_tables",
+        "where": [
+          {
+            "field": "effect",
+            "op": "oneOf",
+            "value": [
+              "wh_dlc07_effect_force_stat_bonus_vs_large_kotr",
+              "wh_dlc07_effect_force_stat_leadership_kotr"
+            ]
+          }
+        ]
+      },
+      "matchedRows": 0,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "effect_bonus_value_plague_junctions_tables",
+        "where": [
+          {
+            "field": "effect",
+            "op": "oneOf",
+            "value": [
+              "wh_dlc07_effect_force_stat_bonus_vs_large_kotr",
+              "wh_dlc07_effect_force_stat_leadership_kotr"
+            ]
+          }
+        ]
+      },
+      "matchedRows": 0,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "effect_bonus_value_pooled_resource_factor_junctions_tables",
+        "where": [
+          {
+            "field": "effect",
+            "op": "oneOf",
+            "value": [
+              "wh_dlc07_effect_force_stat_bonus_vs_large_kotr",
+              "wh_dlc07_effect_force_stat_leadership_kotr"
+            ]
+          }
+        ]
+      },
+      "matchedRows": 0,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "effect_bonus_value_pooled_resource_junctions_tables",
+        "where": [
+          {
+            "field": "effect",
+            "op": "oneOf",
+            "value": [
+              "wh_dlc07_effect_force_stat_bonus_vs_large_kotr",
+              "wh_dlc07_effect_force_stat_leadership_kotr"
+            ]
+          }
+        ]
+      },
+      "matchedRows": 0,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "effect_bonus_value_pre_battle_unit_targeted_ability_junctions_tables",
+        "where": [
+          {
+            "field": "effect",
+            "op": "oneOf",
+            "value": [
+              "wh_dlc07_effect_force_stat_bonus_vs_large_kotr",
+              "wh_dlc07_effect_force_stat_leadership_kotr"
+            ]
+          }
+        ]
+      },
+      "matchedRows": 0,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "effect_bonus_value_province_growth_factor_junctions_tables",
+        "where": [
+          {
+            "field": "effect",
+            "op": "oneOf",
+            "value": [
+              "wh_dlc07_effect_force_stat_bonus_vs_large_kotr",
+              "wh_dlc07_effect_force_stat_leadership_kotr"
+            ]
+          }
+        ]
+      },
+      "matchedRows": 0,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "effect_bonus_value_provincial_initiative_effect_record_junctions_tables",
+        "where": [
+          {
+            "field": "effect",
+            "op": "oneOf",
+            "value": [
+              "wh_dlc07_effect_force_stat_bonus_vs_large_kotr",
+              "wh_dlc07_effect_force_stat_leadership_kotr"
+            ]
+          }
+        ]
+      },
+      "matchedRows": 0,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "effect_bonus_value_public_order_provider_junctions_tables",
+        "where": [
+          {
+            "field": "effect",
+            "op": "oneOf",
+            "value": [
+              "wh_dlc07_effect_force_stat_bonus_vs_large_kotr",
+              "wh_dlc07_effect_force_stat_leadership_kotr"
+            ]
+          }
+        ]
+      },
+      "matchedRows": 0,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "effect_bonus_value_recruitment_source_junctions_tables",
+        "where": [
+          {
+            "field": "effect",
+            "op": "oneOf",
+            "value": [
+              "wh_dlc07_effect_force_stat_bonus_vs_large_kotr",
+              "wh_dlc07_effect_force_stat_leadership_kotr"
+            ]
+          }
+        ]
+      },
+      "matchedRows": 0,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "effect_bonus_value_resource_junction_tables",
+        "where": [
+          {
+            "field": "effect",
+            "op": "oneOf",
+            "value": [
+              "wh_dlc07_effect_force_stat_bonus_vs_large_kotr",
+              "wh_dlc07_effect_force_stat_leadership_kotr"
+            ]
+          }
+        ]
+      },
+      "matchedRows": 0,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "effect_bonus_value_ritual_category_junctions_tables",
+        "where": [
+          {
+            "field": "effect",
+            "op": "oneOf",
+            "value": [
+              "wh_dlc07_effect_force_stat_bonus_vs_large_kotr",
+              "wh_dlc07_effect_force_stat_leadership_kotr"
+            ]
+          }
+        ]
+      },
+      "matchedRows": 0,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "effect_bonus_value_ritual_chains_junctions_tables",
+        "where": [
+          {
+            "field": "effect",
+            "op": "oneOf",
+            "value": [
+              "wh_dlc07_effect_force_stat_bonus_vs_large_kotr",
+              "wh_dlc07_effect_force_stat_leadership_kotr"
+            ]
+          }
+        ]
+      },
+      "matchedRows": 0,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "effect_bonus_value_ritual_junctions_tables",
+        "where": [
+          {
+            "field": "effect",
+            "op": "oneOf",
+            "value": [
+              "wh_dlc07_effect_force_stat_bonus_vs_large_kotr",
+              "wh_dlc07_effect_force_stat_leadership_kotr"
+            ]
+          }
+        ]
+      },
+      "matchedRows": 0,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "effect_bonus_value_scripted_junctions_tables",
+        "where": [
+          {
+            "field": "effect",
+            "op": "oneOf",
+            "value": [
+              "wh_dlc07_effect_force_stat_bonus_vs_large_kotr",
+              "wh_dlc07_effect_force_stat_leadership_kotr"
+            ]
+          }
+        ]
+      },
+      "matchedRows": 0,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "effect_bonus_value_settlement_type_junctions_tables",
+        "where": [
+          {
+            "field": "effect",
+            "op": "oneOf",
+            "value": [
+              "wh_dlc07_effect_force_stat_bonus_vs_large_kotr",
+              "wh_dlc07_effect_force_stat_leadership_kotr"
+            ]
+          }
+        ]
+      },
+      "matchedRows": 0,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "effect_bonus_value_siege_item_junctions_tables",
+        "where": [
+          {
+            "field": "effect",
+            "op": "oneOf",
+            "value": [
+              "wh_dlc07_effect_force_stat_bonus_vs_large_kotr",
+              "wh_dlc07_effect_force_stat_leadership_kotr"
+            ]
+          }
+        ]
+      },
+      "matchedRows": 0,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "effect_bonus_value_special_ability_group_junctions_tables",
+        "where": [
+          {
+            "field": "effect",
+            "op": "oneOf",
+            "value": [
+              "wh_dlc07_effect_force_stat_bonus_vs_large_kotr",
+              "wh_dlc07_effect_force_stat_leadership_kotr"
+            ]
+          }
+        ]
+      },
+      "matchedRows": 0,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "effect_bonus_value_special_ability_phase_record_junctions_tables",
+        "where": [
+          {
+            "field": "effect",
+            "op": "oneOf",
+            "value": [
+              "wh_dlc07_effect_force_stat_bonus_vs_large_kotr",
+              "wh_dlc07_effect_force_stat_leadership_kotr"
+            ]
+          }
+        ]
+      },
+      "matchedRows": 0,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "effect_bonus_value_stance_junctions_tables",
+        "where": [
+          {
+            "field": "effect",
+            "op": "oneOf",
+            "value": [
+              "wh_dlc07_effect_force_stat_bonus_vs_large_kotr",
+              "wh_dlc07_effect_force_stat_leadership_kotr"
+            ]
+          }
+        ]
+      },
+      "matchedRows": 0,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "effect_bonus_value_subculture_junctions_tables",
+        "where": [
+          {
+            "field": "effect",
+            "op": "oneOf",
+            "value": [
+              "wh_dlc07_effect_force_stat_bonus_vs_large_kotr",
+              "wh_dlc07_effect_force_stat_leadership_kotr"
+            ]
+          }
+        ]
+      },
+      "matchedRows": 0,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "effect_bonus_value_teleportation_node_template_junctions_tables",
+        "where": [
+          {
+            "field": "effect",
+            "op": "oneOf",
+            "value": [
+              "wh_dlc07_effect_force_stat_bonus_vs_large_kotr",
+              "wh_dlc07_effect_force_stat_leadership_kotr"
+            ]
+          }
+        ]
+      },
+      "matchedRows": 0,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "effect_bonus_value_unit_ability_junctions_tables",
+        "where": [
+          {
+            "field": "effect",
+            "op": "oneOf",
+            "value": [
+              "wh_dlc07_effect_force_stat_bonus_vs_large_kotr",
+              "wh_dlc07_effect_force_stat_leadership_kotr"
+            ]
+          }
+        ]
+      },
+      "matchedRows": 0,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "effect_bonus_value_unit_attribute_junctions_tables",
+        "where": [
+          {
+            "field": "effect",
+            "op": "oneOf",
+            "value": [
+              "wh_dlc07_effect_force_stat_bonus_vs_large_kotr",
+              "wh_dlc07_effect_force_stat_leadership_kotr"
+            ]
+          }
+        ]
+      },
+      "matchedRows": 0,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "effect_bonus_value_unit_class_stat_modifiers_junctions_tables",
+        "where": [
+          {
+            "field": "effect",
+            "op": "oneOf",
+            "value": [
+              "wh_dlc07_effect_force_stat_bonus_vs_large_kotr",
+              "wh_dlc07_effect_force_stat_leadership_kotr"
+            ]
+          }
+        ]
+      },
+      "matchedRows": 0,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "effect_bonus_value_unit_components_animation_table_override_junctions_tables",
+        "where": [
+          {
+            "field": "effect",
+            "op": "oneOf",
+            "value": [
+              "wh_dlc07_effect_force_stat_bonus_vs_large_kotr",
+              "wh_dlc07_effect_force_stat_leadership_kotr"
+            ]
+          }
+        ]
+      },
+      "matchedRows": 0,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "effect_bonus_value_unit_list_junctions_tables",
+        "where": [
+          {
+            "field": "effect",
+            "op": "oneOf",
+            "value": [
+              "wh_dlc07_effect_force_stat_bonus_vs_large_kotr",
+              "wh_dlc07_effect_force_stat_leadership_kotr"
+            ]
+          }
+        ]
+      },
+      "matchedRows": 0,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "effect_bonus_value_unit_record_junctions_tables",
+        "where": [
+          {
+            "field": "effect",
+            "op": "oneOf",
+            "value": [
+              "wh_dlc07_effect_force_stat_bonus_vs_large_kotr",
+              "wh_dlc07_effect_force_stat_leadership_kotr"
+            ]
+          }
+        ]
+      },
+      "matchedRows": 0,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "effect_bonus_value_unit_recruitment_queue_set_junctions_tables",
+        "where": [
+          {
+            "field": "effect",
+            "op": "oneOf",
+            "value": [
+              "wh_dlc07_effect_force_stat_bonus_vs_large_kotr",
+              "wh_dlc07_effect_force_stat_leadership_kotr"
+            ]
+          }
+        ]
+      },
+      "matchedRows": 0,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "effect_bonus_value_unit_set_special_ability_phase_junctions_tables",
+        "where": [
+          {
+            "field": "effect",
+            "op": "oneOf",
+            "value": [
+              "wh_dlc07_effect_force_stat_bonus_vs_large_kotr",
+              "wh_dlc07_effect_force_stat_leadership_kotr"
+            ]
+          }
+        ]
+      },
+      "matchedRows": 0,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "effect_bonus_value_unit_set_unit_ability_junctions_tables",
+        "where": [
+          {
+            "field": "effect",
+            "op": "oneOf",
+            "value": [
+              "wh_dlc07_effect_force_stat_bonus_vs_large_kotr",
+              "wh_dlc07_effect_force_stat_leadership_kotr"
+            ]
+          }
+        ]
+      },
+      "matchedRows": 0,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "effect_bonus_value_unit_set_unit_attribute_junctions_tables",
+        "where": [
+          {
+            "field": "effect",
+            "op": "oneOf",
+            "value": [
+              "wh_dlc07_effect_force_stat_bonus_vs_large_kotr",
+              "wh_dlc07_effect_force_stat_leadership_kotr"
+            ]
+          }
+        ]
+      },
+      "matchedRows": 0,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "effect_bonus_value_unit_upgrade_to_unit_group_junctions_tables",
+        "where": [
+          {
+            "field": "effect",
+            "op": "oneOf",
+            "value": [
+              "wh_dlc07_effect_force_stat_bonus_vs_large_kotr",
+              "wh_dlc07_effect_force_stat_leadership_kotr"
+            ]
+          }
+        ]
+      },
+      "matchedRows": 0,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "unit_sets_tables",
+        "where": [
+          {
+            "field": "key",
+            "op": "eq",
+            "value": "dlc07_brt_knights_realm"
+          }
+        ]
+      },
+      "matchedRows": 1,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "unit_set_to_unit_junctions_tables",
+        "where": [
+          {
+            "field": "unit_set",
+            "op": "eq",
+            "value": "dlc07_brt_knights_realm"
+          }
+        ]
+      },
+      "matchedRows": 2,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "main_units_tables",
+        "where": [
+          {
+            "field": "unit",
+            "op": "oneOf",
+            "value": [
+              "wh_main_brt_cav_knights_of_the_realm",
+              "wh_pro04_brt_cav_knights_of_the_realm_ror_0"
+            ]
+          }
+        ]
+      },
+      "matchedRows": 2,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "land_units_tables",
+        "where": [
+          {
+            "field": "key",
+            "op": "oneOf",
+            "value": [
+              "wh_main_brt_cav_knights_of_the_realm",
+              "wh_pro04_brt_cav_knights_of_the_realm_ror_0"
+            ]
+          }
+        ]
+      },
+      "matchedRows": 2,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "Loc:text/db/character_skills__.loc",
+        "where": [
+          {
+            "field": "key",
+            "op": "oneOf",
+            "value": [
+              "character_skills_localised_name_wh_dlc07_skill_brt_alberic_battle_champions_of_bordeleaux"
+            ]
+          }
+        ]
+      },
+      "matchedRows": 1,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "Loc:text/db/effects__.loc",
+        "where": [
+          {
+            "field": "key",
+            "op": "oneOf",
+            "value": [
+              "effects_description_wh_dlc07_effect_force_stat_bonus_vs_large_kotr",
+              "effects_description_wh_dlc07_effect_force_stat_leadership_kotr"
+            ]
+          }
+        ]
+      },
+      "matchedRows": 2,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "Loc:text/db/land_units__.loc",
+        "where": [
+          {
+            "field": "key",
+            "op": "oneOf",
+            "value": [
+              "land_units_onscreen_name_wh_dlc07_brt_cha_alberic_bordeleaux_0"
+            ]
+          }
+        ]
+      },
+      "matchedRows": 1,
+      "tableFiles": 1
+    }
+  ]
+}

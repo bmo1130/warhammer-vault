@@ -1,0 +1,48 @@
+{
+  "sourceKind": "CA_SKILL",
+  "skillKey": "wh_dlc07_skill_brt_alberic_battle_champions_of_bordeleaux",
+  "ownerKey": "wh_dlc07_brt_alberic",
+  "ranks": [
+    1
+  ],
+  "admittedEffects": [
+    "wh_dlc07_effect_force_stat_bonus_vs_large_kotr",
+    "wh_dlc07_effect_force_stat_leadership_kotr"
+  ],
+  "admittedTargets": [
+    {
+      "unitId": "ca_unit_wh_main_brt_cav_knights_of_the_realm",
+      "mainKey": "wh_main_brt_cav_knights_of_the_realm",
+      "landKey": "wh_main_brt_cav_knights_of_the_realm"
+    }
+  ],
+  "omittedTargets": [
+    {
+      "mainKey": "wh_pro04_brt_cav_knights_of_the_realm_ror_0",
+      "landKey": "wh_pro04_brt_cav_knights_of_the_realm_ror_0",
+      "membershipRowId": "unit_set_to_unit_junctions_tables:93a31c81ff9c20d354aa",
+      "mainRowId": "main_units_tables:a056e48d5ca3165e0bae",
+      "landRowId": "land_units_tables:bfca8e78225ba5c49386",
+      "joins": [
+        [
+          "unit_set_to_unit_junctions_tables:93a31c81ff9c20d354aa",
+          "unit_set",
+          "unit_sets_tables:cebe06aa803cdf364fb7"
+        ],
+        [
+          "unit_set_to_unit_junctions_tables:93a31c81ff9c20d354aa",
+          "unit_record",
+          "main_units_tables:a056e48d5ca3165e0bae"
+        ],
+        [
+          "main_units_tables:a056e48d5ca3165e0bae",
+          "land_unit",
+          "land_units_tables:bfca8e78225ba5c49386"
+        ]
+      ],
+      "reason": "TARGET_NOT_IN_PRODUCTION"
+    }
+  ],
+  "reviewSha256": "ef5e144a455815fbe38b637f47887c363c33c590857ac5d779e6f149c2680be1",
+  "projectionSha256": "f12ddeaf15cd6270ca417521e8ae0d632a9574547a563309cedd2cb362110831"
+}
