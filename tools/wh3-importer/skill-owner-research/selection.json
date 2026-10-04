@@ -1,0 +1,12 @@
+{
+  "baselineCommit": "b5308568cea08ce28b016545c019ea3c94f71848",
+  "purpose": "EXACT_SHARED_OWNER_SEMANTICS_RESEARCH",
+  "skills": [
+    {"key":"wh_main_skill_brt_lord_battle_lionhearted","role":"Primary shared-Lord sample"},
+    {"key":"wh_main_skill_brt_lord_battle_virtue_of_empathy","role":"Primary shared-Lord sample"},
+    {"key":"wh_main_skill_brt_lord_battle_basic_training","role":"Primary shared-Lord own-force sample; vigour blocker preserved"},
+    {"key":"wh_main_skill_brt_all_unique_ladys_mantle","role":"Primary mixed Lord/Hero and cross-faction relation sample"},
+    {"key":"wh_dlc07_skill_brt_alberic_battle_champions_of_bordeleaux","role":"Existing exact-single-owner control; no new admission"},
+    {"key":"wh2_dlc11_skill_brt_army_buff_low_born_militia","role":"Repeated-node/tree-membership comparison only; multi-rank UNKNOWN preserved"}
+  ]
+}
