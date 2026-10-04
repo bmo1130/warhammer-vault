@@ -1,0 +1,70 @@
+{
+  "format": "wh3-research-scope-review-v1",
+  "sourceKind": "MANUAL_CA_SCOPE_REVIEW",
+  "candidateOnly": true,
+  "conclusion": "C_NOT_WHITELISTABLE_FROM_CURRENT_EVIDENCE",
+  "selectedOccurrenceCount": 0,
+  "examinedFactionOccurrences": 79,
+  "approvedMappingOccurrences": 15,
+  "approvedMappingsOutsideOwnForce": 0,
+  "newScopeRules": [],
+  "newEffectMappings": [],
+  "scopeRecordRef": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823",
+  "snapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+  "sourceSha256": "72dc47e15caa9df8a6a79ccdbe21bdf6b71d3afda9ea0a6da8e895ee881146a8",
+  "selectionExclusionCounts": {
+    "EFFECT_MAPPING_NOT_APPROVED": 79,
+    "EXPLICIT_MAIN_CHAIN_UNRESOLVED": 78,
+    "NO_EXACT_PRODUCTION_TARGET": 78
+  },
+  "targetKinds": {
+    "BASIC_BONUS": 6,
+    "EXPLICIT_UNIT_SET": 1,
+    "NO_BONUS_RELATION": 28,
+    "OTHER_TYPED_RELATION": 44
+  },
+  "questions": [
+    {
+      "question": "Research completion applies to the whole own faction?",
+      "status": "METADATA_ONLY_LIFETIME_UNPROVEN",
+      "evidence": "location=factionwide, ownership=yours, source/target=faction. Completion, installation and lifetime are not independently demonstrated by these rows."
+    },
+    {
+      "question": "All exact eligible Unit members receive the faction-targeted stat?",
+      "status": "UNPROVEN",
+      "evidence": "No approved mapping occurrence under this scope. The sole explicit-main case also requires a separate, currently forbidden mapping review."
+    },
+    {
+      "question": "Independent of a particular army/lord?",
+      "status": "METADATA_ONLY_PROPAGATION_UNPROVEN",
+      "evidence": "target=faction differs from target=force; no army/lord selector appears in that record. This does not prove inherited per-Unit propagation."
+    },
+    {
+      "question": "Representable by research selected -> eligible Unit modified?",
+      "status": "UNPROVEN",
+      "evidence": "No qualifying positive case establishes Unit applicability under the faction target."
+    },
+    {
+      "question": "Equivalent Unit calculation to faction_to_force_own_unseen?",
+      "status": "UNPROVEN_DIFFERENT_TARGET_OBJECT",
+      "evidence": "The two exact records differ in key and target=faction versus force. No equivalence fallback is justified."
+    },
+    {
+      "question": "Would provenance require a separate rule if later approved?",
+      "status": "YES_CONDITIONAL_NO_RULE_ADDED",
+      "evidence": "Exact scope identity/target must remain distinct; never relabel it as SCOPE_OWN_FORCE_VERIFIED."
+    },
+    {
+      "question": "Can the same scope have different effect target semantics?",
+      "status": "OBSERVED_DIFFERENT_RELATIONS",
+      "evidence": "79 occurrences: typed relations 44, no inspected bonus relation 28, basic bonus 6, explicit unit-set 1. Scope alone does not define a Unit stat."
+    }
+  ],
+  "runtimeAction": "NONE_NO_ELIGIBLE_STATIC_CASE_TO_VALIDATE",
+  "remainingUnknowns": [
+    "Engine propagation from faction target to Units",
+    "Research installation/persistence semantics",
+    "Referenced scope object/location/ownership/territory records and scope localisation are not materialized"
+  ],
+  "nextStep": "Keep the exact own-force rule. Existing 96 DIRECT candidates can undergo separate human admission review; do not expand another mapping/scope in this task."
+}

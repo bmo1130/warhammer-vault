@@ -1,0 +1,2210 @@
+{
+  "sourceRef": "tools/wh3-importer/research-scan-bretonnia/source.json",
+  "sourceSha256": "72dc47e15caa9df8a6a79ccdbe21bdf6b71d3afda9ea0a6da8e895ee881146a8",
+  "scopeRecord": {
+    "key": "faction_to_faction_own_unseen",
+    "location": "factionwide",
+    "ownership": "yours",
+    "source": "faction",
+    "target": "faction",
+    "territory": "any"
+  },
+  "scopeRowId": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823",
+  "examinedOccurrences": 79,
+  "selectedOccurrences": 0,
+  "occurrences": [
+    {
+      "technologyKey": "tech_dlc14_brt_bretonnian_diplomacy",
+      "technologyName": "Bretonnian Diplomacy",
+      "effectKey": "wh_dlc05_faction_political_diplomacy_mod_technology_bretonnia",
+      "sourceRowId": "technology_effects_junction_tables:67f96a07afe9730a0057",
+      "rawValue": 50,
+      "description": "Diplomatic relations: %+n with Bretonnia",
+      "scopeKey": "faction_to_faction_own_unseen",
+      "scopeRowId": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823",
+      "classifierStatus": "REVIEW_REQUIRED",
+      "classifierReasonIds": [
+        "SCOPE_NOT_VERIFIED_OWN_FORCE"
+      ],
+      "mappingApproved": false,
+      "mappings": [],
+      "targetKind": "OTHER_TYPED_RELATION",
+      "unitSets": [],
+      "targetMainLandPairs": [],
+      "relationRowIds": [
+        "effect_bonus_value_subculture_junctions_tables:500eab7cc7c525ebf348"
+      ],
+      "exclusionReasons": [
+        "EFFECT_MAPPING_NOT_APPROVED",
+        "EXPLICIT_MAIN_CHAIN_UNRESOLVED",
+        "NO_EXACT_PRODUCTION_TARGET"
+      ],
+      "selected": false
+    },
+    {
+      "technologyKey": "tech_dlc14_brt_chivalry_tomb_kings_2",
+      "technologyName": "The Southern Guard",
+      "effectKey": "wh_dlc07_effect_increased_chivalry_tomb_kings",
+      "sourceRowId": "technology_effects_junction_tables:29aff52be16685167235",
+      "rawValue": 5,
+      "description": "Chivalry: %+n for every victory against Tomb Kings",
+      "scopeKey": "faction_to_faction_own_unseen",
+      "scopeRowId": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823",
+      "classifierStatus": "REVIEW_REQUIRED",
+      "classifierReasonIds": [
+        "SCOPE_NOT_VERIFIED_OWN_FORCE"
+      ],
+      "mappingApproved": false,
+      "mappings": [],
+      "targetKind": "OTHER_TYPED_RELATION",
+      "unitSets": [],
+      "targetMainLandPairs": [],
+      "relationRowIds": [
+        "effect_bonus_value_scripted_junctions_tables:7afa105c4bf0fe696e26"
+      ],
+      "exclusionReasons": [
+        "EFFECT_MAPPING_NOT_APPROVED",
+        "EXPLICIT_MAIN_CHAIN_UNRESOLVED",
+        "NO_EXACT_PRODUCTION_TARGET"
+      ],
+      "selected": false
+    },
+    {
+      "technologyKey": "tech_dlc14_brt_chivalry_tomb_kings_2",
+      "technologyName": "The Southern Guard",
+      "effectKey": "wh2_dlc09_faction_political_diplomacy_mod_technology_tomb_kings",
+      "sourceRowId": "technology_effects_junction_tables:2b76f394f760a6177456",
+      "rawValue": -50,
+      "description": "Diplomatic relations: %+n with Tomb Kings",
+      "scopeKey": "faction_to_faction_own_unseen",
+      "scopeRowId": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823",
+      "classifierStatus": "REVIEW_REQUIRED",
+      "classifierReasonIds": [
+        "SCOPE_NOT_VERIFIED_OWN_FORCE"
+      ],
+      "mappingApproved": false,
+      "mappings": [],
+      "targetKind": "OTHER_TYPED_RELATION",
+      "unitSets": [],
+      "targetMainLandPairs": [],
+      "relationRowIds": [
+        "effect_bonus_value_subculture_junctions_tables:41f31f9987fe712e4bba"
+      ],
+      "exclusionReasons": [
+        "EFFECT_MAPPING_NOT_APPROVED",
+        "EXPLICIT_MAIN_CHAIN_UNRESOLVED",
+        "NO_EXACT_PRODUCTION_TARGET"
+      ],
+      "selected": false
+    },
+    {
+      "technologyKey": "tech_dlc14_brt_code_of_conduct",
+      "technologyName": "Code of Conduct",
+      "effectKey": "wh_dlc07_effect_chivalry_dummy",
+      "sourceRowId": "technology_effects_junction_tables:5d0dc1fd74a76dcddb54",
+      "rawValue": 100,
+      "description": "Chivalry: %+n",
+      "scopeKey": "faction_to_faction_own_unseen",
+      "scopeRowId": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823",
+      "classifierStatus": "REVIEW_REQUIRED",
+      "classifierReasonIds": [
+        "SCOPE_NOT_VERIFIED_OWN_FORCE"
+      ],
+      "mappingApproved": false,
+      "mappings": [],
+      "targetKind": "NO_BONUS_RELATION",
+      "unitSets": [],
+      "targetMainLandPairs": [],
+      "relationRowIds": [],
+      "exclusionReasons": [
+        "EFFECT_MAPPING_NOT_APPROVED",
+        "EXPLICIT_MAIN_CHAIN_UNRESOLVED",
+        "NO_EXACT_PRODUCTION_TARGET"
+      ],
+      "selected": false
+    },
+    {
+      "technologyKey": "tech_dlc14_brt_heraldry_oversea_repanse",
+      "technologyName": "Overseas Diplomacy",
+      "effectKey": "wh2_main_faction_political_diplomacy_mod_technology_order",
+      "sourceRowId": "technology_effects_junction_tables:cd856671b3e645070971",
+      "rawValue": 50,
+      "description": "Diplomatic relations: %+n with Humans, High Elves and Lizardmen",
+      "scopeKey": "faction_to_faction_own_unseen",
+      "scopeRowId": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823",
+      "classifierStatus": "REVIEW_REQUIRED",
+      "classifierReasonIds": [
+        "SCOPE_NOT_VERIFIED_OWN_FORCE"
+      ],
+      "mappingApproved": false,
+      "mappings": [],
+      "targetKind": "OTHER_TYPED_RELATION",
+      "unitSets": [],
+      "targetMainLandPairs": [],
+      "relationRowIds": [
+        "effect_bonus_value_subculture_junctions_tables:468685385f281ecd4ae8",
+        "effect_bonus_value_subculture_junctions_tables:46904544543ccf200361",
+        "effect_bonus_value_subculture_junctions_tables:651b826a77a09612b541",
+        "effect_bonus_value_subculture_junctions_tables:727126f33cc0cb0a6a26",
+        "effect_bonus_value_subculture_junctions_tables:8c2257c338299d4c6c6c",
+        "effect_bonus_value_subculture_junctions_tables:9d09dc9d5927d5206f60",
+        "effect_bonus_value_subculture_junctions_tables:b3994e7638b9426a3d1c"
+      ],
+      "exclusionReasons": [
+        "EFFECT_MAPPING_NOT_APPROVED",
+        "EXPLICIT_MAIN_CHAIN_UNRESOLVED",
+        "NO_EXACT_PRODUCTION_TARGET"
+      ],
+      "selected": false
+    },
+    {
+      "technologyKey": "tech_dlc14_brt_heroic_duties",
+      "technologyName": "Heroic Duties",
+      "effectKey": "wh_dlc07_effect_chivalry_dummy",
+      "sourceRowId": "technology_effects_junction_tables:8c3abd156bf092c43231",
+      "rawValue": 100,
+      "description": "Chivalry: %+n",
+      "scopeKey": "faction_to_faction_own_unseen",
+      "scopeRowId": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823",
+      "classifierStatus": "REVIEW_REQUIRED",
+      "classifierReasonIds": [
+        "SCOPE_NOT_VERIFIED_OWN_FORCE"
+      ],
+      "mappingApproved": false,
+      "mappings": [],
+      "targetKind": "NO_BONUS_RELATION",
+      "unitSets": [],
+      "targetMainLandPairs": [],
+      "relationRowIds": [],
+      "exclusionReasons": [
+        "EFFECT_MAPPING_NOT_APPROVED",
+        "EXPLICIT_MAIN_CHAIN_UNRESOLVED",
+        "NO_EXACT_PRODUCTION_TARGET"
+      ],
+      "selected": false
+    },
+    {
+      "technologyKey": "tech_dlc14_brt_prayer_of_fortitude",
+      "technologyName": "Prayer of Fortitude",
+      "effectKey": "wh_dlc07_effect_chivalry_dummy",
+      "sourceRowId": "technology_effects_junction_tables:26d215d9141ac4fd4049",
+      "rawValue": 100,
+      "description": "Chivalry: %+n",
+      "scopeKey": "faction_to_faction_own_unseen",
+      "scopeRowId": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823",
+      "classifierStatus": "REVIEW_REQUIRED",
+      "classifierReasonIds": [
+        "SCOPE_NOT_VERIFIED_OWN_FORCE"
+      ],
+      "mappingApproved": false,
+      "mappings": [],
+      "targetKind": "NO_BONUS_RELATION",
+      "unitSets": [],
+      "targetMainLandPairs": [],
+      "relationRowIds": [],
+      "exclusionReasons": [
+        "EFFECT_MAPPING_NOT_APPROVED",
+        "EXPLICIT_MAIN_CHAIN_UNRESOLVED",
+        "NO_EXACT_PRODUCTION_TARGET"
+      ],
+      "selected": false
+    },
+    {
+      "technologyKey": "tech_dlc14_brt_rally_the_peasants",
+      "technologyName": "Rally the Peasants",
+      "effectKey": "wh_dlc07_effect_chivalry_dummy",
+      "sourceRowId": "technology_effects_junction_tables:39b60b6b5da3206f12d3",
+      "rawValue": 200,
+      "description": "Chivalry: %+n",
+      "scopeKey": "faction_to_faction_own_unseen",
+      "scopeRowId": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823",
+      "classifierStatus": "REVIEW_REQUIRED",
+      "classifierReasonIds": [
+        "SCOPE_NOT_VERIFIED_OWN_FORCE"
+      ],
+      "mappingApproved": false,
+      "mappings": [],
+      "targetKind": "NO_BONUS_RELATION",
+      "unitSets": [],
+      "targetMainLandPairs": [],
+      "relationRowIds": [],
+      "exclusionReasons": [
+        "EFFECT_MAPPING_NOT_APPROVED",
+        "EXPLICIT_MAIN_CHAIN_UNRESOLVED",
+        "NO_EXACT_PRODUCTION_TARGET"
+      ],
+      "selected": false
+    },
+    {
+      "technologyKey": "tech_dlc14_brt_rally_the_peasants",
+      "technologyName": "Rally the Peasants",
+      "effectKey": "wh2_main_effect_building_recruitment_cost_reduction_brt_resource_iron",
+      "sourceRowId": "technology_effects_junction_tables:93857fb5b112bf18b4f6",
+      "rawValue": -15,
+      "description": "Recruitment cost: %+n% for Peasant Mobs, Men-at-Arms with Swords, Battle Pilgrims and Foot Squires units",
+      "scopeKey": "faction_to_faction_own_unseen",
+      "scopeRowId": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823",
+      "classifierStatus": "REVIEW_REQUIRED",
+      "classifierReasonIds": [
+        "SCOPE_NOT_VERIFIED_OWN_FORCE"
+      ],
+      "mappingApproved": false,
+      "mappings": [],
+      "targetKind": "EXPLICIT_UNIT_SET",
+      "unitSets": [
+        "brt_sword_inf",
+        "wh_dlc07_peasant_mob"
+      ],
+      "targetMainLandPairs": [
+        {
+          "mainKey": "wh_dlc07_brt_inf_battle_pilgrims_0",
+          "landKey": "wh_dlc07_brt_inf_battle_pilgrims_0"
+        },
+        {
+          "mainKey": "wh_dlc07_brt_inf_men_at_arms_1",
+          "landKey": "wh_dlc07_brt_inf_men_at_arms_1"
+        },
+        {
+          "mainKey": "wh_dlc07_brt_inf_foot_squires_0",
+          "landKey": "wh_dlc07_brt_inf_foot_squires_0"
+        },
+        {
+          "mainKey": "wh_dlc07_brt_inf_men_at_arms_2",
+          "landKey": "wh_dlc07_brt_inf_men_at_arms_2"
+        },
+        {
+          "mainKey": "wh_dlc07_brt_peasant_mob_0",
+          "landKey": "wh_dlc07_brt_inf_peasant_mob_0"
+        }
+      ],
+      "relationRowIds": [
+        "effect_bonus_value_ids_unit_sets_tables:8642e854b1dfb47dd216",
+        "effect_bonus_value_ids_unit_sets_tables:ff64db6f9bd274c6ea51"
+      ],
+      "exclusionReasons": [
+        "EFFECT_MAPPING_NOT_APPROVED"
+      ],
+      "selected": false
+    },
+    {
+      "technologyKey": "tech_dlc14_brt_rally_the_peasants",
+      "technologyName": "Rally the Peasants",
+      "effectKey": "wh_dlc07_effect_peasant_increase_base_amount",
+      "sourceRowId": "technology_effects_junction_tables:dc0ae978fd0985eafa06",
+      "rawValue": 15,
+      "description": "Peasant Economy: %+n peasants available to the faction",
+      "scopeKey": "faction_to_faction_own_unseen",
+      "scopeRowId": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823",
+      "classifierStatus": "REVIEW_REQUIRED",
+      "classifierReasonIds": [
+        "SCOPE_NOT_VERIFIED_OWN_FORCE"
+      ],
+      "mappingApproved": false,
+      "mappings": [],
+      "targetKind": "OTHER_TYPED_RELATION",
+      "unitSets": [],
+      "targetMainLandPairs": [],
+      "relationRowIds": [
+        "effect_bonus_value_scripted_junctions_tables:f7a19e788f81a9ba04b9"
+      ],
+      "exclusionReasons": [
+        "EFFECT_MAPPING_NOT_APPROVED",
+        "EXPLICIT_MAIN_CHAIN_UNRESOLVED",
+        "NO_EXACT_PRODUCTION_TARGET"
+      ],
+      "selected": false
+    },
+    {
+      "technologyKey": "tech_dlc14_brt_righteous_strength",
+      "technologyName": "Righteous Strength",
+      "effectKey": "wh_dlc07_effect_chivalry_dummy",
+      "sourceRowId": "technology_effects_junction_tables:cac5499ef148548e8e24",
+      "rawValue": 100,
+      "description": "Chivalry: %+n",
+      "scopeKey": "faction_to_faction_own_unseen",
+      "scopeRowId": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823",
+      "classifierStatus": "REVIEW_REQUIRED",
+      "classifierReasonIds": [
+        "SCOPE_NOT_VERIFIED_OWN_FORCE"
+      ],
+      "mappingApproved": false,
+      "mappings": [],
+      "targetKind": "NO_BONUS_RELATION",
+      "unitSets": [],
+      "targetMainLandPairs": [],
+      "relationRowIds": [],
+      "exclusionReasons": [
+        "EFFECT_MAPPING_NOT_APPROVED",
+        "EXPLICIT_MAIN_CHAIN_UNRESOLVED",
+        "NO_EXACT_PRODUCTION_TARGET"
+      ],
+      "selected": false
+    },
+    {
+      "technologyKey": "tech_dlc14_brt_the_ladys_favour",
+      "technologyName": "The Lady's Favour",
+      "effectKey": "wh_dlc07_effect_chivalry_dummy",
+      "sourceRowId": "technology_effects_junction_tables:6d45933f1158fd2cdea9",
+      "rawValue": 100,
+      "description": "Chivalry: %+n",
+      "scopeKey": "faction_to_faction_own_unseen",
+      "scopeRowId": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823",
+      "classifierStatus": "REVIEW_REQUIRED",
+      "classifierReasonIds": [
+        "SCOPE_NOT_VERIFIED_OWN_FORCE"
+      ],
+      "mappingApproved": false,
+      "mappings": [],
+      "targetKind": "NO_BONUS_RELATION",
+      "unitSets": [],
+      "targetMainLandPairs": [],
+      "relationRowIds": [],
+      "exclusionReasons": [
+        "EFFECT_MAPPING_NOT_APPROVED",
+        "EXPLICIT_MAIN_CHAIN_UNRESOLVED",
+        "NO_EXACT_PRODUCTION_TARGET"
+      ],
+      "selected": false
+    },
+    {
+      "technologyKey": "wh2_dlc11_tech_brt_chivalry_vampire_coast_1",
+      "technologyName": "High Seas' Decree",
+      "effectKey": "wh2_dlc11_faction_political_diplomacy_mod_vampire_coast",
+      "sourceRowId": "technology_effects_junction_tables:72cf0fa84cf051ff0ee6",
+      "rawValue": -50,
+      "description": "Diplomatic relations: %+n with Vampire Coast",
+      "scopeKey": "faction_to_faction_own_unseen",
+      "scopeRowId": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823",
+      "classifierStatus": "REVIEW_REQUIRED",
+      "classifierReasonIds": [
+        "SCOPE_NOT_VERIFIED_OWN_FORCE"
+      ],
+      "mappingApproved": false,
+      "mappings": [],
+      "targetKind": "OTHER_TYPED_RELATION",
+      "unitSets": [],
+      "targetMainLandPairs": [],
+      "relationRowIds": [
+        "effect_bonus_value_subculture_junctions_tables:ef756bd179df0c5c3b35"
+      ],
+      "exclusionReasons": [
+        "EFFECT_MAPPING_NOT_APPROVED",
+        "EXPLICIT_MAIN_CHAIN_UNRESOLVED",
+        "NO_EXACT_PRODUCTION_TARGET"
+      ],
+      "selected": false
+    },
+    {
+      "technologyKey": "wh2_dlc11_tech_brt_chivalry_vampire_coast_1",
+      "technologyName": "High Seas' Decree",
+      "effectKey": "wh2_dlc11_effect_increased_chivalry_vampire_coast",
+      "sourceRowId": "technology_effects_junction_tables:c6003eec243f778c8d85",
+      "rawValue": 4,
+      "description": "Chivalry: %+n for every victory against Vampire Coast",
+      "scopeKey": "faction_to_faction_own_unseen",
+      "scopeRowId": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823",
+      "classifierStatus": "REVIEW_REQUIRED",
+      "classifierReasonIds": [
+        "SCOPE_NOT_VERIFIED_OWN_FORCE"
+      ],
+      "mappingApproved": false,
+      "mappings": [],
+      "targetKind": "OTHER_TYPED_RELATION",
+      "unitSets": [],
+      "targetMainLandPairs": [],
+      "relationRowIds": [
+        "effect_bonus_value_scripted_junctions_tables:ab68635ffdb2d15a3d84"
+      ],
+      "exclusionReasons": [
+        "EFFECT_MAPPING_NOT_APPROVED",
+        "EXPLICIT_MAIN_CHAIN_UNRESOLVED",
+        "NO_EXACT_PRODUCTION_TARGET"
+      ],
+      "selected": false
+    },
+    {
+      "technologyKey": "wh2_dlc12_tech_brt_chivalry_start",
+      "technologyName": "Decrees of Bretonnia",
+      "effectKey": "wh_dlc07_effect_chivalry_dummy",
+      "sourceRowId": "technology_effects_junction_tables:c84a2cc3d9ab38e9a80a",
+      "rawValue": 50,
+      "description": "Chivalry: %+n",
+      "scopeKey": "faction_to_faction_own_unseen",
+      "scopeRowId": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823",
+      "classifierStatus": "REVIEW_REQUIRED",
+      "classifierReasonIds": [
+        "SCOPE_NOT_VERIFIED_OWN_FORCE"
+      ],
+      "mappingApproved": false,
+      "mappings": [],
+      "targetKind": "NO_BONUS_RELATION",
+      "unitSets": [],
+      "targetMainLandPairs": [],
+      "relationRowIds": [],
+      "exclusionReasons": [
+        "EFFECT_MAPPING_NOT_APPROVED",
+        "EXPLICIT_MAIN_CHAIN_UNRESOLVED",
+        "NO_EXACT_PRODUCTION_TARGET"
+      ],
+      "selected": false
+    },
+    {
+      "technologyKey": "wh2_dlc12_tech_brt_heraldry_oversea_dwf",
+      "technologyName": "Kings of the Mountains Diplomacy",
+      "effectKey": "wh_main_faction_political_diplomacy_mod_technology_dwarfs",
+      "sourceRowId": "technology_effects_junction_tables:5b9770d399f91655fa46",
+      "rawValue": 50,
+      "description": "Diplomatic relations: %+n with Dwarfs",
+      "scopeKey": "faction_to_faction_own_unseen",
+      "scopeRowId": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823",
+      "classifierStatus": "REVIEW_REQUIRED",
+      "classifierReasonIds": [
+        "SCOPE_NOT_VERIFIED_OWN_FORCE"
+      ],
+      "mappingApproved": false,
+      "mappings": [],
+      "targetKind": "OTHER_TYPED_RELATION",
+      "unitSets": [],
+      "targetMainLandPairs": [],
+      "relationRowIds": [
+        "effect_bonus_value_subculture_junctions_tables:592ccf4964f894f737f9"
+      ],
+      "exclusionReasons": [
+        "EFFECT_MAPPING_NOT_APPROVED",
+        "EXPLICIT_MAIN_CHAIN_UNRESOLVED",
+        "NO_EXACT_PRODUCTION_TARGET"
+      ],
+      "selected": false
+    },
+    {
+      "technologyKey": "wh2_dlc12_tech_brt_heraldry_oversea_men",
+      "technologyName": "Leaders of Men Diplomacy",
+      "effectKey": "wh2_main_faction_political_diplomacy_mod_empire_kislev_teb",
+      "sourceRowId": "technology_effects_junction_tables:625d4496ae7231678257",
+      "rawValue": 30,
+      "description": "Diplomatic relations: %+n with Empire, Kislev and Southern Realms",
+      "scopeKey": "faction_to_faction_own_unseen",
+      "scopeRowId": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823",
+      "classifierStatus": "REVIEW_REQUIRED",
+      "classifierReasonIds": [
+        "SCOPE_NOT_VERIFIED_OWN_FORCE"
+      ],
+      "mappingApproved": false,
+      "mappings": [],
+      "targetKind": "OTHER_TYPED_RELATION",
+      "unitSets": [],
+      "targetMainLandPairs": [],
+      "relationRowIds": [
+        "effect_bonus_value_subculture_junctions_tables:670dcbd3cf2b50d98ede",
+        "effect_bonus_value_subculture_junctions_tables:7c65806b5f2020534396",
+        "effect_bonus_value_subculture_junctions_tables:ae335f273259606dc879"
+      ],
+      "exclusionReasons": [
+        "EFFECT_MAPPING_NOT_APPROVED",
+        "EXPLICIT_MAIN_CHAIN_UNRESOLVED",
+        "NO_EXACT_PRODUCTION_TARGET"
+      ],
+      "selected": false
+    },
+    {
+      "technologyKey": "wh2_dlc12_tech_brt_heraldry_oversea_tmb",
+      "technologyName": "Kings of the Desert Diplomacy",
+      "effectKey": "wh2_dlc09_faction_political_diplomacy_mod_technology_tomb_kings",
+      "sourceRowId": "technology_effects_junction_tables:ee7245892b9507e4c95f",
+      "rawValue": 50,
+      "description": "Diplomatic relations: %+n with Tomb Kings",
+      "scopeKey": "faction_to_faction_own_unseen",
+      "scopeRowId": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823",
+      "classifierStatus": "REVIEW_REQUIRED",
+      "classifierReasonIds": [
+        "SCOPE_NOT_VERIFIED_OWN_FORCE"
+      ],
+      "mappingApproved": false,
+      "mappings": [],
+      "targetKind": "OTHER_TYPED_RELATION",
+      "unitSets": [],
+      "targetMainLandPairs": [],
+      "relationRowIds": [
+        "effect_bonus_value_subculture_junctions_tables:41f31f9987fe712e4bba"
+      ],
+      "exclusionReasons": [
+        "EFFECT_MAPPING_NOT_APPROVED",
+        "EXPLICIT_MAIN_CHAIN_UNRESOLVED",
+        "NO_EXACT_PRODUCTION_TARGET"
+      ],
+      "selected": false
+    },
+    {
+      "technologyKey": "wh2_dlc12_tech_brt_heraldry_oversea_wef",
+      "technologyName": "Lords of Athel Loren Diplomacy",
+      "effectKey": "wh_dlc05_faction_political_diplomacy_mod_technology_wood_elves",
+      "sourceRowId": "technology_effects_junction_tables:d0b8ec0f43eec5f1562b",
+      "rawValue": 50,
+      "description": "Diplomatic relations: %+n with Wood Elves",
+      "scopeKey": "faction_to_faction_own_unseen",
+      "scopeRowId": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823",
+      "classifierStatus": "REVIEW_REQUIRED",
+      "classifierReasonIds": [
+        "SCOPE_NOT_VERIFIED_OWN_FORCE"
+      ],
+      "mappingApproved": false,
+      "mappings": [],
+      "targetKind": "OTHER_TYPED_RELATION",
+      "unitSets": [],
+      "targetMainLandPairs": [],
+      "relationRowIds": [
+        "effect_bonus_value_subculture_junctions_tables:6f6d16525a98839be2d2"
+      ],
+      "exclusionReasons": [
+        "EFFECT_MAPPING_NOT_APPROVED",
+        "EXPLICIT_MAIN_CHAIN_UNRESOLVED",
+        "NO_EXACT_PRODUCTION_TARGET"
+      ],
+      "selected": false
+    },
+    {
+      "technologyKey": "wh3_main_tech_brt_heraldry_aquitaine",
+      "technologyName": "Heraldry of Aquitaine",
+      "effectKey": "wh_dlc07_effect_chivalry_dummy",
+      "sourceRowId": "technology_effects_junction_tables:1cb6e176a2777699450e",
+      "rawValue": 100,
+      "description": "Chivalry: %+n",
+      "scopeKey": "faction_to_faction_own_unseen",
+      "scopeRowId": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823",
+      "classifierStatus": "REVIEW_REQUIRED",
+      "classifierReasonIds": [
+        "SCOPE_NOT_VERIFIED_OWN_FORCE"
+      ],
+      "mappingApproved": false,
+      "mappings": [],
+      "targetKind": "NO_BONUS_RELATION",
+      "unitSets": [],
+      "targetMainLandPairs": [],
+      "relationRowIds": [],
+      "exclusionReasons": [
+        "EFFECT_MAPPING_NOT_APPROVED",
+        "EXPLICIT_MAIN_CHAIN_UNRESOLVED",
+        "NO_EXACT_PRODUCTION_TARGET"
+      ],
+      "selected": false
+    },
+    {
+      "technologyKey": "wh3_main_tech_brt_heraldry_aquitaine",
+      "technologyName": "Heraldry of Aquitaine",
+      "effectKey": "wh3_main_dummy_enable_confederation_aquitaine",
+      "sourceRowId": "technology_effects_junction_tables:84a4d5e26641d41a23a8",
+      "rawValue": 1,
+      "description": "[[col:yellow]]Enables an opportunity to [[img:icon_confederation]][[/img]]confederate with [[img:brt_aquitaine]][[/img]]Aquitaine[[/col]]",
+      "scopeKey": "faction_to_faction_own_unseen",
+      "scopeRowId": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823",
+      "classifierStatus": "REVIEW_REQUIRED",
+      "classifierReasonIds": [
+        "SCOPE_NOT_VERIFIED_OWN_FORCE"
+      ],
+      "mappingApproved": false,
+      "mappings": [],
+      "targetKind": "NO_BONUS_RELATION",
+      "unitSets": [],
+      "targetMainLandPairs": [],
+      "relationRowIds": [],
+      "exclusionReasons": [
+        "EFFECT_MAPPING_NOT_APPROVED",
+        "EXPLICIT_MAIN_CHAIN_UNRESOLVED",
+        "NO_EXACT_PRODUCTION_TARGET"
+      ],
+      "selected": false
+    },
+    {
+      "technologyKey": "wh3_main_tech_brt_heraldry_aquitaine",
+      "technologyName": "Heraldry of Aquitaine",
+      "effectKey": "wh3_main_faction_political_diplomacy_mod_aquitaine",
+      "sourceRowId": "technology_effects_junction_tables:c7bc2301fbcd03ab7533",
+      "rawValue": 100,
+      "description": "Diplomatic relations: %+n with [[img:brt_aquitaine]][[/img]]Aquitaine",
+      "scopeKey": "faction_to_faction_own_unseen",
+      "scopeRowId": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823",
+      "classifierStatus": "REVIEW_REQUIRED",
+      "classifierReasonIds": [
+        "SCOPE_NOT_VERIFIED_OWN_FORCE"
+      ],
+      "mappingApproved": false,
+      "mappings": [],
+      "targetKind": "OTHER_TYPED_RELATION",
+      "unitSets": [],
+      "targetMainLandPairs": [],
+      "relationRowIds": [
+        "effect_bonus_value_faction_junctions_tables:ddd02d00679aabdab9c3"
+      ],
+      "exclusionReasons": [
+        "EFFECT_MAPPING_NOT_APPROVED",
+        "EXPLICIT_MAIN_CHAIN_UNRESOLVED",
+        "NO_EXACT_PRODUCTION_TARGET"
+      ],
+      "selected": false
+    },
+    {
+      "technologyKey": "wh_dlc07_tech_brt_chivalry_beastmen_1",
+      "technologyName": "Safer Woods Decree",
+      "effectKey": "wh_dlc03_faction_political_diplomacy_mod_technology_beastmen",
+      "sourceRowId": "technology_effects_junction_tables:a349b981dffa6d4a33fa",
+      "rawValue": -100,
+      "description": "Diplomatic relations: %+n with Beastmen",
+      "scopeKey": "faction_to_faction_own_unseen",
+      "scopeRowId": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823",
+      "classifierStatus": "REVIEW_REQUIRED",
+      "classifierReasonIds": [
+        "SCOPE_NOT_VERIFIED_OWN_FORCE"
+      ],
+      "mappingApproved": false,
+      "mappings": [],
+      "targetKind": "OTHER_TYPED_RELATION",
+      "unitSets": [],
+      "targetMainLandPairs": [],
+      "relationRowIds": [
+        "effect_bonus_value_subculture_junctions_tables:53d23aed9bfabba6e174"
+      ],
+      "exclusionReasons": [
+        "EFFECT_MAPPING_NOT_APPROVED",
+        "EXPLICIT_MAIN_CHAIN_UNRESOLVED",
+        "NO_EXACT_PRODUCTION_TARGET"
+      ],
+      "selected": false
+    },
+    {
+      "technologyKey": "wh_dlc07_tech_brt_chivalry_beastmen_1",
+      "technologyName": "Safer Woods Decree",
+      "effectKey": "wh_dlc07_effect_increased_chivalry_beastmen",
+      "sourceRowId": "technology_effects_junction_tables:c6f70014dd2976f78577",
+      "rawValue": 4,
+      "description": "Chivalry: %+n for every victory against Beastmen Warherds",
+      "scopeKey": "faction_to_faction_own_unseen",
+      "scopeRowId": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823",
+      "classifierStatus": "REVIEW_REQUIRED",
+      "classifierReasonIds": [
+        "SCOPE_NOT_VERIFIED_OWN_FORCE"
+      ],
+      "mappingApproved": false,
+      "mappings": [],
+      "targetKind": "OTHER_TYPED_RELATION",
+      "unitSets": [],
+      "targetMainLandPairs": [],
+      "relationRowIds": [
+        "effect_bonus_value_scripted_junctions_tables:ee0aeeeff69ff7121251"
+      ],
+      "exclusionReasons": [
+        "EFFECT_MAPPING_NOT_APPROVED",
+        "EXPLICIT_MAIN_CHAIN_UNRESOLVED",
+        "NO_EXACT_PRODUCTION_TARGET"
+      ],
+      "selected": false
+    },
+    {
+      "technologyKey": "wh_dlc07_tech_brt_chivalry_chaos_1",
+      "technologyName": "Ruinous Powers Decree",
+      "effectKey": "wh_dlc07_effect_increased_chivalry_chaos",
+      "sourceRowId": "technology_effects_junction_tables:5f9fd3a2a916d9f6f8fd",
+      "rawValue": 4,
+      "description": "Chivalry: %+n for every victory against Warriors of Chaos, Chaos Dwarfs and Daemons of Chaos",
+      "scopeKey": "faction_to_faction_own_unseen",
+      "scopeRowId": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823",
+      "classifierStatus": "REVIEW_REQUIRED",
+      "classifierReasonIds": [
+        "SCOPE_NOT_VERIFIED_OWN_FORCE"
+      ],
+      "mappingApproved": false,
+      "mappings": [],
+      "targetKind": "OTHER_TYPED_RELATION",
+      "unitSets": [],
+      "targetMainLandPairs": [],
+      "relationRowIds": [
+        "effect_bonus_value_scripted_junctions_tables:46a4d8f56ab3962b361c"
+      ],
+      "exclusionReasons": [
+        "EFFECT_MAPPING_NOT_APPROVED",
+        "EXPLICIT_MAIN_CHAIN_UNRESOLVED",
+        "NO_EXACT_PRODUCTION_TARGET"
+      ],
+      "selected": false
+    },
+    {
+      "technologyKey": "wh_dlc07_tech_brt_chivalry_dark_elves",
+      "technologyName": "Secure Shores Decree",
+      "effectKey": "wh2_main_faction_political_diplomacy_mod_technology_dark_elves",
+      "sourceRowId": "technology_effects_junction_tables:8908aadc5bda97ad70ed",
+      "rawValue": -50,
+      "description": "Diplomatic relations: %+n with Dark Elves",
+      "scopeKey": "faction_to_faction_own_unseen",
+      "scopeRowId": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823",
+      "classifierStatus": "REVIEW_REQUIRED",
+      "classifierReasonIds": [
+        "SCOPE_NOT_VERIFIED_OWN_FORCE"
+      ],
+      "mappingApproved": false,
+      "mappings": [],
+      "targetKind": "OTHER_TYPED_RELATION",
+      "unitSets": [],
+      "targetMainLandPairs": [],
+      "relationRowIds": [
+        "effect_bonus_value_subculture_junctions_tables:0c062c1277e71be37174"
+      ],
+      "exclusionReasons": [
+        "EFFECT_MAPPING_NOT_APPROVED",
+        "EXPLICIT_MAIN_CHAIN_UNRESOLVED",
+        "NO_EXACT_PRODUCTION_TARGET"
+      ],
+      "selected": false
+    },
+    {
+      "technologyKey": "wh_dlc07_tech_brt_chivalry_dark_elves",
+      "technologyName": "Secure Shores Decree",
+      "effectKey": "wh_dlc07_effect_increased_chivalry_dark_elves",
+      "sourceRowId": "technology_effects_junction_tables:d2e16d822930acb94909",
+      "rawValue": 4,
+      "description": "Chivalry: %+n for every victory against Dark Elves",
+      "scopeKey": "faction_to_faction_own_unseen",
+      "scopeRowId": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823",
+      "classifierStatus": "REVIEW_REQUIRED",
+      "classifierReasonIds": [
+        "SCOPE_NOT_VERIFIED_OWN_FORCE"
+      ],
+      "mappingApproved": false,
+      "mappings": [],
+      "targetKind": "OTHER_TYPED_RELATION",
+      "unitSets": [],
+      "targetMainLandPairs": [],
+      "relationRowIds": [
+        "effect_bonus_value_scripted_junctions_tables:d850aa153c74a4a4a2cb"
+      ],
+      "exclusionReasons": [
+        "EFFECT_MAPPING_NOT_APPROVED",
+        "EXPLICIT_MAIN_CHAIN_UNRESOLVED",
+        "NO_EXACT_PRODUCTION_TARGET"
+      ],
+      "selected": false
+    },
+    {
+      "technologyKey": "wh_dlc07_tech_brt_chivalry_greenskins_1",
+      "technologyName": "Green Tide Decree",
+      "effectKey": "wh_dlc07_effect_increased_chivalry_greenskins",
+      "sourceRowId": "technology_effects_junction_tables:2f500c5d706d222ab051",
+      "rawValue": 4,
+      "description": "Chivalry: %+n for every victory against Greenskins",
+      "scopeKey": "faction_to_faction_own_unseen",
+      "scopeRowId": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823",
+      "classifierStatus": "REVIEW_REQUIRED",
+      "classifierReasonIds": [
+        "SCOPE_NOT_VERIFIED_OWN_FORCE"
+      ],
+      "mappingApproved": false,
+      "mappings": [],
+      "targetKind": "OTHER_TYPED_RELATION",
+      "unitSets": [],
+      "targetMainLandPairs": [],
+      "relationRowIds": [
+        "effect_bonus_value_scripted_junctions_tables:aa63893affa6f5a39b9b"
+      ],
+      "exclusionReasons": [
+        "EFFECT_MAPPING_NOT_APPROVED",
+        "EXPLICIT_MAIN_CHAIN_UNRESOLVED",
+        "NO_EXACT_PRODUCTION_TARGET"
+      ],
+      "selected": false
+    },
+    {
+      "technologyKey": "wh_dlc07_tech_brt_chivalry_greenskins_1",
+      "technologyName": "Green Tide Decree",
+      "effectKey": "wh_main_faction_political_diplomacy_mod_technology_greenskins",
+      "sourceRowId": "technology_effects_junction_tables:7193561db17174b4474c",
+      "rawValue": -50,
+      "description": "Diplomatic relations: %+n with Greenskins",
+      "scopeKey": "faction_to_faction_own_unseen",
+      "scopeRowId": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823",
+      "classifierStatus": "REVIEW_REQUIRED",
+      "classifierReasonIds": [
+        "SCOPE_NOT_VERIFIED_OWN_FORCE"
+      ],
+      "mappingApproved": false,
+      "mappings": [],
+      "targetKind": "OTHER_TYPED_RELATION",
+      "unitSets": [],
+      "targetMainLandPairs": [],
+      "relationRowIds": [
+        "effect_bonus_value_subculture_junctions_tables:d5defb1e5df527c00ab1",
+        "effect_bonus_value_subculture_junctions_tables:e36405c39a5ded38cbf3"
+      ],
+      "exclusionReasons": [
+        "EFFECT_MAPPING_NOT_APPROVED",
+        "EXPLICIT_MAIN_CHAIN_UNRESOLVED",
+        "NO_EXACT_PRODUCTION_TARGET"
+      ],
+      "selected": false
+    },
+    {
+      "technologyKey": "wh_dlc07_tech_brt_chivalry_greenskins_2",
+      "technologyName": "Grey Mountain Watch",
+      "effectKey": "wh_dlc07_effect_increased_chivalry_greenskins",
+      "sourceRowId": "technology_effects_junction_tables:6ddfaa45b2097543e3cb",
+      "rawValue": 5,
+      "description": "Chivalry: %+n for every victory against Greenskins",
+      "scopeKey": "faction_to_faction_own_unseen",
+      "scopeRowId": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823",
+      "classifierStatus": "REVIEW_REQUIRED",
+      "classifierReasonIds": [
+        "SCOPE_NOT_VERIFIED_OWN_FORCE"
+      ],
+      "mappingApproved": false,
+      "mappings": [],
+      "targetKind": "OTHER_TYPED_RELATION",
+      "unitSets": [],
+      "targetMainLandPairs": [],
+      "relationRowIds": [
+        "effect_bonus_value_scripted_junctions_tables:aa63893affa6f5a39b9b"
+      ],
+      "exclusionReasons": [
+        "EFFECT_MAPPING_NOT_APPROVED",
+        "EXPLICIT_MAIN_CHAIN_UNRESOLVED",
+        "NO_EXACT_PRODUCTION_TARGET"
+      ],
+      "selected": false
+    },
+    {
+      "technologyKey": "wh_dlc07_tech_brt_chivalry_greenskins_2",
+      "technologyName": "Grey Mountain Watch",
+      "effectKey": "wh_main_faction_political_diplomacy_mod_technology_greenskins",
+      "sourceRowId": "technology_effects_junction_tables:cc4f7ab2a8aacb36de67",
+      "rawValue": -50,
+      "description": "Diplomatic relations: %+n with Greenskins",
+      "scopeKey": "faction_to_faction_own_unseen",
+      "scopeRowId": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823",
+      "classifierStatus": "REVIEW_REQUIRED",
+      "classifierReasonIds": [
+        "SCOPE_NOT_VERIFIED_OWN_FORCE"
+      ],
+      "mappingApproved": false,
+      "mappings": [],
+      "targetKind": "OTHER_TYPED_RELATION",
+      "unitSets": [],
+      "targetMainLandPairs": [],
+      "relationRowIds": [
+        "effect_bonus_value_subculture_junctions_tables:d5defb1e5df527c00ab1",
+        "effect_bonus_value_subculture_junctions_tables:e36405c39a5ded38cbf3"
+      ],
+      "exclusionReasons": [
+        "EFFECT_MAPPING_NOT_APPROVED",
+        "EXPLICIT_MAIN_CHAIN_UNRESOLVED",
+        "NO_EXACT_PRODUCTION_TARGET"
+      ],
+      "selected": false
+    },
+    {
+      "technologyKey": "wh_dlc07_tech_brt_chivalry_norsca_1",
+      "technologyName": "Winter Woes Decree",
+      "effectKey": "wh_dlc07_effect_increased_chivalry_norsca",
+      "sourceRowId": "technology_effects_junction_tables:f414600fcc968c40cba2",
+      "rawValue": 4,
+      "description": "Chivalry: %+n for every victory against Norsca",
+      "scopeKey": "faction_to_faction_own_unseen",
+      "scopeRowId": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823",
+      "classifierStatus": "REVIEW_REQUIRED",
+      "classifierReasonIds": [
+        "SCOPE_NOT_VERIFIED_OWN_FORCE"
+      ],
+      "mappingApproved": false,
+      "mappings": [],
+      "targetKind": "OTHER_TYPED_RELATION",
+      "unitSets": [],
+      "targetMainLandPairs": [],
+      "relationRowIds": [
+        "effect_bonus_value_scripted_junctions_tables:7918b5c55f44c37f81d1"
+      ],
+      "exclusionReasons": [
+        "EFFECT_MAPPING_NOT_APPROVED",
+        "EXPLICIT_MAIN_CHAIN_UNRESOLVED",
+        "NO_EXACT_PRODUCTION_TARGET"
+      ],
+      "selected": false
+    },
+    {
+      "technologyKey": "wh_dlc07_tech_brt_chivalry_norsca_1",
+      "technologyName": "Winter Woes Decree",
+      "effectKey": "wh_main_faction_political_diplomacy_mod_technology_norsca",
+      "sourceRowId": "technology_effects_junction_tables:f75fd027e17ba864a0c8",
+      "rawValue": -50,
+      "description": "Diplomatic relations: %+n with Norsca",
+      "scopeKey": "faction_to_faction_own_unseen",
+      "scopeRowId": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823",
+      "classifierStatus": "REVIEW_REQUIRED",
+      "classifierReasonIds": [
+        "SCOPE_NOT_VERIFIED_OWN_FORCE"
+      ],
+      "mappingApproved": false,
+      "mappings": [],
+      "targetKind": "OTHER_TYPED_RELATION",
+      "unitSets": [],
+      "targetMainLandPairs": [],
+      "relationRowIds": [
+        "effect_bonus_value_subculture_junctions_tables:153cfe3df279a1db3ccd"
+      ],
+      "exclusionReasons": [
+        "EFFECT_MAPPING_NOT_APPROVED",
+        "EXPLICIT_MAIN_CHAIN_UNRESOLVED",
+        "NO_EXACT_PRODUCTION_TARGET"
+      ],
+      "selected": false
+    },
+    {
+      "technologyKey": "wh_dlc07_tech_brt_chivalry_norsca_2",
+      "technologyName": "The North Guard",
+      "effectKey": "wh_main_faction_political_diplomacy_mod_technology_norsca",
+      "sourceRowId": "technology_effects_junction_tables:24bc7a87e51b572cb553",
+      "rawValue": -50,
+      "description": "Diplomatic relations: %+n with Norsca",
+      "scopeKey": "faction_to_faction_own_unseen",
+      "scopeRowId": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823",
+      "classifierStatus": "REVIEW_REQUIRED",
+      "classifierReasonIds": [
+        "SCOPE_NOT_VERIFIED_OWN_FORCE"
+      ],
+      "mappingApproved": false,
+      "mappings": [],
+      "targetKind": "OTHER_TYPED_RELATION",
+      "unitSets": [],
+      "targetMainLandPairs": [],
+      "relationRowIds": [
+        "effect_bonus_value_subculture_junctions_tables:153cfe3df279a1db3ccd"
+      ],
+      "exclusionReasons": [
+        "EFFECT_MAPPING_NOT_APPROVED",
+        "EXPLICIT_MAIN_CHAIN_UNRESOLVED",
+        "NO_EXACT_PRODUCTION_TARGET"
+      ],
+      "selected": false
+    },
+    {
+      "technologyKey": "wh_dlc07_tech_brt_chivalry_norsca_2",
+      "technologyName": "The North Guard",
+      "effectKey": "wh_dlc07_effect_increased_chivalry_norsca",
+      "sourceRowId": "technology_effects_junction_tables:8eff37f24451fece0b00",
+      "rawValue": 5,
+      "description": "Chivalry: %+n for every victory against Norsca",
+      "scopeKey": "faction_to_faction_own_unseen",
+      "scopeRowId": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823",
+      "classifierStatus": "REVIEW_REQUIRED",
+      "classifierReasonIds": [
+        "SCOPE_NOT_VERIFIED_OWN_FORCE"
+      ],
+      "mappingApproved": false,
+      "mappings": [],
+      "targetKind": "OTHER_TYPED_RELATION",
+      "unitSets": [],
+      "targetMainLandPairs": [],
+      "relationRowIds": [
+        "effect_bonus_value_scripted_junctions_tables:7918b5c55f44c37f81d1"
+      ],
+      "exclusionReasons": [
+        "EFFECT_MAPPING_NOT_APPROVED",
+        "EXPLICIT_MAIN_CHAIN_UNRESOLVED",
+        "NO_EXACT_PRODUCTION_TARGET"
+      ],
+      "selected": false
+    },
+    {
+      "technologyKey": "wh_dlc07_tech_brt_chivalry_skaven",
+      "technologyName": "Sewer Cleaning Decree",
+      "effectKey": "wh2_main_faction_political_diplomacy_mod_technology_skaven",
+      "sourceRowId": "technology_effects_junction_tables:75ebf91664b9d58ea7df",
+      "rawValue": -50,
+      "description": "Diplomatic relations: %+n with Skaven",
+      "scopeKey": "faction_to_faction_own_unseen",
+      "scopeRowId": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823",
+      "classifierStatus": "REVIEW_REQUIRED",
+      "classifierReasonIds": [
+        "SCOPE_NOT_VERIFIED_OWN_FORCE"
+      ],
+      "mappingApproved": false,
+      "mappings": [],
+      "targetKind": "OTHER_TYPED_RELATION",
+      "unitSets": [],
+      "targetMainLandPairs": [],
+      "relationRowIds": [
+        "effect_bonus_value_subculture_junctions_tables:36b9e52009dfda2d5e6e"
+      ],
+      "exclusionReasons": [
+        "EFFECT_MAPPING_NOT_APPROVED",
+        "EXPLICIT_MAIN_CHAIN_UNRESOLVED",
+        "NO_EXACT_PRODUCTION_TARGET"
+      ],
+      "selected": false
+    },
+    {
+      "technologyKey": "wh_dlc07_tech_brt_chivalry_skaven",
+      "technologyName": "Sewer Cleaning Decree",
+      "effectKey": "wh_dlc07_effect_increased_chivalry_skaven",
+      "sourceRowId": "technology_effects_junction_tables:cd00d423fd2fad8acf08",
+      "rawValue": 4,
+      "description": "Chivalry: %+n for every victory against Skaven",
+      "scopeKey": "faction_to_faction_own_unseen",
+      "scopeRowId": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823",
+      "classifierStatus": "REVIEW_REQUIRED",
+      "classifierReasonIds": [
+        "SCOPE_NOT_VERIFIED_OWN_FORCE"
+      ],
+      "mappingApproved": false,
+      "mappings": [],
+      "targetKind": "OTHER_TYPED_RELATION",
+      "unitSets": [],
+      "targetMainLandPairs": [],
+      "relationRowIds": [
+        "effect_bonus_value_scripted_junctions_tables:472eae886ac8c3d4705e"
+      ],
+      "exclusionReasons": [
+        "EFFECT_MAPPING_NOT_APPROVED",
+        "EXPLICIT_MAIN_CHAIN_UNRESOLVED",
+        "NO_EXACT_PRODUCTION_TARGET"
+      ],
+      "selected": false
+    },
+    {
+      "technologyKey": "wh_dlc07_tech_brt_chivalry_tomb_kings",
+      "technologyName": "Desert Purge Decree",
+      "effectKey": "wh_dlc07_effect_increased_chivalry_tomb_kings",
+      "sourceRowId": "technology_effects_junction_tables:b14d30211815eb21d67c",
+      "rawValue": 4,
+      "description": "Chivalry: %+n for every victory against Tomb Kings",
+      "scopeKey": "faction_to_faction_own_unseen",
+      "scopeRowId": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823",
+      "classifierStatus": "REVIEW_REQUIRED",
+      "classifierReasonIds": [
+        "SCOPE_NOT_VERIFIED_OWN_FORCE"
+      ],
+      "mappingApproved": false,
+      "mappings": [],
+      "targetKind": "OTHER_TYPED_RELATION",
+      "unitSets": [],
+      "targetMainLandPairs": [],
+      "relationRowIds": [
+        "effect_bonus_value_scripted_junctions_tables:7afa105c4bf0fe696e26"
+      ],
+      "exclusionReasons": [
+        "EFFECT_MAPPING_NOT_APPROVED",
+        "EXPLICIT_MAIN_CHAIN_UNRESOLVED",
+        "NO_EXACT_PRODUCTION_TARGET"
+      ],
+      "selected": false
+    },
+    {
+      "technologyKey": "wh_dlc07_tech_brt_chivalry_tomb_kings",
+      "technologyName": "Desert Purge Decree",
+      "effectKey": "wh2_dlc09_faction_political_diplomacy_mod_technology_tomb_kings",
+      "sourceRowId": "technology_effects_junction_tables:b6ca74f444f24d8424d0",
+      "rawValue": -50,
+      "description": "Diplomatic relations: %+n with Tomb Kings",
+      "scopeKey": "faction_to_faction_own_unseen",
+      "scopeRowId": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823",
+      "classifierStatus": "REVIEW_REQUIRED",
+      "classifierReasonIds": [
+        "SCOPE_NOT_VERIFIED_OWN_FORCE"
+      ],
+      "mappingApproved": false,
+      "mappings": [],
+      "targetKind": "OTHER_TYPED_RELATION",
+      "unitSets": [],
+      "targetMainLandPairs": [],
+      "relationRowIds": [
+        "effect_bonus_value_subculture_junctions_tables:41f31f9987fe712e4bba"
+      ],
+      "exclusionReasons": [
+        "EFFECT_MAPPING_NOT_APPROVED",
+        "EXPLICIT_MAIN_CHAIN_UNRESOLVED",
+        "NO_EXACT_PRODUCTION_TARGET"
+      ],
+      "selected": false
+    },
+    {
+      "technologyKey": "wh_dlc07_tech_brt_chivalry_vampires_1",
+      "technologyName": "Death's Grip Decree",
+      "effectKey": "wh_dlc07_effect_increased_chivalry_vampires",
+      "sourceRowId": "technology_effects_junction_tables:8dcd769407ad0a9e1a85",
+      "rawValue": 4,
+      "description": "Chivalry: %+n for every victory against Vampire Counts",
+      "scopeKey": "faction_to_faction_own_unseen",
+      "scopeRowId": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823",
+      "classifierStatus": "REVIEW_REQUIRED",
+      "classifierReasonIds": [
+        "SCOPE_NOT_VERIFIED_OWN_FORCE"
+      ],
+      "mappingApproved": false,
+      "mappings": [],
+      "targetKind": "OTHER_TYPED_RELATION",
+      "unitSets": [],
+      "targetMainLandPairs": [],
+      "relationRowIds": [
+        "effect_bonus_value_scripted_junctions_tables:176ce1361def66793f12"
+      ],
+      "exclusionReasons": [
+        "EFFECT_MAPPING_NOT_APPROVED",
+        "EXPLICIT_MAIN_CHAIN_UNRESOLVED",
+        "NO_EXACT_PRODUCTION_TARGET"
+      ],
+      "selected": false
+    },
+    {
+      "technologyKey": "wh_dlc07_tech_brt_chivalry_vampires_1",
+      "technologyName": "Death's Grip Decree",
+      "effectKey": "wh_main_faction_political_diplomacy_mod_technology_vampire_counts",
+      "sourceRowId": "technology_effects_junction_tables:afca3cbbdefaf9f0ca73",
+      "rawValue": -50,
+      "description": "Diplomatic relations: %+n with Vampire Counts",
+      "scopeKey": "faction_to_faction_own_unseen",
+      "scopeRowId": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823",
+      "classifierStatus": "REVIEW_REQUIRED",
+      "classifierReasonIds": [
+        "SCOPE_NOT_VERIFIED_OWN_FORCE"
+      ],
+      "mappingApproved": false,
+      "mappings": [],
+      "targetKind": "OTHER_TYPED_RELATION",
+      "unitSets": [],
+      "targetMainLandPairs": [],
+      "relationRowIds": [
+        "effect_bonus_value_subculture_junctions_tables:35166cb695ac96ca7256"
+      ],
+      "exclusionReasons": [
+        "EFFECT_MAPPING_NOT_APPROVED",
+        "EXPLICIT_MAIN_CHAIN_UNRESOLVED",
+        "NO_EXACT_PRODUCTION_TARGET"
+      ],
+      "selected": false
+    },
+    {
+      "technologyKey": "wh_dlc07_tech_brt_chivalry_wood_elves_1",
+      "technologyName": "Forests' Edge Decree",
+      "effectKey": "wh_dlc05_faction_political_diplomacy_mod_technology_wood_elves",
+      "sourceRowId": "technology_effects_junction_tables:1e65737de0dbc314e965",
+      "rawValue": -50,
+      "description": "Diplomatic relations: %+n with Wood Elves",
+      "scopeKey": "faction_to_faction_own_unseen",
+      "scopeRowId": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823",
+      "classifierStatus": "REVIEW_REQUIRED",
+      "classifierReasonIds": [
+        "SCOPE_NOT_VERIFIED_OWN_FORCE"
+      ],
+      "mappingApproved": false,
+      "mappings": [],
+      "targetKind": "OTHER_TYPED_RELATION",
+      "unitSets": [],
+      "targetMainLandPairs": [],
+      "relationRowIds": [
+        "effect_bonus_value_subculture_junctions_tables:6f6d16525a98839be2d2"
+      ],
+      "exclusionReasons": [
+        "EFFECT_MAPPING_NOT_APPROVED",
+        "EXPLICIT_MAIN_CHAIN_UNRESOLVED",
+        "NO_EXACT_PRODUCTION_TARGET"
+      ],
+      "selected": false
+    },
+    {
+      "technologyKey": "wh_dlc07_tech_brt_chivalry_wood_elves_1",
+      "technologyName": "Forests' Edge Decree",
+      "effectKey": "wh_dlc07_effect_increased_chivalry_wood_elves",
+      "sourceRowId": "technology_effects_junction_tables:3801462fed5b128582d9",
+      "rawValue": 4,
+      "description": "Chivalry: %+n for every victory against Wood Elves",
+      "scopeKey": "faction_to_faction_own_unseen",
+      "scopeRowId": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823",
+      "classifierStatus": "REVIEW_REQUIRED",
+      "classifierReasonIds": [
+        "SCOPE_NOT_VERIFIED_OWN_FORCE"
+      ],
+      "mappingApproved": false,
+      "mappings": [],
+      "targetKind": "OTHER_TYPED_RELATION",
+      "unitSets": [],
+      "targetMainLandPairs": [],
+      "relationRowIds": [
+        "effect_bonus_value_scripted_junctions_tables:df24ca09ec5916e96303"
+      ],
+      "exclusionReasons": [
+        "EFFECT_MAPPING_NOT_APPROVED",
+        "EXPLICIT_MAIN_CHAIN_UNRESOLVED",
+        "NO_EXACT_PRODUCTION_TARGET"
+      ],
+      "selected": false
+    },
+    {
+      "technologyKey": "wh_dlc07_tech_brt_economy_farm_4",
+      "technologyName": "Water Pumps",
+      "effectKey": "wh_dlc07_effect_peasant_increase_per_region",
+      "sourceRowId": "technology_effects_junction_tables:fdd36edbbb99f5c556d7",
+      "rawValue": 1,
+      "description": "Each of your regions can sustain %n extra peasant unit(s)",
+      "scopeKey": "faction_to_faction_own_unseen",
+      "scopeRowId": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823",
+      "classifierStatus": "REVIEW_REQUIRED",
+      "classifierReasonIds": [
+        "SCOPE_NOT_VERIFIED_OWN_FORCE"
+      ],
+      "mappingApproved": false,
+      "mappings": [],
+      "targetKind": "OTHER_TYPED_RELATION",
+      "unitSets": [],
+      "targetMainLandPairs": [],
+      "relationRowIds": [
+        "effect_bonus_value_scripted_junctions_tables:40457a7578921014ec4f"
+      ],
+      "exclusionReasons": [
+        "EFFECT_MAPPING_NOT_APPROVED",
+        "EXPLICIT_MAIN_CHAIN_UNRESOLVED",
+        "NO_EXACT_PRODUCTION_TARGET"
+      ],
+      "selected": false
+    },
+    {
+      "technologyKey": "wh_dlc07_tech_brt_economy_industry_3",
+      "technologyName": "Weaving Apprenticeships",
+      "effectKey": "wh_main_effect_technology_research_points",
+      "sourceRowId": "technology_effects_junction_tables:44602cfb1ff5e17ad2b4",
+      "rawValue": 5,
+      "description": "{{tr:effect_technology_research_points_description}}: %+n",
+      "scopeKey": "faction_to_faction_own_unseen",
+      "scopeRowId": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823",
+      "classifierStatus": "REVIEW_REQUIRED",
+      "classifierReasonIds": [
+        "SCOPE_NOT_VERIFIED_OWN_FORCE"
+      ],
+      "mappingApproved": false,
+      "mappings": [],
+      "targetKind": "BASIC_BONUS",
+      "unitSets": [],
+      "targetMainLandPairs": [],
+      "relationRowIds": [
+        "effect_bonus_value_basic_junction_tables:b1393abd8e55d6d3b1c2"
+      ],
+      "exclusionReasons": [
+        "EFFECT_MAPPING_NOT_APPROVED",
+        "EXPLICIT_MAIN_CHAIN_UNRESOLVED",
+        "NO_EXACT_PRODUCTION_TARGET"
+      ],
+      "selected": false
+    },
+    {
+      "technologyKey": "wh_dlc07_tech_brt_economy_other_4",
+      "technologyName": "Charity",
+      "effectKey": "wh_dlc07_effect_chivalry_dummy",
+      "sourceRowId": "technology_effects_junction_tables:078b89b91774c66f687f",
+      "rawValue": 200,
+      "description": "Chivalry: %+n",
+      "scopeKey": "faction_to_faction_own_unseen",
+      "scopeRowId": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823",
+      "classifierStatus": "REVIEW_REQUIRED",
+      "classifierReasonIds": [
+        "SCOPE_NOT_VERIFIED_OWN_FORCE"
+      ],
+      "mappingApproved": false,
+      "mappings": [],
+      "targetKind": "NO_BONUS_RELATION",
+      "unitSets": [],
+      "targetMainLandPairs": [],
+      "relationRowIds": [],
+      "exclusionReasons": [
+        "EFFECT_MAPPING_NOT_APPROVED",
+        "EXPLICIT_MAIN_CHAIN_UNRESOLVED",
+        "NO_EXACT_PRODUCTION_TARGET"
+      ],
+      "selected": false
+    },
+    {
+      "technologyKey": "wh_dlc07_tech_brt_economy_other_draft",
+      "technologyName": "Registered Draft",
+      "effectKey": "wh_main_effect_force_army_campaign_recruitment_points",
+      "sourceRowId": "technology_effects_junction_tables:641f72c48a977e7d0501",
+      "rawValue": 1,
+      "description": "Global recruitment capacity: %+n",
+      "scopeKey": "faction_to_faction_own_unseen",
+      "scopeRowId": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823",
+      "classifierStatus": "REVIEW_REQUIRED",
+      "classifierReasonIds": [
+        "SCOPE_NOT_VERIFIED_OWN_FORCE"
+      ],
+      "mappingApproved": false,
+      "mappings": [],
+      "targetKind": "BASIC_BONUS",
+      "unitSets": [],
+      "targetMainLandPairs": [],
+      "relationRowIds": [
+        "effect_bonus_value_basic_junction_tables:3f1fb73fffc54a75c39f"
+      ],
+      "exclusionReasons": [
+        "EFFECT_MAPPING_NOT_APPROVED",
+        "EXPLICIT_MAIN_CHAIN_UNRESOLVED",
+        "NO_EXACT_PRODUCTION_TARGET"
+      ],
+      "selected": false
+    },
+    {
+      "technologyKey": "wh_dlc07_tech_brt_economy_other_tithes",
+      "technologyName": "Temple Tithes",
+      "effectKey": "wh_dlc07_effect_chivalry_dummy",
+      "sourceRowId": "technology_effects_junction_tables:a4a685e76ce9ee2f9a7c",
+      "rawValue": 200,
+      "description": "Chivalry: %+n",
+      "scopeKey": "faction_to_faction_own_unseen",
+      "scopeRowId": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823",
+      "classifierStatus": "REVIEW_REQUIRED",
+      "classifierReasonIds": [
+        "SCOPE_NOT_VERIFIED_OWN_FORCE"
+      ],
+      "mappingApproved": false,
+      "mappings": [],
+      "targetKind": "NO_BONUS_RELATION",
+      "unitSets": [],
+      "targetMainLandPairs": [],
+      "relationRowIds": [],
+      "exclusionReasons": [
+        "EFFECT_MAPPING_NOT_APPROVED",
+        "EXPLICIT_MAIN_CHAIN_UNRESOLVED",
+        "NO_EXACT_PRODUCTION_TARGET"
+      ],
+      "selected": false
+    },
+    {
+      "technologyKey": "wh_dlc07_tech_brt_economy_trade_1",
+      "technologyName": "Improved Trade Vessels",
+      "effectKey": "wh_main_effect_economy_trade_tariff_mod",
+      "sourceRowId": "technology_effects_junction_tables:30ccb315bb5af1e30a33",
+      "rawValue": 5,
+      "description": "Income from trade tariffs: %+n%",
+      "scopeKey": "faction_to_faction_own_unseen",
+      "scopeRowId": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823",
+      "classifierStatus": "REVIEW_REQUIRED",
+      "classifierReasonIds": [
+        "SCOPE_NOT_VERIFIED_OWN_FORCE"
+      ],
+      "mappingApproved": false,
+      "mappings": [],
+      "targetKind": "BASIC_BONUS",
+      "unitSets": [],
+      "targetMainLandPairs": [],
+      "relationRowIds": [
+        "effect_bonus_value_basic_junction_tables:f82adde6a379a185499b"
+      ],
+      "exclusionReasons": [
+        "EFFECT_MAPPING_NOT_APPROVED",
+        "EXPLICIT_MAIN_CHAIN_UNRESOLVED",
+        "NO_EXACT_PRODUCTION_TARGET"
+      ],
+      "selected": false
+    },
+    {
+      "technologyKey": "wh_dlc07_tech_brt_economy_trade_1",
+      "technologyName": "Improved Trade Vessels",
+      "effectKey": "wh_main_effect_economy_trade_good_commodity_mod",
+      "sourceRowId": "technology_effects_junction_tables:f33664000b2a159bbf92",
+      "rawValue": 5,
+      "description": "Tradable resources produced: %+n%",
+      "scopeKey": "faction_to_faction_own_unseen",
+      "scopeRowId": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823",
+      "classifierStatus": "REVIEW_REQUIRED",
+      "classifierReasonIds": [
+        "SCOPE_NOT_VERIFIED_OWN_FORCE"
+      ],
+      "mappingApproved": false,
+      "mappings": [],
+      "targetKind": "BASIC_BONUS",
+      "unitSets": [],
+      "targetMainLandPairs": [],
+      "relationRowIds": [
+        "effect_bonus_value_basic_junction_tables:9298cb3bf4c02c1a0303"
+      ],
+      "exclusionReasons": [
+        "EFFECT_MAPPING_NOT_APPROVED",
+        "EXPLICIT_MAIN_CHAIN_UNRESOLVED",
+        "NO_EXACT_PRODUCTION_TARGET"
+      ],
+      "selected": false
+    },
+    {
+      "technologyKey": "wh_dlc07_tech_brt_economy_trade_2",
+      "technologyName": "Harbourmaster Bribes",
+      "effectKey": "wh_main_effect_economy_trade_tariff_mod",
+      "sourceRowId": "technology_effects_junction_tables:49c60b7cf1624d56392a",
+      "rawValue": 10,
+      "description": "Income from trade tariffs: %+n%",
+      "scopeKey": "faction_to_faction_own_unseen",
+      "scopeRowId": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823",
+      "classifierStatus": "REVIEW_REQUIRED",
+      "classifierReasonIds": [
+        "SCOPE_NOT_VERIFIED_OWN_FORCE"
+      ],
+      "mappingApproved": false,
+      "mappings": [],
+      "targetKind": "BASIC_BONUS",
+      "unitSets": [],
+      "targetMainLandPairs": [],
+      "relationRowIds": [
+        "effect_bonus_value_basic_junction_tables:f82adde6a379a185499b"
+      ],
+      "exclusionReasons": [
+        "EFFECT_MAPPING_NOT_APPROVED",
+        "EXPLICIT_MAIN_CHAIN_UNRESOLVED",
+        "NO_EXACT_PRODUCTION_TARGET"
+      ],
+      "selected": false
+    },
+    {
+      "technologyKey": "wh_dlc07_tech_brt_economy_trade_2",
+      "technologyName": "Harbourmaster Bribes",
+      "effectKey": "wh_main_effect_economy_trade_good_commodity_mod",
+      "sourceRowId": "technology_effects_junction_tables:b96e1b91ce99c3e0b934",
+      "rawValue": 5,
+      "description": "Tradable resources produced: %+n%",
+      "scopeKey": "faction_to_faction_own_unseen",
+      "scopeRowId": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823",
+      "classifierStatus": "REVIEW_REQUIRED",
+      "classifierReasonIds": [
+        "SCOPE_NOT_VERIFIED_OWN_FORCE"
+      ],
+      "mappingApproved": false,
+      "mappings": [],
+      "targetKind": "BASIC_BONUS",
+      "unitSets": [],
+      "targetMainLandPairs": [],
+      "relationRowIds": [
+        "effect_bonus_value_basic_junction_tables:9298cb3bf4c02c1a0303"
+      ],
+      "exclusionReasons": [
+        "EFFECT_MAPPING_NOT_APPROVED",
+        "EXPLICIT_MAIN_CHAIN_UNRESOLVED",
+        "NO_EXACT_PRODUCTION_TARGET"
+      ],
+      "selected": false
+    },
+    {
+      "technologyKey": "wh_dlc07_tech_brt_heraldry_artois",
+      "technologyName": "Heraldry of Artois",
+      "effectKey": "wh_dlc07_dummy_enable_confederation_artois",
+      "sourceRowId": "technology_effects_junction_tables:1acc9050a40fa6b9f09d",
+      "rawValue": 1,
+      "description": "[[col:yellow]]Enables an opportunity to [[img:icon_confederation]][[/img]]confederate with [[img:brt_artois]][[/img]]Artois[[/col]]",
+      "scopeKey": "faction_to_faction_own_unseen",
+      "scopeRowId": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823",
+      "classifierStatus": "REVIEW_REQUIRED",
+      "classifierReasonIds": [
+        "SCOPE_NOT_VERIFIED_OWN_FORCE"
+      ],
+      "mappingApproved": false,
+      "mappings": [],
+      "targetKind": "NO_BONUS_RELATION",
+      "unitSets": [],
+      "targetMainLandPairs": [],
+      "relationRowIds": [],
+      "exclusionReasons": [
+        "EFFECT_MAPPING_NOT_APPROVED",
+        "EXPLICIT_MAIN_CHAIN_UNRESOLVED",
+        "NO_EXACT_PRODUCTION_TARGET"
+      ],
+      "selected": false
+    },
+    {
+      "technologyKey": "wh_dlc07_tech_brt_heraldry_artois",
+      "technologyName": "Heraldry of Artois",
+      "effectKey": "wh_dlc07_effect_chivalry_dummy",
+      "sourceRowId": "technology_effects_junction_tables:1da72260e3c7031075c4",
+      "rawValue": 100,
+      "description": "Chivalry: %+n",
+      "scopeKey": "faction_to_faction_own_unseen",
+      "scopeRowId": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823",
+      "classifierStatus": "REVIEW_REQUIRED",
+      "classifierReasonIds": [
+        "SCOPE_NOT_VERIFIED_OWN_FORCE"
+      ],
+      "mappingApproved": false,
+      "mappings": [],
+      "targetKind": "NO_BONUS_RELATION",
+      "unitSets": [],
+      "targetMainLandPairs": [],
+      "relationRowIds": [],
+      "exclusionReasons": [
+        "EFFECT_MAPPING_NOT_APPROVED",
+        "EXPLICIT_MAIN_CHAIN_UNRESOLVED",
+        "NO_EXACT_PRODUCTION_TARGET"
+      ],
+      "selected": false
+    },
+    {
+      "technologyKey": "wh_dlc07_tech_brt_heraldry_artois",
+      "technologyName": "Heraldry of Artois",
+      "effectKey": "wh_dlc07_faction_political_diplomacy_mod_artois",
+      "sourceRowId": "technology_effects_junction_tables:cdd724c841a5d7cffd0d",
+      "rawValue": 100,
+      "description": "Diplomatic relations: %+n with [[img:brt_artois]][[/img]]Artois",
+      "scopeKey": "faction_to_faction_own_unseen",
+      "scopeRowId": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823",
+      "classifierStatus": "REVIEW_REQUIRED",
+      "classifierReasonIds": [
+        "SCOPE_NOT_VERIFIED_OWN_FORCE"
+      ],
+      "mappingApproved": false,
+      "mappings": [],
+      "targetKind": "OTHER_TYPED_RELATION",
+      "unitSets": [],
+      "targetMainLandPairs": [],
+      "relationRowIds": [
+        "effect_bonus_value_faction_junctions_tables:5823df22ca48d42a6625",
+        "effect_bonus_value_faction_junctions_tables:bb91706fc759915ef4d0"
+      ],
+      "exclusionReasons": [
+        "EFFECT_MAPPING_NOT_APPROVED",
+        "EXPLICIT_MAIN_CHAIN_UNRESOLVED",
+        "NO_EXACT_PRODUCTION_TARGET"
+      ],
+      "selected": false
+    },
+    {
+      "technologyKey": "wh_dlc07_tech_brt_heraldry_bastonne",
+      "technologyName": "Heraldry of Bastonne",
+      "effectKey": "wh_dlc07_effect_chivalry_dummy",
+      "sourceRowId": "technology_effects_junction_tables:8362422bfbba1f03ccdb",
+      "rawValue": 100,
+      "description": "Chivalry: %+n",
+      "scopeKey": "faction_to_faction_own_unseen",
+      "scopeRowId": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823",
+      "classifierStatus": "REVIEW_REQUIRED",
+      "classifierReasonIds": [
+        "SCOPE_NOT_VERIFIED_OWN_FORCE"
+      ],
+      "mappingApproved": false,
+      "mappings": [],
+      "targetKind": "NO_BONUS_RELATION",
+      "unitSets": [],
+      "targetMainLandPairs": [],
+      "relationRowIds": [],
+      "exclusionReasons": [
+        "EFFECT_MAPPING_NOT_APPROVED",
+        "EXPLICIT_MAIN_CHAIN_UNRESOLVED",
+        "NO_EXACT_PRODUCTION_TARGET"
+      ],
+      "selected": false
+    },
+    {
+      "technologyKey": "wh_dlc07_tech_brt_heraldry_bastonne",
+      "technologyName": "Heraldry of Bastonne",
+      "effectKey": "wh_dlc07_faction_political_diplomacy_mod_bastonne",
+      "sourceRowId": "technology_effects_junction_tables:f7f390cc8b9430598a0e",
+      "rawValue": 100,
+      "description": "Diplomatic relations: %+n with [[img:brt_bastonne]][[/img]]Bastonne",
+      "scopeKey": "faction_to_faction_own_unseen",
+      "scopeRowId": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823",
+      "classifierStatus": "REVIEW_REQUIRED",
+      "classifierReasonIds": [
+        "SCOPE_NOT_VERIFIED_OWN_FORCE"
+      ],
+      "mappingApproved": false,
+      "mappings": [],
+      "targetKind": "OTHER_TYPED_RELATION",
+      "unitSets": [],
+      "targetMainLandPairs": [],
+      "relationRowIds": [
+        "effect_bonus_value_faction_junctions_tables:95751f4c4b8cf7844cdd"
+      ],
+      "exclusionReasons": [
+        "EFFECT_MAPPING_NOT_APPROVED",
+        "EXPLICIT_MAIN_CHAIN_UNRESOLVED",
+        "NO_EXACT_PRODUCTION_TARGET"
+      ],
+      "selected": false
+    },
+    {
+      "technologyKey": "wh_dlc07_tech_brt_heraldry_bastonne",
+      "technologyName": "Heraldry of Bastonne",
+      "effectKey": "wh_dlc07_dummy_enable_confederation_bastonne",
+      "sourceRowId": "technology_effects_junction_tables:fb5104c7d412e9b643ac",
+      "rawValue": 1,
+      "description": "[[col:yellow]]Enables an opportunity to [[img:icon_confederation]][[/img]]confederate with [[img:brt_bastonne]][[/img]]Bastonne[[/col]]",
+      "scopeKey": "faction_to_faction_own_unseen",
+      "scopeRowId": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823",
+      "classifierStatus": "REVIEW_REQUIRED",
+      "classifierReasonIds": [
+        "SCOPE_NOT_VERIFIED_OWN_FORCE"
+      ],
+      "mappingApproved": false,
+      "mappings": [],
+      "targetKind": "NO_BONUS_RELATION",
+      "unitSets": [],
+      "targetMainLandPairs": [],
+      "relationRowIds": [],
+      "exclusionReasons": [
+        "EFFECT_MAPPING_NOT_APPROVED",
+        "EXPLICIT_MAIN_CHAIN_UNRESOLVED",
+        "NO_EXACT_PRODUCTION_TARGET"
+      ],
+      "selected": false
+    },
+    {
+      "technologyKey": "wh_dlc07_tech_brt_heraldry_bordeleaux",
+      "technologyName": "Heraldry of Bordeleaux",
+      "effectKey": "wh_dlc07_effect_chivalry_dummy",
+      "sourceRowId": "technology_effects_junction_tables:270dcf4b55e2c6efef24",
+      "rawValue": 100,
+      "description": "Chivalry: %+n",
+      "scopeKey": "faction_to_faction_own_unseen",
+      "scopeRowId": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823",
+      "classifierStatus": "REVIEW_REQUIRED",
+      "classifierReasonIds": [
+        "SCOPE_NOT_VERIFIED_OWN_FORCE"
+      ],
+      "mappingApproved": false,
+      "mappings": [],
+      "targetKind": "NO_BONUS_RELATION",
+      "unitSets": [],
+      "targetMainLandPairs": [],
+      "relationRowIds": [],
+      "exclusionReasons": [
+        "EFFECT_MAPPING_NOT_APPROVED",
+        "EXPLICIT_MAIN_CHAIN_UNRESOLVED",
+        "NO_EXACT_PRODUCTION_TARGET"
+      ],
+      "selected": false
+    },
+    {
+      "technologyKey": "wh_dlc07_tech_brt_heraldry_bordeleaux",
+      "technologyName": "Heraldry of Bordeleaux",
+      "effectKey": "wh_dlc07_faction_political_diplomacy_mod_bordeleaux",
+      "sourceRowId": "technology_effects_junction_tables:55f362722943d4d5bdbf",
+      "rawValue": 100,
+      "description": "Diplomatic relations: %+n with [[img:brt_bordeleaux]][[/img]]Bordeleaux Errant",
+      "scopeKey": "faction_to_faction_own_unseen",
+      "scopeRowId": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823",
+      "classifierStatus": "REVIEW_REQUIRED",
+      "classifierReasonIds": [
+        "SCOPE_NOT_VERIFIED_OWN_FORCE"
+      ],
+      "mappingApproved": false,
+      "mappings": [],
+      "targetKind": "OTHER_TYPED_RELATION",
+      "unitSets": [],
+      "targetMainLandPairs": [],
+      "relationRowIds": [
+        "effect_bonus_value_faction_junctions_tables:1b4673b1822fb1fd4ffa"
+      ],
+      "exclusionReasons": [
+        "EFFECT_MAPPING_NOT_APPROVED",
+        "EXPLICIT_MAIN_CHAIN_UNRESOLVED",
+        "NO_EXACT_PRODUCTION_TARGET"
+      ],
+      "selected": false
+    },
+    {
+      "technologyKey": "wh_dlc07_tech_brt_heraldry_bordeleaux",
+      "technologyName": "Heraldry of Bordeleaux",
+      "effectKey": "wh_dlc07_dummy_enable_confederation_bordeleaux",
+      "sourceRowId": "technology_effects_junction_tables:f140465a150e7f2218b5",
+      "rawValue": 1,
+      "description": "[[col:yellow]]Enables an opportunity to [[img:icon_confederation]][[/img]]confederate with [[img:brt_bordeleaux]][[/img]]Bordeleaux Errant[[/col]]",
+      "scopeKey": "faction_to_faction_own_unseen",
+      "scopeRowId": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823",
+      "classifierStatus": "REVIEW_REQUIRED",
+      "classifierReasonIds": [
+        "SCOPE_NOT_VERIFIED_OWN_FORCE"
+      ],
+      "mappingApproved": false,
+      "mappings": [],
+      "targetKind": "NO_BONUS_RELATION",
+      "unitSets": [],
+      "targetMainLandPairs": [],
+      "relationRowIds": [],
+      "exclusionReasons": [
+        "EFFECT_MAPPING_NOT_APPROVED",
+        "EXPLICIT_MAIN_CHAIN_UNRESOLVED",
+        "NO_EXACT_PRODUCTION_TARGET"
+      ],
+      "selected": false
+    },
+    {
+      "technologyKey": "wh_dlc07_tech_brt_heraldry_bretonnia",
+      "technologyName": "Heraldry of Couronne",
+      "effectKey": "wh_dlc07_faction_political_diplomacy_mod_bretonnia",
+      "sourceRowId": "technology_effects_junction_tables:4bb1db92de8c36696221",
+      "rawValue": 100,
+      "description": "Diplomatic relations: %+n with [[img:brt_bretonnia]][[/img]]Couronne",
+      "scopeKey": "faction_to_faction_own_unseen",
+      "scopeRowId": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823",
+      "classifierStatus": "REVIEW_REQUIRED",
+      "classifierReasonIds": [
+        "SCOPE_NOT_VERIFIED_OWN_FORCE"
+      ],
+      "mappingApproved": false,
+      "mappings": [],
+      "targetKind": "OTHER_TYPED_RELATION",
+      "unitSets": [],
+      "targetMainLandPairs": [],
+      "relationRowIds": [
+        "effect_bonus_value_faction_junctions_tables:a79bd66cc5bf82554972"
+      ],
+      "exclusionReasons": [
+        "EFFECT_MAPPING_NOT_APPROVED",
+        "EXPLICIT_MAIN_CHAIN_UNRESOLVED",
+        "NO_EXACT_PRODUCTION_TARGET"
+      ],
+      "selected": false
+    },
+    {
+      "technologyKey": "wh_dlc07_tech_brt_heraldry_bretonnia",
+      "technologyName": "Heraldry of Couronne",
+      "effectKey": "wh_dlc07_dummy_enable_confederation_bretonnia",
+      "sourceRowId": "technology_effects_junction_tables:ad77a85cc7ebab5b31a2",
+      "rawValue": 1,
+      "description": "[[col:yellow]]Enables an opportunity to [[img:icon_confederation]][[/img]]confederate with [[img:brt_bretonnia]][[/img]]Couronne[[/col]]",
+      "scopeKey": "faction_to_faction_own_unseen",
+      "scopeRowId": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823",
+      "classifierStatus": "REVIEW_REQUIRED",
+      "classifierReasonIds": [
+        "SCOPE_NOT_VERIFIED_OWN_FORCE"
+      ],
+      "mappingApproved": false,
+      "mappings": [],
+      "targetKind": "NO_BONUS_RELATION",
+      "unitSets": [],
+      "targetMainLandPairs": [],
+      "relationRowIds": [],
+      "exclusionReasons": [
+        "EFFECT_MAPPING_NOT_APPROVED",
+        "EXPLICIT_MAIN_CHAIN_UNRESOLVED",
+        "NO_EXACT_PRODUCTION_TARGET"
+      ],
+      "selected": false
+    },
+    {
+      "technologyKey": "wh_dlc07_tech_brt_heraldry_bretonnia",
+      "technologyName": "Heraldry of Couronne",
+      "effectKey": "wh_dlc07_effect_chivalry_dummy",
+      "sourceRowId": "technology_effects_junction_tables:b1efb5cd340c40f4b724",
+      "rawValue": 100,
+      "description": "Chivalry: %+n",
+      "scopeKey": "faction_to_faction_own_unseen",
+      "scopeRowId": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823",
+      "classifierStatus": "REVIEW_REQUIRED",
+      "classifierReasonIds": [
+        "SCOPE_NOT_VERIFIED_OWN_FORCE"
+      ],
+      "mappingApproved": false,
+      "mappings": [],
+      "targetKind": "NO_BONUS_RELATION",
+      "unitSets": [],
+      "targetMainLandPairs": [],
+      "relationRowIds": [],
+      "exclusionReasons": [
+        "EFFECT_MAPPING_NOT_APPROVED",
+        "EXPLICIT_MAIN_CHAIN_UNRESOLVED",
+        "NO_EXACT_PRODUCTION_TARGET"
+      ],
+      "selected": false
+    },
+    {
+      "technologyKey": "wh_dlc07_tech_brt_heraldry_carcassonne",
+      "technologyName": "Heraldry of Carcassonne",
+      "effectKey": "wh_dlc07_effect_chivalry_dummy",
+      "sourceRowId": "technology_effects_junction_tables:862ed607aa1c6990823a",
+      "rawValue": 100,
+      "description": "Chivalry: %+n",
+      "scopeKey": "faction_to_faction_own_unseen",
+      "scopeRowId": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823",
+      "classifierStatus": "REVIEW_REQUIRED",
+      "classifierReasonIds": [
+        "SCOPE_NOT_VERIFIED_OWN_FORCE"
+      ],
+      "mappingApproved": false,
+      "mappings": [],
+      "targetKind": "NO_BONUS_RELATION",
+      "unitSets": [],
+      "targetMainLandPairs": [],
+      "relationRowIds": [],
+      "exclusionReasons": [
+        "EFFECT_MAPPING_NOT_APPROVED",
+        "EXPLICIT_MAIN_CHAIN_UNRESOLVED",
+        "NO_EXACT_PRODUCTION_TARGET"
+      ],
+      "selected": false
+    },
+    {
+      "technologyKey": "wh_dlc07_tech_brt_heraldry_carcassonne",
+      "technologyName": "Heraldry of Carcassonne",
+      "effectKey": "wh_dlc07_faction_political_diplomacy_mod_carcassonne",
+      "sourceRowId": "technology_effects_junction_tables:cd0273209a9d35f43e10",
+      "rawValue": 100,
+      "description": "Diplomatic relations: %+n with [[img:brt_carcassonne]][[/img]]Carcassonne",
+      "scopeKey": "faction_to_faction_own_unseen",
+      "scopeRowId": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823",
+      "classifierStatus": "REVIEW_REQUIRED",
+      "classifierReasonIds": [
+        "SCOPE_NOT_VERIFIED_OWN_FORCE"
+      ],
+      "mappingApproved": false,
+      "mappings": [],
+      "targetKind": "OTHER_TYPED_RELATION",
+      "unitSets": [],
+      "targetMainLandPairs": [],
+      "relationRowIds": [
+        "effect_bonus_value_faction_junctions_tables:692b28dc60dfe6645e8a"
+      ],
+      "exclusionReasons": [
+        "EFFECT_MAPPING_NOT_APPROVED",
+        "EXPLICIT_MAIN_CHAIN_UNRESOLVED",
+        "NO_EXACT_PRODUCTION_TARGET"
+      ],
+      "selected": false
+    },
+    {
+      "technologyKey": "wh_dlc07_tech_brt_heraldry_carcassonne",
+      "technologyName": "Heraldry of Carcassonne",
+      "effectKey": "wh_dlc07_dummy_enable_confederation_carcassonne",
+      "sourceRowId": "technology_effects_junction_tables:d864c783e0a78d54c497",
+      "rawValue": 1,
+      "description": "[[col:yellow]]Enables an opportunity to [[img:icon_confederation]][[/img]]confederate with [[img:brt_carcassonne]][[/img]]Carcassonne[[/col]]",
+      "scopeKey": "faction_to_faction_own_unseen",
+      "scopeRowId": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823",
+      "classifierStatus": "REVIEW_REQUIRED",
+      "classifierReasonIds": [
+        "SCOPE_NOT_VERIFIED_OWN_FORCE"
+      ],
+      "mappingApproved": false,
+      "mappings": [],
+      "targetKind": "NO_BONUS_RELATION",
+      "unitSets": [],
+      "targetMainLandPairs": [],
+      "relationRowIds": [],
+      "exclusionReasons": [
+        "EFFECT_MAPPING_NOT_APPROVED",
+        "EXPLICIT_MAIN_CHAIN_UNRESOLVED",
+        "NO_EXACT_PRODUCTION_TARGET"
+      ],
+      "selected": false
+    },
+    {
+      "technologyKey": "wh_dlc07_tech_brt_heraldry_errantry",
+      "technologyName": "Support Religious Errantry",
+      "effectKey": "wh_dlc07_effect_chivalry_dummy",
+      "sourceRowId": "technology_effects_junction_tables:2bf0a8706b1f8111eafc",
+      "rawValue": 100,
+      "description": "Chivalry: %+n",
+      "scopeKey": "faction_to_faction_own_unseen",
+      "scopeRowId": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823",
+      "classifierStatus": "REVIEW_REQUIRED",
+      "classifierReasonIds": [
+        "SCOPE_NOT_VERIFIED_OWN_FORCE"
+      ],
+      "mappingApproved": false,
+      "mappings": [],
+      "targetKind": "NO_BONUS_RELATION",
+      "unitSets": [],
+      "targetMainLandPairs": [],
+      "relationRowIds": [],
+      "exclusionReasons": [
+        "EFFECT_MAPPING_NOT_APPROVED",
+        "EXPLICIT_MAIN_CHAIN_UNRESOLVED",
+        "NO_EXACT_PRODUCTION_TARGET"
+      ],
+      "selected": false
+    },
+    {
+      "technologyKey": "wh_dlc07_tech_brt_heraldry_errantry",
+      "technologyName": "Support Religious Errantry",
+      "effectKey": "wh2_main_faction_political_diplomacy_mod_crusaders",
+      "sourceRowId": "technology_effects_junction_tables:775f5156359d2b9f4ce1",
+      "rawValue": 100,
+      "description": "Diplomatic relations: %+n with [[img:brt_thegans_crusaders]][[/img]]Thegan's Errantry, [[img:brt_knights_of_the_flame]][[/img]]Knights of the Flame, [[img:brt_knights_of_origo]][[/img]]Knights of Origo and [[img:brt_rogue_jerrod]][[/img]]Jerrod's Errantry",
+      "scopeKey": "faction_to_faction_own_unseen",
+      "scopeRowId": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823",
+      "classifierStatus": "REVIEW_REQUIRED",
+      "classifierReasonIds": [
+        "SCOPE_NOT_VERIFIED_OWN_FORCE"
+      ],
+      "mappingApproved": false,
+      "mappings": [],
+      "targetKind": "OTHER_TYPED_RELATION",
+      "unitSets": [],
+      "targetMainLandPairs": [],
+      "relationRowIds": [
+        "effect_bonus_value_faction_junctions_tables:5fcda090e75afdedcdfd",
+        "effect_bonus_value_faction_junctions_tables:9d2c6ccc8be2eb6562f5",
+        "effect_bonus_value_faction_junctions_tables:a6c0175d231c805d089e",
+        "effect_bonus_value_faction_junctions_tables:be90bfd10fb1b6d90c3a"
+      ],
+      "exclusionReasons": [
+        "EFFECT_MAPPING_NOT_APPROVED",
+        "EXPLICIT_MAIN_CHAIN_UNRESOLVED",
+        "NO_EXACT_PRODUCTION_TARGET"
+      ],
+      "selected": false
+    },
+    {
+      "technologyKey": "wh_dlc07_tech_brt_heraldry_errantry",
+      "technologyName": "Support Religious Errantry",
+      "effectKey": "wh2_dlc14_diplomatic_relations_chevaliers_de_lyonesse",
+      "sourceRowId": "technology_effects_junction_tables:c4f4cf99c874693b4d8a",
+      "rawValue": 50,
+      "description": "Diplomatic relations: %+n with [[img:brt_chevaliers_de_lyonesse]][[/img]]Chevaliers de Lyonesse",
+      "scopeKey": "faction_to_faction_own_unseen",
+      "scopeRowId": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823",
+      "classifierStatus": "REVIEW_REQUIRED",
+      "classifierReasonIds": [
+        "SCOPE_NOT_VERIFIED_OWN_FORCE"
+      ],
+      "mappingApproved": false,
+      "mappings": [],
+      "targetKind": "OTHER_TYPED_RELATION",
+      "unitSets": [],
+      "targetMainLandPairs": [],
+      "relationRowIds": [
+        "effect_bonus_value_faction_junctions_tables:d1b17bd2c851db9bbc9d"
+      ],
+      "exclusionReasons": [
+        "EFFECT_MAPPING_NOT_APPROVED",
+        "EXPLICIT_MAIN_CHAIN_UNRESOLVED",
+        "NO_EXACT_PRODUCTION_TARGET"
+      ],
+      "selected": false
+    },
+    {
+      "technologyKey": "wh_dlc07_tech_brt_heraldry_lyonesse",
+      "technologyName": "Heraldry of Lyonesse",
+      "effectKey": "wh_dlc07_faction_political_diplomacy_mod_lyonesse",
+      "sourceRowId": "technology_effects_junction_tables:6558de04be0e09c81b62",
+      "rawValue": 100,
+      "description": "Diplomatic relations: %+n with [[img:brt_lyonesse]][[/img]]Lyonesse",
+      "scopeKey": "faction_to_faction_own_unseen",
+      "scopeRowId": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823",
+      "classifierStatus": "REVIEW_REQUIRED",
+      "classifierReasonIds": [
+        "SCOPE_NOT_VERIFIED_OWN_FORCE"
+      ],
+      "mappingApproved": false,
+      "mappings": [],
+      "targetKind": "OTHER_TYPED_RELATION",
+      "unitSets": [],
+      "targetMainLandPairs": [],
+      "relationRowIds": [
+        "effect_bonus_value_faction_junctions_tables:106a6eec626959a094e7"
+      ],
+      "exclusionReasons": [
+        "EFFECT_MAPPING_NOT_APPROVED",
+        "EXPLICIT_MAIN_CHAIN_UNRESOLVED",
+        "NO_EXACT_PRODUCTION_TARGET"
+      ],
+      "selected": false
+    },
+    {
+      "technologyKey": "wh_dlc07_tech_brt_heraldry_lyonesse",
+      "technologyName": "Heraldry of Lyonesse",
+      "effectKey": "wh_dlc07_dummy_enable_confederation_lyonesse",
+      "sourceRowId": "technology_effects_junction_tables:724cbec64bc9fdbc2f7b",
+      "rawValue": 1,
+      "description": "[[col:yellow]]Enables an opportunity to [[img:icon_confederation]][[/img]]confederate with [[img:brt_lyonesse]][[/img]]Lyonesse[[/col]]",
+      "scopeKey": "faction_to_faction_own_unseen",
+      "scopeRowId": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823",
+      "classifierStatus": "REVIEW_REQUIRED",
+      "classifierReasonIds": [
+        "SCOPE_NOT_VERIFIED_OWN_FORCE"
+      ],
+      "mappingApproved": false,
+      "mappings": [],
+      "targetKind": "NO_BONUS_RELATION",
+      "unitSets": [],
+      "targetMainLandPairs": [],
+      "relationRowIds": [],
+      "exclusionReasons": [
+        "EFFECT_MAPPING_NOT_APPROVED",
+        "EXPLICIT_MAIN_CHAIN_UNRESOLVED",
+        "NO_EXACT_PRODUCTION_TARGET"
+      ],
+      "selected": false
+    },
+    {
+      "technologyKey": "wh_dlc07_tech_brt_heraldry_lyonesse",
+      "technologyName": "Heraldry of Lyonesse",
+      "effectKey": "wh_dlc07_effect_chivalry_dummy",
+      "sourceRowId": "technology_effects_junction_tables:e0f7831f728f771e3c67",
+      "rawValue": 100,
+      "description": "Chivalry: %+n",
+      "scopeKey": "faction_to_faction_own_unseen",
+      "scopeRowId": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823",
+      "classifierStatus": "REVIEW_REQUIRED",
+      "classifierReasonIds": [
+        "SCOPE_NOT_VERIFIED_OWN_FORCE"
+      ],
+      "mappingApproved": false,
+      "mappings": [],
+      "targetKind": "NO_BONUS_RELATION",
+      "unitSets": [],
+      "targetMainLandPairs": [],
+      "relationRowIds": [],
+      "exclusionReasons": [
+        "EFFECT_MAPPING_NOT_APPROVED",
+        "EXPLICIT_MAIN_CHAIN_UNRESOLVED",
+        "NO_EXACT_PRODUCTION_TARGET"
+      ],
+      "selected": false
+    },
+    {
+      "technologyKey": "wh_dlc07_tech_brt_heraldry_parravon",
+      "technologyName": "Heraldry of Parravon",
+      "effectKey": "wh_dlc07_faction_political_diplomacy_mod_parravon",
+      "sourceRowId": "technology_effects_junction_tables:5dd0847b61291530c8c9",
+      "rawValue": 100,
+      "description": "Diplomatic relations: %+n with [[img:brt_parravon]][[/img]]Parravon",
+      "scopeKey": "faction_to_faction_own_unseen",
+      "scopeRowId": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823",
+      "classifierStatus": "REVIEW_REQUIRED",
+      "classifierReasonIds": [
+        "SCOPE_NOT_VERIFIED_OWN_FORCE"
+      ],
+      "mappingApproved": false,
+      "mappings": [],
+      "targetKind": "OTHER_TYPED_RELATION",
+      "unitSets": [],
+      "targetMainLandPairs": [],
+      "relationRowIds": [
+        "effect_bonus_value_faction_junctions_tables:288e951c19af05386e53"
+      ],
+      "exclusionReasons": [
+        "EFFECT_MAPPING_NOT_APPROVED",
+        "EXPLICIT_MAIN_CHAIN_UNRESOLVED",
+        "NO_EXACT_PRODUCTION_TARGET"
+      ],
+      "selected": false
+    },
+    {
+      "technologyKey": "wh_dlc07_tech_brt_heraldry_parravon",
+      "technologyName": "Heraldry of Parravon",
+      "effectKey": "wh_dlc07_effect_chivalry_dummy",
+      "sourceRowId": "technology_effects_junction_tables:693a939dfc48ce8c27c0",
+      "rawValue": 100,
+      "description": "Chivalry: %+n",
+      "scopeKey": "faction_to_faction_own_unseen",
+      "scopeRowId": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823",
+      "classifierStatus": "REVIEW_REQUIRED",
+      "classifierReasonIds": [
+        "SCOPE_NOT_VERIFIED_OWN_FORCE"
+      ],
+      "mappingApproved": false,
+      "mappings": [],
+      "targetKind": "NO_BONUS_RELATION",
+      "unitSets": [],
+      "targetMainLandPairs": [],
+      "relationRowIds": [],
+      "exclusionReasons": [
+        "EFFECT_MAPPING_NOT_APPROVED",
+        "EXPLICIT_MAIN_CHAIN_UNRESOLVED",
+        "NO_EXACT_PRODUCTION_TARGET"
+      ],
+      "selected": false
+    },
+    {
+      "technologyKey": "wh_dlc07_tech_brt_heraldry_parravon",
+      "technologyName": "Heraldry of Parravon",
+      "effectKey": "wh_dlc07_dummy_enable_confederation_parravon",
+      "sourceRowId": "technology_effects_junction_tables:be4f30e9ada2d823142f",
+      "rawValue": 1,
+      "description": "[[col:yellow]]Enables an opportunity to [[img:icon_confederation]][[/img]]confederate with [[img:brt_parravon]][[/img]]Parravon[[/col]]",
+      "scopeKey": "faction_to_faction_own_unseen",
+      "scopeRowId": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823",
+      "classifierStatus": "REVIEW_REQUIRED",
+      "classifierReasonIds": [
+        "SCOPE_NOT_VERIFIED_OWN_FORCE"
+      ],
+      "mappingApproved": false,
+      "mappings": [],
+      "targetKind": "NO_BONUS_RELATION",
+      "unitSets": [],
+      "targetMainLandPairs": [],
+      "relationRowIds": [],
+      "exclusionReasons": [
+        "EFFECT_MAPPING_NOT_APPROVED",
+        "EXPLICIT_MAIN_CHAIN_UNRESOLVED",
+        "NO_EXACT_PRODUCTION_TARGET"
+      ],
+      "selected": false
+    },
+    {
+      "technologyKey": "wh_dlc07_tech_brt_heraldry_start",
+      "technologyName": "The Chivalric Code",
+      "effectKey": "wh_dlc07_effect_chivalry_dummy",
+      "sourceRowId": "technology_effects_junction_tables:cd61a8a66344cba85582",
+      "rawValue": 50,
+      "description": "Chivalry: %+n",
+      "scopeKey": "faction_to_faction_own_unseen",
+      "scopeRowId": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823",
+      "classifierStatus": "REVIEW_REQUIRED",
+      "classifierReasonIds": [
+        "SCOPE_NOT_VERIFIED_OWN_FORCE"
+      ],
+      "mappingApproved": false,
+      "mappings": [],
+      "targetKind": "NO_BONUS_RELATION",
+      "unitSets": [],
+      "targetMainLandPairs": [],
+      "relationRowIds": [],
+      "exclusionReasons": [
+        "EFFECT_MAPPING_NOT_APPROVED",
+        "EXPLICIT_MAIN_CHAIN_UNRESOLVED",
+        "NO_EXACT_PRODUCTION_TARGET"
+      ],
+      "selected": false
+    },
+    {
+      "technologyKey": "wh_dlc07_tech_brt_heraldry_unification",
+      "technologyName": "The Unification of Bretonnia",
+      "effectKey": "wh_dlc07_effect_chivalry_dummy",
+      "sourceRowId": "technology_effects_junction_tables:44ec0cbe35894e3b5674",
+      "rawValue": 200,
+      "description": "Chivalry: %+n",
+      "scopeKey": "faction_to_faction_own_unseen",
+      "scopeRowId": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823",
+      "classifierStatus": "REVIEW_REQUIRED",
+      "classifierReasonIds": [
+        "SCOPE_NOT_VERIFIED_OWN_FORCE"
+      ],
+      "mappingApproved": false,
+      "mappings": [],
+      "targetKind": "NO_BONUS_RELATION",
+      "unitSets": [],
+      "targetMainLandPairs": [],
+      "relationRowIds": [],
+      "exclusionReasons": [
+        "EFFECT_MAPPING_NOT_APPROVED",
+        "EXPLICIT_MAIN_CHAIN_UNRESOLVED",
+        "NO_EXACT_PRODUCTION_TARGET"
+      ],
+      "selected": false
+    },
+    {
+      "technologyKey": "wh_dlc07_tech_brt_heraldry_unification",
+      "technologyName": "The Unification of Bretonnia",
+      "effectKey": "wh_dlc07_effect_peasant_increase_base_amount",
+      "sourceRowId": "technology_effects_junction_tables:5515425357ca9871dc8b",
+      "rawValue": 10,
+      "description": "Peasant Economy: %+n peasants available to the faction",
+      "scopeKey": "faction_to_faction_own_unseen",
+      "scopeRowId": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823",
+      "classifierStatus": "REVIEW_REQUIRED",
+      "classifierReasonIds": [
+        "SCOPE_NOT_VERIFIED_OWN_FORCE"
+      ],
+      "mappingApproved": false,
+      "mappings": [],
+      "targetKind": "OTHER_TYPED_RELATION",
+      "unitSets": [],
+      "targetMainLandPairs": [],
+      "relationRowIds": [
+        "effect_bonus_value_scripted_junctions_tables:f7a19e788f81a9ba04b9"
+      ],
+      "exclusionReasons": [
+        "EFFECT_MAPPING_NOT_APPROVED",
+        "EXPLICIT_MAIN_CHAIN_UNRESOLVED",
+        "NO_EXACT_PRODUCTION_TARGET"
+      ],
+      "selected": false
+    }
+  ]
+}

@@ -1,0 +1,387 @@
+{
+  "sourceRef": "tools/wh3-importer/research-scan-bretonnia/source.json",
+  "sourceSha256": "72dc47e15caa9df8a6a79ccdbe21bdf6b71d3afda9ea0a6da8e895ee881146a8",
+  "originalExtraction": {
+    "path": "generated/wh3/research-scan-bretonnia/raw.json",
+    "sha256": "33fe9eeea3341c3d98af03a880b0decdf8692ab67d494d84f0dd79683c9f733b",
+    "extractedAt": "2026-10-04T07:04:26.347Z"
+  },
+  "snapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+  "provenance": {
+    "sourceKind": "ca-pack",
+    "gameVersion": "9.0.2.0",
+    "gameVersionSource": "Warhammer3.exe ProductVersion resource (not inferred from a wiki/Steam build)",
+    "rpfmVersion": "5.1.0",
+    "mcpServerInfo": {
+      "name": "rmcp",
+      "version": "3.1.0"
+    },
+    "schemaFormatVersion": 5,
+    "schemaSha256": "5d628a0167b34a096752c5c21acd16493834a987c80dc9f02364617f796ba2a4",
+    "packs": [
+      {
+        "file_name": "db.pack",
+        "file_path": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+        "pfh_version": "PFH5",
+        "pfh_file_type": "Release",
+        "bitmask": "",
+        "compress": "Zstd",
+        "timestamp": 0,
+        "sizeBytes": 8663017,
+        "filesystemModifiedAt": "2026-10-01T10:08:40.330Z",
+        "sha256": "d0fafac984b3985ec47cec0ea957591424f1077e52ef61941dbf2dc46e6cf723"
+      },
+      {
+        "file_name": "local_en.pack",
+        "file_path": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/local_en.pack",
+        "pfh_version": "PFH5",
+        "pfh_file_type": "Release",
+        "bitmask": "",
+        "compress": "Zstd",
+        "timestamp": 1645478083,
+        "sizeBytes": 33435496,
+        "filesystemModifiedAt": "2026-10-01T10:08:40.330Z",
+        "sha256": "f979527a5aaecf293a4e66afc25ed6c760e4107ef4920b73bd56e10e2652fd6a"
+      }
+    ],
+    "accessMethod": "RPFM MCP / decode_packed_file source=PackFile, directly opened CA Release/Patch packs"
+  },
+  "scopeRows": [
+    {
+      "id": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823",
+      "table": "campaign_effect_scopes_tables",
+      "key": {
+        "key": "faction_to_faction_own_unseen"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/campaign_effect_scopes_tables/data__",
+      "tableVersion": 2,
+      "row": {
+        "key": "faction_to_faction_own_unseen",
+        "location": "factionwide",
+        "ownership": "yours",
+        "source": "faction",
+        "target": "faction",
+        "territory": "any"
+      }
+    },
+    {
+      "id": "campaign_effect_scopes_tables:2e4f4fabacc3df6a871f",
+      "table": "campaign_effect_scopes_tables",
+      "key": {
+        "key": "faction_to_force_own_unseen"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/campaign_effect_scopes_tables/data__",
+      "tableVersion": 2,
+      "row": {
+        "key": "faction_to_force_own_unseen",
+        "location": "factionwide",
+        "ownership": "yours",
+        "source": "faction",
+        "target": "force",
+        "territory": "any"
+      }
+    }
+  ],
+  "scopeSchema": {
+    "table": "campaign_effect_scopes_tables",
+    "version": 2,
+    "fields": [
+      {
+        "name": "key",
+        "field_type": "StringU8",
+        "is_key": true,
+        "is_reference": null
+      },
+      {
+        "name": "location",
+        "field_type": "StringU8",
+        "is_key": false,
+        "is_reference": [
+          "campaign_effect_scope_locations",
+          "key"
+        ]
+      },
+      {
+        "name": "ownership",
+        "field_type": "OptionalStringU8",
+        "is_key": false,
+        "is_reference": [
+          "campaign_effect_scope_ownerships",
+          "key"
+        ]
+      },
+      {
+        "name": "source",
+        "field_type": "StringU8",
+        "is_key": false,
+        "is_reference": [
+          "campaign_effect_scope_objects",
+          "key"
+        ]
+      },
+      {
+        "name": "target",
+        "field_type": "StringU8",
+        "is_key": false,
+        "is_reference": [
+          "campaign_effect_scope_objects",
+          "key"
+        ]
+      },
+      {
+        "name": "territory",
+        "field_type": "OptionalStringU8",
+        "is_key": false,
+        "is_reference": [
+          "campaign_effect_scope_territories",
+          "key"
+        ]
+      }
+    ],
+    "localisedFields": [
+      "localised_text"
+    ]
+  },
+  "junctionScopeField": {
+    "name": "effect_scope",
+    "field_type": "StringU8",
+    "is_key": false,
+    "is_reference": [
+      "campaign_effect_scopes",
+      "key"
+    ]
+  },
+  "auxiliaryRefs": [
+    {
+      "field": "location",
+      "reference": [
+        "campaign_effect_scope_locations",
+        "key"
+      ],
+      "committedReferencedRows": 0,
+      "committedReferencedSchema": false
+    },
+    {
+      "field": "ownership",
+      "reference": [
+        "campaign_effect_scope_ownerships",
+        "key"
+      ],
+      "committedReferencedRows": 0,
+      "committedReferencedSchema": false
+    },
+    {
+      "field": "source",
+      "reference": [
+        "campaign_effect_scope_objects",
+        "key"
+      ],
+      "committedReferencedRows": 0,
+      "committedReferencedSchema": false
+    },
+    {
+      "field": "target",
+      "reference": [
+        "campaign_effect_scope_objects",
+        "key"
+      ],
+      "committedReferencedRows": 0,
+      "committedReferencedSchema": false
+    },
+    {
+      "field": "territory",
+      "reference": [
+        "campaign_effect_scope_territories",
+        "key"
+      ],
+      "committedReferencedRows": 0,
+      "committedReferencedSchema": false
+    }
+  ],
+  "caseScopeJoins": [
+    {
+      "from": "technology_effects_junction_tables:024f3cd02ebb89d99bb4",
+      "field": "effect_scope",
+      "to": "campaign_effect_scopes_tables:2e4f4fabacc3df6a871f",
+      "targetField": "key",
+      "value": "faction_to_force_own_unseen",
+      "evidence": "RPFM processed schema is_reference"
+    },
+    {
+      "from": "technology_effects_junction_tables:22427b95f32db1dd00ae",
+      "field": "effect_scope",
+      "to": "campaign_effect_scopes_tables:2e4f4fabacc3df6a871f",
+      "targetField": "key",
+      "value": "faction_to_force_own_unseen",
+      "evidence": "RPFM processed schema is_reference"
+    },
+    {
+      "from": "technology_effects_junction_tables:29aff52be16685167235",
+      "field": "effect_scope",
+      "to": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823",
+      "targetField": "key",
+      "value": "faction_to_faction_own_unseen",
+      "evidence": "RPFM processed schema is_reference"
+    },
+    {
+      "from": "technology_effects_junction_tables:30ccb315bb5af1e30a33",
+      "field": "effect_scope",
+      "to": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823",
+      "targetField": "key",
+      "value": "faction_to_faction_own_unseen",
+      "evidence": "RPFM processed schema is_reference"
+    },
+    {
+      "from": "technology_effects_junction_tables:5d0dc1fd74a76dcddb54",
+      "field": "effect_scope",
+      "to": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823",
+      "targetField": "key",
+      "value": "faction_to_faction_own_unseen",
+      "evidence": "RPFM processed schema is_reference"
+    },
+    {
+      "from": "technology_effects_junction_tables:67f96a07afe9730a0057",
+      "field": "effect_scope",
+      "to": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823",
+      "targetField": "key",
+      "value": "faction_to_faction_own_unseen",
+      "evidence": "RPFM processed schema is_reference"
+    },
+    {
+      "from": "technology_effects_junction_tables:93857fb5b112bf18b4f6",
+      "field": "effect_scope",
+      "to": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823",
+      "targetField": "key",
+      "value": "faction_to_faction_own_unseen",
+      "evidence": "RPFM processed schema is_reference"
+    },
+    {
+      "from": "technology_effects_junction_tables:a7c4871afcc1e3294543",
+      "field": "effect_scope",
+      "to": "campaign_effect_scopes_tables:2e4f4fabacc3df6a871f",
+      "targetField": "key",
+      "value": "faction_to_force_own_unseen",
+      "evidence": "RPFM processed schema is_reference"
+    }
+  ],
+  "factionJunctionRowIds": [
+    "technology_effects_junction_tables:67f96a07afe9730a0057",
+    "technology_effects_junction_tables:29aff52be16685167235",
+    "technology_effects_junction_tables:2b76f394f760a6177456",
+    "technology_effects_junction_tables:5d0dc1fd74a76dcddb54",
+    "technology_effects_junction_tables:cd856671b3e645070971",
+    "technology_effects_junction_tables:8c3abd156bf092c43231",
+    "technology_effects_junction_tables:26d215d9141ac4fd4049",
+    "technology_effects_junction_tables:39b60b6b5da3206f12d3",
+    "technology_effects_junction_tables:93857fb5b112bf18b4f6",
+    "technology_effects_junction_tables:dc0ae978fd0985eafa06",
+    "technology_effects_junction_tables:cac5499ef148548e8e24",
+    "technology_effects_junction_tables:6d45933f1158fd2cdea9",
+    "technology_effects_junction_tables:72cf0fa84cf051ff0ee6",
+    "technology_effects_junction_tables:c6003eec243f778c8d85",
+    "technology_effects_junction_tables:c84a2cc3d9ab38e9a80a",
+    "technology_effects_junction_tables:5b9770d399f91655fa46",
+    "technology_effects_junction_tables:625d4496ae7231678257",
+    "technology_effects_junction_tables:ee7245892b9507e4c95f",
+    "technology_effects_junction_tables:d0b8ec0f43eec5f1562b",
+    "technology_effects_junction_tables:1cb6e176a2777699450e",
+    "technology_effects_junction_tables:84a4d5e26641d41a23a8",
+    "technology_effects_junction_tables:c7bc2301fbcd03ab7533",
+    "technology_effects_junction_tables:a349b981dffa6d4a33fa",
+    "technology_effects_junction_tables:c6f70014dd2976f78577",
+    "technology_effects_junction_tables:5f9fd3a2a916d9f6f8fd",
+    "technology_effects_junction_tables:8908aadc5bda97ad70ed",
+    "technology_effects_junction_tables:d2e16d822930acb94909",
+    "technology_effects_junction_tables:2f500c5d706d222ab051",
+    "technology_effects_junction_tables:7193561db17174b4474c",
+    "technology_effects_junction_tables:6ddfaa45b2097543e3cb",
+    "technology_effects_junction_tables:cc4f7ab2a8aacb36de67",
+    "technology_effects_junction_tables:f414600fcc968c40cba2",
+    "technology_effects_junction_tables:f75fd027e17ba864a0c8",
+    "technology_effects_junction_tables:24bc7a87e51b572cb553",
+    "technology_effects_junction_tables:8eff37f24451fece0b00",
+    "technology_effects_junction_tables:75ebf91664b9d58ea7df",
+    "technology_effects_junction_tables:cd00d423fd2fad8acf08",
+    "technology_effects_junction_tables:b14d30211815eb21d67c",
+    "technology_effects_junction_tables:b6ca74f444f24d8424d0",
+    "technology_effects_junction_tables:8dcd769407ad0a9e1a85",
+    "technology_effects_junction_tables:afca3cbbdefaf9f0ca73",
+    "technology_effects_junction_tables:1e65737de0dbc314e965",
+    "technology_effects_junction_tables:3801462fed5b128582d9",
+    "technology_effects_junction_tables:fdd36edbbb99f5c556d7",
+    "technology_effects_junction_tables:44602cfb1ff5e17ad2b4",
+    "technology_effects_junction_tables:078b89b91774c66f687f",
+    "technology_effects_junction_tables:641f72c48a977e7d0501",
+    "technology_effects_junction_tables:a4a685e76ce9ee2f9a7c",
+    "technology_effects_junction_tables:30ccb315bb5af1e30a33",
+    "technology_effects_junction_tables:f33664000b2a159bbf92",
+    "technology_effects_junction_tables:49c60b7cf1624d56392a",
+    "technology_effects_junction_tables:b96e1b91ce99c3e0b934",
+    "technology_effects_junction_tables:1acc9050a40fa6b9f09d",
+    "technology_effects_junction_tables:1da72260e3c7031075c4",
+    "technology_effects_junction_tables:cdd724c841a5d7cffd0d",
+    "technology_effects_junction_tables:8362422bfbba1f03ccdb",
+    "technology_effects_junction_tables:f7f390cc8b9430598a0e",
+    "technology_effects_junction_tables:fb5104c7d412e9b643ac",
+    "technology_effects_junction_tables:270dcf4b55e2c6efef24",
+    "technology_effects_junction_tables:55f362722943d4d5bdbf",
+    "technology_effects_junction_tables:f140465a150e7f2218b5",
+    "technology_effects_junction_tables:4bb1db92de8c36696221",
+    "technology_effects_junction_tables:ad77a85cc7ebab5b31a2",
+    "technology_effects_junction_tables:b1efb5cd340c40f4b724",
+    "technology_effects_junction_tables:862ed607aa1c6990823a",
+    "technology_effects_junction_tables:cd0273209a9d35f43e10",
+    "technology_effects_junction_tables:d864c783e0a78d54c497",
+    "technology_effects_junction_tables:2bf0a8706b1f8111eafc",
+    "technology_effects_junction_tables:775f5156359d2b9f4ce1",
+    "technology_effects_junction_tables:c4f4cf99c874693b4d8a",
+    "technology_effects_junction_tables:6558de04be0e09c81b62",
+    "technology_effects_junction_tables:724cbec64bc9fdbc2f7b",
+    "technology_effects_junction_tables:e0f7831f728f771e3c67",
+    "technology_effects_junction_tables:5dd0847b61291530c8c9",
+    "technology_effects_junction_tables:693a939dfc48ce8c27c0",
+    "technology_effects_junction_tables:be4f30e9ada2d823142f",
+    "technology_effects_junction_tables:cd61a8a66344cba85582",
+    "technology_effects_junction_tables:44ec0cbe35894e3b5674",
+    "technology_effects_junction_tables:5515425357ca9871dc8b"
+  ],
+  "caseRowRefs": [
+    {
+      "rowId": "technology_effects_junction_tables:024f3cd02ebb89d99bb4",
+      "payloadSha256": "ece1b9d7c495ffb7f9400193145d8e7cfb2c932d75c4d36642f39b708ec9314a"
+    },
+    {
+      "rowId": "technology_effects_junction_tables:22427b95f32db1dd00ae",
+      "payloadSha256": "e4584a894fd3ba17e42ae5663e3d12d0a38e646b4ed9c8dffe381882f9d21727"
+    },
+    {
+      "rowId": "technology_effects_junction_tables:a7c4871afcc1e3294543",
+      "payloadSha256": "bd6d8e46a788c0d15dd3f8e73d7f01efc0cd435e4ae0228ca3f1070d6b30950f"
+    },
+    {
+      "rowId": "technology_effects_junction_tables:67f96a07afe9730a0057",
+      "payloadSha256": "eb84b1126cac33281b7bf3d97d8b2e8323a20f5d052991e402f0795468008a64"
+    },
+    {
+      "rowId": "technology_effects_junction_tables:5d0dc1fd74a76dcddb54",
+      "payloadSha256": "7392d2619f29934401680a448b585c00cfd2a9bb135d0766397f52a11b0369d8"
+    },
+    {
+      "rowId": "technology_effects_junction_tables:29aff52be16685167235",
+      "payloadSha256": "dbefc796f888db1112de2d24fe584cc083d0c4b339aa01edce11c1bc339b0f76"
+    },
+    {
+      "rowId": "technology_effects_junction_tables:30ccb315bb5af1e30a33",
+      "payloadSha256": "8dacbdbf639dd85ec5bf2468885675c110f037ef792e89fd91b748ba63e529dd"
+    },
+    {
+      "rowId": "technology_effects_junction_tables:93857fb5b112bf18b4f6",
+      "payloadSha256": "0be8223f633442949b113fa727b843dee8cbaa27f77d1b131c31192d58aaf001"
+    }
+  ],
+  "note": "String fields with schema references are recorded, not engine propagation/lifetime proof. Referenced enum/object rows and scope localised_text are absent from this committed projection."
+}
