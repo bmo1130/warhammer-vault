@@ -1,0 +1,112 @@
+[
+  {
+    "skillKey": "wh2_dlc11_skill_brt_army_buff_low_born_militia",
+    "statPaths": [
+      "defense.leadership",
+      "defense.meleeDefense"
+    ],
+    "predictionOnly": true,
+    "baseline": "Use observed rank-0 current values, never static/card defaults",
+    "ranks": [
+      {
+        "rank": 0,
+        "CURRENT_RANK_ONLY": [
+          0,
+          0
+        ],
+        "CUMULATIVE_RANKS": [
+          0,
+          0
+        ]
+      },
+      {
+        "rank": 1,
+        "CURRENT_RANK_ONLY": [
+          4,
+          0
+        ],
+        "CUMULATIVE_RANKS": [
+          4,
+          0
+        ]
+      },
+      {
+        "rank": 2,
+        "CURRENT_RANK_ONLY": [
+          4,
+          4
+        ],
+        "CUMULATIVE_RANKS": [
+          8,
+          4
+        ]
+      },
+      {
+        "rank": 3,
+        "CURRENT_RANK_ONLY": [
+          6,
+          6
+        ],
+        "CUMULATIVE_RANKS": [
+          14,
+          10
+        ]
+      }
+    ]
+  },
+  {
+    "skillKey": "wh2_dlc11_skill_brt_army_buff_worshippers_of_the_grail",
+    "statPaths": [
+      "defense.armor",
+      "melee.meleeAttack"
+    ],
+    "predictionOnly": true,
+    "baseline": "Use observed rank-0 current values, never static/card defaults",
+    "ranks": [
+      {
+        "rank": 0,
+        "CURRENT_RANK_ONLY": [
+          0,
+          0
+        ],
+        "CUMULATIVE_RANKS": [
+          0,
+          0
+        ]
+      },
+      {
+        "rank": 1,
+        "CURRENT_RANK_ONLY": [
+          6,
+          0
+        ],
+        "CUMULATIVE_RANKS": [
+          6,
+          0
+        ]
+      },
+      {
+        "rank": 2,
+        "CURRENT_RANK_ONLY": [
+          9,
+          4
+        ],
+        "CUMULATIVE_RANKS": [
+          15,
+          4
+        ]
+      },
+      {
+        "rank": 3,
+        "CURRENT_RANK_ONLY": [
+          12,
+          6
+        ],
+        "CUMULATIVE_RANKS": [
+          27,
+          10
+        ]
+      }
+    ]
+  }
+]

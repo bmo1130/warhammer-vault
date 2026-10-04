@@ -1,0 +1,11 @@
+{
+  "format": "wh3-skill-rank-setup-v1",
+  "gameVersion": "9.0.2.0",
+  "snapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+  "ownerSubtype": "wh_main_brt_lord",
+  "unitSize": "ULTRA",
+  "trialId": "NOT_RUN",
+  "context": "CAMPAIGN",
+  "channel": "CCO_CAMPAIGN_PREBONUS_VALUE",
+  "note": "Planned ULTRA setup only; no assigned save, game capture, or installed collector. Prepare a fresh bundle with the actual declared Unit Size."
+}

@@ -1,0 +1,18 @@
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {fileHash} from '../research-admission-batch-01/protected.mjs';
+import {BASELINE,predictions,verifyHistorical,STATES,SKILLS} from './experiment.mjs';
+import {resolve} from './resolve.mjs';
+const root=new URL('../../../',import.meta.url),read=p=>readFileSync(new URL(p,root));
+const local=p=>JSON.parse(readFileSync(new URL(p,import.meta.url)));
+const manifest=local('manifest.json');
+assert.equal(manifest.baselineCommit,BASELINE);
+assert.equal(Object.keys(manifest.preservedFiles).length,498);
+for(const [path,hash] of Object.entries(manifest.preservedFiles))assert.equal(fileHash(path,read(path)),hash,`Historical/app drift: ${path}`);
+verifyHistorical();assert.deepEqual(local('predictions.json'),predictions());
+const setup=local('experiment-setup.json');
+assert.deepEqual(local('resolution.json'),resolve({frames:[],problems:[],duplicates:0},setup));
+const matrix=local('observation-status.json');
+assert.deepEqual(matrix,STATES.map((ranks,step)=>({step:step+1,ranks,subjects:SKILLS.map((s,i)=>({skillKey:s.key,rank:ranks[i],status:'NOT_OBSERVED',values:s.stats.map(statKey=>({statKey,value:null,status:'NOT_OBSERVED'}))}))})));
+assert.equal(local('capability-audit.json').liveCampaignApiVerified,false);
+console.log('PASS rank-runtime: 498 baseline files preserved; historical source referenced; predictions replayed; eight states NOT_OBSERVED; E UNKNOWN; zero production admission');

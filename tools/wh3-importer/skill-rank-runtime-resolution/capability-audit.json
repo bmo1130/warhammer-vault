@@ -1,0 +1,60 @@
+{
+  "format": "wh3-skill-rank-capability-audit-v1",
+  "baselineCommit": "9f63a7662f7d71638aa580cb2f0227b7b26d8fac",
+  "liveCampaignApiVerified": false,
+  "newRuntimeCaptureCount": 0,
+  "priorAudit": {
+    "path": "tools/wh3-importer/skill-rank-research/runtime-audit.json",
+    "searchedFileCount": 134,
+    "uniqueFileCount": 50,
+    "parsedProbeRecords": 5976,
+    "reinterpreted": false
+  },
+  "auditedArtifacts": [
+    "skill-rank-research/RESEARCH.md",
+    "skill-owner-research/RESEARCH.md",
+    "skill-class-selector-research/RESEARCH.md",
+    "skill-production-bretonnia/FULL_REVIEW.md",
+    "skill-production-bretonnia/NEXT_BLOCKERS.md",
+    "CCO-RUNTIME-PROBE.md",
+    "runtime-evidence/cco-probe/exec_battle.lua",
+    "runtime-evidence/cco-probe/install.ps1",
+    "runtime-evidence/cco-probe/ingest.mjs"
+  ],
+  "existing": {
+    "reusable": [
+      "Installed loadfile mod: campaign F9 exec.lua, battle F9 exec_battle.lua",
+      "pcall CCO query/status cell and JSON line serializer pattern",
+      "CCO exact main/land identity chain",
+      "Console logging transport",
+      "Canonical JSON digest contract"
+    ],
+    "absent": [
+      "Exact commanding Lord subtype/CQI in captured battle evidence",
+      "Learned Skill Level",
+      "Current Leadership / Melee Defence / Armour / Melee Attack",
+      "Qualified active Skill/bundle identity"
+    ]
+  },
+  "extension": {
+    "scope": "Two exact Skills, two exact Production Units; campaign F9 only",
+    "method": "CcoCampaignCharacterSkill.Level and CcoUnitDetails.PreBonusUnitDetailsContext.StatList.Value",
+    "observedRuntime": false,
+    "missingValuePolicy": "NULL / UNSUPPORTED / UNAVAILABLE; never zero",
+    "optional": "Owner active bundle keys; absence never semantic proof",
+    "notQueryableReliably": ["Loaded save filename/hash", "All difficulty/research/modifier controls"]
+  },
+  "installedGameAtAudit": {
+    "campaignRootScriptPresent": true,
+    "campaignRootScriptBytes": 291,
+    "containsGameMutations": true,
+    "collectorInstalled": false,
+    "note": "Installer supports explicit original-file backup and hash-checked restore. Original script is never executed by this collector."
+  },
+  "currentDecision": {
+    "verdict": "E",
+    "semantics": "UNKNOWN",
+    "productionChanges": 0,
+    "requiredNext": "Baseline save, eight committed-rank campaign captures, bound setup/channel review"
+  }
+}

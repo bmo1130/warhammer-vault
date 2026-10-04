@@ -1,0 +1,20 @@
+{
+  "format": "wh3-skill-rank-resolution-v1",
+  "verdict": "E",
+  "semantics": "UNKNOWN",
+  "confidence": "NOT_OBSERVED",
+  "productionEligible": false,
+  "productionRule": null,
+  "observations": [],
+  "errors": [],
+  "skills": [],
+  "threshold": {
+    "primary": false,
+    "secondary": false,
+    "independent": false,
+    "baselineRestored": false,
+    "setupAttested": false,
+    "channelReviewed": false
+  },
+  "reason": "No qualifying runtime observations"
+}

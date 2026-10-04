@@ -1,0 +1,346 @@
+[
+  {
+    "step": 1,
+    "ranks": [
+      0,
+      0
+    ],
+    "subjects": [
+      {
+        "skillKey": "wh2_dlc11_skill_brt_army_buff_low_born_militia",
+        "rank": 0,
+        "status": "NOT_OBSERVED",
+        "values": [
+          {
+            "statKey": "stat_morale",
+            "value": null,
+            "status": "NOT_OBSERVED"
+          },
+          {
+            "statKey": "stat_melee_defence",
+            "value": null,
+            "status": "NOT_OBSERVED"
+          }
+        ]
+      },
+      {
+        "skillKey": "wh2_dlc11_skill_brt_army_buff_worshippers_of_the_grail",
+        "rank": 0,
+        "status": "NOT_OBSERVED",
+        "values": [
+          {
+            "statKey": "stat_armour",
+            "value": null,
+            "status": "NOT_OBSERVED"
+          },
+          {
+            "statKey": "stat_melee_attack",
+            "value": null,
+            "status": "NOT_OBSERVED"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "step": 2,
+    "ranks": [
+      1,
+      0
+    ],
+    "subjects": [
+      {
+        "skillKey": "wh2_dlc11_skill_brt_army_buff_low_born_militia",
+        "rank": 1,
+        "status": "NOT_OBSERVED",
+        "values": [
+          {
+            "statKey": "stat_morale",
+            "value": null,
+            "status": "NOT_OBSERVED"
+          },
+          {
+            "statKey": "stat_melee_defence",
+            "value": null,
+            "status": "NOT_OBSERVED"
+          }
+        ]
+      },
+      {
+        "skillKey": "wh2_dlc11_skill_brt_army_buff_worshippers_of_the_grail",
+        "rank": 0,
+        "status": "NOT_OBSERVED",
+        "values": [
+          {
+            "statKey": "stat_armour",
+            "value": null,
+            "status": "NOT_OBSERVED"
+          },
+          {
+            "statKey": "stat_melee_attack",
+            "value": null,
+            "status": "NOT_OBSERVED"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "step": 3,
+    "ranks": [
+      2,
+      0
+    ],
+    "subjects": [
+      {
+        "skillKey": "wh2_dlc11_skill_brt_army_buff_low_born_militia",
+        "rank": 2,
+        "status": "NOT_OBSERVED",
+        "values": [
+          {
+            "statKey": "stat_morale",
+            "value": null,
+            "status": "NOT_OBSERVED"
+          },
+          {
+            "statKey": "stat_melee_defence",
+            "value": null,
+            "status": "NOT_OBSERVED"
+          }
+        ]
+      },
+      {
+        "skillKey": "wh2_dlc11_skill_brt_army_buff_worshippers_of_the_grail",
+        "rank": 0,
+        "status": "NOT_OBSERVED",
+        "values": [
+          {
+            "statKey": "stat_armour",
+            "value": null,
+            "status": "NOT_OBSERVED"
+          },
+          {
+            "statKey": "stat_melee_attack",
+            "value": null,
+            "status": "NOT_OBSERVED"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "step": 4,
+    "ranks": [
+      3,
+      0
+    ],
+    "subjects": [
+      {
+        "skillKey": "wh2_dlc11_skill_brt_army_buff_low_born_militia",
+        "rank": 3,
+        "status": "NOT_OBSERVED",
+        "values": [
+          {
+            "statKey": "stat_morale",
+            "value": null,
+            "status": "NOT_OBSERVED"
+          },
+          {
+            "statKey": "stat_melee_defence",
+            "value": null,
+            "status": "NOT_OBSERVED"
+          }
+        ]
+      },
+      {
+        "skillKey": "wh2_dlc11_skill_brt_army_buff_worshippers_of_the_grail",
+        "rank": 0,
+        "status": "NOT_OBSERVED",
+        "values": [
+          {
+            "statKey": "stat_armour",
+            "value": null,
+            "status": "NOT_OBSERVED"
+          },
+          {
+            "statKey": "stat_melee_attack",
+            "value": null,
+            "status": "NOT_OBSERVED"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "step": 5,
+    "ranks": [
+      0,
+      0
+    ],
+    "subjects": [
+      {
+        "skillKey": "wh2_dlc11_skill_brt_army_buff_low_born_militia",
+        "rank": 0,
+        "status": "NOT_OBSERVED",
+        "values": [
+          {
+            "statKey": "stat_morale",
+            "value": null,
+            "status": "NOT_OBSERVED"
+          },
+          {
+            "statKey": "stat_melee_defence",
+            "value": null,
+            "status": "NOT_OBSERVED"
+          }
+        ]
+      },
+      {
+        "skillKey": "wh2_dlc11_skill_brt_army_buff_worshippers_of_the_grail",
+        "rank": 0,
+        "status": "NOT_OBSERVED",
+        "values": [
+          {
+            "statKey": "stat_armour",
+            "value": null,
+            "status": "NOT_OBSERVED"
+          },
+          {
+            "statKey": "stat_melee_attack",
+            "value": null,
+            "status": "NOT_OBSERVED"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "step": 6,
+    "ranks": [
+      0,
+      1
+    ],
+    "subjects": [
+      {
+        "skillKey": "wh2_dlc11_skill_brt_army_buff_low_born_militia",
+        "rank": 0,
+        "status": "NOT_OBSERVED",
+        "values": [
+          {
+            "statKey": "stat_morale",
+            "value": null,
+            "status": "NOT_OBSERVED"
+          },
+          {
+            "statKey": "stat_melee_defence",
+            "value": null,
+            "status": "NOT_OBSERVED"
+          }
+        ]
+      },
+      {
+        "skillKey": "wh2_dlc11_skill_brt_army_buff_worshippers_of_the_grail",
+        "rank": 1,
+        "status": "NOT_OBSERVED",
+        "values": [
+          {
+            "statKey": "stat_armour",
+            "value": null,
+            "status": "NOT_OBSERVED"
+          },
+          {
+            "statKey": "stat_melee_attack",
+            "value": null,
+            "status": "NOT_OBSERVED"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "step": 7,
+    "ranks": [
+      0,
+      2
+    ],
+    "subjects": [
+      {
+        "skillKey": "wh2_dlc11_skill_brt_army_buff_low_born_militia",
+        "rank": 0,
+        "status": "NOT_OBSERVED",
+        "values": [
+          {
+            "statKey": "stat_morale",
+            "value": null,
+            "status": "NOT_OBSERVED"
+          },
+          {
+            "statKey": "stat_melee_defence",
+            "value": null,
+            "status": "NOT_OBSERVED"
+          }
+        ]
+      },
+      {
+        "skillKey": "wh2_dlc11_skill_brt_army_buff_worshippers_of_the_grail",
+        "rank": 2,
+        "status": "NOT_OBSERVED",
+        "values": [
+          {
+            "statKey": "stat_armour",
+            "value": null,
+            "status": "NOT_OBSERVED"
+          },
+          {
+            "statKey": "stat_melee_attack",
+            "value": null,
+            "status": "NOT_OBSERVED"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "step": 8,
+    "ranks": [
+      0,
+      3
+    ],
+    "subjects": [
+      {
+        "skillKey": "wh2_dlc11_skill_brt_army_buff_low_born_militia",
+        "rank": 0,
+        "status": "NOT_OBSERVED",
+        "values": [
+          {
+            "statKey": "stat_morale",
+            "value": null,
+            "status": "NOT_OBSERVED"
+          },
+          {
+            "statKey": "stat_melee_defence",
+            "value": null,
+            "status": "NOT_OBSERVED"
+          }
+        ]
+      },
+      {
+        "skillKey": "wh2_dlc11_skill_brt_army_buff_worshippers_of_the_grail",
+        "rank": 3,
+        "status": "NOT_OBSERVED",
+        "values": [
+          {
+            "statKey": "stat_armour",
+            "value": null,
+            "status": "NOT_OBSERVED"
+          },
+          {
+            "statKey": "stat_melee_attack",
+            "value": null,
+            "status": "NOT_OBSERVED"
+          }
+        ]
+      }
+    ]
+  }
+]

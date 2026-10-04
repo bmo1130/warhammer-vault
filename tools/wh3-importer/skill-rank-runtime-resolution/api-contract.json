@@ -1,0 +1,284 @@
+{
+  "format": "wh3-skill-rank-api-contract-v1",
+  "source": "https://chadvandy.github.io/tw_modding_resources/WH3/cco/documentation.html",
+  "sourceKind": "CA-generated UI Symbols documentation (community-hosted mirror)",
+  "cachedDocumentationSha256": "e4d1601a6e98a9c07345495f41bc935672318e4705c0cdb5f4a4d8975d96d4cf",
+  "interpretation": "Documented methods only; does not prove runtime accessibility or rank semantics",
+  "apis": [
+    {
+      "context": "CcoCampaignRoot",
+      "methods": [
+        {
+          "name": "CharacterList",
+          "returnType": "CcoCampaignCharacter",
+          "runtimeStatus": "NOT_OBSERVED"
+        },
+        {
+          "name": "CampaignKey",
+          "returnType": "String",
+          "runtimeStatus": "NOT_OBSERVED"
+        },
+        {
+          "name": "TurnNumber",
+          "returnType": "Int",
+          "runtimeStatus": "NOT_OBSERVED"
+        },
+        {
+          "name": "IsPlayersTurn",
+          "returnType": "Bool",
+          "runtimeStatus": "NOT_OBSERVED"
+        },
+        {
+          "name": "IsMultiplayer",
+          "returnType": "Bool",
+          "runtimeStatus": "NOT_OBSERVED"
+        },
+        {
+          "name": "IsLocomotionComplete",
+          "returnType": "Bool",
+          "runtimeStatus": "NOT_OBSERVED"
+        }
+      ]
+    },
+    {
+      "context": "CcoCampaignCharacter",
+      "methods": [
+        {
+          "name": "CQI",
+          "returnType": "Int",
+          "runtimeStatus": "NOT_OBSERVED"
+        },
+        {
+          "name": "AgentSubtypeRecordContext",
+          "returnType": "CcoAgentSubtypeRecord",
+          "runtimeStatus": "NOT_OBSERVED"
+        },
+        {
+          "name": "IsSelected",
+          "returnType": "Bool",
+          "runtimeStatus": "NOT_OBSERVED"
+        },
+        {
+          "name": "IsPlayerCharacter",
+          "returnType": "Bool",
+          "runtimeStatus": "NOT_OBSERVED"
+        },
+        {
+          "name": "HasUncommitedSkills",
+          "returnType": "Bool",
+          "runtimeStatus": "NOT_OBSERVED"
+        },
+        {
+          "name": "SkillList",
+          "returnType": "CcoCampaignCharacterSkill",
+          "runtimeStatus": "NOT_OBSERVED"
+        },
+        {
+          "name": "MilitaryForceContext",
+          "returnType": "CcoCampaignMilitaryForce",
+          "runtimeStatus": "NOT_OBSERVED"
+        },
+        {
+          "name": "Rank",
+          "returnType": "Int",
+          "runtimeStatus": "NOT_OBSERVED"
+        },
+        {
+          "name": "CurrentXp",
+          "returnType": "Int",
+          "runtimeStatus": "NOT_OBSERVED"
+        },
+        {
+          "name": "TraitsList",
+          "returnType": "CcoCharacterTraitLevelRecord",
+          "runtimeStatus": "NOT_OBSERVED"
+        },
+        {
+          "name": "AncillaryList",
+          "returnType": "CcoCampaignAncillary",
+          "runtimeStatus": "NOT_OBSERVED"
+        },
+        {
+          "name": "EffectBundleUnfilteredList",
+          "returnType": "CcoEffectBundle",
+          "runtimeStatus": "NOT_OBSERVED"
+        }
+      ]
+    },
+    {
+      "context": "CcoCampaignCharacterSkill",
+      "methods": [
+        {
+          "name": "Key",
+          "returnType": "String",
+          "runtimeStatus": "NOT_OBSERVED"
+        },
+        {
+          "name": "Level",
+          "returnType": "Int",
+          "runtimeStatus": "NOT_OBSERVED"
+        },
+        {
+          "name": "CharacterContext",
+          "returnType": "CcoCampaignCharacter",
+          "runtimeStatus": "NOT_OBSERVED"
+        }
+      ]
+    },
+    {
+      "context": "CcoCampaignMilitaryForce",
+      "methods": [
+        {
+          "name": "CQI",
+          "returnType": "Int",
+          "runtimeStatus": "NOT_OBSERVED"
+        },
+        {
+          "name": "CommandingCharacterContext",
+          "returnType": "CcoCampaignCharacter",
+          "runtimeStatus": "NOT_OBSERVED"
+        },
+        {
+          "name": "IsPreviewingStance",
+          "returnType": "Bool",
+          "runtimeStatus": "NOT_OBSERVED"
+        },
+        {
+          "name": "ActiveStanceContext",
+          "returnType": "CcoCampaignMilitaryForceStance",
+          "runtimeStatus": "NOT_OBSERVED"
+        },
+        {
+          "name": "UnitList",
+          "returnType": "CcoCampaignUnit",
+          "runtimeStatus": "NOT_OBSERVED"
+        }
+      ]
+    },
+    {
+      "context": "CcoCampaignUnit",
+      "methods": [
+        {
+          "name": "UniqueUiId",
+          "returnType": "String",
+          "runtimeStatus": "NOT_OBSERVED"
+        },
+        {
+          "name": "UnitRecordContext",
+          "returnType": "CcoMainUnitRecord",
+          "runtimeStatus": "NOT_OBSERVED"
+        },
+        {
+          "name": "MilitaryForceContext",
+          "returnType": "CcoCampaignMilitaryForce",
+          "runtimeStatus": "NOT_OBSERVED"
+        },
+        {
+          "name": "UnitDetailsContext",
+          "returnType": "CcoUnitDetails",
+          "runtimeStatus": "NOT_OBSERVED"
+        },
+        {
+          "name": "ExperienceLevel",
+          "returnType": "Int",
+          "runtimeStatus": "NOT_OBSERVED"
+        },
+        {
+          "name": "NumEntities",
+          "returnType": "Int",
+          "runtimeStatus": "NOT_OBSERVED"
+        },
+        {
+          "name": "HealthValue",
+          "returnType": "Int",
+          "runtimeStatus": "NOT_OBSERVED"
+        },
+        {
+          "name": "PurchasedEffectsList",
+          "returnType": "CcoUnitPurchasableEffectRecord",
+          "runtimeStatus": "NOT_OBSERVED"
+        }
+      ]
+    },
+    {
+      "context": "CcoUnitDetails",
+      "methods": [
+        {
+          "name": "PreBonusUnitDetailsContext",
+          "returnType": "CcoUnitDetails",
+          "runtimeStatus": "NOT_OBSERVED"
+        },
+        {
+          "name": "StatList",
+          "returnType": "CcoUnitStat",
+          "runtimeStatus": "NOT_OBSERVED"
+        },
+        {
+          "name": "CampaignUnitContext",
+          "returnType": "CcoCampaignUnit",
+          "runtimeStatus": "NOT_OBSERVED"
+        },
+        {
+          "name": "UnitRecordContext",
+          "returnType": "CcoMainUnitRecord",
+          "runtimeStatus": "NOT_OBSERVED"
+        },
+        {
+          "name": "IsCampaign",
+          "returnType": "Bool",
+          "runtimeStatus": "NOT_OBSERVED"
+        },
+        {
+          "name": "ExperienceScore",
+          "returnType": "Int",
+          "runtimeStatus": "NOT_OBSERVED"
+        }
+      ]
+    },
+    {
+      "context": "CcoUnitStat",
+      "methods": [
+        {
+          "name": "Key",
+          "returnType": "String",
+          "runtimeStatus": "NOT_OBSERVED"
+        },
+        {
+          "name": "Value",
+          "returnType": "Float",
+          "runtimeStatus": "NOT_OBSERVED"
+        }
+      ]
+    },
+    {
+      "context": "CcoCampaignAncillary",
+      "methods": [
+        {
+          "name": "AncillaryRecordContext",
+          "returnType": "CcoAncillaryRecord",
+          "runtimeStatus": "NOT_OBSERVED"
+        }
+      ]
+    },
+    {
+      "context": "CcoCharacterTraitLevelRecord",
+      "methods": [
+        {
+          "name": "Key",
+          "returnType": "Void",
+          "runtimeStatus": "NOT_OBSERVED"
+        }
+      ]
+    },
+    {
+      "context": "CcoEffectBundle",
+      "methods": [
+        {
+          "name": "Key",
+          "returnType": "String",
+          "runtimeStatus": "NOT_OBSERVED"
+        }
+      ]
+    }
+  ]
+}
