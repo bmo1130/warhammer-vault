@@ -1,0 +1,243 @@
+[
+  {
+    "pattern": "UNKNOWN_EFFECT",
+    "technologyKey": "wh2_dlc11_tech_brt_chivalry_vampire_coast_1",
+    "technologyName": "High Seas' Decree",
+    "effectKey": "wh_main_effect_force_all_campaign_replenishment_rate",
+    "sourceRowId": "technology_effects_junction_tables:d401b584990603c26051",
+    "rawValue": 2,
+    "description": "Casualty replenishment rate: %+n%",
+    "scope": "faction_to_force_own_unseen",
+    "reasonIds": [
+      "EFFECT_MAPPING_UNVERIFIED"
+    ],
+    "bonusIds": [
+      "replenishment_percentage_bonus"
+    ],
+    "unitSetKeys": [],
+    "targetKind": "BASIC_BONUS",
+    "why": "Review an exact effect/Loc/bonus mapping; a key whitelist expansion is required.",
+    "patternEffectOccurrences": 48,
+    "exactEffectOccurrences": 5,
+    "coverageGainUpperBound": 48,
+    "coverageGainNote": "Overlapping occurrence ceiling only; not a predicted DIRECT gain. Other scope/target/mapping gates may still fail. No guarantee of numerical gain for non-Unit targets."
+  },
+  {
+    "pattern": "UNAPPROVED_SCOPE",
+    "technologyKey": "tech_dlc14_brt_code_of_conduct",
+    "technologyName": "Code of Conduct",
+    "effectKey": "wh_dlc07_effect_chivalry_dummy",
+    "sourceRowId": "technology_effects_junction_tables:5d0dc1fd74a76dcddb54",
+    "rawValue": 100,
+    "description": "Chivalry: %+n",
+    "scope": "faction_to_faction_own_unseen",
+    "reasonIds": [
+      "SCOPE_NOT_VERIFIED_OWN_FORCE"
+    ],
+    "bonusIds": [],
+    "unitSetKeys": [],
+    "targetKind": "NO_BONUS_RELATION",
+    "why": "Verify the exact scope record; scope-name similarity is insufficient.",
+    "patternEffectOccurrences": 105,
+    "exactEffectOccurrences": 20,
+    "coverageGainUpperBound": 105,
+    "coverageGainNote": "Overlapping occurrence ceiling only; not a predicted DIRECT gain. Other scope/target/mapping gates may still fail. No guarantee of numerical gain for non-Unit targets."
+  },
+  {
+    "pattern": "EXPLICIT_TARGET_MAPPING_MISSING",
+    "technologyKey": "wh_dlc07_tech_brt_economy_industry_steel",
+    "technologyName": "Steel Furnaces",
+    "effectKey": "wh2_dlc09_effect_force_stat_armour_brt_knights",
+    "sourceRowId": "technology_effects_junction_tables:af7762ed61b3842a3e36",
+    "rawValue": 8,
+    "description": "Armour: %+n for Knight units",
+    "scope": "faction_to_force_own_unseen",
+    "reasonIds": [
+      "EFFECT_MAPPING_UNVERIFIED"
+    ],
+    "bonusIds": [
+      "armour_mod"
+    ],
+    "unitSetKeys": [
+      "brt_knights"
+    ],
+    "targetKind": "EXPLICIT_UNIT_SET",
+    "why": "Exact targets exist; effect mapping remains unapproved.",
+    "patternEffectOccurrences": 8,
+    "exactEffectOccurrences": 1,
+    "coverageGainUpperBound": 8,
+    "coverageGainNote": "Overlapping occurrence ceiling only; not a predicted DIRECT gain. Other scope/target/mapping gates may still fail. No guarantee of numerical gain for non-Unit targets."
+  },
+  {
+    "pattern": "SELECTOR_TARGET",
+    "technologyKey": "tech_dlc14_brt_righteous_strength",
+    "technologyName": "Righteous Strength",
+    "effectKey": "wh2_dlc14_effect_reputation_mors_lords_and_heroes",
+    "sourceRowId": "technology_effects_junction_tables:b25adfd7a8cd2109ad83",
+    "rawValue": 5,
+    "description": "Weapon strength: %+n% for [[img:icon_general]][[/img]]Lords and embedded [[img:icon_hero]][[/img]]Heroes",
+    "scope": "faction_to_force_own_unseen",
+    "reasonIds": [
+      "EFFECT_MAPPING_UNVERIFIED"
+    ],
+    "bonusIds": [
+      "melee_damage_ap_mod_mult",
+      "melee_damage_mod_mult"
+    ],
+    "unitSetKeys": [
+      "characters"
+    ],
+    "targetKind": "SELECTOR_UNIT_SET",
+    "why": "Selector interpretation and exact Unit applicability both need review.",
+    "patternEffectOccurrences": 10,
+    "exactEffectOccurrences": 1,
+    "coverageGainUpperBound": 10,
+    "coverageGainNote": "Overlapping occurrence ceiling only; not a predicted DIRECT gain. Other scope/target/mapping gates may still fail. No guarantee of numerical gain for non-Unit targets."
+  },
+  {
+    "pattern": "RELOAD",
+    "technologyKey": "wh_dlc07_tech_brt_economy_other_siege",
+    "technologyName": "Siege Engineering",
+    "effectKey": "wh2_main_effect_force_stat_reload_time_reduction_brt_trebuchet",
+    "sourceRowId": "technology_effects_junction_tables:00c5ccebf3c7135d1fca",
+    "rawValue": 15,
+    "description": "Reload time reduction: %+n% for Trebuchet units",
+    "scope": "faction_to_force_own_unseen",
+    "reasonIds": [
+      "RELOAD_MAPPING_UNVERIFIED"
+    ],
+    "bonusIds": [
+      "reload"
+    ],
+    "unitSetKeys": [
+      "brt_trebuchets"
+    ],
+    "targetKind": "EXPLICIT_UNIT_SET",
+    "why": "Raw reload bonus sign/operation is unverified.",
+    "patternEffectOccurrences": 1,
+    "exactEffectOccurrences": 1,
+    "coverageGainUpperBound": 1,
+    "coverageGainNote": "Overlapping occurrence ceiling only; not a predicted DIRECT gain. Other scope/target/mapping gates may still fail. No guarantee of numerical gain for non-Unit targets."
+  },
+  {
+    "pattern": "MISSILE_STRENGTH",
+    "technologyKey": "wh_dlc07_tech_brt_economy_other_fletchers",
+    "technologyName": "Professional Fletchers",
+    "effectKey": "wh2_main_effect_force_stat_missile_damage_brt_bowmen_yeomen",
+    "sourceRowId": "technology_effects_junction_tables:97ecf9987339fa7f8547",
+    "rawValue": 10,
+    "description": "Missile strength: %+n% for Peasant Bowmen and Mounted Yeomen Archers units",
+    "scope": "faction_to_force_own_unseen",
+    "reasonIds": [
+      "EFFECT_MAPPING_UNVERIFIED"
+    ],
+    "bonusIds": [
+      "missile_damage_ap_mod_mult",
+      "missile_damage_mod_mult"
+    ],
+    "unitSetKeys": [
+      "brt_bow_cav",
+      "brt_bow_inf"
+    ],
+    "targetKind": "EXPLICIT_UNIT_SET",
+    "why": "Card strength versus raw missile fields is unverified.",
+    "patternEffectOccurrences": 2,
+    "exactEffectOccurrences": 1,
+    "coverageGainUpperBound": 2,
+    "coverageGainNote": "Overlapping occurrence ceiling only; not a predicted DIRECT gain. Other scope/target/mapping gates may still fail. No guarantee of numerical gain for non-Unit targets."
+  },
+  {
+    "pattern": "ALL_LAND",
+    "technologyKey": "wh_dlc07_tech_brt_economy_industry_4",
+    "technologyName": "Seamstresses",
+    "effectKey": "wh_main_effect_force_all_campaign_recruitment_cost_all",
+    "sourceRowId": "technology_effects_junction_tables:3383c1e08b387e7005d9",
+    "rawValue": -10,
+    "description": "Recruitment cost: %+n%",
+    "scope": "faction_to_force_own_unseen",
+    "reasonIds": [
+      "ALL_LAND_TARGET_UNRESOLVED"
+    ],
+    "bonusIds": [
+      "recruitment_mod_cost_land_all"
+    ],
+    "unitSetKeys": [],
+    "targetKind": "BASIC_BONUS",
+    "why": "No exact explicit membership proof; no all-Unit fallback.",
+    "patternEffectOccurrences": 1,
+    "exactEffectOccurrences": 1,
+    "coverageGainUpperBound": 1,
+    "coverageGainNote": "Overlapping occurrence ceiling only; not a predicted DIRECT gain. Other scope/target/mapping gates may still fail. No guarantee of numerical gain for non-Unit targets."
+  },
+  {
+    "pattern": "SIEGE_CONDITIONAL",
+    "technologyKey": "wh_dlc07_tech_brt_economy_other_siege",
+    "technologyName": "Siege Engineering",
+    "effectKey": "wh_main_effect_force_stat_leadership_siege_attack",
+    "sourceRowId": "technology_effects_junction_tables:79f4170a0d59ea044149",
+    "rawValue": 5,
+    "description": "Leadership: %+n when laying siege or encircling",
+    "scope": "faction_to_force_own_unseen",
+    "reasonIds": [
+      "CONDITIONAL_SIEGE_EFFECT"
+    ],
+    "bonusIds": [],
+    "unitSetKeys": [],
+    "targetKind": "NO_BONUS_RELATION",
+    "why": "Conditional applicability is outside the current engine candidate contract.",
+    "patternEffectOccurrences": 1,
+    "exactEffectOccurrences": 1,
+    "coverageGainUpperBound": 1,
+    "coverageGainNote": "Overlapping occurrence ceiling only; not a predicted DIRECT gain. Other scope/target/mapping gates may still fail. No guarantee of numerical gain for non-Unit targets."
+  },
+  {
+    "pattern": "BUILDING_TARGET",
+    "technologyKey": "wh_dlc07_tech_brt_economy_farm_2",
+    "technologyName": "Wider Ploughs",
+    "effectKey": "wh_main_effect_building_construction_cost_mod_infrastructure",
+    "sourceRowId": "technology_effects_junction_tables:3a2b1d3084d0dca47ea1",
+    "rawValue": -5,
+    "description": "Construction cost: %+n% for Infrastructure buildings",
+    "scope": "faction_to_region_own_unseen",
+    "reasonIds": [
+      "NON_UNIT_BUILDING_EFFECT",
+      "REGION_SCOPE_NOT_UNIT_APPLICABLE"
+    ],
+    "bonusIds": [
+      "mod_cost"
+    ],
+    "unitSetKeys": [],
+    "targetKind": "OTHER_TYPED_RELATION",
+    "why": "Building targets are not UnitStatPaths; review may establish exclusion, not numerical coverage.",
+    "patternEffectOccurrences": 6,
+    "exactEffectOccurrences": 2,
+    "coverageGainUpperBound": 6,
+    "coverageGainNote": "Overlapping occurrence ceiling only; not a predicted DIRECT gain. Other scope/target/mapping gates may still fail. No guarantee of numerical gain for non-Unit targets."
+  },
+  {
+    "pattern": "UPKEEP_SELECTOR",
+    "technologyKey": "wh_dlc07_tech_brt_economy_farm_3",
+    "technologyName": "Irrigation Ditches",
+    "effectKey": "wh_main_effect_force_army_campaign_upkeep_cost_infantry",
+    "sourceRowId": "technology_effects_junction_tables:d10e9a380b60a208ea62",
+    "rawValue": -5,
+    "description": "Upkeep: %+n% for Infantry units",
+    "scope": "faction_to_force_own_unseen",
+    "reasonIds": [
+      "CASTE_SELECTOR_UNSUPPORTED",
+      "UPKEEP_MAPPING_NOT_APPROVED"
+    ],
+    "bonusIds": [
+      "upkeep_mod"
+    ],
+    "unitSetKeys": [
+      "infantry_units"
+    ],
+    "targetKind": "SELECTOR_UNIT_SET",
+    "why": "Upkeep mapping and selectors remain independently unapproved.",
+    "patternEffectOccurrences": 1,
+    "exactEffectOccurrences": 1,
+    "coverageGainUpperBound": 1,
+    "coverageGainNote": "Overlapping occurrence ceiling only; not a predicted DIRECT gain. Other scope/target/mapping gates may still fail. No guarantee of numerical gain for non-Unit targets."
+  }
+]

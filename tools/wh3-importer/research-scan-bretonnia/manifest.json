@@ -1,0 +1,15 @@
+{
+  "format": "wh3-bretonnia-research-scan-manifest-v1",
+  "classifierCommit": "031666d408d8c92aa144c84b959410314859e099",
+  "sourceSha256": "72dc47e15caa9df8a6a79ccdbe21bdf6b71d3afda9ea0a6da8e895ee881146a8",
+  "originalExtractionSha256": "33fe9eeea3341c3d98af03a880b0decdf8692ab67d494d84f0dd79683c9f733b",
+  "processedSchemasSha256": "a107fba56f97397b9f154719346905d01f63bd5f85a6ebc8023c9659a87f471c",
+  "policySha256": "c6a397517d1da83d2dd360780de19e9eea88f2a4974334ca39a98413b11a5729",
+  "originalClassifierSha256": "921e6778ea532cff17bfc94ece5b5c164eaabea08054089f79af29161cf8921c",
+  "outputs": {
+    "report.json": "ab95773d7c6a2f646d6e1c4c9d4af9c2fdfbe027720e22d84c3cbd7b0d54aabd",
+    "summary.json": "6aa88e4aeebbd7fb405b7034f3b6b48690dda79ab64693485bbbab2a22459751",
+    "rejections.json": "7815342d7eca002f1aaefb5ead08b0f2b568912e1c232a397fbf6ea1da3a660a",
+    "representatives.json": "161f777e9c1ef1bb0bbe5307e8a489b077ffa654386afc6d15fdef2703e63caf"
+  }
+}

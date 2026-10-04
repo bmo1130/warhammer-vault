@@ -133,7 +133,7 @@ export function buildResearchCandidate(technology, junction, mapping, target, ev
     ruleIds: [...baseRuleIds, mapping.ruleId] };
 }
 
-function classifyResearchEffect(source, units, technology, junction) {
+export function classifyResearchEffect(source, units, technology, junction) {
   const g = graph(source), key = junction.row.effect;
   const result = { effectKey: key, sourceRowId: junction.id, rawValue: junction.row.value,
     scope: junction.row.effect_scope, status: 'REVIEW_REQUIRED', reasonIds: [], candidates: [], omittedTargets: [] };

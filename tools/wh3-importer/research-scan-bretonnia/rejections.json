@@ -1,0 +1,49 @@
+{
+  "effectCount": 179,
+  "reasons": [
+    {
+      "key": "SCOPE_NOT_VERIFIED_OWN_FORCE",
+      "count": 105
+    },
+    {
+      "key": "EFFECT_MAPPING_UNVERIFIED",
+      "count": 48
+    },
+    {
+      "key": "REGION_SCOPE_NOT_UNIT_APPLICABLE",
+      "count": 12
+    },
+    {
+      "key": "NON_UNIT_ECONOMY_EFFECT",
+      "count": 10
+    },
+    {
+      "key": "NON_UNIT_BUILDING_EFFECT",
+      "count": 2
+    },
+    {
+      "key": "ALL_LAND_TARGET_UNRESOLVED",
+      "count": 1
+    },
+    {
+      "key": "CASTE_SELECTOR_UNSUPPORTED",
+      "count": 1
+    },
+    {
+      "key": "CONDITIONAL_SIEGE_EFFECT",
+      "count": 1
+    },
+    {
+      "key": "MISSILE_STRENGTH_MAPPING_UNVERIFIED",
+      "count": 1
+    },
+    {
+      "key": "RELOAD_MAPPING_UNVERIFIED",
+      "count": 1
+    },
+    {
+      "key": "UPKEEP_MAPPING_NOT_APPROVED",
+      "count": 1
+    }
+  ]
+}

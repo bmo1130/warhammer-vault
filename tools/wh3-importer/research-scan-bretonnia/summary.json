@@ -1,0 +1,102 @@
+{
+  "technologies": {
+    "total": 68,
+    "nodes": 75,
+    "withoutEffects": 0,
+    "withEffects": 68,
+    "withDirect": 5,
+    "mixed": 9,
+    "withoutDirect": 63
+  },
+  "effects": {
+    "total": 179,
+    "uniqueEffectKeys": 132,
+    "counts": {
+      "DIRECT_CANDIDATE": 9,
+      "REVIEW_REQUIRED": 157,
+      "UNSUPPORTED": 1,
+      "NON_UNIT_STAT": 12,
+      "UNCLASSIFIABLE_INPUT": 0
+    },
+    "percentages": {
+      "DIRECT_CANDIDATE": 5.027932960893855,
+      "REVIEW_REQUIRED": 87.70949720670392,
+      "UNSUPPORTED": 0.5586592178770949,
+      "NON_UNIT_STAT": 6.70391061452514,
+      "UNCLASSIFIABLE_INPUT": 0
+    }
+  },
+  "candidates": {
+    "total": 54,
+    "units": 12,
+    "paths": 7,
+    "operations": {
+      "add": 24,
+      "multiply": 30
+    },
+    "perPath": {
+      "campaign.recruitmentCost": 1,
+      "defense.leadership": 7,
+      "defense.meleeDefense": 8,
+      "melee.chargeBonus": 7,
+      "melee.damage.armorPiercing": 11,
+      "melee.damage.base": 11,
+      "melee.meleeAttack": 9
+    },
+    "perEffect": {
+      "wh2_main_effect_force_stat_charge_bonus_pct_brt_knights": 7,
+      "wh2_main_effect_force_stat_melee_attack_brt_knights": 7,
+      "wh2_main_effect_force_stat_melee_attack_pilgrims_reliquae": 1,
+      "wh2_main_effect_force_stat_melee_defence_brt_knights": 7,
+      "wh2_main_effect_force_stat_melee_defence_brt_pilgrims_reliquae": 1,
+      "wh2_main_effect_force_stat_weapon_strength_brt_knights_swordsmen_footsquires": 22,
+      "wh_dlc07_effect_force_stat_leadership_knights": 7,
+      "wh_dlc07_effect_force_stat_melee_attack_peasant_mob": 1,
+      "wh_main_effect_tech_recruitment_cost_reduction_peasant_mob": 1
+    },
+    "perTechnology": {
+      "wh_dlc07_tech_brt_economy_farm_hoods": 14,
+      "wh_dlc07_tech_brt_economy_industry_swords": 22,
+      "wh_dlc07_tech_brt_economy_industry_tournaments": 14,
+      "wh_dlc07_tech_brt_economy_other_3": 2,
+      "wh_dlc07_tech_brt_economy_other_fanaticism": 2
+    },
+    "perUnit": {
+      "wh_dlc07_brt_cav_grail_guardians_0": 6,
+      "wh_dlc07_brt_cav_knights_errant_0": 6,
+      "wh_dlc07_brt_cav_questing_knights_0": 6,
+      "wh_dlc07_brt_cav_royal_pegasus_knights_0": 6,
+      "wh_dlc07_brt_inf_battle_pilgrims_0": 4,
+      "wh_dlc07_brt_inf_foot_squires_0": 2,
+      "wh_dlc07_brt_inf_men_at_arms_1": 2,
+      "wh_dlc07_brt_inf_men_at_arms_2": 2,
+      "wh_dlc07_brt_peasant_mob_0": 2,
+      "wh_main_brt_cav_grail_knights": 6,
+      "wh_main_brt_cav_knights_of_the_realm": 6,
+      "wh_main_brt_cav_pegasus_knights": 6
+    }
+  },
+  "duplicates": {
+    "exactCandidatesRemoved": 0,
+    "semanticOverlapGroups": [],
+    "conflictingCandidates": []
+  },
+  "targets": {
+    "explicitMainResolvableEffects": 22,
+    "explicitMainResolvablePercent": 12.29050279329609,
+    "selectorEffects": 10,
+    "selectorPercent": 5.58659217877095,
+    "selectorKinds": {
+      "caste:hero": 8,
+      "caste:lord": 8,
+      "caste:melee_cavalry": 1,
+      "caste:melee_infantry": 1,
+      "caste:missile_cavalry": 1,
+      "caste:missile_infantry": 1,
+      "caste:monstrous_cavalry": 1,
+      "caste:monstrous_infantry": 1
+    }
+  },
+  "coverage": "LOW_COVERAGE",
+  "admissionReadiness": "B"
+}
