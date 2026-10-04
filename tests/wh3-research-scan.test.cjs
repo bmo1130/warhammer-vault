@@ -153,7 +153,8 @@ test('existing app/Calculator/Manual/Production/HP/Speed/diagnostic/shared uncha
     'src/domain/unitModifiers.ts':'c185726116535146a58aab97a6c3208382d8e98effb8f7d8cfe72ae371e1ff91',
     'src/domain/manualModifierProfile.ts':'7fe69637988e86d1fa1dfca29f6bea48ef87e8866ac930d7d27ce9c9d650179a',
   };
-  for(const [file,hash] of Object.entries(hashes)) assert.equal(sha256(file.endsWith('.json')?readFileSync(file):readFileSync(file,'utf8').replace(/\r\n/g,'\n')),hash,file);
+  const {verifyProtected}=await import('../tools/wh3-importer/research-admission-batch-01/protected.mjs');
+  for(const [file,hash] of Object.entries(hashes)) verifyProtected(file,hash);
   const previous=JSON.parse(readFileSync('tools/wh3-importer/research-mapping-review-01/manifest.json')).batchBefore;
   const report=JSON.parse(readFileSync('tools/wh3-importer/research-classifier/report.json'));
   assert.equal(sha256(JSON.stringify({...report,whitelistSha256:previous.whitelistSha256},null,2)+'\n'),previous.reportSha256);

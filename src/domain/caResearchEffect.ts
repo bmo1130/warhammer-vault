@@ -4,11 +4,29 @@ import type { Unit } from './unit';
 import { calculateManualModifiers, type DraftModifierRow } from './manualModifierProfile';
 import { applyModifiersWithBreakdown } from './unitModifiers';
 
-// Bounded committed research/Unit contexts. Applicability was reviewed by the importer;
-// the numerical engine does not resolve campaign scopes or CA unit sets.
-export const caResearchEffects = projection;
+// Technology metadata is stored once. Materialize the bounded reviewed contexts
+// once at module load; neither renders nor the engine read raw importer evidence.
+export const caResearchEffects = projection.technologies.flatMap(technology =>
+  projection.targets.flatMap(target => {
+    const admitted = projection.modifiers.filter(m => m.unitId === target.unitId &&
+      projection.effects.some(e => e.id === m.effectId && e.technologyKey === technology.key));
+    if (!admitted.length) return [];
+    return [{ ...target, researchKey: technology.key, name: technology.name,
+      partial: technology.partial, omittedEffects: technology.omittedEffects,
+      sourceKind: projection.sourceKind, gameVersion: projection.provenance.gameVersion,
+      sourceSha256: projection.provenance.sourceSha256, snapshotId: projection.provenance.snapshotId,
+      scope: projection.effects.find(e => e.id === admitted[0].effectId)!.scope,
+      modifiers: admitted.map(m => {
+        const effect = projection.effects.find(e => e.id === m.effectId)!;
+        return { id: m.id, sourceType: 'research', sourceId: technology.key,
+          targetType: 'unit', targetId: target.unitId, stat: m.stat, operation: m.operation,
+          value: m.value, scope: 'faction', gameVersion: projection.provenance.gameVersion,
+          source: `CA_RESEARCH · ${effect.effectKey}`, tags: [] };
+      }) }];
+  })
+);
 export function researchesForUnit(unit: Unit) {
-  return projection.filter(p => unit.id === p.unitId && unit.gameVersion === p.gameVersion);
+  return caResearchEffects.filter(p => unit.id === p.unitId && unit.gameVersion === p.gameVersion);
 }
 export function researchModifiers(unit: Unit, selected: readonly string[]): Modifier[] {
   if (new Set(selected).size !== selected.length) throw new Error('중복된 연구 선택입니다.');
@@ -20,7 +38,7 @@ export function researchModifiers(unit: Unit, selected: readonly string[]): Modi
   });
 }
 export function modifierSourceLabel(id: string, selected: readonly string[]): string {
-  const research = projection.find(p => selected.includes(p.researchKey) && p.modifiers.some(m => m.id === id));
+  const research = caResearchEffects.find(p => selected.includes(p.researchKey) && p.modifiers.some(m => m.id === id));
   return research ? `WH3 Research · ${research.name}` : 'Manual';
 }
 export function calculateResearchAndManual(unit: Unit, rows: readonly DraftModifierRow[], selected: readonly string[]): ReturnType<typeof calculateManualModifiers> {

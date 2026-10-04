@@ -75,3 +75,8 @@
 .calculator-table details{text-align:left;font-size:12px}.calculator-table summary{cursor:pointer;color:#d7bd8d}
 .calculator-breakdown{margin-top:12px;line-height:1.7}.calculator-breakdown ul{padding-left:16px}.calculator-breakdown small{display:block;font-size:10px}
 @media(max-width:680px){.calculator-row{grid-template-columns:1fr}.calculator-profile{padding:15px}.calculator-row .button{justify-self:start}}
+
+.calculator-research { padding: 1rem; min-width: 0; }
+.research-entry { margin-block: 1rem; overflow-wrap: anywhere; }
+.research-entry label { display: flex; align-items: baseline; gap: .4rem; }
+.research-entry input { flex: 0 0 auto; }

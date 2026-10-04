@@ -1,0 +1,1235 @@
+{
+  "format": "wh3-reviewed-research-input-v1",
+  "reportSha256": "97166548e93f0144c29ddc0b412f17719f450fbd90625b78d66ab6a1756d0aa3",
+  "effects": [
+    {
+      "technologyKey": "wh_dlc07_tech_brt_economy_farm_hoods",
+      "effectKey": "wh2_main_effect_force_stat_charge_bonus_pct_brt_knights",
+      "sourceRowId": "technology_effects_junction_tables:22427b95f32db1dd00ae"
+    },
+    {
+      "technologyKey": "wh_dlc07_tech_brt_economy_farm_hoods",
+      "effectKey": "wh_dlc07_effect_force_stat_leadership_knights",
+      "sourceRowId": "technology_effects_junction_tables:84f5da63567eaa61bbe2"
+    },
+    {
+      "technologyKey": "wh_dlc07_tech_brt_economy_industry_steel",
+      "effectKey": "wh2_dlc09_effect_force_stat_armour_brt_knights",
+      "sourceRowId": "technology_effects_junction_tables:af7762ed61b3842a3e36"
+    },
+    {
+      "technologyKey": "wh_dlc07_tech_brt_economy_industry_swords",
+      "effectKey": "wh2_main_effect_force_stat_weapon_strength_brt_knights_swordsmen_footsquires",
+      "sourceRowId": "technology_effects_junction_tables:03e065b235718f7278f6"
+    },
+    {
+      "technologyKey": "wh_dlc07_tech_brt_economy_industry_tournaments",
+      "effectKey": "wh2_main_effect_force_stat_melee_attack_brt_knights",
+      "sourceRowId": "technology_effects_junction_tables:024f3cd02ebb89d99bb4"
+    },
+    {
+      "technologyKey": "wh_dlc07_tech_brt_economy_industry_tournaments",
+      "effectKey": "wh2_main_effect_force_stat_melee_defence_brt_knights",
+      "sourceRowId": "technology_effects_junction_tables:5e087eeb4edd7177563f"
+    },
+    {
+      "technologyKey": "wh_dlc07_tech_brt_economy_other_1",
+      "effectKey": "wh_dlc07_effect_force_stat_leadership_peasant_mob",
+      "sourceRowId": "technology_effects_junction_tables:a183cf41c3ba95454503"
+    },
+    {
+      "technologyKey": "wh_dlc07_tech_brt_economy_other_3",
+      "effectKey": "wh_main_effect_tech_recruitment_cost_reduction_peasant_mob",
+      "sourceRowId": "technology_effects_junction_tables:71be907a050ca45e1a7e"
+    },
+    {
+      "technologyKey": "wh_dlc07_tech_brt_economy_other_3",
+      "effectKey": "wh_dlc07_effect_force_stat_melee_attack_peasant_mob",
+      "sourceRowId": "technology_effects_junction_tables:b24f2670909471d5ff92"
+    },
+    {
+      "technologyKey": "wh_dlc07_tech_brt_economy_other_draft",
+      "effectKey": "wh_dlc07_peasant_upkeep_penalty",
+      "sourceRowId": "technology_effects_junction_tables:a7c4871afcc1e3294543"
+    },
+    {
+      "technologyKey": "wh_dlc07_tech_brt_economy_other_fanaticism",
+      "effectKey": "wh2_main_effect_force_stat_melee_attack_pilgrims_reliquae",
+      "sourceRowId": "technology_effects_junction_tables:386db63e28b7b8c6b557"
+    },
+    {
+      "technologyKey": "wh_dlc07_tech_brt_economy_other_fanaticism",
+      "effectKey": "wh2_main_effect_force_stat_melee_defence_brt_pilgrims_reliquae",
+      "sourceRowId": "technology_effects_junction_tables:4d6c2f1fbfea46aba0d9"
+    },
+    {
+      "technologyKey": "wh_dlc07_tech_brt_economy_other_fletchers",
+      "effectKey": "wh2_main_effect_force_stat_range_brt_bowmen_yeomen",
+      "sourceRowId": "technology_effects_junction_tables:c0e948de33c0423bee0e"
+    },
+    {
+      "technologyKey": "wh_dlc07_tech_brt_economy_other_spears",
+      "effectKey": "wh2_main_effect_force_stat_weapon_strength_brt_spearmen_polemen_yeomen",
+      "sourceRowId": "technology_effects_junction_tables:52b222308ba1130dc23e"
+    },
+    {
+      "technologyKey": "wh_dlc07_tech_brt_economy_other_spears",
+      "effectKey": "wh2_main_effect_force_stat_melee_attack_brt_spearmen_polemen_yeomen",
+      "sourceRowId": "technology_effects_junction_tables:e9bfb302b3315b1dc316"
+    }
+  ],
+  "candidates": [
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_farm_hoods",
+        "wh2_main_effect_force_stat_charge_bonus_pct_brt_knights",
+        "wh_dlc07_brt_cav_grail_guardians_0",
+        "wh_dlc07_brt_cav_grail_guardians_0",
+        "melee.chargeBonus",
+        "multiply",
+        10
+      ],
+      "candidateSha256": "ef283fe33d6bfcd34cc51098e1a40598be8a748a646c70c42fed10c799bbdfdf"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_farm_hoods",
+        "wh2_main_effect_force_stat_charge_bonus_pct_brt_knights",
+        "wh_dlc07_brt_cav_knights_errant_0",
+        "wh_dlc07_brt_cav_knights_errant_0",
+        "melee.chargeBonus",
+        "multiply",
+        10
+      ],
+      "candidateSha256": "2a1fa9c99062e5fa079fc7bbf0006b86f7894c6c0ad4de95c5d78490fffdb958"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_farm_hoods",
+        "wh2_main_effect_force_stat_charge_bonus_pct_brt_knights",
+        "wh_dlc07_brt_cav_questing_knights_0",
+        "wh_dlc07_brt_cav_questing_knights_0",
+        "melee.chargeBonus",
+        "multiply",
+        10
+      ],
+      "candidateSha256": "b616d190b25863196bc31b7122f517e7c9b6fdb7462fa272cef6382467629ce6"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_farm_hoods",
+        "wh2_main_effect_force_stat_charge_bonus_pct_brt_knights",
+        "wh_dlc07_brt_cav_royal_pegasus_knights_0",
+        "wh_dlc07_brt_cav_royal_pegasus_knights_0",
+        "melee.chargeBonus",
+        "multiply",
+        10
+      ],
+      "candidateSha256": "38263d11caa4478497a9a759232fa1ec895ed16f762b067a9338fe4bc993e306"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_farm_hoods",
+        "wh2_main_effect_force_stat_charge_bonus_pct_brt_knights",
+        "wh_main_brt_cav_grail_knights",
+        "wh_main_brt_cav_grail_knights",
+        "melee.chargeBonus",
+        "multiply",
+        10
+      ],
+      "candidateSha256": "c13f80d8e20c3868256f7df25c87d570eaa78a4b93bce3441e8c2e8d0f0cea44"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_farm_hoods",
+        "wh2_main_effect_force_stat_charge_bonus_pct_brt_knights",
+        "wh_main_brt_cav_knights_of_the_realm",
+        "wh_main_brt_cav_knights_of_the_realm",
+        "melee.chargeBonus",
+        "multiply",
+        10
+      ],
+      "candidateSha256": "3d61c634b643e6b7ffdb201328ffeab5d29c039463a63c810bf67be506814746"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_farm_hoods",
+        "wh2_main_effect_force_stat_charge_bonus_pct_brt_knights",
+        "wh_main_brt_cav_pegasus_knights",
+        "wh_main_brt_cav_pegasus_knights",
+        "melee.chargeBonus",
+        "multiply",
+        10
+      ],
+      "candidateSha256": "a16a79162f46064f960efc19b0007a4d3fea0e3bfecfb0cc7077067d43ef87fa"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_farm_hoods",
+        "wh_dlc07_effect_force_stat_leadership_knights",
+        "wh_dlc07_brt_cav_grail_guardians_0",
+        "wh_dlc07_brt_cav_grail_guardians_0",
+        "defense.leadership",
+        "add",
+        5
+      ],
+      "candidateSha256": "5b752d6c6c6791ce716a251f996977d7151f2ead0f1bde76604dd637da81de24"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_farm_hoods",
+        "wh_dlc07_effect_force_stat_leadership_knights",
+        "wh_dlc07_brt_cav_knights_errant_0",
+        "wh_dlc07_brt_cav_knights_errant_0",
+        "defense.leadership",
+        "add",
+        5
+      ],
+      "candidateSha256": "352496285c49a2b0c3b7e93618bf6855f4a35cfc824ffc5e2fbfa94c91452e1c"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_farm_hoods",
+        "wh_dlc07_effect_force_stat_leadership_knights",
+        "wh_dlc07_brt_cav_questing_knights_0",
+        "wh_dlc07_brt_cav_questing_knights_0",
+        "defense.leadership",
+        "add",
+        5
+      ],
+      "candidateSha256": "ce0f77912edecf86c7edf0e8ba5dcd4e79a5e947bbc48724e60ef700c0707684"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_farm_hoods",
+        "wh_dlc07_effect_force_stat_leadership_knights",
+        "wh_dlc07_brt_cav_royal_pegasus_knights_0",
+        "wh_dlc07_brt_cav_royal_pegasus_knights_0",
+        "defense.leadership",
+        "add",
+        5
+      ],
+      "candidateSha256": "093f4ff7e2338f5395aa8c50745063f6e7e02ac325a2e3e857c2ab20092485f4"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_farm_hoods",
+        "wh_dlc07_effect_force_stat_leadership_knights",
+        "wh_main_brt_cav_grail_knights",
+        "wh_main_brt_cav_grail_knights",
+        "defense.leadership",
+        "add",
+        5
+      ],
+      "candidateSha256": "143f72717d77b53166431e425ddf54cbee864b6470a1633a9946e9bf71b7fe80"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_farm_hoods",
+        "wh_dlc07_effect_force_stat_leadership_knights",
+        "wh_main_brt_cav_knights_of_the_realm",
+        "wh_main_brt_cav_knights_of_the_realm",
+        "defense.leadership",
+        "add",
+        5
+      ],
+      "candidateSha256": "6aacd9ce0bb33d1ce6f1a016ea8a6ed5ac40728e842f0b9a5651fc316f412f63"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_farm_hoods",
+        "wh_dlc07_effect_force_stat_leadership_knights",
+        "wh_main_brt_cav_pegasus_knights",
+        "wh_main_brt_cav_pegasus_knights",
+        "defense.leadership",
+        "add",
+        5
+      ],
+      "candidateSha256": "1e2c6c0ae3d27adf8fa6c1729898e1241c06f92996e03fb06656e43fa5e30f27"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_industry_steel",
+        "wh2_dlc09_effect_force_stat_armour_brt_knights",
+        "wh_dlc07_brt_cav_grail_guardians_0",
+        "wh_dlc07_brt_cav_grail_guardians_0",
+        "defense.armor",
+        "add",
+        8
+      ],
+      "candidateSha256": "d3fe1e7dd8366af8a19156e90cf697ca30b1f11c4c0456f8a8022073caa18c74"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_industry_steel",
+        "wh2_dlc09_effect_force_stat_armour_brt_knights",
+        "wh_dlc07_brt_cav_knights_errant_0",
+        "wh_dlc07_brt_cav_knights_errant_0",
+        "defense.armor",
+        "add",
+        8
+      ],
+      "candidateSha256": "6693b9d379cdee169cd4e7d89a7ab8283795c2ba565bd7854a16f58b123288fa"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_industry_steel",
+        "wh2_dlc09_effect_force_stat_armour_brt_knights",
+        "wh_dlc07_brt_cav_questing_knights_0",
+        "wh_dlc07_brt_cav_questing_knights_0",
+        "defense.armor",
+        "add",
+        8
+      ],
+      "candidateSha256": "b2bb3838270ee618523a7d88d74ebb170aad1e936311df7e53a21242dda6d286"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_industry_steel",
+        "wh2_dlc09_effect_force_stat_armour_brt_knights",
+        "wh_dlc07_brt_cav_royal_pegasus_knights_0",
+        "wh_dlc07_brt_cav_royal_pegasus_knights_0",
+        "defense.armor",
+        "add",
+        8
+      ],
+      "candidateSha256": "901c9a3ed638757e4fc16bbdcfb8d0729a95257a973d5ec6388b6d275085e981"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_industry_steel",
+        "wh2_dlc09_effect_force_stat_armour_brt_knights",
+        "wh_main_brt_cav_grail_knights",
+        "wh_main_brt_cav_grail_knights",
+        "defense.armor",
+        "add",
+        8
+      ],
+      "candidateSha256": "4221f75b9158417caa87bf1180eecced2e48e04d5dae9662d56bc758d3191401"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_industry_steel",
+        "wh2_dlc09_effect_force_stat_armour_brt_knights",
+        "wh_main_brt_cav_knights_of_the_realm",
+        "wh_main_brt_cav_knights_of_the_realm",
+        "defense.armor",
+        "add",
+        8
+      ],
+      "candidateSha256": "d0ca56c7f5b2ba83eac0d8ecd0578ade54e15d063a324ae50469b36910bc40ae"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_industry_steel",
+        "wh2_dlc09_effect_force_stat_armour_brt_knights",
+        "wh_main_brt_cav_pegasus_knights",
+        "wh_main_brt_cav_pegasus_knights",
+        "defense.armor",
+        "add",
+        8
+      ],
+      "candidateSha256": "386882423ddad76c396585c553537c92c8ca7ceea8c90030f03cc3967b7210be"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_industry_swords",
+        "wh2_main_effect_force_stat_weapon_strength_brt_knights_swordsmen_footsquires",
+        "wh_dlc07_brt_cav_grail_guardians_0",
+        "wh_dlc07_brt_cav_grail_guardians_0",
+        "melee.damage.armorPiercing",
+        "multiply",
+        12
+      ],
+      "candidateSha256": "1dbe090929ff1e9a6c6bfc26286a6bace20ed7107a831729e9d1f809ad68d61a"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_industry_swords",
+        "wh2_main_effect_force_stat_weapon_strength_brt_knights_swordsmen_footsquires",
+        "wh_dlc07_brt_cav_grail_guardians_0",
+        "wh_dlc07_brt_cav_grail_guardians_0",
+        "melee.damage.base",
+        "multiply",
+        12
+      ],
+      "candidateSha256": "afdb327359f49681b8900d2755ee0736f89d07fd2bffcee6498a73e07da82709"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_industry_swords",
+        "wh2_main_effect_force_stat_weapon_strength_brt_knights_swordsmen_footsquires",
+        "wh_dlc07_brt_cav_knights_errant_0",
+        "wh_dlc07_brt_cav_knights_errant_0",
+        "melee.damage.armorPiercing",
+        "multiply",
+        12
+      ],
+      "candidateSha256": "6794b0d25262046d5968297b1a781f9cdf07597fb28114f8281b058a722a6f96"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_industry_swords",
+        "wh2_main_effect_force_stat_weapon_strength_brt_knights_swordsmen_footsquires",
+        "wh_dlc07_brt_cav_knights_errant_0",
+        "wh_dlc07_brt_cav_knights_errant_0",
+        "melee.damage.base",
+        "multiply",
+        12
+      ],
+      "candidateSha256": "df59cd226eb477027a8a00332c9ea0bd20f43979140b5b21f6feb5c635cdf579"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_industry_swords",
+        "wh2_main_effect_force_stat_weapon_strength_brt_knights_swordsmen_footsquires",
+        "wh_dlc07_brt_cav_questing_knights_0",
+        "wh_dlc07_brt_cav_questing_knights_0",
+        "melee.damage.armorPiercing",
+        "multiply",
+        12
+      ],
+      "candidateSha256": "aca446352c9570173e0093910c1f0f36eb3616aaf13e5eae90608e85d89bb879"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_industry_swords",
+        "wh2_main_effect_force_stat_weapon_strength_brt_knights_swordsmen_footsquires",
+        "wh_dlc07_brt_cav_questing_knights_0",
+        "wh_dlc07_brt_cav_questing_knights_0",
+        "melee.damage.base",
+        "multiply",
+        12
+      ],
+      "candidateSha256": "7d84dc9d0cadb297d7fa0caa3d726086c4091c306ab5c1d7c90ceaedf038c5b7"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_industry_swords",
+        "wh2_main_effect_force_stat_weapon_strength_brt_knights_swordsmen_footsquires",
+        "wh_dlc07_brt_cav_royal_pegasus_knights_0",
+        "wh_dlc07_brt_cav_royal_pegasus_knights_0",
+        "melee.damage.armorPiercing",
+        "multiply",
+        12
+      ],
+      "candidateSha256": "a999ed594a1a0f901351e452a7781203a9f633ecf7d822cd4a665a9a24fc287a"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_industry_swords",
+        "wh2_main_effect_force_stat_weapon_strength_brt_knights_swordsmen_footsquires",
+        "wh_dlc07_brt_cav_royal_pegasus_knights_0",
+        "wh_dlc07_brt_cav_royal_pegasus_knights_0",
+        "melee.damage.base",
+        "multiply",
+        12
+      ],
+      "candidateSha256": "0cf9ef7204ecf73eec60e1a4505d6792baaacf3ca811998801603917f4b0c97b"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_industry_swords",
+        "wh2_main_effect_force_stat_weapon_strength_brt_knights_swordsmen_footsquires",
+        "wh_dlc07_brt_inf_battle_pilgrims_0",
+        "wh_dlc07_brt_inf_battle_pilgrims_0",
+        "melee.damage.armorPiercing",
+        "multiply",
+        12
+      ],
+      "candidateSha256": "de212e84626e36f2b0e965e826a8fe97f82e8cc8e8f70692fb0e9538aaaaaae0"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_industry_swords",
+        "wh2_main_effect_force_stat_weapon_strength_brt_knights_swordsmen_footsquires",
+        "wh_dlc07_brt_inf_battle_pilgrims_0",
+        "wh_dlc07_brt_inf_battle_pilgrims_0",
+        "melee.damage.base",
+        "multiply",
+        12
+      ],
+      "candidateSha256": "89470c9e1a0b800e6a40f7b438f05e57e13f501e7990f7bef22141fb1f61ee2a"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_industry_swords",
+        "wh2_main_effect_force_stat_weapon_strength_brt_knights_swordsmen_footsquires",
+        "wh_dlc07_brt_inf_foot_squires_0",
+        "wh_dlc07_brt_inf_foot_squires_0",
+        "melee.damage.armorPiercing",
+        "multiply",
+        12
+      ],
+      "candidateSha256": "568a0e3fd8c49f617539c7a2250dc99b07ee9e8ca28d489e6f6c46c1020dc8fd"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_industry_swords",
+        "wh2_main_effect_force_stat_weapon_strength_brt_knights_swordsmen_footsquires",
+        "wh_dlc07_brt_inf_foot_squires_0",
+        "wh_dlc07_brt_inf_foot_squires_0",
+        "melee.damage.base",
+        "multiply",
+        12
+      ],
+      "candidateSha256": "96abcdd66c3aa5aa8affc726db3cf1e66938ad5fd4e38d8c487eff750316baab"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_industry_swords",
+        "wh2_main_effect_force_stat_weapon_strength_brt_knights_swordsmen_footsquires",
+        "wh_dlc07_brt_inf_men_at_arms_1",
+        "wh_dlc07_brt_inf_men_at_arms_1",
+        "melee.damage.armorPiercing",
+        "multiply",
+        12
+      ],
+      "candidateSha256": "8b5783dc2a2bdf552e51cd3cfeb280726bdae32132caa4c9ebfe1a27e15f8b71"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_industry_swords",
+        "wh2_main_effect_force_stat_weapon_strength_brt_knights_swordsmen_footsquires",
+        "wh_dlc07_brt_inf_men_at_arms_1",
+        "wh_dlc07_brt_inf_men_at_arms_1",
+        "melee.damage.base",
+        "multiply",
+        12
+      ],
+      "candidateSha256": "ebb41a7bc19203d94696ca05916d2ecaad67438ce429df3e1afb7e65949d1a4d"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_industry_swords",
+        "wh2_main_effect_force_stat_weapon_strength_brt_knights_swordsmen_footsquires",
+        "wh_dlc07_brt_inf_men_at_arms_2",
+        "wh_dlc07_brt_inf_men_at_arms_2",
+        "melee.damage.armorPiercing",
+        "multiply",
+        12
+      ],
+      "candidateSha256": "73328fd335150cbc3a5f0c55bfb6c2a1d83cae1edbdf491718dd0a08e6aa9c46"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_industry_swords",
+        "wh2_main_effect_force_stat_weapon_strength_brt_knights_swordsmen_footsquires",
+        "wh_dlc07_brt_inf_men_at_arms_2",
+        "wh_dlc07_brt_inf_men_at_arms_2",
+        "melee.damage.base",
+        "multiply",
+        12
+      ],
+      "candidateSha256": "bdc4d00d18ca7889c76026bfc1233370ca72818a93196925afb4a2dddddafdf0"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_industry_swords",
+        "wh2_main_effect_force_stat_weapon_strength_brt_knights_swordsmen_footsquires",
+        "wh_main_brt_cav_grail_knights",
+        "wh_main_brt_cav_grail_knights",
+        "melee.damage.armorPiercing",
+        "multiply",
+        12
+      ],
+      "candidateSha256": "73c82b88ae184ecf71a108d3e5562f83156e218413c83a16c16af231b26f20db"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_industry_swords",
+        "wh2_main_effect_force_stat_weapon_strength_brt_knights_swordsmen_footsquires",
+        "wh_main_brt_cav_grail_knights",
+        "wh_main_brt_cav_grail_knights",
+        "melee.damage.base",
+        "multiply",
+        12
+      ],
+      "candidateSha256": "45964380c95aadd3f047ee921d015bff502015a622ca0fddac5f735762fd7b18"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_industry_swords",
+        "wh2_main_effect_force_stat_weapon_strength_brt_knights_swordsmen_footsquires",
+        "wh_main_brt_cav_knights_of_the_realm",
+        "wh_main_brt_cav_knights_of_the_realm",
+        "melee.damage.armorPiercing",
+        "multiply",
+        12
+      ],
+      "candidateSha256": "0a18bd25819d45b8136161fb3971905e1de9652ab375fa8ed04d08177d346dbd"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_industry_swords",
+        "wh2_main_effect_force_stat_weapon_strength_brt_knights_swordsmen_footsquires",
+        "wh_main_brt_cav_knights_of_the_realm",
+        "wh_main_brt_cav_knights_of_the_realm",
+        "melee.damage.base",
+        "multiply",
+        12
+      ],
+      "candidateSha256": "3105fac174ba9c8f2d7476ec92443c7f4bdd883fc2eb8dd5741562852741a5a1"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_industry_swords",
+        "wh2_main_effect_force_stat_weapon_strength_brt_knights_swordsmen_footsquires",
+        "wh_main_brt_cav_pegasus_knights",
+        "wh_main_brt_cav_pegasus_knights",
+        "melee.damage.armorPiercing",
+        "multiply",
+        12
+      ],
+      "candidateSha256": "2ccacfd5251761ea5d81684c33e9ccd77ed93e27663fd29062358a9d7935cca5"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_industry_swords",
+        "wh2_main_effect_force_stat_weapon_strength_brt_knights_swordsmen_footsquires",
+        "wh_main_brt_cav_pegasus_knights",
+        "wh_main_brt_cav_pegasus_knights",
+        "melee.damage.base",
+        "multiply",
+        12
+      ],
+      "candidateSha256": "6e55b3ba8f5235361718793ea34525556293c878c75b957445dc50af044e8f9b"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_industry_tournaments",
+        "wh2_main_effect_force_stat_melee_attack_brt_knights",
+        "wh_dlc07_brt_cav_grail_guardians_0",
+        "wh_dlc07_brt_cav_grail_guardians_0",
+        "melee.meleeAttack",
+        "add",
+        5
+      ],
+      "candidateSha256": "02abb0beb701a59afe9812a80aa47b63ac073c7325d3ea852dc44b39638ad6eb"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_industry_tournaments",
+        "wh2_main_effect_force_stat_melee_attack_brt_knights",
+        "wh_dlc07_brt_cav_knights_errant_0",
+        "wh_dlc07_brt_cav_knights_errant_0",
+        "melee.meleeAttack",
+        "add",
+        5
+      ],
+      "candidateSha256": "be37c5b85c4add87f27fe2376fa9b3a890232d741d27cb6ffb01b545b7186c63"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_industry_tournaments",
+        "wh2_main_effect_force_stat_melee_attack_brt_knights",
+        "wh_dlc07_brt_cav_questing_knights_0",
+        "wh_dlc07_brt_cav_questing_knights_0",
+        "melee.meleeAttack",
+        "add",
+        5
+      ],
+      "candidateSha256": "2f962e857c9da816e1be6e86c4f963b3ed13cfca73d939e218234616dd92ff0c"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_industry_tournaments",
+        "wh2_main_effect_force_stat_melee_attack_brt_knights",
+        "wh_dlc07_brt_cav_royal_pegasus_knights_0",
+        "wh_dlc07_brt_cav_royal_pegasus_knights_0",
+        "melee.meleeAttack",
+        "add",
+        5
+      ],
+      "candidateSha256": "d531192d1489e3d5f4e6a28c098fef6823e2cc71a6f199d072fb4a1b41ec76c6"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_industry_tournaments",
+        "wh2_main_effect_force_stat_melee_attack_brt_knights",
+        "wh_main_brt_cav_grail_knights",
+        "wh_main_brt_cav_grail_knights",
+        "melee.meleeAttack",
+        "add",
+        5
+      ],
+      "candidateSha256": "6f1c7e8586811b6e753c75b7ba6cdcbe83a8ca1bd5350c07f64d225da7cbabf7"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_industry_tournaments",
+        "wh2_main_effect_force_stat_melee_attack_brt_knights",
+        "wh_main_brt_cav_knights_of_the_realm",
+        "wh_main_brt_cav_knights_of_the_realm",
+        "melee.meleeAttack",
+        "add",
+        5
+      ],
+      "candidateSha256": "3622c27ecb5f641d3142c71af7c76bc9005fed458a52bb5c3565684caa224795"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_industry_tournaments",
+        "wh2_main_effect_force_stat_melee_attack_brt_knights",
+        "wh_main_brt_cav_pegasus_knights",
+        "wh_main_brt_cav_pegasus_knights",
+        "melee.meleeAttack",
+        "add",
+        5
+      ],
+      "candidateSha256": "e3908650ae05d67fc329300f2798e0b48123e41ead1de452b2077c420339c7d2"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_industry_tournaments",
+        "wh2_main_effect_force_stat_melee_defence_brt_knights",
+        "wh_dlc07_brt_cav_grail_guardians_0",
+        "wh_dlc07_brt_cav_grail_guardians_0",
+        "defense.meleeDefense",
+        "add",
+        5
+      ],
+      "candidateSha256": "0a781e16a97afec43830c8349d418264a4174c17dff0106b13885ee3d8b77311"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_industry_tournaments",
+        "wh2_main_effect_force_stat_melee_defence_brt_knights",
+        "wh_dlc07_brt_cav_knights_errant_0",
+        "wh_dlc07_brt_cav_knights_errant_0",
+        "defense.meleeDefense",
+        "add",
+        5
+      ],
+      "candidateSha256": "de7da900b72bbc42a184bbd0c7e71f9e18b3c3b0b130e791a853434df7171459"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_industry_tournaments",
+        "wh2_main_effect_force_stat_melee_defence_brt_knights",
+        "wh_dlc07_brt_cav_questing_knights_0",
+        "wh_dlc07_brt_cav_questing_knights_0",
+        "defense.meleeDefense",
+        "add",
+        5
+      ],
+      "candidateSha256": "e4092f3701631b28bb36a4cdc43b015f8d77b2dce816e64bd4a5cf5cb296432a"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_industry_tournaments",
+        "wh2_main_effect_force_stat_melee_defence_brt_knights",
+        "wh_dlc07_brt_cav_royal_pegasus_knights_0",
+        "wh_dlc07_brt_cav_royal_pegasus_knights_0",
+        "defense.meleeDefense",
+        "add",
+        5
+      ],
+      "candidateSha256": "faac2b3a670f46d97cb9db3fe28423359ad889263047531b5b2fa47c142cda88"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_industry_tournaments",
+        "wh2_main_effect_force_stat_melee_defence_brt_knights",
+        "wh_main_brt_cav_grail_knights",
+        "wh_main_brt_cav_grail_knights",
+        "defense.meleeDefense",
+        "add",
+        5
+      ],
+      "candidateSha256": "88cfd908b332651b9f67a5470ee2196caf24b63dcf0d8bd736fd7f9f30c19cdb"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_industry_tournaments",
+        "wh2_main_effect_force_stat_melee_defence_brt_knights",
+        "wh_main_brt_cav_knights_of_the_realm",
+        "wh_main_brt_cav_knights_of_the_realm",
+        "defense.meleeDefense",
+        "add",
+        5
+      ],
+      "candidateSha256": "f9904de84564165e12f38c58bb24fabd4f2585f4a2ca36583c3ac27199a83e79"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_industry_tournaments",
+        "wh2_main_effect_force_stat_melee_defence_brt_knights",
+        "wh_main_brt_cav_pegasus_knights",
+        "wh_main_brt_cav_pegasus_knights",
+        "defense.meleeDefense",
+        "add",
+        5
+      ],
+      "candidateSha256": "b9cfcf9a3f545f58746145be477e42c7f61240130ec619d59804eef0f11f9093"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_other_1",
+        "wh_dlc07_effect_force_stat_leadership_peasant_mob",
+        "wh_dlc07_brt_peasant_mob_0",
+        "wh_dlc07_brt_inf_peasant_mob_0",
+        "defense.leadership",
+        "add",
+        5
+      ],
+      "candidateSha256": "3922c67ea77a8bcf54df3fa4668e700c55c977a4327a001192b1c61f4aa481b0"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_other_3",
+        "wh_dlc07_effect_force_stat_melee_attack_peasant_mob",
+        "wh_dlc07_brt_peasant_mob_0",
+        "wh_dlc07_brt_inf_peasant_mob_0",
+        "melee.meleeAttack",
+        "add",
+        10
+      ],
+      "candidateSha256": "de3fb72b3327a4f7ec03855acf72703df16eecb8a96c62b59bd3a216834188eb"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_other_3",
+        "wh_main_effect_tech_recruitment_cost_reduction_peasant_mob",
+        "wh_dlc07_brt_peasant_mob_0",
+        "wh_dlc07_brt_inf_peasant_mob_0",
+        "campaign.recruitmentCost",
+        "multiply",
+        -10
+      ],
+      "candidateSha256": "ee55dff69b9af04ec648e77012ad96def9e6c54c9227dbf27ba2d4805b00552f"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_other_draft",
+        "wh_dlc07_peasant_upkeep_penalty",
+        "wh_dlc07_brt_art_blessed_field_trebuchet_0",
+        "wh_dlc07_brt_art_blessed_field_trebuchet_0",
+        "campaign.upkeep",
+        "multiply",
+        -5
+      ],
+      "candidateSha256": "060eefa8d5a7ad52b962e62f25a02782eebb99dc5051d8093492c8362b7b7fa7"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_other_draft",
+        "wh_dlc07_peasant_upkeep_penalty",
+        "wh_dlc07_brt_inf_battle_pilgrims_0",
+        "wh_dlc07_brt_inf_battle_pilgrims_0",
+        "campaign.upkeep",
+        "multiply",
+        -5
+      ],
+      "candidateSha256": "7233f107374ba0e21d8177caad4282c85b680ab84354ce43b0e8706f535d9adf"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_other_draft",
+        "wh_dlc07_peasant_upkeep_penalty",
+        "wh_dlc07_brt_inf_foot_squires_0",
+        "wh_dlc07_brt_inf_foot_squires_0",
+        "campaign.upkeep",
+        "multiply",
+        -5
+      ],
+      "candidateSha256": "566da2b1f60094276f332d91b62af90d1092f4b5deb3d491f8ee82a0dc71ee29"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_other_draft",
+        "wh_dlc07_peasant_upkeep_penalty",
+        "wh_dlc07_brt_inf_men_at_arms_1",
+        "wh_dlc07_brt_inf_men_at_arms_1",
+        "campaign.upkeep",
+        "multiply",
+        -5
+      ],
+      "candidateSha256": "6dc4e6444988ebaf4ef360fa3c1f2d3a6e316576d2a4c6ec135c1812acf8a1d2"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_other_draft",
+        "wh_dlc07_peasant_upkeep_penalty",
+        "wh_dlc07_brt_inf_men_at_arms_2",
+        "wh_dlc07_brt_inf_men_at_arms_2",
+        "campaign.upkeep",
+        "multiply",
+        -5
+      ],
+      "candidateSha256": "3e20c3371529a84db173face180118b9013234954bc35db6dbb5b2e893f8b85a"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_other_draft",
+        "wh_dlc07_peasant_upkeep_penalty",
+        "wh_dlc07_brt_inf_peasant_bowmen_1",
+        "wh_dlc07_brt_inf_peasant_bowmen_1",
+        "campaign.upkeep",
+        "multiply",
+        -5
+      ],
+      "candidateSha256": "c4d3d4c11e6e2d0e1abcc417f547986fab781eeb6aea863aa54528c0d511d5a1"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_other_draft",
+        "wh_dlc07_peasant_upkeep_penalty",
+        "wh_dlc07_brt_inf_peasant_bowmen_2",
+        "wh_dlc07_brt_inf_peasant_bowmen_2",
+        "campaign.upkeep",
+        "multiply",
+        -5
+      ],
+      "candidateSha256": "8ee594178da14d073ef2f794a8dd9a8d4cc30ce64ad8d3f922ed0a572d7b3bee"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_other_draft",
+        "wh_dlc07_peasant_upkeep_penalty",
+        "wh_dlc07_brt_inf_spearmen_at_arms_1",
+        "wh_dlc07_brt_inf_spearmen_at_arms_1",
+        "campaign.upkeep",
+        "multiply",
+        -5
+      ],
+      "candidateSha256": "432be074e20f1fabf6d6c723886577189812643f4c2ccd9e315318e4d748c54f"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_other_draft",
+        "wh_dlc07_peasant_upkeep_penalty",
+        "wh_dlc07_brt_peasant_mob_0",
+        "wh_dlc07_brt_inf_peasant_mob_0",
+        "campaign.upkeep",
+        "multiply",
+        -5
+      ],
+      "candidateSha256": "59eccbad7bb6c9707606589817e8c42e29825b1e292f68407e3734341620c83b"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_other_draft",
+        "wh_dlc07_peasant_upkeep_penalty",
+        "wh_main_brt_art_field_trebuchet",
+        "wh_main_brt_art_field_trebuchet",
+        "campaign.upkeep",
+        "multiply",
+        -5
+      ],
+      "candidateSha256": "22a511aa263799da9be07872ca88e4aff6220d8d02022545f8152d80fe32792d"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_other_draft",
+        "wh_dlc07_peasant_upkeep_penalty",
+        "wh_main_brt_cav_mounted_yeomen_0",
+        "wh_main_brt_cav_mounted_yeomen_0",
+        "campaign.upkeep",
+        "multiply",
+        -5
+      ],
+      "candidateSha256": "0de15d3d40801984b2b339859de03bf2cf1c5533a027f37536208a49548ba245"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_other_draft",
+        "wh_dlc07_peasant_upkeep_penalty",
+        "wh_main_brt_cav_mounted_yeomen_1",
+        "wh_main_brt_cav_mounted_yeomen_1",
+        "campaign.upkeep",
+        "multiply",
+        -5
+      ],
+      "candidateSha256": "a32cb48f927d99e04a9554139a2008a4b6d0db32d151feae2a3ed30e0c1e15e7"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_other_draft",
+        "wh_dlc07_peasant_upkeep_penalty",
+        "wh_main_brt_inf_men_at_arms",
+        "wh_main_brt_inf_men_at_arms",
+        "campaign.upkeep",
+        "multiply",
+        -5
+      ],
+      "candidateSha256": "3dd53a4c7df43257342605129dc1959c3499ba9ac0cce41eb595274206e48e45"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_other_draft",
+        "wh_dlc07_peasant_upkeep_penalty",
+        "wh_main_brt_inf_peasant_bowmen",
+        "wh_main_brt_inf_peasant_bowmen",
+        "campaign.upkeep",
+        "multiply",
+        -5
+      ],
+      "candidateSha256": "7fc2ace4e0c4f92b344caae4f9360e8cb78d0026c3126448f43285a439e77a99"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_other_draft",
+        "wh_dlc07_peasant_upkeep_penalty",
+        "wh_main_brt_inf_spearmen_at_arms",
+        "wh_main_brt_inf_spearmen_at_arms",
+        "campaign.upkeep",
+        "multiply",
+        -5
+      ],
+      "candidateSha256": "dc0586cad56fd7a6be40b44e85da22e9a33381b901334566f80a967490d9ab96"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_other_fanaticism",
+        "wh2_main_effect_force_stat_melee_attack_pilgrims_reliquae",
+        "wh_dlc07_brt_inf_battle_pilgrims_0",
+        "wh_dlc07_brt_inf_battle_pilgrims_0",
+        "melee.meleeAttack",
+        "add",
+        5
+      ],
+      "candidateSha256": "d5eed60c3a7816ed3b52ca2a0a4103bd711b173c322be26e646b61748f3bd01e"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_other_fanaticism",
+        "wh2_main_effect_force_stat_melee_defence_brt_pilgrims_reliquae",
+        "wh_dlc07_brt_inf_battle_pilgrims_0",
+        "wh_dlc07_brt_inf_battle_pilgrims_0",
+        "defense.meleeDefense",
+        "add",
+        5
+      ],
+      "candidateSha256": "cd864efa76bc07e04a513e6475abf3522ab17d545a13ceb6c8b078e37cf573f2"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_other_fletchers",
+        "wh2_main_effect_force_stat_range_brt_bowmen_yeomen",
+        "wh_dlc07_brt_inf_peasant_bowmen_1",
+        "wh_dlc07_brt_inf_peasant_bowmen_1",
+        "missile.range",
+        "multiply",
+        5
+      ],
+      "candidateSha256": "98afb70ff6a75bbc0eda096fc9d7f176640bf823fbc2c8137244380034356e28"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_other_fletchers",
+        "wh2_main_effect_force_stat_range_brt_bowmen_yeomen",
+        "wh_dlc07_brt_inf_peasant_bowmen_2",
+        "wh_dlc07_brt_inf_peasant_bowmen_2",
+        "missile.range",
+        "multiply",
+        5
+      ],
+      "candidateSha256": "21943ccae384e1d719e98b33ef07309880269017198752060a7d4cee548c8a54"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_other_fletchers",
+        "wh2_main_effect_force_stat_range_brt_bowmen_yeomen",
+        "wh_main_brt_cav_mounted_yeomen_1",
+        "wh_main_brt_cav_mounted_yeomen_1",
+        "missile.range",
+        "multiply",
+        5
+      ],
+      "candidateSha256": "55c0282f73e8e394cb96eca476a937513a7c8f7ba64a8de4553b4644d04ffea0"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_other_fletchers",
+        "wh2_main_effect_force_stat_range_brt_bowmen_yeomen",
+        "wh_main_brt_inf_peasant_bowmen",
+        "wh_main_brt_inf_peasant_bowmen",
+        "missile.range",
+        "multiply",
+        5
+      ],
+      "candidateSha256": "ed60cc8b3b7b7cc29a7ed9e08fe9756f2a74ad8fec518fe86a8b3f271a961874"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_other_spears",
+        "wh2_main_effect_force_stat_melee_attack_brt_spearmen_polemen_yeomen",
+        "wh_dlc07_brt_inf_spearmen_at_arms_1",
+        "wh_dlc07_brt_inf_spearmen_at_arms_1",
+        "melee.meleeAttack",
+        "add",
+        5
+      ],
+      "candidateSha256": "b4a90bf4b7bef7cd5663d72bf910debb9ee0cb8a547f9b7734f95b362ae5e257"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_other_spears",
+        "wh2_main_effect_force_stat_melee_attack_brt_spearmen_polemen_yeomen",
+        "wh_main_brt_cav_mounted_yeomen_0",
+        "wh_main_brt_cav_mounted_yeomen_0",
+        "melee.meleeAttack",
+        "add",
+        5
+      ],
+      "candidateSha256": "728a1e21c1bfc07707bd7cd960cfca9289f93fe3124c0b12b51f76bc5f6de15d"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_other_spears",
+        "wh2_main_effect_force_stat_melee_attack_brt_spearmen_polemen_yeomen",
+        "wh_main_brt_cav_mounted_yeomen_1",
+        "wh_main_brt_cav_mounted_yeomen_1",
+        "melee.meleeAttack",
+        "add",
+        5
+      ],
+      "candidateSha256": "826d74b4bbfe543d21b96a6ad37b0de3449a65e8f1bc86a7a304fb68b4a67cdc"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_other_spears",
+        "wh2_main_effect_force_stat_melee_attack_brt_spearmen_polemen_yeomen",
+        "wh_main_brt_inf_men_at_arms",
+        "wh_main_brt_inf_men_at_arms",
+        "melee.meleeAttack",
+        "add",
+        5
+      ],
+      "candidateSha256": "9fa2cf3d7c72ef8784eed2caabb530ab1bfad74218fbf645d3a3a2aab1664b03"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_other_spears",
+        "wh2_main_effect_force_stat_melee_attack_brt_spearmen_polemen_yeomen",
+        "wh_main_brt_inf_spearmen_at_arms",
+        "wh_main_brt_inf_spearmen_at_arms",
+        "melee.meleeAttack",
+        "add",
+        5
+      ],
+      "candidateSha256": "ed759003f2ed77e0ba41fe85cc1228ce2882ad2944c473948d42953efc5a83b9"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_other_spears",
+        "wh2_main_effect_force_stat_weapon_strength_brt_spearmen_polemen_yeomen",
+        "wh_dlc07_brt_inf_spearmen_at_arms_1",
+        "wh_dlc07_brt_inf_spearmen_at_arms_1",
+        "melee.damage.armorPiercing",
+        "multiply",
+        10
+      ],
+      "candidateSha256": "bf49779e0680a5c7670ca85a882cacb97f3d07aea36131e2e12cbf7ba4d0604a"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_other_spears",
+        "wh2_main_effect_force_stat_weapon_strength_brt_spearmen_polemen_yeomen",
+        "wh_dlc07_brt_inf_spearmen_at_arms_1",
+        "wh_dlc07_brt_inf_spearmen_at_arms_1",
+        "melee.damage.base",
+        "multiply",
+        10
+      ],
+      "candidateSha256": "b34c7b7c04c0803a561e32c0dc60b45092cbe7241af763da4c7c0294313100d9"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_other_spears",
+        "wh2_main_effect_force_stat_weapon_strength_brt_spearmen_polemen_yeomen",
+        "wh_main_brt_cav_mounted_yeomen_0",
+        "wh_main_brt_cav_mounted_yeomen_0",
+        "melee.damage.armorPiercing",
+        "multiply",
+        10
+      ],
+      "candidateSha256": "ef7dd1df076323f3dfc6a65d0e7e7734a7c245094c6fb28d37710033d185d932"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_other_spears",
+        "wh2_main_effect_force_stat_weapon_strength_brt_spearmen_polemen_yeomen",
+        "wh_main_brt_cav_mounted_yeomen_0",
+        "wh_main_brt_cav_mounted_yeomen_0",
+        "melee.damage.base",
+        "multiply",
+        10
+      ],
+      "candidateSha256": "2f3ae1c1fae05d96c5ec9d9d23221793baf83f83aa1bc65f6ad8f6f80c2a117c"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_other_spears",
+        "wh2_main_effect_force_stat_weapon_strength_brt_spearmen_polemen_yeomen",
+        "wh_main_brt_cav_mounted_yeomen_1",
+        "wh_main_brt_cav_mounted_yeomen_1",
+        "melee.damage.armorPiercing",
+        "multiply",
+        10
+      ],
+      "candidateSha256": "00c1f61d84f3bbc10715368dfb4056a256025cf4914af1f564daa27097351215"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_other_spears",
+        "wh2_main_effect_force_stat_weapon_strength_brt_spearmen_polemen_yeomen",
+        "wh_main_brt_cav_mounted_yeomen_1",
+        "wh_main_brt_cav_mounted_yeomen_1",
+        "melee.damage.base",
+        "multiply",
+        10
+      ],
+      "candidateSha256": "17ec320cc737ec823a3d24bdb26bb9a87b91ac48af87015d39f76c418b847da8"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_other_spears",
+        "wh2_main_effect_force_stat_weapon_strength_brt_spearmen_polemen_yeomen",
+        "wh_main_brt_inf_men_at_arms",
+        "wh_main_brt_inf_men_at_arms",
+        "melee.damage.armorPiercing",
+        "multiply",
+        10
+      ],
+      "candidateSha256": "e93023d0675fecbe4a5857f2133615509c439c0d88368af25202558d22552cda"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_other_spears",
+        "wh2_main_effect_force_stat_weapon_strength_brt_spearmen_polemen_yeomen",
+        "wh_main_brt_inf_men_at_arms",
+        "wh_main_brt_inf_men_at_arms",
+        "melee.damage.base",
+        "multiply",
+        10
+      ],
+      "candidateSha256": "7b0daf520140517b8b1ff7450ddf4f7061eb33066b3e88f130f4e0a4d8003d98"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_other_spears",
+        "wh2_main_effect_force_stat_weapon_strength_brt_spearmen_polemen_yeomen",
+        "wh_main_brt_inf_spearmen_at_arms",
+        "wh_main_brt_inf_spearmen_at_arms",
+        "melee.damage.armorPiercing",
+        "multiply",
+        10
+      ],
+      "candidateSha256": "11f0fa1185f5e2428246b73e0a9ac8bfab2f7d77cb4df77f4cf5e5182cb9082b"
+    },
+    {
+      "identity": [
+        "wh_dlc07_tech_brt_economy_other_spears",
+        "wh2_main_effect_force_stat_weapon_strength_brt_spearmen_polemen_yeomen",
+        "wh_main_brt_inf_spearmen_at_arms",
+        "wh_main_brt_inf_spearmen_at_arms",
+        "melee.damage.base",
+        "multiply",
+        10
+      ],
+      "candidateSha256": "42542c8f38553e23299d58ab4ee11585c280bcd4cb4ee0cbc830d64737abc046"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "inputDirectEffects": 15,
+  "inputCandidates": 96,
+  "admittedTechnologies": 10,
+  "admittedEffects": 15,
+  "admittedCandidates": 96,
+  "targetUnits": 22,
+  "paths": [
+    "campaign.recruitmentCost",
+    "campaign.upkeep",
+    "defense.armor",
+    "defense.leadership",
+    "defense.meleeDefense",
+    "melee.chargeBonus",
+    "melee.damage.armorPiercing",
+    "melee.damage.base",
+    "melee.meleeAttack",
+    "missile.range"
+  ],
+  "operations": {
+    "add": 37,
+    "multiply": 59
+  },
+  "partialTechnologies": [
+    {
+      "key": "wh_dlc07_tech_brt_economy_other_1",
+      "name": "Almshouses"
+    },
+    {
+      "key": "wh_dlc07_tech_brt_economy_other_fletchers",
+      "name": "Professional Fletchers"
+    },
+    {
+      "key": "wh_dlc07_tech_brt_economy_other_draft",
+      "name": "Registered Draft"
+    },
+    {
+      "key": "wh_dlc07_tech_brt_economy_industry_steel",
+      "name": "Steel Furnaces"
+    },
+    {
+      "key": "wh_dlc07_tech_brt_economy_other_3",
+      "name": "Subsidised Tools"
+    }
+  ],
+  "rejectedCandidates": 0,
+  "skippedEffects": 164,
+  "collisionCount": 0,
+  "legacyContexts": 21,
+  "legacyModifiers": 42,
+  "projectionSha256": "cbec05a6ab8a4b6b901fa8daa9343363092f691d485d0fb446648b695e6a74ff"
+}

@@ -1,3 +1,4 @@
+import {verifyProtected} from '../tools/wh3-importer/research-admission-batch-01/protected.mjs';
 import {readFileSync as read,writeFileSync as write} from 'node:fs';
 import assert from 'node:assert/strict';
 import {reviewScope,sourceSha256,baselineReportSha256} from '../tools/wh3-importer/research-scope-review-01/review.mjs';
@@ -7,13 +8,9 @@ const json=p=>JSON.parse(read(file(p))),manifest=json(dir+'manifest.json');
 assert.equal(manifest.format,'wh3-research-scope-review-manifest-v1');
 assert.equal(manifest.baselineCommit,'aef2d61bc59c507c0aad21ea01e4183538bba2c4');
 assert.equal(manifest.sourceSha256,sourceSha256);assert.equal(manifest.baselineReportSha256,baselineReportSha256);
-for(const [path,hash] of Object.entries(manifest.unchangedFiles)) {
-  const bytes=read(file(path));assert.equal(sha256(/\.(?:mjs|ts|tsx|ps1|md)$/.test(path)?bytes.toString().replace(/\r\n/g,'\n'):bytes),hash,`Existing file changed: ${path}`);
-}
+for(const [path,hash] of Object.entries(manifest.unchangedFiles)) verifyProtected(path,hash);
 const protectedManifest=json(manifest.protectedManifestPath);
-for(const [path,hash] of Object.entries(protectedManifest.protectedFiles)) {
-  const bytes=read(file(path));assert.equal(sha256(/\.(?:mjs|ts|tsx|ps1|md)$/.test(path)?bytes.toString().replace(/\r\n/g,'\n'):bytes),hash,`Protected file changed: ${path}`);
-}
+for(const [path,hash] of Object.entries(protectedManifest.protectedFiles)) verifyProtected(path,hash);
 const result=reviewScope(read(file(manifest.sourceRef)),read(file('src/data/units.json')),
   json('tools/wh3-importer/research-scan-bretonnia/manifest.json'),
   read(file('tools/wh3-importer/research-classifier/policy.mjs')),read(file('tools/wh3-importer/research-classifier/classify.mjs')));

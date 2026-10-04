@@ -1,3 +1,4 @@
+import {verifyProtected} from '../tools/wh3-importer/research-admission-batch-01/protected.mjs';
 import {readFileSync as read,writeFileSync as write} from 'node:fs';
 import assert from 'node:assert/strict';
 import {reviewMappings,verifyBatchRegression,sourceSha256} from '../tools/wh3-importer/research-mapping-review-01/review.mjs';
@@ -23,10 +24,7 @@ for(const [name,value] of Object.entries({'source-trace.json':result.trace,'revi
   if(process.argv.includes('--write')) {write(file(dir+name),bytes);manifest.outputs={...manifest.outputs,[name]:sha256(bytes)};}
   else {assert.equal(read(file(dir+name),'utf8'),bytes,`${name} replay drift`);assert.equal(sha256(bytes),manifest.outputs[name]);}
 }
-for(const [path,hash] of Object.entries(manifest.protectedFiles)) {
-  const bytes=read(file(path));const value=/\.(?:mjs|ts|tsx|ps1|md)$/.test(path)?bytes.toString().replace(/\r\n/g,'\n'):bytes;
-  assert.equal(sha256(value),hash,`Protected file changed: ${path}`);
-}
+for(const [path,hash] of Object.entries(manifest.protectedFiles)) verifyProtected(path,hash);
 if(process.argv.includes('--write')) write(file(dir+'manifest.json'),JSON.stringify(manifest,null,2)+'\n');
 console.log('Exact mapping review replay PASS: 8 reviewed / 6 DIRECT / 2 REVIEW; batch:',batch.DIRECT_CANDIDATE,
   '; full scan:',JSON.stringify({before:result.delta.before.effects.counts,after:result.delta.after.effects.counts,

@@ -8,7 +8,8 @@ const { MemoryRouter } = require('react-router-dom');
 const App = require('../.test-build/src/App.js').default;
 const { comparisonUnit, comparisonOptions } = require('../.test-build/src/repositories/productionUnitSelection.js');
 const { caResearchEffects, calculateResearchAndManual: calculateSelected, researchModifiers: modifiersSelected, modifierSourceLabel: sourceSelected } = require('../.test-build/src/domain/caResearchEffect.js');
-const research = caResearchEffects[0];
+const legacy = JSON.parse(readFileSync('tools/wh3-importer/research-admission-batch-01/legacy-projection.json'));
+const research = caResearchEffects.find(p=>p.researchKey===legacy[0].researchKey&&p.unitId===legacy[0].unitId);
 // Original single-slice assertions retained against the identical first entry.
 const calculate = (unit, rows, selected) => calculateSelected(unit, rows, selected ? [research.researchKey] : []);
 const researchModifiers = unit => modifiersSelected(unit, [research.researchKey]);
@@ -26,14 +27,14 @@ test('actual CA research replay preserves exact identity/localisation/scope/memb
   const first = reviewResearch(sourceBytes, admission);
   assert.deepEqual(first, reviewResearch(sourceBytes, admission));
   assert.equal(JSON.stringify(first.review, null, 2) + '\n', readFileSync('tools/wh3-importer/research-slice/review.json', 'utf8'));
-  assert.deepEqual(first.projection, research);
+  assert.deepEqual(first.projection, legacy[0]);
   assert.equal(first.review.status, 'VERIFIED');
   assert.equal(research.name, 'Regular Tournaments');
   assert.equal(research.researchKey, 'wh_dlc07_tech_brt_economy_industry_tournaments');
   assert.equal(research.sourceKind, 'CA_RESEARCH');
   assert.equal(research.unitId, grail.id);
   assert.deepEqual(research.scope, { key: 'faction_to_force_own_unseen', location: 'factionwide', ownership: 'yours', source: 'faction', target: 'force', territory: 'any' });
-  assert.deepEqual(research.modifiers.map(m => [m.stat, m.operation, m.value]), [['melee.meleeAttack', 'add', 5], ['defense.meleeDefense', 'add', 5]]);
+  assert.deepEqual(research.modifiers.map(m => [m.stat, m.operation, m.value]).sort(), [['melee.meleeAttack', 'add', 5], ['defense.meleeDefense', 'add', 5]].sort());
 });
 
 test('CA source/schema/scope/identity/value/hash/snapshot mutation requires re-review', async () => {

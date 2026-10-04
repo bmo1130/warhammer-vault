@@ -32,9 +32,10 @@ IndexedDB v2는 기존 v1 store를 보존하며 `manualModifierProfiles`만 추�
 JSON 백업은 v1을 유지하고 선택 필드 `manualModifierProfiles`를 추가했습니다.
 이전 백업의 누락 필드는 빈 목록으로 복원되므로 기존 Profile도 비워집니다.
 잘못된 Profile이 포함된 백업은 개인 데이터를 교체하기 전에 거부합니다.
-실제 CA 연구 8개 표본을 검토하여 **5개 연구의 DIRECT 숫자 효과**만 read-only로
+Bretonnia full scan의 **10개 연구 · 15개 DIRECT 효과 · 96개 Modifier**를 별도
+reviewed admission gate로 승인하여 22개 exact Production 유닛에서 read-only로
 선택할 수 있습니다. Grail Knights에는 Regular Tournaments, Blinker Hoods,
-Master Swordsmiths가 표시되며 다른 유닛도 exact reviewed target인 경우만 표시됩니다.
+Master Swordsmiths, Steel Furnaces가 표시되며 다른 유닛도 exact reviewed target인 경우만 표시됩니다.
 혼합 연구의 미지원 효과는 계산에서 제외하고 상세에 명시합니다.
 검토된 factionwide own-force/unit-set 근거로 기존 엔진에 전달하며 수동 행과 출처를 구분합니다. 연구 선택은
 Profile/IndexedDB에 저장하지 않습니다. [Source/review/replay 근거](tools/wh3-importer/research-slice/REVIEW.md)는
@@ -42,6 +43,12 @@ Profile/IndexedDB에 저장하지 않습니다. [Source/review/replay 근거](to
 Production 원본 및 admission을 변경하지 않습니다.
 [8개 표본의 분류·admission·일반화 경계](tools/wh3-importer/research-batch-01/REVIEW.md)는
 exact membership과 scope를 분리하며 selector/conditional/unknown 효과를 자동 추론하지 않습니다.
+[현재 admission과 앱 projection](tools/wh3-importer/research-admission-batch-01/REVIEW.md)은
+`node scripts/admit-bretonnia-research.mjs`로 재현합니다. 기술 metadata는 한 번만
+저장하고 효과·대상·Modifier를 분리합니다. 기존 21개 context / 42개 Modifier는
+historical projection으로 보존하며 새 projection에서 exact 의미 일치를 검증합니다.
+151 REVIEW_REQUIRED 효과는 승인하지 않습니다. 연구 하나의 선택은 현재 유닛에
+승인된 효과만 적용하며, 부분 적용 기술 5개는 제외 효과를 상세에 표시합니다.
 
 - `src/data`: 읽기 전용 WH3 Unit JSON과 별도의 diagnostic 표시 자료. 구조 검증용 샘플 수치는 비워 두고, 검토된 production 부분집합만 실제 기본값을 포함합니다.
 - `src/domain/types.ts`: WH3 엔티티와 향후 Modifier, ModProfile, CampaignProfile, Roster 타입. 팩션 소속 관계는 각 엔티티의 `factionId`만 사용합니다.

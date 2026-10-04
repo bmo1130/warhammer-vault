@@ -82,13 +82,15 @@ export default function CalculatorPage() {
   return <>
     <PageIntro eyebrow="MODIFIER CALCULATOR" title="스탯 계산기" description="수동 Modifier와 검토된 WH3 연구를 선택해 기본값과 계산 결과를 확인하세요."/>
     <ProductionUnitSelector label="계산할 유닛" id={unitId} onSelect={selectUnit} disabled={busy}/>
-    {availableResearch.length > 0 && <section className="panel section" aria-label="WH3 Research">
+    {availableResearch.length > 0 && <section className="panel calculator-research section" aria-label="WH3 Research">
       <h2>WH3 Research</h2>
       <p className="data-note">선택한 exact 유닛에 검토된 숫자 효과만 표시합니다. 소유한 브레토니아 팩션에서 연구를 완료한 조건이며, 선택은 Profile에 저장되지 않습니다.</p>
-      {availableResearch.map(research => <div key={research.researchKey}>
+      {availableResearch.map(research => <div className="research-entry" key={research.researchKey}>
         <label><input type="checkbox" checked={selectedResearch.includes(research.researchKey)} disabled={busy} onChange={event => setSelectedResearch(current => event.target.checked ? [...current, research.researchKey] : current.filter(key => key !== research.researchKey))}/> {research.name}</label>
+        {research.partial && <p className="data-note">부분 적용 · 검증된 효과만 적용</p>}
         <p className="data-note">{research.modifiers.map(m => `${modifierStatLabels[m.stat as UnitStatPath]} ${signed(m.value)}${m.operation === 'multiply' ? '%' : ''}`).join(' · ')}</p>
         <details><summary>{research.name} · CA source · read-only</summary><p className="data-note">{research.researchKey}<br/>main: {research.mainKey}<br/>land: {research.landKey}<br/>Scope: factionwide · own forces<br/>WH3 {research.gameVersion}<br/>Reviewed source SHA256: {research.sourceSha256}<br/>Snapshot: {research.snapshotId}</p>
+          {research.modifiers.map(m => <p className="data-note" key={m.id}>{m.source}<br/>{modifierStatLabels[m.stat as UnitStatPath]} · {operationLabels[m.operation as keyof typeof operationLabels]} · {signed(m.value)}{m.operation === 'multiply' ? '%' : ''}</p>)}
           {research.omittedEffects?.map(effect => <p className="data-note" key={effect.effectKey}>계산 제외: {effect.effectKey} · {effect.classification} · {effect.reason}</p>)}
         </details>
       </div>)}

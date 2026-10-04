@@ -1,0 +1,50 @@
+{
+  "format": "wh3-reviewed-research-admission-v1",
+  "baselineCommit": "fa163c22b1ea85eb7ec01c48399075bde27aed26",
+  "sourceSha256": "72dc47e15caa9df8a6a79ccdbe21bdf6b71d3afda9ea0a6da8e895ee881146a8",
+  "reportSha256": "97166548e93f0144c29ddc0b412f17719f450fbd90625b78d66ab6a1756d0aa3",
+  "policySha256": "e9547fb5ee2967dee06a70bdf1848846b56d7a1667d91b90936b6c081866aba7",
+  "classifierSha256": "921e6778ea532cff17bfc94ece5b5c164eaabea08054089f79af29161cf8921c",
+  "reviewedInputSha256": "3deafb31f6029ee5dadd1e8f95055ef0c99ec6e1ceab6da5b76d6472d97a3d44",
+  "unitsSha256": "da22d7eb4d6af13856274e3f81fe18c789ed6588b6e0c956cbf97583f1350dc1",
+  "snapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+  "legacySha256": "8faa8083057cd69360486563aff4c9c7633e2cf4d2df39e1e109adc3804d99b0",
+  "replay": "node scripts/admit-bretonnia-research.mjs",
+  "forwardFiles": {
+    "src/data/caResearchEffect.json": {
+      "before": "8faa8083057cd69360486563aff4c9c7633e2cf4d2df39e1e109adc3804d99b0",
+      "after": "cbec05a6ab8a4b6b901fa8daa9343363092f691d485d0fb446648b695e6a74ff",
+      "reason": "Reviewed admission/application integration; historical outputs and all legacy Modifier semantics preserved"
+    },
+    "src/domain/caResearchEffect.ts": {
+      "before": "865bbb4f21ecabdbbf4b4d7195d695e4fd06aaee190f650c07bc25130d8e25d3",
+      "after": "bc5a686c29e56d20e38f186402a3dab559be871ba9d018feb90b498ece0cec41",
+      "reason": "Reviewed admission/application integration; historical outputs and all legacy Modifier semantics preserved"
+    },
+    "src/pages/CalculatorPage.tsx": {
+      "before": "a41b3f4d98e740622fd44289b6edbb69587dd73796c5962019fb3653f42456fe",
+      "after": "89bb7b79c9c4d952c4e72a986d9e907d3fbc2d54c12f83ce0fcef2c5bcc4d6ff",
+      "reason": "Reviewed admission/application integration; historical outputs and all legacy Modifier semantics preserved"
+    },
+    "src/style.css": {
+      "before": "abbaa38a7b56175cebbfa752a575f310f1f8eb8eee8946b7ee85e5de8ac97084",
+      "after": "539344839f0754411a095d02ee79e0a5955a7d83fcc2d3a34d9436bef566c6a4",
+      "reason": "Reviewed admission/application integration; historical outputs and all legacy Modifier semantics preserved"
+    },
+    "scripts/review-bretonnia-research.mjs": {
+      "before": "0201b730f5ab904703754ebbdfbc2200bb9f9a167ced3c6f4bb287f9fb8f9286",
+      "after": "57364b2febd22ecaa6d95c15d0cd8736a37a39c64a37da31e7df75a5e9cbcec0",
+      "reason": "Reviewed admission/application integration; historical outputs and all legacy Modifier semantics preserved"
+    },
+    "scripts/review-research-mappings.mjs": {
+      "before": "2556e87b1fdd2eb70cd2c8599a83dfc8770b981473517eed6a5b3df8af26f95e",
+      "after": "9a3219eb43645ab56b30c1bdb448c78974aea09c876dbcf590ac5b3122e7d251",
+      "reason": "Reviewed admission/application integration; historical outputs and all legacy Modifier semantics preserved"
+    }
+  },
+  "outputs": {
+    "admission.json": "ed2313aa24e7166a1e4ef6708a7561d21643d147ae5dbebb0f3565104de86a4b",
+    "summary.json": "691856eb525b8d506354579522e38ee79e5ec849a0e4622d2bfd825e49b9bdd2",
+    "projection.json": "cbec05a6ab8a4b6b901fa8daa9343363092f691d485d0fb446648b695e6a74ff"
+  }
+}

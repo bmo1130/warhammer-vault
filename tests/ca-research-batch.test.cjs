@@ -12,6 +12,7 @@ const hash = bytes => createHash('sha256').update(bytes).digest('hex');
 const dir = 'tools/wh3-importer/research-batch-01/';
 const sourceBytes = readFileSync(dir+'source.json'), policyBytes = readFileSync(dir+'policy.json'), unitsBytes = readFileSync('src/data/units.json');
 const admission = JSON.parse(readFileSync(dir+'admission.json')), report = JSON.parse(readFileSync(dir+'review.json'));
+const legacy = JSON.parse(readFileSync('tools/wh3-importer/research-admission-batch-01/legacy-projection.json'));
 const key = suffix => 'wh_dlc07_tech_brt_economy_'+suffix;
 const grail = comparisonUnit('ca_unit_wh_main_brt_cav_grail_knights');
 const pilgrim = comparisonUnit('ca_unit_wh_dlc07_brt_inf_battle_pilgrims_0');
@@ -21,14 +22,14 @@ const close = (a,b) => assert(Math.abs(a-b)<1e-10,`${a} != ${b}`);
 
 test('eight exact CA candidates replay classification/trace/projection deterministically with original slice intact', async()=>{
   const { reviewBatch } = await import('../tools/wh3-importer/research-batch-01/review.mjs');
-  const baseline = projected[0];
+  const baseline = legacy[0];
   const first = reviewBatch(sourceBytes,policyBytes,admission,unitsBytes,baseline);
   assert.deepEqual(first,reviewBatch(sourceBytes,policyBytes,admission,unitsBytes,baseline));
-  assert.deepEqual(first.review,report); assert.deepEqual(first.projections,projected);
+  assert.deepEqual(first.review,report); assert.deepEqual(first.projections,legacy);
   assert.equal(report.candidates.length,8);
   assert.deepEqual(report.candidates.map(c=>c.classification),['DIRECT_SUPPORTED','DIRECT_SUPPORTED','DIRECT_SUPPORTED','SUPPORTED_WITH_LIMITATION','SUPPORTED_WITH_LIMITATION','AMBIGUOUS','SUPPORTED_WITH_LIMITATION','UNSUPPORTED']);
-  assert.equal(new Set(projected.map(p=>p.researchKey)).size,5); assert.equal(projected.length,21);
-  for(const p of projected) {
+  assert.equal(new Set(legacy.map(p=>p.researchKey)).size,5); assert.equal(legacy.length,21);
+  for(const p of legacy) {
     const c = report.candidates.find(c=>c.key===p.researchKey);
     assert(c.admittedTargets.some(t=>t.unitId===p.unitId));
     for(const m of p.modifiers) assert.equal(c.effects.find(e=>e.effectKey===m.source.split(' · ')[1]).classification,'DIRECT_SUPPORTED');
@@ -39,9 +40,9 @@ test('eight exact CA candidates replay classification/trace/projection determini
 });
 
 test('exact positive/negative applicability uses main membership, preserves differing land identity and set overlaps',()=>{
-  assert.deepEqual(researchesForUnit(grail).map(p=>p.researchKey),selected);
-  assert.deepEqual(researchesForUnit(pilgrim).map(p=>p.researchKey),[key('industry_swords'),key('other_fanaticism')]);
-  assert.deepEqual(researchesForUnit(peasant).map(p=>p.researchKey),[key('other_3')]);
+  assert.deepEqual(researchesForUnit(grail).map(p=>p.researchKey).sort(),[...selected,key('industry_steel')].sort());
+  assert.deepEqual(researchesForUnit(pilgrim).map(p=>p.researchKey).sort(),[key('industry_swords'),key('other_fanaticism'),key('other_draft')].sort());
+  assert.deepEqual(researchesForUnit(peasant).map(p=>p.researchKey).sort(),[key('other_3'),key('other_1'),key('other_draft')].sort());
   assert.equal(researchesForUnit(peasant)[0].landKey,'wh_dlc07_brt_inf_peasant_mob_0');
   assert(researchesForUnit(peasant)[0].mainKey!==researchesForUnit(peasant)[0].landKey);
   for(const suffix of ['other_fanaticism','other_3','industry_4','farm_3','other_siege']) assert(calculate(grail,[],[key(suffix)]).error);
@@ -93,7 +94,7 @@ test('unknown base stays unknown, invalid inputs reject whole result and non-app
 
 test('source, interpretation, exact target, exclude, schema, scope, operation, pack/snapshot mutations fail closed',async()=>{
   const { reviewBatch } = await import('../tools/wh3-importer/research-batch-01/review.mjs');
-  const source = JSON.parse(sourceBytes), policy = JSON.parse(policyBytes), baseline = projected[0];
+  const source = JSON.parse(sourceBytes), policy = JSON.parse(policyBytes), baseline = legacy[0];
   const mutations = [
     s=>{s.rows.find(r=>r.table==='technologies_tables').row.key='wrong'},
     s=>{s.rows.find(r=>r.table==='Loc').row.key='wrong'},
