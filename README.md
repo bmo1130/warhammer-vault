@@ -64,6 +64,13 @@ Alberic 전용 Rank 1이며 exact Foot Squires에 리더십 +5, 근접 공격 +8
 다중 rank의 실제 누적 방식, character-self, selector 및 mixed 미지원 효과는
 자동 승인하지 않습니다. `node scripts/review-skill-batch-01.mjs`로 검토·admission·projection을 재현합니다.
 
+[Skill batch-02](tools/wh3-importer/skill-batch-02/REVIEW.md)은 추가 12개 exact Skill을
+검토하고 **Blessed Water**만 admission합니다. Exact Fay Enchantress의 rank 1 /
+own-force / explicit Battle Pilgrims membership / 기존 charge +30% mapping을
+재사용합니다. Secrets of the Grail과 실제 target은 겹치지만 resistance operation은
+미검증이므로 `NO VERIFIED MULTI-SKILL TARGET`으로 유지합니다. 기존 Skill/Research
+artifact와 Unit 데이터는 보존하며 `node scripts/review-skill-batch-02.mjs`로 독립 replay합니다.
+
 - `src/data`: 읽기 전용 WH3 Unit JSON과 별도의 diagnostic 표시 자료. 구조 검증용 샘플 수치는 비워 두고, 검토된 production 부분집합만 실제 기본값을 포함합니다.
 - `src/domain/types.ts`: WH3 엔티티와 향후 Modifier, ModProfile, CampaignProfile, Roster 타입. 팩션 소속 관계는 각 엔티티의 `factionId`만 사용합니다.
 - `src/domain/unit.ts`: 의미별 유닛 스키마와 원본 숫자 필드의 `UnitStatPath` 타입.

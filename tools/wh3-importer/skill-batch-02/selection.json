@@ -1,0 +1,18 @@
+{
+  "baselineCommit": "bf61a1212ca454db3f971b473c4f83c23e61cf81",
+  "scope": "Twelve exact skills selected from bounded node metadata for Alberic, Fay Enchantress, Louen and Repanse. Prior target overlap searched first; no faction-wide skill effect scan.",
+  "skills": [
+    {"key":"wh2_dlc07_skill_brt_alberic_special_0"},
+    {"key":"wh2_dlc07_skill_brt_alberic_special_1"},
+    {"key":"wh2_dlc07_skill_brt_alberic_special_2"},
+    {"key":"wh2_dlc07_skill_brt_alberic_special_3"},
+    {"key":"wh_dlc07_skill_brt_fay_battle_blessed_water"},
+    {"key":"wh_dlc07_skill_brt_fay_battle_secrets_of_the_grail"},
+    {"key":"wh_main_skill_brt_lord_unique_louen_the_army_of_the_king"},
+    {"key":"wh_main_skill_brt_lord_unique_louen_beloved_son_of_bretonnia"},
+    {"key":"wh2_dlc14_skill_brt_repanse_the_peoples_hero"},
+    {"key":"wh2_dlc14_skill_brt_repanse_eternal_errantry_war"},
+    {"key":"wh_main_skill_brt_lord_battle_lionhearted"},
+    {"key":"wh_main_skill_brt_lord_battle_virtue_of_empathy"}
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "sourceKind": "CA_SKILL",
+  "admittedSkills": [
+    "wh_dlc07_skill_brt_fay_battle_blessed_water"
+  ],
+  "admittedTargets": [
+    {
+      "unitId": "ca_unit_wh_dlc07_brt_inf_battle_pilgrims_0",
+      "mainKey": "wh_dlc07_brt_inf_battle_pilgrims_0",
+      "landKey": "wh_dlc07_brt_inf_battle_pilgrims_0"
+    }
+  ],
+  "effects": 1,
+  "modifiers": 1,
+  "omittedTargets": [
+    {
+      "mainKey": "wh_dlc07_brt_inf_grail_reliquae_0",
+      "landKey": "wh_dlc07_brt_inf_grail_reliquae_0",
+      "reason": "TARGET_NOT_IN_PRODUCTION"
+    },
+    {
+      "mainKey": "wh_pro04_brt_inf_battle_pilgrims_ror_0",
+      "landKey": "wh_pro04_brt_inf_battle_pilgrims_ror_0",
+      "reason": "TARGET_NOT_IN_PRODUCTION"
+    }
+  ],
+  "deferredSkills": [
+    {
+      "skillKey": "wh2_dlc07_skill_brt_alberic_special_0",
+      "status": "SUPPORTED_WITH_LIMITATION",
+      "reason": "ACTUAL_TYPED_NON_UNIT_ROUTE_NO_NUMERIC_UNIT_PROJECTION"
+    },
+    {
+      "skillKey": "wh2_dlc07_skill_brt_alberic_special_1",
+      "status": "NON_UNIT_STAT",
+      "reason": "ACTUAL_TYPED_NON_UNIT_ROUTE_NO_NUMERIC_UNIT_PROJECTION"
+    },
+    {
+      "skillKey": "wh2_dlc07_skill_brt_alberic_special_2",
+      "status": "NON_UNIT_STAT",
+      "reason": "ACTUAL_TYPED_NON_UNIT_ROUTE_NO_NUMERIC_UNIT_PROJECTION"
+    },
+    {
+      "skillKey": "wh2_dlc07_skill_brt_alberic_special_3",
+      "status": "NON_UNIT_STAT",
+      "reason": "ACTUAL_TYPED_NON_UNIT_ROUTE_NO_NUMERIC_UNIT_PROJECTION"
+    },
+    {
+      "skillKey": "wh_dlc07_skill_brt_fay_battle_secrets_of_the_grail",
+      "status": "REVIEW_REQUIRED",
+      "reason": "SPELL_PERCENTAGE_LABEL_AND_PATH_EXIST_BUT_OPERATION_NOT_PREVIOUSLY_VALIDATED"
+    },
+    {
+      "skillKey": "wh_main_skill_brt_lord_unique_louen_the_army_of_the_king",
+      "status": "UNSUPPORTED",
+      "reason": "REPLENISHMENT_NO_UNIT_STAT_PATH"
+    },
+    {
+      "skillKey": "wh_main_skill_brt_lord_unique_louen_beloved_son_of_bretonnia",
+      "status": "NON_UNIT_STAT",
+      "reason": "ACTUAL_TYPED_NON_UNIT_ROUTE_NO_NUMERIC_UNIT_PROJECTION"
+    },
+    {
+      "skillKey": "wh2_dlc14_skill_brt_repanse_the_peoples_hero",
+      "status": "SUPPORTED_WITH_LIMITATION",
+      "reason": "CLASS_SELECTOR_NOT_EXPLICIT_MEMBERSHIP"
+    },
+    {
+      "skillKey": "wh2_dlc14_skill_brt_repanse_eternal_errantry_war",
+      "status": "NON_UNIT_STAT",
+      "reason": "ACTUAL_TYPED_NON_UNIT_ROUTE_NO_NUMERIC_UNIT_PROJECTION"
+    },
+    {
+      "skillKey": "wh_main_skill_brt_lord_battle_lionhearted",
+      "status": "REVIEW_REQUIRED",
+      "reason": "SHARED_OWNER_NOT_ADMITTED"
+    },
+    {
+      "skillKey": "wh_main_skill_brt_lord_battle_virtue_of_empathy",
+      "status": "REVIEW_REQUIRED",
+      "reason": "SHARED_OWNER_NOT_ADMITTED"
+    }
+  ],
+  "multipleSkillStatus": "NO VERIFIED MULTI-SKILL TARGET",
+  "reviewSha256": "1cc038aba770878a7c5ed0938479bb3e939fa42ba57a9a8c87ccf55e26a6d9d0",
+  "projectionSha256": "a4a0ae8423ff52efb9fec530d3b575b9db23f00f0a28778a2a36639237c6af22"
+}

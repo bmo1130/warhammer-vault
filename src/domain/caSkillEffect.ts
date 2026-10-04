@@ -1,5 +1,6 @@
 import projection from '../data/caSkillEffect.json';
 import batchProjection from '../data/caSkillBatch01.json';
+import batch02Projection from '../data/caSkillBatch02.json';
 import type {Modifier} from './types';
 import type {Unit} from './unit';
 import type {DraftModifierRow} from './manualModifierProfile';
@@ -7,7 +8,7 @@ import {calculateResearchAndManual,researchModifiers,modifierSourceLabel} from '
 import {applyModifiersWithBreakdown} from './unitModifiers';
 
 export type SkillSelection = {skillKey:string; ownerKey:string; rank:number};
-const admittedSkills=[projection,batchProjection];
+const admittedSkills=[projection,batchProjection,batch02Projection];
 export function skillsForUnit(unit:Unit){
   return admittedSkills.filter(skill=>unit.gameVersion===skill.gameVersion&&skill.targets.some(t=>t.unitId===unit.id));
 }

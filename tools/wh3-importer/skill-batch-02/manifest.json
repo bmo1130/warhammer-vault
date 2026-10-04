@@ -1,0 +1,87 @@
+{
+  "format": "wh3-skill-batch-02-admission-v1",
+  "baselineCommit": "bf61a1212ca454db3f971b473c4f83c23e61cf81",
+  "sourceSha256": "b4829eb640ef94deef53f105fdd1da47697b41ebacabb4954b80b609d9ade0de",
+  "originalExtractionSha256": "a86ce636f8232f085d44e3e5482c8984cfa4c3bb4e3bbce9266f3acf08b85085",
+  "processedSchemasSha256": "2656907c264b9d5a43ad959100ac3f16990adc674eb7daad0ab78c8721906f1a",
+  "snapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+  "unitsSha256": "da22d7eb4d6af13856274e3f81fe18c789ed6588b6e0c956cbf97583f1350dc1",
+  "selectionSha256": "915ee80962af598ecc47c113768da652fe7845cb43ec60fe047d87db1b7195ef",
+  "admittedSkills": [
+    "wh_dlc07_skill_brt_fay_battle_blessed_water"
+  ],
+  "admittedTargets": [
+    {
+      "unitId": "ca_unit_wh_dlc07_brt_inf_battle_pilgrims_0",
+      "mainKey": "wh_dlc07_brt_inf_battle_pilgrims_0",
+      "landKey": "wh_dlc07_brt_inf_battle_pilgrims_0"
+    }
+  ],
+  "replay": "node scripts/review-skill-batch-02.mjs",
+  "outputs": {
+    "review.json": "1cc038aba770878a7c5ed0938479bb3e939fa42ba57a9a8c87ccf55e26a6d9d0",
+    "admission.json": "b66c2ce110e50bfeb03f05783f4c23b81ec4343680794613684cf84a96e2d098",
+    "projection.json": "a4a0ae8423ff52efb9fec530d3b575b9db23f00f0a28778a2a36639237c6af22"
+  },
+  "appFiles": {
+    "src/domain/caSkillEffect.ts": {
+      "before": "466b5897d7a4ec854af8204e39db542d12d78632401c2107843cce9d38231884",
+      "after": "99927a4613aec907687051f66ccef0d8d0d554de7ff4fd7705139013710574aa"
+    }
+  },
+  "preservedFiles": {
+    "src/data/caResearchEffect.json": "cbec05a6ab8a4b6b901fa8daa9343363092f691d485d0fb446648b695e6a74ff",
+    "src/data/caSkillEffect.json": "f12ddeaf15cd6270ca417521e8ae0d632a9574547a563309cedd2cb362110831",
+    "src/data/factions.json": "a0868547e7a96b69649e470bb024eaa9bb55813139df04d3ff01d5d94e8d650e",
+    "src/data/lords.json": "20f98108ea724f8e802c93201ec3b3c3a4055e23ac844840e2f464b138881b8a",
+    "src/data/unitDiagnostics.json": "1abbe4b8251320e86dbe7470bf3cf3729b7759c7c71af2af2b5b9f4ce680bb1f",
+    "src/data/unitHpAdmissions.json": "2d4e0e79e755086170358325427bfa6d6395f2d6162ba250f83b0404b21a17bd",
+    "src/data/unitSharedIdentities.json": "3e256bf5c850df65e70a539062a5109a36c75757f8f3a34bc75d8b492aa9d13e",
+    "src/data/unitSpeedAdmissions.json": "2c397f2677e78c92bf9fc91c6c82c1dc43c19798e5c43335872b954f29a1e8dd",
+    "src/data/units.json": "da22d7eb4d6af13856274e3f81fe18c789ed6588b6e0c956cbf97583f1350dc1",
+    "src/domain/manualModifierProfile.ts": "7fe69637988e86d1fa1dfca29f6bea48ef87e8866ac930d7d27ce9c9d650179a",
+    "src/domain/types.ts": "8f33dfefa16943b5844f0b8f1270eb77bc7a36ee5cf0668615576ce33e69b731",
+    "src/domain/unit.ts": "890ecfcb9921effa8a14b395546bc1895c668a042311049adf6c9b6ee34f9604",
+    "src/domain/unitComparison.ts": "b7f3b72b85d361753af19eac2a0e32115c7f0d9a25cb9d9dc4d4d902c2da45a2",
+    "src/domain/unitModifiers.ts": "c185726116535146a58aab97a6c3208382d8e98effb8f7d8cfe72ae371e1ff91",
+    "src/repositories/wikiRepository.ts": "94f3254504f374c3be789276e0b6ff930b4eff4920b0e75492d258e761930fcd",
+    "tools/wh3-importer/research-admission-batch-01/REVIEW.md": "ac7121be2aae06ec6debcf008dd418ea10d1368a7524fc8b827adb7261ed5f5c",
+    "tools/wh3-importer/research-admission-batch-01/admission.json": "ed2313aa24e7166a1e4ef6708a7561d21643d147ae5dbebb0f3565104de86a4b",
+    "tools/wh3-importer/research-admission-batch-01/admit.mjs": "aa24edb6fb336e3a0f683b6054ea2922585e9fb93ef8e3e7394258a110a61967",
+    "tools/wh3-importer/research-admission-batch-01/legacy-projection.json": "8faa8083057cd69360486563aff4c9c7633e2cf4d2df39e1e109adc3804d99b0",
+    "tools/wh3-importer/research-admission-batch-01/manifest.json": "3a8c35773cf54eae1df3134c2bc0396e6fcab6d4fbe36a66fad5ab97eec5e70b",
+    "tools/wh3-importer/research-admission-batch-01/protected.mjs": "5633e420750feb6b3c6d89087c93c914196b6e4625069e2dee8f0b20bedf4d45",
+    "tools/wh3-importer/research-admission-batch-01/reviewed-input.json": "3deafb31f6029ee5dadd1e8f95055ef0c99ec6e1ceab6da5b76d6472d97a3d44",
+    "tools/wh3-importer/research-admission-batch-01/summary.json": "691856eb525b8d506354579522e38ee79e5ec849a0e4622d2bfd825e49b9bdd2",
+    "tools/wh3-importer/research-classifier/POLICY.md": "b3dfff1f48cadc35a103145bb4b85b16133d730d198cb5188e8afac3f75eb4ca",
+    "tools/wh3-importer/research-classifier/classify.mjs": "6a9db403301e0d14e9f7150882ad2060e41a828ccda7d071594d1bd78e9493cf",
+    "tools/wh3-importer/research-classifier/policy.mjs": "e9547fb5ee2967dee06a70bdf1848846b56d7a1667d91b90936b6c081866aba7",
+    "tools/wh3-importer/research-classifier/report.json": "e0b8f8397d36dd2ac19d28f4a90203d4f298f8d98f82a0b699f44753abcc1a89",
+    "tools/wh3-importer/research-scan-bretonnia/REPORT.md": "9964cec90152958f01f72b8e835889d63254f3a3673926eaffc5019213be8034",
+    "tools/wh3-importer/research-scan-bretonnia/manifest.json": "4ca37ba92e4c407690d7a50b872e32e1b4563e2242b25bf02aba956b1fae9650",
+    "tools/wh3-importer/research-scan-bretonnia/rejections.json": "6504f695a3f0c5f0ff517e8c98656340a20b94e26db8c4defa8bd4d6b4d76a10",
+    "tools/wh3-importer/research-scan-bretonnia/report.json": "97166548e93f0144c29ddc0b412f17719f450fbd90625b78d66ab6a1756d0aa3",
+    "tools/wh3-importer/research-scan-bretonnia/representatives.json": "5661c581393088678622976f7fa1db5a615d85df997186f888fa2a75dd958c42",
+    "tools/wh3-importer/research-scan-bretonnia/scan.mjs": "da2bb334a99e50c6f362f96cb99842f2709e6372c17b0f8720ca650360681a17",
+    "tools/wh3-importer/research-scan-bretonnia/source.json": "72dc47e15caa9df8a6a79ccdbe21bdf6b71d3afda9ea0a6da8e895ee881146a8",
+    "tools/wh3-importer/research-scan-bretonnia/source.mjs": "3566605fa2a4b26976a24cfd07a6164d4cc6bb0c22cf4961f6f928f05ef2a13f",
+    "tools/wh3-importer/research-scan-bretonnia/summary.json": "d62a9f2f9d36b59050e666f55dc6a59a67a413d73de882b0e849f89ec95fef48",
+    "tools/wh3-importer/skill-slice-01/REVIEW.md": "38ac1b891f7887aeb7548b4129fc85c8849714c6a026fe38a6838eb7dd107290",
+    "tools/wh3-importer/skill-slice-01/admission.json": "d4b087b7c45cdc70f167992e4e463ef2338ec545daefbc741cbb7991d62579d4",
+    "tools/wh3-importer/skill-slice-01/manifest.json": "b43ee58742c2f6038bcc8ec72c86da482c8bc5c03f4d82d4a92e019854d8a994",
+    "tools/wh3-importer/skill-slice-01/protected.mjs": "fc506a383b54b90387eb895b0b9c7ef7cc66b5e46ad926aeb6bf5525933bc13e",
+    "tools/wh3-importer/skill-slice-01/review.json": "ef5e144a455815fbe38b637f47887c363c33c590857ac5d779e6f149c2680be1",
+    "tools/wh3-importer/skill-slice-01/review.mjs": "834b4e2bf7f785a5003fb89dafc491a7e21a0f3d8de9aa4c35aaf3ce5c145a74",
+    "tools/wh3-importer/skill-slice-01/selection.json": "731237cf6de67b4d327fc0ea17908c6337f11eab571897aeaccf87ac0b46921c",
+    "tools/wh3-importer/skill-slice-01/source.json": "11f0e4088f6d3cbe3d46e7bbd4a240f3e21bc7250c6e0b8f0894f3393c2d4f27",
+    "src/data/caSkillBatch01.json": "690773406346b9a6e461302dc40df540d2c0a74090652a6b96c440c93f374f0d",
+    "tools/wh3-importer/skill-batch-01/REVIEW.md": "322ce4eef077ff16a685da0a3efe0bdcee519c68119ef5a075ec115b8e5cf103",
+    "tools/wh3-importer/skill-batch-01/admission.json": "c4549ec156e27b450068b15d9f55aaaa69c4ab3513238a37b810fae4cb848ef1",
+    "tools/wh3-importer/skill-batch-01/manifest.json": "8e48218abcf6e1cc268608dde97f992265e7aae7721209d567c43132b139056a",
+    "tools/wh3-importer/skill-batch-01/protected.mjs": "55e4d5e42c855c70ee71d5dfa7259b8ce4ae67517030e92aad5a21d67484ede0",
+    "tools/wh3-importer/skill-batch-01/review.json": "11732dc9d507162ea352d2605164d7620d0c6e845173308dba5b390a1f7065b2",
+    "tools/wh3-importer/skill-batch-01/review.mjs": "24f851baa6f29f9377a1c0856918949ae71a325c5cd1f81d9c68fc006294ee08",
+    "tools/wh3-importer/skill-batch-01/selection.json": "d68e6468107b4438b0b5b9b5b75e4a23c412f6e9f1410f3a3d974a98ebe2ceb1",
+    "tools/wh3-importer/skill-batch-01/source.json": "10deb6dc2af0dde5de24d92716ffec4cf3ce880c0cac93ffd17fe507410d8e4e"
+  }
+}

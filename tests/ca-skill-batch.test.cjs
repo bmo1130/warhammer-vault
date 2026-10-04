@@ -100,9 +100,11 @@ test('Calculator shows admitted owner/rank only; deferred/self skills absent; pe
  const backup=await wiki.exportBackup();assert(!JSON.stringify(backup).includes('ca-skill:'));await wiki.importBackup(backup);assert.deepEqual((await wiki.getManualProfile(profile.id)).modifiers,profile.modifiers);await wiki.deleteManualProfile(profile.id);
 });
 
-test('original Alberic evidence/projection, Research artifacts, Units101/Sample5/HP13/Speed81 and engine/personal data contracts stay pinned',()=>{
+test('original Alberic evidence/projection, Research artifacts, Units101/Sample5/HP13/Speed81 and engine/personal data contracts stay pinned',async()=>{
  for(const [p,h] of Object.entries(manifest.preservedFiles)){const b=read(p);assert.equal(hash(/\.(?:mjs|ts|tsx|ps1|md|css)$/.test(p)?b.toString().replace(/\r\n/g,'\n'):b),h,p);}
- for(const [p,pin] of Object.entries({...manifest.appFiles,...manifest.forwardFiles}))assert.equal(hash(read(p).toString().replace(/\r\n/g,'\n')),pin.after,p);
+ for(const [p,pin] of Object.entries(manifest.forwardFiles))assert.equal(hash(read(p).toString().replace(/\r\n/g,'\n')),pin.after,p);
+ const {verifyAppIntegration}=await import('../tools/wh3-importer/skill-batch-02/protected.mjs');
+ for(const [p,pin] of Object.entries(manifest.appFiles))verifyAppIntegration(p,pin.after);
  const units=JSON.parse(unitsBytes),production=units.filter(u=>u.gameVersion!=='sample');assert.equal(production.length,101);assert.equal(units.length-production.length,5);assert.equal(production.filter(u=>u.entities?.totalHealth!==undefined).length,13);assert.equal(production.filter(u=>u.movement?.speed!==undefined).length,81);
  const old=json('src/data/caSkillEffect.json'),selected=[{skillKey:old.skillKey,ownerKey:old.owner.key,rank:1}],calc=calculate(knight,[],[],selected);assert.equal(calc.unit.defense.leadership,80);assert.equal(calc.unit.melee.damage.bonusVsLarge,27);
  const research=json('src/data/caResearchEffect.json');assert.deepEqual([research.technologies.length,research.effects.length,research.modifiers.length],[10,15,96]);
