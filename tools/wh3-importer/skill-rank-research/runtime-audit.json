@@ -1,0 +1,595 @@
+{
+  "format": "wh3-skill-rank-existing-log-audit-v1",
+  "method": "Read-only scan of existing generated runtime-evidence *.txt/*.log; duplicate identical file bytes counted once. No ingest/rewrite.",
+  "probe": {
+    "path": "tools/wh3-importer/runtime-evidence/cco-probe/exec_battle.lua",
+    "sha256": "e241991f5ca9ba5ad687d7f76239b4616ed4c0d870f15a0fb568bff15bf7b301",
+    "hasLeadershipQuery": false,
+    "hasMeleeDefenceQuery": false,
+    "hasLearnedSkillRankQuery": false
+  },
+  "searchedFileCount": 134,
+  "uniqueFileCount": 50,
+  "parsedProbeRecords": 5976,
+  "malformedProbeLines": 0,
+  "eventKinds": {
+    "COMPONENT_LIST": 1020,
+    "CURSOR": 56,
+    "ENTITY": 4236,
+    "ERROR": 32,
+    "SAMPLE_END": 255,
+    "SNAPSHOT_END": 56,
+    "SNAPSHOT_START": 56,
+    "SNAPSHOT_UNIT": 43,
+    "TRACE_END": 5,
+    "TRACE_START": 5,
+    "TRACE_UNIT": 212
+  },
+  "observedFieldNames": [
+    "ActiveProjectileContext.Key",
+    "EntityRecordContext.Key",
+    "HealthMax",
+    "HealthValue",
+    "IsAlive",
+    "IsEngine",
+    "IsFiringMissiles",
+    "IsInMelee",
+    "IsMan",
+    "IsPlayerUnit",
+    "IsReloading",
+    "Key",
+    "NumEntities",
+    "NumEntitiesInitial",
+    "Position",
+    "PrimaryAmmoPercent",
+    "ReloadPercent",
+    "ReloadPercentMax",
+    "ReloadRemainingTime",
+    "SecondaryAmmoPercent",
+    "UniqueUiId",
+    "UnitContext.UniqueUiId",
+    "UnitContext.UnitRecordContext.Key",
+    "UnitContext.UnitRecordContext.UnitLandRecordContext.Key",
+    "UnitRecordContext.Key",
+    "UnitRecordContext.UnitLandRecordContext.Key"
+  ],
+  "matchingLowBornSkillRecords": 0,
+  "qualifyingControlledRankTrials": 0,
+  "conclusion": "NO QUALIFYING RANK 0/1/2/3 EVIDENCE; file audit is not a runtime semantic measurement.",
+  "inputs": [
+    {
+      "sha256": "5008fd675f527b34ee84360bce39a626d54628bf151ec4866d998abe782e821d",
+      "bytes": 78248,
+      "paths": [
+        "generated/wh3/runtime-evidence/manual-ultra-hp/script_log_031026_1244.txt"
+      ],
+      "probeRecords": 61,
+      "malformedProbeLines": 0
+    },
+    {
+      "sha256": "290354820216f6cfd25c5618f01924c5e3b5e87b43885a0bd601be683bb233f4",
+      "bytes": 77271,
+      "paths": [
+        "generated/wh3/runtime-evidence/manual-ultra-hp/script_log_031026_1246.txt"
+      ],
+      "probeRecords": 61,
+      "malformedProbeLines": 0
+    },
+    {
+      "sha256": "2fa921c196822092101ea982ec3868190d9089f1460278f9ef07efa81d78df42",
+      "bytes": 91266,
+      "paths": [
+        "generated/wh3/runtime-evidence/manual-ultra-hp/script_log_031026_1248.txt"
+      ],
+      "probeRecords": 73,
+      "malformedProbeLines": 0
+    },
+    {
+      "sha256": "8ef0750d5fe07954ca9e604f5d3e98bc1ad4614b02867d242f9a11677e2c3b8e",
+      "bytes": 42435,
+      "paths": [
+        "generated/wh3/runtime-evidence/manual-ultra-hp/script_log_031026_1251.txt"
+      ],
+      "probeRecords": 33,
+      "malformedProbeLines": 0
+    },
+    {
+      "sha256": "e30d36fca619cb18fdd894a718181cda61c945a6b809b583441a712238f9acba",
+      "bytes": 32685,
+      "paths": [
+        "generated/wh3/runtime-evidence/manual-ultra-hp/script_log_031026_1359.txt"
+      ],
+      "probeRecords": 28,
+      "malformedProbeLines": 0
+    },
+    {
+      "sha256": "5e027c6eb9a82780285e305308831e9f13d23afdb4bf58fd655804a2696c4420",
+      "bytes": 314696,
+      "paths": [
+        "generated/wh3/runtime-evidence/manual-ultra-hp/ultra_hp_raw_logs_3/script_log_021026_1931.txt"
+      ],
+      "probeRecords": 249,
+      "malformedProbeLines": 0
+    },
+    {
+      "sha256": "ceca024b6c146e73e1f1fedea047229c5bcb0ec921fa570b8f49d443680b78c7",
+      "bytes": 237150,
+      "paths": [
+        "generated/wh3/runtime-evidence/manual-ultra-hp/ultra_hp_raw_logs_3/script_log_021026_1937.txt"
+      ],
+      "probeRecords": 189,
+      "malformedProbeLines": 0
+    },
+    {
+      "sha256": "3d2abc2b55f5d5344ff6111f31c0ac326adb24d9c9ab250d6085bdcca5290568",
+      "bytes": 100899,
+      "paths": [
+        "generated/wh3/runtime-evidence/manual-ultra-hp/ultra_hp_raw_logs_3/script_log_021026_1942.txt"
+      ],
+      "probeRecords": 82,
+      "malformedProbeLines": 0
+    },
+    {
+      "sha256": "52bac486694039c316687d99261b98ff73e447d63c683f5964019c129e9b652b",
+      "bytes": 760904,
+      "paths": [
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-final/inputs/desktop__script_log_011026_2118.txt",
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-verified/inputs/desktop__script_log_011026_2118.txt",
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2/inputs/desktop__script_log_011026_2118.txt"
+      ],
+      "probeRecords": 762,
+      "malformedProbeLines": 0
+    },
+    {
+      "sha256": "8088e0ec34bf13f3176a6247facdabd039dd6a66d3d7ea29a8e7447b1903c470",
+      "bytes": 54129,
+      "paths": [
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-final/inputs/desktop__script_log_011026_2138.txt",
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-verified/inputs/desktop__script_log_011026_2138.txt",
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2/inputs/desktop__script_log_011026_2138.txt"
+      ],
+      "probeRecords": 48,
+      "malformedProbeLines": 0
+    },
+    {
+      "sha256": "576987211ef371c2382f1cc82cee7b72686dc0b0a2301452d31e3373e649ee4e",
+      "bytes": 325498,
+      "paths": [
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-final/inputs/desktop__script_log_011026_2151.txt",
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-verified/inputs/desktop__script_log_011026_2151.txt",
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2/inputs/desktop__script_log_011026_2151.txt"
+      ],
+      "probeRecords": 230,
+      "malformedProbeLines": 0
+    },
+    {
+      "sha256": "249edfe47808c86889c347d083910618fa387332679711765ddeea06d8365ab4",
+      "bytes": 294195,
+      "paths": [
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-final/inputs/desktop__script_log_011026_2157.txt",
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-verified/inputs/desktop__script_log_011026_2157.txt",
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2/inputs/desktop__script_log_011026_2157.txt"
+      ],
+      "probeRecords": 210,
+      "malformedProbeLines": 0
+    },
+    {
+      "sha256": "b07bafc3a4260295f69abd3360610ab34cafa7d2f926a1f25852a70d990ff8e8",
+      "bytes": 293280,
+      "paths": [
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-final/inputs/desktop__script_log_011026_2223.txt",
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-verified/inputs/desktop__script_log_011026_2223.txt",
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2/inputs/desktop__script_log_011026_2223.txt"
+      ],
+      "probeRecords": 210,
+      "malformedProbeLines": 0
+    },
+    {
+      "sha256": "e1bcc4485cd69f5642f99800f0af61d811325f5e60f188bdccc1bc930dcd0b2a",
+      "bytes": 516767,
+      "paths": [
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-final/inputs/desktop__script_log_011026_2225.txt",
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-verified/inputs/desktop__script_log_011026_2225.txt",
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2/inputs/desktop__script_log_011026_2225.txt"
+      ],
+      "probeRecords": 387,
+      "malformedProbeLines": 0
+    },
+    {
+      "sha256": "16fd5ab828647ae7514bfef0152b1efa2f59cac01d3d9cf57ddf7686b675002d",
+      "bytes": 2558,
+      "paths": [
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-final/inputs/game__script_log_011026_1910.txt",
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-verified/inputs/game__script_log_011026_1910.txt",
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2/inputs/game__script_log_011026_1910.txt"
+      ],
+      "probeRecords": 0,
+      "malformedProbeLines": 0
+    },
+    {
+      "sha256": "247d42f6c4b0960b02882047de4a3927cf8267cbdd309cd8a1917ca4d3979dbd",
+      "bytes": 2558,
+      "paths": [
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-final/inputs/game__script_log_011026_1912.txt",
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-verified/inputs/game__script_log_011026_1912.txt",
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2/inputs/game__script_log_011026_1912.txt"
+      ],
+      "probeRecords": 0,
+      "malformedProbeLines": 0
+    },
+    {
+      "sha256": "47f9e23e926abcd1954e38a93054ef3d2ff10275261186359c9f74f52bbc8c03",
+      "bytes": 10724,
+      "paths": [
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-final/inputs/game__script_log_011026_1913.txt",
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-verified/inputs/game__script_log_011026_1913.txt",
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2/inputs/game__script_log_011026_1913.txt"
+      ],
+      "probeRecords": 0,
+      "malformedProbeLines": 0
+    },
+    {
+      "sha256": "c18a6c7c906c076b0dd8984b53cf3267dbff4ee2105ccff96ac7d7970f36cf67",
+      "bytes": 2558,
+      "paths": [
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-final/inputs/game__script_log_011026_1940.txt",
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-verified/inputs/game__script_log_011026_1940.txt",
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2/inputs/game__script_log_011026_1940.txt"
+      ],
+      "probeRecords": 0,
+      "malformedProbeLines": 0
+    },
+    {
+      "sha256": "944bc4498b4bd20568d8d8f808012f8b5b4b8bc5e6893bdc41f5bc573addd4cd",
+      "bytes": 10284,
+      "paths": [
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-final/inputs/game__script_log_011026_1941.txt",
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-verified/inputs/game__script_log_011026_1941.txt",
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2/inputs/game__script_log_011026_1941.txt"
+      ],
+      "probeRecords": 0,
+      "malformedProbeLines": 0
+    },
+    {
+      "sha256": "a4fe4199c968ba7babe34cdc16d4f49342c0195e39c64a2751c5275d2b03713c",
+      "bytes": 6662,
+      "paths": [
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-final/inputs/game__script_log_011026_1943.txt",
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-verified/inputs/game__script_log_011026_1943.txt",
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2/inputs/game__script_log_011026_1943.txt"
+      ],
+      "probeRecords": 0,
+      "malformedProbeLines": 0
+    },
+    {
+      "sha256": "79644edb01057a276bf7736e03eccc889a90f9e9703e0621157fc4bd05d542ae",
+      "bytes": 2559,
+      "paths": [
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-final/inputs/game__script_log_011026_1946.txt",
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-verified/inputs/game__script_log_011026_1946.txt",
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2/inputs/game__script_log_011026_1946.txt"
+      ],
+      "probeRecords": 0,
+      "malformedProbeLines": 0
+    },
+    {
+      "sha256": "05ea1b1e49026337ad49b464f9197792de61f6ad0e719e2ec4349bf02299fdce",
+      "bytes": 2559,
+      "paths": [
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-final/inputs/game__script_log_011026_1947.txt",
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-verified/inputs/game__script_log_011026_1947.txt",
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2/inputs/game__script_log_011026_1947.txt"
+      ],
+      "probeRecords": 0,
+      "malformedProbeLines": 0
+    },
+    {
+      "sha256": "0a5c1d865270cbc101fd576f1b031a334958f8098f54b145f15a2ea5da309017",
+      "bytes": 8567,
+      "paths": [
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-final/inputs/game__script_log_011026_1948.txt",
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-verified/inputs/game__script_log_011026_1948.txt",
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2/inputs/game__script_log_011026_1948.txt"
+      ],
+      "probeRecords": 0,
+      "malformedProbeLines": 0
+    },
+    {
+      "sha256": "daae88f1e55570eb7e6103d07aee1cab40a97610d1b80d5467a25715b51d3eb6",
+      "bytes": 2558,
+      "paths": [
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-final/inputs/game__script_log_011026_1951.txt",
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-verified/inputs/game__script_log_011026_1951.txt",
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2/inputs/game__script_log_011026_1951.txt"
+      ],
+      "probeRecords": 0,
+      "malformedProbeLines": 0
+    },
+    {
+      "sha256": "2e7b4a8f3158a6beed48806d4acb320b549e2ef2a8b798ee8505021d112f865b",
+      "bytes": 7953,
+      "paths": [
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-final/inputs/game__script_log_011026_1952.txt",
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-verified/inputs/game__script_log_011026_1952.txt",
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2/inputs/game__script_log_011026_1952.txt"
+      ],
+      "probeRecords": 0,
+      "malformedProbeLines": 0
+    },
+    {
+      "sha256": "ac845c32e0dc54a5f9a890bfee027d14a0262de32d46f615043d310916df0bec",
+      "bytes": 2558,
+      "paths": [
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-final/inputs/game__script_log_011026_1954.txt",
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-verified/inputs/game__script_log_011026_1954.txt",
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2/inputs/game__script_log_011026_1954.txt"
+      ],
+      "probeRecords": 0,
+      "malformedProbeLines": 0
+    },
+    {
+      "sha256": "617234656b1920524d863f9750da651d27833d2cde6b9c63dc2c7c28969395df",
+      "bytes": 7649,
+      "paths": [
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-final/inputs/game__script_log_011026_1955.txt",
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-verified/inputs/game__script_log_011026_1955.txt",
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2/inputs/game__script_log_011026_1955.txt"
+      ],
+      "probeRecords": 0,
+      "malformedProbeLines": 0
+    },
+    {
+      "sha256": "b1cf31604deaf39d0f4007a8bec2ef8d43ffc73b276d10e4dc6750e63a967c32",
+      "bytes": 7663,
+      "paths": [
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-final/inputs/game__script_log_011026_1957.txt",
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-verified/inputs/game__script_log_011026_1957.txt",
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2/inputs/game__script_log_011026_1957.txt"
+      ],
+      "probeRecords": 0,
+      "malformedProbeLines": 0
+    },
+    {
+      "sha256": "27ae81a7f831469f5cf06baa65a6ded701f9fa24239d6fcdc531c0f446865f1a",
+      "bytes": 6734,
+      "paths": [
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-final/inputs/game__script_log_011026_2005.txt",
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-verified/inputs/game__script_log_011026_2005.txt",
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2/inputs/game__script_log_011026_2005.txt"
+      ],
+      "probeRecords": 0,
+      "malformedProbeLines": 0
+    },
+    {
+      "sha256": "3410e90611539cdb8d1c517bc55e8846ad3f5becdd986ecfa612b9eb947f587d",
+      "bytes": 109160,
+      "paths": [
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-final/inputs/game__script_log_011026_2012.txt",
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-verified/inputs/game__script_log_011026_2012.txt",
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2/inputs/game__script_log_011026_2012.txt"
+      ],
+      "probeRecords": 98,
+      "malformedProbeLines": 0
+    },
+    {
+      "sha256": "4ed3378bcc1aa722d5322d4fb9a30fbc11434053a3815bb2d088373bf54429c1",
+      "bytes": 68059,
+      "paths": [
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-final/inputs/game__script_log_011026_2021.txt",
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-verified/inputs/game__script_log_011026_2021.txt",
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2/inputs/game__script_log_011026_2021.txt"
+      ],
+      "probeRecords": 61,
+      "malformedProbeLines": 0
+    },
+    {
+      "sha256": "5e49e6e8f89f87dc15ecaa1219188a9ea5c9163b38b344ee92122d7314f80c18",
+      "bytes": 2558,
+      "paths": [
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-final/inputs/game__script_log_011026_2027.txt",
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-verified/inputs/game__script_log_011026_2027.txt",
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2/inputs/game__script_log_011026_2027.txt"
+      ],
+      "probeRecords": 0,
+      "malformedProbeLines": 0
+    },
+    {
+      "sha256": "4661d7c3bf04894c3649b42316c092b7a67881ddd89a560c30543e4bcd2dd010",
+      "bytes": 128964,
+      "paths": [
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-final/inputs/game__script_log_011026_2028.txt",
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-verified/inputs/game__script_log_011026_2028.txt",
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2/inputs/game__script_log_011026_2028.txt"
+      ],
+      "probeRecords": 111,
+      "malformedProbeLines": 0
+    },
+    {
+      "sha256": "1489ed27d96684af9c80f2ae9b35a94aed300eceac940580a5c0071ddbf0a7d9",
+      "bytes": 2558,
+      "paths": [
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-final/inputs/game__script_log_011026_2033.txt",
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-verified/inputs/game__script_log_011026_2033.txt",
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2/inputs/game__script_log_011026_2033.txt"
+      ],
+      "probeRecords": 0,
+      "malformedProbeLines": 0
+    },
+    {
+      "sha256": "b9c17628c61ce72850d5a6b9d1d7aa0abee304ae0241747278af045c95114f7b",
+      "bytes": 2759297,
+      "paths": [
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-final/inputs/game__script_log_011026_2110.txt",
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-verified/inputs/game__script_log_011026_2110.txt",
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2/inputs/game__script_log_011026_2110.txt"
+      ],
+      "probeRecords": 2696,
+      "malformedProbeLines": 0
+    },
+    {
+      "sha256": "cffc8e0d9d5a4b17e090a5fa8df0b12d3dcb63f6985ce7bbe9680895d231e6c1",
+      "bytes": 1682,
+      "paths": [
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-final/inputs/game__script_log_011026_2118.txt",
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-verified/inputs/game__script_log_011026_2118.txt",
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2/inputs/game__script_log_011026_2118.txt"
+      ],
+      "probeRecords": 0,
+      "malformedProbeLines": 0
+    },
+    {
+      "sha256": "384ef040d99b6782b4463c53002a12a265bc577f2d25e44d561a3fca8b11f4b7",
+      "bytes": 1675,
+      "paths": [
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-final/inputs/game__script_log_011026_2138.txt",
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-verified/inputs/game__script_log_011026_2138.txt",
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2/inputs/game__script_log_011026_2138.txt"
+      ],
+      "probeRecords": 0,
+      "malformedProbeLines": 0
+    },
+    {
+      "sha256": "0fefc3f0a688fb576dccbb3e05825090c14f37159de826226ebc589f211c799e",
+      "bytes": 2554,
+      "paths": [
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-final/inputs/game__script_log_011026_2141.txt",
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-verified/inputs/game__script_log_011026_2141.txt",
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2/inputs/game__script_log_011026_2141.txt"
+      ],
+      "probeRecords": 0,
+      "malformedProbeLines": 0
+    },
+    {
+      "sha256": "bd7aa55d7dd3ee2ba65e47eb4d63f6fe1cc3afa195edb132cc5a8994e4d3a877",
+      "bytes": 6275,
+      "paths": [
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-final/inputs/game__script_log_011026_2142.txt",
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-verified/inputs/game__script_log_011026_2142.txt",
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2/inputs/game__script_log_011026_2142.txt"
+      ],
+      "probeRecords": 0,
+      "malformedProbeLines": 0
+    },
+    {
+      "sha256": "b1c0c24bae5d05dfbbb41930d3a7ce92c884e0d6d15763f5bc9d8027f9337dc9",
+      "bytes": 901597,
+      "paths": [
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-final/inputs/game__script_log_011026_2143.txt",
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-verified/inputs/game__script_log_011026_2143.txt",
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2/inputs/game__script_log_011026_2143.txt"
+      ],
+      "probeRecords": 0,
+      "malformedProbeLines": 0
+    },
+    {
+      "sha256": "a8877e0f691182a2e94d92ce753ebc3a26417aa7bc818c09b704663299fd02bc",
+      "bytes": 527499,
+      "paths": [
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-final/inputs/game__script_log_011026_2146.txt",
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-verified/inputs/game__script_log_011026_2146.txt",
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2/inputs/game__script_log_011026_2146.txt"
+      ],
+      "probeRecords": 387,
+      "malformedProbeLines": 0
+    },
+    {
+      "sha256": "b93e5a0b820eae889eea3fc63e9e3149c8a3450fbcd6f9db5859a7f13b5c0362",
+      "bytes": 495516,
+      "paths": [
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-final/inputs/game__script_log_011026_2148.txt",
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-verified/inputs/game__script_log_011026_2148.txt",
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2/inputs/game__script_log_011026_2148.txt"
+      ],
+      "probeRecords": 0,
+      "malformedProbeLines": 0
+    },
+    {
+      "sha256": "ffac16b5bd52be8aa55ea4831190b8288100a4fb0ff261abf30f622efa6b40dc",
+      "bytes": 27167,
+      "paths": [
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-final/inputs/game__script_log_011026_2149.txt",
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-verified/inputs/game__script_log_011026_2149.txt",
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2/inputs/game__script_log_011026_2149.txt"
+      ],
+      "probeRecords": 0,
+      "malformedProbeLines": 0
+    },
+    {
+      "sha256": "5c2c18f89bdbe54eefccd71af49e391e2a43ee05c446a255fc3e08df0b7ae8be",
+      "bytes": 436075,
+      "paths": [
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-final/inputs/game__script_log_011026_2150.txt",
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-verified/inputs/game__script_log_011026_2150.txt",
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2/inputs/game__script_log_011026_2150.txt"
+      ],
+      "probeRecords": 0,
+      "malformedProbeLines": 0
+    },
+    {
+      "sha256": "368855c67f39d6633863929354f57f915cf7a88070f9a9f4fed1b2d7c513e80b",
+      "bytes": 1608383,
+      "paths": [
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-final/inputs/game__script_log_011026_2154.txt",
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-verified/inputs/game__script_log_011026_2154.txt",
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2/inputs/game__script_log_011026_2154.txt"
+      ],
+      "probeRecords": 0,
+      "malformedProbeLines": 0
+    },
+    {
+      "sha256": "5369e7f79cffbfb57a8225c4da070ce47fd16a2385c5b520ee38752b4aab4149",
+      "bytes": 530978,
+      "paths": [
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-final/inputs/game__script_log_011026_2158.txt",
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-verified/inputs/game__script_log_011026_2158.txt",
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2/inputs/game__script_log_011026_2158.txt"
+      ],
+      "probeRecords": 0,
+      "malformedProbeLines": 0
+    },
+    {
+      "sha256": "1e219028cf90ef81d79c9af777c7822d4643c704f9e718145a93b9f16f56e953",
+      "bytes": 322130,
+      "paths": [
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-final/inputs/game__script_log_011026_2217.txt",
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-verified/inputs/game__script_log_011026_2217.txt",
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2/inputs/game__script_log_011026_2217.txt"
+      ],
+      "probeRecords": 0,
+      "malformedProbeLines": 0
+    },
+    {
+      "sha256": "5a3a747c6195de303e83a4a7ef2e8a2e0f086fbe02ec8f8d8df0602c9828611b",
+      "bytes": 1722500,
+      "paths": [
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-final/inputs/game__script_log_011026_2220.txt",
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-verified/inputs/game__script_log_011026_2220.txt",
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2/inputs/game__script_log_011026_2220.txt"
+      ],
+      "probeRecords": 0,
+      "malformedProbeLines": 0
+    },
+    {
+      "sha256": "5c8ae4cc2a4d6f1a0479f7ee36d045e3a57ef53798fa346cf9818226554c607b",
+      "bytes": 450265,
+      "paths": [
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-final/inputs/game__script_log_011026_2224.txt",
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-verified/inputs/game__script_log_011026_2224.txt",
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2/inputs/game__script_log_011026_2224.txt"
+      ],
+      "probeRecords": 0,
+      "malformedProbeLines": 0
+    },
+    {
+      "sha256": "8b4ac1ad66c5937aebc44ac600aa8f24fa120b0b191162f7fd178fb232c047a0",
+      "bytes": 1125,
+      "paths": [
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-final/inputs/game__script_log_011026_2225.txt",
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2-verified/inputs/game__script_log_011026_2225.txt",
+        "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2/inputs/game__script_log_011026_2225.txt"
+      ],
+      "probeRecords": 0,
+      "malformedProbeLines": 0
+    }
+  ]
+}

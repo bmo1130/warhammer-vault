@@ -1,0 +1,3698 @@
+{
+  "format": "wh3-skill-rank-research-v1",
+  "sourceSnapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+  "semantics": "UNKNOWN",
+  "finalVerdict": "D",
+  "admittedSkills": [],
+  "skills": [
+    {
+      "key": "wh2_dlc11_skill_brt_army_buff_low_born_militia",
+      "name": "Low-Born Militia",
+      "skillRowId": "character_skills_tables:e6f85004ff3b2a3cfecc",
+      "ownerKeys": [
+        "wh2_dlc14_brt_repanse",
+        "wh_dlc07_brt_alberic",
+        "wh_dlc07_brt_fay_enchantress",
+        "wh_dlc07_brt_prophetess_beasts",
+        "wh_dlc07_brt_prophetess_heavens",
+        "wh_dlc07_brt_prophetess_life",
+        "wh_main_brt_lord",
+        "wh_main_brt_louen_leoncouer"
+      ],
+      "ownerChains": [
+        {
+          "ownerKey": "wh_main_brt_louen_leoncouer",
+          "nodeKey": "wh_main_skill_node_brt_louen_battle_02",
+          "nodeSetKey": "wh_main_skill_node_set_brt_louen",
+          "enabled": true,
+          "selectors": {
+            "set": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            },
+            "node": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            }
+          },
+          "joins": [
+            [
+              "character_skill_nodes_tables:0172cd9d8fc0228d4cf5",
+              "character_skill_key",
+              "character_skills_tables:e6f85004ff3b2a3cfecc"
+            ],
+            [
+              "character_skill_node_set_items_tables:ec77c1d7417185c4c484",
+              "item",
+              "character_skill_nodes_tables:0172cd9d8fc0228d4cf5"
+            ],
+            [
+              "character_skill_node_set_items_tables:ec77c1d7417185c4c484",
+              "set",
+              "character_skill_node_sets_tables:aea7c103aadf7417a635"
+            ],
+            [
+              "character_skill_node_sets_tables:aea7c103aadf7417a635",
+              "agent_subtype_key",
+              "agent_subtypes_tables:ca8f08f5da69102a1cbd"
+            ]
+          ]
+        },
+        {
+          "ownerKey": "wh2_dlc14_brt_repanse",
+          "nodeKey": "wh2_dlc14_skill_node_brt_repanse_battle_02",
+          "nodeSetKey": "wh2_dlc14_skill_node_set_brt_repanse",
+          "enabled": true,
+          "selectors": {
+            "set": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            },
+            "node": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            }
+          },
+          "joins": [
+            [
+              "character_skill_nodes_tables:2600f5b5b559d38e51bc",
+              "character_skill_key",
+              "character_skills_tables:e6f85004ff3b2a3cfecc"
+            ],
+            [
+              "character_skill_node_set_items_tables:5f48ca790d0f624a0eca",
+              "item",
+              "character_skill_nodes_tables:2600f5b5b559d38e51bc"
+            ],
+            [
+              "character_skill_node_set_items_tables:5f48ca790d0f624a0eca",
+              "set",
+              "character_skill_node_sets_tables:b64ff4d4a243f08f9d95"
+            ],
+            [
+              "character_skill_node_sets_tables:b64ff4d4a243f08f9d95",
+              "agent_subtype_key",
+              "agent_subtypes_tables:26547eda1ad31e7b8537"
+            ]
+          ]
+        },
+        {
+          "ownerKey": "wh_dlc07_brt_alberic",
+          "nodeKey": "wh_dlc07_skill_node_brt_alberic_battle_02",
+          "nodeSetKey": "wh_dlc07_skill_node_set_brt_alberic",
+          "enabled": true,
+          "selectors": {
+            "set": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            },
+            "node": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            }
+          },
+          "joins": [
+            [
+              "character_skill_nodes_tables:61622eda87ec06aed4de",
+              "character_skill_key",
+              "character_skills_tables:e6f85004ff3b2a3cfecc"
+            ],
+            [
+              "character_skill_node_set_items_tables:63d2bf8f5ff2e9f5d52f",
+              "item",
+              "character_skill_nodes_tables:61622eda87ec06aed4de"
+            ],
+            [
+              "character_skill_node_set_items_tables:63d2bf8f5ff2e9f5d52f",
+              "set",
+              "character_skill_node_sets_tables:2a9ab7eac5eed5e47016"
+            ],
+            [
+              "character_skill_node_sets_tables:2a9ab7eac5eed5e47016",
+              "agent_subtype_key",
+              "agent_subtypes_tables:067864922eeaebc662b0"
+            ]
+          ]
+        },
+        {
+          "ownerKey": "wh_dlc07_brt_prophetess_heavens",
+          "nodeKey": "wh_dlc07_skill_node_brt_prophetess_heavens_battle_02",
+          "nodeSetKey": "wh_dlc07_skill_node_set_brt_prophetess_heavens",
+          "enabled": true,
+          "selectors": {
+            "set": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            },
+            "node": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            }
+          },
+          "joins": [
+            [
+              "character_skill_nodes_tables:87fcc14a169708897cd0",
+              "character_skill_key",
+              "character_skills_tables:e6f85004ff3b2a3cfecc"
+            ],
+            [
+              "character_skill_node_set_items_tables:ba8c1e88213ab330fd70",
+              "item",
+              "character_skill_nodes_tables:87fcc14a169708897cd0"
+            ],
+            [
+              "character_skill_node_set_items_tables:ba8c1e88213ab330fd70",
+              "set",
+              "character_skill_node_sets_tables:e2aa13f6db2100e1f8ef"
+            ],
+            [
+              "character_skill_node_sets_tables:e2aa13f6db2100e1f8ef",
+              "agent_subtype_key",
+              "agent_subtypes_tables:47f8898592c0bd824484"
+            ]
+          ]
+        },
+        {
+          "ownerKey": "wh_dlc07_brt_fay_enchantress",
+          "nodeKey": "wh_dlc07_skill_node_brt_fay_enchantress_battle_02",
+          "nodeSetKey": "wh_dlc07_skill_node_set_brt_fay_enchantress",
+          "enabled": true,
+          "selectors": {
+            "set": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            },
+            "node": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            }
+          },
+          "joins": [
+            [
+              "character_skill_nodes_tables:94aca509a8de6da6bc47",
+              "character_skill_key",
+              "character_skills_tables:e6f85004ff3b2a3cfecc"
+            ],
+            [
+              "character_skill_node_set_items_tables:b52c176872d322f5eabd",
+              "item",
+              "character_skill_nodes_tables:94aca509a8de6da6bc47"
+            ],
+            [
+              "character_skill_node_set_items_tables:b52c176872d322f5eabd",
+              "set",
+              "character_skill_node_sets_tables:1a13acf51d8af48bcce9"
+            ],
+            [
+              "character_skill_node_sets_tables:1a13acf51d8af48bcce9",
+              "agent_subtype_key",
+              "agent_subtypes_tables:cae4fc22d99cad5a6d62"
+            ]
+          ]
+        },
+        {
+          "ownerKey": "wh_main_brt_lord",
+          "nodeKey": "wh_main_skill_node_brt_lord_battle_02",
+          "nodeSetKey": "wh_main_skill_node_set_brt_lord",
+          "enabled": true,
+          "selectors": {
+            "set": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            },
+            "node": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            }
+          },
+          "joins": [
+            [
+              "character_skill_nodes_tables:a35f44fbc56e989d1ec4",
+              "character_skill_key",
+              "character_skills_tables:e6f85004ff3b2a3cfecc"
+            ],
+            [
+              "character_skill_node_set_items_tables:7c6f26a0e6448db4a33d",
+              "item",
+              "character_skill_nodes_tables:a35f44fbc56e989d1ec4"
+            ],
+            [
+              "character_skill_node_set_items_tables:7c6f26a0e6448db4a33d",
+              "set",
+              "character_skill_node_sets_tables:ebf5918563aced26bd3e"
+            ],
+            [
+              "character_skill_node_sets_tables:ebf5918563aced26bd3e",
+              "agent_subtype_key",
+              "agent_subtypes_tables:92325e5e6783ba184b62"
+            ]
+          ]
+        },
+        {
+          "ownerKey": "wh_dlc07_brt_prophetess_beasts",
+          "nodeKey": "wh_dlc07_skill_node_brt_prophetess_beast_battle_02",
+          "nodeSetKey": "wh_dlc07_skill_node_set_brt_prophetess_beast",
+          "enabled": true,
+          "selectors": {
+            "set": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            },
+            "node": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            }
+          },
+          "joins": [
+            [
+              "character_skill_nodes_tables:e06c24badc020bac0e75",
+              "character_skill_key",
+              "character_skills_tables:e6f85004ff3b2a3cfecc"
+            ],
+            [
+              "character_skill_node_set_items_tables:d91edc15a29360c6570f",
+              "item",
+              "character_skill_nodes_tables:e06c24badc020bac0e75"
+            ],
+            [
+              "character_skill_node_set_items_tables:d91edc15a29360c6570f",
+              "set",
+              "character_skill_node_sets_tables:e163ed6f48cd1a766195"
+            ],
+            [
+              "character_skill_node_sets_tables:e163ed6f48cd1a766195",
+              "agent_subtype_key",
+              "agent_subtypes_tables:015dde4e49746e8dbc52"
+            ]
+          ]
+        },
+        {
+          "ownerKey": "wh_dlc07_brt_prophetess_life",
+          "nodeKey": "wh_dlc07_skill_node_brt_prophetess_life_battle_02",
+          "nodeSetKey": "wh_dlc07_skill_node_set_brt_prophetess_life",
+          "enabled": true,
+          "selectors": {
+            "set": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            },
+            "node": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            }
+          },
+          "joins": [
+            [
+              "character_skill_nodes_tables:fb5d52536bda39794161",
+              "character_skill_key",
+              "character_skills_tables:e6f85004ff3b2a3cfecc"
+            ],
+            [
+              "character_skill_node_set_items_tables:ac3fb1a22f35a302d118",
+              "item",
+              "character_skill_nodes_tables:fb5d52536bda39794161"
+            ],
+            [
+              "character_skill_node_set_items_tables:ac3fb1a22f35a302d118",
+              "set",
+              "character_skill_node_sets_tables:4f1b94c436752ccafa9a"
+            ],
+            [
+              "character_skill_node_sets_tables:4f1b94c436752ccafa9a",
+              "agent_subtype_key",
+              "agent_subtypes_tables:a62c1f029480bf8c7b38"
+            ]
+          ]
+        }
+      ],
+      "maxObservedEffectLevel": 3,
+      "ranks": [
+        {
+          "level": 1,
+          "rows": [
+            {
+              "rowId": "character_skill_level_to_effects_junctions_tables:dc5b04d6ef46d80b648f",
+              "effectKey": "wh2_dlc11_effect_force_stat_leadership_peasant_mob_men_at_arms_spear_at_arms",
+              "rawValue": 4,
+              "scope": {
+                "key": "general_to_force_own",
+                "location": "forcewide_when_commanding",
+                "ownership": "yours",
+                "source": "character",
+                "target": "force",
+                "territory": "any"
+              },
+              "joins": [
+                [
+                  "character_skill_level_to_effects_junctions_tables:dc5b04d6ef46d80b648f",
+                  "character_skill_key",
+                  "character_skills_tables:e6f85004ff3b2a3cfecc"
+                ],
+                [
+                  "character_skill_level_to_effects_junctions_tables:dc5b04d6ef46d80b648f",
+                  "effect_key",
+                  "effects_tables:e9fe2ed69374e486019e"
+                ],
+                [
+                  "character_skill_level_to_effects_junctions_tables:dc5b04d6ef46d80b648f",
+                  "effect_scope",
+                  "campaign_effect_scopes_tables:ac8ad42676de36b22a6c"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "level": 2,
+          "rows": [
+            {
+              "rowId": "character_skill_level_to_effects_junctions_tables:4e6de3103ed7892c3a9d",
+              "effectKey": "wh2_dlc11_effect_force_stat_leadership_peasant_mob_men_at_arms_spear_at_arms",
+              "rawValue": 4,
+              "scope": {
+                "key": "general_to_force_own",
+                "location": "forcewide_when_commanding",
+                "ownership": "yours",
+                "source": "character",
+                "target": "force",
+                "territory": "any"
+              },
+              "joins": [
+                [
+                  "character_skill_level_to_effects_junctions_tables:4e6de3103ed7892c3a9d",
+                  "character_skill_key",
+                  "character_skills_tables:e6f85004ff3b2a3cfecc"
+                ],
+                [
+                  "character_skill_level_to_effects_junctions_tables:4e6de3103ed7892c3a9d",
+                  "effect_key",
+                  "effects_tables:e9fe2ed69374e486019e"
+                ],
+                [
+                  "character_skill_level_to_effects_junctions_tables:4e6de3103ed7892c3a9d",
+                  "effect_scope",
+                  "campaign_effect_scopes_tables:ac8ad42676de36b22a6c"
+                ]
+              ]
+            },
+            {
+              "rowId": "character_skill_level_to_effects_junctions_tables:f8f3b2c5bfc3e611ca57",
+              "effectKey": "wh2_dlc11_effect_force_stat_melee_defence_brt_peasant_mob_men_at_arms_spear_at_arms",
+              "rawValue": 4,
+              "scope": {
+                "key": "general_to_force_own",
+                "location": "forcewide_when_commanding",
+                "ownership": "yours",
+                "source": "character",
+                "target": "force",
+                "territory": "any"
+              },
+              "joins": [
+                [
+                  "character_skill_level_to_effects_junctions_tables:f8f3b2c5bfc3e611ca57",
+                  "character_skill_key",
+                  "character_skills_tables:e6f85004ff3b2a3cfecc"
+                ],
+                [
+                  "character_skill_level_to_effects_junctions_tables:f8f3b2c5bfc3e611ca57",
+                  "effect_key",
+                  "effects_tables:3e5e26440f5672e70a30"
+                ],
+                [
+                  "character_skill_level_to_effects_junctions_tables:f8f3b2c5bfc3e611ca57",
+                  "effect_scope",
+                  "campaign_effect_scopes_tables:ac8ad42676de36b22a6c"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "rows": [
+            {
+              "rowId": "character_skill_level_to_effects_junctions_tables:095e68af2a8cad238598",
+              "effectKey": "wh2_dlc11_effect_force_stat_leadership_peasant_mob_men_at_arms_spear_at_arms",
+              "rawValue": 6,
+              "scope": {
+                "key": "general_to_force_own",
+                "location": "forcewide_when_commanding",
+                "ownership": "yours",
+                "source": "character",
+                "target": "force",
+                "territory": "any"
+              },
+              "joins": [
+                [
+                  "character_skill_level_to_effects_junctions_tables:095e68af2a8cad238598",
+                  "character_skill_key",
+                  "character_skills_tables:e6f85004ff3b2a3cfecc"
+                ],
+                [
+                  "character_skill_level_to_effects_junctions_tables:095e68af2a8cad238598",
+                  "effect_key",
+                  "effects_tables:e9fe2ed69374e486019e"
+                ],
+                [
+                  "character_skill_level_to_effects_junctions_tables:095e68af2a8cad238598",
+                  "effect_scope",
+                  "campaign_effect_scopes_tables:ac8ad42676de36b22a6c"
+                ]
+              ]
+            },
+            {
+              "rowId": "character_skill_level_to_effects_junctions_tables:202d2522243d8e9e865f",
+              "effectKey": "wh2_dlc11_effect_force_stat_melee_defence_brt_peasant_mob_men_at_arms_spear_at_arms",
+              "rawValue": 6,
+              "scope": {
+                "key": "general_to_force_own",
+                "location": "forcewide_when_commanding",
+                "ownership": "yours",
+                "source": "character",
+                "target": "force",
+                "territory": "any"
+              },
+              "joins": [
+                [
+                  "character_skill_level_to_effects_junctions_tables:202d2522243d8e9e865f",
+                  "character_skill_key",
+                  "character_skills_tables:e6f85004ff3b2a3cfecc"
+                ],
+                [
+                  "character_skill_level_to_effects_junctions_tables:202d2522243d8e9e865f",
+                  "effect_key",
+                  "effects_tables:3e5e26440f5672e70a30"
+                ],
+                [
+                  "character_skill_level_to_effects_junctions_tables:202d2522243d8e9e865f",
+                  "effect_scope",
+                  "campaign_effect_scopes_tables:ac8ad42676de36b22a6c"
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "reusedEffects": [
+        {
+          "effectKey": "wh2_dlc11_effect_force_stat_leadership_peasant_mob_men_at_arms_spear_at_arms",
+          "levels": [
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "effectKey": "wh2_dlc11_effect_force_stat_melee_defence_brt_peasant_mob_men_at_arms_spear_at_arms",
+          "levels": [
+            2,
+            3
+          ]
+        }
+      ],
+      "levelDetailRowIds": [],
+      "otherRankRoutes": [
+        {
+          "table": "character_skill_level_to_ancillaries_junctions_tables",
+          "rowIds": []
+        },
+        {
+          "table": "character_skill_level_to_dilemmas_junctions_tables",
+          "rowIds": []
+        },
+        {
+          "table": "character_skills_to_level_reached_criterias_tables",
+          "rowIds": []
+        }
+      ],
+      "rankSemantics": "UNKNOWN",
+      "admission": "NOT_ADMITTED"
+    },
+    {
+      "key": "wh2_dlc11_skill_brt_army_buff_proficiency_of_peasants",
+      "name": "Peasant Proficiency",
+      "skillRowId": "character_skills_tables:3d646bf2d77a7b648b88",
+      "ownerKeys": [
+        "wh2_dlc14_brt_repanse",
+        "wh_dlc07_brt_alberic",
+        "wh_dlc07_brt_fay_enchantress",
+        "wh_dlc07_brt_prophetess_beasts",
+        "wh_dlc07_brt_prophetess_heavens",
+        "wh_dlc07_brt_prophetess_life",
+        "wh_main_brt_lord",
+        "wh_main_brt_louen_leoncouer"
+      ],
+      "ownerChains": [
+        {
+          "ownerKey": "wh_main_brt_lord",
+          "nodeKey": "wh_main_skill_node_brt_lord_battle_03",
+          "nodeSetKey": "wh_main_skill_node_set_brt_lord",
+          "enabled": true,
+          "selectors": {
+            "set": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            },
+            "node": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            }
+          },
+          "joins": [
+            [
+              "character_skill_nodes_tables:062c1a0b58a9f434823e",
+              "character_skill_key",
+              "character_skills_tables:3d646bf2d77a7b648b88"
+            ],
+            [
+              "character_skill_node_set_items_tables:b10755f32ab949a658c0",
+              "item",
+              "character_skill_nodes_tables:062c1a0b58a9f434823e"
+            ],
+            [
+              "character_skill_node_set_items_tables:b10755f32ab949a658c0",
+              "set",
+              "character_skill_node_sets_tables:ebf5918563aced26bd3e"
+            ],
+            [
+              "character_skill_node_sets_tables:ebf5918563aced26bd3e",
+              "agent_subtype_key",
+              "agent_subtypes_tables:92325e5e6783ba184b62"
+            ]
+          ]
+        },
+        {
+          "ownerKey": "wh_dlc07_brt_prophetess_heavens",
+          "nodeKey": "wh_dlc07_skill_node_brt_prophetess_heavens_battle_03",
+          "nodeSetKey": "wh_dlc07_skill_node_set_brt_prophetess_heavens",
+          "enabled": true,
+          "selectors": {
+            "set": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            },
+            "node": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            }
+          },
+          "joins": [
+            [
+              "character_skill_nodes_tables:1ea03a587e74dad3531e",
+              "character_skill_key",
+              "character_skills_tables:3d646bf2d77a7b648b88"
+            ],
+            [
+              "character_skill_node_set_items_tables:0fc25be43cf1b6aaddf8",
+              "item",
+              "character_skill_nodes_tables:1ea03a587e74dad3531e"
+            ],
+            [
+              "character_skill_node_set_items_tables:0fc25be43cf1b6aaddf8",
+              "set",
+              "character_skill_node_sets_tables:e2aa13f6db2100e1f8ef"
+            ],
+            [
+              "character_skill_node_sets_tables:e2aa13f6db2100e1f8ef",
+              "agent_subtype_key",
+              "agent_subtypes_tables:47f8898592c0bd824484"
+            ]
+          ]
+        },
+        {
+          "ownerKey": "wh_dlc07_brt_prophetess_beasts",
+          "nodeKey": "wh_dlc07_skill_node_brt_prophetess_beast_battle_03",
+          "nodeSetKey": "wh_dlc07_skill_node_set_brt_prophetess_beast",
+          "enabled": true,
+          "selectors": {
+            "set": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            },
+            "node": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            }
+          },
+          "joins": [
+            [
+              "character_skill_nodes_tables:6925e99d3636948b4981",
+              "character_skill_key",
+              "character_skills_tables:3d646bf2d77a7b648b88"
+            ],
+            [
+              "character_skill_node_set_items_tables:9592eb75ccc72aca3d68",
+              "item",
+              "character_skill_nodes_tables:6925e99d3636948b4981"
+            ],
+            [
+              "character_skill_node_set_items_tables:9592eb75ccc72aca3d68",
+              "set",
+              "character_skill_node_sets_tables:e163ed6f48cd1a766195"
+            ],
+            [
+              "character_skill_node_sets_tables:e163ed6f48cd1a766195",
+              "agent_subtype_key",
+              "agent_subtypes_tables:015dde4e49746e8dbc52"
+            ]
+          ]
+        },
+        {
+          "ownerKey": "wh_dlc07_brt_fay_enchantress",
+          "nodeKey": "wh_dlc07_skill_node_brt_fay_enchantress_battle_03",
+          "nodeSetKey": "wh_dlc07_skill_node_set_brt_fay_enchantress",
+          "enabled": true,
+          "selectors": {
+            "set": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            },
+            "node": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            }
+          },
+          "joins": [
+            [
+              "character_skill_nodes_tables:6bb9a0dfaff278bcbd51",
+              "character_skill_key",
+              "character_skills_tables:3d646bf2d77a7b648b88"
+            ],
+            [
+              "character_skill_node_set_items_tables:4b0d7fff02abcfe7b7a5",
+              "item",
+              "character_skill_nodes_tables:6bb9a0dfaff278bcbd51"
+            ],
+            [
+              "character_skill_node_set_items_tables:4b0d7fff02abcfe7b7a5",
+              "set",
+              "character_skill_node_sets_tables:1a13acf51d8af48bcce9"
+            ],
+            [
+              "character_skill_node_sets_tables:1a13acf51d8af48bcce9",
+              "agent_subtype_key",
+              "agent_subtypes_tables:cae4fc22d99cad5a6d62"
+            ]
+          ]
+        },
+        {
+          "ownerKey": "wh_dlc07_brt_alberic",
+          "nodeKey": "wh_dlc07_skill_node_brt_alberic_battle_03",
+          "nodeSetKey": "wh_dlc07_skill_node_set_brt_alberic",
+          "enabled": true,
+          "selectors": {
+            "set": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            },
+            "node": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            }
+          },
+          "joins": [
+            [
+              "character_skill_nodes_tables:95895252a018f4184503",
+              "character_skill_key",
+              "character_skills_tables:3d646bf2d77a7b648b88"
+            ],
+            [
+              "character_skill_node_set_items_tables:c5be7ba91a1120fbc0b3",
+              "item",
+              "character_skill_nodes_tables:95895252a018f4184503"
+            ],
+            [
+              "character_skill_node_set_items_tables:c5be7ba91a1120fbc0b3",
+              "set",
+              "character_skill_node_sets_tables:2a9ab7eac5eed5e47016"
+            ],
+            [
+              "character_skill_node_sets_tables:2a9ab7eac5eed5e47016",
+              "agent_subtype_key",
+              "agent_subtypes_tables:067864922eeaebc662b0"
+            ]
+          ]
+        },
+        {
+          "ownerKey": "wh2_dlc14_brt_repanse",
+          "nodeKey": "wh2_dlc14_skill_node_brt_repanse_battle_03",
+          "nodeSetKey": "wh2_dlc14_skill_node_set_brt_repanse",
+          "enabled": true,
+          "selectors": {
+            "set": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            },
+            "node": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            }
+          },
+          "joins": [
+            [
+              "character_skill_nodes_tables:b297ce1c2866fc1ceb50",
+              "character_skill_key",
+              "character_skills_tables:3d646bf2d77a7b648b88"
+            ],
+            [
+              "character_skill_node_set_items_tables:5ebe8034ac5a61a30ea0",
+              "item",
+              "character_skill_nodes_tables:b297ce1c2866fc1ceb50"
+            ],
+            [
+              "character_skill_node_set_items_tables:5ebe8034ac5a61a30ea0",
+              "set",
+              "character_skill_node_sets_tables:b64ff4d4a243f08f9d95"
+            ],
+            [
+              "character_skill_node_sets_tables:b64ff4d4a243f08f9d95",
+              "agent_subtype_key",
+              "agent_subtypes_tables:26547eda1ad31e7b8537"
+            ]
+          ]
+        },
+        {
+          "ownerKey": "wh_main_brt_louen_leoncouer",
+          "nodeKey": "wh_main_skill_node_brt_louen_battle_03",
+          "nodeSetKey": "wh_main_skill_node_set_brt_louen",
+          "enabled": true,
+          "selectors": {
+            "set": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            },
+            "node": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            }
+          },
+          "joins": [
+            [
+              "character_skill_nodes_tables:ba82a72e51db534ceaa9",
+              "character_skill_key",
+              "character_skills_tables:3d646bf2d77a7b648b88"
+            ],
+            [
+              "character_skill_node_set_items_tables:202f4cba5c5293945b94",
+              "item",
+              "character_skill_nodes_tables:ba82a72e51db534ceaa9"
+            ],
+            [
+              "character_skill_node_set_items_tables:202f4cba5c5293945b94",
+              "set",
+              "character_skill_node_sets_tables:aea7c103aadf7417a635"
+            ],
+            [
+              "character_skill_node_sets_tables:aea7c103aadf7417a635",
+              "agent_subtype_key",
+              "agent_subtypes_tables:ca8f08f5da69102a1cbd"
+            ]
+          ]
+        },
+        {
+          "ownerKey": "wh_dlc07_brt_prophetess_life",
+          "nodeKey": "wh_dlc07_skill_node_brt_prophetess_life_battle_03",
+          "nodeSetKey": "wh_dlc07_skill_node_set_brt_prophetess_life",
+          "enabled": true,
+          "selectors": {
+            "set": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            },
+            "node": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            }
+          },
+          "joins": [
+            [
+              "character_skill_nodes_tables:f6caf20c0460cf34e0d1",
+              "character_skill_key",
+              "character_skills_tables:3d646bf2d77a7b648b88"
+            ],
+            [
+              "character_skill_node_set_items_tables:b188f645b37d9ea54549",
+              "item",
+              "character_skill_nodes_tables:f6caf20c0460cf34e0d1"
+            ],
+            [
+              "character_skill_node_set_items_tables:b188f645b37d9ea54549",
+              "set",
+              "character_skill_node_sets_tables:4f1b94c436752ccafa9a"
+            ],
+            [
+              "character_skill_node_sets_tables:4f1b94c436752ccafa9a",
+              "agent_subtype_key",
+              "agent_subtypes_tables:a62c1f029480bf8c7b38"
+            ]
+          ]
+        }
+      ],
+      "maxObservedEffectLevel": 3,
+      "ranks": [
+        {
+          "level": 1,
+          "rows": [
+            {
+              "rowId": "character_skill_level_to_effects_junctions_tables:71680443f9b7571833fd",
+              "effectKey": "wh2_dlc11_effect_force_stat_ammunition_brt_peasant_bowmen_mounted_yeomen_archers",
+              "rawValue": 10,
+              "scope": {
+                "key": "general_to_force_own",
+                "location": "forcewide_when_commanding",
+                "ownership": "yours",
+                "source": "character",
+                "target": "force",
+                "territory": "any"
+              },
+              "joins": [
+                [
+                  "character_skill_level_to_effects_junctions_tables:71680443f9b7571833fd",
+                  "character_skill_key",
+                  "character_skills_tables:3d646bf2d77a7b648b88"
+                ],
+                [
+                  "character_skill_level_to_effects_junctions_tables:71680443f9b7571833fd",
+                  "effect_key",
+                  "effects_tables:86b1440378f669aa2ec0"
+                ],
+                [
+                  "character_skill_level_to_effects_junctions_tables:71680443f9b7571833fd",
+                  "effect_scope",
+                  "campaign_effect_scopes_tables:ac8ad42676de36b22a6c"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "level": 2,
+          "rows": [
+            {
+              "rowId": "character_skill_level_to_effects_junctions_tables:307c63615284ac937430",
+              "effectKey": "wh2_dlc11_effect_force_stat_reload_time_reduction_brt_peasant_bowmen_mounted_yeomen_archers",
+              "rawValue": 4,
+              "scope": {
+                "key": "general_to_force_own",
+                "location": "forcewide_when_commanding",
+                "ownership": "yours",
+                "source": "character",
+                "target": "force",
+                "territory": "any"
+              },
+              "joins": [
+                [
+                  "character_skill_level_to_effects_junctions_tables:307c63615284ac937430",
+                  "character_skill_key",
+                  "character_skills_tables:3d646bf2d77a7b648b88"
+                ],
+                [
+                  "character_skill_level_to_effects_junctions_tables:307c63615284ac937430",
+                  "effect_key",
+                  "effects_tables:371932f2c27195287ea7"
+                ],
+                [
+                  "character_skill_level_to_effects_junctions_tables:307c63615284ac937430",
+                  "effect_scope",
+                  "campaign_effect_scopes_tables:ac8ad42676de36b22a6c"
+                ]
+              ]
+            },
+            {
+              "rowId": "character_skill_level_to_effects_junctions_tables:6e983ea8a951b3b5bfaf",
+              "effectKey": "wh2_dlc11_effect_force_stat_ammunition_brt_peasant_bowmen_mounted_yeomen_archers",
+              "rawValue": 15,
+              "scope": {
+                "key": "general_to_force_own",
+                "location": "forcewide_when_commanding",
+                "ownership": "yours",
+                "source": "character",
+                "target": "force",
+                "territory": "any"
+              },
+              "joins": [
+                [
+                  "character_skill_level_to_effects_junctions_tables:6e983ea8a951b3b5bfaf",
+                  "character_skill_key",
+                  "character_skills_tables:3d646bf2d77a7b648b88"
+                ],
+                [
+                  "character_skill_level_to_effects_junctions_tables:6e983ea8a951b3b5bfaf",
+                  "effect_key",
+                  "effects_tables:86b1440378f669aa2ec0"
+                ],
+                [
+                  "character_skill_level_to_effects_junctions_tables:6e983ea8a951b3b5bfaf",
+                  "effect_scope",
+                  "campaign_effect_scopes_tables:ac8ad42676de36b22a6c"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "rows": [
+            {
+              "rowId": "character_skill_level_to_effects_junctions_tables:233830b6f2cbaf15a4a4",
+              "effectKey": "wh2_dlc11_effect_force_stat_ammunition_brt_peasant_bowmen_mounted_yeomen_archers",
+              "rawValue": 20,
+              "scope": {
+                "key": "general_to_force_own",
+                "location": "forcewide_when_commanding",
+                "ownership": "yours",
+                "source": "character",
+                "target": "force",
+                "territory": "any"
+              },
+              "joins": [
+                [
+                  "character_skill_level_to_effects_junctions_tables:233830b6f2cbaf15a4a4",
+                  "character_skill_key",
+                  "character_skills_tables:3d646bf2d77a7b648b88"
+                ],
+                [
+                  "character_skill_level_to_effects_junctions_tables:233830b6f2cbaf15a4a4",
+                  "effect_key",
+                  "effects_tables:86b1440378f669aa2ec0"
+                ],
+                [
+                  "character_skill_level_to_effects_junctions_tables:233830b6f2cbaf15a4a4",
+                  "effect_scope",
+                  "campaign_effect_scopes_tables:ac8ad42676de36b22a6c"
+                ]
+              ]
+            },
+            {
+              "rowId": "character_skill_level_to_effects_junctions_tables:3fa5a180e74204097021",
+              "effectKey": "wh2_dlc11_effect_force_stat_reload_time_reduction_brt_peasant_bowmen_mounted_yeomen_archers",
+              "rawValue": 8,
+              "scope": {
+                "key": "general_to_force_own",
+                "location": "forcewide_when_commanding",
+                "ownership": "yours",
+                "source": "character",
+                "target": "force",
+                "territory": "any"
+              },
+              "joins": [
+                [
+                  "character_skill_level_to_effects_junctions_tables:3fa5a180e74204097021",
+                  "character_skill_key",
+                  "character_skills_tables:3d646bf2d77a7b648b88"
+                ],
+                [
+                  "character_skill_level_to_effects_junctions_tables:3fa5a180e74204097021",
+                  "effect_key",
+                  "effects_tables:371932f2c27195287ea7"
+                ],
+                [
+                  "character_skill_level_to_effects_junctions_tables:3fa5a180e74204097021",
+                  "effect_scope",
+                  "campaign_effect_scopes_tables:ac8ad42676de36b22a6c"
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "reusedEffects": [
+        {
+          "effectKey": "wh2_dlc11_effect_force_stat_ammunition_brt_peasant_bowmen_mounted_yeomen_archers",
+          "levels": [
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "effectKey": "wh2_dlc11_effect_force_stat_reload_time_reduction_brt_peasant_bowmen_mounted_yeomen_archers",
+          "levels": [
+            2,
+            3
+          ]
+        }
+      ],
+      "levelDetailRowIds": [],
+      "otherRankRoutes": [
+        {
+          "table": "character_skill_level_to_ancillaries_junctions_tables",
+          "rowIds": []
+        },
+        {
+          "table": "character_skill_level_to_dilemmas_junctions_tables",
+          "rowIds": []
+        },
+        {
+          "table": "character_skills_to_level_reached_criterias_tables",
+          "rowIds": []
+        }
+      ],
+      "rankSemantics": "UNKNOWN",
+      "admission": "NOT_ADMITTED"
+    },
+    {
+      "key": "wh2_dlc11_skill_brt_army_buff_worshippers_of_the_grail",
+      "name": "Worshippers of the Grail",
+      "skillRowId": "character_skills_tables:3fa850e5f759630fb963",
+      "ownerKeys": [
+        "wh2_dlc14_brt_repanse",
+        "wh_dlc07_brt_alberic",
+        "wh_dlc07_brt_fay_enchantress",
+        "wh_dlc07_brt_prophetess_beasts",
+        "wh_dlc07_brt_prophetess_heavens",
+        "wh_dlc07_brt_prophetess_life",
+        "wh_main_brt_lord",
+        "wh_main_brt_louen_leoncouer"
+      ],
+      "ownerChains": [
+        {
+          "ownerKey": "wh_dlc07_brt_prophetess_life",
+          "nodeKey": "wh_dlc07_skill_node_brt_prophetess_life_battle_04",
+          "nodeSetKey": "wh_dlc07_skill_node_set_brt_prophetess_life",
+          "enabled": true,
+          "selectors": {
+            "set": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            },
+            "node": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            }
+          },
+          "joins": [
+            [
+              "character_skill_nodes_tables:1379f01e63a2396b6f17",
+              "character_skill_key",
+              "character_skills_tables:3fa850e5f759630fb963"
+            ],
+            [
+              "character_skill_node_set_items_tables:276a6e2af1caf56cfc1d",
+              "item",
+              "character_skill_nodes_tables:1379f01e63a2396b6f17"
+            ],
+            [
+              "character_skill_node_set_items_tables:276a6e2af1caf56cfc1d",
+              "set",
+              "character_skill_node_sets_tables:4f1b94c436752ccafa9a"
+            ],
+            [
+              "character_skill_node_sets_tables:4f1b94c436752ccafa9a",
+              "agent_subtype_key",
+              "agent_subtypes_tables:a62c1f029480bf8c7b38"
+            ]
+          ]
+        },
+        {
+          "ownerKey": "wh_dlc07_brt_prophetess_heavens",
+          "nodeKey": "wh_dlc07_skill_node_brt_prophetess_heavens_battle_04",
+          "nodeSetKey": "wh_dlc07_skill_node_set_brt_prophetess_heavens",
+          "enabled": true,
+          "selectors": {
+            "set": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            },
+            "node": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            }
+          },
+          "joins": [
+            [
+              "character_skill_nodes_tables:212b18477ad8bde96b36",
+              "character_skill_key",
+              "character_skills_tables:3fa850e5f759630fb963"
+            ],
+            [
+              "character_skill_node_set_items_tables:b6f4f889657b75111267",
+              "item",
+              "character_skill_nodes_tables:212b18477ad8bde96b36"
+            ],
+            [
+              "character_skill_node_set_items_tables:b6f4f889657b75111267",
+              "set",
+              "character_skill_node_sets_tables:e2aa13f6db2100e1f8ef"
+            ],
+            [
+              "character_skill_node_sets_tables:e2aa13f6db2100e1f8ef",
+              "agent_subtype_key",
+              "agent_subtypes_tables:47f8898592c0bd824484"
+            ]
+          ]
+        },
+        {
+          "ownerKey": "wh_main_brt_louen_leoncouer",
+          "nodeKey": "wh_main_skill_node_brt_louen_battle_04",
+          "nodeSetKey": "wh_main_skill_node_set_brt_louen",
+          "enabled": true,
+          "selectors": {
+            "set": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            },
+            "node": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            }
+          },
+          "joins": [
+            [
+              "character_skill_nodes_tables:25500eb35bd24cfe5cd8",
+              "character_skill_key",
+              "character_skills_tables:3fa850e5f759630fb963"
+            ],
+            [
+              "character_skill_node_set_items_tables:2570864f930c87ef906c",
+              "item",
+              "character_skill_nodes_tables:25500eb35bd24cfe5cd8"
+            ],
+            [
+              "character_skill_node_set_items_tables:2570864f930c87ef906c",
+              "set",
+              "character_skill_node_sets_tables:aea7c103aadf7417a635"
+            ],
+            [
+              "character_skill_node_sets_tables:aea7c103aadf7417a635",
+              "agent_subtype_key",
+              "agent_subtypes_tables:ca8f08f5da69102a1cbd"
+            ]
+          ]
+        },
+        {
+          "ownerKey": "wh_dlc07_brt_prophetess_beasts",
+          "nodeKey": "wh_dlc07_skill_node_brt_prophetess_beast_battle_04",
+          "nodeSetKey": "wh_dlc07_skill_node_set_brt_prophetess_beast",
+          "enabled": true,
+          "selectors": {
+            "set": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            },
+            "node": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            }
+          },
+          "joins": [
+            [
+              "character_skill_nodes_tables:2cb7e3057cc1e2008c18",
+              "character_skill_key",
+              "character_skills_tables:3fa850e5f759630fb963"
+            ],
+            [
+              "character_skill_node_set_items_tables:41496c7df5612cb6c25e",
+              "item",
+              "character_skill_nodes_tables:2cb7e3057cc1e2008c18"
+            ],
+            [
+              "character_skill_node_set_items_tables:41496c7df5612cb6c25e",
+              "set",
+              "character_skill_node_sets_tables:e163ed6f48cd1a766195"
+            ],
+            [
+              "character_skill_node_sets_tables:e163ed6f48cd1a766195",
+              "agent_subtype_key",
+              "agent_subtypes_tables:015dde4e49746e8dbc52"
+            ]
+          ]
+        },
+        {
+          "ownerKey": "wh_dlc07_brt_fay_enchantress",
+          "nodeKey": "wh_dlc07_skill_node_brt_fay_enchantress_battle_04",
+          "nodeSetKey": "wh_dlc07_skill_node_set_brt_fay_enchantress",
+          "enabled": true,
+          "selectors": {
+            "set": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            },
+            "node": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            }
+          },
+          "joins": [
+            [
+              "character_skill_nodes_tables:5f074cfef1f9c3a4c929",
+              "character_skill_key",
+              "character_skills_tables:3fa850e5f759630fb963"
+            ],
+            [
+              "character_skill_node_set_items_tables:99ac9f0d1ddddc26f55b",
+              "item",
+              "character_skill_nodes_tables:5f074cfef1f9c3a4c929"
+            ],
+            [
+              "character_skill_node_set_items_tables:99ac9f0d1ddddc26f55b",
+              "set",
+              "character_skill_node_sets_tables:1a13acf51d8af48bcce9"
+            ],
+            [
+              "character_skill_node_sets_tables:1a13acf51d8af48bcce9",
+              "agent_subtype_key",
+              "agent_subtypes_tables:cae4fc22d99cad5a6d62"
+            ]
+          ]
+        },
+        {
+          "ownerKey": "wh_dlc07_brt_alberic",
+          "nodeKey": "wh_dlc07_skill_node_brt_alberic_battle_04",
+          "nodeSetKey": "wh_dlc07_skill_node_set_brt_alberic",
+          "enabled": true,
+          "selectors": {
+            "set": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            },
+            "node": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            }
+          },
+          "joins": [
+            [
+              "character_skill_nodes_tables:6261889db0ee64ac8e8d",
+              "character_skill_key",
+              "character_skills_tables:3fa850e5f759630fb963"
+            ],
+            [
+              "character_skill_node_set_items_tables:9a9b56c47ff056b94341",
+              "item",
+              "character_skill_nodes_tables:6261889db0ee64ac8e8d"
+            ],
+            [
+              "character_skill_node_set_items_tables:9a9b56c47ff056b94341",
+              "set",
+              "character_skill_node_sets_tables:2a9ab7eac5eed5e47016"
+            ],
+            [
+              "character_skill_node_sets_tables:2a9ab7eac5eed5e47016",
+              "agent_subtype_key",
+              "agent_subtypes_tables:067864922eeaebc662b0"
+            ]
+          ]
+        },
+        {
+          "ownerKey": "wh_main_brt_lord",
+          "nodeKey": "wh_main_skill_node_brt_lord_battle_04",
+          "nodeSetKey": "wh_main_skill_node_set_brt_lord",
+          "enabled": true,
+          "selectors": {
+            "set": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            },
+            "node": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            }
+          },
+          "joins": [
+            [
+              "character_skill_nodes_tables:a10ea91e38e9abcb499f",
+              "character_skill_key",
+              "character_skills_tables:3fa850e5f759630fb963"
+            ],
+            [
+              "character_skill_node_set_items_tables:a6cce9910ddc46e2cd29",
+              "item",
+              "character_skill_nodes_tables:a10ea91e38e9abcb499f"
+            ],
+            [
+              "character_skill_node_set_items_tables:a6cce9910ddc46e2cd29",
+              "set",
+              "character_skill_node_sets_tables:ebf5918563aced26bd3e"
+            ],
+            [
+              "character_skill_node_sets_tables:ebf5918563aced26bd3e",
+              "agent_subtype_key",
+              "agent_subtypes_tables:92325e5e6783ba184b62"
+            ]
+          ]
+        },
+        {
+          "ownerKey": "wh2_dlc14_brt_repanse",
+          "nodeKey": "wh2_dlc14_skill_node_brt_repanse_battle_04",
+          "nodeSetKey": "wh2_dlc14_skill_node_set_brt_repanse",
+          "enabled": true,
+          "selectors": {
+            "set": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            },
+            "node": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            }
+          },
+          "joins": [
+            [
+              "character_skill_nodes_tables:c816aae7f275f99cede6",
+              "character_skill_key",
+              "character_skills_tables:3fa850e5f759630fb963"
+            ],
+            [
+              "character_skill_node_set_items_tables:842bababca283a4257da",
+              "item",
+              "character_skill_nodes_tables:c816aae7f275f99cede6"
+            ],
+            [
+              "character_skill_node_set_items_tables:842bababca283a4257da",
+              "set",
+              "character_skill_node_sets_tables:b64ff4d4a243f08f9d95"
+            ],
+            [
+              "character_skill_node_sets_tables:b64ff4d4a243f08f9d95",
+              "agent_subtype_key",
+              "agent_subtypes_tables:26547eda1ad31e7b8537"
+            ]
+          ]
+        }
+      ],
+      "maxObservedEffectLevel": 3,
+      "ranks": [
+        {
+          "level": 1,
+          "rows": [
+            {
+              "rowId": "character_skill_level_to_effects_junctions_tables:982673cad6c807d49b15",
+              "effectKey": "wh2_dlc11_effect_force_stat_armour_grail_reliquae_battle_pilgrims_foot_squires",
+              "rawValue": 6,
+              "scope": {
+                "key": "general_to_force_own",
+                "location": "forcewide_when_commanding",
+                "ownership": "yours",
+                "source": "character",
+                "target": "force",
+                "territory": "any"
+              },
+              "joins": [
+                [
+                  "character_skill_level_to_effects_junctions_tables:982673cad6c807d49b15",
+                  "character_skill_key",
+                  "character_skills_tables:3fa850e5f759630fb963"
+                ],
+                [
+                  "character_skill_level_to_effects_junctions_tables:982673cad6c807d49b15",
+                  "effect_key",
+                  "effects_tables:a81d1e5962f9f9736295"
+                ],
+                [
+                  "character_skill_level_to_effects_junctions_tables:982673cad6c807d49b15",
+                  "effect_scope",
+                  "campaign_effect_scopes_tables:ac8ad42676de36b22a6c"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "level": 2,
+          "rows": [
+            {
+              "rowId": "character_skill_level_to_effects_junctions_tables:57ca62f86f8f27fe8283",
+              "effectKey": "wh2_dlc11_effect_force_stat_armour_grail_reliquae_battle_pilgrims_foot_squires",
+              "rawValue": 9,
+              "scope": {
+                "key": "general_to_force_own",
+                "location": "forcewide_when_commanding",
+                "ownership": "yours",
+                "source": "character",
+                "target": "force",
+                "territory": "any"
+              },
+              "joins": [
+                [
+                  "character_skill_level_to_effects_junctions_tables:57ca62f86f8f27fe8283",
+                  "character_skill_key",
+                  "character_skills_tables:3fa850e5f759630fb963"
+                ],
+                [
+                  "character_skill_level_to_effects_junctions_tables:57ca62f86f8f27fe8283",
+                  "effect_key",
+                  "effects_tables:a81d1e5962f9f9736295"
+                ],
+                [
+                  "character_skill_level_to_effects_junctions_tables:57ca62f86f8f27fe8283",
+                  "effect_scope",
+                  "campaign_effect_scopes_tables:ac8ad42676de36b22a6c"
+                ]
+              ]
+            },
+            {
+              "rowId": "character_skill_level_to_effects_junctions_tables:903afbbd1d600cab0e6c",
+              "effectKey": "wh2_dlc11_effect_force_stat_melee_attack_grail_reliquae_battle_pilgrims_foot_squires",
+              "rawValue": 4,
+              "scope": {
+                "key": "general_to_force_own",
+                "location": "forcewide_when_commanding",
+                "ownership": "yours",
+                "source": "character",
+                "target": "force",
+                "territory": "any"
+              },
+              "joins": [
+                [
+                  "character_skill_level_to_effects_junctions_tables:903afbbd1d600cab0e6c",
+                  "character_skill_key",
+                  "character_skills_tables:3fa850e5f759630fb963"
+                ],
+                [
+                  "character_skill_level_to_effects_junctions_tables:903afbbd1d600cab0e6c",
+                  "effect_key",
+                  "effects_tables:f99799c90f3fd1bf6cd4"
+                ],
+                [
+                  "character_skill_level_to_effects_junctions_tables:903afbbd1d600cab0e6c",
+                  "effect_scope",
+                  "campaign_effect_scopes_tables:ac8ad42676de36b22a6c"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "rows": [
+            {
+              "rowId": "character_skill_level_to_effects_junctions_tables:64bbbce90888a3e70ca6",
+              "effectKey": "wh2_dlc11_effect_force_stat_melee_attack_grail_reliquae_battle_pilgrims_foot_squires",
+              "rawValue": 6,
+              "scope": {
+                "key": "general_to_force_own",
+                "location": "forcewide_when_commanding",
+                "ownership": "yours",
+                "source": "character",
+                "target": "force",
+                "territory": "any"
+              },
+              "joins": [
+                [
+                  "character_skill_level_to_effects_junctions_tables:64bbbce90888a3e70ca6",
+                  "character_skill_key",
+                  "character_skills_tables:3fa850e5f759630fb963"
+                ],
+                [
+                  "character_skill_level_to_effects_junctions_tables:64bbbce90888a3e70ca6",
+                  "effect_key",
+                  "effects_tables:f99799c90f3fd1bf6cd4"
+                ],
+                [
+                  "character_skill_level_to_effects_junctions_tables:64bbbce90888a3e70ca6",
+                  "effect_scope",
+                  "campaign_effect_scopes_tables:ac8ad42676de36b22a6c"
+                ]
+              ]
+            },
+            {
+              "rowId": "character_skill_level_to_effects_junctions_tables:84cd8d44ad50dfcdf665",
+              "effectKey": "wh2_dlc11_effect_force_stat_armour_grail_reliquae_battle_pilgrims_foot_squires",
+              "rawValue": 12,
+              "scope": {
+                "key": "general_to_force_own",
+                "location": "forcewide_when_commanding",
+                "ownership": "yours",
+                "source": "character",
+                "target": "force",
+                "territory": "any"
+              },
+              "joins": [
+                [
+                  "character_skill_level_to_effects_junctions_tables:84cd8d44ad50dfcdf665",
+                  "character_skill_key",
+                  "character_skills_tables:3fa850e5f759630fb963"
+                ],
+                [
+                  "character_skill_level_to_effects_junctions_tables:84cd8d44ad50dfcdf665",
+                  "effect_key",
+                  "effects_tables:a81d1e5962f9f9736295"
+                ],
+                [
+                  "character_skill_level_to_effects_junctions_tables:84cd8d44ad50dfcdf665",
+                  "effect_scope",
+                  "campaign_effect_scopes_tables:ac8ad42676de36b22a6c"
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "reusedEffects": [
+        {
+          "effectKey": "wh2_dlc11_effect_force_stat_armour_grail_reliquae_battle_pilgrims_foot_squires",
+          "levels": [
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "effectKey": "wh2_dlc11_effect_force_stat_melee_attack_grail_reliquae_battle_pilgrims_foot_squires",
+          "levels": [
+            2,
+            3
+          ]
+        }
+      ],
+      "levelDetailRowIds": [],
+      "otherRankRoutes": [
+        {
+          "table": "character_skill_level_to_ancillaries_junctions_tables",
+          "rowIds": []
+        },
+        {
+          "table": "character_skill_level_to_dilemmas_junctions_tables",
+          "rowIds": []
+        },
+        {
+          "table": "character_skills_to_level_reached_criterias_tables",
+          "rowIds": []
+        }
+      ],
+      "rankSemantics": "UNKNOWN",
+      "admission": "NOT_ADMITTED"
+    },
+    {
+      "key": "wh2_dlc11_skill_emp_army_buff_emperors_finest",
+      "name": "Emperor's Finest",
+      "skillRowId": "character_skills_tables:04494afaf75dd7cccb03",
+      "ownerKeys": [
+        "wh2_dlc13_emp_cha_huntsmarshal",
+        "wh2_dlc13_emp_cha_markus_wulfhart",
+        "wh3_dlc25_emp_elspeth_von_draken",
+        "wh3_dlc25_emp_master_engineer",
+        "wh3_dlc29_emp_cha_seneschal_of_the_white_wolf",
+        "wh_dlc03_emp_boris_todbringer",
+        "wh_dlc04_emp_arch_lector",
+        "wh_dlc04_emp_volkmar",
+        "wh_main_emp_balthasar_gelt",
+        "wh_main_emp_karl_franz",
+        "wh_main_emp_lord"
+      ],
+      "ownerChains": [
+        {
+          "ownerKey": "wh3_dlc29_emp_cha_seneschal_of_the_white_wolf",
+          "nodeKey": "wh_main_skill_node_emp_lord_battle_02",
+          "nodeSetKey": "wh3_dlc29_skill_node_set_emp_seneschal_of_the_white_wolf",
+          "enabled": true,
+          "selectors": {
+            "set": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            },
+            "node": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            }
+          },
+          "joins": [
+            [
+              "character_skill_nodes_tables:0d4bc5fbcc5fce5de51d",
+              "character_skill_key",
+              "character_skills_tables:04494afaf75dd7cccb03"
+            ],
+            [
+              "character_skill_node_set_items_tables:49813754c58e4db2b243",
+              "item",
+              "character_skill_nodes_tables:0d4bc5fbcc5fce5de51d"
+            ],
+            [
+              "character_skill_node_set_items_tables:49813754c58e4db2b243",
+              "set",
+              "character_skill_node_sets_tables:2ba2ae61cae2e5add99f"
+            ],
+            [
+              "character_skill_node_sets_tables:2ba2ae61cae2e5add99f",
+              "agent_subtype_key",
+              "agent_subtypes_tables:8a11ca6b28cc2d98b8f9"
+            ]
+          ]
+        },
+        {
+          "ownerKey": "wh_main_emp_lord",
+          "nodeKey": "wh_main_skill_node_emp_lord_battle_02",
+          "nodeSetKey": "wh_main_skill_node_set_emp_general",
+          "enabled": true,
+          "selectors": {
+            "set": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            },
+            "node": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            }
+          },
+          "joins": [
+            [
+              "character_skill_nodes_tables:0d4bc5fbcc5fce5de51d",
+              "character_skill_key",
+              "character_skills_tables:04494afaf75dd7cccb03"
+            ],
+            [
+              "character_skill_node_set_items_tables:78e137b77adc6e030a62",
+              "item",
+              "character_skill_nodes_tables:0d4bc5fbcc5fce5de51d"
+            ],
+            [
+              "character_skill_node_set_items_tables:78e137b77adc6e030a62",
+              "set",
+              "character_skill_node_sets_tables:2acf91706f4db7c3a242"
+            ],
+            [
+              "character_skill_node_sets_tables:2acf91706f4db7c3a242",
+              "agent_subtype_key",
+              "agent_subtypes_tables:3b1b860536523e67ebc5"
+            ]
+          ]
+        },
+        {
+          "ownerKey": "wh_main_emp_karl_franz",
+          "nodeKey": "wh_main_skill_node_emp_karl_franz_battle_02",
+          "nodeSetKey": "wh_main_skill_node_set_emp_karl_franz",
+          "enabled": true,
+          "selectors": {
+            "set": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            },
+            "node": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            }
+          },
+          "joins": [
+            [
+              "character_skill_nodes_tables:3bf6fa53938999afa497",
+              "character_skill_key",
+              "character_skills_tables:04494afaf75dd7cccb03"
+            ],
+            [
+              "character_skill_node_set_items_tables:bcf78ca0a683cbee8fbb",
+              "item",
+              "character_skill_nodes_tables:3bf6fa53938999afa497"
+            ],
+            [
+              "character_skill_node_set_items_tables:bcf78ca0a683cbee8fbb",
+              "set",
+              "character_skill_node_sets_tables:4eb54d9aacf1a370ff1d"
+            ],
+            [
+              "character_skill_node_sets_tables:4eb54d9aacf1a370ff1d",
+              "agent_subtype_key",
+              "agent_subtypes_tables:c10554e24b02da37082f"
+            ]
+          ]
+        },
+        {
+          "ownerKey": "wh3_dlc25_emp_master_engineer",
+          "nodeKey": "wh3_dlc25_skill_node_emp_master_engineer_army_2_1",
+          "nodeSetKey": "wh3_dlc25_skill_node_set_emp_master_engineer",
+          "enabled": true,
+          "selectors": {
+            "set": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            },
+            "node": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            }
+          },
+          "joins": [
+            [
+              "character_skill_nodes_tables:4b799a0902d95b128b4f",
+              "character_skill_key",
+              "character_skills_tables:04494afaf75dd7cccb03"
+            ],
+            [
+              "character_skill_node_set_items_tables:6df845e953a3f0327262",
+              "item",
+              "character_skill_nodes_tables:4b799a0902d95b128b4f"
+            ],
+            [
+              "character_skill_node_set_items_tables:6df845e953a3f0327262",
+              "set",
+              "character_skill_node_sets_tables:75c2318677e999dfb0b7"
+            ],
+            [
+              "character_skill_node_sets_tables:75c2318677e999dfb0b7",
+              "agent_subtype_key",
+              "agent_subtypes_tables:1f2bef4c7d684766f51d"
+            ]
+          ]
+        },
+        {
+          "ownerKey": "wh2_dlc13_emp_cha_huntsmarshal",
+          "nodeKey": "wh_dlc13_skill_node_emp_huntsmarshal_battle_02",
+          "nodeSetKey": "wh2_dlc13_skill_node_set_huntsmarshal",
+          "enabled": true,
+          "selectors": {
+            "set": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            },
+            "node": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            }
+          },
+          "joins": [
+            [
+              "character_skill_nodes_tables:4ccead77e5de1696838c",
+              "character_skill_key",
+              "character_skills_tables:04494afaf75dd7cccb03"
+            ],
+            [
+              "character_skill_node_set_items_tables:a8db5ee03d4fcf2b7851",
+              "item",
+              "character_skill_nodes_tables:4ccead77e5de1696838c"
+            ],
+            [
+              "character_skill_node_set_items_tables:a8db5ee03d4fcf2b7851",
+              "set",
+              "character_skill_node_sets_tables:fe0e85deec662e2e7d01"
+            ],
+            [
+              "character_skill_node_sets_tables:fe0e85deec662e2e7d01",
+              "agent_subtype_key",
+              "agent_subtypes_tables:45c2f19aae1d23e365cc"
+            ]
+          ]
+        },
+        {
+          "ownerKey": "wh3_dlc25_emp_elspeth_von_draken",
+          "nodeKey": "wh3_dlc25_skill_node_emp_elspeth_army_2_1",
+          "nodeSetKey": "wh3_dlc25_skill_node_set_emp_elspeth_von_draken",
+          "enabled": true,
+          "selectors": {
+            "set": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            },
+            "node": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            }
+          },
+          "joins": [
+            [
+              "character_skill_nodes_tables:68c237c6525082b4371f",
+              "character_skill_key",
+              "character_skills_tables:04494afaf75dd7cccb03"
+            ],
+            [
+              "character_skill_node_set_items_tables:d9833b3ed69e571e0a46",
+              "item",
+              "character_skill_nodes_tables:68c237c6525082b4371f"
+            ],
+            [
+              "character_skill_node_set_items_tables:d9833b3ed69e571e0a46",
+              "set",
+              "character_skill_node_sets_tables:52af708a64e29257a0b3"
+            ],
+            [
+              "character_skill_node_sets_tables:52af708a64e29257a0b3",
+              "agent_subtype_key",
+              "agent_subtypes_tables:b901dcbee1d20f1aa68e"
+            ]
+          ]
+        },
+        {
+          "ownerKey": "wh_dlc04_emp_arch_lector",
+          "nodeKey": "wh_dlc04_skill_node_emp_arch_lector_battle_02",
+          "nodeSetKey": "wh_dlc04_skill_node_set_emp_arch_lector",
+          "enabled": true,
+          "selectors": {
+            "set": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            },
+            "node": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            }
+          },
+          "joins": [
+            [
+              "character_skill_nodes_tables:68e98c7ca3d98350a54d",
+              "character_skill_key",
+              "character_skills_tables:04494afaf75dd7cccb03"
+            ],
+            [
+              "character_skill_node_set_items_tables:3c99f4e40406e7840143",
+              "item",
+              "character_skill_nodes_tables:68e98c7ca3d98350a54d"
+            ],
+            [
+              "character_skill_node_set_items_tables:3c99f4e40406e7840143",
+              "set",
+              "character_skill_node_sets_tables:34275ddb632020d61227"
+            ],
+            [
+              "character_skill_node_sets_tables:34275ddb632020d61227",
+              "agent_subtype_key",
+              "agent_subtypes_tables:bd395d3f857a985d309c"
+            ]
+          ]
+        },
+        {
+          "ownerKey": "wh2_dlc13_emp_cha_markus_wulfhart",
+          "nodeKey": "wh_dlc13_skill_node_emp_wulfhart_battle_02",
+          "nodeSetKey": "wh2_dlc13_skill_node_set_markus_wulfhart",
+          "enabled": true,
+          "selectors": {
+            "set": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            },
+            "node": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            }
+          },
+          "joins": [
+            [
+              "character_skill_nodes_tables:773d3cb9a2ba1810b8c9",
+              "character_skill_key",
+              "character_skills_tables:04494afaf75dd7cccb03"
+            ],
+            [
+              "character_skill_node_set_items_tables:f9a8f181d9403f733d54",
+              "item",
+              "character_skill_nodes_tables:773d3cb9a2ba1810b8c9"
+            ],
+            [
+              "character_skill_node_set_items_tables:f9a8f181d9403f733d54",
+              "set",
+              "character_skill_node_sets_tables:eb8c20814f15704a3104"
+            ],
+            [
+              "character_skill_node_sets_tables:eb8c20814f15704a3104",
+              "agent_subtype_key",
+              "agent_subtypes_tables:9b866e15a6cd8152cd43"
+            ]
+          ]
+        },
+        {
+          "ownerKey": "wh_main_emp_balthasar_gelt",
+          "nodeKey": "wh_main_skill_node_emp_balthasar_battle_02",
+          "nodeSetKey": "wh_main_skill_node_set_emp_balthasar",
+          "enabled": true,
+          "selectors": {
+            "set": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            },
+            "node": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            }
+          },
+          "joins": [
+            [
+              "character_skill_nodes_tables:bec3daef6d0ee783ca80",
+              "character_skill_key",
+              "character_skills_tables:04494afaf75dd7cccb03"
+            ],
+            [
+              "character_skill_node_set_items_tables:a94dd79617a2714318ef",
+              "item",
+              "character_skill_nodes_tables:bec3daef6d0ee783ca80"
+            ],
+            [
+              "character_skill_node_set_items_tables:a94dd79617a2714318ef",
+              "set",
+              "character_skill_node_sets_tables:b90f7fcaf627a7780cd9"
+            ],
+            [
+              "character_skill_node_sets_tables:b90f7fcaf627a7780cd9",
+              "agent_subtype_key",
+              "agent_subtypes_tables:697ea9db0a4d8e4b5267"
+            ]
+          ]
+        },
+        {
+          "ownerKey": "wh_dlc03_emp_boris_todbringer",
+          "nodeKey": "wh3_dlc29_skill_node_boris_general_battle_02",
+          "nodeSetKey": "wh3_dlc29_skill_node_set_emp_boris_todbringer",
+          "enabled": true,
+          "selectors": {
+            "set": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            },
+            "node": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            }
+          },
+          "joins": [
+            [
+              "character_skill_nodes_tables:cae2900db8315c576240",
+              "character_skill_key",
+              "character_skills_tables:04494afaf75dd7cccb03"
+            ],
+            [
+              "character_skill_node_set_items_tables:56d2d863ec982247057c",
+              "item",
+              "character_skill_nodes_tables:cae2900db8315c576240"
+            ],
+            [
+              "character_skill_node_set_items_tables:56d2d863ec982247057c",
+              "set",
+              "character_skill_node_sets_tables:1b9693d451cce16cc63d"
+            ],
+            [
+              "character_skill_node_sets_tables:1b9693d451cce16cc63d",
+              "agent_subtype_key",
+              "agent_subtypes_tables:c0135c4636c3e0b7cc85"
+            ]
+          ]
+        },
+        {
+          "ownerKey": "wh_dlc04_emp_volkmar",
+          "nodeKey": "wh_dlc04_skill_node_emp_volkmar_battle_02",
+          "nodeSetKey": "wh_dlc04_skill_node_set_emp_volkmar",
+          "enabled": true,
+          "selectors": {
+            "set": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            },
+            "node": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            }
+          },
+          "joins": [
+            [
+              "character_skill_nodes_tables:cf62e1a4502a0d68f88c",
+              "character_skill_key",
+              "character_skills_tables:04494afaf75dd7cccb03"
+            ],
+            [
+              "character_skill_node_set_items_tables:40df43c2a26d596df06d",
+              "item",
+              "character_skill_nodes_tables:cf62e1a4502a0d68f88c"
+            ],
+            [
+              "character_skill_node_set_items_tables:40df43c2a26d596df06d",
+              "set",
+              "character_skill_node_sets_tables:f850ede6af2e7daf8d00"
+            ],
+            [
+              "character_skill_node_sets_tables:f850ede6af2e7daf8d00",
+              "agent_subtype_key",
+              "agent_subtypes_tables:6fd34d8c3acfe7e5e3db"
+            ]
+          ]
+        }
+      ],
+      "maxObservedEffectLevel": 3,
+      "ranks": [
+        {
+          "level": 1,
+          "rows": [
+            {
+              "rowId": "character_skill_level_to_effects_junctions_tables:495cce77310faa158f5a",
+              "effectKey": "wh2_dlc11_effect_force_stat_melee_defence_emp_spearmen_swordsmen_flagellants_halberdier",
+              "rawValue": 4,
+              "scope": {
+                "key": "general_to_force_own",
+                "location": "forcewide_when_commanding",
+                "ownership": "yours",
+                "source": "character",
+                "target": "force",
+                "territory": "any"
+              },
+              "joins": [
+                [
+                  "character_skill_level_to_effects_junctions_tables:495cce77310faa158f5a",
+                  "character_skill_key",
+                  "character_skills_tables:04494afaf75dd7cccb03"
+                ],
+                [
+                  "character_skill_level_to_effects_junctions_tables:495cce77310faa158f5a",
+                  "effect_key",
+                  "effects_tables:133349804abdca1a0c63"
+                ],
+                [
+                  "character_skill_level_to_effects_junctions_tables:495cce77310faa158f5a",
+                  "effect_scope",
+                  "campaign_effect_scopes_tables:ac8ad42676de36b22a6c"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "level": 2,
+          "rows": [
+            {
+              "rowId": "character_skill_level_to_effects_junctions_tables:2f53d34b3318de213a00",
+              "effectKey": "wh2_dlc11_effect_force_stat_melee_defence_emp_spearmen_swordsmen_flagellants_halberdier",
+              "rawValue": 4,
+              "scope": {
+                "key": "general_to_force_own",
+                "location": "forcewide_when_commanding",
+                "ownership": "yours",
+                "source": "character",
+                "target": "force",
+                "territory": "any"
+              },
+              "joins": [
+                [
+                  "character_skill_level_to_effects_junctions_tables:2f53d34b3318de213a00",
+                  "character_skill_key",
+                  "character_skills_tables:04494afaf75dd7cccb03"
+                ],
+                [
+                  "character_skill_level_to_effects_junctions_tables:2f53d34b3318de213a00",
+                  "effect_key",
+                  "effects_tables:133349804abdca1a0c63"
+                ],
+                [
+                  "character_skill_level_to_effects_junctions_tables:2f53d34b3318de213a00",
+                  "effect_scope",
+                  "campaign_effect_scopes_tables:ac8ad42676de36b22a6c"
+                ]
+              ]
+            },
+            {
+              "rowId": "character_skill_level_to_effects_junctions_tables:a75977fdf68cfe9aa42e",
+              "effectKey": "wh2_dlc11_effect_force_stat_melee_attack_emp_spearmen_swordsmen_flagellants_halberdier",
+              "rawValue": 4,
+              "scope": {
+                "key": "general_to_force_own",
+                "location": "forcewide_when_commanding",
+                "ownership": "yours",
+                "source": "character",
+                "target": "force",
+                "territory": "any"
+              },
+              "joins": [
+                [
+                  "character_skill_level_to_effects_junctions_tables:a75977fdf68cfe9aa42e",
+                  "character_skill_key",
+                  "character_skills_tables:04494afaf75dd7cccb03"
+                ],
+                [
+                  "character_skill_level_to_effects_junctions_tables:a75977fdf68cfe9aa42e",
+                  "effect_key",
+                  "effects_tables:b80b0e21fb12b252e511"
+                ],
+                [
+                  "character_skill_level_to_effects_junctions_tables:a75977fdf68cfe9aa42e",
+                  "effect_scope",
+                  "campaign_effect_scopes_tables:ac8ad42676de36b22a6c"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "rows": [
+            {
+              "rowId": "character_skill_level_to_effects_junctions_tables:a0f62de86f329e20bee0",
+              "effectKey": "wh2_dlc11_effect_force_stat_melee_attack_emp_spearmen_swordsmen_flagellants_halberdier",
+              "rawValue": 6,
+              "scope": {
+                "key": "general_to_force_own",
+                "location": "forcewide_when_commanding",
+                "ownership": "yours",
+                "source": "character",
+                "target": "force",
+                "territory": "any"
+              },
+              "joins": [
+                [
+                  "character_skill_level_to_effects_junctions_tables:a0f62de86f329e20bee0",
+                  "character_skill_key",
+                  "character_skills_tables:04494afaf75dd7cccb03"
+                ],
+                [
+                  "character_skill_level_to_effects_junctions_tables:a0f62de86f329e20bee0",
+                  "effect_key",
+                  "effects_tables:b80b0e21fb12b252e511"
+                ],
+                [
+                  "character_skill_level_to_effects_junctions_tables:a0f62de86f329e20bee0",
+                  "effect_scope",
+                  "campaign_effect_scopes_tables:ac8ad42676de36b22a6c"
+                ]
+              ]
+            },
+            {
+              "rowId": "character_skill_level_to_effects_junctions_tables:d023965a75cc110fc1d6",
+              "effectKey": "wh2_dlc11_effect_force_stat_melee_defence_emp_spearmen_swordsmen_flagellants_halberdier",
+              "rawValue": 6,
+              "scope": {
+                "key": "general_to_force_own",
+                "location": "forcewide_when_commanding",
+                "ownership": "yours",
+                "source": "character",
+                "target": "force",
+                "territory": "any"
+              },
+              "joins": [
+                [
+                  "character_skill_level_to_effects_junctions_tables:d023965a75cc110fc1d6",
+                  "character_skill_key",
+                  "character_skills_tables:04494afaf75dd7cccb03"
+                ],
+                [
+                  "character_skill_level_to_effects_junctions_tables:d023965a75cc110fc1d6",
+                  "effect_key",
+                  "effects_tables:133349804abdca1a0c63"
+                ],
+                [
+                  "character_skill_level_to_effects_junctions_tables:d023965a75cc110fc1d6",
+                  "effect_scope",
+                  "campaign_effect_scopes_tables:ac8ad42676de36b22a6c"
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "reusedEffects": [
+        {
+          "effectKey": "wh2_dlc11_effect_force_stat_melee_attack_emp_spearmen_swordsmen_flagellants_halberdier",
+          "levels": [
+            2,
+            3
+          ]
+        },
+        {
+          "effectKey": "wh2_dlc11_effect_force_stat_melee_defence_emp_spearmen_swordsmen_flagellants_halberdier",
+          "levels": [
+            1,
+            2,
+            3
+          ]
+        }
+      ],
+      "levelDetailRowIds": [],
+      "otherRankRoutes": [
+        {
+          "table": "character_skill_level_to_ancillaries_junctions_tables",
+          "rowIds": []
+        },
+        {
+          "table": "character_skill_level_to_dilemmas_junctions_tables",
+          "rowIds": []
+        },
+        {
+          "table": "character_skills_to_level_reached_criterias_tables",
+          "rowIds": []
+        }
+      ],
+      "rankSemantics": "UNKNOWN",
+      "admission": "NOT_ADMITTED"
+    }
+  ],
+  "effects": [
+    {
+      "key": "wh2_dlc11_effect_force_stat_melee_defence_emp_spearmen_swordsmen_flagellants_halberdier",
+      "rowId": "effects_tables:133349804abdca1a0c63",
+      "localisation": "Melee defence: %+n for Melee Infantry units",
+      "displayPriority": 451,
+      "category": "battle",
+      "routes": [
+        {
+          "rowId": "effect_bonus_value_ids_unit_sets_tables:ac2531b2116f3b45d78a",
+          "table": "effect_bonus_value_ids_unit_sets_tables",
+          "raw": {
+            "bonus_value_id": "melee_defence_mod",
+            "effect": "wh2_dlc11_effect_force_stat_melee_defence_emp_spearmen_swordsmen_flagellants_halberdier",
+            "unit_set": "wh3_dlc29_emp_melee_infantry"
+          },
+          "join": [
+            "effect_bonus_value_ids_unit_sets_tables:ac2531b2116f3b45d78a",
+            "effect",
+            "effects_tables:133349804abdca1a0c63"
+          ],
+          "targetJoin": [
+            "effect_bonus_value_ids_unit_sets_tables:ac2531b2116f3b45d78a",
+            "unit_set",
+            "unit_sets_tables:7d15027a60932b310070"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "wh2_dlc11_effect_force_stat_reload_time_reduction_brt_peasant_bowmen_mounted_yeomen_archers",
+      "rowId": "effects_tables:371932f2c27195287ea7",
+      "localisation": "Reload time reduction: %+n% for Peasant Bowmen and Mounted Yeomen Archers units",
+      "displayPriority": 561,
+      "category": "battle",
+      "routes": [
+        {
+          "rowId": "effect_bonus_value_ids_unit_sets_tables:1f2a2da4632c7a4b2adc",
+          "table": "effect_bonus_value_ids_unit_sets_tables",
+          "raw": {
+            "bonus_value_id": "reload",
+            "effect": "wh2_dlc11_effect_force_stat_reload_time_reduction_brt_peasant_bowmen_mounted_yeomen_archers",
+            "unit_set": "wh2_dlc11_brt_peasant_bowmen_mounted_yeomen_archers"
+          },
+          "join": [
+            "effect_bonus_value_ids_unit_sets_tables:1f2a2da4632c7a4b2adc",
+            "effect",
+            "effects_tables:371932f2c27195287ea7"
+          ],
+          "targetJoin": [
+            "effect_bonus_value_ids_unit_sets_tables:1f2a2da4632c7a4b2adc",
+            "unit_set",
+            "unit_sets_tables:828370d383df5cdd5d66"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "wh2_dlc11_effect_force_stat_melee_defence_brt_peasant_mob_men_at_arms_spear_at_arms",
+      "rowId": "effects_tables:3e5e26440f5672e70a30",
+      "localisation": "Melee defence: %+n for Peasant Mob, Men-at-Arms, and Spearmen-at-Arms units",
+      "displayPriority": 451,
+      "category": "battle",
+      "routes": [
+        {
+          "rowId": "effect_bonus_value_ids_unit_sets_tables:168fbcdfb43b9af33935",
+          "table": "effect_bonus_value_ids_unit_sets_tables",
+          "raw": {
+            "bonus_value_id": "melee_defence_mod",
+            "effect": "wh2_dlc11_effect_force_stat_melee_defence_brt_peasant_mob_men_at_arms_spear_at_arms",
+            "unit_set": "wh2_dlc11_brt_peasant_mob_men_at_arms_spear_at_arms"
+          },
+          "join": [
+            "effect_bonus_value_ids_unit_sets_tables:168fbcdfb43b9af33935",
+            "effect",
+            "effects_tables:3e5e26440f5672e70a30"
+          ],
+          "targetJoin": [
+            "effect_bonus_value_ids_unit_sets_tables:168fbcdfb43b9af33935",
+            "unit_set",
+            "unit_sets_tables:8a67a045c64d3f93e60a"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "wh2_dlc11_effect_force_stat_ammunition_brt_peasant_bowmen_mounted_yeomen_archers",
+      "rowId": "effects_tables:86b1440378f669aa2ec0",
+      "localisation": "Ammunition: %+n% for Peasant Bowmen and Mounted Yeomen Archers units",
+      "displayPriority": 511,
+      "category": "battle",
+      "routes": [
+        {
+          "rowId": "effect_bonus_value_ids_unit_sets_tables:4e05ceab6131884a50c4",
+          "table": "effect_bonus_value_ids_unit_sets_tables",
+          "raw": {
+            "bonus_value_id": "ammo_mod",
+            "effect": "wh2_dlc11_effect_force_stat_ammunition_brt_peasant_bowmen_mounted_yeomen_archers",
+            "unit_set": "wh2_dlc11_brt_peasant_bowmen_mounted_yeomen_archers"
+          },
+          "join": [
+            "effect_bonus_value_ids_unit_sets_tables:4e05ceab6131884a50c4",
+            "effect",
+            "effects_tables:86b1440378f669aa2ec0"
+          ],
+          "targetJoin": [
+            "effect_bonus_value_ids_unit_sets_tables:4e05ceab6131884a50c4",
+            "unit_set",
+            "unit_sets_tables:828370d383df5cdd5d66"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "wh2_dlc11_effect_force_stat_armour_grail_reliquae_battle_pilgrims_foot_squires",
+      "rowId": "effects_tables:a81d1e5962f9f9736295",
+      "localisation": "Armour: %+n for Grail Reliquae, Battle Pilgrims, and Foot Squires units",
+      "displayPriority": 401,
+      "category": "battle",
+      "routes": [
+        {
+          "rowId": "effect_bonus_value_ids_unit_sets_tables:03fc32446445cbebb0a7",
+          "table": "effect_bonus_value_ids_unit_sets_tables",
+          "raw": {
+            "bonus_value_id": "armour_mod",
+            "effect": "wh2_dlc11_effect_force_stat_armour_grail_reliquae_battle_pilgrims_foot_squires",
+            "unit_set": "wh2_dlc11_brt_grail_reliquae_battle_pilgrims_foot_squires"
+          },
+          "join": [
+            "effect_bonus_value_ids_unit_sets_tables:03fc32446445cbebb0a7",
+            "effect",
+            "effects_tables:a81d1e5962f9f9736295"
+          ],
+          "targetJoin": [
+            "effect_bonus_value_ids_unit_sets_tables:03fc32446445cbebb0a7",
+            "unit_set",
+            "unit_sets_tables:1e61dc623f51deffa948"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "wh2_dlc11_effect_force_stat_melee_attack_emp_spearmen_swordsmen_flagellants_halberdier",
+      "rowId": "effects_tables:b80b0e21fb12b252e511",
+      "localisation": "Melee attack: %+n for Melee Infantry units",
+      "displayPriority": 431,
+      "category": "battle",
+      "routes": [
+        {
+          "rowId": "effect_bonus_value_ids_unit_sets_tables:776994bd1865d9984d2b",
+          "table": "effect_bonus_value_ids_unit_sets_tables",
+          "raw": {
+            "bonus_value_id": "melee_attack_mod",
+            "effect": "wh2_dlc11_effect_force_stat_melee_attack_emp_spearmen_swordsmen_flagellants_halberdier",
+            "unit_set": "wh3_dlc29_emp_melee_infantry"
+          },
+          "join": [
+            "effect_bonus_value_ids_unit_sets_tables:776994bd1865d9984d2b",
+            "effect",
+            "effects_tables:b80b0e21fb12b252e511"
+          ],
+          "targetJoin": [
+            "effect_bonus_value_ids_unit_sets_tables:776994bd1865d9984d2b",
+            "unit_set",
+            "unit_sets_tables:7d15027a60932b310070"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "wh2_dlc11_effect_force_stat_leadership_peasant_mob_men_at_arms_spear_at_arms",
+      "rowId": "effects_tables:e9fe2ed69374e486019e",
+      "localisation": "Leadership: %+n for Peasant Mob, Men-at-Arms, and Spearmen-at-Arms units",
+      "displayPriority": 411,
+      "category": "battle",
+      "routes": [
+        {
+          "rowId": "effect_bonus_value_ids_unit_sets_tables:5c073b085a9a424f4a74",
+          "table": "effect_bonus_value_ids_unit_sets_tables",
+          "raw": {
+            "bonus_value_id": "morale",
+            "effect": "wh2_dlc11_effect_force_stat_leadership_peasant_mob_men_at_arms_spear_at_arms",
+            "unit_set": "wh2_dlc11_brt_peasant_mob_men_at_arms_spear_at_arms"
+          },
+          "join": [
+            "effect_bonus_value_ids_unit_sets_tables:5c073b085a9a424f4a74",
+            "effect",
+            "effects_tables:e9fe2ed69374e486019e"
+          ],
+          "targetJoin": [
+            "effect_bonus_value_ids_unit_sets_tables:5c073b085a9a424f4a74",
+            "unit_set",
+            "unit_sets_tables:8a67a045c64d3f93e60a"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "wh2_dlc11_effect_force_stat_melee_attack_grail_reliquae_battle_pilgrims_foot_squires",
+      "rowId": "effects_tables:f99799c90f3fd1bf6cd4",
+      "localisation": "Melee attack: %+n for Grail Reliquae, Battle Pilgrims, and Foot Squires units",
+      "displayPriority": 431,
+      "category": "battle",
+      "routes": [
+        {
+          "rowId": "effect_bonus_value_ids_unit_sets_tables:b0564bad8821b561ae8c",
+          "table": "effect_bonus_value_ids_unit_sets_tables",
+          "raw": {
+            "bonus_value_id": "melee_attack_mod",
+            "effect": "wh2_dlc11_effect_force_stat_melee_attack_grail_reliquae_battle_pilgrims_foot_squires",
+            "unit_set": "wh2_dlc11_brt_grail_reliquae_battle_pilgrims_foot_squires"
+          },
+          "join": [
+            "effect_bonus_value_ids_unit_sets_tables:b0564bad8821b561ae8c",
+            "effect",
+            "effects_tables:f99799c90f3fd1bf6cd4"
+          ],
+          "targetJoin": [
+            "effect_bonus_value_ids_unit_sets_tables:b0564bad8821b561ae8c",
+            "unit_set",
+            "unit_sets_tables:1e61dc623f51deffa948"
+          ]
+        }
+      ]
+    }
+  ],
+  "unitSets": [
+    {
+      "key": "wh2_dlc11_brt_grail_reliquae_battle_pilgrims_foot_squires",
+      "rowId": "unit_sets_tables:1e61dc623f51deffa948",
+      "definition": {
+        "key": "wh2_dlc11_brt_grail_reliquae_battle_pilgrims_foot_squires",
+        "use_unit_exp_level_range": false,
+        "min_unit_exp_level_inclusive": -1,
+        "max_unit_exp_level_inclusive": -1,
+        "special_category": ""
+      },
+      "members": [
+        {
+          "rowId": "unit_set_to_unit_junctions_tables:5990f077b7450c96dab4",
+          "mainKey": "wh_dlc07_brt_inf_battle_pilgrims_0",
+          "landKey": "wh_dlc07_brt_inf_battle_pilgrims_0",
+          "selector": {
+            "exclude": false,
+            "unit_caste": "",
+            "unit_category": "",
+            "unit_class": "",
+            "unit_record": "wh_dlc07_brt_inf_battle_pilgrims_0",
+            "unit_set": "wh2_dlc11_brt_grail_reliquae_battle_pilgrims_foot_squires"
+          },
+          "joins": [
+            [
+              "unit_set_to_unit_junctions_tables:5990f077b7450c96dab4",
+              "unit_set",
+              "unit_sets_tables:1e61dc623f51deffa948"
+            ],
+            [
+              "unit_set_to_unit_junctions_tables:5990f077b7450c96dab4",
+              "unit_record",
+              "main_units_tables:96cc0e4273da29fc6e23"
+            ],
+            [
+              "main_units_tables:96cc0e4273da29fc6e23",
+              "land_unit",
+              "land_units_tables:aac889b5d2f2e7ef8e70"
+            ]
+          ]
+        },
+        {
+          "rowId": "unit_set_to_unit_junctions_tables:942566e010faa9070d5a",
+          "mainKey": "wh_dlc07_brt_inf_foot_squires_0",
+          "landKey": "wh_dlc07_brt_inf_foot_squires_0",
+          "selector": {
+            "exclude": false,
+            "unit_caste": "",
+            "unit_category": "",
+            "unit_class": "",
+            "unit_record": "wh_dlc07_brt_inf_foot_squires_0",
+            "unit_set": "wh2_dlc11_brt_grail_reliquae_battle_pilgrims_foot_squires"
+          },
+          "joins": [
+            [
+              "unit_set_to_unit_junctions_tables:942566e010faa9070d5a",
+              "unit_set",
+              "unit_sets_tables:1e61dc623f51deffa948"
+            ],
+            [
+              "unit_set_to_unit_junctions_tables:942566e010faa9070d5a",
+              "unit_record",
+              "main_units_tables:1b3ae023893cc24447de"
+            ],
+            [
+              "main_units_tables:1b3ae023893cc24447de",
+              "land_unit",
+              "land_units_tables:e6c45c82284106410c40"
+            ]
+          ]
+        },
+        {
+          "rowId": "unit_set_to_unit_junctions_tables:b10b201edf2ea6e5b1d0",
+          "mainKey": "wh_pro04_brt_inf_battle_pilgrims_ror_0",
+          "landKey": "wh_pro04_brt_inf_battle_pilgrims_ror_0",
+          "selector": {
+            "exclude": false,
+            "unit_caste": "",
+            "unit_category": "",
+            "unit_class": "",
+            "unit_record": "wh_pro04_brt_inf_battle_pilgrims_ror_0",
+            "unit_set": "wh2_dlc11_brt_grail_reliquae_battle_pilgrims_foot_squires"
+          },
+          "joins": [
+            [
+              "unit_set_to_unit_junctions_tables:b10b201edf2ea6e5b1d0",
+              "unit_set",
+              "unit_sets_tables:1e61dc623f51deffa948"
+            ],
+            [
+              "unit_set_to_unit_junctions_tables:b10b201edf2ea6e5b1d0",
+              "unit_record",
+              "main_units_tables:4a4cf6f09b5760623036"
+            ],
+            [
+              "main_units_tables:4a4cf6f09b5760623036",
+              "land_unit",
+              "land_units_tables:2a718e71377e44135420"
+            ]
+          ]
+        },
+        {
+          "rowId": "unit_set_to_unit_junctions_tables:dbaeaee0bd7feb5f174f",
+          "mainKey": "wh_dlc07_brt_inf_grail_reliquae_0",
+          "landKey": "wh_dlc07_brt_inf_grail_reliquae_0",
+          "selector": {
+            "exclude": false,
+            "unit_caste": "",
+            "unit_category": "",
+            "unit_class": "",
+            "unit_record": "wh_dlc07_brt_inf_grail_reliquae_0",
+            "unit_set": "wh2_dlc11_brt_grail_reliquae_battle_pilgrims_foot_squires"
+          },
+          "joins": [
+            [
+              "unit_set_to_unit_junctions_tables:dbaeaee0bd7feb5f174f",
+              "unit_set",
+              "unit_sets_tables:1e61dc623f51deffa948"
+            ],
+            [
+              "unit_set_to_unit_junctions_tables:dbaeaee0bd7feb5f174f",
+              "unit_record",
+              "main_units_tables:9a2237e55197e64a9f9f"
+            ],
+            [
+              "main_units_tables:9a2237e55197e64a9f9f",
+              "land_unit",
+              "land_units_tables:614714b8c312d51f3736"
+            ]
+          ]
+        },
+        {
+          "rowId": "unit_set_to_unit_junctions_tables:e4f55a1a0d5c2aaad5ea",
+          "mainKey": "wh_pro04_brt_inf_foot_squires_ror_0",
+          "landKey": "wh_pro04_brt_inf_foot_squires_ror_0",
+          "selector": {
+            "exclude": false,
+            "unit_caste": "",
+            "unit_category": "",
+            "unit_class": "",
+            "unit_record": "wh_pro04_brt_inf_foot_squires_ror_0",
+            "unit_set": "wh2_dlc11_brt_grail_reliquae_battle_pilgrims_foot_squires"
+          },
+          "joins": [
+            [
+              "unit_set_to_unit_junctions_tables:e4f55a1a0d5c2aaad5ea",
+              "unit_set",
+              "unit_sets_tables:1e61dc623f51deffa948"
+            ],
+            [
+              "unit_set_to_unit_junctions_tables:e4f55a1a0d5c2aaad5ea",
+              "unit_record",
+              "main_units_tables:98c81c9f6fce7b5bf431"
+            ],
+            [
+              "main_units_tables:98c81c9f6fce7b5bf431",
+              "land_unit",
+              "land_units_tables:72ac976973017d9ee844"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "key": "wh3_dlc29_emp_melee_infantry",
+      "rowId": "unit_sets_tables:7d15027a60932b310070",
+      "definition": {
+        "key": "wh3_dlc29_emp_melee_infantry",
+        "use_unit_exp_level_range": false,
+        "min_unit_exp_level_inclusive": -1,
+        "max_unit_exp_level_inclusive": -1,
+        "special_category": ""
+      },
+      "members": [
+        {
+          "rowId": "unit_set_to_unit_junctions_tables:06e627652a696c4f26c2",
+          "mainKey": "wh_dlc04_emp_inf_flagellants_0",
+          "landKey": "wh_dlc04_emp_inf_flagellants_0",
+          "selector": {
+            "exclude": false,
+            "unit_caste": "",
+            "unit_category": "",
+            "unit_class": "",
+            "unit_record": "wh_dlc04_emp_inf_flagellants_0",
+            "unit_set": "wh3_dlc29_emp_melee_infantry"
+          },
+          "joins": [
+            [
+              "unit_set_to_unit_junctions_tables:06e627652a696c4f26c2",
+              "unit_set",
+              "unit_sets_tables:7d15027a60932b310070"
+            ],
+            [
+              "unit_set_to_unit_junctions_tables:06e627652a696c4f26c2",
+              "unit_record",
+              "main_units_tables:ae277ad9996f4d875ccf"
+            ],
+            [
+              "main_units_tables:ae277ad9996f4d875ccf",
+              "land_unit",
+              "land_units_tables:c820229b52456f66a971"
+            ]
+          ]
+        },
+        {
+          "rowId": "unit_set_to_unit_junctions_tables:2b9184c66787d18b9be1",
+          "mainKey": "wh_main_emp_inf_greatswords",
+          "landKey": "wh_main_emp_inf_greatswords",
+          "selector": {
+            "exclude": false,
+            "unit_caste": "",
+            "unit_category": "",
+            "unit_class": "",
+            "unit_record": "wh_main_emp_inf_greatswords",
+            "unit_set": "wh3_dlc29_emp_melee_infantry"
+          },
+          "joins": [
+            [
+              "unit_set_to_unit_junctions_tables:2b9184c66787d18b9be1",
+              "unit_set",
+              "unit_sets_tables:7d15027a60932b310070"
+            ],
+            [
+              "unit_set_to_unit_junctions_tables:2b9184c66787d18b9be1",
+              "unit_record",
+              "main_units_tables:6da232fc3bb2ab248a3e"
+            ],
+            [
+              "main_units_tables:6da232fc3bb2ab248a3e",
+              "land_unit",
+              "land_units_tables:a61e8e03b91d91c2ba98"
+            ]
+          ]
+        },
+        {
+          "rowId": "unit_set_to_unit_junctions_tables:403f5467984b61e15ee0",
+          "mainKey": "wh2_dlc13_emp_inf_spearmen_ror_0",
+          "landKey": "wh2_dlc13_emp_inf_spearmen_ror_0",
+          "selector": {
+            "exclude": false,
+            "unit_caste": "",
+            "unit_category": "",
+            "unit_class": "",
+            "unit_record": "wh2_dlc13_emp_inf_spearmen_ror_0",
+            "unit_set": "wh3_dlc29_emp_melee_infantry"
+          },
+          "joins": [
+            [
+              "unit_set_to_unit_junctions_tables:403f5467984b61e15ee0",
+              "unit_set",
+              "unit_sets_tables:7d15027a60932b310070"
+            ],
+            [
+              "unit_set_to_unit_junctions_tables:403f5467984b61e15ee0",
+              "unit_record",
+              "main_units_tables:456b74949bcae4db4f6e"
+            ],
+            [
+              "main_units_tables:456b74949bcae4db4f6e",
+              "land_unit",
+              "land_units_tables:1993de4170f24a79dcf8"
+            ]
+          ]
+        },
+        {
+          "rowId": "unit_set_to_unit_junctions_tables:416d59042ceb5593d145",
+          "mainKey": "wh3_dlc25_emp_inf_spearmen_shields_ror",
+          "landKey": "wh3_dlc25_emp_inf_spearmen_shields_ror",
+          "selector": {
+            "exclude": false,
+            "unit_caste": "",
+            "unit_category": "",
+            "unit_class": "",
+            "unit_record": "wh3_dlc25_emp_inf_spearmen_shields_ror",
+            "unit_set": "wh3_dlc29_emp_melee_infantry"
+          },
+          "joins": [
+            [
+              "unit_set_to_unit_junctions_tables:416d59042ceb5593d145",
+              "unit_set",
+              "unit_sets_tables:7d15027a60932b310070"
+            ],
+            [
+              "unit_set_to_unit_junctions_tables:416d59042ceb5593d145",
+              "unit_record",
+              "main_units_tables:3f56b01127b392855e45"
+            ],
+            [
+              "main_units_tables:3f56b01127b392855e45",
+              "land_unit",
+              "land_units_tables:03fb7296962487c7f76b"
+            ]
+          ]
+        },
+        {
+          "rowId": "unit_set_to_unit_junctions_tables:4a740ed2591f93d8bfb4",
+          "mainKey": "wh3_dlc29_emp_inf_warriors_of_ulric",
+          "landKey": "wh3_dlc29_emp_inf_warriors_of_ulric",
+          "selector": {
+            "exclude": false,
+            "unit_caste": "",
+            "unit_category": "",
+            "unit_class": "",
+            "unit_record": "wh3_dlc29_emp_inf_warriors_of_ulric",
+            "unit_set": "wh3_dlc29_emp_melee_infantry"
+          },
+          "joins": [
+            [
+              "unit_set_to_unit_junctions_tables:4a740ed2591f93d8bfb4",
+              "unit_set",
+              "unit_sets_tables:7d15027a60932b310070"
+            ],
+            [
+              "unit_set_to_unit_junctions_tables:4a740ed2591f93d8bfb4",
+              "unit_record",
+              "main_units_tables:965b100dd6973c8d9e31"
+            ],
+            [
+              "main_units_tables:965b100dd6973c8d9e31",
+              "land_unit",
+              "land_units_tables:27c63303291d96e4f569"
+            ]
+          ]
+        },
+        {
+          "rowId": "unit_set_to_unit_junctions_tables:59c65756615425cf1c72",
+          "mainKey": "wh_dlc04_emp_inf_sigmars_sons_0",
+          "landKey": "wh_dlc04_emp_inf_sigmars_sons_0",
+          "selector": {
+            "exclude": false,
+            "unit_caste": "",
+            "unit_category": "",
+            "unit_class": "",
+            "unit_record": "wh_dlc04_emp_inf_sigmars_sons_0",
+            "unit_set": "wh3_dlc29_emp_melee_infantry"
+          },
+          "joins": [
+            [
+              "unit_set_to_unit_junctions_tables:59c65756615425cf1c72",
+              "unit_set",
+              "unit_sets_tables:7d15027a60932b310070"
+            ],
+            [
+              "unit_set_to_unit_junctions_tables:59c65756615425cf1c72",
+              "unit_record",
+              "main_units_tables:3344aa0fa0cb7cff797c"
+            ],
+            [
+              "main_units_tables:3344aa0fa0cb7cff797c",
+              "land_unit",
+              "land_units_tables:6a5d40ef1350c84fca0e"
+            ]
+          ]
+        },
+        {
+          "rowId": "unit_set_to_unit_junctions_tables:642f9a4945b792d37754",
+          "mainKey": "wh2_dlc13_emp_inf_halberdiers_ror_0",
+          "landKey": "wh2_dlc13_emp_inf_halberdiers_ror_0",
+          "selector": {
+            "exclude": false,
+            "unit_caste": "",
+            "unit_category": "",
+            "unit_class": "",
+            "unit_record": "wh2_dlc13_emp_inf_halberdiers_ror_0",
+            "unit_set": "wh3_dlc29_emp_melee_infantry"
+          },
+          "joins": [
+            [
+              "unit_set_to_unit_junctions_tables:642f9a4945b792d37754",
+              "unit_set",
+              "unit_sets_tables:7d15027a60932b310070"
+            ],
+            [
+              "unit_set_to_unit_junctions_tables:642f9a4945b792d37754",
+              "unit_record",
+              "main_units_tables:b1cf078c16e3c0124076"
+            ],
+            [
+              "main_units_tables:b1cf078c16e3c0124076",
+              "land_unit",
+              "land_units_tables:23daad4f28bca25b537a"
+            ]
+          ]
+        },
+        {
+          "rowId": "unit_set_to_unit_junctions_tables:6da49c1b3f02c174f91b",
+          "mainKey": "wh_main_emp_inf_halberdiers",
+          "landKey": "wh_main_emp_inf_halberdiers",
+          "selector": {
+            "exclude": false,
+            "unit_caste": "",
+            "unit_category": "",
+            "unit_class": "",
+            "unit_record": "wh_main_emp_inf_halberdiers",
+            "unit_set": "wh3_dlc29_emp_melee_infantry"
+          },
+          "joins": [
+            [
+              "unit_set_to_unit_junctions_tables:6da49c1b3f02c174f91b",
+              "unit_set",
+              "unit_sets_tables:7d15027a60932b310070"
+            ],
+            [
+              "unit_set_to_unit_junctions_tables:6da49c1b3f02c174f91b",
+              "unit_record",
+              "main_units_tables:b0f6ae8a40be02e0e62c"
+            ],
+            [
+              "main_units_tables:b0f6ae8a40be02e0e62c",
+              "land_unit",
+              "land_units_tables:a4a9f0c72a7e220a5940"
+            ]
+          ]
+        },
+        {
+          "rowId": "unit_set_to_unit_junctions_tables:83a9130d33f63155fcf4",
+          "mainKey": "wh3_dlc29_emp_inf_teutogen_guard",
+          "landKey": "wh3_dlc29_emp_inf_teutogen_guard",
+          "selector": {
+            "exclude": false,
+            "unit_caste": "",
+            "unit_category": "",
+            "unit_class": "",
+            "unit_record": "wh3_dlc29_emp_inf_teutogen_guard",
+            "unit_set": "wh3_dlc29_emp_melee_infantry"
+          },
+          "joins": [
+            [
+              "unit_set_to_unit_junctions_tables:83a9130d33f63155fcf4",
+              "unit_set",
+              "unit_sets_tables:7d15027a60932b310070"
+            ],
+            [
+              "unit_set_to_unit_junctions_tables:83a9130d33f63155fcf4",
+              "unit_record",
+              "main_units_tables:f39e9840da137dc67f93"
+            ],
+            [
+              "main_units_tables:f39e9840da137dc67f93",
+              "land_unit",
+              "land_units_tables:d915526de6af48f4e09d"
+            ]
+          ]
+        },
+        {
+          "rowId": "unit_set_to_unit_junctions_tables:881becac7530bb3c5d0a",
+          "mainKey": "wh2_dlc17_emp_inf_prisoners_0",
+          "landKey": "wh2_dlc17_emp_inf_prisoners_0",
+          "selector": {
+            "exclude": false,
+            "unit_caste": "",
+            "unit_category": "",
+            "unit_class": "",
+            "unit_record": "wh2_dlc17_emp_inf_prisoners_0",
+            "unit_set": "wh3_dlc29_emp_melee_infantry"
+          },
+          "joins": [
+            [
+              "unit_set_to_unit_junctions_tables:881becac7530bb3c5d0a",
+              "unit_set",
+              "unit_sets_tables:7d15027a60932b310070"
+            ],
+            [
+              "unit_set_to_unit_junctions_tables:881becac7530bb3c5d0a",
+              "unit_record",
+              "main_units_tables:b8405587bad336fec167"
+            ],
+            [
+              "main_units_tables:b8405587bad336fec167",
+              "land_unit",
+              "land_units_tables:4a1d8497fabc3f1cb14e"
+            ]
+          ]
+        },
+        {
+          "rowId": "unit_set_to_unit_junctions_tables:939b8e0be510f0caf1d8",
+          "mainKey": "wh2_dlc13_emp_inf_greatswords_ror_0",
+          "landKey": "wh2_dlc13_emp_inf_greatswords_ror_0",
+          "selector": {
+            "exclude": false,
+            "unit_caste": "",
+            "unit_category": "",
+            "unit_class": "",
+            "unit_record": "wh2_dlc13_emp_inf_greatswords_ror_0",
+            "unit_set": "wh3_dlc29_emp_melee_infantry"
+          },
+          "joins": [
+            [
+              "unit_set_to_unit_junctions_tables:939b8e0be510f0caf1d8",
+              "unit_set",
+              "unit_sets_tables:7d15027a60932b310070"
+            ],
+            [
+              "unit_set_to_unit_junctions_tables:939b8e0be510f0caf1d8",
+              "unit_record",
+              "main_units_tables:a4a5587f2851dc095701"
+            ],
+            [
+              "main_units_tables:a4a5587f2851dc095701",
+              "land_unit",
+              "land_units_tables:9ecb6cfe7a75b7ded0ca"
+            ]
+          ]
+        },
+        {
+          "rowId": "unit_set_to_unit_junctions_tables:b420d65ed575cfed2536",
+          "mainKey": "wh_main_emp_inf_spearmen_1",
+          "landKey": "wh_main_emp_inf_spearmen_1",
+          "selector": {
+            "exclude": false,
+            "unit_caste": "",
+            "unit_category": "",
+            "unit_class": "",
+            "unit_record": "wh_main_emp_inf_spearmen_1",
+            "unit_set": "wh3_dlc29_emp_melee_infantry"
+          },
+          "joins": [
+            [
+              "unit_set_to_unit_junctions_tables:b420d65ed575cfed2536",
+              "unit_set",
+              "unit_sets_tables:7d15027a60932b310070"
+            ],
+            [
+              "unit_set_to_unit_junctions_tables:b420d65ed575cfed2536",
+              "unit_record",
+              "main_units_tables:62896e7b508073d95c44"
+            ],
+            [
+              "main_units_tables:62896e7b508073d95c44",
+              "land_unit",
+              "land_units_tables:cbc6051227994eb2ff0c"
+            ]
+          ]
+        },
+        {
+          "rowId": "unit_set_to_unit_junctions_tables:bbcf540c746a5fc9daed",
+          "mainKey": "wh_main_emp_inf_spearmen_0",
+          "landKey": "wh_main_emp_inf_spearmen_0",
+          "selector": {
+            "exclude": false,
+            "unit_caste": "",
+            "unit_category": "",
+            "unit_class": "",
+            "unit_record": "wh_main_emp_inf_spearmen_0",
+            "unit_set": "wh3_dlc29_emp_melee_infantry"
+          },
+          "joins": [
+            [
+              "unit_set_to_unit_junctions_tables:bbcf540c746a5fc9daed",
+              "unit_set",
+              "unit_sets_tables:7d15027a60932b310070"
+            ],
+            [
+              "unit_set_to_unit_junctions_tables:bbcf540c746a5fc9daed",
+              "unit_record",
+              "main_units_tables:6b3c09506c3dd640a3c2"
+            ],
+            [
+              "main_units_tables:6b3c09506c3dd640a3c2",
+              "land_unit",
+              "land_units_tables:3e5dd903e21d0669dfa4"
+            ]
+          ]
+        },
+        {
+          "rowId": "unit_set_to_unit_junctions_tables:d26a6c1043f507cf84d9",
+          "mainKey": "wh3_dlc29_emp_inf_teutogen_guard_ror",
+          "landKey": "wh3_dlc29_emp_inf_teutogen_guard_ror",
+          "selector": {
+            "exclude": false,
+            "unit_caste": "",
+            "unit_category": "",
+            "unit_class": "",
+            "unit_record": "wh3_dlc29_emp_inf_teutogen_guard_ror",
+            "unit_set": "wh3_dlc29_emp_melee_infantry"
+          },
+          "joins": [
+            [
+              "unit_set_to_unit_junctions_tables:d26a6c1043f507cf84d9",
+              "unit_set",
+              "unit_sets_tables:7d15027a60932b310070"
+            ],
+            [
+              "unit_set_to_unit_junctions_tables:d26a6c1043f507cf84d9",
+              "unit_record",
+              "main_units_tables:983a371ec26578bf8bca"
+            ],
+            [
+              "main_units_tables:983a371ec26578bf8bca",
+              "land_unit",
+              "land_units_tables:a8a3d129a108945409d2"
+            ]
+          ]
+        },
+        {
+          "rowId": "unit_set_to_unit_junctions_tables:d8515bb1c54471a1d050",
+          "mainKey": "wh2_dlc13_emp_inf_halberdiers_imperial_supply",
+          "landKey": "wh_main_emp_inf_halberdiers",
+          "selector": {
+            "exclude": false,
+            "unit_caste": "",
+            "unit_category": "",
+            "unit_class": "",
+            "unit_record": "wh2_dlc13_emp_inf_halberdiers_imperial_supply",
+            "unit_set": "wh3_dlc29_emp_melee_infantry"
+          },
+          "joins": [
+            [
+              "unit_set_to_unit_junctions_tables:d8515bb1c54471a1d050",
+              "unit_set",
+              "unit_sets_tables:7d15027a60932b310070"
+            ],
+            [
+              "unit_set_to_unit_junctions_tables:d8515bb1c54471a1d050",
+              "unit_record",
+              "main_units_tables:be5cac25c22bfa431b33"
+            ],
+            [
+              "main_units_tables:be5cac25c22bfa431b33",
+              "land_unit",
+              "land_units_tables:a4a9f0c72a7e220a5940"
+            ]
+          ]
+        },
+        {
+          "rowId": "unit_set_to_unit_junctions_tables:dc0a49821f905a8446cd",
+          "mainKey": "wh3_dlc29_emp_inf_wolf_kin",
+          "landKey": "wh3_dlc29_emp_inf_wolf_kin",
+          "selector": {
+            "exclude": false,
+            "unit_caste": "",
+            "unit_category": "",
+            "unit_class": "",
+            "unit_record": "wh3_dlc29_emp_inf_wolf_kin",
+            "unit_set": "wh3_dlc29_emp_melee_infantry"
+          },
+          "joins": [
+            [
+              "unit_set_to_unit_junctions_tables:dc0a49821f905a8446cd",
+              "unit_set",
+              "unit_sets_tables:7d15027a60932b310070"
+            ],
+            [
+              "unit_set_to_unit_junctions_tables:dc0a49821f905a8446cd",
+              "unit_record",
+              "main_units_tables:5f50467fa63f242e00e2"
+            ],
+            [
+              "main_units_tables:5f50467fa63f242e00e2",
+              "land_unit",
+              "land_units_tables:fbeda65ffb9ccc4edd58"
+            ]
+          ]
+        },
+        {
+          "rowId": "unit_set_to_unit_junctions_tables:eb1598d08d0382f05efb",
+          "mainKey": "wh_main_emp_inf_swordsmen",
+          "landKey": "wh_main_emp_inf_swordsmen",
+          "selector": {
+            "exclude": false,
+            "unit_caste": "",
+            "unit_category": "",
+            "unit_class": "",
+            "unit_record": "wh_main_emp_inf_swordsmen",
+            "unit_set": "wh3_dlc29_emp_melee_infantry"
+          },
+          "joins": [
+            [
+              "unit_set_to_unit_junctions_tables:eb1598d08d0382f05efb",
+              "unit_set",
+              "unit_sets_tables:7d15027a60932b310070"
+            ],
+            [
+              "unit_set_to_unit_junctions_tables:eb1598d08d0382f05efb",
+              "unit_record",
+              "main_units_tables:3d333afa345746331baa"
+            ],
+            [
+              "main_units_tables:3d333afa345746331baa",
+              "land_unit",
+              "land_units_tables:c805c81b73d19673a81f"
+            ]
+          ]
+        },
+        {
+          "rowId": "unit_set_to_unit_junctions_tables:f1f4471ecd8bcd5af5d8",
+          "mainKey": "wh2_dlc13_emp_inf_greatswords_imperial_supply",
+          "landKey": "wh_main_emp_inf_greatswords",
+          "selector": {
+            "exclude": false,
+            "unit_caste": "",
+            "unit_category": "",
+            "unit_class": "",
+            "unit_record": "wh2_dlc13_emp_inf_greatswords_imperial_supply",
+            "unit_set": "wh3_dlc29_emp_melee_infantry"
+          },
+          "joins": [
+            [
+              "unit_set_to_unit_junctions_tables:f1f4471ecd8bcd5af5d8",
+              "unit_set",
+              "unit_sets_tables:7d15027a60932b310070"
+            ],
+            [
+              "unit_set_to_unit_junctions_tables:f1f4471ecd8bcd5af5d8",
+              "unit_record",
+              "main_units_tables:6935ecc7fbd7ee2f76d9"
+            ],
+            [
+              "main_units_tables:6935ecc7fbd7ee2f76d9",
+              "land_unit",
+              "land_units_tables:a61e8e03b91d91c2ba98"
+            ]
+          ]
+        },
+        {
+          "rowId": "unit_set_to_unit_junctions_tables:f356eb82229c8d2bb925",
+          "mainKey": "wh2_dlc13_emp_inf_swordsmen_ror_0",
+          "landKey": "wh2_dlc13_emp_inf_swordsmen_ror_0",
+          "selector": {
+            "exclude": false,
+            "unit_caste": "",
+            "unit_category": "",
+            "unit_class": "",
+            "unit_record": "wh2_dlc13_emp_inf_swordsmen_ror_0",
+            "unit_set": "wh3_dlc29_emp_melee_infantry"
+          },
+          "joins": [
+            [
+              "unit_set_to_unit_junctions_tables:f356eb82229c8d2bb925",
+              "unit_set",
+              "unit_sets_tables:7d15027a60932b310070"
+            ],
+            [
+              "unit_set_to_unit_junctions_tables:f356eb82229c8d2bb925",
+              "unit_record",
+              "main_units_tables:28b106e47016c3f9387c"
+            ],
+            [
+              "main_units_tables:28b106e47016c3f9387c",
+              "land_unit",
+              "land_units_tables:74962894a52bf49eb965"
+            ]
+          ]
+        },
+        {
+          "rowId": "unit_set_to_unit_junctions_tables:fa2e18b83de2f725eea9",
+          "mainKey": "wh_dlc04_emp_inf_tattersouls_0",
+          "landKey": "wh_dlc04_emp_inf_tattersouls_0",
+          "selector": {
+            "exclude": false,
+            "unit_caste": "",
+            "unit_category": "",
+            "unit_class": "",
+            "unit_record": "wh_dlc04_emp_inf_tattersouls_0",
+            "unit_set": "wh3_dlc29_emp_melee_infantry"
+          },
+          "joins": [
+            [
+              "unit_set_to_unit_junctions_tables:fa2e18b83de2f725eea9",
+              "unit_set",
+              "unit_sets_tables:7d15027a60932b310070"
+            ],
+            [
+              "unit_set_to_unit_junctions_tables:fa2e18b83de2f725eea9",
+              "unit_record",
+              "main_units_tables:cacf2849546727b272a6"
+            ],
+            [
+              "main_units_tables:cacf2849546727b272a6",
+              "land_unit",
+              "land_units_tables:6a8c3c8e186b3eaa358c"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "key": "wh2_dlc11_brt_peasant_bowmen_mounted_yeomen_archers",
+      "rowId": "unit_sets_tables:828370d383df5cdd5d66",
+      "definition": {
+        "key": "wh2_dlc11_brt_peasant_bowmen_mounted_yeomen_archers",
+        "use_unit_exp_level_range": false,
+        "min_unit_exp_level_inclusive": -1,
+        "max_unit_exp_level_inclusive": -1,
+        "special_category": ""
+      },
+      "members": [
+        {
+          "rowId": "unit_set_to_unit_junctions_tables:0f629b3543ab58fd6cab",
+          "mainKey": "wh_main_brt_cav_mounted_yeomen_1",
+          "landKey": "wh_main_brt_cav_mounted_yeomen_1",
+          "selector": {
+            "exclude": false,
+            "unit_caste": "",
+            "unit_category": "",
+            "unit_class": "",
+            "unit_record": "wh_main_brt_cav_mounted_yeomen_1",
+            "unit_set": "wh2_dlc11_brt_peasant_bowmen_mounted_yeomen_archers"
+          },
+          "joins": [
+            [
+              "unit_set_to_unit_junctions_tables:0f629b3543ab58fd6cab",
+              "unit_set",
+              "unit_sets_tables:828370d383df5cdd5d66"
+            ],
+            [
+              "unit_set_to_unit_junctions_tables:0f629b3543ab58fd6cab",
+              "unit_record",
+              "main_units_tables:9ad9670f4eba8d566238"
+            ],
+            [
+              "main_units_tables:9ad9670f4eba8d566238",
+              "land_unit",
+              "land_units_tables:807cea270beac7a1c81c"
+            ]
+          ]
+        },
+        {
+          "rowId": "unit_set_to_unit_junctions_tables:1098e334a3b8d5d46631",
+          "mainKey": "wh_dlc07_brt_inf_peasant_bowmen_1",
+          "landKey": "wh_dlc07_brt_inf_peasant_bowmen_1",
+          "selector": {
+            "exclude": false,
+            "unit_caste": "",
+            "unit_category": "",
+            "unit_class": "",
+            "unit_record": "wh_dlc07_brt_inf_peasant_bowmen_1",
+            "unit_set": "wh2_dlc11_brt_peasant_bowmen_mounted_yeomen_archers"
+          },
+          "joins": [
+            [
+              "unit_set_to_unit_junctions_tables:1098e334a3b8d5d46631",
+              "unit_set",
+              "unit_sets_tables:828370d383df5cdd5d66"
+            ],
+            [
+              "unit_set_to_unit_junctions_tables:1098e334a3b8d5d46631",
+              "unit_record",
+              "main_units_tables:989fa04776757a1d0348"
+            ],
+            [
+              "main_units_tables:989fa04776757a1d0348",
+              "land_unit",
+              "land_units_tables:d3709eb27beda8dec9fe"
+            ]
+          ]
+        },
+        {
+          "rowId": "unit_set_to_unit_junctions_tables:458a12efba58b1af6bd7",
+          "mainKey": "wh_pro04_brt_cav_mounted_yeomen_ror_0",
+          "landKey": "wh_pro04_brt_cav_mounted_yeomen_ror_0",
+          "selector": {
+            "exclude": false,
+            "unit_caste": "",
+            "unit_category": "",
+            "unit_class": "",
+            "unit_record": "wh_pro04_brt_cav_mounted_yeomen_ror_0",
+            "unit_set": "wh2_dlc11_brt_peasant_bowmen_mounted_yeomen_archers"
+          },
+          "joins": [
+            [
+              "unit_set_to_unit_junctions_tables:458a12efba58b1af6bd7",
+              "unit_set",
+              "unit_sets_tables:828370d383df5cdd5d66"
+            ],
+            [
+              "unit_set_to_unit_junctions_tables:458a12efba58b1af6bd7",
+              "unit_record",
+              "main_units_tables:d014c0f60b133f6a742d"
+            ],
+            [
+              "main_units_tables:d014c0f60b133f6a742d",
+              "land_unit",
+              "land_units_tables:13d6ddd20bdee5263d4f"
+            ]
+          ]
+        },
+        {
+          "rowId": "unit_set_to_unit_junctions_tables:78cc21e9e5110e661184",
+          "mainKey": "wh_dlc07_brt_inf_peasant_bowmen_2",
+          "landKey": "wh_dlc07_brt_inf_peasant_bowmen_2",
+          "selector": {
+            "exclude": false,
+            "unit_caste": "",
+            "unit_category": "",
+            "unit_class": "",
+            "unit_record": "wh_dlc07_brt_inf_peasant_bowmen_2",
+            "unit_set": "wh2_dlc11_brt_peasant_bowmen_mounted_yeomen_archers"
+          },
+          "joins": [
+            [
+              "unit_set_to_unit_junctions_tables:78cc21e9e5110e661184",
+              "unit_set",
+              "unit_sets_tables:828370d383df5cdd5d66"
+            ],
+            [
+              "unit_set_to_unit_junctions_tables:78cc21e9e5110e661184",
+              "unit_record",
+              "main_units_tables:8e5aff58c901856ffbe0"
+            ],
+            [
+              "main_units_tables:8e5aff58c901856ffbe0",
+              "land_unit",
+              "land_units_tables:ee3ef3c85d35c714d3e1"
+            ]
+          ]
+        },
+        {
+          "rowId": "unit_set_to_unit_junctions_tables:fc4f5505ca94763c7a30",
+          "mainKey": "wh_main_brt_inf_peasant_bowmen",
+          "landKey": "wh_main_brt_inf_peasant_bowmen",
+          "selector": {
+            "exclude": false,
+            "unit_caste": "",
+            "unit_category": "",
+            "unit_class": "",
+            "unit_record": "wh_main_brt_inf_peasant_bowmen",
+            "unit_set": "wh2_dlc11_brt_peasant_bowmen_mounted_yeomen_archers"
+          },
+          "joins": [
+            [
+              "unit_set_to_unit_junctions_tables:fc4f5505ca94763c7a30",
+              "unit_set",
+              "unit_sets_tables:828370d383df5cdd5d66"
+            ],
+            [
+              "unit_set_to_unit_junctions_tables:fc4f5505ca94763c7a30",
+              "unit_record",
+              "main_units_tables:70f1c6db66224146f58c"
+            ],
+            [
+              "main_units_tables:70f1c6db66224146f58c",
+              "land_unit",
+              "land_units_tables:1bf74ecd61831328eb23"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "key": "wh2_dlc11_brt_peasant_mob_men_at_arms_spear_at_arms",
+      "rowId": "unit_sets_tables:8a67a045c64d3f93e60a",
+      "definition": {
+        "key": "wh2_dlc11_brt_peasant_mob_men_at_arms_spear_at_arms",
+        "use_unit_exp_level_range": false,
+        "min_unit_exp_level_inclusive": -1,
+        "max_unit_exp_level_inclusive": -1,
+        "special_category": ""
+      },
+      "members": [
+        {
+          "rowId": "unit_set_to_unit_junctions_tables:082917b9f3920076ab91",
+          "mainKey": "wh_dlc07_brt_inf_spearmen_at_arms_1",
+          "landKey": "wh_dlc07_brt_inf_spearmen_at_arms_1",
+          "selector": {
+            "exclude": false,
+            "unit_caste": "",
+            "unit_category": "",
+            "unit_class": "",
+            "unit_record": "wh_dlc07_brt_inf_spearmen_at_arms_1",
+            "unit_set": "wh2_dlc11_brt_peasant_mob_men_at_arms_spear_at_arms"
+          },
+          "joins": [
+            [
+              "unit_set_to_unit_junctions_tables:082917b9f3920076ab91",
+              "unit_set",
+              "unit_sets_tables:8a67a045c64d3f93e60a"
+            ],
+            [
+              "unit_set_to_unit_junctions_tables:082917b9f3920076ab91",
+              "unit_record",
+              "main_units_tables:6036f86b558dc9323143"
+            ],
+            [
+              "main_units_tables:6036f86b558dc9323143",
+              "land_unit",
+              "land_units_tables:80441aa56d5ad5a1e0a6"
+            ]
+          ]
+        },
+        {
+          "rowId": "unit_set_to_unit_junctions_tables:0d834f74de67b805b721",
+          "mainKey": "wh_main_brt_inf_men_at_arms",
+          "landKey": "wh_main_brt_inf_men_at_arms",
+          "selector": {
+            "exclude": false,
+            "unit_caste": "",
+            "unit_category": "",
+            "unit_class": "",
+            "unit_record": "wh_main_brt_inf_men_at_arms",
+            "unit_set": "wh2_dlc11_brt_peasant_mob_men_at_arms_spear_at_arms"
+          },
+          "joins": [
+            [
+              "unit_set_to_unit_junctions_tables:0d834f74de67b805b721",
+              "unit_set",
+              "unit_sets_tables:8a67a045c64d3f93e60a"
+            ],
+            [
+              "unit_set_to_unit_junctions_tables:0d834f74de67b805b721",
+              "unit_record",
+              "main_units_tables:ffca10b9d45993f81d0b"
+            ],
+            [
+              "main_units_tables:ffca10b9d45993f81d0b",
+              "land_unit",
+              "land_units_tables:0e25a1c669735ec7f498"
+            ]
+          ]
+        },
+        {
+          "rowId": "unit_set_to_unit_junctions_tables:614fd5d217edc935f3dc",
+          "mainKey": "wh_dlc07_brt_inf_men_at_arms_1",
+          "landKey": "wh_dlc07_brt_inf_men_at_arms_1",
+          "selector": {
+            "exclude": false,
+            "unit_caste": "",
+            "unit_category": "",
+            "unit_class": "",
+            "unit_record": "wh_dlc07_brt_inf_men_at_arms_1",
+            "unit_set": "wh2_dlc11_brt_peasant_mob_men_at_arms_spear_at_arms"
+          },
+          "joins": [
+            [
+              "unit_set_to_unit_junctions_tables:614fd5d217edc935f3dc",
+              "unit_set",
+              "unit_sets_tables:8a67a045c64d3f93e60a"
+            ],
+            [
+              "unit_set_to_unit_junctions_tables:614fd5d217edc935f3dc",
+              "unit_record",
+              "main_units_tables:70523e563ecd42dfbad2"
+            ],
+            [
+              "main_units_tables:70523e563ecd42dfbad2",
+              "land_unit",
+              "land_units_tables:250be4b814731cc8e3d0"
+            ]
+          ]
+        },
+        {
+          "rowId": "unit_set_to_unit_junctions_tables:654df59af621cc81b5bb",
+          "mainKey": "wh_dlc07_brt_peasant_mob_0",
+          "landKey": "wh_dlc07_brt_inf_peasant_mob_0",
+          "selector": {
+            "exclude": false,
+            "unit_caste": "",
+            "unit_category": "",
+            "unit_class": "",
+            "unit_record": "wh_dlc07_brt_peasant_mob_0",
+            "unit_set": "wh2_dlc11_brt_peasant_mob_men_at_arms_spear_at_arms"
+          },
+          "joins": [
+            [
+              "unit_set_to_unit_junctions_tables:654df59af621cc81b5bb",
+              "unit_set",
+              "unit_sets_tables:8a67a045c64d3f93e60a"
+            ],
+            [
+              "unit_set_to_unit_junctions_tables:654df59af621cc81b5bb",
+              "unit_record",
+              "main_units_tables:637557c284a0db8da0f9"
+            ],
+            [
+              "main_units_tables:637557c284a0db8da0f9",
+              "land_unit",
+              "land_units_tables:7044434e161f4eefbbb2"
+            ]
+          ]
+        },
+        {
+          "rowId": "unit_set_to_unit_junctions_tables:d6072e148ee4fac9c8a4",
+          "mainKey": "wh_dlc07_brt_inf_men_at_arms_2",
+          "landKey": "wh_dlc07_brt_inf_men_at_arms_2",
+          "selector": {
+            "exclude": false,
+            "unit_caste": "",
+            "unit_category": "",
+            "unit_class": "",
+            "unit_record": "wh_dlc07_brt_inf_men_at_arms_2",
+            "unit_set": "wh2_dlc11_brt_peasant_mob_men_at_arms_spear_at_arms"
+          },
+          "joins": [
+            [
+              "unit_set_to_unit_junctions_tables:d6072e148ee4fac9c8a4",
+              "unit_set",
+              "unit_sets_tables:8a67a045c64d3f93e60a"
+            ],
+            [
+              "unit_set_to_unit_junctions_tables:d6072e148ee4fac9c8a4",
+              "unit_record",
+              "main_units_tables:155862695b38d378ab00"
+            ],
+            [
+              "main_units_tables:155862695b38d378ab00",
+              "land_unit",
+              "land_units_tables:855db4b15b3fce41e5ad"
+            ]
+          ]
+        },
+        {
+          "rowId": "unit_set_to_unit_junctions_tables:ebd594521fa210e80cb2",
+          "mainKey": "wh_main_brt_inf_spearmen_at_arms",
+          "landKey": "wh_main_brt_inf_spearmen_at_arms",
+          "selector": {
+            "exclude": false,
+            "unit_caste": "",
+            "unit_category": "",
+            "unit_class": "",
+            "unit_record": "wh_main_brt_inf_spearmen_at_arms",
+            "unit_set": "wh2_dlc11_brt_peasant_mob_men_at_arms_spear_at_arms"
+          },
+          "joins": [
+            [
+              "unit_set_to_unit_junctions_tables:ebd594521fa210e80cb2",
+              "unit_set",
+              "unit_sets_tables:8a67a045c64d3f93e60a"
+            ],
+            [
+              "unit_set_to_unit_junctions_tables:ebd594521fa210e80cb2",
+              "unit_record",
+              "main_units_tables:766bd319443936e91bd1"
+            ],
+            [
+              "main_units_tables:766bd319443936e91bd1",
+              "land_unit",
+              "land_units_tables:f6b9bcab278a5eb1a41b"
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "structure": {
+    "levelTable": "character_skill_level_to_effects_junctions_tables",
+    "compositeKey": [
+      "character_skill_key",
+      "effect_key",
+      "level"
+    ],
+    "fields": [
+      "character_skill_key",
+      "effect_key",
+      "effect_scope",
+      "level",
+      "value"
+    ],
+    "directSkillToBundleReference": false,
+    "selectedEffectsBundleJunctionCount": 0,
+    "effectPriorityDescription": "Higher number will be displayed lower down the list. Set to 0 to hide the effect entirely.",
+    "evidenceLimit": "Independent level rows and repeated effect keys do not specify which rows the engine activates at a learned rank. Schema column/display order is not execution precedence."
+  },
+  "runtime": {
+    "status": "NOT_OBSERVED",
+    "observations": [
+      {
+        "rank": 0,
+        "leadership": null,
+        "meleeDefence": null,
+        "status": "NOT_OBSERVED"
+      },
+      {
+        "rank": 1,
+        "leadership": null,
+        "meleeDefence": null,
+        "status": "NOT_OBSERVED"
+      },
+      {
+        "rank": 2,
+        "leadership": null,
+        "meleeDefence": null,
+        "status": "NOT_OBSERVED"
+      },
+      {
+        "rank": 3,
+        "leadership": null,
+        "meleeDefence": null,
+        "status": "NOT_OBSERVED"
+      }
+    ],
+    "existingProbeCanReadRequiredStats": false,
+    "tooltipRankMeaning": "UNKNOWN"
+  }
+}

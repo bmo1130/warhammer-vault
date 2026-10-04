@@ -1,0 +1,9 @@
+{
+  "purpose": "MULTI_RANK_SEMANTICS_RESEARCH_ONLY",
+  "skills": [
+    {"key": "wh2_dlc11_skill_brt_army_buff_low_born_militia", "reason": "Primary sample: leadership reused across ranks; defence added at rank 2"},
+    {"key": "wh2_dlc11_skill_brt_army_buff_proficiency_of_peasants", "reason": "Same-owner multi-rank army buff comparison"},
+    {"key": "wh2_dlc11_skill_brt_army_buff_worshippers_of_the_grail", "reason": "Additional Bretonnia multi-rank effect-chain comparison"},
+    {"key": "wh2_dlc11_skill_emp_army_buff_emperors_finest", "reason": "Empire Lord node discovery: different owner/faction, ranks 1/2/3"}
+  ]
+}
