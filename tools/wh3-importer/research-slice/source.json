@@ -1,0 +1,2581 @@
+{
+  "format": "wh3-reviewed-research-source-v1",
+  "originalExtraction": {
+    "path": "generated/wh3/research-slice/final.json",
+    "sha256": "463a5a665ff82505eb74122061b7fd8c3297c31c306159c22b9a127f2d50fc84"
+  },
+  "provenance": {
+    "gameVersion": "9.0.2.0",
+    "gameVersionSource": "Warhammer3.exe ProductVersion resource (not inferred from a wiki/Steam build)",
+    "rpfmVersion": "5.1.0",
+    "schemaFormatVersion": 5,
+    "schemaSha256": "5d628a0167b34a096752c5c21acd16493834a987c80dc9f02364617f796ba2a4",
+    "accessMethod": "Direct RPFM PackFile; bounded explicit queries, no effect application",
+    "packs": [
+      {
+        "file_name": "db.pack",
+        "file_path": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+        "pfh_version": "PFH5",
+        "pfh_file_type": "Release",
+        "bitmask": "",
+        "compress": "Zstd",
+        "timestamp": 0,
+        "sha256": "d0fafac984b3985ec47cec0ea957591424f1077e52ef61941dbf2dc46e6cf723"
+      },
+      {
+        "file_name": "local_en.pack",
+        "file_path": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/local_en.pack",
+        "pfh_version": "PFH5",
+        "pfh_file_type": "Release",
+        "bitmask": "",
+        "compress": "Zstd",
+        "timestamp": 1645478083,
+        "sha256": "f979527a5aaecf293a4e66afc25ed6c760e4107ef4920b73bd56e10e2652fd6a"
+      }
+    ]
+  },
+  "schemas": [
+    {
+      "table": "technologies_tables",
+      "version": 7,
+      "fields": [
+        {
+          "name": "key",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": null
+        },
+        {
+          "name": "building_level",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "building_levels",
+            "level_name"
+          ]
+        },
+        {
+          "name": "position_index",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "icon_name",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "mp_available_early",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "mp_available_late",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "info_pic",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "unique_index",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "is_civil",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "is_engineering",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "is_military",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "is_hidden",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        }
+      ],
+      "localisedFields": [
+        "onscreen_name",
+        "short_description",
+        "long_description"
+      ]
+    },
+    {
+      "table": "technology_effects_junction_tables",
+      "version": 0,
+      "fields": [
+        {
+          "name": "technology",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "technologies",
+            "key"
+          ]
+        },
+        {
+          "name": "effect",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "effects",
+            "effect"
+          ]
+        },
+        {
+          "name": "effect_scope",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "campaign_effect_scopes",
+            "key"
+          ]
+        },
+        {
+          "name": "value",
+          "field_type": "F32",
+          "is_key": false,
+          "is_reference": null
+        }
+      ],
+      "localisedFields": []
+    },
+    {
+      "table": "campaign_effect_scopes_tables",
+      "version": 2,
+      "fields": [
+        {
+          "name": "key",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": null
+        },
+        {
+          "name": "location",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "campaign_effect_scope_locations",
+            "key"
+          ]
+        },
+        {
+          "name": "ownership",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": [
+            "campaign_effect_scope_ownerships",
+            "key"
+          ]
+        },
+        {
+          "name": "source",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "campaign_effect_scope_objects",
+            "key"
+          ]
+        },
+        {
+          "name": "target",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "campaign_effect_scope_objects",
+            "key"
+          ]
+        },
+        {
+          "name": "territory",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": [
+            "campaign_effect_scope_territories",
+            "key"
+          ]
+        }
+      ],
+      "localisedFields": [
+        "localised_text"
+      ]
+    },
+    {
+      "table": "unit_sets_tables",
+      "version": 2,
+      "fields": [
+        {
+          "name": "key",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": null
+        },
+        {
+          "name": "use_unit_exp_level_range",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "min_unit_exp_level_inclusive",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "max_unit_exp_level_inclusive",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "special_category",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": [
+            "special_unit_categories",
+            "category"
+          ]
+        }
+      ],
+      "localisedFields": []
+    },
+    {
+      "table": "unit_set_to_unit_junctions_tables",
+      "version": 1,
+      "fields": [
+        {
+          "name": "exclude",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "unit_caste",
+          "field_type": "OptionalStringU8",
+          "is_key": true,
+          "is_reference": [
+            "unit_castes",
+            "caste"
+          ]
+        },
+        {
+          "name": "unit_category",
+          "field_type": "OptionalStringU8",
+          "is_key": true,
+          "is_reference": [
+            "unit_category",
+            "key"
+          ]
+        },
+        {
+          "name": "unit_class",
+          "field_type": "OptionalStringU8",
+          "is_key": true,
+          "is_reference": [
+            "unit_class",
+            "key"
+          ]
+        },
+        {
+          "name": "unit_record",
+          "field_type": "OptionalStringU8",
+          "is_key": true,
+          "is_reference": [
+            "main_units",
+            "unit"
+          ]
+        },
+        {
+          "name": "unit_set",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "unit_sets",
+            "key"
+          ]
+        }
+      ],
+      "localisedFields": []
+    },
+    {
+      "table": "technology_nodes_tables",
+      "version": 0,
+      "fields": [
+        {
+          "name": "campaign_key",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": [
+            "campaigns",
+            "campaign_name"
+          ]
+        },
+        {
+          "name": "faction_key",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": [
+            "factions",
+            "key"
+          ]
+        },
+        {
+          "name": "indent",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "key",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": null
+        },
+        {
+          "name": "technology_key",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "technologies",
+            "key"
+          ]
+        },
+        {
+          "name": "technology_node_set",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "technology_node_sets",
+            "key"
+          ]
+        },
+        {
+          "name": "tier",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "research_points_required",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "cost_per_round",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "food_cost",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "optional_ui_group",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": [
+            "technology_ui_groups",
+            "key"
+          ]
+        },
+        {
+          "name": "resource_cost",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": [
+            "resource_costs",
+            "id"
+          ]
+        },
+        {
+          "name": "required_parents",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "pixel_offset_x",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "pixel_offset_y",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        }
+      ],
+      "localisedFields": []
+    },
+    {
+      "table": "Loc",
+      "version": 1,
+      "fields": [
+        {
+          "name": "key",
+          "field_type": "StringU16",
+          "is_key": true,
+          "is_reference": null
+        },
+        {
+          "name": "text",
+          "field_type": "StringU16",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "tooltip",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        }
+      ],
+      "localisedFields": []
+    },
+    {
+      "table": "technology_node_sets_tables",
+      "version": 3,
+      "fields": [
+        {
+          "name": "campaign_key",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": [
+            "campaigns",
+            "campaign_name"
+          ]
+        },
+        {
+          "name": "faction_key",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": [
+            "factions",
+            "key"
+          ]
+        },
+        {
+          "name": "culture",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": [
+            "cultures",
+            "key"
+          ]
+        },
+        {
+          "name": "subculture",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": [
+            "cultures_subcultures",
+            "subculture"
+          ]
+        },
+        {
+          "name": "key",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": null
+        },
+        {
+          "name": "colour_hex",
+          "field_type": "ColourRGB",
+          "is_key": false,
+          "is_reference": null
+        }
+      ],
+      "localisedFields": [
+        "localised_name",
+        "tooltip_string",
+        "encyclopaedia_string"
+      ]
+    },
+    {
+      "table": "effects_tables",
+      "version": 0,
+      "fields": [
+        {
+          "name": "effect",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": null
+        },
+        {
+          "name": "icon",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "priority",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "icon_negative",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "category",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "effect_categories",
+            "key"
+          ]
+        },
+        {
+          "name": "is_positive_value_good",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        }
+      ],
+      "localisedFields": [
+        "description"
+      ]
+    },
+    {
+      "table": "effect_bonus_value_ids_unit_sets_tables",
+      "version": 0,
+      "fields": [
+        {
+          "name": "bonus_value_id",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "campaign_bonus_value_ids_unit_sets",
+            "key"
+          ]
+        },
+        {
+          "name": "effect",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "effects",
+            "effect"
+          ]
+        },
+        {
+          "name": "unit_set",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "unit_sets",
+            "key"
+          ]
+        }
+      ],
+      "localisedFields": []
+    },
+    {
+      "table": "main_units_tables",
+      "version": 7,
+      "fields": [
+        {
+          "name": "additional_building_requirement",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": [
+            "building_levels",
+            "level_name"
+          ]
+        },
+        {
+          "name": "campaign_cap",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "caste",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "unit_castes",
+            "caste"
+          ]
+        },
+        {
+          "name": "create_time",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "is_naval",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "land_unit",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "land_units",
+            "key"
+          ]
+        },
+        {
+          "name": "num_men",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "multiplayer_cap",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "multiplayer_cost",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "naval_unit",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": [
+            "naval_units",
+            "key"
+          ]
+        },
+        {
+          "name": "num_ships",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "min_men_per_ship",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "max_men_per_ship",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "recruitment_cost",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "unit",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": null
+        },
+        {
+          "name": "upkeep_cost",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "weight",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": [
+            "unit_weights",
+            "key"
+          ]
+        },
+        {
+          "name": "resource_requirement",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": [
+            "resources",
+            "key"
+          ]
+        },
+        {
+          "name": "special_edition_mask",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "in_encyclopedia",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "audio_voiceover_culture",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "audio_voiceover_cultures",
+            "name"
+          ]
+        },
+        {
+          "name": "ui_unit_group_land",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "ui_unit_groupings",
+            "key"
+          ]
+        },
+        {
+          "name": "tier",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "is_high_threat",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "porthole_camera",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "unit_porthole_camera_settings",
+            "key"
+          ]
+        },
+        {
+          "name": "mount",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": [
+            "campaign_mounts",
+            "model"
+          ]
+        },
+        {
+          "name": "use_hitpoints_in_campaign",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "porthole_composite_scene",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "melee_cp",
+          "field_type": "F32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "missile_cp",
+          "field_type": "F32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "can_siege",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "audio_voiceover_culture_override",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "audio_voiceover_cultures",
+            "name"
+          ]
+        },
+        {
+          "name": "restrict_xp_gain_in_campaign",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "audio_voiceover_actor_group",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "audio_vo_actor_groups",
+            "name"
+          ]
+        },
+        {
+          "name": "food_cost",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "has_spoken_vo",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "is_monstrous",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "multiplayer_qb_cap",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "vo_is_dragon",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "vo_is_dinosaur",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "optional_ui_element",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "barrier_health",
+          "field_type": "F32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "can_be_bribed",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "point_allowance_weight",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "is_renown",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        }
+      ],
+      "localisedFields": []
+    },
+    {
+      "table": "land_units_tables",
+      "version": 54,
+      "fields": [
+        {
+          "name": "accuracy",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "armour",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "unit_armour_types",
+            "key"
+          ]
+        },
+        {
+          "name": "campaign_action_points",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "category",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "unit_category",
+            "key"
+          ]
+        },
+        {
+          "name": "charge_bonus",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "class",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "unit_class",
+            "key"
+          ]
+        },
+        {
+          "name": "historical_description_text",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "unit_description_historical_texts",
+            "key"
+          ]
+        },
+        {
+          "name": "key",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": null
+        },
+        {
+          "name": "man_animation",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": [
+            "battle_animations_table",
+            "key"
+          ]
+        },
+        {
+          "name": "man_entity",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "battle_entities",
+            "key"
+          ]
+        },
+        {
+          "name": "melee_attack",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "melee_defence",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "morale",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "bonus_hit_points",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "mount",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": [
+            "mounts",
+            "key"
+          ]
+        },
+        {
+          "name": "num_mounts",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "primary_melee_weapon",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "melee_weapons",
+            "key"
+          ]
+        },
+        {
+          "name": "primary_missile_weapon",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": [
+            "missile_weapons",
+            "key"
+          ]
+        },
+        {
+          "name": "rank_depth",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "shield",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "unit_shield_types",
+            "key"
+          ]
+        },
+        {
+          "name": "short_description_text",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "unit_description_short_texts",
+            "key"
+          ]
+        },
+        {
+          "name": "spacing",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "unit_spacings",
+            "key"
+          ]
+        },
+        {
+          "name": "training_level",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "unit_training_level_enum",
+            "key"
+          ]
+        },
+        {
+          "name": "articulated_record",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": [
+            "land_unit_articulated_vehicles",
+            "key"
+          ]
+        },
+        {
+          "name": "engine",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": [
+            "battlefield_engines",
+            "key"
+          ]
+        },
+        {
+          "name": "is_male",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "visibility_spotting_range_min",
+          "field_type": "F32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "visibility_spotting_range_max",
+          "field_type": "F32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "attribute_group",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": [
+            "unit_attributes_groups",
+            "group_name"
+          ]
+        },
+        {
+          "name": "spot_dist_tree",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "spot_dist_scrub",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "reload",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "selection_vo",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "audio_vo_selected_switches",
+            "key"
+          ]
+        },
+        {
+          "name": "selected_vo_secondary",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "audio_vo_selected_switches",
+            "key"
+          ]
+        },
+        {
+          "name": "selected_vo_tertiary",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "audio_vo_selected_switches",
+            "key"
+          ]
+        },
+        {
+          "name": "hiding_scalar",
+          "field_type": "F32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "ground_stat_effect_group",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": [
+            "ground_type_stat_effect_groups",
+            "group_name"
+          ]
+        },
+        {
+          "name": "secondary_ammo",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "primary_ammo",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "damage_mod_flame",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "damage_mod_magic",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "num_engines",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "damage_mod_physical",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "damage_mod_missile",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "damage_mod_all",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "ai_usage_group",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "ai_usage_groups",
+            "key"
+          ]
+        },
+        {
+          "name": "can_skirmish",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "can_brace",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "mounted_draughts",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "sync_locomotion",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "capture_tier",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "capture_tier_to_power",
+            "key"
+          ]
+        },
+        {
+          "name": "key_building_capture_tier",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "capture_tier_to_power",
+            "key"
+          ]
+        },
+        {
+          "name": "score_capture_tier",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "capture_tier_to_power",
+            "key"
+          ]
+        },
+        {
+          "name": "harmony_amplification_type",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": [
+            "harmony_amplification_types",
+            "key"
+          ]
+        },
+        {
+          "name": "first_person",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": [
+            "first_person_engines",
+            "key"
+          ]
+        },
+        {
+          "name": "ar_unit_category",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": [
+            "autoresolver_unit_group_categories_enums",
+            "key"
+          ]
+        },
+        {
+          "name": "healing_power",
+          "field_type": "F32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "spell_mastery",
+          "field_type": "F32",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "infinite_secondary_ammo",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "default_guard_mode",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        }
+      ],
+      "localisedFields": [
+        "onscreen_name",
+        "concealed_name"
+      ]
+    },
+    {
+      "table": "cultures_tables",
+      "version": 12,
+      "fields": [
+        {
+          "name": "key",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": null
+        },
+        {
+          "name": "index",
+          "field_type": "I64",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "fallback_ui_culture",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "ui_background_image",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "audio_state",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "ui_group_by_culture",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "audio_rtpc",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "audio_corruption_state",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": null
+        },
+        {
+          "name": "devastation_state",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": [
+            "devastation_states",
+            "key"
+          ]
+        }
+      ],
+      "localisedFields": [
+        "name",
+        "frontend_description"
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "id": "technologies_tables:b673b16033676d850f91",
+      "table": "technologies_tables",
+      "key": {
+        "key": "wh_dlc07_tech_brt_economy_industry_tournaments"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/technologies_tables/data__",
+      "tableVersion": 7,
+      "row": {
+        "key": "wh_dlc07_tech_brt_economy_industry_tournaments",
+        "building_level": "wh_main_chs_port_ruin",
+        "position_index": 1,
+        "icon_name": "tech_dlc07_brt_economy_industry_tournaments",
+        "mp_available_early": false,
+        "mp_available_late": false,
+        "info_pic": "",
+        "unique_index": 892393329,
+        "is_civil": false,
+        "is_engineering": false,
+        "is_military": true,
+        "is_hidden": false
+      }
+    },
+    {
+      "id": "technology_effects_junction_tables:024f3cd02ebb89d99bb4",
+      "table": "technology_effects_junction_tables",
+      "key": {
+        "technology": "wh_dlc07_tech_brt_economy_industry_tournaments",
+        "effect": "wh2_main_effect_force_stat_melee_attack_brt_knights"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/technology_effects_junction_tables/data__",
+      "tableVersion": 0,
+      "row": {
+        "technology": "wh_dlc07_tech_brt_economy_industry_tournaments",
+        "effect": "wh2_main_effect_force_stat_melee_attack_brt_knights",
+        "effect_scope": "faction_to_force_own_unseen",
+        "value": 5
+      }
+    },
+    {
+      "id": "technology_effects_junction_tables:5e087eeb4edd7177563f",
+      "table": "technology_effects_junction_tables",
+      "key": {
+        "technology": "wh_dlc07_tech_brt_economy_industry_tournaments",
+        "effect": "wh2_main_effect_force_stat_melee_defence_brt_knights"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/technology_effects_junction_tables/data__",
+      "tableVersion": 0,
+      "row": {
+        "technology": "wh_dlc07_tech_brt_economy_industry_tournaments",
+        "effect": "wh2_main_effect_force_stat_melee_defence_brt_knights",
+        "effect_scope": "faction_to_force_own_unseen",
+        "value": 5
+      }
+    },
+    {
+      "id": "campaign_effect_scopes_tables:2e4f4fabacc3df6a871f",
+      "table": "campaign_effect_scopes_tables",
+      "key": {
+        "key": "faction_to_force_own_unseen"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/campaign_effect_scopes_tables/data__",
+      "tableVersion": 2,
+      "row": {
+        "key": "faction_to_force_own_unseen",
+        "location": "factionwide",
+        "ownership": "yours",
+        "source": "faction",
+        "target": "force",
+        "territory": "any"
+      }
+    },
+    {
+      "id": "unit_sets_tables:32787572d3dcc7aca5c4",
+      "table": "unit_sets_tables",
+      "key": {
+        "key": "brt_knights"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/unit_sets_tables/data__",
+      "tableVersion": 2,
+      "row": {
+        "key": "brt_knights",
+        "use_unit_exp_level_range": false,
+        "min_unit_exp_level_inclusive": -1,
+        "max_unit_exp_level_inclusive": -1,
+        "special_category": ""
+      }
+    },
+    {
+      "id": "unit_set_to_unit_junctions_tables:fde0213cbbe115410114",
+      "table": "unit_set_to_unit_junctions_tables",
+      "key": {
+        "unit_caste": "",
+        "unit_category": "",
+        "unit_class": "",
+        "unit_record": "wh_dlc07_brt_cav_grail_guardians_0",
+        "unit_set": "brt_knights"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/unit_set_to_unit_junctions_tables/data__",
+      "tableVersion": 1,
+      "row": {
+        "exclude": false,
+        "unit_caste": "",
+        "unit_category": "",
+        "unit_class": "",
+        "unit_record": "wh_dlc07_brt_cav_grail_guardians_0",
+        "unit_set": "brt_knights"
+      }
+    },
+    {
+      "id": "unit_set_to_unit_junctions_tables:e57ce01652efbc7d8c6e",
+      "table": "unit_set_to_unit_junctions_tables",
+      "key": {
+        "unit_caste": "",
+        "unit_category": "",
+        "unit_class": "",
+        "unit_record": "wh_dlc07_brt_cav_knights_errant_0",
+        "unit_set": "brt_knights"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/unit_set_to_unit_junctions_tables/data__",
+      "tableVersion": 1,
+      "row": {
+        "exclude": false,
+        "unit_caste": "",
+        "unit_category": "",
+        "unit_class": "",
+        "unit_record": "wh_dlc07_brt_cav_knights_errant_0",
+        "unit_set": "brt_knights"
+      }
+    },
+    {
+      "id": "unit_set_to_unit_junctions_tables:d3707b840414ca2713a1",
+      "table": "unit_set_to_unit_junctions_tables",
+      "key": {
+        "unit_caste": "",
+        "unit_category": "",
+        "unit_class": "",
+        "unit_record": "wh_dlc07_brt_cav_questing_knights_0",
+        "unit_set": "brt_knights"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/unit_set_to_unit_junctions_tables/data__",
+      "tableVersion": 1,
+      "row": {
+        "exclude": false,
+        "unit_caste": "",
+        "unit_category": "",
+        "unit_class": "",
+        "unit_record": "wh_dlc07_brt_cav_questing_knights_0",
+        "unit_set": "brt_knights"
+      }
+    },
+    {
+      "id": "unit_set_to_unit_junctions_tables:83df201012fc88e6ca22",
+      "table": "unit_set_to_unit_junctions_tables",
+      "key": {
+        "unit_caste": "",
+        "unit_category": "",
+        "unit_class": "",
+        "unit_record": "wh_dlc07_brt_cav_royal_hippogryph_knights_0",
+        "unit_set": "brt_knights"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/unit_set_to_unit_junctions_tables/data__",
+      "tableVersion": 1,
+      "row": {
+        "exclude": false,
+        "unit_caste": "",
+        "unit_category": "",
+        "unit_class": "",
+        "unit_record": "wh_dlc07_brt_cav_royal_hippogryph_knights_0",
+        "unit_set": "brt_knights"
+      }
+    },
+    {
+      "id": "unit_set_to_unit_junctions_tables:9c8c338786e791063247",
+      "table": "unit_set_to_unit_junctions_tables",
+      "key": {
+        "unit_caste": "",
+        "unit_category": "",
+        "unit_class": "",
+        "unit_record": "wh_dlc07_brt_cav_royal_pegasus_knights_0",
+        "unit_set": "brt_knights"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/unit_set_to_unit_junctions_tables/data__",
+      "tableVersion": 1,
+      "row": {
+        "exclude": false,
+        "unit_caste": "",
+        "unit_category": "",
+        "unit_class": "",
+        "unit_record": "wh_dlc07_brt_cav_royal_pegasus_knights_0",
+        "unit_set": "brt_knights"
+      }
+    },
+    {
+      "id": "unit_set_to_unit_junctions_tables:c252623e5288af7e4712",
+      "table": "unit_set_to_unit_junctions_tables",
+      "key": {
+        "unit_caste": "",
+        "unit_category": "",
+        "unit_class": "",
+        "unit_record": "wh_main_brt_cav_grail_knights",
+        "unit_set": "brt_knights"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/unit_set_to_unit_junctions_tables/data__",
+      "tableVersion": 1,
+      "row": {
+        "exclude": false,
+        "unit_caste": "",
+        "unit_category": "",
+        "unit_class": "",
+        "unit_record": "wh_main_brt_cav_grail_knights",
+        "unit_set": "brt_knights"
+      }
+    },
+    {
+      "id": "unit_set_to_unit_junctions_tables:5e275409a5adc8543a5c",
+      "table": "unit_set_to_unit_junctions_tables",
+      "key": {
+        "unit_caste": "",
+        "unit_category": "",
+        "unit_class": "",
+        "unit_record": "wh_main_brt_cav_knights_of_the_realm",
+        "unit_set": "brt_knights"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/unit_set_to_unit_junctions_tables/data__",
+      "tableVersion": 1,
+      "row": {
+        "exclude": false,
+        "unit_caste": "",
+        "unit_category": "",
+        "unit_class": "",
+        "unit_record": "wh_main_brt_cav_knights_of_the_realm",
+        "unit_set": "brt_knights"
+      }
+    },
+    {
+      "id": "unit_set_to_unit_junctions_tables:693c2590d49911c30949",
+      "table": "unit_set_to_unit_junctions_tables",
+      "key": {
+        "unit_caste": "",
+        "unit_category": "",
+        "unit_class": "",
+        "unit_record": "wh_main_brt_cav_pegasus_knights",
+        "unit_set": "brt_knights"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/unit_set_to_unit_junctions_tables/data__",
+      "tableVersion": 1,
+      "row": {
+        "exclude": false,
+        "unit_caste": "",
+        "unit_category": "",
+        "unit_class": "",
+        "unit_record": "wh_main_brt_cav_pegasus_knights",
+        "unit_set": "brt_knights"
+      }
+    },
+    {
+      "id": "unit_set_to_unit_junctions_tables:dd8fc090dc39361c4fc6",
+      "table": "unit_set_to_unit_junctions_tables",
+      "key": {
+        "unit_caste": "",
+        "unit_category": "",
+        "unit_class": "",
+        "unit_record": "wh_pro04_brt_cav_knights_errant_ror_0",
+        "unit_set": "brt_knights"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/unit_set_to_unit_junctions_tables/data__",
+      "tableVersion": 1,
+      "row": {
+        "exclude": false,
+        "unit_caste": "",
+        "unit_category": "",
+        "unit_class": "",
+        "unit_record": "wh_pro04_brt_cav_knights_errant_ror_0",
+        "unit_set": "brt_knights"
+      }
+    },
+    {
+      "id": "unit_set_to_unit_junctions_tables:51a20cd889ef93f6a061",
+      "table": "unit_set_to_unit_junctions_tables",
+      "key": {
+        "unit_caste": "",
+        "unit_category": "",
+        "unit_class": "",
+        "unit_record": "wh_pro04_brt_cav_knights_of_the_realm_ror_0",
+        "unit_set": "brt_knights"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/unit_set_to_unit_junctions_tables/data__",
+      "tableVersion": 1,
+      "row": {
+        "exclude": false,
+        "unit_caste": "",
+        "unit_category": "",
+        "unit_class": "",
+        "unit_record": "wh_pro04_brt_cav_knights_of_the_realm_ror_0",
+        "unit_set": "brt_knights"
+      }
+    },
+    {
+      "id": "unit_set_to_unit_junctions_tables:7db7aec6cbe840cca295",
+      "table": "unit_set_to_unit_junctions_tables",
+      "key": {
+        "unit_caste": "",
+        "unit_category": "",
+        "unit_class": "",
+        "unit_record": "wh_pro04_brt_cav_questing_knights_ror_0",
+        "unit_set": "brt_knights"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/unit_set_to_unit_junctions_tables/data__",
+      "tableVersion": 1,
+      "row": {
+        "exclude": false,
+        "unit_caste": "",
+        "unit_category": "",
+        "unit_class": "",
+        "unit_record": "wh_pro04_brt_cav_questing_knights_ror_0",
+        "unit_set": "brt_knights"
+      }
+    },
+    {
+      "id": "technology_nodes_tables:ca5bccb0191831698deb",
+      "table": "technology_nodes_tables",
+      "key": {
+        "key": "wh_dlc07_tech_brt_economy_industry_tournaments"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/technology_nodes_tables/data__",
+      "tableVersion": 0,
+      "row": {
+        "campaign_key": "",
+        "faction_key": "",
+        "indent": 8,
+        "key": "wh_dlc07_tech_brt_economy_industry_tournaments",
+        "technology_key": "wh_dlc07_tech_brt_economy_industry_tournaments",
+        "technology_node_set": "brt_mil",
+        "tier": 10,
+        "research_points_required": 1500,
+        "cost_per_round": 0,
+        "food_cost": 0,
+        "optional_ui_group": "",
+        "resource_cost": "",
+        "required_parents": 0,
+        "pixel_offset_x": 0,
+        "pixel_offset_y": 0
+      }
+    },
+    {
+      "id": "Loc:6e7714a2190c5f79f76e",
+      "table": "Loc",
+      "key": {
+        "key": "technologies_onscreen_name_wh_dlc07_tech_brt_economy_industry_tournaments"
+      },
+      "sourcePack": "local_en.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/local_en.pack",
+      "path": "text/db/technologies__.loc",
+      "tableVersion": 1,
+      "row": {
+        "key": "technologies_onscreen_name_wh_dlc07_tech_brt_economy_industry_tournaments",
+        "text": "Regular Tournaments",
+        "tooltip": false
+      }
+    },
+    {
+      "id": "Loc:a8247a8bff3b5225e40e",
+      "table": "Loc",
+      "key": {
+        "key": "effects_description_wh2_main_effect_force_stat_melee_attack_brt_knights"
+      },
+      "sourcePack": "local_en.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/local_en.pack",
+      "path": "text/db/effects__.loc",
+      "tableVersion": 1,
+      "row": {
+        "key": "effects_description_wh2_main_effect_force_stat_melee_attack_brt_knights",
+        "text": "Melee attack: %+n for Knights units",
+        "tooltip": false
+      }
+    },
+    {
+      "id": "Loc:fe471bbe4be79b17bb11",
+      "table": "Loc",
+      "key": {
+        "key": "effects_description_wh2_main_effect_force_stat_melee_defence_brt_knights"
+      },
+      "sourcePack": "local_en.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/local_en.pack",
+      "path": "text/db/effects__.loc",
+      "tableVersion": 1,
+      "row": {
+        "key": "effects_description_wh2_main_effect_force_stat_melee_defence_brt_knights",
+        "text": "Melee defence: %+n for Knight units",
+        "tooltip": false
+      }
+    },
+    {
+      "id": "technology_node_sets_tables:2b18c1f8b4dc49d07b2f",
+      "table": "technology_node_sets_tables",
+      "key": {
+        "key": "brt_mil"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/technology_node_sets_tables/data__",
+      "tableVersion": 3,
+      "row": {
+        "campaign_key": "",
+        "faction_key": "",
+        "culture": "wh_main_brt_bretonnia",
+        "subculture": "",
+        "key": "brt_mil",
+        "colour_hex": "FFB62F"
+      }
+    },
+    {
+      "id": "effects_tables:b161834b8fe84617bb40",
+      "table": "effects_tables",
+      "key": {
+        "effect": "wh2_main_effect_force_stat_melee_attack_brt_knights"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/effects_tables/data__",
+      "tableVersion": 0,
+      "row": {
+        "effect": "wh2_main_effect_force_stat_melee_attack_brt_knights",
+        "icon": "melee.png",
+        "priority": 431,
+        "icon_negative": "melee.png",
+        "category": "battle",
+        "is_positive_value_good": true
+      }
+    },
+    {
+      "id": "effects_tables:b94096ee3c3c690c0d09",
+      "table": "effects_tables",
+      "key": {
+        "effect": "wh2_main_effect_force_stat_melee_defence_brt_knights"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/effects_tables/data__",
+      "tableVersion": 0,
+      "row": {
+        "effect": "wh2_main_effect_force_stat_melee_defence_brt_knights",
+        "icon": "defence.png",
+        "priority": 451,
+        "icon_negative": "defence.png",
+        "category": "battle",
+        "is_positive_value_good": true
+      }
+    },
+    {
+      "id": "effect_bonus_value_ids_unit_sets_tables:4398a8abdef29914b193",
+      "table": "effect_bonus_value_ids_unit_sets_tables",
+      "key": {
+        "bonus_value_id": "melee_attack_mod",
+        "effect": "wh2_main_effect_force_stat_melee_attack_brt_knights",
+        "unit_set": "brt_knights"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/effect_bonus_value_ids_unit_sets_tables/data__",
+      "tableVersion": 0,
+      "row": {
+        "bonus_value_id": "melee_attack_mod",
+        "effect": "wh2_main_effect_force_stat_melee_attack_brt_knights",
+        "unit_set": "brt_knights"
+      }
+    },
+    {
+      "id": "effect_bonus_value_ids_unit_sets_tables:9ba41a4f82e7d83c508b",
+      "table": "effect_bonus_value_ids_unit_sets_tables",
+      "key": {
+        "bonus_value_id": "melee_defence_mod",
+        "effect": "wh2_main_effect_force_stat_melee_defence_brt_knights",
+        "unit_set": "brt_knights"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/effect_bonus_value_ids_unit_sets_tables/data__",
+      "tableVersion": 0,
+      "row": {
+        "bonus_value_id": "melee_defence_mod",
+        "effect": "wh2_main_effect_force_stat_melee_defence_brt_knights",
+        "unit_set": "brt_knights"
+      }
+    },
+    {
+      "id": "main_units_tables:59c055d24df1f59c75a3",
+      "table": "main_units_tables",
+      "key": {
+        "unit": "wh_main_brt_cav_grail_knights"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/main_units_tables/data__",
+      "tableVersion": 7,
+      "row": {
+        "additional_building_requirement": "",
+        "campaign_cap": -1,
+        "caste": "melee_cavalry",
+        "create_time": 2,
+        "is_naval": false,
+        "land_unit": "wh_main_brt_cav_grail_knights",
+        "num_men": 48,
+        "multiplayer_cap": 0,
+        "multiplayer_cost": 1850,
+        "naval_unit": "wh_main_shp_transport",
+        "num_ships": 1,
+        "min_men_per_ship": 1,
+        "max_men_per_ship": 48,
+        "recruitment_cost": 1850,
+        "unit": "wh_main_brt_cav_grail_knights",
+        "upkeep_cost": 462,
+        "weight": "very_heavy",
+        "resource_requirement": "",
+        "special_edition_mask": 0,
+        "in_encyclopedia": true,
+        "audio_voiceover_culture": "wh_main_vo_culture_Bretonnian",
+        "ui_unit_group_land": "shock_cavalry",
+        "tier": 4,
+        "is_high_threat": false,
+        "porthole_camera": "emp_reiksguard",
+        "mount": "",
+        "use_hitpoints_in_campaign": false,
+        "porthole_composite_scene": "",
+        "melee_cp": 1850,
+        "missile_cp": 0,
+        "can_siege": false,
+        "audio_voiceover_culture_override": "vo_culture_None",
+        "restrict_xp_gain_in_campaign": false,
+        "audio_voiceover_actor_group": "wh_main_vo_actor_Bretonnian_Knight",
+        "food_cost": 0,
+        "has_spoken_vo": true,
+        "is_monstrous": false,
+        "multiplayer_qb_cap": 6,
+        "vo_is_dragon": false,
+        "vo_is_dinosaur": false,
+        "optional_ui_element": "",
+        "barrier_health": 0,
+        "can_be_bribed": true,
+        "point_allowance_weight": 1,
+        "is_renown": false
+      }
+    },
+    {
+      "id": "land_units_tables:b1b34300e348a7f28dd9",
+      "table": "land_units_tables",
+      "key": {
+        "key": "wh_main_brt_cav_grail_knights"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/land_units_tables/data__",
+      "tableVersion": 54,
+      "row": {
+        "accuracy": 10,
+        "armour": "wh2_main_plate_120",
+        "campaign_action_points": 2100,
+        "category": "cavalry",
+        "charge_bonus": 75,
+        "class": "cav_shk",
+        "historical_description_text": "wh_main_unit_long_text_brt_grail_knights",
+        "key": "wh_main_brt_cav_grail_knights",
+        "man_animation": "hu1_grail_hr1_warhorse_lance_sword_shield",
+        "man_entity": "wh_main_cavalry_rider_standard_blood",
+        "melee_attack": 38,
+        "melee_defence": 34,
+        "morale": 80,
+        "bonus_hit_points": 136,
+        "mount": "wh_main_brt_mnt_warhorse_grail_knights",
+        "num_mounts": 48,
+        "primary_melee_weapon": "wh_main_brt_lance_grail_knight",
+        "primary_missile_weapon": "",
+        "rank_depth": 4,
+        "shield": "wh_missile_block_35_wood",
+        "short_description_text": "wh_main_unit_short_text_brt_grail_knights",
+        "spacing": "wh_main_cavalry_ordered",
+        "training_level": "trained",
+        "articulated_record": "",
+        "engine": "",
+        "is_male": true,
+        "visibility_spotting_range_min": 40,
+        "visibility_spotting_range_max": 1500,
+        "attribute_group": "wh_main_brt_cav_grail_knights",
+        "spot_dist_tree": 60,
+        "spot_dist_scrub": 80,
+        "reload": 0,
+        "selection_vo": "vo_sel_bretonnian_grail_knights",
+        "selected_vo_secondary": "vo_sel_cavalry",
+        "selected_vo_tertiary": "vo_sel_culture",
+        "hiding_scalar": 1,
+        "ground_stat_effect_group": "large",
+        "secondary_ammo": 0,
+        "primary_ammo": 0,
+        "damage_mod_flame": 0,
+        "damage_mod_magic": 0,
+        "num_engines": 0,
+        "damage_mod_physical": 0,
+        "damage_mod_missile": 0,
+        "damage_mod_all": 0,
+        "ai_usage_group": "melee_flanker_shock",
+        "can_skirmish": false,
+        "can_brace": false,
+        "mounted_draughts": false,
+        "sync_locomotion": false,
+        "capture_tier": "low",
+        "key_building_capture_tier": "low",
+        "score_capture_tier": "domination_cav",
+        "harmony_amplification_type": "",
+        "first_person": "",
+        "ar_unit_category": "melee",
+        "healing_power": 1,
+        "spell_mastery": 1,
+        "infinite_secondary_ammo": false,
+        "default_guard_mode": false
+      }
+    },
+    {
+      "id": "cultures_tables:02de964c4aedfcd11e1c",
+      "table": "cultures_tables",
+      "key": {
+        "key": "wh_main_brt_bretonnia"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/cultures_tables/data__",
+      "tableVersion": 12,
+      "row": {
+        "key": "wh_main_brt_bretonnia",
+        "index": 1249291663,
+        "fallback_ui_culture": "",
+        "ui_background_image": "UI/skins/default/panorama_bretonia.png",
+        "audio_state": "Bretonnia",
+        "ui_group_by_culture": false,
+        "audio_rtpc": "",
+        "audio_corruption_state": "",
+        "devastation_state": ""
+      }
+    },
+    {
+      "id": "Loc:093dadd6a3fe6ad9e919",
+      "table": "Loc",
+      "key": {
+        "key": "effects_description_wh2_main_effect_force_stat_charge_bonus_pct_brt_knights"
+      },
+      "sourcePack": "local_en.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/local_en.pack",
+      "path": "text/db/effects__.loc",
+      "tableVersion": 1,
+      "row": {
+        "key": "effects_description_wh2_main_effect_force_stat_charge_bonus_pct_brt_knights",
+        "text": "Charge bonus: %+n% for Knight units",
+        "tooltip": false
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "from": "technology_effects_junction_tables:024f3cd02ebb89d99bb4",
+      "field": "technology",
+      "to": "technologies_tables:b673b16033676d850f91",
+      "targetField": "key",
+      "value": "wh_dlc07_tech_brt_economy_industry_tournaments",
+      "evidence": "RPFM processed schema is_reference"
+    },
+    {
+      "from": "technology_effects_junction_tables:024f3cd02ebb89d99bb4",
+      "field": "effect",
+      "to": "effects_tables:b161834b8fe84617bb40",
+      "targetField": "effect",
+      "value": "wh2_main_effect_force_stat_melee_attack_brt_knights",
+      "evidence": "RPFM processed schema is_reference"
+    },
+    {
+      "from": "technology_effects_junction_tables:024f3cd02ebb89d99bb4",
+      "field": "effect_scope",
+      "to": "campaign_effect_scopes_tables:2e4f4fabacc3df6a871f",
+      "targetField": "key",
+      "value": "faction_to_force_own_unseen",
+      "evidence": "RPFM processed schema is_reference"
+    },
+    {
+      "from": "technology_effects_junction_tables:5e087eeb4edd7177563f",
+      "field": "technology",
+      "to": "technologies_tables:b673b16033676d850f91",
+      "targetField": "key",
+      "value": "wh_dlc07_tech_brt_economy_industry_tournaments",
+      "evidence": "RPFM processed schema is_reference"
+    },
+    {
+      "from": "technology_effects_junction_tables:5e087eeb4edd7177563f",
+      "field": "effect",
+      "to": "effects_tables:b94096ee3c3c690c0d09",
+      "targetField": "effect",
+      "value": "wh2_main_effect_force_stat_melee_defence_brt_knights",
+      "evidence": "RPFM processed schema is_reference"
+    },
+    {
+      "from": "technology_effects_junction_tables:5e087eeb4edd7177563f",
+      "field": "effect_scope",
+      "to": "campaign_effect_scopes_tables:2e4f4fabacc3df6a871f",
+      "targetField": "key",
+      "value": "faction_to_force_own_unseen",
+      "evidence": "RPFM processed schema is_reference"
+    },
+    {
+      "from": "unit_set_to_unit_junctions_tables:fde0213cbbe115410114",
+      "field": "unit_set",
+      "to": "unit_sets_tables:32787572d3dcc7aca5c4",
+      "targetField": "key",
+      "value": "brt_knights",
+      "evidence": "RPFM processed schema is_reference"
+    },
+    {
+      "from": "unit_set_to_unit_junctions_tables:e57ce01652efbc7d8c6e",
+      "field": "unit_set",
+      "to": "unit_sets_tables:32787572d3dcc7aca5c4",
+      "targetField": "key",
+      "value": "brt_knights",
+      "evidence": "RPFM processed schema is_reference"
+    },
+    {
+      "from": "unit_set_to_unit_junctions_tables:d3707b840414ca2713a1",
+      "field": "unit_set",
+      "to": "unit_sets_tables:32787572d3dcc7aca5c4",
+      "targetField": "key",
+      "value": "brt_knights",
+      "evidence": "RPFM processed schema is_reference"
+    },
+    {
+      "from": "unit_set_to_unit_junctions_tables:83df201012fc88e6ca22",
+      "field": "unit_set",
+      "to": "unit_sets_tables:32787572d3dcc7aca5c4",
+      "targetField": "key",
+      "value": "brt_knights",
+      "evidence": "RPFM processed schema is_reference"
+    },
+    {
+      "from": "unit_set_to_unit_junctions_tables:9c8c338786e791063247",
+      "field": "unit_set",
+      "to": "unit_sets_tables:32787572d3dcc7aca5c4",
+      "targetField": "key",
+      "value": "brt_knights",
+      "evidence": "RPFM processed schema is_reference"
+    },
+    {
+      "from": "unit_set_to_unit_junctions_tables:c252623e5288af7e4712",
+      "field": "unit_record",
+      "to": "main_units_tables:59c055d24df1f59c75a3",
+      "targetField": "unit",
+      "value": "wh_main_brt_cav_grail_knights",
+      "evidence": "RPFM processed schema is_reference"
+    },
+    {
+      "from": "unit_set_to_unit_junctions_tables:c252623e5288af7e4712",
+      "field": "unit_set",
+      "to": "unit_sets_tables:32787572d3dcc7aca5c4",
+      "targetField": "key",
+      "value": "brt_knights",
+      "evidence": "RPFM processed schema is_reference"
+    },
+    {
+      "from": "unit_set_to_unit_junctions_tables:5e275409a5adc8543a5c",
+      "field": "unit_set",
+      "to": "unit_sets_tables:32787572d3dcc7aca5c4",
+      "targetField": "key",
+      "value": "brt_knights",
+      "evidence": "RPFM processed schema is_reference"
+    },
+    {
+      "from": "unit_set_to_unit_junctions_tables:693c2590d49911c30949",
+      "field": "unit_set",
+      "to": "unit_sets_tables:32787572d3dcc7aca5c4",
+      "targetField": "key",
+      "value": "brt_knights",
+      "evidence": "RPFM processed schema is_reference"
+    },
+    {
+      "from": "unit_set_to_unit_junctions_tables:dd8fc090dc39361c4fc6",
+      "field": "unit_set",
+      "to": "unit_sets_tables:32787572d3dcc7aca5c4",
+      "targetField": "key",
+      "value": "brt_knights",
+      "evidence": "RPFM processed schema is_reference"
+    },
+    {
+      "from": "unit_set_to_unit_junctions_tables:51a20cd889ef93f6a061",
+      "field": "unit_set",
+      "to": "unit_sets_tables:32787572d3dcc7aca5c4",
+      "targetField": "key",
+      "value": "brt_knights",
+      "evidence": "RPFM processed schema is_reference"
+    },
+    {
+      "from": "unit_set_to_unit_junctions_tables:7db7aec6cbe840cca295",
+      "field": "unit_set",
+      "to": "unit_sets_tables:32787572d3dcc7aca5c4",
+      "targetField": "key",
+      "value": "brt_knights",
+      "evidence": "RPFM processed schema is_reference"
+    },
+    {
+      "from": "technology_nodes_tables:ca5bccb0191831698deb",
+      "field": "technology_key",
+      "to": "technologies_tables:b673b16033676d850f91",
+      "targetField": "key",
+      "value": "wh_dlc07_tech_brt_economy_industry_tournaments",
+      "evidence": "RPFM processed schema is_reference"
+    },
+    {
+      "from": "technology_nodes_tables:ca5bccb0191831698deb",
+      "field": "technology_node_set",
+      "to": "technology_node_sets_tables:2b18c1f8b4dc49d07b2f",
+      "targetField": "key",
+      "value": "brt_mil",
+      "evidence": "RPFM processed schema is_reference"
+    },
+    {
+      "from": "technology_node_sets_tables:2b18c1f8b4dc49d07b2f",
+      "field": "culture",
+      "to": "cultures_tables:02de964c4aedfcd11e1c",
+      "targetField": "key",
+      "value": "wh_main_brt_bretonnia",
+      "evidence": "RPFM processed schema is_reference"
+    },
+    {
+      "from": "effect_bonus_value_ids_unit_sets_tables:4398a8abdef29914b193",
+      "field": "effect",
+      "to": "effects_tables:b161834b8fe84617bb40",
+      "targetField": "effect",
+      "value": "wh2_main_effect_force_stat_melee_attack_brt_knights",
+      "evidence": "RPFM processed schema is_reference"
+    },
+    {
+      "from": "effect_bonus_value_ids_unit_sets_tables:4398a8abdef29914b193",
+      "field": "unit_set",
+      "to": "unit_sets_tables:32787572d3dcc7aca5c4",
+      "targetField": "key",
+      "value": "brt_knights",
+      "evidence": "RPFM processed schema is_reference"
+    },
+    {
+      "from": "effect_bonus_value_ids_unit_sets_tables:9ba41a4f82e7d83c508b",
+      "field": "effect",
+      "to": "effects_tables:b94096ee3c3c690c0d09",
+      "targetField": "effect",
+      "value": "wh2_main_effect_force_stat_melee_defence_brt_knights",
+      "evidence": "RPFM processed schema is_reference"
+    },
+    {
+      "from": "effect_bonus_value_ids_unit_sets_tables:9ba41a4f82e7d83c508b",
+      "field": "unit_set",
+      "to": "unit_sets_tables:32787572d3dcc7aca5c4",
+      "targetField": "key",
+      "value": "brt_knights",
+      "evidence": "RPFM processed schema is_reference"
+    },
+    {
+      "from": "main_units_tables:59c055d24df1f59c75a3",
+      "field": "land_unit",
+      "to": "land_units_tables:b1b34300e348a7f28dd9",
+      "targetField": "key",
+      "value": "wh_main_brt_cav_grail_knights",
+      "evidence": "RPFM processed schema is_reference"
+    },
+    {
+      "from": "technologies_tables:b673b16033676d850f91",
+      "field": "onscreen_name",
+      "to": "Loc:6e7714a2190c5f79f76e",
+      "targetField": "key",
+      "value": "technologies_onscreen_name_wh_dlc07_tech_brt_economy_industry_tournaments",
+      "evidence": "RPFM schema localised_fields + verified single-key Loc convention"
+    },
+    {
+      "from": "effects_tables:b161834b8fe84617bb40",
+      "field": "description",
+      "to": "Loc:a8247a8bff3b5225e40e",
+      "targetField": "key",
+      "value": "effects_description_wh2_main_effect_force_stat_melee_attack_brt_knights",
+      "evidence": "RPFM schema localised_fields + verified single-key Loc convention"
+    },
+    {
+      "from": "effects_tables:b94096ee3c3c690c0d09",
+      "field": "description",
+      "to": "Loc:fe471bbe4be79b17bb11",
+      "targetField": "key",
+      "value": "effects_description_wh2_main_effect_force_stat_melee_defence_brt_knights",
+      "evidence": "RPFM schema localised_fields + verified single-key Loc convention"
+    }
+  ],
+  "coverage": [
+    {
+      "query": {
+        "table": "technologies_tables",
+        "where": [
+          {
+            "field": "key",
+            "op": "eq",
+            "value": "wh_dlc07_tech_brt_economy_industry_tournaments"
+          }
+        ]
+      },
+      "matchedRows": 1,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "technology_effects_junction_tables",
+        "where": [
+          {
+            "field": "technology",
+            "op": "eq",
+            "value": "wh_dlc07_tech_brt_economy_industry_tournaments"
+          }
+        ]
+      },
+      "matchedRows": 2,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "campaign_effect_scopes_tables",
+        "where": [
+          {
+            "field": "key",
+            "op": "eq",
+            "value": "faction_to_force_own_unseen"
+          }
+        ]
+      },
+      "matchedRows": 1,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "unit_sets_tables",
+        "where": [
+          {
+            "field": "key",
+            "op": "eq",
+            "value": "brt_knights"
+          }
+        ]
+      },
+      "matchedRows": 1,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "unit_set_to_unit_junctions_tables",
+        "where": [
+          {
+            "field": "unit_set",
+            "op": "eq",
+            "value": "brt_knights"
+          }
+        ]
+      },
+      "matchedRows": 11,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "technology_nodes_tables",
+        "where": [
+          {
+            "field": "technology_key",
+            "op": "eq",
+            "value": "wh_dlc07_tech_brt_economy_industry_tournaments"
+          }
+        ]
+      },
+      "matchedRows": 1,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "Loc:text/db/technologies__.loc",
+        "where": [
+          {
+            "field": "key",
+            "op": "eq",
+            "value": "technologies_onscreen_name_wh_dlc07_tech_brt_economy_industry_tournaments"
+          }
+        ]
+      },
+      "matchedRows": 1,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "Loc:text/db/effects__.loc",
+        "where": [
+          {
+            "field": "key",
+            "op": "oneOf",
+            "value": [
+              "effects_description_wh2_main_effect_force_stat_melee_attack_brt_knights",
+              "effects_description_wh2_main_effect_force_stat_melee_defence_brt_knights"
+            ]
+          }
+        ]
+      },
+      "matchedRows": 2,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "technology_node_sets_tables",
+        "where": [
+          {
+            "field": "key",
+            "op": "eq",
+            "value": "brt_mil"
+          }
+        ]
+      },
+      "matchedRows": 1,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "effects_tables",
+        "where": [
+          {
+            "field": "effect",
+            "op": "oneOf",
+            "value": [
+              "wh2_main_effect_force_stat_melee_attack_brt_knights",
+              "wh2_main_effect_force_stat_melee_defence_brt_knights"
+            ]
+          }
+        ]
+      },
+      "matchedRows": 2,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "effect_bonus_value_ids_unit_sets_tables",
+        "where": [
+          {
+            "field": "effect",
+            "op": "oneOf",
+            "value": [
+              "wh2_main_effect_force_stat_melee_attack_brt_knights",
+              "wh2_main_effect_force_stat_melee_defence_brt_knights"
+            ]
+          }
+        ]
+      },
+      "matchedRows": 2,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "main_units_tables",
+        "where": [
+          {
+            "field": "unit",
+            "op": "eq",
+            "value": "wh_main_brt_cav_grail_knights"
+          }
+        ]
+      },
+      "matchedRows": 1,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "land_units_tables",
+        "where": [
+          {
+            "field": "key",
+            "op": "eq",
+            "value": "wh_main_brt_cav_grail_knights"
+          }
+        ]
+      },
+      "matchedRows": 1,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "cultures_tables",
+        "where": [
+          {
+            "field": "key",
+            "op": "eq",
+            "value": "wh_main_brt_bretonnia"
+          }
+        ]
+      },
+      "matchedRows": 1,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "Loc:text/db/effects__.loc",
+        "where": [
+          {
+            "field": "key",
+            "op": "eq",
+            "value": "effects_description_wh2_main_effect_force_stat_charge_bonus_pct_brt_knights"
+          }
+        ]
+      },
+      "matchedRows": 1,
+      "tableFiles": 1
+    }
+  ]
+}

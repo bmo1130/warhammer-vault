@@ -32,7 +32,11 @@ IndexedDB v2는 기존 v1 store를 보존하며 `manualModifierProfiles`만 추�
 JSON 백업은 v1을 유지하고 선택 필드 `manualModifierProfiles`를 추가했습니다.
 이전 백업의 누락 필드는 빈 목록으로 복원되므로 기존 Profile도 비워집니다.
 잘못된 Profile이 포함된 백업은 개인 데이터를 교체하기 전에 거부합니다.
-실제 WH3 연구·스킬·랜드마크 effect나 scope는 연결하지 않았으며 계산 결과는
+Grail Knights에는 실제 CA 연구 **Regular Tournaments** 한 개를 read-only로
+선택할 수 있습니다. 검토된 factionwide own-force/unit-set 근거로 공격·방어
+각 +5를 기존 엔진에 전달하며 수동 행과 출처를 구분합니다. 연구 선택은
+Profile/IndexedDB에 저장하지 않습니다. [Source/review/replay 근거](tools/wh3-importer/research-slice/REVIEW.md)는
+`node scripts/review-bretonnia-research.mjs --check`로 재현합니다. 계산 결과는
 Production 원본 및 admission을 변경하지 않습니다.
 
 - `src/data`: 읽기 전용 WH3 Unit JSON과 별도의 diagnostic 표시 자료. 구조 검증용 샘플 수치는 비워 두고, 검토된 production 부분집합만 실제 기본값을 포함합니다.
@@ -77,11 +81,11 @@ modifier는 변경하지 않으며 결과의 중첩 객체도 독립된 복사�
 
 이는 전쟁서고 내부 계산 계약이며 WH3의 실제 stacking 규칙을 재현한다는 뜻은
 아닙니다. 목록은 **호출자가 이미 적용 대상으로 선택한 modifier**여야 합니다.
-scope/조건/태그 판정 및 실제 WH3 effect 데이터는 아직 연결하지 않았습니다.
-향후 연구·스킬·랜드마크 연결 계층이 대상 목록을 결정해 이 엔진을 사용할 수 있습니다.
+범용 scope/조건/태그 판정은 구현하지 않았습니다. 첫 CA 연구 slice는 exact
+Grail Knights 대상과 검토된 scope를 고정한 연결 계층에서 Modifier를 선택합니다.
 테스트용 Offensive/Defensive/Economy/Mobility profile은 `tests/fixtures/modifiers.ts`
 에만 있으며 Production 데이터와 UI에는 포함되지 않습니다. 계산기 UI에서는
-이 fixture 대신 사용자가 직접 입력한 수동 행만 사용합니다.
+이 fixture 대신 수동 행과 위 한 개의 reviewed CA 연구만 사용합니다.
 
 ID, 이름, `factionId`, 설명과 출처 메타데이터는 최상위에 유지합니다. 전투·캠페인 원본값은 다음 그룹으로 나눕니다.
 

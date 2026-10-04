@@ -1,0 +1,161 @@
+[
+  {
+    "table": "technologies_tables",
+    "where": [
+      {
+        "field": "key",
+        "op": "eq",
+        "value": "wh_dlc07_tech_brt_economy_industry_tournaments"
+      }
+    ]
+  },
+  {
+    "table": "technology_effects_junction_tables",
+    "where": [
+      {
+        "field": "technology",
+        "op": "eq",
+        "value": "wh_dlc07_tech_brt_economy_industry_tournaments"
+      }
+    ]
+  },
+  {
+    "table": "campaign_effect_scopes_tables",
+    "where": [
+      {
+        "field": "key",
+        "op": "eq",
+        "value": "faction_to_force_own_unseen"
+      }
+    ]
+  },
+  {
+    "table": "unit_sets_tables",
+    "where": [
+      {
+        "field": "key",
+        "op": "eq",
+        "value": "brt_knights"
+      }
+    ]
+  },
+  {
+    "table": "unit_set_to_unit_junctions_tables",
+    "where": [
+      {
+        "field": "unit_set",
+        "op": "eq",
+        "value": "brt_knights"
+      }
+    ]
+  },
+  {
+    "table": "technology_nodes_tables",
+    "where": [
+      {
+        "field": "technology_key",
+        "op": "eq",
+        "value": "wh_dlc07_tech_brt_economy_industry_tournaments"
+      }
+    ]
+  },
+  {
+    "table": "Loc:text/db/technologies__.loc",
+    "where": [
+      {
+        "field": "key",
+        "op": "eq",
+        "value": "technologies_onscreen_name_wh_dlc07_tech_brt_economy_industry_tournaments"
+      }
+    ]
+  },
+  {
+    "table": "Loc:text/db/effects__.loc",
+    "where": [
+      {
+        "field": "key",
+        "op": "oneOf",
+        "value": [
+          "effects_description_wh2_main_effect_force_stat_melee_attack_brt_knights",
+          "effects_description_wh2_main_effect_force_stat_melee_defence_brt_knights"
+        ]
+      }
+    ]
+  },
+  {
+    "table": "technology_node_sets_tables",
+    "where": [
+      {
+        "field": "key",
+        "op": "eq",
+        "value": "brt_mil"
+      }
+    ]
+  },
+  {
+    "table": "effects_tables",
+    "where": [
+      {
+        "field": "effect",
+        "op": "oneOf",
+        "value": [
+          "wh2_main_effect_force_stat_melee_attack_brt_knights",
+          "wh2_main_effect_force_stat_melee_defence_brt_knights"
+        ]
+      }
+    ]
+  },
+  {
+    "table": "effect_bonus_value_ids_unit_sets_tables",
+    "where": [
+      {
+        "field": "effect",
+        "op": "oneOf",
+        "value": [
+          "wh2_main_effect_force_stat_melee_attack_brt_knights",
+          "wh2_main_effect_force_stat_melee_defence_brt_knights"
+        ]
+      }
+    ]
+  },
+  {
+    "table": "main_units_tables",
+    "where": [
+      {
+        "field": "unit",
+        "op": "eq",
+        "value": "wh_main_brt_cav_grail_knights"
+      }
+    ]
+  },
+  {
+    "table": "land_units_tables",
+    "where": [
+      {
+        "field": "key",
+        "op": "eq",
+        "value": "wh_main_brt_cav_grail_knights"
+      }
+    ]
+  },
+  {
+    "table": "cultures_tables",
+    "where": [
+      {
+        "field": "key",
+        "op": "eq",
+        "value": "wh_main_brt_bretonnia"
+      }
+    ]
+  },
+  {
+    "table": "Loc:text/db/effects__.loc",
+    "where": [
+      {
+        "field": "key",
+        "op": "eq",
+        "value": "effects_description_wh2_main_effect_force_stat_charge_bonus_pct_brt_knights"
+      }
+    ]
+  }
+]
