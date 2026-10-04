@@ -1,0 +1,16 @@
+{
+  "baselineCommit": "1b932d7cf25559238843b09f53cc378f28bfa393",
+  "purpose": "STATIC_SELECTOR_MEMBERSHIP_ONLY",
+  "skills": [
+    {"key":"wh2_dlc14_skill_brt_repanse_the_peoples_hero","role":"Primary mixed main-caste/explicit-record set"},
+    {"key":"wh2_dlc07_skill_brt_alberic_special_0","role":"Additional land-class sample; self blocker retained"},
+    {"key":"wh_main_skill_brt_lord_battle_virtue_of_empathy","role":"Additional reused land-class sample; self/shared-owner blockers retained"},
+    {"key":"wh_main_skill_brt_lord_battle_basic_training","role":"Additional reused land-class sample; vigour blocker retained"},
+    {"key":"wh_dlc07_skill_brt_lord_campaign_irrepressible_spirit","role":"Different main-caste selector; replenishment blocker retained"},
+    {"key":"wh_dlc07_brt_skill_innate_all_uncompromising","role":"Different main-caste selector; alternate scope/background availability retained"},
+    {"key":"wh_dlc07_skill_brt_fay_battle_blessed_water","role":"Existing explicit-record control; no admission change"}
+  ],
+  "comparisonSets": ["dlc07_brt_inf_battle_pilgrims", "brt_sword_inf"],
+  "negativeMainKeys": ["wh_main_brt_cav_knights_of_the_realm", "wh_dlc07_brt_inf_grail_reliquae_0", "wh_pro04_brt_inf_battle_pilgrims_ror_0", "wh_main_emp_inf_swordsmen", "wh_dlc04_emp_inf_flagellants_0", "wh_dlc04_emp_inf_tattersouls_0", "wh2_dlc15_grn_mon_rogue_idol_0", "wh_main_vmp_mon_crypt_horrors_summoned", "wh_main_vmp_inf_zombie_summoned", "wh3_main_kho_mon_bloodthirster_summoned_0"],
+  "spawnContextMainKeys": ["wh_main_vmp_mon_crypt_horrors_summoned", "wh_main_vmp_inf_zombie_summoned", "wh3_main_kho_mon_bloodthirster_summoned_0"]
+}

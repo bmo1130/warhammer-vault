@@ -1,0 +1,4283 @@
+{
+  "format": "wh3-skill-class-selector-research-v1",
+  "snapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+  "finalVerdict": "B",
+  "conclusion": "Simple positive unit-set branches using exact main caste, land class and explicit main records can be statically materialized. Mixed-field, exclusion, experience/special-category and engine applicability semantics are not generalized.",
+  "counts": {
+    "skills": 7,
+    "classOrCasteSkills": 6,
+    "selectors": 6,
+    "sourceRows": 5750
+  },
+  "skills": [
+    {
+      "key": "wh2_dlc14_skill_brt_repanse_the_peoples_hero",
+      "name": "The People's Hero",
+      "ownerKeys": [
+        "wh2_dlc14_brt_repanse"
+      ],
+      "owners": [
+        {
+          "key": "wh2_dlc14_brt_repanse",
+          "nodeKey": "wh2_dlc14_skill_node_brt_repanse_unique_6",
+          "nodeSetKey": "wh2_dlc14_skill_node_set_brt_repanse",
+          "mainKey": "wh2_dlc14_brt_cha_repanse_de_lyonesse_0",
+          "landKey": "wh2_dlc14_brt_cha_repanse_de_lyonesse_0",
+          "enabled": true,
+          "context": {
+            "node": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            },
+            "set": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            }
+          },
+          "joins": [
+            [
+              "character_skill_nodes_tables:77a567dfc1cc5652434b",
+              "character_skill_key",
+              "character_skills_tables:0a60f42bb6d7172868b6",
+              "key"
+            ],
+            [
+              "character_skill_node_set_items_tables:c5e00fe539d0a8d46c38",
+              "item",
+              "character_skill_nodes_tables:77a567dfc1cc5652434b",
+              "key"
+            ],
+            [
+              "character_skill_node_set_items_tables:c5e00fe539d0a8d46c38",
+              "set",
+              "character_skill_node_sets_tables:b64ff4d4a243f08f9d95",
+              "key"
+            ],
+            [
+              "character_skill_node_sets_tables:b64ff4d4a243f08f9d95",
+              "agent_subtype_key",
+              "agent_subtypes_tables:26547eda1ad31e7b8537",
+              "key"
+            ],
+            [
+              "character_skill_node_sets_tables:b64ff4d4a243f08f9d95",
+              "agent_key",
+              "agents_tables:073101e312bbb9038fea",
+              "key"
+            ],
+            [
+              "agent_subtypes_tables:26547eda1ad31e7b8537",
+              "associated_unit_override",
+              "main_units_tables:ef62c5d5fd9a0bc7114e",
+              "unit"
+            ],
+            [
+              "main_units_tables:ef62c5d5fd9a0bc7114e",
+              "land_unit",
+              "land_units_tables:b30bcc417427fb7702a2",
+              "key"
+            ]
+          ]
+        }
+      ],
+      "sourceRanks": [
+        1
+      ],
+      "isBackgroundSkill": false,
+      "selectors": [
+        "infantry_units"
+      ],
+      "effects": [
+        {
+          "rank": 1,
+          "effectKey": "wh_main_effect_force_all_campaign_replenishment_rate",
+          "rawValue": 5,
+          "scope": {
+            "key": "general_to_force_own",
+            "location": "forcewide_when_commanding",
+            "ownership": "yours",
+            "source": "character",
+            "target": "force",
+            "territory": "any"
+          },
+          "description": "Casualty replenishment rate: %+n%",
+          "joins": [
+            [
+              "character_skill_level_to_effects_junctions_tables:6b0b41aa2b400110172f",
+              "character_skill_key",
+              "character_skills_tables:0a60f42bb6d7172868b6",
+              "key"
+            ],
+            [
+              "character_skill_level_to_effects_junctions_tables:6b0b41aa2b400110172f",
+              "effect_key",
+              "effects_tables:979a99f56d02b96b037f",
+              "effect"
+            ],
+            [
+              "character_skill_level_to_effects_junctions_tables:6b0b41aa2b400110172f",
+              "effect_scope",
+              "campaign_effect_scopes_tables:ac8ad42676de36b22a6c",
+              "key"
+            ]
+          ],
+          "operation": {
+            "status": "UNSUPPORTED",
+            "reason": "REPLENISHMENT_NO_UNIT_STAT_PATH"
+          },
+          "routes": [
+            {
+              "rowId": "effect_bonus_value_basic_junction_tables:3cd3e4c2cc27e439b4e1",
+              "table": "effect_bonus_value_basic_junction_tables",
+              "raw": {
+                "effect": "wh_main_effect_force_all_campaign_replenishment_rate",
+                "bonus_value_id": "replenishment_percentage_bonus"
+              },
+              "join": [
+                "effect_bonus_value_basic_junction_tables:3cd3e4c2cc27e439b4e1",
+                "effect",
+                "effects_tables:979a99f56d02b96b037f",
+                "effect"
+              ]
+            }
+          ]
+        },
+        {
+          "rank": 1,
+          "effectKey": "wh2_dlc14_effect_force_army_battle_all_infantry_attack",
+          "rawValue": 5,
+          "scope": {
+            "key": "general_to_force_own",
+            "location": "forcewide_when_commanding",
+            "ownership": "yours",
+            "source": "character",
+            "target": "force",
+            "territory": "any"
+          },
+          "description": "Melee attack: %+n for Infantry units",
+          "joins": [
+            [
+              "character_skill_level_to_effects_junctions_tables:985dbe2f6a06f8efc6e2",
+              "character_skill_key",
+              "character_skills_tables:0a60f42bb6d7172868b6",
+              "key"
+            ],
+            [
+              "character_skill_level_to_effects_junctions_tables:985dbe2f6a06f8efc6e2",
+              "effect_key",
+              "effects_tables:4fade93f59b95915ea8d",
+              "effect"
+            ],
+            [
+              "character_skill_level_to_effects_junctions_tables:985dbe2f6a06f8efc6e2",
+              "effect_scope",
+              "campaign_effect_scopes_tables:ac8ad42676de36b22a6c",
+              "key"
+            ]
+          ],
+          "operation": {
+            "status": "VERIFIED_EXISTING_MAPPING",
+            "stat": "melee.meleeAttack",
+            "operation": "add",
+            "basis": "research-classifier/policy.mjs#wh2_main_effect_force_stat_melee_attack_brt_knights",
+            "bonus": "melee_attack_mod"
+          },
+          "routes": [
+            {
+              "rowId": "effect_bonus_value_ids_unit_sets_tables:4b3d1fcc08742ecc18c6",
+              "table": "effect_bonus_value_ids_unit_sets_tables",
+              "raw": {
+                "bonus_value_id": "melee_attack_mod",
+                "effect": "wh2_dlc14_effect_force_army_battle_all_infantry_attack",
+                "unit_set": "infantry_units"
+              },
+              "join": [
+                "effect_bonus_value_ids_unit_sets_tables:4b3d1fcc08742ecc18c6",
+                "effect",
+                "effects_tables:4fade93f59b95915ea8d",
+                "effect"
+              ],
+              "selectorKey": "infantry_units",
+              "selectorJoin": [
+                "effect_bonus_value_ids_unit_sets_tables:4b3d1fcc08742ecc18c6",
+                "unit_set",
+                "unit_sets_tables:ba8de0e06d0b1bd261d1",
+                "key"
+              ],
+              "membershipRef": "membership.json#infantry_units",
+              "productionUnitIds": [
+                "ca_unit_wh2_dlc09_tmb_inf_nehekhara_warriors_0",
+                "ca_unit_wh2_dlc09_tmb_inf_skeleton_archers_0",
+                "ca_unit_wh2_dlc09_tmb_mon_ushabti_1",
+                "ca_unit_wh2_dlc11_cst_inf_deck_gunners_0",
+                "ca_unit_wh2_dlc11_cst_inf_depth_guard_0",
+                "ca_unit_wh2_dlc11_cst_inf_depth_guard_1",
+                "ca_unit_wh2_dlc11_cst_inf_syreens",
+                "ca_unit_wh2_dlc11_cst_inf_zombie_gunnery_mob_1",
+                "ca_unit_wh2_dlc11_cst_mon_animated_hulks_0",
+                "ca_unit_wh2_dlc12_lzd_inf_skink_red_crested_0",
+                "ca_unit_wh2_dlc12_skv_inf_ratling_gun_0",
+                "ca_unit_wh2_dlc12_skv_inf_warplock_jezzails_0",
+                "ca_unit_wh2_dlc14_skv_inf_eshin_triads_0",
+                "ca_unit_wh2_dlc14_skv_inf_poison_wind_mortar_0",
+                "ca_unit_wh2_dlc14_skv_inf_warp_grinder_0",
+                "ca_unit_wh2_main_lzd_inf_chameleon_skinks_0",
+                "ca_unit_wh2_main_lzd_inf_saurus_spearmen_0",
+                "ca_unit_wh2_main_lzd_inf_saurus_spearmen_1",
+                "ca_unit_wh2_main_lzd_inf_saurus_warriors_0",
+                "ca_unit_wh2_main_lzd_inf_saurus_warriors_1",
+                "ca_unit_wh2_main_lzd_inf_skink_cohort_0",
+                "ca_unit_wh2_main_lzd_inf_skink_cohort_1",
+                "ca_unit_wh2_main_lzd_inf_skink_skirmishers_0",
+                "ca_unit_wh2_main_skv_inf_clanrat_spearmen_0",
+                "ca_unit_wh2_main_skv_inf_clanrat_spearmen_1",
+                "ca_unit_wh2_main_skv_inf_clanrats_1",
+                "ca_unit_wh2_main_skv_inf_death_globe_bombardiers",
+                "ca_unit_wh2_main_skv_inf_gutter_runner_slingers_0",
+                "ca_unit_wh2_main_skv_inf_gutter_runner_slingers_1",
+                "ca_unit_wh2_main_skv_inf_gutter_runners_0",
+                "ca_unit_wh2_main_skv_inf_gutter_runners_1",
+                "ca_unit_wh2_main_skv_inf_night_runners_0",
+                "ca_unit_wh2_main_skv_inf_night_runners_1",
+                "ca_unit_wh2_main_skv_inf_plague_monk_censer_bearer",
+                "ca_unit_wh2_main_skv_inf_poison_wind_globadiers",
+                "ca_unit_wh2_main_skv_inf_skavenslave_slingers_0",
+                "ca_unit_wh2_main_skv_inf_warpfire_thrower",
+                "ca_unit_wh3_dlc25_emp_inf_hochland_long_rifles",
+                "ca_unit_wh3_dlc25_emp_inf_nuln_ironsides",
+                "ca_unit_wh3_dlc29_emp_inf_teutogen_guard",
+                "ca_unit_wh3_dlc29_emp_inf_warriors_of_ulric",
+                "ca_unit_wh3_dlc29_emp_inf_wolf_kin",
+                "ca_unit_wh_dlc01_chs_inf_chosen_2",
+                "ca_unit_wh_dlc01_chs_inf_forsaken_0",
+                "ca_unit_wh_dlc01_chs_mon_dragon_ogre",
+                "ca_unit_wh_dlc04_emp_inf_flagellants_0",
+                "ca_unit_wh_dlc04_emp_inf_free_company_militia_0",
+                "ca_unit_wh_dlc04_vmp_inf_sternsmen_0",
+                "ca_unit_wh_dlc07_brt_inf_battle_pilgrims_0",
+                "ca_unit_wh_dlc07_brt_inf_foot_squires_0",
+                "ca_unit_wh_dlc07_brt_inf_men_at_arms_1",
+                "ca_unit_wh_dlc07_brt_inf_men_at_arms_2",
+                "ca_unit_wh_dlc07_brt_inf_peasant_bowmen_1",
+                "ca_unit_wh_dlc07_brt_inf_peasant_bowmen_2",
+                "ca_unit_wh_dlc07_brt_inf_spearmen_at_arms_1",
+                "ca_unit_wh_dlc07_brt_peasant_mob_0",
+                "ca_unit_wh_main_brt_inf_men_at_arms",
+                "ca_unit_wh_main_brt_inf_peasant_bowmen",
+                "ca_unit_wh_main_brt_inf_spearmen_at_arms",
+                "ca_unit_wh_main_chs_inf_chosen_0",
+                "ca_unit_wh_main_chs_inf_chosen_1",
+                "ca_unit_wh_main_emp_inf_crossbowmen",
+                "ca_unit_wh_main_emp_inf_spearmen_1",
+                "ca_unit_wh_main_emp_inf_swordsmen",
+                "ca_unit_wh_main_vmp_inf_grave_guard_1",
+                "ca_unit_wh_main_vmp_mon_vargheists"
+              ]
+            }
+          ]
+        },
+        {
+          "rank": 1,
+          "effectKey": "wh2_dlc14_effect_armour_piercing_damage_infantry",
+          "rawValue": 3,
+          "scope": {
+            "key": "general_to_force_own",
+            "location": "forcewide_when_commanding",
+            "ownership": "yours",
+            "source": "character",
+            "target": "force",
+            "territory": "any"
+          },
+          "description": "Armour-piercing weapon damage: %+n for Infantry units",
+          "joins": [
+            [
+              "character_skill_level_to_effects_junctions_tables:f2eab2e131487dc7b578",
+              "character_skill_key",
+              "character_skills_tables:0a60f42bb6d7172868b6",
+              "key"
+            ],
+            [
+              "character_skill_level_to_effects_junctions_tables:f2eab2e131487dc7b578",
+              "effect_key",
+              "effects_tables:7674f7ee45520c97ff65",
+              "effect"
+            ],
+            [
+              "character_skill_level_to_effects_junctions_tables:f2eab2e131487dc7b578",
+              "effect_scope",
+              "campaign_effect_scopes_tables:ac8ad42676de36b22a6c",
+              "key"
+            ]
+          ],
+          "operation": {
+            "status": "UNKNOWN",
+            "candidateStat": "melee.damage.armorPiercing",
+            "candidateOperation": "add",
+            "bonus": "melee_damage_ap_mod_add",
+            "reason": "Exact add-named engine bonus and numeric Loc; no prior reviewed flat AP operation. Not admitted in this membership-only research."
+          },
+          "routes": [
+            {
+              "rowId": "effect_bonus_value_ids_unit_sets_tables:f554a2de9be7aee0aeff",
+              "table": "effect_bonus_value_ids_unit_sets_tables",
+              "raw": {
+                "bonus_value_id": "melee_damage_ap_mod_add",
+                "effect": "wh2_dlc14_effect_armour_piercing_damage_infantry",
+                "unit_set": "infantry_units"
+              },
+              "join": [
+                "effect_bonus_value_ids_unit_sets_tables:f554a2de9be7aee0aeff",
+                "effect",
+                "effects_tables:7674f7ee45520c97ff65",
+                "effect"
+              ],
+              "selectorKey": "infantry_units",
+              "selectorJoin": [
+                "effect_bonus_value_ids_unit_sets_tables:f554a2de9be7aee0aeff",
+                "unit_set",
+                "unit_sets_tables:ba8de0e06d0b1bd261d1",
+                "key"
+              ],
+              "membershipRef": "membership.json#infantry_units",
+              "productionUnitIds": [
+                "ca_unit_wh2_dlc09_tmb_inf_nehekhara_warriors_0",
+                "ca_unit_wh2_dlc09_tmb_inf_skeleton_archers_0",
+                "ca_unit_wh2_dlc09_tmb_mon_ushabti_1",
+                "ca_unit_wh2_dlc11_cst_inf_deck_gunners_0",
+                "ca_unit_wh2_dlc11_cst_inf_depth_guard_0",
+                "ca_unit_wh2_dlc11_cst_inf_depth_guard_1",
+                "ca_unit_wh2_dlc11_cst_inf_syreens",
+                "ca_unit_wh2_dlc11_cst_inf_zombie_gunnery_mob_1",
+                "ca_unit_wh2_dlc11_cst_mon_animated_hulks_0",
+                "ca_unit_wh2_dlc12_lzd_inf_skink_red_crested_0",
+                "ca_unit_wh2_dlc12_skv_inf_ratling_gun_0",
+                "ca_unit_wh2_dlc12_skv_inf_warplock_jezzails_0",
+                "ca_unit_wh2_dlc14_skv_inf_eshin_triads_0",
+                "ca_unit_wh2_dlc14_skv_inf_poison_wind_mortar_0",
+                "ca_unit_wh2_dlc14_skv_inf_warp_grinder_0",
+                "ca_unit_wh2_main_lzd_inf_chameleon_skinks_0",
+                "ca_unit_wh2_main_lzd_inf_saurus_spearmen_0",
+                "ca_unit_wh2_main_lzd_inf_saurus_spearmen_1",
+                "ca_unit_wh2_main_lzd_inf_saurus_warriors_0",
+                "ca_unit_wh2_main_lzd_inf_saurus_warriors_1",
+                "ca_unit_wh2_main_lzd_inf_skink_cohort_0",
+                "ca_unit_wh2_main_lzd_inf_skink_cohort_1",
+                "ca_unit_wh2_main_lzd_inf_skink_skirmishers_0",
+                "ca_unit_wh2_main_skv_inf_clanrat_spearmen_0",
+                "ca_unit_wh2_main_skv_inf_clanrat_spearmen_1",
+                "ca_unit_wh2_main_skv_inf_clanrats_1",
+                "ca_unit_wh2_main_skv_inf_death_globe_bombardiers",
+                "ca_unit_wh2_main_skv_inf_gutter_runner_slingers_0",
+                "ca_unit_wh2_main_skv_inf_gutter_runner_slingers_1",
+                "ca_unit_wh2_main_skv_inf_gutter_runners_0",
+                "ca_unit_wh2_main_skv_inf_gutter_runners_1",
+                "ca_unit_wh2_main_skv_inf_night_runners_0",
+                "ca_unit_wh2_main_skv_inf_night_runners_1",
+                "ca_unit_wh2_main_skv_inf_plague_monk_censer_bearer",
+                "ca_unit_wh2_main_skv_inf_poison_wind_globadiers",
+                "ca_unit_wh2_main_skv_inf_skavenslave_slingers_0",
+                "ca_unit_wh2_main_skv_inf_warpfire_thrower",
+                "ca_unit_wh3_dlc25_emp_inf_hochland_long_rifles",
+                "ca_unit_wh3_dlc25_emp_inf_nuln_ironsides",
+                "ca_unit_wh3_dlc29_emp_inf_teutogen_guard",
+                "ca_unit_wh3_dlc29_emp_inf_warriors_of_ulric",
+                "ca_unit_wh3_dlc29_emp_inf_wolf_kin",
+                "ca_unit_wh_dlc01_chs_inf_chosen_2",
+                "ca_unit_wh_dlc01_chs_inf_forsaken_0",
+                "ca_unit_wh_dlc01_chs_mon_dragon_ogre",
+                "ca_unit_wh_dlc04_emp_inf_flagellants_0",
+                "ca_unit_wh_dlc04_emp_inf_free_company_militia_0",
+                "ca_unit_wh_dlc04_vmp_inf_sternsmen_0",
+                "ca_unit_wh_dlc07_brt_inf_battle_pilgrims_0",
+                "ca_unit_wh_dlc07_brt_inf_foot_squires_0",
+                "ca_unit_wh_dlc07_brt_inf_men_at_arms_1",
+                "ca_unit_wh_dlc07_brt_inf_men_at_arms_2",
+                "ca_unit_wh_dlc07_brt_inf_peasant_bowmen_1",
+                "ca_unit_wh_dlc07_brt_inf_peasant_bowmen_2",
+                "ca_unit_wh_dlc07_brt_inf_spearmen_at_arms_1",
+                "ca_unit_wh_dlc07_brt_peasant_mob_0",
+                "ca_unit_wh_main_brt_inf_men_at_arms",
+                "ca_unit_wh_main_brt_inf_peasant_bowmen",
+                "ca_unit_wh_main_brt_inf_spearmen_at_arms",
+                "ca_unit_wh_main_chs_inf_chosen_0",
+                "ca_unit_wh_main_chs_inf_chosen_1",
+                "ca_unit_wh_main_emp_inf_crossbowmen",
+                "ca_unit_wh_main_emp_inf_spearmen_1",
+                "ca_unit_wh_main_emp_inf_swordsmen",
+                "ca_unit_wh_main_vmp_inf_grave_guard_1",
+                "ca_unit_wh_main_vmp_mon_vargheists"
+              ]
+            }
+          ]
+        }
+      ],
+      "blockers": [
+        "Exact add-named engine bonus and numeric Loc; no prior reviewed flat AP operation. Not admitted in this membership-only research.",
+        "REPLENISHMENT_NO_UNIT_STAT_PATH"
+      ],
+      "admission": "NOT_ADMITTED"
+    },
+    {
+      "key": "wh2_dlc07_skill_brt_alberic_special_0",
+      "name": "Lead from the Front",
+      "ownerKeys": [
+        "wh_dlc07_brt_alberic"
+      ],
+      "owners": [
+        {
+          "key": "wh_dlc07_brt_alberic",
+          "nodeKey": "wh2_dlc07_skill_node_brt_alberic_special_0",
+          "nodeSetKey": "wh_dlc07_skill_node_set_brt_alberic",
+          "mainKey": "wh_dlc07_brt_cha_alberic_bordeleaux_0",
+          "landKey": "wh_dlc07_brt_cha_alberic_bordeleaux_0",
+          "enabled": true,
+          "context": {
+            "node": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            },
+            "set": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            }
+          },
+          "joins": [
+            [
+              "character_skill_nodes_tables:bc44fece8039cac1fefe",
+              "character_skill_key",
+              "character_skills_tables:ed1a99a2cfa9a1c182a9",
+              "key"
+            ],
+            [
+              "character_skill_node_set_items_tables:e286a16da72f0a08d094",
+              "item",
+              "character_skill_nodes_tables:bc44fece8039cac1fefe",
+              "key"
+            ],
+            [
+              "character_skill_node_set_items_tables:e286a16da72f0a08d094",
+              "set",
+              "character_skill_node_sets_tables:2a9ab7eac5eed5e47016",
+              "key"
+            ],
+            [
+              "character_skill_node_sets_tables:2a9ab7eac5eed5e47016",
+              "agent_subtype_key",
+              "agent_subtypes_tables:067864922eeaebc662b0",
+              "key"
+            ],
+            [
+              "character_skill_node_sets_tables:2a9ab7eac5eed5e47016",
+              "agent_key",
+              "agents_tables:073101e312bbb9038fea",
+              "key"
+            ],
+            [
+              "agent_subtypes_tables:067864922eeaebc662b0",
+              "associated_unit_override",
+              "main_units_tables:25bb23a5ee4da29017b1",
+              "unit"
+            ],
+            [
+              "main_units_tables:25bb23a5ee4da29017b1",
+              "land_unit",
+              "land_units_tables:2c8770cc0bc5569f5978",
+              "key"
+            ]
+          ]
+        }
+      ],
+      "sourceRanks": [
+        1
+      ],
+      "isBackgroundSkill": false,
+      "selectors": [
+        "all_units"
+      ],
+      "effects": [
+        {
+          "rank": 1,
+          "effectKey": "wh_main_effect_character_stat_aura_leadership_effect",
+          "rawValue": 5,
+          "scope": {
+            "key": "character_to_character_own",
+            "location": "character",
+            "ownership": "yours",
+            "source": "character",
+            "target": "character",
+            "territory": "any"
+          },
+          "description": "Character's aura leadership effect: %+n",
+          "joins": [
+            [
+              "character_skill_level_to_effects_junctions_tables:4cf15a2deec9731b498d",
+              "character_skill_key",
+              "character_skills_tables:ed1a99a2cfa9a1c182a9",
+              "key"
+            ],
+            [
+              "character_skill_level_to_effects_junctions_tables:4cf15a2deec9731b498d",
+              "effect_key",
+              "effects_tables:5c1435ed26d3c6bb1119",
+              "effect"
+            ],
+            [
+              "character_skill_level_to_effects_junctions_tables:4cf15a2deec9731b498d",
+              "effect_scope",
+              "campaign_effect_scopes_tables:feedcc2ff456571de6cc",
+              "key"
+            ]
+          ],
+          "operation": {
+            "status": "NOT_REVIEWED",
+            "reason": "Other effect scope/operation remains outside selector research"
+          },
+          "routes": [
+            {
+              "rowId": "effect_bonus_value_ids_unit_sets_tables:95d9a43bac34e17e4663",
+              "table": "effect_bonus_value_ids_unit_sets_tables",
+              "raw": {
+                "bonus_value_id": "general_aoe_morale_effect_mod",
+                "effect": "wh_main_effect_character_stat_aura_leadership_effect",
+                "unit_set": "all_units"
+              },
+              "join": [
+                "effect_bonus_value_ids_unit_sets_tables:95d9a43bac34e17e4663",
+                "effect",
+                "effects_tables:5c1435ed26d3c6bb1119",
+                "effect"
+              ],
+              "selectorKey": "all_units",
+              "selectorJoin": [
+                "effect_bonus_value_ids_unit_sets_tables:95d9a43bac34e17e4663",
+                "unit_set",
+                "unit_sets_tables:e18f3289e15c83a59cb3",
+                "key"
+              ],
+              "membershipRef": "membership.json#all_units",
+              "productionUnitIds": [
+                "ca_unit_wh2_dlc09_tmb_art_screaming_skull_catapult_0",
+                "ca_unit_wh2_dlc09_tmb_cav_skeleton_horsemen_0",
+                "ca_unit_wh2_dlc09_tmb_inf_nehekhara_warriors_0",
+                "ca_unit_wh2_dlc09_tmb_inf_skeleton_archers_0",
+                "ca_unit_wh2_dlc09_tmb_mon_ushabti_1",
+                "ca_unit_wh2_dlc09_tmb_veh_skeleton_chariot_0",
+                "ca_unit_wh2_dlc11_cst_art_carronade",
+                "ca_unit_wh2_dlc11_cst_inf_deck_gunners_0",
+                "ca_unit_wh2_dlc11_cst_inf_depth_guard_0",
+                "ca_unit_wh2_dlc11_cst_inf_depth_guard_1",
+                "ca_unit_wh2_dlc11_cst_inf_syreens",
+                "ca_unit_wh2_dlc11_cst_inf_zombie_gunnery_mob_1",
+                "ca_unit_wh2_dlc11_cst_mon_animated_hulks_0",
+                "ca_unit_wh2_dlc11_cst_mon_necrofex_colossus_0",
+                "ca_unit_wh2_dlc11_cst_mon_scurvy_dogs",
+                "ca_unit_wh2_dlc12_lzd_inf_skink_red_crested_0",
+                "ca_unit_wh2_dlc12_lzd_mon_ancient_salamander_0",
+                "ca_unit_wh2_dlc12_skv_inf_ratling_gun_0",
+                "ca_unit_wh2_dlc12_skv_inf_warplock_jezzails_0",
+                "ca_unit_wh2_dlc12_skv_veh_doom_flayer_0",
+                "ca_unit_wh2_dlc13_lzd_mon_dread_saurian_1",
+                "ca_unit_wh2_dlc14_skv_inf_eshin_triads_0",
+                "ca_unit_wh2_dlc14_skv_inf_poison_wind_mortar_0",
+                "ca_unit_wh2_dlc14_skv_inf_warp_grinder_0",
+                "ca_unit_wh2_main_lzd_cav_cold_one_spearmen_1",
+                "ca_unit_wh2_main_lzd_cav_cold_ones_1",
+                "ca_unit_wh2_main_lzd_inf_chameleon_skinks_0",
+                "ca_unit_wh2_main_lzd_inf_saurus_spearmen_0",
+                "ca_unit_wh2_main_lzd_inf_saurus_spearmen_1",
+                "ca_unit_wh2_main_lzd_inf_saurus_warriors_0",
+                "ca_unit_wh2_main_lzd_inf_saurus_warriors_1",
+                "ca_unit_wh2_main_lzd_inf_skink_cohort_0",
+                "ca_unit_wh2_main_lzd_inf_skink_cohort_1",
+                "ca_unit_wh2_main_lzd_inf_skink_skirmishers_0",
+                "ca_unit_wh2_main_lzd_mon_bastiladon_0",
+                "ca_unit_wh2_main_lzd_mon_stegadon_0",
+                "ca_unit_wh2_main_skv_art_plagueclaw_catapult",
+                "ca_unit_wh2_main_skv_art_warp_lightning_cannon",
+                "ca_unit_wh2_main_skv_inf_clanrat_spearmen_0",
+                "ca_unit_wh2_main_skv_inf_clanrat_spearmen_1",
+                "ca_unit_wh2_main_skv_inf_clanrats_1",
+                "ca_unit_wh2_main_skv_inf_death_globe_bombardiers",
+                "ca_unit_wh2_main_skv_inf_gutter_runner_slingers_0",
+                "ca_unit_wh2_main_skv_inf_gutter_runner_slingers_1",
+                "ca_unit_wh2_main_skv_inf_gutter_runners_0",
+                "ca_unit_wh2_main_skv_inf_gutter_runners_1",
+                "ca_unit_wh2_main_skv_inf_night_runners_0",
+                "ca_unit_wh2_main_skv_inf_night_runners_1",
+                "ca_unit_wh2_main_skv_inf_plague_monk_censer_bearer",
+                "ca_unit_wh2_main_skv_inf_poison_wind_globadiers",
+                "ca_unit_wh2_main_skv_inf_skavenslave_slingers_0",
+                "ca_unit_wh2_main_skv_inf_warpfire_thrower",
+                "ca_unit_wh3_dlc25_emp_cav_knights_of_the_black_rose",
+                "ca_unit_wh3_dlc25_emp_inf_hochland_long_rifles",
+                "ca_unit_wh3_dlc25_emp_inf_nuln_ironsides",
+                "ca_unit_wh3_dlc29_emp_inf_teutogen_guard",
+                "ca_unit_wh3_dlc29_emp_inf_warriors_of_ulric",
+                "ca_unit_wh3_dlc29_emp_inf_wolf_kin",
+                "ca_unit_wh3_main_vmp_blood_knights_sword_shield",
+                "ca_unit_wh_dlc01_chs_inf_chosen_2",
+                "ca_unit_wh_dlc01_chs_inf_forsaken_0",
+                "ca_unit_wh_dlc01_chs_mon_dragon_ogre",
+                "ca_unit_wh_dlc04_emp_cav_royal_altdorf_gryphites_0",
+                "ca_unit_wh_dlc04_emp_inf_flagellants_0",
+                "ca_unit_wh_dlc04_emp_inf_free_company_militia_0",
+                "ca_unit_wh_dlc04_vmp_inf_sternsmen_0",
+                "ca_unit_wh_dlc07_brt_art_blessed_field_trebuchet_0",
+                "ca_unit_wh_dlc07_brt_cav_grail_guardians_0",
+                "ca_unit_wh_dlc07_brt_cav_knights_errant_0",
+                "ca_unit_wh_dlc07_brt_cav_questing_knights_0",
+                "ca_unit_wh_dlc07_brt_cav_royal_pegasus_knights_0",
+                "ca_unit_wh_dlc07_brt_inf_battle_pilgrims_0",
+                "ca_unit_wh_dlc07_brt_inf_foot_squires_0",
+                "ca_unit_wh_dlc07_brt_inf_men_at_arms_1",
+                "ca_unit_wh_dlc07_brt_inf_men_at_arms_2",
+                "ca_unit_wh_dlc07_brt_inf_peasant_bowmen_1",
+                "ca_unit_wh_dlc07_brt_inf_peasant_bowmen_2",
+                "ca_unit_wh_dlc07_brt_inf_spearmen_at_arms_1",
+                "ca_unit_wh_dlc07_brt_peasant_mob_0",
+                "ca_unit_wh_main_brt_art_field_trebuchet",
+                "ca_unit_wh_main_brt_cav_grail_knights",
+                "ca_unit_wh_main_brt_cav_knights_of_the_realm",
+                "ca_unit_wh_main_brt_cav_mounted_yeomen_0",
+                "ca_unit_wh_main_brt_cav_mounted_yeomen_1",
+                "ca_unit_wh_main_brt_cav_pegasus_knights",
+                "ca_unit_wh_main_brt_inf_men_at_arms",
+                "ca_unit_wh_main_brt_inf_peasant_bowmen",
+                "ca_unit_wh_main_brt_inf_spearmen_at_arms",
+                "ca_unit_wh_main_chs_cav_chaos_knights_1",
+                "ca_unit_wh_main_chs_inf_chosen_0",
+                "ca_unit_wh_main_chs_inf_chosen_1",
+                "ca_unit_wh_main_chs_mon_giant",
+                "ca_unit_wh_main_emp_cav_outriders_0",
+                "ca_unit_wh_main_emp_inf_crossbowmen",
+                "ca_unit_wh_main_emp_inf_spearmen_1",
+                "ca_unit_wh_main_emp_inf_swordsmen",
+                "ca_unit_wh_main_vmp_cav_black_knights_0",
+                "ca_unit_wh_main_vmp_cav_black_knights_3",
+                "ca_unit_wh_main_vmp_inf_grave_guard_1",
+                "ca_unit_wh_main_vmp_mon_vargheists",
+                "ca_unit_wh_main_vmp_veh_black_coach"
+              ]
+            }
+          ]
+        },
+        {
+          "rank": 1,
+          "effectKey": "wh_main_effect_character_stat_unit_health",
+          "rawValue": 10,
+          "scope": {
+            "key": "character_to_character_own",
+            "location": "character",
+            "ownership": "yours",
+            "source": "character",
+            "target": "character",
+            "territory": "any"
+          },
+          "description": "Hit points: %+n%",
+          "joins": [
+            [
+              "character_skill_level_to_effects_junctions_tables:88def4561d8b3991616d",
+              "character_skill_key",
+              "character_skills_tables:ed1a99a2cfa9a1c182a9",
+              "key"
+            ],
+            [
+              "character_skill_level_to_effects_junctions_tables:88def4561d8b3991616d",
+              "effect_key",
+              "effects_tables:24fde7505af4ad9b936d",
+              "effect"
+            ],
+            [
+              "character_skill_level_to_effects_junctions_tables:88def4561d8b3991616d",
+              "effect_scope",
+              "campaign_effect_scopes_tables:feedcc2ff456571de6cc",
+              "key"
+            ]
+          ],
+          "operation": {
+            "status": "NOT_REVIEWED",
+            "reason": "Other effect scope/operation remains outside selector research"
+          },
+          "routes": [
+            {
+              "rowId": "effect_bonus_value_basic_junction_tables:26aedeeddcacb10f5fa8",
+              "table": "effect_bonus_value_basic_junction_tables",
+              "raw": {
+                "effect": "wh_main_effect_character_stat_unit_health",
+                "bonus_value_id": "general_bodyguard_size_mod"
+              },
+              "join": [
+                "effect_bonus_value_basic_junction_tables:26aedeeddcacb10f5fa8",
+                "effect",
+                "effects_tables:24fde7505af4ad9b936d",
+                "effect"
+              ]
+            }
+          ]
+        },
+        {
+          "rank": 1,
+          "effectKey": "wh_main_effect_ability_enable_hold_the_line",
+          "rawValue": 1,
+          "scope": {
+            "key": "character_to_character_own",
+            "location": "character",
+            "ownership": "yours",
+            "source": "character",
+            "target": "character",
+            "territory": "any"
+          },
+          "description": "Passive ability: \"Hold the Line!\"",
+          "joins": [
+            [
+              "character_skill_level_to_effects_junctions_tables:dc40b8f9b745ac827d97",
+              "character_skill_key",
+              "character_skills_tables:ed1a99a2cfa9a1c182a9",
+              "key"
+            ],
+            [
+              "character_skill_level_to_effects_junctions_tables:dc40b8f9b745ac827d97",
+              "effect_key",
+              "effects_tables:005519678c03ebf116b0",
+              "effect"
+            ],
+            [
+              "character_skill_level_to_effects_junctions_tables:dc40b8f9b745ac827d97",
+              "effect_scope",
+              "campaign_effect_scopes_tables:feedcc2ff456571de6cc",
+              "key"
+            ]
+          ],
+          "operation": {
+            "status": "NOT_REVIEWED",
+            "reason": "Other effect scope/operation remains outside selector research"
+          },
+          "routes": [
+            {
+              "rowId": "effect_bonus_value_unit_ability_junctions_tables:d09a82f75dc5079c7e3b",
+              "table": "effect_bonus_value_unit_ability_junctions_tables",
+              "raw": {
+                "effect": "wh_main_effect_ability_enable_hold_the_line",
+                "bonus_value_id": "enable",
+                "unit_ability": "wh_main_lord_passive_hold_the_line"
+              },
+              "join": [
+                "effect_bonus_value_unit_ability_junctions_tables:d09a82f75dc5079c7e3b",
+                "effect",
+                "effects_tables:005519678c03ebf116b0",
+                "effect"
+              ]
+            }
+          ]
+        }
+      ],
+      "blockers": [
+        "Other effect scope/operation remains outside selector research",
+        "SCOPE_NOT_EXISTING_OWN_FORCE_ADMISSION"
+      ],
+      "admission": "NOT_ADMITTED"
+    },
+    {
+      "key": "wh_main_skill_brt_lord_battle_virtue_of_empathy",
+      "name": "Virtue of Empathy",
+      "ownerKeys": [
+        "wh2_dlc14_brt_repanse",
+        "wh_dlc07_brt_alberic",
+        "wh_dlc07_brt_fay_enchantress",
+        "wh_dlc07_brt_prophetess_beasts",
+        "wh_dlc07_brt_prophetess_heavens",
+        "wh_dlc07_brt_prophetess_life",
+        "wh_main_brt_lord",
+        "wh_main_brt_louen_leoncouer"
+      ],
+      "owners": [
+        {
+          "key": "wh2_dlc14_brt_repanse",
+          "nodeKey": "wh2_dlc14_skill_node_brt_repanse_unique_3",
+          "nodeSetKey": "wh2_dlc14_skill_node_set_brt_repanse",
+          "mainKey": "wh2_dlc14_brt_cha_repanse_de_lyonesse_0",
+          "landKey": "wh2_dlc14_brt_cha_repanse_de_lyonesse_0",
+          "enabled": true,
+          "context": {
+            "node": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            },
+            "set": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            }
+          },
+          "joins": [
+            [
+              "character_skill_nodes_tables:087aae49889f5dcfce40",
+              "character_skill_key",
+              "character_skills_tables:c607eea2284f6412cd4a",
+              "key"
+            ],
+            [
+              "character_skill_node_set_items_tables:31f154ba3a60cb7210df",
+              "item",
+              "character_skill_nodes_tables:087aae49889f5dcfce40",
+              "key"
+            ],
+            [
+              "character_skill_node_set_items_tables:31f154ba3a60cb7210df",
+              "set",
+              "character_skill_node_sets_tables:b64ff4d4a243f08f9d95",
+              "key"
+            ],
+            [
+              "character_skill_node_sets_tables:b64ff4d4a243f08f9d95",
+              "agent_subtype_key",
+              "agent_subtypes_tables:26547eda1ad31e7b8537",
+              "key"
+            ],
+            [
+              "character_skill_node_sets_tables:b64ff4d4a243f08f9d95",
+              "agent_key",
+              "agents_tables:073101e312bbb9038fea",
+              "key"
+            ],
+            [
+              "agent_subtypes_tables:26547eda1ad31e7b8537",
+              "associated_unit_override",
+              "main_units_tables:ef62c5d5fd9a0bc7114e",
+              "unit"
+            ],
+            [
+              "main_units_tables:ef62c5d5fd9a0bc7114e",
+              "land_unit",
+              "land_units_tables:b30bcc417427fb7702a2",
+              "key"
+            ]
+          ]
+        },
+        {
+          "key": "wh_dlc07_brt_fay_enchantress",
+          "nodeKey": "wh_dlc07_skill_node_brt_fay_enchantress_unique_06",
+          "nodeSetKey": "wh_dlc07_skill_node_set_brt_fay_enchantress",
+          "mainKey": "wh_dlc07_brt_cha_fay_enchantress_0",
+          "landKey": "wh_dlc07_brt_cha_fay_enchantress_0",
+          "enabled": true,
+          "context": {
+            "node": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            },
+            "set": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            }
+          },
+          "joins": [
+            [
+              "character_skill_nodes_tables:0c7e370d0b12fa81dfdc",
+              "character_skill_key",
+              "character_skills_tables:c607eea2284f6412cd4a",
+              "key"
+            ],
+            [
+              "character_skill_node_set_items_tables:542c0002a916ab442bbc",
+              "item",
+              "character_skill_nodes_tables:0c7e370d0b12fa81dfdc",
+              "key"
+            ],
+            [
+              "character_skill_node_set_items_tables:542c0002a916ab442bbc",
+              "set",
+              "character_skill_node_sets_tables:1a13acf51d8af48bcce9",
+              "key"
+            ],
+            [
+              "character_skill_node_sets_tables:1a13acf51d8af48bcce9",
+              "agent_subtype_key",
+              "agent_subtypes_tables:cae4fc22d99cad5a6d62",
+              "key"
+            ],
+            [
+              "character_skill_node_sets_tables:1a13acf51d8af48bcce9",
+              "agent_key",
+              "agents_tables:073101e312bbb9038fea",
+              "key"
+            ],
+            [
+              "agent_subtypes_tables:cae4fc22d99cad5a6d62",
+              "associated_unit_override",
+              "main_units_tables:d5cbe12f1ba6d876b69e",
+              "unit"
+            ],
+            [
+              "main_units_tables:d5cbe12f1ba6d876b69e",
+              "land_unit",
+              "land_units_tables:3db565fb993a21f75b91",
+              "key"
+            ]
+          ]
+        },
+        {
+          "key": "wh_dlc07_brt_prophetess_life",
+          "nodeKey": "wh_dlc07_skill_node_brt_prophetess_life_unique_05",
+          "nodeSetKey": "wh_dlc07_skill_node_set_brt_prophetess_life",
+          "mainKey": "wh_dlc07_brt_cha_prophetess_0",
+          "landKey": "wh_dlc07_brt_cha_prophetess_0",
+          "enabled": true,
+          "context": {
+            "node": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            },
+            "set": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            }
+          },
+          "joins": [
+            [
+              "character_skill_nodes_tables:1a1901b85ed8b6285254",
+              "character_skill_key",
+              "character_skills_tables:c607eea2284f6412cd4a",
+              "key"
+            ],
+            [
+              "character_skill_node_set_items_tables:3d5e5e8f9be84a3872fc",
+              "item",
+              "character_skill_nodes_tables:1a1901b85ed8b6285254",
+              "key"
+            ],
+            [
+              "character_skill_node_set_items_tables:3d5e5e8f9be84a3872fc",
+              "set",
+              "character_skill_node_sets_tables:4f1b94c436752ccafa9a",
+              "key"
+            ],
+            [
+              "character_skill_node_sets_tables:4f1b94c436752ccafa9a",
+              "agent_subtype_key",
+              "agent_subtypes_tables:a62c1f029480bf8c7b38",
+              "key"
+            ],
+            [
+              "character_skill_node_sets_tables:4f1b94c436752ccafa9a",
+              "agent_key",
+              "agents_tables:073101e312bbb9038fea",
+              "key"
+            ],
+            [
+              "agent_subtypes_tables:a62c1f029480bf8c7b38",
+              "associated_unit_override",
+              "main_units_tables:264aeca447fb8d8d5f5b",
+              "unit"
+            ],
+            [
+              "main_units_tables:264aeca447fb8d8d5f5b",
+              "land_unit",
+              "land_units_tables:1c54c9d3daef6a0ac70e",
+              "key"
+            ]
+          ]
+        },
+        {
+          "key": "wh_dlc07_brt_prophetess_beasts",
+          "nodeKey": "wh_dlc07_skill_node_brt_prophetess_beasts_unique_05",
+          "nodeSetKey": "wh_dlc07_skill_node_set_brt_prophetess_beast",
+          "mainKey": "wh_dlc07_brt_cha_prophetess_beasts_0",
+          "landKey": "wh_dlc07_brt_cha_prophetess_beasts_0",
+          "enabled": true,
+          "context": {
+            "node": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            },
+            "set": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            }
+          },
+          "joins": [
+            [
+              "character_skill_nodes_tables:1a605ab51b8a5c0b0bd6",
+              "character_skill_key",
+              "character_skills_tables:c607eea2284f6412cd4a",
+              "key"
+            ],
+            [
+              "character_skill_node_set_items_tables:367fe5fd29867eb13f34",
+              "item",
+              "character_skill_nodes_tables:1a605ab51b8a5c0b0bd6",
+              "key"
+            ],
+            [
+              "character_skill_node_set_items_tables:367fe5fd29867eb13f34",
+              "set",
+              "character_skill_node_sets_tables:e163ed6f48cd1a766195",
+              "key"
+            ],
+            [
+              "character_skill_node_sets_tables:e163ed6f48cd1a766195",
+              "agent_subtype_key",
+              "agent_subtypes_tables:015dde4e49746e8dbc52",
+              "key"
+            ],
+            [
+              "character_skill_node_sets_tables:e163ed6f48cd1a766195",
+              "agent_key",
+              "agents_tables:073101e312bbb9038fea",
+              "key"
+            ],
+            [
+              "agent_subtypes_tables:015dde4e49746e8dbc52",
+              "associated_unit_override",
+              "main_units_tables:5921c3de6fe9c692afc1",
+              "unit"
+            ],
+            [
+              "main_units_tables:5921c3de6fe9c692afc1",
+              "land_unit",
+              "land_units_tables:b261067ab243e8fbc883",
+              "key"
+            ]
+          ]
+        },
+        {
+          "key": "wh_dlc07_brt_prophetess_heavens",
+          "nodeKey": "wh_dlc07_skill_node_brt_prophetess_heavens_unique_05",
+          "nodeSetKey": "wh_dlc07_skill_node_set_brt_prophetess_heavens",
+          "mainKey": "wh_dlc07_brt_cha_prophetess_heavens_0",
+          "landKey": "wh_dlc07_brt_cha_prophetess_heavens_0",
+          "enabled": true,
+          "context": {
+            "node": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            },
+            "set": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            }
+          },
+          "joins": [
+            [
+              "character_skill_nodes_tables:8dd2ae8e9bf6a8c47e90",
+              "character_skill_key",
+              "character_skills_tables:c607eea2284f6412cd4a",
+              "key"
+            ],
+            [
+              "character_skill_node_set_items_tables:96f452481bedcacd375e",
+              "item",
+              "character_skill_nodes_tables:8dd2ae8e9bf6a8c47e90",
+              "key"
+            ],
+            [
+              "character_skill_node_set_items_tables:96f452481bedcacd375e",
+              "set",
+              "character_skill_node_sets_tables:e2aa13f6db2100e1f8ef",
+              "key"
+            ],
+            [
+              "character_skill_node_sets_tables:e2aa13f6db2100e1f8ef",
+              "agent_subtype_key",
+              "agent_subtypes_tables:47f8898592c0bd824484",
+              "key"
+            ],
+            [
+              "character_skill_node_sets_tables:e2aa13f6db2100e1f8ef",
+              "agent_key",
+              "agents_tables:073101e312bbb9038fea",
+              "key"
+            ],
+            [
+              "agent_subtypes_tables:47f8898592c0bd824484",
+              "associated_unit_override",
+              "main_units_tables:0b5840f5e36acfdcf3df",
+              "unit"
+            ],
+            [
+              "main_units_tables:0b5840f5e36acfdcf3df",
+              "land_unit",
+              "land_units_tables:134c984ed5968323add1",
+              "key"
+            ]
+          ]
+        },
+        {
+          "key": "wh_main_brt_lord",
+          "nodeKey": "wh_main_skill_node_brt_lord_unique_08",
+          "nodeSetKey": "wh_main_skill_node_set_brt_lord",
+          "mainKey": "wh_main_brt_cha_lord_0",
+          "landKey": "wh_main_brt_cha_lord_0",
+          "enabled": true,
+          "context": {
+            "node": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            },
+            "set": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            }
+          },
+          "joins": [
+            [
+              "character_skill_nodes_tables:a4ffb579aeaf1dc52912",
+              "character_skill_key",
+              "character_skills_tables:c607eea2284f6412cd4a",
+              "key"
+            ],
+            [
+              "character_skill_node_set_items_tables:7c31c2afab2433291925",
+              "item",
+              "character_skill_nodes_tables:a4ffb579aeaf1dc52912",
+              "key"
+            ],
+            [
+              "character_skill_node_set_items_tables:7c31c2afab2433291925",
+              "set",
+              "character_skill_node_sets_tables:ebf5918563aced26bd3e",
+              "key"
+            ],
+            [
+              "character_skill_node_sets_tables:ebf5918563aced26bd3e",
+              "agent_subtype_key",
+              "agent_subtypes_tables:92325e5e6783ba184b62",
+              "key"
+            ],
+            [
+              "character_skill_node_sets_tables:ebf5918563aced26bd3e",
+              "agent_key",
+              "agents_tables:073101e312bbb9038fea",
+              "key"
+            ],
+            [
+              "agent_subtypes_tables:92325e5e6783ba184b62",
+              "associated_unit_override",
+              "main_units_tables:85fbbe7188362b732be6",
+              "unit"
+            ],
+            [
+              "main_units_tables:85fbbe7188362b732be6",
+              "land_unit",
+              "land_units_tables:73fa5518bfab83c87267",
+              "key"
+            ]
+          ]
+        },
+        {
+          "key": "wh_main_brt_louen_leoncouer",
+          "nodeKey": "wh_main_skill_node_brt_louen_unique_10",
+          "nodeSetKey": "wh_main_skill_node_set_brt_louen",
+          "mainKey": "wh_main_brt_cha_king_louen_leoncoeur_0",
+          "landKey": "wh_main_brt_cha_king_louen_leoncoeur_0",
+          "enabled": true,
+          "context": {
+            "node": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            },
+            "set": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            }
+          },
+          "joins": [
+            [
+              "character_skill_nodes_tables:c52163f347e612765e63",
+              "character_skill_key",
+              "character_skills_tables:c607eea2284f6412cd4a",
+              "key"
+            ],
+            [
+              "character_skill_node_set_items_tables:0a2a3d9727457eb0200a",
+              "item",
+              "character_skill_nodes_tables:c52163f347e612765e63",
+              "key"
+            ],
+            [
+              "character_skill_node_set_items_tables:0a2a3d9727457eb0200a",
+              "set",
+              "character_skill_node_sets_tables:aea7c103aadf7417a635",
+              "key"
+            ],
+            [
+              "character_skill_node_sets_tables:aea7c103aadf7417a635",
+              "agent_subtype_key",
+              "agent_subtypes_tables:ca8f08f5da69102a1cbd",
+              "key"
+            ],
+            [
+              "character_skill_node_sets_tables:aea7c103aadf7417a635",
+              "agent_key",
+              "agents_tables:073101e312bbb9038fea",
+              "key"
+            ],
+            [
+              "agent_subtypes_tables:ca8f08f5da69102a1cbd",
+              "associated_unit_override",
+              "main_units_tables:ce9fd51594c274f22e1a",
+              "unit"
+            ],
+            [
+              "main_units_tables:ce9fd51594c274f22e1a",
+              "land_unit",
+              "land_units_tables:20e379d85a2d109d7efe",
+              "key"
+            ]
+          ]
+        },
+        {
+          "key": "wh_dlc07_brt_alberic",
+          "nodeKey": "wh_dlc07_skill_node_brt_alberic_unique_08",
+          "nodeSetKey": "wh_dlc07_skill_node_set_brt_alberic",
+          "mainKey": "wh_dlc07_brt_cha_alberic_bordeleaux_0",
+          "landKey": "wh_dlc07_brt_cha_alberic_bordeleaux_0",
+          "enabled": true,
+          "context": {
+            "node": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            },
+            "set": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            }
+          },
+          "joins": [
+            [
+              "character_skill_nodes_tables:fa26b86582f9b972d877",
+              "character_skill_key",
+              "character_skills_tables:c607eea2284f6412cd4a",
+              "key"
+            ],
+            [
+              "character_skill_node_set_items_tables:d3b986e2a642b66ad056",
+              "item",
+              "character_skill_nodes_tables:fa26b86582f9b972d877",
+              "key"
+            ],
+            [
+              "character_skill_node_set_items_tables:d3b986e2a642b66ad056",
+              "set",
+              "character_skill_node_sets_tables:2a9ab7eac5eed5e47016",
+              "key"
+            ],
+            [
+              "character_skill_node_sets_tables:2a9ab7eac5eed5e47016",
+              "agent_subtype_key",
+              "agent_subtypes_tables:067864922eeaebc662b0",
+              "key"
+            ],
+            [
+              "character_skill_node_sets_tables:2a9ab7eac5eed5e47016",
+              "agent_key",
+              "agents_tables:073101e312bbb9038fea",
+              "key"
+            ],
+            [
+              "agent_subtypes_tables:067864922eeaebc662b0",
+              "associated_unit_override",
+              "main_units_tables:25bb23a5ee4da29017b1",
+              "unit"
+            ],
+            [
+              "main_units_tables:25bb23a5ee4da29017b1",
+              "land_unit",
+              "land_units_tables:2c8770cc0bc5569f5978",
+              "key"
+            ]
+          ]
+        }
+      ],
+      "sourceRanks": [
+        1
+      ],
+      "isBackgroundSkill": false,
+      "selectors": [
+        "all_units"
+      ],
+      "effects": [
+        {
+          "rank": 1,
+          "effectKey": "wh_main_effect_character_stat_leadership_aura_size",
+          "rawValue": 25,
+          "scope": {
+            "key": "character_to_character_own",
+            "location": "character",
+            "ownership": "yours",
+            "source": "character",
+            "target": "character",
+            "territory": "any"
+          },
+          "description": "Leadership aura size: %+n%",
+          "joins": [
+            [
+              "character_skill_level_to_effects_junctions_tables:2cba39e7362f66011f85",
+              "character_skill_key",
+              "character_skills_tables:c607eea2284f6412cd4a",
+              "key"
+            ],
+            [
+              "character_skill_level_to_effects_junctions_tables:2cba39e7362f66011f85",
+              "effect_key",
+              "effects_tables:9d521f97152a44c23772",
+              "effect"
+            ],
+            [
+              "character_skill_level_to_effects_junctions_tables:2cba39e7362f66011f85",
+              "effect_scope",
+              "campaign_effect_scopes_tables:feedcc2ff456571de6cc",
+              "key"
+            ]
+          ],
+          "operation": {
+            "status": "NOT_REVIEWED",
+            "reason": "Other effect scope/operation remains outside selector research"
+          },
+          "routes": [
+            {
+              "rowId": "effect_bonus_value_ids_unit_sets_tables:d2f7cac07bc7123fb929",
+              "table": "effect_bonus_value_ids_unit_sets_tables",
+              "raw": {
+                "bonus_value_id": "general_aoe_mod",
+                "effect": "wh_main_effect_character_stat_leadership_aura_size",
+                "unit_set": "all_units"
+              },
+              "join": [
+                "effect_bonus_value_ids_unit_sets_tables:d2f7cac07bc7123fb929",
+                "effect",
+                "effects_tables:9d521f97152a44c23772",
+                "effect"
+              ],
+              "selectorKey": "all_units",
+              "selectorJoin": [
+                "effect_bonus_value_ids_unit_sets_tables:d2f7cac07bc7123fb929",
+                "unit_set",
+                "unit_sets_tables:e18f3289e15c83a59cb3",
+                "key"
+              ],
+              "membershipRef": "membership.json#all_units",
+              "productionUnitIds": [
+                "ca_unit_wh2_dlc09_tmb_art_screaming_skull_catapult_0",
+                "ca_unit_wh2_dlc09_tmb_cav_skeleton_horsemen_0",
+                "ca_unit_wh2_dlc09_tmb_inf_nehekhara_warriors_0",
+                "ca_unit_wh2_dlc09_tmb_inf_skeleton_archers_0",
+                "ca_unit_wh2_dlc09_tmb_mon_ushabti_1",
+                "ca_unit_wh2_dlc09_tmb_veh_skeleton_chariot_0",
+                "ca_unit_wh2_dlc11_cst_art_carronade",
+                "ca_unit_wh2_dlc11_cst_inf_deck_gunners_0",
+                "ca_unit_wh2_dlc11_cst_inf_depth_guard_0",
+                "ca_unit_wh2_dlc11_cst_inf_depth_guard_1",
+                "ca_unit_wh2_dlc11_cst_inf_syreens",
+                "ca_unit_wh2_dlc11_cst_inf_zombie_gunnery_mob_1",
+                "ca_unit_wh2_dlc11_cst_mon_animated_hulks_0",
+                "ca_unit_wh2_dlc11_cst_mon_necrofex_colossus_0",
+                "ca_unit_wh2_dlc11_cst_mon_scurvy_dogs",
+                "ca_unit_wh2_dlc12_lzd_inf_skink_red_crested_0",
+                "ca_unit_wh2_dlc12_lzd_mon_ancient_salamander_0",
+                "ca_unit_wh2_dlc12_skv_inf_ratling_gun_0",
+                "ca_unit_wh2_dlc12_skv_inf_warplock_jezzails_0",
+                "ca_unit_wh2_dlc12_skv_veh_doom_flayer_0",
+                "ca_unit_wh2_dlc13_lzd_mon_dread_saurian_1",
+                "ca_unit_wh2_dlc14_skv_inf_eshin_triads_0",
+                "ca_unit_wh2_dlc14_skv_inf_poison_wind_mortar_0",
+                "ca_unit_wh2_dlc14_skv_inf_warp_grinder_0",
+                "ca_unit_wh2_main_lzd_cav_cold_one_spearmen_1",
+                "ca_unit_wh2_main_lzd_cav_cold_ones_1",
+                "ca_unit_wh2_main_lzd_inf_chameleon_skinks_0",
+                "ca_unit_wh2_main_lzd_inf_saurus_spearmen_0",
+                "ca_unit_wh2_main_lzd_inf_saurus_spearmen_1",
+                "ca_unit_wh2_main_lzd_inf_saurus_warriors_0",
+                "ca_unit_wh2_main_lzd_inf_saurus_warriors_1",
+                "ca_unit_wh2_main_lzd_inf_skink_cohort_0",
+                "ca_unit_wh2_main_lzd_inf_skink_cohort_1",
+                "ca_unit_wh2_main_lzd_inf_skink_skirmishers_0",
+                "ca_unit_wh2_main_lzd_mon_bastiladon_0",
+                "ca_unit_wh2_main_lzd_mon_stegadon_0",
+                "ca_unit_wh2_main_skv_art_plagueclaw_catapult",
+                "ca_unit_wh2_main_skv_art_warp_lightning_cannon",
+                "ca_unit_wh2_main_skv_inf_clanrat_spearmen_0",
+                "ca_unit_wh2_main_skv_inf_clanrat_spearmen_1",
+                "ca_unit_wh2_main_skv_inf_clanrats_1",
+                "ca_unit_wh2_main_skv_inf_death_globe_bombardiers",
+                "ca_unit_wh2_main_skv_inf_gutter_runner_slingers_0",
+                "ca_unit_wh2_main_skv_inf_gutter_runner_slingers_1",
+                "ca_unit_wh2_main_skv_inf_gutter_runners_0",
+                "ca_unit_wh2_main_skv_inf_gutter_runners_1",
+                "ca_unit_wh2_main_skv_inf_night_runners_0",
+                "ca_unit_wh2_main_skv_inf_night_runners_1",
+                "ca_unit_wh2_main_skv_inf_plague_monk_censer_bearer",
+                "ca_unit_wh2_main_skv_inf_poison_wind_globadiers",
+                "ca_unit_wh2_main_skv_inf_skavenslave_slingers_0",
+                "ca_unit_wh2_main_skv_inf_warpfire_thrower",
+                "ca_unit_wh3_dlc25_emp_cav_knights_of_the_black_rose",
+                "ca_unit_wh3_dlc25_emp_inf_hochland_long_rifles",
+                "ca_unit_wh3_dlc25_emp_inf_nuln_ironsides",
+                "ca_unit_wh3_dlc29_emp_inf_teutogen_guard",
+                "ca_unit_wh3_dlc29_emp_inf_warriors_of_ulric",
+                "ca_unit_wh3_dlc29_emp_inf_wolf_kin",
+                "ca_unit_wh3_main_vmp_blood_knights_sword_shield",
+                "ca_unit_wh_dlc01_chs_inf_chosen_2",
+                "ca_unit_wh_dlc01_chs_inf_forsaken_0",
+                "ca_unit_wh_dlc01_chs_mon_dragon_ogre",
+                "ca_unit_wh_dlc04_emp_cav_royal_altdorf_gryphites_0",
+                "ca_unit_wh_dlc04_emp_inf_flagellants_0",
+                "ca_unit_wh_dlc04_emp_inf_free_company_militia_0",
+                "ca_unit_wh_dlc04_vmp_inf_sternsmen_0",
+                "ca_unit_wh_dlc07_brt_art_blessed_field_trebuchet_0",
+                "ca_unit_wh_dlc07_brt_cav_grail_guardians_0",
+                "ca_unit_wh_dlc07_brt_cav_knights_errant_0",
+                "ca_unit_wh_dlc07_brt_cav_questing_knights_0",
+                "ca_unit_wh_dlc07_brt_cav_royal_pegasus_knights_0",
+                "ca_unit_wh_dlc07_brt_inf_battle_pilgrims_0",
+                "ca_unit_wh_dlc07_brt_inf_foot_squires_0",
+                "ca_unit_wh_dlc07_brt_inf_men_at_arms_1",
+                "ca_unit_wh_dlc07_brt_inf_men_at_arms_2",
+                "ca_unit_wh_dlc07_brt_inf_peasant_bowmen_1",
+                "ca_unit_wh_dlc07_brt_inf_peasant_bowmen_2",
+                "ca_unit_wh_dlc07_brt_inf_spearmen_at_arms_1",
+                "ca_unit_wh_dlc07_brt_peasant_mob_0",
+                "ca_unit_wh_main_brt_art_field_trebuchet",
+                "ca_unit_wh_main_brt_cav_grail_knights",
+                "ca_unit_wh_main_brt_cav_knights_of_the_realm",
+                "ca_unit_wh_main_brt_cav_mounted_yeomen_0",
+                "ca_unit_wh_main_brt_cav_mounted_yeomen_1",
+                "ca_unit_wh_main_brt_cav_pegasus_knights",
+                "ca_unit_wh_main_brt_inf_men_at_arms",
+                "ca_unit_wh_main_brt_inf_peasant_bowmen",
+                "ca_unit_wh_main_brt_inf_spearmen_at_arms",
+                "ca_unit_wh_main_chs_cav_chaos_knights_1",
+                "ca_unit_wh_main_chs_inf_chosen_0",
+                "ca_unit_wh_main_chs_inf_chosen_1",
+                "ca_unit_wh_main_chs_mon_giant",
+                "ca_unit_wh_main_emp_cav_outriders_0",
+                "ca_unit_wh_main_emp_inf_crossbowmen",
+                "ca_unit_wh_main_emp_inf_spearmen_1",
+                "ca_unit_wh_main_emp_inf_swordsmen",
+                "ca_unit_wh_main_vmp_cav_black_knights_0",
+                "ca_unit_wh_main_vmp_cav_black_knights_3",
+                "ca_unit_wh_main_vmp_inf_grave_guard_1",
+                "ca_unit_wh_main_vmp_mon_vargheists",
+                "ca_unit_wh_main_vmp_veh_black_coach"
+              ]
+            }
+          ]
+        }
+      ],
+      "blockers": [
+        "Other effect scope/operation remains outside selector research",
+        "SCOPE_NOT_EXISTING_OWN_FORCE_ADMISSION",
+        "SHARED_OWNER_RUNTIME_AVAILABILITY_UNCHANGED"
+      ],
+      "admission": "NOT_ADMITTED"
+    },
+    {
+      "key": "wh_main_skill_brt_lord_battle_basic_training",
+      "name": "Basic Training",
+      "ownerKeys": [
+        "wh2_dlc14_brt_repanse",
+        "wh_dlc07_brt_alberic",
+        "wh_dlc07_brt_fay_enchantress",
+        "wh_dlc07_brt_prophetess_beasts",
+        "wh_dlc07_brt_prophetess_heavens",
+        "wh_dlc07_brt_prophetess_life",
+        "wh_main_brt_lord",
+        "wh_main_brt_louen_leoncouer"
+      ],
+      "owners": [
+        {
+          "key": "wh_dlc07_brt_prophetess_life",
+          "nodeKey": "wh_dlc07_skill_node_brt_prophetess_life_unique_07",
+          "nodeSetKey": "wh_dlc07_skill_node_set_brt_prophetess_life",
+          "mainKey": "wh_dlc07_brt_cha_prophetess_0",
+          "landKey": "wh_dlc07_brt_cha_prophetess_0",
+          "enabled": true,
+          "context": {
+            "node": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            },
+            "set": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            }
+          },
+          "joins": [
+            [
+              "character_skill_nodes_tables:38613f2669a284973d38",
+              "character_skill_key",
+              "character_skills_tables:43fcc15257e4942d32f7",
+              "key"
+            ],
+            [
+              "character_skill_node_set_items_tables:1579d24f7b5bc252ce56",
+              "item",
+              "character_skill_nodes_tables:38613f2669a284973d38",
+              "key"
+            ],
+            [
+              "character_skill_node_set_items_tables:1579d24f7b5bc252ce56",
+              "set",
+              "character_skill_node_sets_tables:4f1b94c436752ccafa9a",
+              "key"
+            ],
+            [
+              "character_skill_node_sets_tables:4f1b94c436752ccafa9a",
+              "agent_subtype_key",
+              "agent_subtypes_tables:a62c1f029480bf8c7b38",
+              "key"
+            ],
+            [
+              "character_skill_node_sets_tables:4f1b94c436752ccafa9a",
+              "agent_key",
+              "agents_tables:073101e312bbb9038fea",
+              "key"
+            ],
+            [
+              "agent_subtypes_tables:a62c1f029480bf8c7b38",
+              "associated_unit_override",
+              "main_units_tables:264aeca447fb8d8d5f5b",
+              "unit"
+            ],
+            [
+              "main_units_tables:264aeca447fb8d8d5f5b",
+              "land_unit",
+              "land_units_tables:1c54c9d3daef6a0ac70e",
+              "key"
+            ]
+          ]
+        },
+        {
+          "key": "wh_main_brt_lord",
+          "nodeKey": "wh_main_skill_node_brt_lord_unique_10",
+          "nodeSetKey": "wh_main_skill_node_set_brt_lord",
+          "mainKey": "wh_main_brt_cha_lord_0",
+          "landKey": "wh_main_brt_cha_lord_0",
+          "enabled": true,
+          "context": {
+            "node": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            },
+            "set": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            }
+          },
+          "joins": [
+            [
+              "character_skill_nodes_tables:42139c55e6f1e2d089fa",
+              "character_skill_key",
+              "character_skills_tables:43fcc15257e4942d32f7",
+              "key"
+            ],
+            [
+              "character_skill_node_set_items_tables:4f4ba24fa6da04283412",
+              "item",
+              "character_skill_nodes_tables:42139c55e6f1e2d089fa",
+              "key"
+            ],
+            [
+              "character_skill_node_set_items_tables:4f4ba24fa6da04283412",
+              "set",
+              "character_skill_node_sets_tables:ebf5918563aced26bd3e",
+              "key"
+            ],
+            [
+              "character_skill_node_sets_tables:ebf5918563aced26bd3e",
+              "agent_subtype_key",
+              "agent_subtypes_tables:92325e5e6783ba184b62",
+              "key"
+            ],
+            [
+              "character_skill_node_sets_tables:ebf5918563aced26bd3e",
+              "agent_key",
+              "agents_tables:073101e312bbb9038fea",
+              "key"
+            ],
+            [
+              "agent_subtypes_tables:92325e5e6783ba184b62",
+              "associated_unit_override",
+              "main_units_tables:85fbbe7188362b732be6",
+              "unit"
+            ],
+            [
+              "main_units_tables:85fbbe7188362b732be6",
+              "land_unit",
+              "land_units_tables:73fa5518bfab83c87267",
+              "key"
+            ]
+          ]
+        },
+        {
+          "key": "wh_dlc07_brt_fay_enchantress",
+          "nodeKey": "wh_dlc07_skill_node_brt_fay_enchantress_unique_08",
+          "nodeSetKey": "wh_dlc07_skill_node_set_brt_fay_enchantress",
+          "mainKey": "wh_dlc07_brt_cha_fay_enchantress_0",
+          "landKey": "wh_dlc07_brt_cha_fay_enchantress_0",
+          "enabled": true,
+          "context": {
+            "node": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            },
+            "set": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            }
+          },
+          "joins": [
+            [
+              "character_skill_nodes_tables:4cd1590e53c9517d66c7",
+              "character_skill_key",
+              "character_skills_tables:43fcc15257e4942d32f7",
+              "key"
+            ],
+            [
+              "character_skill_node_set_items_tables:1ed04e36fbecedb2f020",
+              "item",
+              "character_skill_nodes_tables:4cd1590e53c9517d66c7",
+              "key"
+            ],
+            [
+              "character_skill_node_set_items_tables:1ed04e36fbecedb2f020",
+              "set",
+              "character_skill_node_sets_tables:1a13acf51d8af48bcce9",
+              "key"
+            ],
+            [
+              "character_skill_node_sets_tables:1a13acf51d8af48bcce9",
+              "agent_subtype_key",
+              "agent_subtypes_tables:cae4fc22d99cad5a6d62",
+              "key"
+            ],
+            [
+              "character_skill_node_sets_tables:1a13acf51d8af48bcce9",
+              "agent_key",
+              "agents_tables:073101e312bbb9038fea",
+              "key"
+            ],
+            [
+              "agent_subtypes_tables:cae4fc22d99cad5a6d62",
+              "associated_unit_override",
+              "main_units_tables:d5cbe12f1ba6d876b69e",
+              "unit"
+            ],
+            [
+              "main_units_tables:d5cbe12f1ba6d876b69e",
+              "land_unit",
+              "land_units_tables:3db565fb993a21f75b91",
+              "key"
+            ]
+          ]
+        },
+        {
+          "key": "wh_dlc07_brt_prophetess_beasts",
+          "nodeKey": "wh_dlc07_skill_node_brt_prophetess_beasts_unique_07",
+          "nodeSetKey": "wh_dlc07_skill_node_set_brt_prophetess_beast",
+          "mainKey": "wh_dlc07_brt_cha_prophetess_beasts_0",
+          "landKey": "wh_dlc07_brt_cha_prophetess_beasts_0",
+          "enabled": true,
+          "context": {
+            "node": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            },
+            "set": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            }
+          },
+          "joins": [
+            [
+              "character_skill_nodes_tables:680d288c3a778343d3d1",
+              "character_skill_key",
+              "character_skills_tables:43fcc15257e4942d32f7",
+              "key"
+            ],
+            [
+              "character_skill_node_set_items_tables:6f0c3ebe6accad937c11",
+              "item",
+              "character_skill_nodes_tables:680d288c3a778343d3d1",
+              "key"
+            ],
+            [
+              "character_skill_node_set_items_tables:6f0c3ebe6accad937c11",
+              "set",
+              "character_skill_node_sets_tables:e163ed6f48cd1a766195",
+              "key"
+            ],
+            [
+              "character_skill_node_sets_tables:e163ed6f48cd1a766195",
+              "agent_subtype_key",
+              "agent_subtypes_tables:015dde4e49746e8dbc52",
+              "key"
+            ],
+            [
+              "character_skill_node_sets_tables:e163ed6f48cd1a766195",
+              "agent_key",
+              "agents_tables:073101e312bbb9038fea",
+              "key"
+            ],
+            [
+              "agent_subtypes_tables:015dde4e49746e8dbc52",
+              "associated_unit_override",
+              "main_units_tables:5921c3de6fe9c692afc1",
+              "unit"
+            ],
+            [
+              "main_units_tables:5921c3de6fe9c692afc1",
+              "land_unit",
+              "land_units_tables:b261067ab243e8fbc883",
+              "key"
+            ]
+          ]
+        },
+        {
+          "key": "wh_main_brt_louen_leoncouer",
+          "nodeKey": "wh_main_skill_node_brt_louen_unique_12",
+          "nodeSetKey": "wh_main_skill_node_set_brt_louen",
+          "mainKey": "wh_main_brt_cha_king_louen_leoncoeur_0",
+          "landKey": "wh_main_brt_cha_king_louen_leoncoeur_0",
+          "enabled": true,
+          "context": {
+            "node": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            },
+            "set": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            }
+          },
+          "joins": [
+            [
+              "character_skill_nodes_tables:6cbf2be006f607092871",
+              "character_skill_key",
+              "character_skills_tables:43fcc15257e4942d32f7",
+              "key"
+            ],
+            [
+              "character_skill_node_set_items_tables:00ec36de8e0af8ab8b20",
+              "item",
+              "character_skill_nodes_tables:6cbf2be006f607092871",
+              "key"
+            ],
+            [
+              "character_skill_node_set_items_tables:00ec36de8e0af8ab8b20",
+              "set",
+              "character_skill_node_sets_tables:aea7c103aadf7417a635",
+              "key"
+            ],
+            [
+              "character_skill_node_sets_tables:aea7c103aadf7417a635",
+              "agent_subtype_key",
+              "agent_subtypes_tables:ca8f08f5da69102a1cbd",
+              "key"
+            ],
+            [
+              "character_skill_node_sets_tables:aea7c103aadf7417a635",
+              "agent_key",
+              "agents_tables:073101e312bbb9038fea",
+              "key"
+            ],
+            [
+              "agent_subtypes_tables:ca8f08f5da69102a1cbd",
+              "associated_unit_override",
+              "main_units_tables:ce9fd51594c274f22e1a",
+              "unit"
+            ],
+            [
+              "main_units_tables:ce9fd51594c274f22e1a",
+              "land_unit",
+              "land_units_tables:20e379d85a2d109d7efe",
+              "key"
+            ]
+          ]
+        },
+        {
+          "key": "wh_dlc07_brt_prophetess_heavens",
+          "nodeKey": "wh_dlc07_skill_node_brt_prophetess_heavens_unique_07",
+          "nodeSetKey": "wh_dlc07_skill_node_set_brt_prophetess_heavens",
+          "mainKey": "wh_dlc07_brt_cha_prophetess_heavens_0",
+          "landKey": "wh_dlc07_brt_cha_prophetess_heavens_0",
+          "enabled": true,
+          "context": {
+            "node": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            },
+            "set": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            }
+          },
+          "joins": [
+            [
+              "character_skill_nodes_tables:bf4ef8002ccacd8392d8",
+              "character_skill_key",
+              "character_skills_tables:43fcc15257e4942d32f7",
+              "key"
+            ],
+            [
+              "character_skill_node_set_items_tables:5145cdef067258f0c744",
+              "item",
+              "character_skill_nodes_tables:bf4ef8002ccacd8392d8",
+              "key"
+            ],
+            [
+              "character_skill_node_set_items_tables:5145cdef067258f0c744",
+              "set",
+              "character_skill_node_sets_tables:e2aa13f6db2100e1f8ef",
+              "key"
+            ],
+            [
+              "character_skill_node_sets_tables:e2aa13f6db2100e1f8ef",
+              "agent_subtype_key",
+              "agent_subtypes_tables:47f8898592c0bd824484",
+              "key"
+            ],
+            [
+              "character_skill_node_sets_tables:e2aa13f6db2100e1f8ef",
+              "agent_key",
+              "agents_tables:073101e312bbb9038fea",
+              "key"
+            ],
+            [
+              "agent_subtypes_tables:47f8898592c0bd824484",
+              "associated_unit_override",
+              "main_units_tables:0b5840f5e36acfdcf3df",
+              "unit"
+            ],
+            [
+              "main_units_tables:0b5840f5e36acfdcf3df",
+              "land_unit",
+              "land_units_tables:134c984ed5968323add1",
+              "key"
+            ]
+          ]
+        },
+        {
+          "key": "wh2_dlc14_brt_repanse",
+          "nodeKey": "wh2_dlc14_skill_node_brt_repanse_unique_4",
+          "nodeSetKey": "wh2_dlc14_skill_node_set_brt_repanse",
+          "mainKey": "wh2_dlc14_brt_cha_repanse_de_lyonesse_0",
+          "landKey": "wh2_dlc14_brt_cha_repanse_de_lyonesse_0",
+          "enabled": true,
+          "context": {
+            "node": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            },
+            "set": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            }
+          },
+          "joins": [
+            [
+              "character_skill_nodes_tables:e1fe288e410f90fc2afa",
+              "character_skill_key",
+              "character_skills_tables:43fcc15257e4942d32f7",
+              "key"
+            ],
+            [
+              "character_skill_node_set_items_tables:b47bdd8ce4fb8ac046c5",
+              "item",
+              "character_skill_nodes_tables:e1fe288e410f90fc2afa",
+              "key"
+            ],
+            [
+              "character_skill_node_set_items_tables:b47bdd8ce4fb8ac046c5",
+              "set",
+              "character_skill_node_sets_tables:b64ff4d4a243f08f9d95",
+              "key"
+            ],
+            [
+              "character_skill_node_sets_tables:b64ff4d4a243f08f9d95",
+              "agent_subtype_key",
+              "agent_subtypes_tables:26547eda1ad31e7b8537",
+              "key"
+            ],
+            [
+              "character_skill_node_sets_tables:b64ff4d4a243f08f9d95",
+              "agent_key",
+              "agents_tables:073101e312bbb9038fea",
+              "key"
+            ],
+            [
+              "agent_subtypes_tables:26547eda1ad31e7b8537",
+              "associated_unit_override",
+              "main_units_tables:ef62c5d5fd9a0bc7114e",
+              "unit"
+            ],
+            [
+              "main_units_tables:ef62c5d5fd9a0bc7114e",
+              "land_unit",
+              "land_units_tables:b30bcc417427fb7702a2",
+              "key"
+            ]
+          ]
+        },
+        {
+          "key": "wh_dlc07_brt_alberic",
+          "nodeKey": "wh_dlc07_skill_node_brt_alberic_unique_10",
+          "nodeSetKey": "wh_dlc07_skill_node_set_brt_alberic",
+          "mainKey": "wh_dlc07_brt_cha_alberic_bordeleaux_0",
+          "landKey": "wh_dlc07_brt_cha_alberic_bordeleaux_0",
+          "enabled": true,
+          "context": {
+            "node": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            },
+            "set": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            }
+          },
+          "joins": [
+            [
+              "character_skill_nodes_tables:f1c1fc71bc69bd75699c",
+              "character_skill_key",
+              "character_skills_tables:43fcc15257e4942d32f7",
+              "key"
+            ],
+            [
+              "character_skill_node_set_items_tables:a5a3bb1ca2d545d246d8",
+              "item",
+              "character_skill_nodes_tables:f1c1fc71bc69bd75699c",
+              "key"
+            ],
+            [
+              "character_skill_node_set_items_tables:a5a3bb1ca2d545d246d8",
+              "set",
+              "character_skill_node_sets_tables:2a9ab7eac5eed5e47016",
+              "key"
+            ],
+            [
+              "character_skill_node_sets_tables:2a9ab7eac5eed5e47016",
+              "agent_subtype_key",
+              "agent_subtypes_tables:067864922eeaebc662b0",
+              "key"
+            ],
+            [
+              "character_skill_node_sets_tables:2a9ab7eac5eed5e47016",
+              "agent_key",
+              "agents_tables:073101e312bbb9038fea",
+              "key"
+            ],
+            [
+              "agent_subtypes_tables:067864922eeaebc662b0",
+              "associated_unit_override",
+              "main_units_tables:25bb23a5ee4da29017b1",
+              "unit"
+            ],
+            [
+              "main_units_tables:25bb23a5ee4da29017b1",
+              "land_unit",
+              "land_units_tables:2c8770cc0bc5569f5978",
+              "key"
+            ]
+          ]
+        }
+      ],
+      "sourceRanks": [
+        1
+      ],
+      "isBackgroundSkill": false,
+      "selectors": [
+        "all_units"
+      ],
+      "effects": [
+        {
+          "rank": 1,
+          "effectKey": "wh_main_effect_force_stat_vigour_loss_reduction",
+          "rawValue": -15,
+          "scope": {
+            "key": "general_to_force_own",
+            "location": "forcewide_when_commanding",
+            "ownership": "yours",
+            "source": "character",
+            "target": "force",
+            "territory": "any"
+          },
+          "description": "Vigour loss reduction: %+n%",
+          "joins": [
+            [
+              "character_skill_level_to_effects_junctions_tables:328c54d8fd55d6149a2d",
+              "character_skill_key",
+              "character_skills_tables:43fcc15257e4942d32f7",
+              "key"
+            ],
+            [
+              "character_skill_level_to_effects_junctions_tables:328c54d8fd55d6149a2d",
+              "effect_key",
+              "effects_tables:5ddc74e29e850e1c986d",
+              "effect"
+            ],
+            [
+              "character_skill_level_to_effects_junctions_tables:328c54d8fd55d6149a2d",
+              "effect_scope",
+              "campaign_effect_scopes_tables:ac8ad42676de36b22a6c",
+              "key"
+            ]
+          ],
+          "operation": {
+            "status": "UNSUPPORTED",
+            "reason": "VIGOUR_NO_UNIT_STAT_PATH"
+          },
+          "routes": [
+            {
+              "rowId": "effect_bonus_value_ids_unit_sets_tables:fabe766918ded28f498e",
+              "table": "effect_bonus_value_ids_unit_sets_tables",
+              "raw": {
+                "bonus_value_id": "unit_fatigue_resistance_mod",
+                "effect": "wh_main_effect_force_stat_vigour_loss_reduction",
+                "unit_set": "all_units"
+              },
+              "join": [
+                "effect_bonus_value_ids_unit_sets_tables:fabe766918ded28f498e",
+                "effect",
+                "effects_tables:5ddc74e29e850e1c986d",
+                "effect"
+              ],
+              "selectorKey": "all_units",
+              "selectorJoin": [
+                "effect_bonus_value_ids_unit_sets_tables:fabe766918ded28f498e",
+                "unit_set",
+                "unit_sets_tables:e18f3289e15c83a59cb3",
+                "key"
+              ],
+              "membershipRef": "membership.json#all_units",
+              "productionUnitIds": [
+                "ca_unit_wh2_dlc09_tmb_art_screaming_skull_catapult_0",
+                "ca_unit_wh2_dlc09_tmb_cav_skeleton_horsemen_0",
+                "ca_unit_wh2_dlc09_tmb_inf_nehekhara_warriors_0",
+                "ca_unit_wh2_dlc09_tmb_inf_skeleton_archers_0",
+                "ca_unit_wh2_dlc09_tmb_mon_ushabti_1",
+                "ca_unit_wh2_dlc09_tmb_veh_skeleton_chariot_0",
+                "ca_unit_wh2_dlc11_cst_art_carronade",
+                "ca_unit_wh2_dlc11_cst_inf_deck_gunners_0",
+                "ca_unit_wh2_dlc11_cst_inf_depth_guard_0",
+                "ca_unit_wh2_dlc11_cst_inf_depth_guard_1",
+                "ca_unit_wh2_dlc11_cst_inf_syreens",
+                "ca_unit_wh2_dlc11_cst_inf_zombie_gunnery_mob_1",
+                "ca_unit_wh2_dlc11_cst_mon_animated_hulks_0",
+                "ca_unit_wh2_dlc11_cst_mon_necrofex_colossus_0",
+                "ca_unit_wh2_dlc11_cst_mon_scurvy_dogs",
+                "ca_unit_wh2_dlc12_lzd_inf_skink_red_crested_0",
+                "ca_unit_wh2_dlc12_lzd_mon_ancient_salamander_0",
+                "ca_unit_wh2_dlc12_skv_inf_ratling_gun_0",
+                "ca_unit_wh2_dlc12_skv_inf_warplock_jezzails_0",
+                "ca_unit_wh2_dlc12_skv_veh_doom_flayer_0",
+                "ca_unit_wh2_dlc13_lzd_mon_dread_saurian_1",
+                "ca_unit_wh2_dlc14_skv_inf_eshin_triads_0",
+                "ca_unit_wh2_dlc14_skv_inf_poison_wind_mortar_0",
+                "ca_unit_wh2_dlc14_skv_inf_warp_grinder_0",
+                "ca_unit_wh2_main_lzd_cav_cold_one_spearmen_1",
+                "ca_unit_wh2_main_lzd_cav_cold_ones_1",
+                "ca_unit_wh2_main_lzd_inf_chameleon_skinks_0",
+                "ca_unit_wh2_main_lzd_inf_saurus_spearmen_0",
+                "ca_unit_wh2_main_lzd_inf_saurus_spearmen_1",
+                "ca_unit_wh2_main_lzd_inf_saurus_warriors_0",
+                "ca_unit_wh2_main_lzd_inf_saurus_warriors_1",
+                "ca_unit_wh2_main_lzd_inf_skink_cohort_0",
+                "ca_unit_wh2_main_lzd_inf_skink_cohort_1",
+                "ca_unit_wh2_main_lzd_inf_skink_skirmishers_0",
+                "ca_unit_wh2_main_lzd_mon_bastiladon_0",
+                "ca_unit_wh2_main_lzd_mon_stegadon_0",
+                "ca_unit_wh2_main_skv_art_plagueclaw_catapult",
+                "ca_unit_wh2_main_skv_art_warp_lightning_cannon",
+                "ca_unit_wh2_main_skv_inf_clanrat_spearmen_0",
+                "ca_unit_wh2_main_skv_inf_clanrat_spearmen_1",
+                "ca_unit_wh2_main_skv_inf_clanrats_1",
+                "ca_unit_wh2_main_skv_inf_death_globe_bombardiers",
+                "ca_unit_wh2_main_skv_inf_gutter_runner_slingers_0",
+                "ca_unit_wh2_main_skv_inf_gutter_runner_slingers_1",
+                "ca_unit_wh2_main_skv_inf_gutter_runners_0",
+                "ca_unit_wh2_main_skv_inf_gutter_runners_1",
+                "ca_unit_wh2_main_skv_inf_night_runners_0",
+                "ca_unit_wh2_main_skv_inf_night_runners_1",
+                "ca_unit_wh2_main_skv_inf_plague_monk_censer_bearer",
+                "ca_unit_wh2_main_skv_inf_poison_wind_globadiers",
+                "ca_unit_wh2_main_skv_inf_skavenslave_slingers_0",
+                "ca_unit_wh2_main_skv_inf_warpfire_thrower",
+                "ca_unit_wh3_dlc25_emp_cav_knights_of_the_black_rose",
+                "ca_unit_wh3_dlc25_emp_inf_hochland_long_rifles",
+                "ca_unit_wh3_dlc25_emp_inf_nuln_ironsides",
+                "ca_unit_wh3_dlc29_emp_inf_teutogen_guard",
+                "ca_unit_wh3_dlc29_emp_inf_warriors_of_ulric",
+                "ca_unit_wh3_dlc29_emp_inf_wolf_kin",
+                "ca_unit_wh3_main_vmp_blood_knights_sword_shield",
+                "ca_unit_wh_dlc01_chs_inf_chosen_2",
+                "ca_unit_wh_dlc01_chs_inf_forsaken_0",
+                "ca_unit_wh_dlc01_chs_mon_dragon_ogre",
+                "ca_unit_wh_dlc04_emp_cav_royal_altdorf_gryphites_0",
+                "ca_unit_wh_dlc04_emp_inf_flagellants_0",
+                "ca_unit_wh_dlc04_emp_inf_free_company_militia_0",
+                "ca_unit_wh_dlc04_vmp_inf_sternsmen_0",
+                "ca_unit_wh_dlc07_brt_art_blessed_field_trebuchet_0",
+                "ca_unit_wh_dlc07_brt_cav_grail_guardians_0",
+                "ca_unit_wh_dlc07_brt_cav_knights_errant_0",
+                "ca_unit_wh_dlc07_brt_cav_questing_knights_0",
+                "ca_unit_wh_dlc07_brt_cav_royal_pegasus_knights_0",
+                "ca_unit_wh_dlc07_brt_inf_battle_pilgrims_0",
+                "ca_unit_wh_dlc07_brt_inf_foot_squires_0",
+                "ca_unit_wh_dlc07_brt_inf_men_at_arms_1",
+                "ca_unit_wh_dlc07_brt_inf_men_at_arms_2",
+                "ca_unit_wh_dlc07_brt_inf_peasant_bowmen_1",
+                "ca_unit_wh_dlc07_brt_inf_peasant_bowmen_2",
+                "ca_unit_wh_dlc07_brt_inf_spearmen_at_arms_1",
+                "ca_unit_wh_dlc07_brt_peasant_mob_0",
+                "ca_unit_wh_main_brt_art_field_trebuchet",
+                "ca_unit_wh_main_brt_cav_grail_knights",
+                "ca_unit_wh_main_brt_cav_knights_of_the_realm",
+                "ca_unit_wh_main_brt_cav_mounted_yeomen_0",
+                "ca_unit_wh_main_brt_cav_mounted_yeomen_1",
+                "ca_unit_wh_main_brt_cav_pegasus_knights",
+                "ca_unit_wh_main_brt_inf_men_at_arms",
+                "ca_unit_wh_main_brt_inf_peasant_bowmen",
+                "ca_unit_wh_main_brt_inf_spearmen_at_arms",
+                "ca_unit_wh_main_chs_cav_chaos_knights_1",
+                "ca_unit_wh_main_chs_inf_chosen_0",
+                "ca_unit_wh_main_chs_inf_chosen_1",
+                "ca_unit_wh_main_chs_mon_giant",
+                "ca_unit_wh_main_emp_cav_outriders_0",
+                "ca_unit_wh_main_emp_inf_crossbowmen",
+                "ca_unit_wh_main_emp_inf_spearmen_1",
+                "ca_unit_wh_main_emp_inf_swordsmen",
+                "ca_unit_wh_main_vmp_cav_black_knights_0",
+                "ca_unit_wh_main_vmp_cav_black_knights_3",
+                "ca_unit_wh_main_vmp_inf_grave_guard_1",
+                "ca_unit_wh_main_vmp_mon_vargheists",
+                "ca_unit_wh_main_vmp_veh_black_coach"
+              ]
+            }
+          ]
+        }
+      ],
+      "blockers": [
+        "SHARED_OWNER_RUNTIME_AVAILABILITY_UNCHANGED",
+        "VIGOUR_NO_UNIT_STAT_PATH"
+      ],
+      "admission": "NOT_ADMITTED"
+    },
+    {
+      "key": "wh_dlc07_skill_brt_lord_campaign_irrepressible_spirit",
+      "name": "Irrepressible Spirit",
+      "ownerKeys": [
+        "wh2_dlc14_brt_repanse",
+        "wh_dlc07_brt_prophetess_beasts",
+        "wh_dlc07_brt_prophetess_heavens",
+        "wh_dlc07_brt_prophetess_life",
+        "wh_main_brt_lord",
+        "wh_main_brt_louen_leoncouer"
+      ],
+      "owners": [
+        {
+          "key": "wh_main_brt_louen_leoncouer",
+          "nodeKey": "wh_main_skill_node_brt_louen_campaign_06",
+          "nodeSetKey": "wh_main_skill_node_set_brt_louen",
+          "mainKey": "wh_main_brt_cha_king_louen_leoncoeur_0",
+          "landKey": "wh_main_brt_cha_king_louen_leoncoeur_0",
+          "enabled": true,
+          "context": {
+            "node": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            },
+            "set": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            }
+          },
+          "joins": [
+            [
+              "character_skill_nodes_tables:31511cb4d384c2ebfc41",
+              "character_skill_key",
+              "character_skills_tables:a8f59a8637287025208a",
+              "key"
+            ],
+            [
+              "character_skill_node_set_items_tables:c26fabef9b912edd88a8",
+              "item",
+              "character_skill_nodes_tables:31511cb4d384c2ebfc41",
+              "key"
+            ],
+            [
+              "character_skill_node_set_items_tables:c26fabef9b912edd88a8",
+              "set",
+              "character_skill_node_sets_tables:aea7c103aadf7417a635",
+              "key"
+            ],
+            [
+              "character_skill_node_sets_tables:aea7c103aadf7417a635",
+              "agent_subtype_key",
+              "agent_subtypes_tables:ca8f08f5da69102a1cbd",
+              "key"
+            ],
+            [
+              "character_skill_node_sets_tables:aea7c103aadf7417a635",
+              "agent_key",
+              "agents_tables:073101e312bbb9038fea",
+              "key"
+            ],
+            [
+              "agent_subtypes_tables:ca8f08f5da69102a1cbd",
+              "associated_unit_override",
+              "main_units_tables:ce9fd51594c274f22e1a",
+              "unit"
+            ],
+            [
+              "main_units_tables:ce9fd51594c274f22e1a",
+              "land_unit",
+              "land_units_tables:20e379d85a2d109d7efe",
+              "key"
+            ]
+          ]
+        },
+        {
+          "key": "wh2_dlc14_brt_repanse",
+          "nodeKey": "wh2_dlc14_skill_node_brt_repanse_campaign_06",
+          "nodeSetKey": "wh2_dlc14_skill_node_set_brt_repanse",
+          "mainKey": "wh2_dlc14_brt_cha_repanse_de_lyonesse_0",
+          "landKey": "wh2_dlc14_brt_cha_repanse_de_lyonesse_0",
+          "enabled": true,
+          "context": {
+            "node": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            },
+            "set": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            }
+          },
+          "joins": [
+            [
+              "character_skill_nodes_tables:44c82889a885d80285c2",
+              "character_skill_key",
+              "character_skills_tables:a8f59a8637287025208a",
+              "key"
+            ],
+            [
+              "character_skill_node_set_items_tables:54d64a0dc39dbb01c20e",
+              "item",
+              "character_skill_nodes_tables:44c82889a885d80285c2",
+              "key"
+            ],
+            [
+              "character_skill_node_set_items_tables:54d64a0dc39dbb01c20e",
+              "set",
+              "character_skill_node_sets_tables:b64ff4d4a243f08f9d95",
+              "key"
+            ],
+            [
+              "character_skill_node_sets_tables:b64ff4d4a243f08f9d95",
+              "agent_subtype_key",
+              "agent_subtypes_tables:26547eda1ad31e7b8537",
+              "key"
+            ],
+            [
+              "character_skill_node_sets_tables:b64ff4d4a243f08f9d95",
+              "agent_key",
+              "agents_tables:073101e312bbb9038fea",
+              "key"
+            ],
+            [
+              "agent_subtypes_tables:26547eda1ad31e7b8537",
+              "associated_unit_override",
+              "main_units_tables:ef62c5d5fd9a0bc7114e",
+              "unit"
+            ],
+            [
+              "main_units_tables:ef62c5d5fd9a0bc7114e",
+              "land_unit",
+              "land_units_tables:b30bcc417427fb7702a2",
+              "key"
+            ]
+          ]
+        },
+        {
+          "key": "wh_main_brt_lord",
+          "nodeKey": "wh_main_skill_node_brt_lord_campaign_06",
+          "nodeSetKey": "wh_main_skill_node_set_brt_lord",
+          "mainKey": "wh_main_brt_cha_lord_0",
+          "landKey": "wh_main_brt_cha_lord_0",
+          "enabled": true,
+          "context": {
+            "node": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            },
+            "set": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            }
+          },
+          "joins": [
+            [
+              "character_skill_nodes_tables:873eb4115cda539c70dd",
+              "character_skill_key",
+              "character_skills_tables:a8f59a8637287025208a",
+              "key"
+            ],
+            [
+              "character_skill_node_set_items_tables:be11b5e12728941d469c",
+              "item",
+              "character_skill_nodes_tables:873eb4115cda539c70dd",
+              "key"
+            ],
+            [
+              "character_skill_node_set_items_tables:be11b5e12728941d469c",
+              "set",
+              "character_skill_node_sets_tables:ebf5918563aced26bd3e",
+              "key"
+            ],
+            [
+              "character_skill_node_sets_tables:ebf5918563aced26bd3e",
+              "agent_subtype_key",
+              "agent_subtypes_tables:92325e5e6783ba184b62",
+              "key"
+            ],
+            [
+              "character_skill_node_sets_tables:ebf5918563aced26bd3e",
+              "agent_key",
+              "agents_tables:073101e312bbb9038fea",
+              "key"
+            ],
+            [
+              "agent_subtypes_tables:92325e5e6783ba184b62",
+              "associated_unit_override",
+              "main_units_tables:85fbbe7188362b732be6",
+              "unit"
+            ],
+            [
+              "main_units_tables:85fbbe7188362b732be6",
+              "land_unit",
+              "land_units_tables:73fa5518bfab83c87267",
+              "key"
+            ]
+          ]
+        },
+        {
+          "key": "wh_dlc07_brt_prophetess_beasts",
+          "nodeKey": "wh_dlc07_skill_node_brt_prophetess_beast_campaign_06",
+          "nodeSetKey": "wh_dlc07_skill_node_set_brt_prophetess_beast",
+          "mainKey": "wh_dlc07_brt_cha_prophetess_beasts_0",
+          "landKey": "wh_dlc07_brt_cha_prophetess_beasts_0",
+          "enabled": true,
+          "context": {
+            "node": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            },
+            "set": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            }
+          },
+          "joins": [
+            [
+              "character_skill_nodes_tables:c4fa9ed7d46a499e90e3",
+              "character_skill_key",
+              "character_skills_tables:a8f59a8637287025208a",
+              "key"
+            ],
+            [
+              "character_skill_node_set_items_tables:35d93defda713a809d5f",
+              "item",
+              "character_skill_nodes_tables:c4fa9ed7d46a499e90e3",
+              "key"
+            ],
+            [
+              "character_skill_node_set_items_tables:35d93defda713a809d5f",
+              "set",
+              "character_skill_node_sets_tables:e163ed6f48cd1a766195",
+              "key"
+            ],
+            [
+              "character_skill_node_sets_tables:e163ed6f48cd1a766195",
+              "agent_subtype_key",
+              "agent_subtypes_tables:015dde4e49746e8dbc52",
+              "key"
+            ],
+            [
+              "character_skill_node_sets_tables:e163ed6f48cd1a766195",
+              "agent_key",
+              "agents_tables:073101e312bbb9038fea",
+              "key"
+            ],
+            [
+              "agent_subtypes_tables:015dde4e49746e8dbc52",
+              "associated_unit_override",
+              "main_units_tables:5921c3de6fe9c692afc1",
+              "unit"
+            ],
+            [
+              "main_units_tables:5921c3de6fe9c692afc1",
+              "land_unit",
+              "land_units_tables:b261067ab243e8fbc883",
+              "key"
+            ]
+          ]
+        },
+        {
+          "key": "wh_dlc07_brt_prophetess_heavens",
+          "nodeKey": "wh_dlc07_skill_node_brt_prophetess_heavens_campaign_06",
+          "nodeSetKey": "wh_dlc07_skill_node_set_brt_prophetess_heavens",
+          "mainKey": "wh_dlc07_brt_cha_prophetess_heavens_0",
+          "landKey": "wh_dlc07_brt_cha_prophetess_heavens_0",
+          "enabled": true,
+          "context": {
+            "node": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            },
+            "set": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            }
+          },
+          "joins": [
+            [
+              "character_skill_nodes_tables:e2e4023ec00c72c95eb6",
+              "character_skill_key",
+              "character_skills_tables:a8f59a8637287025208a",
+              "key"
+            ],
+            [
+              "character_skill_node_set_items_tables:26bccd843e1d920596bb",
+              "item",
+              "character_skill_nodes_tables:e2e4023ec00c72c95eb6",
+              "key"
+            ],
+            [
+              "character_skill_node_set_items_tables:26bccd843e1d920596bb",
+              "set",
+              "character_skill_node_sets_tables:e2aa13f6db2100e1f8ef",
+              "key"
+            ],
+            [
+              "character_skill_node_sets_tables:e2aa13f6db2100e1f8ef",
+              "agent_subtype_key",
+              "agent_subtypes_tables:47f8898592c0bd824484",
+              "key"
+            ],
+            [
+              "character_skill_node_sets_tables:e2aa13f6db2100e1f8ef",
+              "agent_key",
+              "agents_tables:073101e312bbb9038fea",
+              "key"
+            ],
+            [
+              "agent_subtypes_tables:47f8898592c0bd824484",
+              "associated_unit_override",
+              "main_units_tables:0b5840f5e36acfdcf3df",
+              "unit"
+            ],
+            [
+              "main_units_tables:0b5840f5e36acfdcf3df",
+              "land_unit",
+              "land_units_tables:134c984ed5968323add1",
+              "key"
+            ]
+          ]
+        },
+        {
+          "key": "wh_dlc07_brt_prophetess_life",
+          "nodeKey": "wh_dlc07_skill_node_brt_prophetess_life_campaign_06",
+          "nodeSetKey": "wh_dlc07_skill_node_set_brt_prophetess_life",
+          "mainKey": "wh_dlc07_brt_cha_prophetess_0",
+          "landKey": "wh_dlc07_brt_cha_prophetess_0",
+          "enabled": true,
+          "context": {
+            "node": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            },
+            "set": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            }
+          },
+          "joins": [
+            [
+              "character_skill_nodes_tables:e4ebb3e677951aaf4ee7",
+              "character_skill_key",
+              "character_skills_tables:a8f59a8637287025208a",
+              "key"
+            ],
+            [
+              "character_skill_node_set_items_tables:c5b8c05c8ab14fd3c8bf",
+              "item",
+              "character_skill_nodes_tables:e4ebb3e677951aaf4ee7",
+              "key"
+            ],
+            [
+              "character_skill_node_set_items_tables:c5b8c05c8ab14fd3c8bf",
+              "set",
+              "character_skill_node_sets_tables:4f1b94c436752ccafa9a",
+              "key"
+            ],
+            [
+              "character_skill_node_sets_tables:4f1b94c436752ccafa9a",
+              "agent_subtype_key",
+              "agent_subtypes_tables:a62c1f029480bf8c7b38",
+              "key"
+            ],
+            [
+              "character_skill_node_sets_tables:4f1b94c436752ccafa9a",
+              "agent_key",
+              "agents_tables:073101e312bbb9038fea",
+              "key"
+            ],
+            [
+              "agent_subtypes_tables:a62c1f029480bf8c7b38",
+              "associated_unit_override",
+              "main_units_tables:264aeca447fb8d8d5f5b",
+              "unit"
+            ],
+            [
+              "main_units_tables:264aeca447fb8d8d5f5b",
+              "land_unit",
+              "land_units_tables:1c54c9d3daef6a0ac70e",
+              "key"
+            ]
+          ]
+        }
+      ],
+      "sourceRanks": [
+        1
+      ],
+      "isBackgroundSkill": false,
+      "selectors": [
+        "lords"
+      ],
+      "effects": [
+        {
+          "rank": 1,
+          "effectKey": "wh3_main_effect_character_campaign_experience_mod",
+          "rawValue": 15,
+          "scope": {
+            "key": "character_to_character_own",
+            "location": "character",
+            "ownership": "yours",
+            "source": "character",
+            "target": "character",
+            "territory": "any"
+          },
+          "description": "Character experience gain: %+n%",
+          "joins": [
+            [
+              "character_skill_level_to_effects_junctions_tables:20fec07803bc32a286d6",
+              "character_skill_key",
+              "character_skills_tables:a8f59a8637287025208a",
+              "key"
+            ],
+            [
+              "character_skill_level_to_effects_junctions_tables:20fec07803bc32a286d6",
+              "effect_key",
+              "effects_tables:09a9ad1da859cb9f85b1",
+              "effect"
+            ],
+            [
+              "character_skill_level_to_effects_junctions_tables:20fec07803bc32a286d6",
+              "effect_scope",
+              "campaign_effect_scopes_tables:feedcc2ff456571de6cc",
+              "key"
+            ]
+          ],
+          "operation": {
+            "status": "NOT_REVIEWED",
+            "reason": "Other effect scope/operation remains outside selector research"
+          },
+          "routes": [
+            {
+              "rowId": "effect_bonus_value_scripted_junctions_tables:8b0b86c94bfa810dd67b",
+              "table": "effect_bonus_value_scripted_junctions_tables",
+              "raw": {
+                "bonus_value_id": "value",
+                "effect": "wh3_main_effect_character_campaign_experience_mod",
+                "scripted_record": "experience_mod"
+              },
+              "join": [
+                "effect_bonus_value_scripted_junctions_tables:8b0b86c94bfa810dd67b",
+                "effect",
+                "effects_tables:09a9ad1da859cb9f85b1",
+                "effect"
+              ]
+            }
+          ]
+        },
+        {
+          "rank": 1,
+          "effectKey": "wh2_main_effect_replenishment_lords",
+          "rawValue": 30,
+          "scope": {
+            "key": "general_to_force_own",
+            "location": "forcewide_when_commanding",
+            "ownership": "yours",
+            "source": "character",
+            "target": "force",
+            "territory": "any"
+          },
+          "description": "Casualty replenishment rate: %+n% for this [[img:icon_general]][[/img]]Lord",
+          "joins": [
+            [
+              "character_skill_level_to_effects_junctions_tables:817a1e0f6a3cb0626421",
+              "character_skill_key",
+              "character_skills_tables:a8f59a8637287025208a",
+              "key"
+            ],
+            [
+              "character_skill_level_to_effects_junctions_tables:817a1e0f6a3cb0626421",
+              "effect_key",
+              "effects_tables:2c3c9814b7ab45f68e02",
+              "effect"
+            ],
+            [
+              "character_skill_level_to_effects_junctions_tables:817a1e0f6a3cb0626421",
+              "effect_scope",
+              "campaign_effect_scopes_tables:ac8ad42676de36b22a6c",
+              "key"
+            ]
+          ],
+          "operation": {
+            "status": "UNSUPPORTED",
+            "reason": "REPLENISHMENT_NO_UNIT_STAT_PATH"
+          },
+          "routes": [
+            {
+              "rowId": "effect_bonus_value_ids_unit_sets_tables:976f6d342d53aa3120ff",
+              "table": "effect_bonus_value_ids_unit_sets_tables",
+              "raw": {
+                "bonus_value_id": "replenishment_percentage_bonus",
+                "effect": "wh2_main_effect_replenishment_lords",
+                "unit_set": "lords"
+              },
+              "join": [
+                "effect_bonus_value_ids_unit_sets_tables:976f6d342d53aa3120ff",
+                "effect",
+                "effects_tables:2c3c9814b7ab45f68e02",
+                "effect"
+              ],
+              "selectorKey": "lords",
+              "selectorJoin": [
+                "effect_bonus_value_ids_unit_sets_tables:976f6d342d53aa3120ff",
+                "unit_set",
+                "unit_sets_tables:1d54028186e7082624ae",
+                "key"
+              ],
+              "membershipRef": "membership.json#lords",
+              "productionUnitIds": []
+            }
+          ]
+        },
+        {
+          "rank": 1,
+          "effectKey": "wh_main_effect_character_wound_recovery_time_mod",
+          "rawValue": -1,
+          "scope": {
+            "key": "character_to_character_own",
+            "location": "character",
+            "ownership": "yours",
+            "source": "character",
+            "target": "character",
+            "territory": "any"
+          },
+          "description": "Wound recovery time: %+n turns",
+          "joins": [
+            [
+              "character_skill_level_to_effects_junctions_tables:92292db0017231b837e4",
+              "character_skill_key",
+              "character_skills_tables:a8f59a8637287025208a",
+              "key"
+            ],
+            [
+              "character_skill_level_to_effects_junctions_tables:92292db0017231b837e4",
+              "effect_key",
+              "effects_tables:6e82041dca5539f386f5",
+              "effect"
+            ],
+            [
+              "character_skill_level_to_effects_junctions_tables:92292db0017231b837e4",
+              "effect_scope",
+              "campaign_effect_scopes_tables:feedcc2ff456571de6cc",
+              "key"
+            ]
+          ],
+          "operation": {
+            "status": "NOT_REVIEWED",
+            "reason": "Other effect scope/operation remains outside selector research"
+          },
+          "routes": [
+            {
+              "rowId": "effect_bonus_value_basic_junction_tables:da3ec7adcf478747a3bb",
+              "table": "effect_bonus_value_basic_junction_tables",
+              "raw": {
+                "effect": "wh_main_effect_character_wound_recovery_time_mod",
+                "bonus_value_id": "recuperation_time_mod"
+              },
+              "join": [
+                "effect_bonus_value_basic_junction_tables:da3ec7adcf478747a3bb",
+                "effect",
+                "effects_tables:6e82041dca5539f386f5",
+                "effect"
+              ]
+            }
+          ]
+        }
+      ],
+      "blockers": [
+        "Other effect scope/operation remains outside selector research",
+        "REPLENISHMENT_NO_UNIT_STAT_PATH",
+        "SCOPE_NOT_EXISTING_OWN_FORCE_ADMISSION",
+        "SHARED_OWNER_RUNTIME_AVAILABILITY_UNCHANGED"
+      ],
+      "admission": "NOT_ADMITTED"
+    },
+    {
+      "key": "wh_dlc07_brt_skill_innate_all_uncompromising",
+      "name": "Uncompromising",
+      "ownerKeys": [
+        "wh_dlc07_brt_prophetess_beasts",
+        "wh_dlc07_brt_prophetess_heavens",
+        "wh_dlc07_brt_prophetess_life"
+      ],
+      "owners": [
+        {
+          "key": "wh_dlc07_brt_prophetess_life",
+          "nodeKey": "wh_dlc07_skill_node_brt_prophetess_life_innate_22",
+          "nodeSetKey": "wh_dlc07_skill_node_set_brt_prophetess_life",
+          "mainKey": "wh_dlc07_brt_cha_prophetess_0",
+          "landKey": "wh_dlc07_brt_cha_prophetess_0",
+          "enabled": false,
+          "context": {
+            "node": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            },
+            "set": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            }
+          },
+          "joins": [
+            [
+              "character_skill_nodes_tables:9fb852713e36ce45a141",
+              "character_skill_key",
+              "character_skills_tables:06418ed52c554f7366b1",
+              "key"
+            ],
+            [
+              "character_skill_node_set_items_tables:90fef0ffc8859b055a0c",
+              "item",
+              "character_skill_nodes_tables:9fb852713e36ce45a141",
+              "key"
+            ],
+            [
+              "character_skill_node_set_items_tables:90fef0ffc8859b055a0c",
+              "set",
+              "character_skill_node_sets_tables:4f1b94c436752ccafa9a",
+              "key"
+            ],
+            [
+              "character_skill_node_sets_tables:4f1b94c436752ccafa9a",
+              "agent_subtype_key",
+              "agent_subtypes_tables:a62c1f029480bf8c7b38",
+              "key"
+            ],
+            [
+              "character_skill_node_sets_tables:4f1b94c436752ccafa9a",
+              "agent_key",
+              "agents_tables:073101e312bbb9038fea",
+              "key"
+            ],
+            [
+              "agent_subtypes_tables:a62c1f029480bf8c7b38",
+              "associated_unit_override",
+              "main_units_tables:264aeca447fb8d8d5f5b",
+              "unit"
+            ],
+            [
+              "main_units_tables:264aeca447fb8d8d5f5b",
+              "land_unit",
+              "land_units_tables:1c54c9d3daef6a0ac70e",
+              "key"
+            ]
+          ]
+        },
+        {
+          "key": "wh_dlc07_brt_prophetess_heavens",
+          "nodeKey": "wh_dlc07_skill_node_brt_prophetess_heavens_innate_22",
+          "nodeSetKey": "wh_dlc07_skill_node_set_brt_prophetess_heavens",
+          "mainKey": "wh_dlc07_brt_cha_prophetess_heavens_0",
+          "landKey": "wh_dlc07_brt_cha_prophetess_heavens_0",
+          "enabled": false,
+          "context": {
+            "node": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            },
+            "set": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            }
+          },
+          "joins": [
+            [
+              "character_skill_nodes_tables:cb2669edf61205cd8521",
+              "character_skill_key",
+              "character_skills_tables:06418ed52c554f7366b1",
+              "key"
+            ],
+            [
+              "character_skill_node_set_items_tables:5cb537c951e011702ca8",
+              "item",
+              "character_skill_nodes_tables:cb2669edf61205cd8521",
+              "key"
+            ],
+            [
+              "character_skill_node_set_items_tables:5cb537c951e011702ca8",
+              "set",
+              "character_skill_node_sets_tables:e2aa13f6db2100e1f8ef",
+              "key"
+            ],
+            [
+              "character_skill_node_sets_tables:e2aa13f6db2100e1f8ef",
+              "agent_subtype_key",
+              "agent_subtypes_tables:47f8898592c0bd824484",
+              "key"
+            ],
+            [
+              "character_skill_node_sets_tables:e2aa13f6db2100e1f8ef",
+              "agent_key",
+              "agents_tables:073101e312bbb9038fea",
+              "key"
+            ],
+            [
+              "agent_subtypes_tables:47f8898592c0bd824484",
+              "associated_unit_override",
+              "main_units_tables:0b5840f5e36acfdcf3df",
+              "unit"
+            ],
+            [
+              "main_units_tables:0b5840f5e36acfdcf3df",
+              "land_unit",
+              "land_units_tables:134c984ed5968323add1",
+              "key"
+            ]
+          ]
+        },
+        {
+          "key": "wh_dlc07_brt_prophetess_beasts",
+          "nodeKey": "wh_dlc07_skill_node_brt_prophetess_beast_innate_22",
+          "nodeSetKey": "wh_dlc07_skill_node_set_brt_prophetess_beast",
+          "mainKey": "wh_dlc07_brt_cha_prophetess_beasts_0",
+          "landKey": "wh_dlc07_brt_cha_prophetess_beasts_0",
+          "enabled": false,
+          "context": {
+            "node": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            },
+            "set": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            }
+          },
+          "joins": [
+            [
+              "character_skill_nodes_tables:fb0ad546c1fe42ece785",
+              "character_skill_key",
+              "character_skills_tables:06418ed52c554f7366b1",
+              "key"
+            ],
+            [
+              "character_skill_node_set_items_tables:0702299da8ce1a6923bc",
+              "item",
+              "character_skill_nodes_tables:fb0ad546c1fe42ece785",
+              "key"
+            ],
+            [
+              "character_skill_node_set_items_tables:0702299da8ce1a6923bc",
+              "set",
+              "character_skill_node_sets_tables:e163ed6f48cd1a766195",
+              "key"
+            ],
+            [
+              "character_skill_node_sets_tables:e163ed6f48cd1a766195",
+              "agent_subtype_key",
+              "agent_subtypes_tables:015dde4e49746e8dbc52",
+              "key"
+            ],
+            [
+              "character_skill_node_sets_tables:e163ed6f48cd1a766195",
+              "agent_key",
+              "agents_tables:073101e312bbb9038fea",
+              "key"
+            ],
+            [
+              "agent_subtypes_tables:015dde4e49746e8dbc52",
+              "associated_unit_override",
+              "main_units_tables:5921c3de6fe9c692afc1",
+              "unit"
+            ],
+            [
+              "main_units_tables:5921c3de6fe9c692afc1",
+              "land_unit",
+              "land_units_tables:b261067ab243e8fbc883",
+              "key"
+            ]
+          ]
+        }
+      ],
+      "sourceRanks": [
+        1
+      ],
+      "isBackgroundSkill": true,
+      "selectors": [
+        "characters"
+      ],
+      "effects": [
+        {
+          "rank": 1,
+          "effectKey": "wh_main_effect_attribute_enable_unbreakable",
+          "rawValue": 1,
+          "scope": {
+            "key": "character_to_character_own",
+            "location": "character",
+            "ownership": "yours",
+            "source": "character",
+            "target": "character",
+            "territory": "any"
+          },
+          "description": "Attribute: Unbreakable",
+          "joins": [
+            [
+              "character_skill_level_to_effects_junctions_tables:3d89ee910fb34635a77c",
+              "character_skill_key",
+              "character_skills_tables:06418ed52c554f7366b1",
+              "key"
+            ],
+            [
+              "character_skill_level_to_effects_junctions_tables:3d89ee910fb34635a77c",
+              "effect_key",
+              "effects_tables:9d841df817a2c286e2d3",
+              "effect"
+            ],
+            [
+              "character_skill_level_to_effects_junctions_tables:3d89ee910fb34635a77c",
+              "effect_scope",
+              "campaign_effect_scopes_tables:feedcc2ff456571de6cc",
+              "key"
+            ]
+          ],
+          "operation": {
+            "status": "NOT_REVIEWED",
+            "reason": "Other effect scope/operation remains outside selector research"
+          },
+          "routes": [
+            {
+              "rowId": "effect_bonus_value_unit_attribute_junctions_tables:e0c7a641bac69966f2a9",
+              "table": "effect_bonus_value_unit_attribute_junctions_tables",
+              "raw": {
+                "bonus_value_id": "enable",
+                "effect": "wh_main_effect_attribute_enable_unbreakable",
+                "unit_attribute": "unbreakable"
+              },
+              "join": [
+                "effect_bonus_value_unit_attribute_junctions_tables:e0c7a641bac69966f2a9",
+                "effect",
+                "effects_tables:9d841df817a2c286e2d3",
+                "effect"
+              ]
+            }
+          ]
+        },
+        {
+          "rank": 1,
+          "effectKey": "wh_main_effect_force_stat_leadership_lords_and_heroes",
+          "rawValue": -5,
+          "scope": {
+            "key": "character_to_force_own_alt_text",
+            "location": "forcewide",
+            "ownership": "yours",
+            "source": "character",
+            "target": "force",
+            "territory": "any"
+          },
+          "description": "Leadership: %+n for [[img:icon_general]][[/img]]Lords and embedded [[img:icon_hero]][[/img]]Heroes",
+          "joins": [
+            [
+              "character_skill_level_to_effects_junctions_tables:5b914054310cb32a3c9c",
+              "character_skill_key",
+              "character_skills_tables:06418ed52c554f7366b1",
+              "key"
+            ],
+            [
+              "character_skill_level_to_effects_junctions_tables:5b914054310cb32a3c9c",
+              "effect_key",
+              "effects_tables:b0496934d35980cf819b",
+              "effect"
+            ],
+            [
+              "character_skill_level_to_effects_junctions_tables:5b914054310cb32a3c9c",
+              "effect_scope",
+              "campaign_effect_scopes_tables:33abc2aa5dbd7d0913a3",
+              "key"
+            ]
+          ],
+          "operation": {
+            "status": "NOT_REVIEWED",
+            "reason": "Other effect scope/operation remains outside selector research"
+          },
+          "routes": [
+            {
+              "rowId": "effect_bonus_value_ids_unit_sets_tables:b7038832a98a1a8f5506",
+              "table": "effect_bonus_value_ids_unit_sets_tables",
+              "raw": {
+                "bonus_value_id": "morale",
+                "effect": "wh_main_effect_force_stat_leadership_lords_and_heroes",
+                "unit_set": "characters"
+              },
+              "join": [
+                "effect_bonus_value_ids_unit_sets_tables:b7038832a98a1a8f5506",
+                "effect",
+                "effects_tables:b0496934d35980cf819b",
+                "effect"
+              ],
+              "selectorKey": "characters",
+              "selectorJoin": [
+                "effect_bonus_value_ids_unit_sets_tables:b7038832a98a1a8f5506",
+                "unit_set",
+                "unit_sets_tables:9d286330e6238d296117",
+                "key"
+              ],
+              "membershipRef": "membership.json#characters",
+              "productionUnitIds": []
+            }
+          ]
+        }
+      ],
+      "blockers": [
+        "BACKGROUND_RUNTIME_AVAILABILITY_NOT_OBSERVED",
+        "Other effect scope/operation remains outside selector research",
+        "SCOPE_NOT_EXISTING_OWN_FORCE_ADMISSION",
+        "SHARED_OWNER_RUNTIME_AVAILABILITY_UNCHANGED"
+      ],
+      "admission": "NOT_ADMITTED"
+    },
+    {
+      "key": "wh_dlc07_skill_brt_fay_battle_blessed_water",
+      "name": "Blessed Water",
+      "ownerKeys": [
+        "wh_dlc07_brt_fay_enchantress"
+      ],
+      "owners": [
+        {
+          "key": "wh_dlc07_brt_fay_enchantress",
+          "nodeKey": "wh_dlc07_skill_node_brt_fay_enchantress_unique_09",
+          "nodeSetKey": "wh_dlc07_skill_node_set_brt_fay_enchantress",
+          "mainKey": "wh_dlc07_brt_cha_fay_enchantress_0",
+          "landKey": "wh_dlc07_brt_cha_fay_enchantress_0",
+          "enabled": true,
+          "context": {
+            "node": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            },
+            "set": {
+              "campaign": "",
+              "faction": "",
+              "subculture": ""
+            }
+          },
+          "joins": [
+            [
+              "character_skill_nodes_tables:71828b150172acb559f8",
+              "character_skill_key",
+              "character_skills_tables:41319bcac6f5e66d200a",
+              "key"
+            ],
+            [
+              "character_skill_node_set_items_tables:63d3fb5f5e0c859c2797",
+              "item",
+              "character_skill_nodes_tables:71828b150172acb559f8",
+              "key"
+            ],
+            [
+              "character_skill_node_set_items_tables:63d3fb5f5e0c859c2797",
+              "set",
+              "character_skill_node_sets_tables:1a13acf51d8af48bcce9",
+              "key"
+            ],
+            [
+              "character_skill_node_sets_tables:1a13acf51d8af48bcce9",
+              "agent_subtype_key",
+              "agent_subtypes_tables:cae4fc22d99cad5a6d62",
+              "key"
+            ],
+            [
+              "character_skill_node_sets_tables:1a13acf51d8af48bcce9",
+              "agent_key",
+              "agents_tables:073101e312bbb9038fea",
+              "key"
+            ],
+            [
+              "agent_subtypes_tables:cae4fc22d99cad5a6d62",
+              "associated_unit_override",
+              "main_units_tables:d5cbe12f1ba6d876b69e",
+              "unit"
+            ],
+            [
+              "main_units_tables:d5cbe12f1ba6d876b69e",
+              "land_unit",
+              "land_units_tables:3db565fb993a21f75b91",
+              "key"
+            ]
+          ]
+        }
+      ],
+      "sourceRanks": [
+        1
+      ],
+      "isBackgroundSkill": false,
+      "selectors": [
+        "dlc07_brt_inf_battle_pilgrims"
+      ],
+      "effects": [
+        {
+          "rank": 1,
+          "effectKey": "wh_dlc07_effect_force_stat_charge_bonus_pct_battle_pilgrims",
+          "rawValue": 30,
+          "scope": {
+            "key": "general_to_force_own",
+            "location": "forcewide_when_commanding",
+            "ownership": "yours",
+            "source": "character",
+            "target": "force",
+            "territory": "any"
+          },
+          "description": "Charge bonus: %+n% for Battle Pilgrim and Grail Reliquae units",
+          "joins": [
+            [
+              "character_skill_level_to_effects_junctions_tables:2f0337252450e94950c3",
+              "character_skill_key",
+              "character_skills_tables:41319bcac6f5e66d200a",
+              "key"
+            ],
+            [
+              "character_skill_level_to_effects_junctions_tables:2f0337252450e94950c3",
+              "effect_key",
+              "effects_tables:a71878845440ded405d4",
+              "effect"
+            ],
+            [
+              "character_skill_level_to_effects_junctions_tables:2f0337252450e94950c3",
+              "effect_scope",
+              "campaign_effect_scopes_tables:ac8ad42676de36b22a6c",
+              "key"
+            ]
+          ],
+          "operation": {
+            "status": "EXISTING_ADMISSION",
+            "stat": "melee.chargeBonus",
+            "operation": "multiply",
+            "bonus": "charge_bonus",
+            "basis": "skill-batch-02/admission.json"
+          },
+          "routes": [
+            {
+              "rowId": "effect_bonus_value_ids_unit_sets_tables:134ecddfd5aedcc51742",
+              "table": "effect_bonus_value_ids_unit_sets_tables",
+              "raw": {
+                "bonus_value_id": "charge_bonus",
+                "effect": "wh_dlc07_effect_force_stat_charge_bonus_pct_battle_pilgrims",
+                "unit_set": "dlc07_brt_inf_battle_pilgrims"
+              },
+              "join": [
+                "effect_bonus_value_ids_unit_sets_tables:134ecddfd5aedcc51742",
+                "effect",
+                "effects_tables:a71878845440ded405d4",
+                "effect"
+              ],
+              "selectorKey": "dlc07_brt_inf_battle_pilgrims",
+              "selectorJoin": [
+                "effect_bonus_value_ids_unit_sets_tables:134ecddfd5aedcc51742",
+                "unit_set",
+                "unit_sets_tables:d203e9dca4e43df5e303",
+                "key"
+              ],
+              "membershipRef": "membership.json#dlc07_brt_inf_battle_pilgrims",
+              "productionUnitIds": [
+                "ca_unit_wh_dlc07_brt_inf_battle_pilgrims_0"
+              ]
+            }
+          ]
+        }
+      ],
+      "blockers": [],
+      "admission": "EXISTING_UNCHANGED"
+    }
+  ],
+  "selectors": [
+    {
+      "key": "all_units",
+      "taxonomy": "LAND_UNIT_CLASS",
+      "status": "STATIC_EXACT_MEMBERSHIP",
+      "branchKinds": [
+        "LAND_UNIT_CLASS"
+      ],
+      "branches": 18,
+      "mainMembers": 2802,
+      "landMembers": 2675,
+      "productionUnitIds": [
+        "ca_unit_wh2_dlc09_tmb_art_screaming_skull_catapult_0",
+        "ca_unit_wh2_dlc09_tmb_cav_skeleton_horsemen_0",
+        "ca_unit_wh2_dlc09_tmb_inf_nehekhara_warriors_0",
+        "ca_unit_wh2_dlc09_tmb_inf_skeleton_archers_0",
+        "ca_unit_wh2_dlc09_tmb_mon_ushabti_1",
+        "ca_unit_wh2_dlc09_tmb_veh_skeleton_chariot_0",
+        "ca_unit_wh2_dlc11_cst_art_carronade",
+        "ca_unit_wh2_dlc11_cst_inf_deck_gunners_0",
+        "ca_unit_wh2_dlc11_cst_inf_depth_guard_0",
+        "ca_unit_wh2_dlc11_cst_inf_depth_guard_1",
+        "ca_unit_wh2_dlc11_cst_inf_syreens",
+        "ca_unit_wh2_dlc11_cst_inf_zombie_gunnery_mob_1",
+        "ca_unit_wh2_dlc11_cst_mon_animated_hulks_0",
+        "ca_unit_wh2_dlc11_cst_mon_necrofex_colossus_0",
+        "ca_unit_wh2_dlc11_cst_mon_scurvy_dogs",
+        "ca_unit_wh2_dlc12_lzd_inf_skink_red_crested_0",
+        "ca_unit_wh2_dlc12_lzd_mon_ancient_salamander_0",
+        "ca_unit_wh2_dlc12_skv_inf_ratling_gun_0",
+        "ca_unit_wh2_dlc12_skv_inf_warplock_jezzails_0",
+        "ca_unit_wh2_dlc12_skv_veh_doom_flayer_0",
+        "ca_unit_wh2_dlc13_lzd_mon_dread_saurian_1",
+        "ca_unit_wh2_dlc14_skv_inf_eshin_triads_0",
+        "ca_unit_wh2_dlc14_skv_inf_poison_wind_mortar_0",
+        "ca_unit_wh2_dlc14_skv_inf_warp_grinder_0",
+        "ca_unit_wh2_main_lzd_cav_cold_one_spearmen_1",
+        "ca_unit_wh2_main_lzd_cav_cold_ones_1",
+        "ca_unit_wh2_main_lzd_inf_chameleon_skinks_0",
+        "ca_unit_wh2_main_lzd_inf_saurus_spearmen_0",
+        "ca_unit_wh2_main_lzd_inf_saurus_spearmen_1",
+        "ca_unit_wh2_main_lzd_inf_saurus_warriors_0",
+        "ca_unit_wh2_main_lzd_inf_saurus_warriors_1",
+        "ca_unit_wh2_main_lzd_inf_skink_cohort_0",
+        "ca_unit_wh2_main_lzd_inf_skink_cohort_1",
+        "ca_unit_wh2_main_lzd_inf_skink_skirmishers_0",
+        "ca_unit_wh2_main_lzd_mon_bastiladon_0",
+        "ca_unit_wh2_main_lzd_mon_stegadon_0",
+        "ca_unit_wh2_main_skv_art_plagueclaw_catapult",
+        "ca_unit_wh2_main_skv_art_warp_lightning_cannon",
+        "ca_unit_wh2_main_skv_inf_clanrat_spearmen_0",
+        "ca_unit_wh2_main_skv_inf_clanrat_spearmen_1",
+        "ca_unit_wh2_main_skv_inf_clanrats_1",
+        "ca_unit_wh2_main_skv_inf_death_globe_bombardiers",
+        "ca_unit_wh2_main_skv_inf_gutter_runner_slingers_0",
+        "ca_unit_wh2_main_skv_inf_gutter_runner_slingers_1",
+        "ca_unit_wh2_main_skv_inf_gutter_runners_0",
+        "ca_unit_wh2_main_skv_inf_gutter_runners_1",
+        "ca_unit_wh2_main_skv_inf_night_runners_0",
+        "ca_unit_wh2_main_skv_inf_night_runners_1",
+        "ca_unit_wh2_main_skv_inf_plague_monk_censer_bearer",
+        "ca_unit_wh2_main_skv_inf_poison_wind_globadiers",
+        "ca_unit_wh2_main_skv_inf_skavenslave_slingers_0",
+        "ca_unit_wh2_main_skv_inf_warpfire_thrower",
+        "ca_unit_wh3_dlc25_emp_cav_knights_of_the_black_rose",
+        "ca_unit_wh3_dlc25_emp_inf_hochland_long_rifles",
+        "ca_unit_wh3_dlc25_emp_inf_nuln_ironsides",
+        "ca_unit_wh3_dlc29_emp_inf_teutogen_guard",
+        "ca_unit_wh3_dlc29_emp_inf_warriors_of_ulric",
+        "ca_unit_wh3_dlc29_emp_inf_wolf_kin",
+        "ca_unit_wh3_main_vmp_blood_knights_sword_shield",
+        "ca_unit_wh_dlc01_chs_inf_chosen_2",
+        "ca_unit_wh_dlc01_chs_inf_forsaken_0",
+        "ca_unit_wh_dlc01_chs_mon_dragon_ogre",
+        "ca_unit_wh_dlc04_emp_cav_royal_altdorf_gryphites_0",
+        "ca_unit_wh_dlc04_emp_inf_flagellants_0",
+        "ca_unit_wh_dlc04_emp_inf_free_company_militia_0",
+        "ca_unit_wh_dlc04_vmp_inf_sternsmen_0",
+        "ca_unit_wh_dlc07_brt_art_blessed_field_trebuchet_0",
+        "ca_unit_wh_dlc07_brt_cav_grail_guardians_0",
+        "ca_unit_wh_dlc07_brt_cav_knights_errant_0",
+        "ca_unit_wh_dlc07_brt_cav_questing_knights_0",
+        "ca_unit_wh_dlc07_brt_cav_royal_pegasus_knights_0",
+        "ca_unit_wh_dlc07_brt_inf_battle_pilgrims_0",
+        "ca_unit_wh_dlc07_brt_inf_foot_squires_0",
+        "ca_unit_wh_dlc07_brt_inf_men_at_arms_1",
+        "ca_unit_wh_dlc07_brt_inf_men_at_arms_2",
+        "ca_unit_wh_dlc07_brt_inf_peasant_bowmen_1",
+        "ca_unit_wh_dlc07_brt_inf_peasant_bowmen_2",
+        "ca_unit_wh_dlc07_brt_inf_spearmen_at_arms_1",
+        "ca_unit_wh_dlc07_brt_peasant_mob_0",
+        "ca_unit_wh_main_brt_art_field_trebuchet",
+        "ca_unit_wh_main_brt_cav_grail_knights",
+        "ca_unit_wh_main_brt_cav_knights_of_the_realm",
+        "ca_unit_wh_main_brt_cav_mounted_yeomen_0",
+        "ca_unit_wh_main_brt_cav_mounted_yeomen_1",
+        "ca_unit_wh_main_brt_cav_pegasus_knights",
+        "ca_unit_wh_main_brt_inf_men_at_arms",
+        "ca_unit_wh_main_brt_inf_peasant_bowmen",
+        "ca_unit_wh_main_brt_inf_spearmen_at_arms",
+        "ca_unit_wh_main_chs_cav_chaos_knights_1",
+        "ca_unit_wh_main_chs_inf_chosen_0",
+        "ca_unit_wh_main_chs_inf_chosen_1",
+        "ca_unit_wh_main_chs_mon_giant",
+        "ca_unit_wh_main_emp_cav_outriders_0",
+        "ca_unit_wh_main_emp_inf_crossbowmen",
+        "ca_unit_wh_main_emp_inf_spearmen_1",
+        "ca_unit_wh_main_emp_inf_swordsmen",
+        "ca_unit_wh_main_vmp_cav_black_knights_0",
+        "ca_unit_wh_main_vmp_cav_black_knights_3",
+        "ca_unit_wh_main_vmp_inf_grave_guard_1",
+        "ca_unit_wh_main_vmp_mon_vargheists",
+        "ca_unit_wh_main_vmp_veh_black_coach"
+      ],
+      "omittedNonProduction": 2701,
+      "renownMembers": 271,
+      "landWithoutMain": 4,
+      "navalOmissions": 1,
+      "ambiguous": [],
+      "unionCollisions": 0,
+      "mainLandAliases": 176,
+      "membershipRef": "membership.json#all_units"
+    },
+    {
+      "key": "brt_sword_inf",
+      "taxonomy": "EXPLICIT_UNIT_SET",
+      "status": "STATIC_EXACT_MEMBERSHIP",
+      "branchKinds": [
+        "EXPLICIT_UNIT_SET"
+      ],
+      "branches": 6,
+      "mainMembers": 6,
+      "landMembers": 6,
+      "productionUnitIds": [
+        "ca_unit_wh_dlc07_brt_inf_battle_pilgrims_0",
+        "ca_unit_wh_dlc07_brt_inf_foot_squires_0",
+        "ca_unit_wh_dlc07_brt_inf_men_at_arms_1",
+        "ca_unit_wh_dlc07_brt_inf_men_at_arms_2"
+      ],
+      "omittedNonProduction": 2,
+      "renownMembers": 2,
+      "landWithoutMain": 0,
+      "navalOmissions": 0,
+      "ambiguous": [],
+      "unionCollisions": 0,
+      "mainLandAliases": 0,
+      "membershipRef": "membership.json#brt_sword_inf"
+    },
+    {
+      "key": "characters",
+      "taxonomy": "MAIN_UNIT_CASTE",
+      "status": "STATIC_EXACT_MEMBERSHIP",
+      "branchKinds": [
+        "MAIN_UNIT_CASTE"
+      ],
+      "branches": 2,
+      "mainMembers": 1406,
+      "landMembers": 1399,
+      "productionUnitIds": [],
+      "omittedNonProduction": 1406,
+      "renownMembers": 1,
+      "landWithoutMain": 0,
+      "navalOmissions": 0,
+      "ambiguous": [],
+      "unionCollisions": 0,
+      "mainLandAliases": 22,
+      "membershipRef": "membership.json#characters"
+    },
+    {
+      "key": "dlc07_brt_inf_battle_pilgrims",
+      "taxonomy": "EXPLICIT_UNIT_SET",
+      "status": "STATIC_EXACT_MEMBERSHIP",
+      "branchKinds": [
+        "EXPLICIT_UNIT_SET"
+      ],
+      "branches": 3,
+      "mainMembers": 3,
+      "landMembers": 3,
+      "productionUnitIds": [
+        "ca_unit_wh_dlc07_brt_inf_battle_pilgrims_0"
+      ],
+      "omittedNonProduction": 2,
+      "renownMembers": 1,
+      "landWithoutMain": 0,
+      "navalOmissions": 0,
+      "ambiguous": [],
+      "unionCollisions": 0,
+      "mainLandAliases": 0,
+      "membershipRef": "membership.json#dlc07_brt_inf_battle_pilgrims"
+    },
+    {
+      "key": "infantry_units",
+      "taxonomy": "MIXED_STATIC_UNION",
+      "status": "STATIC_EXACT_MEMBERSHIP",
+      "branchKinds": [
+        "EXPLICIT_UNIT_SET",
+        "MAIN_UNIT_CASTE"
+      ],
+      "branches": 7,
+      "mainMembers": 695,
+      "landMembers": 648,
+      "productionUnitIds": [
+        "ca_unit_wh2_dlc09_tmb_inf_nehekhara_warriors_0",
+        "ca_unit_wh2_dlc09_tmb_inf_skeleton_archers_0",
+        "ca_unit_wh2_dlc09_tmb_mon_ushabti_1",
+        "ca_unit_wh2_dlc11_cst_inf_deck_gunners_0",
+        "ca_unit_wh2_dlc11_cst_inf_depth_guard_0",
+        "ca_unit_wh2_dlc11_cst_inf_depth_guard_1",
+        "ca_unit_wh2_dlc11_cst_inf_syreens",
+        "ca_unit_wh2_dlc11_cst_inf_zombie_gunnery_mob_1",
+        "ca_unit_wh2_dlc11_cst_mon_animated_hulks_0",
+        "ca_unit_wh2_dlc12_lzd_inf_skink_red_crested_0",
+        "ca_unit_wh2_dlc12_skv_inf_ratling_gun_0",
+        "ca_unit_wh2_dlc12_skv_inf_warplock_jezzails_0",
+        "ca_unit_wh2_dlc14_skv_inf_eshin_triads_0",
+        "ca_unit_wh2_dlc14_skv_inf_poison_wind_mortar_0",
+        "ca_unit_wh2_dlc14_skv_inf_warp_grinder_0",
+        "ca_unit_wh2_main_lzd_inf_chameleon_skinks_0",
+        "ca_unit_wh2_main_lzd_inf_saurus_spearmen_0",
+        "ca_unit_wh2_main_lzd_inf_saurus_spearmen_1",
+        "ca_unit_wh2_main_lzd_inf_saurus_warriors_0",
+        "ca_unit_wh2_main_lzd_inf_saurus_warriors_1",
+        "ca_unit_wh2_main_lzd_inf_skink_cohort_0",
+        "ca_unit_wh2_main_lzd_inf_skink_cohort_1",
+        "ca_unit_wh2_main_lzd_inf_skink_skirmishers_0",
+        "ca_unit_wh2_main_skv_inf_clanrat_spearmen_0",
+        "ca_unit_wh2_main_skv_inf_clanrat_spearmen_1",
+        "ca_unit_wh2_main_skv_inf_clanrats_1",
+        "ca_unit_wh2_main_skv_inf_death_globe_bombardiers",
+        "ca_unit_wh2_main_skv_inf_gutter_runner_slingers_0",
+        "ca_unit_wh2_main_skv_inf_gutter_runner_slingers_1",
+        "ca_unit_wh2_main_skv_inf_gutter_runners_0",
+        "ca_unit_wh2_main_skv_inf_gutter_runners_1",
+        "ca_unit_wh2_main_skv_inf_night_runners_0",
+        "ca_unit_wh2_main_skv_inf_night_runners_1",
+        "ca_unit_wh2_main_skv_inf_plague_monk_censer_bearer",
+        "ca_unit_wh2_main_skv_inf_poison_wind_globadiers",
+        "ca_unit_wh2_main_skv_inf_skavenslave_slingers_0",
+        "ca_unit_wh2_main_skv_inf_warpfire_thrower",
+        "ca_unit_wh3_dlc25_emp_inf_hochland_long_rifles",
+        "ca_unit_wh3_dlc25_emp_inf_nuln_ironsides",
+        "ca_unit_wh3_dlc29_emp_inf_teutogen_guard",
+        "ca_unit_wh3_dlc29_emp_inf_warriors_of_ulric",
+        "ca_unit_wh3_dlc29_emp_inf_wolf_kin",
+        "ca_unit_wh_dlc01_chs_inf_chosen_2",
+        "ca_unit_wh_dlc01_chs_inf_forsaken_0",
+        "ca_unit_wh_dlc01_chs_mon_dragon_ogre",
+        "ca_unit_wh_dlc04_emp_inf_flagellants_0",
+        "ca_unit_wh_dlc04_emp_inf_free_company_militia_0",
+        "ca_unit_wh_dlc04_vmp_inf_sternsmen_0",
+        "ca_unit_wh_dlc07_brt_inf_battle_pilgrims_0",
+        "ca_unit_wh_dlc07_brt_inf_foot_squires_0",
+        "ca_unit_wh_dlc07_brt_inf_men_at_arms_1",
+        "ca_unit_wh_dlc07_brt_inf_men_at_arms_2",
+        "ca_unit_wh_dlc07_brt_inf_peasant_bowmen_1",
+        "ca_unit_wh_dlc07_brt_inf_peasant_bowmen_2",
+        "ca_unit_wh_dlc07_brt_inf_spearmen_at_arms_1",
+        "ca_unit_wh_dlc07_brt_peasant_mob_0",
+        "ca_unit_wh_main_brt_inf_men_at_arms",
+        "ca_unit_wh_main_brt_inf_peasant_bowmen",
+        "ca_unit_wh_main_brt_inf_spearmen_at_arms",
+        "ca_unit_wh_main_chs_inf_chosen_0",
+        "ca_unit_wh_main_chs_inf_chosen_1",
+        "ca_unit_wh_main_emp_inf_crossbowmen",
+        "ca_unit_wh_main_emp_inf_spearmen_1",
+        "ca_unit_wh_main_emp_inf_swordsmen",
+        "ca_unit_wh_main_vmp_inf_grave_guard_1",
+        "ca_unit_wh_main_vmp_mon_vargheists"
+      ],
+      "omittedNonProduction": 629,
+      "renownMembers": 134,
+      "landWithoutMain": 0,
+      "navalOmissions": 0,
+      "ambiguous": [],
+      "unionCollisions": 4,
+      "mainLandAliases": 53,
+      "membershipRef": "membership.json#infantry_units"
+    },
+    {
+      "key": "lords",
+      "taxonomy": "MAIN_UNIT_CASTE",
+      "status": "STATIC_EXACT_MEMBERSHIP",
+      "branchKinds": [
+        "MAIN_UNIT_CASTE"
+      ],
+      "branches": 1,
+      "mainMembers": 839,
+      "landMembers": 832,
+      "productionUnitIds": [],
+      "omittedNonProduction": 839,
+      "renownMembers": 1,
+      "landWithoutMain": 0,
+      "navalOmissions": 0,
+      "ambiguous": [],
+      "unionCollisions": 0,
+      "mainLandAliases": 19,
+      "membershipRef": "membership.json#lords"
+    }
+  ],
+  "primarySelectorReuse": [
+    {
+      "rowId": "effect_bonus_value_ids_unit_sets_tables:04b12978aefd3edf14ad",
+      "raw": {
+        "bonus_value_id": "cost_mod",
+        "effect": "wh_main_effect_force_army_campaign_recruitment_cost_infantry",
+        "unit_set": "infantry_units"
+      },
+      "join": [
+        "effect_bonus_value_ids_unit_sets_tables:04b12978aefd3edf14ad",
+        "unit_set",
+        "unit_sets_tables:ba8de0e06d0b1bd261d1",
+        "key"
+      ],
+      "effectJoin": [
+        "effect_bonus_value_ids_unit_sets_tables:04b12978aefd3edf14ad",
+        "effect",
+        "effects_tables:94100b642f62ca1d3cd5",
+        "effect"
+      ]
+    },
+    {
+      "rowId": "effect_bonus_value_ids_unit_sets_tables:05a8b24e55bad2918f56",
+      "raw": {
+        "bonus_value_id": "unit_damage_resistance_missile_mod",
+        "effect": "wh2_main_effect_force_stat_missile_resistance_infantry",
+        "unit_set": "infantry_units"
+      },
+      "join": [
+        "effect_bonus_value_ids_unit_sets_tables:05a8b24e55bad2918f56",
+        "unit_set",
+        "unit_sets_tables:ba8de0e06d0b1bd261d1",
+        "key"
+      ],
+      "effectJoin": [
+        "effect_bonus_value_ids_unit_sets_tables:05a8b24e55bad2918f56",
+        "effect",
+        "effects_tables:7c8ff6eff75219735559",
+        "effect"
+      ]
+    },
+    {
+      "rowId": "effect_bonus_value_ids_unit_sets_tables:0dac855069a0bd120c40",
+      "raw": {
+        "bonus_value_id": "melee_damage_ap_mod_mult",
+        "effect": "wh2_dlc11_effect_force_stat_weapon_strength_infantry",
+        "unit_set": "infantry_units"
+      },
+      "join": [
+        "effect_bonus_value_ids_unit_sets_tables:0dac855069a0bd120c40",
+        "unit_set",
+        "unit_sets_tables:ba8de0e06d0b1bd261d1",
+        "key"
+      ],
+      "effectJoin": [
+        "effect_bonus_value_ids_unit_sets_tables:0dac855069a0bd120c40",
+        "effect",
+        "effects_tables:d0c96784977527c9a0ad",
+        "effect"
+      ]
+    },
+    {
+      "rowId": "effect_bonus_value_ids_unit_sets_tables:0dfef2f2e2591b94b43d",
+      "raw": {
+        "bonus_value_id": "unit_damage_resistance_magic_mod",
+        "effect": "wh3_dlc27_effect_force_stat_spell_resistance_all_infantry",
+        "unit_set": "infantry_units"
+      },
+      "join": [
+        "effect_bonus_value_ids_unit_sets_tables:0dfef2f2e2591b94b43d",
+        "unit_set",
+        "unit_sets_tables:ba8de0e06d0b1bd261d1",
+        "key"
+      ],
+      "effectJoin": [
+        "effect_bonus_value_ids_unit_sets_tables:0dfef2f2e2591b94b43d",
+        "effect",
+        "effects_tables:4a33f23c8595a5550bc1",
+        "effect"
+      ]
+    },
+    {
+      "rowId": "effect_bonus_value_ids_unit_sets_tables:0ff78168f67cbec99409",
+      "raw": {
+        "bonus_value_id": "melee_damage_mod_mult",
+        "effect": "wh2_dlc11_effect_force_stat_weapon_strength_infantry",
+        "unit_set": "infantry_units"
+      },
+      "join": [
+        "effect_bonus_value_ids_unit_sets_tables:0ff78168f67cbec99409",
+        "unit_set",
+        "unit_sets_tables:ba8de0e06d0b1bd261d1",
+        "key"
+      ],
+      "effectJoin": [
+        "effect_bonus_value_ids_unit_sets_tables:0ff78168f67cbec99409",
+        "effect",
+        "effects_tables:d0c96784977527c9a0ad",
+        "effect"
+      ]
+    },
+    {
+      "rowId": "effect_bonus_value_ids_unit_sets_tables:1313f6e7a1962dcbd399",
+      "raw": {
+        "bonus_value_id": "mod_land_movement_battle",
+        "effect": "wh_main_effect_force_stat_speed_infantry",
+        "unit_set": "infantry_units"
+      },
+      "join": [
+        "effect_bonus_value_ids_unit_sets_tables:1313f6e7a1962dcbd399",
+        "unit_set",
+        "unit_sets_tables:ba8de0e06d0b1bd261d1",
+        "key"
+      ],
+      "effectJoin": [
+        "effect_bonus_value_ids_unit_sets_tables:1313f6e7a1962dcbd399",
+        "effect",
+        "effects_tables:5b2dd43b1a808edbf0e5",
+        "effect"
+      ]
+    },
+    {
+      "rowId": "effect_bonus_value_ids_unit_sets_tables:4b3d1fcc08742ecc18c6",
+      "raw": {
+        "bonus_value_id": "melee_attack_mod",
+        "effect": "wh2_dlc14_effect_force_army_battle_all_infantry_attack",
+        "unit_set": "infantry_units"
+      },
+      "join": [
+        "effect_bonus_value_ids_unit_sets_tables:4b3d1fcc08742ecc18c6",
+        "unit_set",
+        "unit_sets_tables:ba8de0e06d0b1bd261d1",
+        "key"
+      ],
+      "effectJoin": [
+        "effect_bonus_value_ids_unit_sets_tables:4b3d1fcc08742ecc18c6",
+        "effect",
+        "effects_tables:4fade93f59b95915ea8d",
+        "effect"
+      ]
+    },
+    {
+      "rowId": "effect_bonus_value_ids_unit_sets_tables:50d12f57387d23c9080a",
+      "raw": {
+        "bonus_value_id": "morale",
+        "effect": "wh_main_effect_force_stat_leadership_infantry",
+        "unit_set": "infantry_units"
+      },
+      "join": [
+        "effect_bonus_value_ids_unit_sets_tables:50d12f57387d23c9080a",
+        "unit_set",
+        "unit_sets_tables:ba8de0e06d0b1bd261d1",
+        "key"
+      ],
+      "effectJoin": [
+        "effect_bonus_value_ids_unit_sets_tables:50d12f57387d23c9080a",
+        "effect",
+        "effects_tables:3419a26c0b8d84def162",
+        "effect"
+      ]
+    },
+    {
+      "rowId": "effect_bonus_value_ids_unit_sets_tables:8cbd6e84aba037eb4c96",
+      "raw": {
+        "bonus_value_id": "unit_damage_resistance_all_mod",
+        "effect": "wh3_dlc27_effect_force_stat_ward_save_infantry",
+        "unit_set": "infantry_units"
+      },
+      "join": [
+        "effect_bonus_value_ids_unit_sets_tables:8cbd6e84aba037eb4c96",
+        "unit_set",
+        "unit_sets_tables:ba8de0e06d0b1bd261d1",
+        "key"
+      ],
+      "effectJoin": [
+        "effect_bonus_value_ids_unit_sets_tables:8cbd6e84aba037eb4c96",
+        "effect",
+        "effects_tables:f41a9dd578b90e22c73b",
+        "effect"
+      ]
+    },
+    {
+      "rowId": "effect_bonus_value_ids_unit_sets_tables:9a140f9bdd323be9a5f0",
+      "raw": {
+        "bonus_value_id": "melee_attack_mod",
+        "effect": "wh3_dlc27_effect_force_stat_melee_attack_infantry_negative",
+        "unit_set": "infantry_units"
+      },
+      "join": [
+        "effect_bonus_value_ids_unit_sets_tables:9a140f9bdd323be9a5f0",
+        "unit_set",
+        "unit_sets_tables:ba8de0e06d0b1bd261d1",
+        "key"
+      ],
+      "effectJoin": [
+        "effect_bonus_value_ids_unit_sets_tables:9a140f9bdd323be9a5f0",
+        "effect",
+        "effects_tables:acab668e7777b90ea7fa",
+        "effect"
+      ]
+    },
+    {
+      "rowId": "effect_bonus_value_ids_unit_sets_tables:9e201fe1845cf58a619a",
+      "raw": {
+        "bonus_value_id": "morale",
+        "effect": "wh3_dlc27_effect_force_stat_leadership_infantry_hidden",
+        "unit_set": "infantry_units"
+      },
+      "join": [
+        "effect_bonus_value_ids_unit_sets_tables:9e201fe1845cf58a619a",
+        "unit_set",
+        "unit_sets_tables:ba8de0e06d0b1bd261d1",
+        "key"
+      ],
+      "effectJoin": [
+        "effect_bonus_value_ids_unit_sets_tables:9e201fe1845cf58a619a",
+        "effect",
+        "effects_tables:623ee282e07fe035204b",
+        "effect"
+      ]
+    },
+    {
+      "rowId": "effect_bonus_value_ids_unit_sets_tables:a20d272ae6bfaa61f5a9",
+      "raw": {
+        "bonus_value_id": "armour_mod",
+        "effect": "wh_main_effect_force_stat_armour_infantry",
+        "unit_set": "infantry_units"
+      },
+      "join": [
+        "effect_bonus_value_ids_unit_sets_tables:a20d272ae6bfaa61f5a9",
+        "unit_set",
+        "unit_sets_tables:ba8de0e06d0b1bd261d1",
+        "key"
+      ],
+      "effectJoin": [
+        "effect_bonus_value_ids_unit_sets_tables:a20d272ae6bfaa61f5a9",
+        "effect",
+        "effects_tables:72cdfb202474c5c18adc",
+        "effect"
+      ]
+    },
+    {
+      "rowId": "effect_bonus_value_ids_unit_sets_tables:a2edb41d1873875b6150",
+      "raw": {
+        "bonus_value_id": "xp_gain_rate_mod",
+        "effect": "wh3_dlc25_effect_xp_gain_rate_dwf_infantry",
+        "unit_set": "infantry_units"
+      },
+      "join": [
+        "effect_bonus_value_ids_unit_sets_tables:a2edb41d1873875b6150",
+        "unit_set",
+        "unit_sets_tables:ba8de0e06d0b1bd261d1",
+        "key"
+      ],
+      "effectJoin": [
+        "effect_bonus_value_ids_unit_sets_tables:a2edb41d1873875b6150",
+        "effect",
+        "effects_tables:612039011aa6e701b6b3",
+        "effect"
+      ]
+    },
+    {
+      "rowId": "effect_bonus_value_ids_unit_sets_tables:a878ab2911f82acbc46c",
+      "raw": {
+        "bonus_value_id": "upkeep_mod",
+        "effect": "wh_main_effect_force_army_campaign_upkeep_cost_infantry",
+        "unit_set": "infantry_units"
+      },
+      "join": [
+        "effect_bonus_value_ids_unit_sets_tables:a878ab2911f82acbc46c",
+        "unit_set",
+        "unit_sets_tables:ba8de0e06d0b1bd261d1",
+        "key"
+      ],
+      "effectJoin": [
+        "effect_bonus_value_ids_unit_sets_tables:a878ab2911f82acbc46c",
+        "effect",
+        "effects_tables:187711f96879a44b5ad2",
+        "effect"
+      ]
+    },
+    {
+      "rowId": "effect_bonus_value_ids_unit_sets_tables:acafe31e6983d3a15612",
+      "raw": {
+        "bonus_value_id": "unit_xp_mod",
+        "effect": "wh_main_effect_force_army_campaign_experience_base_infantry",
+        "unit_set": "infantry_units"
+      },
+      "join": [
+        "effect_bonus_value_ids_unit_sets_tables:acafe31e6983d3a15612",
+        "unit_set",
+        "unit_sets_tables:ba8de0e06d0b1bd261d1",
+        "key"
+      ],
+      "effectJoin": [
+        "effect_bonus_value_ids_unit_sets_tables:acafe31e6983d3a15612",
+        "effect",
+        "effects_tables:f4958050539a5370733e",
+        "effect"
+      ]
+    },
+    {
+      "rowId": "effect_bonus_value_ids_unit_sets_tables:dadab6eaefeeb7830940",
+      "raw": {
+        "bonus_value_id": "melee_defence_mod",
+        "effect": "wh3_dlc27_effect_force_stat_melee_defence_infantry_negative",
+        "unit_set": "infantry_units"
+      },
+      "join": [
+        "effect_bonus_value_ids_unit_sets_tables:dadab6eaefeeb7830940",
+        "unit_set",
+        "unit_sets_tables:ba8de0e06d0b1bd261d1",
+        "key"
+      ],
+      "effectJoin": [
+        "effect_bonus_value_ids_unit_sets_tables:dadab6eaefeeb7830940",
+        "effect",
+        "effects_tables:4d06791bb8aa81ec08ea",
+        "effect"
+      ]
+    },
+    {
+      "rowId": "effect_bonus_value_ids_unit_sets_tables:dee84eb7e98a754fb49f",
+      "raw": {
+        "bonus_value_id": "mercenary_cost_mod",
+        "effect": "wh_main_effect_force_army_campaign_recruitment_cost_infantry",
+        "unit_set": "infantry_units"
+      },
+      "join": [
+        "effect_bonus_value_ids_unit_sets_tables:dee84eb7e98a754fb49f",
+        "unit_set",
+        "unit_sets_tables:ba8de0e06d0b1bd261d1",
+        "key"
+      ],
+      "effectJoin": [
+        "effect_bonus_value_ids_unit_sets_tables:dee84eb7e98a754fb49f",
+        "effect",
+        "effects_tables:94100b642f62ca1d3cd5",
+        "effect"
+      ]
+    },
+    {
+      "rowId": "effect_bonus_value_ids_unit_sets_tables:f554a2de9be7aee0aeff",
+      "raw": {
+        "bonus_value_id": "melee_damage_ap_mod_add",
+        "effect": "wh2_dlc14_effect_armour_piercing_damage_infantry",
+        "unit_set": "infantry_units"
+      },
+      "join": [
+        "effect_bonus_value_ids_unit_sets_tables:f554a2de9be7aee0aeff",
+        "unit_set",
+        "unit_sets_tables:ba8de0e06d0b1bd261d1",
+        "key"
+      ],
+      "effectJoin": [
+        "effect_bonus_value_ids_unit_sets_tables:f554a2de9be7aee0aeff",
+        "effect",
+        "effects_tables:7674f7ee45520c97ff65",
+        "effect"
+      ]
+    },
+    {
+      "rowId": "effect_bonus_value_ids_unit_sets_tables:fcbf82b6f9af2474d01e",
+      "raw": {
+        "bonus_value_id": "unit_damage_resistance_physical_mod",
+        "effect": "wh3_dlc27_effect_force_stat_physical_resistance_infantry",
+        "unit_set": "infantry_units"
+      },
+      "join": [
+        "effect_bonus_value_ids_unit_sets_tables:fcbf82b6f9af2474d01e",
+        "unit_set",
+        "unit_sets_tables:ba8de0e06d0b1bd261d1",
+        "key"
+      ],
+      "effectJoin": [
+        "effect_bonus_value_ids_unit_sets_tables:fcbf82b6f9af2474d01e",
+        "effect",
+        "effects_tables:0f57055843769ca8c613",
+        "effect"
+      ]
+    }
+  ],
+  "explicitComparison": {
+    "classDerived": "infantry_units",
+    "explicit": "dlc07_brt_inf_battle_pilgrims",
+    "sharedMainKeys": [
+      "wh_dlc07_brt_inf_battle_pilgrims_0",
+      "wh_dlc07_brt_inf_grail_reliquae_0",
+      "wh_pro04_brt_inf_battle_pilgrims_ror_0"
+    ],
+    "explicitOnly": [],
+    "identicalWholeSet": false,
+    "conclusion": "Shared exact main/land identities, including independently sourced RoR; explicit set is a subset, not an equivalent complete selector."
+  },
+  "negativeCases": [
+    {
+      "mainKey": "wh_main_brt_cav_knights_of_the_realm",
+      "landKey": "wh_main_brt_cav_knights_of_the_realm",
+      "caste": "melee_cavalry",
+      "landClass": "cav_shk",
+      "isRenown": false,
+      "infantryMember": false,
+      "production": true,
+      "join": [
+        "main_units_tables:7411499650e816114558",
+        "land_unit",
+        "land_units_tables:0dade6b083f9c0a1ae1d",
+        "key"
+      ]
+    },
+    {
+      "mainKey": "wh_dlc07_brt_inf_grail_reliquae_0",
+      "landKey": "wh_dlc07_brt_inf_grail_reliquae_0",
+      "caste": "melee_infantry",
+      "landClass": "spcl",
+      "isRenown": false,
+      "infantryMember": true,
+      "production": false,
+      "join": [
+        "main_units_tables:9a2237e55197e64a9f9f",
+        "land_unit",
+        "land_units_tables:614714b8c312d51f3736",
+        "key"
+      ]
+    },
+    {
+      "mainKey": "wh_pro04_brt_inf_battle_pilgrims_ror_0",
+      "landKey": "wh_pro04_brt_inf_battle_pilgrims_ror_0",
+      "caste": "melee_infantry",
+      "landClass": "inf_mel",
+      "isRenown": true,
+      "infantryMember": true,
+      "production": false,
+      "join": [
+        "main_units_tables:4a4cf6f09b5760623036",
+        "land_unit",
+        "land_units_tables:2a718e71377e44135420",
+        "key"
+      ]
+    },
+    {
+      "mainKey": "wh_main_emp_inf_swordsmen",
+      "landKey": "wh_main_emp_inf_swordsmen",
+      "caste": "melee_infantry",
+      "landClass": "inf_mel",
+      "isRenown": false,
+      "infantryMember": true,
+      "production": true,
+      "join": [
+        "main_units_tables:3d333afa345746331baa",
+        "land_unit",
+        "land_units_tables:c805c81b73d19673a81f",
+        "key"
+      ]
+    },
+    {
+      "mainKey": "wh_dlc04_emp_inf_flagellants_0",
+      "landKey": "wh_dlc04_emp_inf_flagellants_0",
+      "caste": "melee_infantry",
+      "landClass": "inf_mel",
+      "isRenown": false,
+      "infantryMember": true,
+      "production": true,
+      "join": [
+        "main_units_tables:ae277ad9996f4d875ccf",
+        "land_unit",
+        "land_units_tables:c820229b52456f66a971",
+        "key"
+      ]
+    },
+    {
+      "mainKey": "wh_dlc04_emp_inf_tattersouls_0",
+      "landKey": "wh_dlc04_emp_inf_tattersouls_0",
+      "caste": "melee_infantry",
+      "landClass": "inf_mel",
+      "isRenown": true,
+      "infantryMember": true,
+      "production": false,
+      "join": [
+        "main_units_tables:cacf2849546727b272a6",
+        "land_unit",
+        "land_units_tables:6a8c3c8e186b3eaa358c",
+        "key"
+      ]
+    },
+    {
+      "mainKey": "wh2_dlc15_grn_mon_rogue_idol_0",
+      "landKey": "wh2_dlc15_grn_mon_rogue_idol_0",
+      "caste": "monster",
+      "landClass": "inf_mel",
+      "isRenown": false,
+      "infantryMember": false,
+      "production": false,
+      "join": [
+        "main_units_tables:00368479a3ccb41a84b6",
+        "land_unit",
+        "land_units_tables:53cb279a3d253bd1e70d",
+        "key"
+      ]
+    },
+    {
+      "mainKey": "wh_main_vmp_mon_crypt_horrors_summoned",
+      "landKey": "wh_main_vmp_mon_crypt_horrors_summoned",
+      "caste": "monstrous_infantry",
+      "landClass": "inf_mel",
+      "isRenown": false,
+      "infantryMember": true,
+      "production": false,
+      "join": [
+        "main_units_tables:1e7fff8a3886c7560e4a",
+        "land_unit",
+        "land_units_tables:0b19bb421987fce22b40",
+        "key"
+      ]
+    },
+    {
+      "mainKey": "wh_main_vmp_inf_zombie_summoned",
+      "landKey": "wh_main_vmp_inf_zombie_summoned",
+      "caste": "melee_infantry",
+      "landClass": "inf_mel",
+      "isRenown": false,
+      "infantryMember": true,
+      "production": false,
+      "join": [
+        "main_units_tables:5d547fd29cc2547dea40",
+        "land_unit",
+        "land_units_tables:8807fcc074aa05477628",
+        "key"
+      ]
+    },
+    {
+      "mainKey": "wh3_main_kho_mon_bloodthirster_summoned_0",
+      "landKey": "wh3_main_kho_mon_bloodthirster_summoned_0",
+      "caste": "monster",
+      "landClass": "inf_mel",
+      "isRenown": false,
+      "infantryMember": false,
+      "production": false,
+      "join": [
+        "main_units_tables:2c00a7cc722ac347bc44",
+        "land_unit",
+        "land_units_tables:d654f58aeb8b03d489b0",
+        "key"
+      ]
+    }
+  ],
+  "spawnContexts": [
+    {
+      "mainKey": "wh_main_vmp_mon_crypt_horrors_summoned",
+      "landKey": "wh_main_vmp_mon_crypt_horrors_summoned",
+      "infantryMember": true,
+      "production": false,
+      "runtimeApplicability": "NOT_OBSERVED",
+      "abilities": [
+        {
+          "rowId": "unit_special_abilities_tables:adee9873886da1e7b724",
+          "abilityKey": "wh_dlc04_spell_vampires_raise_dead_upgraded_strigoi",
+          "spawnType": "",
+          "transformation": false,
+          "decoy": false,
+          "join": [
+            "unit_special_abilities_tables:adee9873886da1e7b724",
+            "spawned_unit",
+            "land_units_tables:0b19bb421987fce22b40",
+            "key"
+          ]
+        },
+        {
+          "rowId": "unit_special_abilities_tables:cb636c9feafcb035d743",
+          "abilityKey": "wh3_dlc29_army_abilities_ryze_the_grave_call_crypt_horrors",
+          "spawnType": "",
+          "transformation": false,
+          "decoy": false,
+          "join": [
+            "unit_special_abilities_tables:cb636c9feafcb035d743",
+            "spawned_unit",
+            "land_units_tables:0b19bb421987fce22b40",
+            "key"
+          ]
+        }
+      ]
+    },
+    {
+      "mainKey": "wh_main_vmp_inf_zombie_summoned",
+      "landKey": "wh_main_vmp_inf_zombie_summoned",
+      "infantryMember": true,
+      "production": false,
+      "runtimeApplicability": "NOT_OBSERVED",
+      "abilities": [
+        {
+          "rowId": "unit_special_abilities_tables:11c61fdb17e9c1e6d054",
+          "abilityKey": "wh2_dlc16_spell_bound_vampires_lesser_raise_dead",
+          "spawnType": "",
+          "transformation": false,
+          "decoy": false,
+          "join": [
+            "unit_special_abilities_tables:11c61fdb17e9c1e6d054",
+            "spawned_unit",
+            "land_units_tables:8807fcc074aa05477628",
+            "key"
+          ]
+        },
+        {
+          "rowId": "unit_special_abilities_tables:1d7ad628376126980b84",
+          "abilityKey": "wh3_dlc29_lord_passive_liche_ascendant",
+          "spawnType": "unit_position",
+          "transformation": false,
+          "decoy": false,
+          "join": [
+            "unit_special_abilities_tables:1d7ad628376126980b84",
+            "spawned_unit",
+            "land_units_tables:8807fcc074aa05477628",
+            "key"
+          ]
+        },
+        {
+          "rowId": "unit_special_abilities_tables:7ff1eb4506c19b2da734",
+          "abilityKey": "wh_main_spell_vampires_raise_dead",
+          "spawnType": "",
+          "transformation": false,
+          "decoy": false,
+          "join": [
+            "unit_special_abilities_tables:7ff1eb4506c19b2da734",
+            "spawned_unit",
+            "land_units_tables:8807fcc074aa05477628",
+            "key"
+          ]
+        }
+      ]
+    },
+    {
+      "mainKey": "wh3_main_kho_mon_bloodthirster_summoned_0",
+      "landKey": "wh3_main_kho_mon_bloodthirster_summoned_0",
+      "infantryMember": false,
+      "production": false,
+      "runtimeApplicability": "NOT_OBSERVED",
+      "abilities": [
+        {
+          "rowId": "unit_special_abilities_tables:5926f6b8641736812735",
+          "abilityKey": "wh3_main_character_abilities_greater_gate_of_khorne",
+          "spawnType": "unit_position_offset",
+          "transformation": false,
+          "decoy": false,
+          "join": [
+            "unit_special_abilities_tables:5926f6b8641736812735",
+            "spawned_unit",
+            "land_units_tables:d654f58aeb8b03d489b0",
+            "key"
+          ]
+        },
+        {
+          "rowId": "unit_special_abilities_tables:5c9c8f61f7abb5cfa2a4",
+          "abilityKey": "wh3_main_cataclysm_khorne_greater_gate_of_khorne",
+          "spawnType": "unit_position_offset",
+          "transformation": false,
+          "decoy": false,
+          "join": [
+            "unit_special_abilities_tables:5c9c8f61f7abb5cfa2a4",
+            "spawned_unit",
+            "land_units_tables:d654f58aeb8b03d489b0",
+            "key"
+          ]
+        }
+      ]
+    }
+  ],
+  "newAdmissions": [],
+  "modelChanged": false,
+  "schemaChanged": false,
+  "peoplesHeroSelectorBlocker": "RESOLVED_STATIC_MAIN_CASTE_UNION",
+  "peoplesHeroRemainingBlockers": [
+    "Exact add-named engine bonus and numeric Loc; no prior reviewed flat AP operation. Not admitted in this membership-only research.",
+    "REPLENISHMENT_NO_UNIT_STAT_PATH"
+  ],
+  "runtime": {
+    "gameExecution": "NOT_OBSERVED",
+    "membership": "STATIC_SOURCE_PROVED",
+    "additionalFilterEvidence": "NONE_IN_TRACED_SELECTOR_ROWS",
+    "effectApplicability": "SCOPE_OWNER_OPERATION_AND_RUNTIME_CONTEXT_ARE_SEPARATE",
+    "summonTemporaryApplicability": "NOT_OBSERVED"
+  },
+  "unknown": [
+    "multi-rank",
+    "shared owner runtime availability/unlock",
+    "character self scope",
+    "vigour",
+    "replenishment",
+    "resistance operation",
+    "mount unlock",
+    "other non-unit stats",
+    "flat AP operation not previously reviewed",
+    "combined/exclusion/dynamic selector semantics",
+    "engine filtering outside traced static rows"
+  ],
+  "preservation": {
+    "production": 101,
+    "sample": 5,
+    "hp": 13,
+    "speed": 81,
+    "researchTechnologies": 10,
+    "researchEffects": 15,
+    "researchCandidates": 96,
+    "admittedSkills": 3
+  }
+}
