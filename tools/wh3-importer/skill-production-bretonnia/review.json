@@ -1,0 +1,696 @@
+{
+  "format": "wh3-bretonnia-skill-reviewed-gate-v1",
+  "partialAllowed": false,
+  "approvedSkillKeys": [
+    "wh_dlc07_skill_brt_alberic_battle_aspiring_knights",
+    "wh_dlc07_skill_brt_alberic_battle_champions_of_bordeleaux",
+    "wh_dlc07_skill_brt_fay_battle_blessed_water"
+  ],
+  "directCandidates": [
+    {
+      "skillKey": "wh2_dlc07_skill_brt_fay_enchantress_special_1",
+      "junctionRowId": "character_skill_level_to_effects_junctions_tables:28239f35f0e24c55a246",
+      "effectKey": "wh2_main_effect_force_stat_melee_defence_brt_grail_knights_guardians",
+      "rank": 1,
+      "scopeKey": "general_to_force_own",
+      "classification": "DIRECT",
+      "blockers": [],
+      "rawValue": 5,
+      "ownerKeys": [
+        "wh_dlc07_brt_fay_enchantress"
+      ],
+      "mappings": [
+        {
+          "bonus": "melee_defence_mod",
+          "stat": "defense.meleeDefense",
+          "operation": "add",
+          "value": 5,
+          "routeRowId": "effect_bonus_value_ids_unit_sets_tables:03eb49bbe45425dcb7f4",
+          "selectorKey": "dlc07_brt_grail_knights_guardians",
+          "basis": "research-classifier/policy.mjs#OP_MELEE_DEFENSE_FLAT"
+        }
+      ],
+      "targets": [
+        {
+          "unitId": "ca_unit_wh_dlc07_brt_cav_grail_guardians_0",
+          "mainKey": "wh_dlc07_brt_cav_grail_guardians_0",
+          "landKey": "wh_dlc07_brt_cav_grail_guardians_0"
+        },
+        {
+          "unitId": "ca_unit_wh_main_brt_cav_grail_knights",
+          "mainKey": "wh_main_brt_cav_grail_knights",
+          "landKey": "wh_main_brt_cav_grail_knights"
+        }
+      ]
+    },
+    {
+      "skillKey": "wh2_dlc07_skill_brt_fay_enchantress_special_1",
+      "junctionRowId": "character_skill_level_to_effects_junctions_tables:4b92ad1e83e152323d60",
+      "effectKey": "wh2_main_effect_force_stat_melee_attack_grail_knights_guardians",
+      "rank": 1,
+      "scopeKey": "general_to_force_own",
+      "classification": "DIRECT",
+      "blockers": [],
+      "rawValue": 5,
+      "ownerKeys": [
+        "wh_dlc07_brt_fay_enchantress"
+      ],
+      "mappings": [
+        {
+          "bonus": "melee_attack_mod",
+          "stat": "melee.meleeAttack",
+          "operation": "add",
+          "value": 5,
+          "routeRowId": "effect_bonus_value_ids_unit_sets_tables:f7b5aa3c3d9c07050082",
+          "selectorKey": "dlc07_brt_grail_knights_guardians",
+          "basis": "research-classifier/policy.mjs#OP_MELEE_ATTACK_FLAT"
+        }
+      ],
+      "targets": [
+        {
+          "unitId": "ca_unit_wh_dlc07_brt_cav_grail_guardians_0",
+          "mainKey": "wh_dlc07_brt_cav_grail_guardians_0",
+          "landKey": "wh_dlc07_brt_cav_grail_guardians_0"
+        },
+        {
+          "unitId": "ca_unit_wh_main_brt_cav_grail_knights",
+          "mainKey": "wh_main_brt_cav_grail_knights",
+          "landKey": "wh_main_brt_cav_grail_knights"
+        }
+      ]
+    },
+    {
+      "skillKey": "wh2_dlc07_skill_brt_louen_special_0",
+      "junctionRowId": "character_skill_level_to_effects_junctions_tables:a0e719a7dc99321ec080",
+      "effectKey": "wh2_main_effect_skill_upkeep_cost_reduction_brt_knights_realm_questing_knights",
+      "rank": 1,
+      "scopeKey": "general_to_force_own",
+      "classification": "DIRECT",
+      "blockers": [],
+      "rawValue": -25,
+      "ownerKeys": [
+        "wh_main_brt_louen_leoncouer"
+      ],
+      "mappings": [
+        {
+          "bonus": "upkeep_mod",
+          "stat": "campaign.upkeep",
+          "operation": "multiply",
+          "value": -25,
+          "routeRowId": "effect_bonus_value_ids_unit_sets_tables:db2832d59da2feac4597",
+          "selectorKey": "dlc07_brt_knights_realm",
+          "basis": "skill-batch-01/review.json"
+        },
+        {
+          "bonus": "upkeep_mod",
+          "stat": "campaign.upkeep",
+          "operation": "multiply",
+          "value": -25,
+          "routeRowId": "effect_bonus_value_ids_unit_sets_tables:f9ee3ddf1326e6102c98",
+          "selectorKey": "dlc07_brt_knights_questing",
+          "basis": "skill-batch-01/review.json"
+        }
+      ],
+      "targets": [
+        {
+          "unitId": "ca_unit_wh_main_brt_cav_knights_of_the_realm",
+          "mainKey": "wh_main_brt_cav_knights_of_the_realm",
+          "landKey": "wh_main_brt_cav_knights_of_the_realm"
+        },
+        {
+          "unitId": "ca_unit_wh_dlc07_brt_cav_questing_knights_0",
+          "mainKey": "wh_dlc07_brt_cav_questing_knights_0",
+          "landKey": "wh_dlc07_brt_cav_questing_knights_0"
+        }
+      ]
+    },
+    {
+      "skillKey": "wh2_dlc14_skill_brt_repanse_the_peoples_hero",
+      "junctionRowId": "character_skill_level_to_effects_junctions_tables:985dbe2f6a06f8efc6e2",
+      "effectKey": "wh2_dlc14_effect_force_army_battle_all_infantry_attack",
+      "rank": 1,
+      "scopeKey": "general_to_force_own",
+      "classification": "DIRECT",
+      "blockers": [],
+      "rawValue": 5,
+      "ownerKeys": [
+        "wh2_dlc14_brt_repanse"
+      ],
+      "mappings": [
+        {
+          "bonus": "melee_attack_mod",
+          "stat": "melee.meleeAttack",
+          "operation": "add",
+          "value": 5,
+          "routeRowId": "effect_bonus_value_ids_unit_sets_tables:4b3d1fcc08742ecc18c6",
+          "selectorKey": "infantry_units",
+          "basis": "research-classifier/policy.mjs#OP_MELEE_ATTACK_FLAT"
+        }
+      ],
+      "targets": [
+        {
+          "unitId": "ca_unit_wh2_dlc09_tmb_inf_nehekhara_warriors_0",
+          "mainKey": "wh2_dlc09_tmb_inf_nehekhara_warriors_0",
+          "landKey": "wh2_dlc09_tmb_inf_nehekhara_warriors_0"
+        },
+        {
+          "unitId": "ca_unit_wh2_dlc09_tmb_inf_skeleton_archers_0",
+          "mainKey": "wh2_dlc09_tmb_inf_skeleton_archers_0",
+          "landKey": "wh2_dlc09_tmb_inf_skeleton_archers_0"
+        },
+        {
+          "unitId": "ca_unit_wh2_dlc09_tmb_mon_ushabti_1",
+          "mainKey": "wh2_dlc09_tmb_mon_ushabti_1",
+          "landKey": "wh2_dlc09_tmb_mon_ushabti_1"
+        },
+        {
+          "unitId": "ca_unit_wh2_dlc11_cst_inf_deck_gunners_0",
+          "mainKey": "wh2_dlc11_cst_inf_deck_gunners_0",
+          "landKey": "wh2_dlc11_cst_inf_deck_gunners_0"
+        },
+        {
+          "unitId": "ca_unit_wh2_dlc11_cst_inf_depth_guard_0",
+          "mainKey": "wh2_dlc11_cst_inf_depth_guard_0",
+          "landKey": "wh2_dlc11_cst_inf_depth_guard_0"
+        },
+        {
+          "unitId": "ca_unit_wh2_dlc11_cst_inf_depth_guard_1",
+          "mainKey": "wh2_dlc11_cst_inf_depth_guard_1",
+          "landKey": "wh2_dlc11_cst_inf_depth_guard_1"
+        },
+        {
+          "unitId": "ca_unit_wh2_dlc11_cst_inf_syreens",
+          "mainKey": "wh2_dlc11_cst_inf_syreens",
+          "landKey": "wh2_dlc11_cst_inf_syreens"
+        },
+        {
+          "unitId": "ca_unit_wh2_dlc11_cst_inf_zombie_gunnery_mob_1",
+          "mainKey": "wh2_dlc11_cst_inf_zombie_gunnery_mob_1",
+          "landKey": "wh2_dlc11_cst_inf_zombie_gunnery_mob_1"
+        },
+        {
+          "unitId": "ca_unit_wh2_dlc11_cst_mon_animated_hulks_0",
+          "mainKey": "wh2_dlc11_cst_mon_animated_hulks_0",
+          "landKey": "wh2_dlc11_cst_mon_animated_hulks_0"
+        },
+        {
+          "unitId": "ca_unit_wh2_dlc12_lzd_inf_skink_red_crested_0",
+          "mainKey": "wh2_dlc12_lzd_inf_skink_red_crested_0",
+          "landKey": "wh2_dlc12_lzd_inf_skink_red_crested_0"
+        },
+        {
+          "unitId": "ca_unit_wh2_dlc12_skv_inf_ratling_gun_0",
+          "mainKey": "wh2_dlc12_skv_inf_ratling_gun_0",
+          "landKey": "wh2_dlc12_skv_inf_ratling_gun_0"
+        },
+        {
+          "unitId": "ca_unit_wh2_dlc12_skv_inf_warplock_jezzails_0",
+          "mainKey": "wh2_dlc12_skv_inf_warplock_jezzails_0",
+          "landKey": "wh2_dlc12_skv_inf_warplock_jezzails_0"
+        },
+        {
+          "unitId": "ca_unit_wh2_dlc14_skv_inf_eshin_triads_0",
+          "mainKey": "wh2_dlc14_skv_inf_eshin_triads_0",
+          "landKey": "wh2_dlc14_skv_inf_eshin_triads_0"
+        },
+        {
+          "unitId": "ca_unit_wh2_dlc14_skv_inf_poison_wind_mortar_0",
+          "mainKey": "wh2_dlc14_skv_inf_poison_wind_mortar_0",
+          "landKey": "wh2_dlc14_skv_inf_poison_wind_mortar_0"
+        },
+        {
+          "unitId": "ca_unit_wh2_dlc14_skv_inf_warp_grinder_0",
+          "mainKey": "wh2_dlc14_skv_inf_warp_grinder_0",
+          "landKey": "wh2_dlc14_skv_inf_warp_grinder_0"
+        },
+        {
+          "unitId": "ca_unit_wh2_main_lzd_inf_chameleon_skinks_0",
+          "mainKey": "wh2_main_lzd_inf_chameleon_skinks_0",
+          "landKey": "wh2_main_lzd_inf_chameleon_skinks_0"
+        },
+        {
+          "unitId": "ca_unit_wh2_main_lzd_inf_saurus_spearmen_0",
+          "mainKey": "wh2_main_lzd_inf_saurus_spearmen_0",
+          "landKey": "wh2_main_lzd_inf_saurus_spearmen_0"
+        },
+        {
+          "unitId": "ca_unit_wh2_main_lzd_inf_saurus_spearmen_1",
+          "mainKey": "wh2_main_lzd_inf_saurus_spearmen_1",
+          "landKey": "wh2_main_lzd_inf_saurus_spearmen_1"
+        },
+        {
+          "unitId": "ca_unit_wh2_main_lzd_inf_saurus_warriors_0",
+          "mainKey": "wh2_main_lzd_inf_saurus_warriors_0",
+          "landKey": "wh2_main_lzd_inf_saurus_warriors_0"
+        },
+        {
+          "unitId": "ca_unit_wh2_main_lzd_inf_saurus_warriors_1",
+          "mainKey": "wh2_main_lzd_inf_saurus_warriors_1",
+          "landKey": "wh2_main_lzd_inf_saurus_warriors_1"
+        },
+        {
+          "unitId": "ca_unit_wh2_main_lzd_inf_skink_cohort_0",
+          "mainKey": "wh2_main_lzd_inf_skink_cohort_0",
+          "landKey": "wh2_main_lzd_inf_skink_cohort_0"
+        },
+        {
+          "unitId": "ca_unit_wh2_main_lzd_inf_skink_cohort_1",
+          "mainKey": "wh2_main_lzd_inf_skink_cohort_1",
+          "landKey": "wh2_main_lzd_inf_skink_cohort_1"
+        },
+        {
+          "unitId": "ca_unit_wh2_main_lzd_inf_skink_skirmishers_0",
+          "mainKey": "wh2_main_lzd_inf_skink_skirmishers_0",
+          "landKey": "wh2_main_lzd_inf_skink_skirmishers_0"
+        },
+        {
+          "unitId": "ca_unit_wh2_main_skv_inf_clanrat_spearmen_0",
+          "mainKey": "wh2_main_skv_inf_clanrat_spearmen_0",
+          "landKey": "wh2_main_skv_inf_clanrat_spearmen_0"
+        },
+        {
+          "unitId": "ca_unit_wh2_main_skv_inf_clanrat_spearmen_1",
+          "mainKey": "wh2_main_skv_inf_clanrat_spearmen_1",
+          "landKey": "wh2_main_skv_inf_clanrat_spearmen_1"
+        },
+        {
+          "unitId": "ca_unit_wh2_main_skv_inf_clanrats_1",
+          "mainKey": "wh2_main_skv_inf_clanrats_1",
+          "landKey": "wh2_main_skv_inf_clanrats_1"
+        },
+        {
+          "unitId": "ca_unit_wh2_main_skv_inf_death_globe_bombardiers",
+          "mainKey": "wh2_main_skv_inf_death_globe_bombardiers",
+          "landKey": "wh2_main_skv_inf_death_globe_bombardiers"
+        },
+        {
+          "unitId": "ca_unit_wh2_main_skv_inf_gutter_runner_slingers_0",
+          "mainKey": "wh2_main_skv_inf_gutter_runner_slingers_0",
+          "landKey": "wh2_main_skv_inf_gutter_runner_slingers_0"
+        },
+        {
+          "unitId": "ca_unit_wh2_main_skv_inf_gutter_runner_slingers_1",
+          "mainKey": "wh2_main_skv_inf_gutter_runner_slingers_1",
+          "landKey": "wh2_main_skv_inf_gutter_runner_slingers_1"
+        },
+        {
+          "unitId": "ca_unit_wh2_main_skv_inf_gutter_runners_0",
+          "mainKey": "wh2_main_skv_inf_gutter_runners_0",
+          "landKey": "wh2_main_skv_inf_gutter_runners_0"
+        },
+        {
+          "unitId": "ca_unit_wh2_main_skv_inf_gutter_runners_1",
+          "mainKey": "wh2_main_skv_inf_gutter_runners_1",
+          "landKey": "wh2_main_skv_inf_gutter_runners_1"
+        },
+        {
+          "unitId": "ca_unit_wh2_main_skv_inf_night_runners_0",
+          "mainKey": "wh2_main_skv_inf_night_runners_0",
+          "landKey": "wh2_main_skv_inf_night_runners_0"
+        },
+        {
+          "unitId": "ca_unit_wh2_main_skv_inf_night_runners_1",
+          "mainKey": "wh2_main_skv_inf_night_runners_1",
+          "landKey": "wh2_main_skv_inf_night_runners_1"
+        },
+        {
+          "unitId": "ca_unit_wh2_main_skv_inf_plague_monk_censer_bearer",
+          "mainKey": "wh2_main_skv_inf_plague_monk_censer_bearer",
+          "landKey": "wh2_main_skv_inf_plague_monk_censer_bearer"
+        },
+        {
+          "unitId": "ca_unit_wh2_main_skv_inf_poison_wind_globadiers",
+          "mainKey": "wh2_main_skv_inf_poison_wind_globadiers",
+          "landKey": "wh2_main_skv_inf_poison_wind_globadiers"
+        },
+        {
+          "unitId": "ca_unit_wh2_main_skv_inf_skavenslave_slingers_0",
+          "mainKey": "wh2_main_skv_inf_skavenslave_slingers_0",
+          "landKey": "wh2_main_skv_inf_skavenslave_slingers_0"
+        },
+        {
+          "unitId": "ca_unit_wh2_main_skv_inf_warpfire_thrower",
+          "mainKey": "wh2_main_skv_inf_warpfire_thrower",
+          "landKey": "wh2_main_skv_inf_warpfire_thrower"
+        },
+        {
+          "unitId": "ca_unit_wh3_dlc25_emp_inf_hochland_long_rifles",
+          "mainKey": "wh3_dlc25_emp_inf_hochland_long_rifles",
+          "landKey": "wh3_dlc25_emp_inf_hochland_long_rifles"
+        },
+        {
+          "unitId": "ca_unit_wh3_dlc25_emp_inf_nuln_ironsides",
+          "mainKey": "wh3_dlc25_emp_inf_nuln_ironsides",
+          "landKey": "wh3_dlc25_emp_inf_nuln_ironsides"
+        },
+        {
+          "unitId": "ca_unit_wh3_dlc29_emp_inf_teutogen_guard",
+          "mainKey": "wh3_dlc29_emp_inf_teutogen_guard",
+          "landKey": "wh3_dlc29_emp_inf_teutogen_guard"
+        },
+        {
+          "unitId": "ca_unit_wh3_dlc29_emp_inf_warriors_of_ulric",
+          "mainKey": "wh3_dlc29_emp_inf_warriors_of_ulric",
+          "landKey": "wh3_dlc29_emp_inf_warriors_of_ulric"
+        },
+        {
+          "unitId": "ca_unit_wh3_dlc29_emp_inf_wolf_kin",
+          "mainKey": "wh3_dlc29_emp_inf_wolf_kin",
+          "landKey": "wh3_dlc29_emp_inf_wolf_kin"
+        },
+        {
+          "unitId": "ca_unit_wh_dlc01_chs_inf_chosen_2",
+          "mainKey": "wh_dlc01_chs_inf_chosen_2",
+          "landKey": "wh_dlc01_chs_inf_chosen_2"
+        },
+        {
+          "unitId": "ca_unit_wh_dlc01_chs_inf_forsaken_0",
+          "mainKey": "wh_dlc01_chs_inf_forsaken_0",
+          "landKey": "wh_dlc01_chs_inf_forsaken_0"
+        },
+        {
+          "unitId": "ca_unit_wh_dlc01_chs_mon_dragon_ogre",
+          "mainKey": "wh_dlc01_chs_mon_dragon_ogre",
+          "landKey": "wh_dlc01_chs_mon_dragon_ogre"
+        },
+        {
+          "unitId": "ca_unit_wh_dlc04_emp_inf_flagellants_0",
+          "mainKey": "wh_dlc04_emp_inf_flagellants_0",
+          "landKey": "wh_dlc04_emp_inf_flagellants_0"
+        },
+        {
+          "unitId": "ca_unit_wh_dlc04_emp_inf_free_company_militia_0",
+          "mainKey": "wh_dlc04_emp_inf_free_company_militia_0",
+          "landKey": "wh_dlc04_emp_inf_free_company_militia_0"
+        },
+        {
+          "unitId": "ca_unit_wh_dlc04_vmp_inf_sternsmen_0",
+          "mainKey": "wh_dlc04_vmp_inf_sternsmen_0",
+          "landKey": "wh_dlc04_vmp_inf_sternsmen_0"
+        },
+        {
+          "unitId": "ca_unit_wh_dlc07_brt_inf_battle_pilgrims_0",
+          "mainKey": "wh_dlc07_brt_inf_battle_pilgrims_0",
+          "landKey": "wh_dlc07_brt_inf_battle_pilgrims_0"
+        },
+        {
+          "unitId": "ca_unit_wh_dlc07_brt_inf_foot_squires_0",
+          "mainKey": "wh_dlc07_brt_inf_foot_squires_0",
+          "landKey": "wh_dlc07_brt_inf_foot_squires_0"
+        },
+        {
+          "unitId": "ca_unit_wh_dlc07_brt_inf_men_at_arms_1",
+          "mainKey": "wh_dlc07_brt_inf_men_at_arms_1",
+          "landKey": "wh_dlc07_brt_inf_men_at_arms_1"
+        },
+        {
+          "unitId": "ca_unit_wh_dlc07_brt_inf_men_at_arms_2",
+          "mainKey": "wh_dlc07_brt_inf_men_at_arms_2",
+          "landKey": "wh_dlc07_brt_inf_men_at_arms_2"
+        },
+        {
+          "unitId": "ca_unit_wh_dlc07_brt_inf_peasant_bowmen_1",
+          "mainKey": "wh_dlc07_brt_inf_peasant_bowmen_1",
+          "landKey": "wh_dlc07_brt_inf_peasant_bowmen_1"
+        },
+        {
+          "unitId": "ca_unit_wh_dlc07_brt_inf_peasant_bowmen_2",
+          "mainKey": "wh_dlc07_brt_inf_peasant_bowmen_2",
+          "landKey": "wh_dlc07_brt_inf_peasant_bowmen_2"
+        },
+        {
+          "unitId": "ca_unit_wh_dlc07_brt_inf_spearmen_at_arms_1",
+          "mainKey": "wh_dlc07_brt_inf_spearmen_at_arms_1",
+          "landKey": "wh_dlc07_brt_inf_spearmen_at_arms_1"
+        },
+        {
+          "unitId": "ca_unit_wh_dlc07_brt_peasant_mob_0",
+          "mainKey": "wh_dlc07_brt_peasant_mob_0",
+          "landKey": "wh_dlc07_brt_inf_peasant_mob_0"
+        },
+        {
+          "unitId": "ca_unit_wh_main_brt_inf_men_at_arms",
+          "mainKey": "wh_main_brt_inf_men_at_arms",
+          "landKey": "wh_main_brt_inf_men_at_arms"
+        },
+        {
+          "unitId": "ca_unit_wh_main_brt_inf_peasant_bowmen",
+          "mainKey": "wh_main_brt_inf_peasant_bowmen",
+          "landKey": "wh_main_brt_inf_peasant_bowmen"
+        },
+        {
+          "unitId": "ca_unit_wh_main_brt_inf_spearmen_at_arms",
+          "mainKey": "wh_main_brt_inf_spearmen_at_arms",
+          "landKey": "wh_main_brt_inf_spearmen_at_arms"
+        },
+        {
+          "unitId": "ca_unit_wh_main_chs_inf_chosen_0",
+          "mainKey": "wh_main_chs_inf_chosen_0",
+          "landKey": "wh_main_chs_inf_chosen_0"
+        },
+        {
+          "unitId": "ca_unit_wh_main_chs_inf_chosen_1",
+          "mainKey": "wh_main_chs_inf_chosen_1",
+          "landKey": "wh_main_chs_inf_chosen_1"
+        },
+        {
+          "unitId": "ca_unit_wh_main_emp_inf_crossbowmen",
+          "mainKey": "wh_main_emp_inf_crossbowmen",
+          "landKey": "wh_main_emp_inf_crossbowmen"
+        },
+        {
+          "unitId": "ca_unit_wh_main_emp_inf_spearmen_1",
+          "mainKey": "wh_main_emp_inf_spearmen_1",
+          "landKey": "wh_main_emp_inf_spearmen_1"
+        },
+        {
+          "unitId": "ca_unit_wh_main_emp_inf_swordsmen",
+          "mainKey": "wh_main_emp_inf_swordsmen",
+          "landKey": "wh_main_emp_inf_swordsmen"
+        },
+        {
+          "unitId": "ca_unit_wh_main_vmp_inf_grave_guard_1",
+          "mainKey": "wh_main_vmp_inf_grave_guard_1",
+          "landKey": "wh_main_vmp_inf_grave_guard_1"
+        },
+        {
+          "unitId": "ca_unit_wh_main_vmp_mon_vargheists",
+          "mainKey": "wh_main_vmp_mon_vargheists",
+          "landKey": "wh_main_vmp_mon_vargheists"
+        }
+      ]
+    },
+    {
+      "skillKey": "wh_dlc07_skill_brt_alberic_battle_aspiring_knights",
+      "junctionRowId": "character_skill_level_to_effects_junctions_tables:1ec39de47ad2d03493c2",
+      "effectKey": "wh_dlc07_effect_force_stat_melee_attack_foot_squires",
+      "rank": 1,
+      "scopeKey": "general_to_force_own",
+      "classification": "DIRECT",
+      "blockers": [],
+      "rawValue": 8,
+      "ownerKeys": [
+        "wh_dlc07_brt_alberic"
+      ],
+      "mappings": [
+        {
+          "bonus": "melee_attack_mod",
+          "stat": "melee.meleeAttack",
+          "operation": "add",
+          "value": 8,
+          "routeRowId": "effect_bonus_value_ids_unit_sets_tables:ce1f5396545dcaa80a27",
+          "selectorKey": "dlc07_brt_foot_squires",
+          "basis": "research-classifier/policy.mjs#OP_MELEE_ATTACK_FLAT"
+        }
+      ],
+      "targets": [
+        {
+          "unitId": "ca_unit_wh_dlc07_brt_inf_foot_squires_0",
+          "mainKey": "wh_dlc07_brt_inf_foot_squires_0",
+          "landKey": "wh_dlc07_brt_inf_foot_squires_0"
+        }
+      ]
+    },
+    {
+      "skillKey": "wh_dlc07_skill_brt_alberic_battle_aspiring_knights",
+      "junctionRowId": "character_skill_level_to_effects_junctions_tables:2bd0b7473be55ea2d92a",
+      "effectKey": "wh_dlc07_effect_force_stat_weapon_strength_increase_foot_squires",
+      "rank": 1,
+      "scopeKey": "general_to_force_own",
+      "classification": "DIRECT",
+      "blockers": [],
+      "rawValue": 12,
+      "ownerKeys": [
+        "wh_dlc07_brt_alberic"
+      ],
+      "mappings": [
+        {
+          "bonus": "melee_damage_mod_mult",
+          "stat": "melee.damage.base",
+          "operation": "multiply",
+          "value": 12,
+          "routeRowId": "effect_bonus_value_ids_unit_sets_tables:350aca1015d8b1aa2dc2",
+          "selectorKey": "dlc07_brt_foot_squires",
+          "basis": "skill-batch-01/review.json"
+        },
+        {
+          "bonus": "melee_damage_ap_mod_mult",
+          "stat": "melee.damage.armorPiercing",
+          "operation": "multiply",
+          "value": 12,
+          "routeRowId": "effect_bonus_value_ids_unit_sets_tables:9bfbc63c8f49fac0a9ec",
+          "selectorKey": "dlc07_brt_foot_squires",
+          "basis": "skill-batch-01/review.json"
+        }
+      ],
+      "targets": [
+        {
+          "unitId": "ca_unit_wh_dlc07_brt_inf_foot_squires_0",
+          "mainKey": "wh_dlc07_brt_inf_foot_squires_0",
+          "landKey": "wh_dlc07_brt_inf_foot_squires_0"
+        }
+      ]
+    },
+    {
+      "skillKey": "wh_dlc07_skill_brt_alberic_battle_aspiring_knights",
+      "junctionRowId": "character_skill_level_to_effects_junctions_tables:62609813192ddfbd850f",
+      "effectKey": "wh_dlc07_effect_force_stat_leadership_foot_squires",
+      "rank": 1,
+      "scopeKey": "general_to_force_own",
+      "classification": "DIRECT",
+      "blockers": [],
+      "rawValue": 5,
+      "ownerKeys": [
+        "wh_dlc07_brt_alberic"
+      ],
+      "mappings": [
+        {
+          "bonus": "morale",
+          "stat": "defense.leadership",
+          "operation": "add",
+          "value": 5,
+          "routeRowId": "effect_bonus_value_ids_unit_sets_tables:206a141583ba029c64fe",
+          "selectorKey": "dlc07_brt_foot_squires",
+          "basis": "skill-slice-01/review.json"
+        }
+      ],
+      "targets": [
+        {
+          "unitId": "ca_unit_wh_dlc07_brt_inf_foot_squires_0",
+          "mainKey": "wh_dlc07_brt_inf_foot_squires_0",
+          "landKey": "wh_dlc07_brt_inf_foot_squires_0"
+        }
+      ]
+    },
+    {
+      "skillKey": "wh_dlc07_skill_brt_alberic_battle_champions_of_bordeleaux",
+      "junctionRowId": "character_skill_level_to_effects_junctions_tables:60cdd11481fb67391711",
+      "effectKey": "wh_dlc07_effect_force_stat_bonus_vs_large_kotr",
+      "rank": 1,
+      "scopeKey": "general_to_force_own",
+      "classification": "DIRECT",
+      "blockers": [],
+      "rawValue": 15,
+      "ownerKeys": [
+        "wh_dlc07_brt_alberic"
+      ],
+      "mappings": [
+        {
+          "bonus": "damage_vs_large_entities",
+          "stat": "melee.damage.bonusVsLarge",
+          "operation": "add",
+          "value": 15,
+          "routeRowId": "effect_bonus_value_ids_unit_sets_tables:97cbde1cedbcdfd4c070",
+          "selectorKey": "dlc07_brt_knights_realm",
+          "basis": "skill-slice-01/review.json"
+        }
+      ],
+      "targets": [
+        {
+          "unitId": "ca_unit_wh_main_brt_cav_knights_of_the_realm",
+          "mainKey": "wh_main_brt_cav_knights_of_the_realm",
+          "landKey": "wh_main_brt_cav_knights_of_the_realm"
+        }
+      ]
+    },
+    {
+      "skillKey": "wh_dlc07_skill_brt_alberic_battle_champions_of_bordeleaux",
+      "junctionRowId": "character_skill_level_to_effects_junctions_tables:ab410475f559e9d391ab",
+      "effectKey": "wh_dlc07_effect_force_stat_leadership_kotr",
+      "rank": 1,
+      "scopeKey": "general_to_force_own",
+      "classification": "DIRECT",
+      "blockers": [],
+      "rawValue": 5,
+      "ownerKeys": [
+        "wh_dlc07_brt_alberic"
+      ],
+      "mappings": [
+        {
+          "bonus": "morale",
+          "stat": "defense.leadership",
+          "operation": "add",
+          "value": 5,
+          "routeRowId": "effect_bonus_value_ids_unit_sets_tables:24232178a806d5f14a59",
+          "selectorKey": "dlc07_brt_knights_realm",
+          "basis": "skill-slice-01/review.json"
+        }
+      ],
+      "targets": [
+        {
+          "unitId": "ca_unit_wh_main_brt_cav_knights_of_the_realm",
+          "mainKey": "wh_main_brt_cav_knights_of_the_realm",
+          "landKey": "wh_main_brt_cav_knights_of_the_realm"
+        }
+      ]
+    },
+    {
+      "skillKey": "wh_dlc07_skill_brt_fay_battle_blessed_water",
+      "junctionRowId": "character_skill_level_to_effects_junctions_tables:2f0337252450e94950c3",
+      "effectKey": "wh_dlc07_effect_force_stat_charge_bonus_pct_battle_pilgrims",
+      "rank": 1,
+      "scopeKey": "general_to_force_own",
+      "classification": "DIRECT",
+      "blockers": [],
+      "rawValue": 30,
+      "ownerKeys": [
+        "wh_dlc07_brt_fay_enchantress"
+      ],
+      "mappings": [
+        {
+          "bonus": "charge_bonus",
+          "stat": "melee.chargeBonus",
+          "operation": "multiply",
+          "value": 30,
+          "routeRowId": "effect_bonus_value_ids_unit_sets_tables:134ecddfd5aedcc51742",
+          "selectorKey": "dlc07_brt_inf_battle_pilgrims",
+          "basis": "skill-batch-02/review.json"
+        }
+      ],
+      "targets": [
+        {
+          "unitId": "ca_unit_wh_dlc07_brt_inf_battle_pilgrims_0",
+          "mainKey": "wh_dlc07_brt_inf_battle_pilgrims_0",
+          "landKey": "wh_dlc07_brt_inf_battle_pilgrims_0"
+        }
+      ]
+    }
+  ],
+  "decisions": [
+    {
+      "skillKey": "wh2_dlc07_skill_brt_fay_enchantress_special_1",
+      "decision": "HOLD_PARTIAL",
+      "reason": "Recruitment experience omitted-effect independence not established"
+    },
+    {
+      "skillKey": "wh2_dlc07_skill_brt_louen_special_0",
+      "decision": "HOLD_PARTIAL",
+      "reason": "Recruitment experience omitted-effect independence not established"
+    },
+    {
+      "skillKey": "wh2_dlc14_skill_brt_repanse_the_peoples_hero",
+      "decision": "HOLD_PARTIAL",
+      "reason": "Flat AP operation/replenishment and omitted-effect independence not established"
+    }
+  ]
+}

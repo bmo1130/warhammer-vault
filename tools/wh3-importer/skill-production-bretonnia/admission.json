@@ -1,0 +1,703 @@
+{
+  "format": "wh3-bretonnia-skill-admission-v1",
+  "reviewSha256": "bb53d3b50596429df79c8cc56b562fb01b48329bcbe918f1891c207e536d03dd",
+  "policy": "Complete source rank-1 Skills only; every DIRECT junction reviewed; no partial admission",
+  "skills": [
+    {
+      "skillKey": "wh_dlc07_skill_brt_alberic_battle_aspiring_knights",
+      "name": "Aspiring Knights",
+      "ownerKeys": [
+        "wh_dlc07_brt_alberic"
+      ],
+      "ownerProofs": [
+        {
+          "subtypeKey": "wh_dlc07_brt_alberic",
+          "nodeKey": "wh_dlc07_skill_node_brt_alberic_unique_11",
+          "setKey": "wh_dlc07_skill_node_set_brt_alberic",
+          "nodeRowId": "character_skill_nodes_tables:1f9946647554f79d39c9",
+          "itemRowId": "character_skill_node_set_items_tables:e16eb27d4590ea37618c",
+          "setRowId": "character_skill_node_sets_tables:2a9ab7eac5eed5e47016",
+          "enabled": true,
+          "joins": [
+            [
+              "character_skill_nodes_tables:1f9946647554f79d39c9",
+              "character_skill_key",
+              "character_skills_tables:a3b5af64464aedb90377",
+              "key"
+            ],
+            [
+              "character_skill_node_set_items_tables:e16eb27d4590ea37618c",
+              "item",
+              "character_skill_nodes_tables:1f9946647554f79d39c9",
+              "key"
+            ],
+            [
+              "character_skill_node_set_items_tables:e16eb27d4590ea37618c",
+              "set",
+              "character_skill_node_sets_tables:2a9ab7eac5eed5e47016",
+              "key"
+            ],
+            [
+              "character_skill_node_sets_tables:2a9ab7eac5eed5e47016",
+              "agent_subtype_key",
+              "agent_subtypes_tables:067864922eeaebc662b0",
+              "key"
+            ],
+            [
+              "character_skill_node_sets_tables:2a9ab7eac5eed5e47016",
+              "agent_key",
+              "agents_tables:073101e312bbb9038fea",
+              "key"
+            ]
+          ],
+          "restrictions": {
+            "node": [
+              "",
+              "",
+              ""
+            ],
+            "set": [
+              "",
+              "",
+              ""
+            ]
+          },
+          "ownerName": "Alberic de Bordeleaux",
+          "characterType": "legendary_lord",
+          "availability": "STATIC_TREE_RUNTIME_UNLOCK_NOT_OBSERVED",
+          "prerequisites": [],
+          "lockRowIds": [],
+          "ancillaryLockRowIds": [],
+          "blockers": [],
+          "safeStaticOwner": true
+        }
+      ],
+      "rank": 1,
+      "effects": [
+        {
+          "skillKey": "wh_dlc07_skill_brt_alberic_battle_aspiring_knights",
+          "junctionRowId": "character_skill_level_to_effects_junctions_tables:1ec39de47ad2d03493c2",
+          "effectKey": "wh_dlc07_effect_force_stat_melee_attack_foot_squires",
+          "rank": 1,
+          "rawValue": 8,
+          "scopeKey": "general_to_force_own",
+          "classification": "DIRECT",
+          "blockers": [],
+          "candidateStats": [
+            "melee.meleeAttack"
+          ],
+          "mappings": [
+            {
+              "bonus": "melee_attack_mod",
+              "stat": "melee.meleeAttack",
+              "operation": "add",
+              "value": 8,
+              "routeRowId": "effect_bonus_value_ids_unit_sets_tables:ce1f5396545dcaa80a27",
+              "selectorKey": "dlc07_brt_foot_squires",
+              "basis": "research-classifier/policy.mjs#OP_MELEE_ATTACK_FLAT"
+            }
+          ],
+          "targets": [
+            {
+              "unitId": "ca_unit_wh_dlc07_brt_inf_foot_squires_0",
+              "mainKey": "wh_dlc07_brt_inf_foot_squires_0",
+              "landKey": "wh_dlc07_brt_inf_foot_squires_0"
+            }
+          ],
+          "typedTargets": [
+            {
+              "rowId": "effect_bonus_value_ids_unit_sets_tables:ce1f5396545dcaa80a27",
+              "table": "effect_bonus_value_ids_unit_sets_tables",
+              "bonus": "melee_attack_mod",
+              "selectorKey": "dlc07_brt_foot_squires"
+            }
+          ],
+          "selectorKeys": [
+            "dlc07_brt_foot_squires"
+          ],
+          "productionTargetCount": 1,
+          "nonProductionTargetCount": 1,
+          "unresolvedIdentityCount": 0,
+          "unresolvedApplicabilityBranches": 0,
+          "eligible": true
+        },
+        {
+          "skillKey": "wh_dlc07_skill_brt_alberic_battle_aspiring_knights",
+          "junctionRowId": "character_skill_level_to_effects_junctions_tables:2bd0b7473be55ea2d92a",
+          "effectKey": "wh_dlc07_effect_force_stat_weapon_strength_increase_foot_squires",
+          "rank": 1,
+          "rawValue": 12,
+          "scopeKey": "general_to_force_own",
+          "classification": "DIRECT",
+          "blockers": [],
+          "candidateStats": [
+            "melee.damage.armorPiercing",
+            "melee.damage.base"
+          ],
+          "mappings": [
+            {
+              "bonus": "melee_damage_mod_mult",
+              "stat": "melee.damage.base",
+              "operation": "multiply",
+              "value": 12,
+              "routeRowId": "effect_bonus_value_ids_unit_sets_tables:350aca1015d8b1aa2dc2",
+              "selectorKey": "dlc07_brt_foot_squires",
+              "basis": "skill-batch-01/review.json"
+            },
+            {
+              "bonus": "melee_damage_ap_mod_mult",
+              "stat": "melee.damage.armorPiercing",
+              "operation": "multiply",
+              "value": 12,
+              "routeRowId": "effect_bonus_value_ids_unit_sets_tables:9bfbc63c8f49fac0a9ec",
+              "selectorKey": "dlc07_brt_foot_squires",
+              "basis": "skill-batch-01/review.json"
+            }
+          ],
+          "targets": [
+            {
+              "unitId": "ca_unit_wh_dlc07_brt_inf_foot_squires_0",
+              "mainKey": "wh_dlc07_brt_inf_foot_squires_0",
+              "landKey": "wh_dlc07_brt_inf_foot_squires_0"
+            }
+          ],
+          "typedTargets": [
+            {
+              "rowId": "effect_bonus_value_ids_unit_sets_tables:350aca1015d8b1aa2dc2",
+              "table": "effect_bonus_value_ids_unit_sets_tables",
+              "bonus": "melee_damage_mod_mult",
+              "selectorKey": "dlc07_brt_foot_squires"
+            },
+            {
+              "rowId": "effect_bonus_value_ids_unit_sets_tables:9bfbc63c8f49fac0a9ec",
+              "table": "effect_bonus_value_ids_unit_sets_tables",
+              "bonus": "melee_damage_ap_mod_mult",
+              "selectorKey": "dlc07_brt_foot_squires"
+            }
+          ],
+          "selectorKeys": [
+            "dlc07_brt_foot_squires"
+          ],
+          "productionTargetCount": 1,
+          "nonProductionTargetCount": 1,
+          "unresolvedIdentityCount": 0,
+          "unresolvedApplicabilityBranches": 0,
+          "eligible": true
+        },
+        {
+          "skillKey": "wh_dlc07_skill_brt_alberic_battle_aspiring_knights",
+          "junctionRowId": "character_skill_level_to_effects_junctions_tables:62609813192ddfbd850f",
+          "effectKey": "wh_dlc07_effect_force_stat_leadership_foot_squires",
+          "rank": 1,
+          "rawValue": 5,
+          "scopeKey": "general_to_force_own",
+          "classification": "DIRECT",
+          "blockers": [],
+          "candidateStats": [
+            "defense.leadership"
+          ],
+          "mappings": [
+            {
+              "bonus": "morale",
+              "stat": "defense.leadership",
+              "operation": "add",
+              "value": 5,
+              "routeRowId": "effect_bonus_value_ids_unit_sets_tables:206a141583ba029c64fe",
+              "selectorKey": "dlc07_brt_foot_squires",
+              "basis": "skill-slice-01/review.json"
+            }
+          ],
+          "targets": [
+            {
+              "unitId": "ca_unit_wh_dlc07_brt_inf_foot_squires_0",
+              "mainKey": "wh_dlc07_brt_inf_foot_squires_0",
+              "landKey": "wh_dlc07_brt_inf_foot_squires_0"
+            }
+          ],
+          "typedTargets": [
+            {
+              "rowId": "effect_bonus_value_ids_unit_sets_tables:206a141583ba029c64fe",
+              "table": "effect_bonus_value_ids_unit_sets_tables",
+              "bonus": "morale",
+              "selectorKey": "dlc07_brt_foot_squires"
+            }
+          ],
+          "selectorKeys": [
+            "dlc07_brt_foot_squires"
+          ],
+          "productionTargetCount": 1,
+          "nonProductionTargetCount": 1,
+          "unresolvedIdentityCount": 0,
+          "unresolvedApplicabilityBranches": 0,
+          "eligible": true
+        }
+      ],
+      "targets": [
+        {
+          "unitId": "ca_unit_wh_dlc07_brt_inf_foot_squires_0",
+          "mainKey": "wh_dlc07_brt_inf_foot_squires_0",
+          "landKey": "wh_dlc07_brt_inf_foot_squires_0"
+        }
+      ],
+      "modifiers": [
+        {
+          "id": "ca-skill:wh_dlc07_skill_brt_alberic_battle_aspiring_knights:wh_dlc07_brt_alberic:1:wh_dlc07_effect_force_stat_melee_attack_foot_squires:wh_dlc07_brt_inf_foot_squires_0:melee.meleeAttack",
+          "rank": 1,
+          "unitId": "ca_unit_wh_dlc07_brt_inf_foot_squires_0",
+          "effectKey": "wh_dlc07_effect_force_stat_melee_attack_foot_squires",
+          "stat": "melee.meleeAttack",
+          "operation": "add",
+          "value": 8
+        },
+        {
+          "id": "ca-skill:wh_dlc07_skill_brt_alberic_battle_aspiring_knights:wh_dlc07_brt_alberic:1:wh_dlc07_effect_force_stat_weapon_strength_increase_foot_squires:wh_dlc07_brt_inf_foot_squires_0:melee.damage.base",
+          "rank": 1,
+          "unitId": "ca_unit_wh_dlc07_brt_inf_foot_squires_0",
+          "effectKey": "wh_dlc07_effect_force_stat_weapon_strength_increase_foot_squires",
+          "stat": "melee.damage.base",
+          "operation": "multiply",
+          "value": 12
+        },
+        {
+          "id": "ca-skill:wh_dlc07_skill_brt_alberic_battle_aspiring_knights:wh_dlc07_brt_alberic:1:wh_dlc07_effect_force_stat_weapon_strength_increase_foot_squires:wh_dlc07_brt_inf_foot_squires_0:melee.damage.armorPiercing",
+          "rank": 1,
+          "unitId": "ca_unit_wh_dlc07_brt_inf_foot_squires_0",
+          "effectKey": "wh_dlc07_effect_force_stat_weapon_strength_increase_foot_squires",
+          "stat": "melee.damage.armorPiercing",
+          "operation": "multiply",
+          "value": 12
+        },
+        {
+          "id": "ca-skill:wh_dlc07_skill_brt_alberic_battle_aspiring_knights:wh_dlc07_brt_alberic:1:wh_dlc07_effect_force_stat_leadership_foot_squires:wh_dlc07_brt_inf_foot_squires_0:defense.leadership",
+          "rank": 1,
+          "unitId": "ca_unit_wh_dlc07_brt_inf_foot_squires_0",
+          "effectKey": "wh_dlc07_effect_force_stat_leadership_foot_squires",
+          "stat": "defense.leadership",
+          "operation": "add",
+          "value": 5
+        }
+      ],
+      "status": "EXISTING_ADMISSION_REVERIFIED",
+      "omittedEffectJunctions": []
+    },
+    {
+      "skillKey": "wh_dlc07_skill_brt_alberic_battle_champions_of_bordeleaux",
+      "name": "Champions of Bordeleaux",
+      "ownerKeys": [
+        "wh_dlc07_brt_alberic"
+      ],
+      "ownerProofs": [
+        {
+          "subtypeKey": "wh_dlc07_brt_alberic",
+          "nodeKey": "wh_dlc07_skill_node_brt_alberic_unique_12",
+          "setKey": "wh_dlc07_skill_node_set_brt_alberic",
+          "nodeRowId": "character_skill_nodes_tables:afd599be227fc129f250",
+          "itemRowId": "character_skill_node_set_items_tables:2d750b41d0d515e009e9",
+          "setRowId": "character_skill_node_sets_tables:2a9ab7eac5eed5e47016",
+          "enabled": true,
+          "joins": [
+            [
+              "character_skill_nodes_tables:afd599be227fc129f250",
+              "character_skill_key",
+              "character_skills_tables:49c9c26663fdd6c2914b",
+              "key"
+            ],
+            [
+              "character_skill_node_set_items_tables:2d750b41d0d515e009e9",
+              "item",
+              "character_skill_nodes_tables:afd599be227fc129f250",
+              "key"
+            ],
+            [
+              "character_skill_node_set_items_tables:2d750b41d0d515e009e9",
+              "set",
+              "character_skill_node_sets_tables:2a9ab7eac5eed5e47016",
+              "key"
+            ],
+            [
+              "character_skill_node_sets_tables:2a9ab7eac5eed5e47016",
+              "agent_subtype_key",
+              "agent_subtypes_tables:067864922eeaebc662b0",
+              "key"
+            ],
+            [
+              "character_skill_node_sets_tables:2a9ab7eac5eed5e47016",
+              "agent_key",
+              "agents_tables:073101e312bbb9038fea",
+              "key"
+            ]
+          ],
+          "restrictions": {
+            "node": [
+              "",
+              "",
+              ""
+            ],
+            "set": [
+              "",
+              "",
+              ""
+            ]
+          },
+          "ownerName": "Alberic de Bordeleaux",
+          "characterType": "legendary_lord",
+          "availability": "STATIC_TREE_RUNTIME_UNLOCK_NOT_OBSERVED",
+          "prerequisites": [],
+          "lockRowIds": [],
+          "ancillaryLockRowIds": [],
+          "blockers": [],
+          "safeStaticOwner": true
+        }
+      ],
+      "rank": 1,
+      "effects": [
+        {
+          "skillKey": "wh_dlc07_skill_brt_alberic_battle_champions_of_bordeleaux",
+          "junctionRowId": "character_skill_level_to_effects_junctions_tables:60cdd11481fb67391711",
+          "effectKey": "wh_dlc07_effect_force_stat_bonus_vs_large_kotr",
+          "rank": 1,
+          "rawValue": 15,
+          "scopeKey": "general_to_force_own",
+          "classification": "DIRECT",
+          "blockers": [],
+          "candidateStats": [
+            "melee.damage.bonusVsLarge"
+          ],
+          "mappings": [
+            {
+              "bonus": "damage_vs_large_entities",
+              "stat": "melee.damage.bonusVsLarge",
+              "operation": "add",
+              "value": 15,
+              "routeRowId": "effect_bonus_value_ids_unit_sets_tables:97cbde1cedbcdfd4c070",
+              "selectorKey": "dlc07_brt_knights_realm",
+              "basis": "skill-slice-01/review.json"
+            }
+          ],
+          "targets": [
+            {
+              "unitId": "ca_unit_wh_main_brt_cav_knights_of_the_realm",
+              "mainKey": "wh_main_brt_cav_knights_of_the_realm",
+              "landKey": "wh_main_brt_cav_knights_of_the_realm"
+            }
+          ],
+          "typedTargets": [
+            {
+              "rowId": "effect_bonus_value_ids_unit_sets_tables:97cbde1cedbcdfd4c070",
+              "table": "effect_bonus_value_ids_unit_sets_tables",
+              "bonus": "damage_vs_large_entities",
+              "selectorKey": "dlc07_brt_knights_realm"
+            }
+          ],
+          "selectorKeys": [
+            "dlc07_brt_knights_realm"
+          ],
+          "productionTargetCount": 1,
+          "nonProductionTargetCount": 1,
+          "unresolvedIdentityCount": 0,
+          "unresolvedApplicabilityBranches": 0,
+          "eligible": true
+        },
+        {
+          "skillKey": "wh_dlc07_skill_brt_alberic_battle_champions_of_bordeleaux",
+          "junctionRowId": "character_skill_level_to_effects_junctions_tables:ab410475f559e9d391ab",
+          "effectKey": "wh_dlc07_effect_force_stat_leadership_kotr",
+          "rank": 1,
+          "rawValue": 5,
+          "scopeKey": "general_to_force_own",
+          "classification": "DIRECT",
+          "blockers": [],
+          "candidateStats": [
+            "defense.leadership"
+          ],
+          "mappings": [
+            {
+              "bonus": "morale",
+              "stat": "defense.leadership",
+              "operation": "add",
+              "value": 5,
+              "routeRowId": "effect_bonus_value_ids_unit_sets_tables:24232178a806d5f14a59",
+              "selectorKey": "dlc07_brt_knights_realm",
+              "basis": "skill-slice-01/review.json"
+            }
+          ],
+          "targets": [
+            {
+              "unitId": "ca_unit_wh_main_brt_cav_knights_of_the_realm",
+              "mainKey": "wh_main_brt_cav_knights_of_the_realm",
+              "landKey": "wh_main_brt_cav_knights_of_the_realm"
+            }
+          ],
+          "typedTargets": [
+            {
+              "rowId": "effect_bonus_value_ids_unit_sets_tables:24232178a806d5f14a59",
+              "table": "effect_bonus_value_ids_unit_sets_tables",
+              "bonus": "morale",
+              "selectorKey": "dlc07_brt_knights_realm"
+            }
+          ],
+          "selectorKeys": [
+            "dlc07_brt_knights_realm"
+          ],
+          "productionTargetCount": 1,
+          "nonProductionTargetCount": 1,
+          "unresolvedIdentityCount": 0,
+          "unresolvedApplicabilityBranches": 0,
+          "eligible": true
+        }
+      ],
+      "targets": [
+        {
+          "unitId": "ca_unit_wh_main_brt_cav_knights_of_the_realm",
+          "mainKey": "wh_main_brt_cav_knights_of_the_realm",
+          "landKey": "wh_main_brt_cav_knights_of_the_realm"
+        }
+      ],
+      "modifiers": [
+        {
+          "id": "ca-skill:wh_dlc07_skill_brt_alberic_battle_champions_of_bordeleaux:wh_dlc07_brt_alberic:1:wh_dlc07_effect_force_stat_bonus_vs_large_kotr:wh_main_brt_cav_knights_of_the_realm:melee.damage.bonusVsLarge",
+          "rank": 1,
+          "unitId": "ca_unit_wh_main_brt_cav_knights_of_the_realm",
+          "effectKey": "wh_dlc07_effect_force_stat_bonus_vs_large_kotr",
+          "stat": "melee.damage.bonusVsLarge",
+          "operation": "add",
+          "value": 15
+        },
+        {
+          "id": "ca-skill:wh_dlc07_skill_brt_alberic_battle_champions_of_bordeleaux:wh_dlc07_brt_alberic:1:wh_dlc07_effect_force_stat_leadership_kotr:wh_main_brt_cav_knights_of_the_realm:defense.leadership",
+          "rank": 1,
+          "unitId": "ca_unit_wh_main_brt_cav_knights_of_the_realm",
+          "effectKey": "wh_dlc07_effect_force_stat_leadership_kotr",
+          "stat": "defense.leadership",
+          "operation": "add",
+          "value": 5
+        }
+      ],
+      "status": "EXISTING_ADMISSION_REVERIFIED",
+      "omittedEffectJunctions": []
+    },
+    {
+      "skillKey": "wh_dlc07_skill_brt_fay_battle_blessed_water",
+      "name": "Blessed Water",
+      "ownerKeys": [
+        "wh_dlc07_brt_fay_enchantress"
+      ],
+      "ownerProofs": [
+        {
+          "subtypeKey": "wh_dlc07_brt_fay_enchantress",
+          "nodeKey": "wh_dlc07_skill_node_brt_fay_enchantress_unique_09",
+          "setKey": "wh_dlc07_skill_node_set_brt_fay_enchantress",
+          "nodeRowId": "character_skill_nodes_tables:71828b150172acb559f8",
+          "itemRowId": "character_skill_node_set_items_tables:63d3fb5f5e0c859c2797",
+          "setRowId": "character_skill_node_sets_tables:1a13acf51d8af48bcce9",
+          "enabled": true,
+          "joins": [
+            [
+              "character_skill_nodes_tables:71828b150172acb559f8",
+              "character_skill_key",
+              "character_skills_tables:41319bcac6f5e66d200a",
+              "key"
+            ],
+            [
+              "character_skill_node_set_items_tables:63d3fb5f5e0c859c2797",
+              "item",
+              "character_skill_nodes_tables:71828b150172acb559f8",
+              "key"
+            ],
+            [
+              "character_skill_node_set_items_tables:63d3fb5f5e0c859c2797",
+              "set",
+              "character_skill_node_sets_tables:1a13acf51d8af48bcce9",
+              "key"
+            ],
+            [
+              "character_skill_node_sets_tables:1a13acf51d8af48bcce9",
+              "agent_subtype_key",
+              "agent_subtypes_tables:cae4fc22d99cad5a6d62",
+              "key"
+            ],
+            [
+              "character_skill_node_sets_tables:1a13acf51d8af48bcce9",
+              "agent_key",
+              "agents_tables:073101e312bbb9038fea",
+              "key"
+            ]
+          ],
+          "restrictions": {
+            "node": [
+              "",
+              "",
+              ""
+            ],
+            "set": [
+              "",
+              "",
+              ""
+            ]
+          },
+          "ownerName": "Fay Enchantress",
+          "characterType": "legendary_lord",
+          "availability": "STATIC_TREE_RUNTIME_UNLOCK_NOT_OBSERVED",
+          "prerequisites": [],
+          "lockRowIds": [],
+          "ancillaryLockRowIds": [],
+          "blockers": [],
+          "safeStaticOwner": true
+        }
+      ],
+      "rank": 1,
+      "effects": [
+        {
+          "skillKey": "wh_dlc07_skill_brt_fay_battle_blessed_water",
+          "junctionRowId": "character_skill_level_to_effects_junctions_tables:2f0337252450e94950c3",
+          "effectKey": "wh_dlc07_effect_force_stat_charge_bonus_pct_battle_pilgrims",
+          "rank": 1,
+          "rawValue": 30,
+          "scopeKey": "general_to_force_own",
+          "classification": "DIRECT",
+          "blockers": [],
+          "candidateStats": [
+            "melee.chargeBonus"
+          ],
+          "mappings": [
+            {
+              "bonus": "charge_bonus",
+              "stat": "melee.chargeBonus",
+              "operation": "multiply",
+              "value": 30,
+              "routeRowId": "effect_bonus_value_ids_unit_sets_tables:134ecddfd5aedcc51742",
+              "selectorKey": "dlc07_brt_inf_battle_pilgrims",
+              "basis": "skill-batch-02/review.json"
+            }
+          ],
+          "targets": [
+            {
+              "unitId": "ca_unit_wh_dlc07_brt_inf_battle_pilgrims_0",
+              "mainKey": "wh_dlc07_brt_inf_battle_pilgrims_0",
+              "landKey": "wh_dlc07_brt_inf_battle_pilgrims_0"
+            }
+          ],
+          "typedTargets": [
+            {
+              "rowId": "effect_bonus_value_ids_unit_sets_tables:134ecddfd5aedcc51742",
+              "table": "effect_bonus_value_ids_unit_sets_tables",
+              "bonus": "charge_bonus",
+              "selectorKey": "dlc07_brt_inf_battle_pilgrims"
+            }
+          ],
+          "selectorKeys": [
+            "dlc07_brt_inf_battle_pilgrims"
+          ],
+          "productionTargetCount": 1,
+          "nonProductionTargetCount": 2,
+          "unresolvedIdentityCount": 0,
+          "unresolvedApplicabilityBranches": 0,
+          "eligible": true
+        }
+      ],
+      "targets": [
+        {
+          "unitId": "ca_unit_wh_dlc07_brt_inf_battle_pilgrims_0",
+          "mainKey": "wh_dlc07_brt_inf_battle_pilgrims_0",
+          "landKey": "wh_dlc07_brt_inf_battle_pilgrims_0"
+        }
+      ],
+      "modifiers": [
+        {
+          "id": "ca-skill:wh_dlc07_skill_brt_fay_battle_blessed_water:wh_dlc07_brt_fay_enchantress:1:wh_dlc07_effect_force_stat_charge_bonus_pct_battle_pilgrims:wh_dlc07_brt_inf_battle_pilgrims_0:melee.chargeBonus",
+          "rank": 1,
+          "unitId": "ca_unit_wh_dlc07_brt_inf_battle_pilgrims_0",
+          "effectKey": "wh_dlc07_effect_force_stat_charge_bonus_pct_battle_pilgrims",
+          "stat": "melee.chargeBonus",
+          "operation": "multiply",
+          "value": 30
+        }
+      ],
+      "status": "EXISTING_ADMISSION_REVERIFIED",
+      "omittedEffectJunctions": []
+    }
+  ],
+  "modifierCount": 7,
+  "newSkillKeys": [],
+  "newEffectCount": 0,
+  "newModifierCount": 0,
+  "newProductionUnitIds": [],
+  "overlaps": [],
+  "overlapVerdict": "NO VERIFIED MULTI-SKILL TARGET",
+  "heldDirectCandidates": [
+    {
+      "skillKey": "wh2_dlc07_skill_brt_fay_enchantress_special_1",
+      "directJunctions": [
+        "character_skill_level_to_effects_junctions_tables:28239f35f0e24c55a246",
+        "character_skill_level_to_effects_junctions_tables:4b92ad1e83e152323d60"
+      ],
+      "omittedJunctions": [
+        {
+          "junctionRowId": "character_skill_level_to_effects_junctions_tables:892ac24e199f6031109f",
+          "effectKey": "wh2_main_effect_force_army_campaign_experience_base_brt_grail_knights_guardians",
+          "classification": "NON_UNIT_STAT",
+          "blockers": [
+            "NON_UNIT_MECHANIC"
+          ]
+        }
+      ],
+      "blockers": [
+        "NON_UNIT_MECHANIC",
+        "PARTIAL_EFFECT_POLICY_NOT_APPROVED"
+      ]
+    },
+    {
+      "skillKey": "wh2_dlc07_skill_brt_louen_special_0",
+      "directJunctions": [
+        "character_skill_level_to_effects_junctions_tables:a0e719a7dc99321ec080"
+      ],
+      "omittedJunctions": [
+        {
+          "junctionRowId": "character_skill_level_to_effects_junctions_tables:acc963a250998cef2c73",
+          "effectKey": "wh2_main_effect_force_army_campaign_experience_base_brt_knights_realm_questing_knights",
+          "classification": "NON_UNIT_STAT",
+          "blockers": [
+            "NON_UNIT_MECHANIC"
+          ]
+        }
+      ],
+      "blockers": [
+        "NON_UNIT_MECHANIC",
+        "PARTIAL_EFFECT_POLICY_NOT_APPROVED"
+      ]
+    },
+    {
+      "skillKey": "wh2_dlc14_skill_brt_repanse_the_peoples_hero",
+      "directJunctions": [
+        "character_skill_level_to_effects_junctions_tables:985dbe2f6a06f8efc6e2"
+      ],
+      "omittedJunctions": [
+        {
+          "junctionRowId": "character_skill_level_to_effects_junctions_tables:6b0b41aa2b400110172f",
+          "effectKey": "wh_main_effect_force_all_campaign_replenishment_rate",
+          "classification": "UNSUPPORTED",
+          "blockers": [
+            "UNRESOLVED_UNIT_TARGET",
+            "UNSUPPORTED_REPLENISHMENT_PATH"
+          ]
+        },
+        {
+          "junctionRowId": "character_skill_level_to_effects_junctions_tables:f2eab2e131487dc7b578",
+          "effectKey": "wh2_dlc14_effect_armour_piercing_damage_infantry",
+          "classification": "REVIEW_REQUIRED",
+          "blockers": [
+            "NO_VERIFIED_NUMERIC_MAPPING",
+            "UNREVIEWED_FLAT_AP_OPERATION"
+          ]
+        }
+      ],
+      "blockers": [
+        "NO_VERIFIED_NUMERIC_MAPPING",
+        "PARTIAL_EFFECT_POLICY_NOT_APPROVED",
+        "UNRESOLVED_UNIT_TARGET",
+        "UNREVIEWED_FLAT_AP_OPERATION",
+        "UNSUPPORTED_REPLENISHMENT_PATH"
+      ]
+    }
+  ]
+}

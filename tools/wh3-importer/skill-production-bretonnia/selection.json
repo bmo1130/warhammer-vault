@@ -1,0 +1,12 @@
+{
+  "baselineCommit": "c07d38699e2d07e02f428a4cb4a8ffdb0454ce91",
+  "cultureKey": "wh_main_brt_bretonnia",
+  "discovery": "culture -> subculture -> factions -> exact permitted subtypes -> subtype node sets -> membership -> node -> skill",
+  "includeDisabledAndBackgroundRowsInInventory": true,
+  "foreignOwnerRelations": "preserve reverse direct node/set references separately; never add them to Bretonnia owner allowlists",
+  "rankPolicy": "only complete single source rank [1]",
+  "partialPolicy": "not automatically allowed; independent-effect safety requires separate review",
+  "selectorPolicy": "reuse proved positive single-field explicit main/caste/land-class unions only",
+  "scopeKey": "general_to_force_own",
+  "maxSourceRows": 40000
+}

@@ -1,0 +1,135 @@
+{
+  "format": "wh3-bretonnia-skill-calculator-projection-v1",
+  "sourceSha256": "479991adfb88fccece9f7040268e05a888e603f5dc767dc0a196d50b77697409",
+  "registryPaths": [
+    "src/data/caSkillEffect.json",
+    "src/data/caSkillBatch01.json",
+    "src/data/caSkillBatch02.json"
+  ],
+  "skills": [
+    {
+      "skillKey": "wh_dlc07_skill_brt_alberic_battle_aspiring_knights",
+      "ownerKeys": [
+        "wh_dlc07_brt_alberic"
+      ],
+      "rank": 1,
+      "effectJunctionIds": [
+        "character_skill_level_to_effects_junctions_tables:1ec39de47ad2d03493c2",
+        "character_skill_level_to_effects_junctions_tables:2bd0b7473be55ea2d92a",
+        "character_skill_level_to_effects_junctions_tables:62609813192ddfbd850f"
+      ],
+      "targets": [
+        {
+          "unitId": "ca_unit_wh_dlc07_brt_inf_foot_squires_0",
+          "mainKey": "wh_dlc07_brt_inf_foot_squires_0",
+          "landKey": "wh_dlc07_brt_inf_foot_squires_0"
+        }
+      ],
+      "modifiers": [
+        {
+          "id": "ca-skill:wh_dlc07_skill_brt_alberic_battle_aspiring_knights:wh_dlc07_brt_alberic:1:wh_dlc07_effect_force_stat_melee_attack_foot_squires:wh_dlc07_brt_inf_foot_squires_0:melee.meleeAttack",
+          "rank": 1,
+          "unitId": "ca_unit_wh_dlc07_brt_inf_foot_squires_0",
+          "effectKey": "wh_dlc07_effect_force_stat_melee_attack_foot_squires",
+          "stat": "melee.meleeAttack",
+          "operation": "add",
+          "value": 8
+        },
+        {
+          "id": "ca-skill:wh_dlc07_skill_brt_alberic_battle_aspiring_knights:wh_dlc07_brt_alberic:1:wh_dlc07_effect_force_stat_weapon_strength_increase_foot_squires:wh_dlc07_brt_inf_foot_squires_0:melee.damage.base",
+          "rank": 1,
+          "unitId": "ca_unit_wh_dlc07_brt_inf_foot_squires_0",
+          "effectKey": "wh_dlc07_effect_force_stat_weapon_strength_increase_foot_squires",
+          "stat": "melee.damage.base",
+          "operation": "multiply",
+          "value": 12
+        },
+        {
+          "id": "ca-skill:wh_dlc07_skill_brt_alberic_battle_aspiring_knights:wh_dlc07_brt_alberic:1:wh_dlc07_effect_force_stat_weapon_strength_increase_foot_squires:wh_dlc07_brt_inf_foot_squires_0:melee.damage.armorPiercing",
+          "rank": 1,
+          "unitId": "ca_unit_wh_dlc07_brt_inf_foot_squires_0",
+          "effectKey": "wh_dlc07_effect_force_stat_weapon_strength_increase_foot_squires",
+          "stat": "melee.damage.armorPiercing",
+          "operation": "multiply",
+          "value": 12
+        },
+        {
+          "id": "ca-skill:wh_dlc07_skill_brt_alberic_battle_aspiring_knights:wh_dlc07_brt_alberic:1:wh_dlc07_effect_force_stat_leadership_foot_squires:wh_dlc07_brt_inf_foot_squires_0:defense.leadership",
+          "rank": 1,
+          "unitId": "ca_unit_wh_dlc07_brt_inf_foot_squires_0",
+          "effectKey": "wh_dlc07_effect_force_stat_leadership_foot_squires",
+          "stat": "defense.leadership",
+          "operation": "add",
+          "value": 5
+        }
+      ]
+    },
+    {
+      "skillKey": "wh_dlc07_skill_brt_alberic_battle_champions_of_bordeleaux",
+      "ownerKeys": [
+        "wh_dlc07_brt_alberic"
+      ],
+      "rank": 1,
+      "effectJunctionIds": [
+        "character_skill_level_to_effects_junctions_tables:60cdd11481fb67391711",
+        "character_skill_level_to_effects_junctions_tables:ab410475f559e9d391ab"
+      ],
+      "targets": [
+        {
+          "unitId": "ca_unit_wh_main_brt_cav_knights_of_the_realm",
+          "mainKey": "wh_main_brt_cav_knights_of_the_realm",
+          "landKey": "wh_main_brt_cav_knights_of_the_realm"
+        }
+      ],
+      "modifiers": [
+        {
+          "id": "ca-skill:wh_dlc07_skill_brt_alberic_battle_champions_of_bordeleaux:wh_dlc07_brt_alberic:1:wh_dlc07_effect_force_stat_bonus_vs_large_kotr:wh_main_brt_cav_knights_of_the_realm:melee.damage.bonusVsLarge",
+          "rank": 1,
+          "unitId": "ca_unit_wh_main_brt_cav_knights_of_the_realm",
+          "effectKey": "wh_dlc07_effect_force_stat_bonus_vs_large_kotr",
+          "stat": "melee.damage.bonusVsLarge",
+          "operation": "add",
+          "value": 15
+        },
+        {
+          "id": "ca-skill:wh_dlc07_skill_brt_alberic_battle_champions_of_bordeleaux:wh_dlc07_brt_alberic:1:wh_dlc07_effect_force_stat_leadership_kotr:wh_main_brt_cav_knights_of_the_realm:defense.leadership",
+          "rank": 1,
+          "unitId": "ca_unit_wh_main_brt_cav_knights_of_the_realm",
+          "effectKey": "wh_dlc07_effect_force_stat_leadership_kotr",
+          "stat": "defense.leadership",
+          "operation": "add",
+          "value": 5
+        }
+      ]
+    },
+    {
+      "skillKey": "wh_dlc07_skill_brt_fay_battle_blessed_water",
+      "ownerKeys": [
+        "wh_dlc07_brt_fay_enchantress"
+      ],
+      "rank": 1,
+      "effectJunctionIds": [
+        "character_skill_level_to_effects_junctions_tables:2f0337252450e94950c3"
+      ],
+      "targets": [
+        {
+          "unitId": "ca_unit_wh_dlc07_brt_inf_battle_pilgrims_0",
+          "mainKey": "wh_dlc07_brt_inf_battle_pilgrims_0",
+          "landKey": "wh_dlc07_brt_inf_battle_pilgrims_0"
+        }
+      ],
+      "modifiers": [
+        {
+          "id": "ca-skill:wh_dlc07_skill_brt_fay_battle_blessed_water:wh_dlc07_brt_fay_enchantress:1:wh_dlc07_effect_force_stat_charge_bonus_pct_battle_pilgrims:wh_dlc07_brt_inf_battle_pilgrims_0:melee.chargeBonus",
+          "rank": 1,
+          "unitId": "ca_unit_wh_dlc07_brt_inf_battle_pilgrims_0",
+          "effectKey": "wh_dlc07_effect_force_stat_charge_bonus_pct_battle_pilgrims",
+          "stat": "melee.chargeBonus",
+          "operation": "multiply",
+          "value": 30
+        }
+      ]
+    }
+  ],
+  "application": "Existing registry is semantically equal to this exact full-source projection; no new admission"
+}
