@@ -1,0 +1,54 @@
+{
+  "sourceKind": "CA_SKILL",
+  "admittedSkills": [
+    "wh_dlc07_skill_brt_alberic_battle_aspiring_knights"
+  ],
+  "admittedTargets": [
+    {
+      "unitId": "ca_unit_wh_dlc07_brt_inf_foot_squires_0",
+      "mainKey": "wh_dlc07_brt_inf_foot_squires_0",
+      "landKey": "wh_dlc07_brt_inf_foot_squires_0"
+    }
+  ],
+  "effects": 3,
+  "modifiers": 4,
+  "omittedTargets": [
+    {
+      "mainKey": "wh_pro04_brt_inf_foot_squires_ror_0",
+      "reason": "TARGET_NOT_IN_PRODUCTION"
+    }
+  ],
+  "deferredSkills": [
+    {
+      "skillKey": "wh2_dlc11_skill_brt_army_buff_low_born_militia",
+      "status": "REVIEW_REQUIRED",
+      "reason": "MULTI_RANK_APPLICATION_SEMANTICS_UNPROVEN"
+    },
+    {
+      "skillKey": "wh_main_skill_brt_lord_battle_basic_training",
+      "status": "UNSUPPORTED",
+      "reason": "VIGOUR_PATH_ABSENT_AND_CLASS_SELECTOR_UNRESOLVED"
+    },
+    {
+      "skillKey": "wh_main_skill_brt_all_unique_ladys_mantle",
+      "status": "REVIEW_REQUIRED",
+      "reason": "CHARACTER_SELF_NOT_PRODUCTION_UNIT_AND_CLASS_SELECTOR"
+    },
+    {
+      "skillKey": "wh_main_skill_brt_champion_unique_paladin_pegasus",
+      "status": "NON_UNIT_STAT",
+      "reason": "MOUNT_UNLOCK_NOT_NUMERIC_UNIT_STAT_TYPED_ROUTE_UNRESOLVED"
+    },
+    {
+      "skillKey": "wh2_dlc07_skill_brt_louen_special_0",
+      "status": "SUPPORTED_WITH_LIMITATION",
+      "reason": "MIXED_SKILL_NOT_ADMITTED_IN_BOUNDED_SUBSET"
+    }
+  ],
+  "existingSlice": {
+    "skillKey": "wh_dlc07_skill_brt_alberic_battle_champions_of_bordeleaux",
+    "action": "PRESERVE_SEPARATE_ORIGINAL_PROJECTION"
+  },
+  "reviewSha256": "11732dc9d507162ea352d2605164d7620d0c6e845173308dba5b390a1f7065b2",
+  "projectionSha256": "690773406346b9a6e461302dc40df540d2c0a74090652a6b96c440c93f374f0d"
+}

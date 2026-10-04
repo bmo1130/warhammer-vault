@@ -115,7 +115,7 @@ test('review rejects out-of-batch inventory/decision or existing policy drift, a
   const changed=structuredClone(baseline);changed.ownForceScope.target='region';assert.throws(()=>a.verifyPolicyExpansion(changed),/Only reviewed/);
   const inventory=structuredClone(selected);inventory.push(inventory[0]);const altered=args.slice();altered[5]=inventory;
   assert.throws(()=>a.reviewMappings(...altered),/inventory drift/);
-  const {verifyProtected}=await import('../tools/wh3-importer/skill-slice-01/protected.mjs');
+  const {verifyProtected}=await import('../tools/wh3-importer/skill-batch-01/protected.mjs');
   for(const [path,hash] of Object.entries(manifest.protectedFiles)) verifyProtected(path,hash);
   assert.equal(units.filter(u=>u.gameVersion!=='sample').length,101);assert.equal(units.filter(u=>u.gameVersion==='sample').length,5);
 });

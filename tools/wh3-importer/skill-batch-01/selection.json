@@ -1,0 +1,14 @@
+{
+  "baselineCommit": "183b425497ed9db2c82b57297321090699f704f9",
+  "skills": [
+    {"key":"wh_dlc07_skill_brt_alberic_battle_champions_of_bordeleaux","pattern":"Existing legendary Lord / single-rank explicit target anchor"},
+    {"key":"wh_dlc07_skill_brt_alberic_battle_aspiring_knights","pattern":"Legendary Lord / single-rank multi-effect numeric explicit target"},
+    {"key":"wh2_dlc11_skill_brt_army_buff_low_born_militia","pattern":"Generic Lord / three ranks with changing effect sets"},
+    {"key":"wh_main_skill_brt_lord_battle_basic_training","pattern":"Generic Lord / force-wide typed bonus outside current UnitStatPath"},
+    {"key":"wh_main_skill_brt_all_unique_ladys_mantle","pattern":"Shared Lord/Hero owners / character-self numeric effect"},
+    {"key":"wh_main_skill_brt_champion_unique_paladin_pegasus","pattern":"Generic Hero / character-self mount unlock"},
+    {"key":"wh2_dlc07_skill_brt_louen_special_0","pattern":"Another legendary Lord / mixed unit upkeep and campaign XP"}
+  ],
+  "boundary":"Seven exact skills only. Preliminary node metadata for the generic Bretonnian Lord and Paladin was used for selection; no Bretonnia-wide skill/effect scan. No multi-rank runtime semantics inferred from numbers.",
+  "admissionCandidate":"wh_dlc07_skill_brt_alberic_battle_aspiring_knights"
+}
