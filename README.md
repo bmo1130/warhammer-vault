@@ -41,6 +41,32 @@ npm run dev
 
 ## 유닛 데이터 계약
 
+### Modifier 계산 엔진 (최소 버전)
+
+`src/domain/unitModifiers.ts`의 `applyModifiers(baseUnit, modifiers)`는 새 Unit을
+반환하는 순수 함수입니다. 기존 `Modifier`의 `id/stat/operation/value`를 사용하는
+`UnitStatModifier`와 숫자 원본 필드 `UnitStatPath`를 재사용합니다. 입력 Unit과
+modifier는 변경하지 않으며 결과의 중첩 객체도 독립된 복사본입니다.
+
+- `set`: 기준값 설정 → `add`: flat 합산 → `multiply`: percent 합산 적용.
+- `multiply.value`는 percentage point입니다. +10과 +20은 +30%로 합산하며
+  결과는 `(set 또는 base + flat 합계) × (1 + percent 합계 / 100)`입니다.
+- 입력 순서와 무관하게 ID 순서로 합산합니다. 중복 ID, 서로 다른 SET 값,
+  잘못된 경로·비숫자·비유한 값·계산 overflow는 거부합니다.
+- Unknown은 SET을 포함해 그대로 unknown이며, 실제 0에는 적용합니다.
+  누락된 그룹/필드를 만들지 않습니다. 내부 반올림이나 필드별 clamp는 없습니다.
+- 총 무기 피해는 modifier 대상이 아닙니다. 변경된 base/AP에서 기존 damage
+  helper가 계산하며, 한쪽이 unknown이면 합계도 unknown입니다.
+- `applyModifiersWithBreakdown`은 Unit과 별도로 stat별 base/SET/flat/percent,
+  결과, 적용 또는 unknown 상태와 modifier ID 목록을 반환합니다.
+
+이는 전쟁서고 내부 계산 계약이며 WH3의 실제 stacking 규칙을 재현한다는 뜻은
+아닙니다. 목록은 **호출자가 이미 적용 대상으로 선택한 modifier**여야 합니다.
+scope/조건/태그 판정 및 실제 WH3 effect 데이터는 아직 연결하지 않았습니다.
+향후 연구·스킬·랜드마크 연결 계층이 대상 목록을 결정해 이 엔진을 사용할 수 있습니다.
+테스트용 Offensive/Defensive/Economy/Mobility profile은 `tests/fixtures/modifiers.ts`
+에만 있으며 Production 데이터와 UI에는 포함되지 않습니다.
+
 ID, 이름, `factionId`, 설명과 출처 메타데이터는 최상위에 유지합니다. 전투·캠페인 원본값은 다음 그룹으로 나눕니다.
 
 | 그룹 | 책임 |
