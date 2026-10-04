@@ -3,7 +3,7 @@ import { Link, useSearchParams } from 'react-router-dom';
 import { comparisonUnit } from '../repositories/productionUnitSelection';
 import { wikiRepository } from '../repositories/wikiRepository';
 import { type DraftModifierRow, type ManualModifierProfile } from '../domain/manualModifierProfile';
-import { caResearchEffect, calculateResearchAndManual, modifierSourceLabel, researchAvailable } from '../domain/caResearchEffect';
+import { calculateResearchAndManual, modifierSourceLabel, researchesForUnit } from '../domain/caResearchEffect';
 import { getStatValue, modifierStatPaths } from '../domain/unitModifiers';
 import { modifierStatLabels } from '../domain/modifierStatLabels';
 import { getMeleeWeaponDamage } from '../domain/unitCalculations';
@@ -28,8 +28,9 @@ export default function CalculatorPage() {
   const [profiles, setProfiles] = useState<ManualModifierProfile[]>([]);
   const [message, setMessage] = useState(''), [busy, setBusy] = useState(false);
   const [invalidCount, setInvalidCount] = useState(0);
-  const [researchSelected, setResearchSelected] = useState(false);
-  const calculation = unit && unitId === draftUnitId ? calculateResearchAndManual(unit, rows, researchSelected) : undefined;
+  const [selectedResearch, setSelectedResearch] = useState<string[]>([]);
+  const availableResearch = unit ? researchesForUnit(unit) : [];
+  const calculation = unit && unitId === draftUnitId ? calculateResearchAndManual(unit, rows, selectedResearch) : undefined;
   const modified = calculation?.unit;
   const breakdown = calculation?.breakdown ?? [];
   const refresh = async () => {
@@ -43,9 +44,9 @@ export default function CalculatorPage() {
   }, []);
   // Browser back/forward must not silently apply another unit's saved rows.
   useEffect(() => {
-    if (unitId !== draftUnitId) { setRows([]); setName(''); setProfileId(''); setMessage(''); setResearchSelected(false); setDraftUnitId(unitId); }
+    if (unitId !== draftUnitId) { setRows([]); setName(''); setProfileId(''); setMessage(''); setSelectedResearch([]); setDraftUnitId(unitId); }
   }, [unitId, draftUnitId]);
-  const reset = () => { setRows([]); setName(''); setProfileId(''); setMessage(''); setResearchSelected(false); };
+  const reset = () => { setRows([]); setName(''); setProfileId(''); setMessage(''); setSelectedResearch([]); };
   const selectUnit = (id: string) => { reset(); setDraftUnitId(id); setParams(id ? { unit: id } : {}); };
   const updateRow = (id: string, update: Partial<DraftModifierRow>) => setRows(current => current.map(row => row.id === id ? { ...row, ...update } : row));
   const load = async (id: string) => {
@@ -56,7 +57,7 @@ export default function CalculatorPage() {
       if (!profile) throw new Error('저장된 Profile을 찾을 수 없습니다.');
       setDraftUnitId(profile.unitId); setParams({ unit: profile.unitId }); setProfileId(profile.id); setName(profile.name);
       setRows(profile.modifiers.map(m => ({ ...m, value: String(m.value) })));
-      setResearchSelected(false);
+      setSelectedResearch([]);
       setMessage('Profile을 불러왔습니다.');
     } catch (error) { setMessage(error instanceof Error ? error.message : 'Profile을 불러오지 못했습니다.'); }
     finally { setBusy(false); }
@@ -81,11 +82,16 @@ export default function CalculatorPage() {
   return <>
     <PageIntro eyebrow="MODIFIER CALCULATOR" title="스탯 계산기" description="수동 Modifier와 검토된 WH3 연구를 선택해 기본값과 계산 결과를 확인하세요."/>
     <ProductionUnitSelector label="계산할 유닛" id={unitId} onSelect={selectUnit} disabled={busy}/>
-    {unit && researchAvailable(unit) && <section className="panel section" aria-label="WH3 Research">
+    {availableResearch.length > 0 && <section className="panel section" aria-label="WH3 Research">
       <h2>WH3 Research</h2>
-      <label><input type="checkbox" checked={researchSelected} disabled={busy} onChange={event => setResearchSelected(event.target.checked)}/> {caResearchEffect.name}</label>
-      <p className="data-note">근접 공격 +5 · 근접 방어 +5. 소유한 브레토니아 팩션에서 연구를 완료한 조건으로 계산합니다. 이번 검토 대상은 Grail Knights이며 선택 상태는 Profile에 저장되지 않습니다.</p>
-      <details><summary>CA source · read-only</summary><p className="data-note">{caResearchEffect.researchKey}<br/>main / land: {caResearchEffect.mainKey}<br/>Scope: factionwide · own forces<br/>WH3 {caResearchEffect.gameVersion}<br/>Reviewed source SHA256: {caResearchEffect.sourceSha256}<br/>Snapshot: {caResearchEffect.snapshotId}</p></details>
+      <p className="data-note">선택한 exact 유닛에 검토된 숫자 효과만 표시합니다. 소유한 브레토니아 팩션에서 연구를 완료한 조건이며, 선택은 Profile에 저장되지 않습니다.</p>
+      {availableResearch.map(research => <div key={research.researchKey}>
+        <label><input type="checkbox" checked={selectedResearch.includes(research.researchKey)} disabled={busy} onChange={event => setSelectedResearch(current => event.target.checked ? [...current, research.researchKey] : current.filter(key => key !== research.researchKey))}/> {research.name}</label>
+        <p className="data-note">{research.modifiers.map(m => `${modifierStatLabels[m.stat as UnitStatPath]} ${signed(m.value)}${m.operation === 'multiply' ? '%' : ''}`).join(' · ')}</p>
+        <details><summary>{research.name} · CA source · read-only</summary><p className="data-note">{research.researchKey}<br/>main: {research.mainKey}<br/>land: {research.landKey}<br/>Scope: factionwide · own forces<br/>WH3 {research.gameVersion}<br/>Reviewed source SHA256: {research.sourceSha256}<br/>Snapshot: {research.snapshotId}</p>
+          {research.omittedEffects?.map(effect => <p className="data-note" key={effect.effectKey}>계산 제외: {effect.effectKey} · {effect.classification} · {effect.reason}</p>)}
+        </details>
+      </div>)}
     </section>}
     <section className="panel calculator-profile section" aria-label="수동 Profile">
       <h2>수동 Modifier Profile</h2>
@@ -125,7 +131,7 @@ export default function CalculatorPage() {
             return <tr key={stat}><th scope="row">{modifierStatLabels[stat]}</th><td>{display(getStatValue(unit, stat))}</td>
               <td>{detail ? <details><summary>{detail.set !== undefined ? `SET ${display(detail.set)} · ` : ''}Flat {signed(detail.flat)} · {signed(detail.percent)}%{detail.status === 'unknown' ? ' · 기본값 미확인' : ''}</summary>
                 <div className="calculator-breakdown">Base {display(detail.base)}<br/>SET {display(detail.set)}<br/>Flat {signed(detail.flat)}<br/>Percent {signed(detail.percent)}%<br/>Result {display(detail.result)}
-                  <ul>{detail.modifiers.map(m => <li key={m.id}>{modifierSourceLabel(m.id, researchSelected)} · {modifierStatLabels[m.stat]} {operationLabels[m.operation]} {m.value}<small>ID: {m.id}</small></li>)}</ul>
+                  <ul>{detail.modifiers.map(m => <li key={m.id}>{modifierSourceLabel(m.id, selectedResearch)} · {modifierStatLabels[m.stat]} {operationLabels[m.operation]} {m.value}<small>ID: {m.id}</small></li>)}</ul>
                 </div></details> : '—'}</td><td>{modified ? display(getStatValue(modified, stat)) : '—'}</td></tr>;
           })}<tr><th scope="row">총 무기 피해 (derived)</th><td>{display(getMeleeWeaponDamage(unit))}</td><td>수정된 기본 + 관통</td><td>{modified ? display(getMeleeWeaponDamage(modified)) : '—'}</td></tr></tbody>
         </table>

@@ -1,50 +1,1078 @@
-{
-  "sourceKind": "CA_RESEARCH",
-  "researchKey": "wh_dlc07_tech_brt_economy_industry_tournaments",
-  "name": "Regular Tournaments",
-  "unitId": "ca_unit_wh_main_brt_cav_grail_knights",
-  "mainKey": "wh_main_brt_cav_grail_knights",
-  "landKey": "wh_main_brt_cav_grail_knights",
-  "sourceSha256": "27b33c07a14d7de90f23aef9db4eaad9e1423b3c736addb38f13f213ecfa9f97",
-  "reviewSha256": "962f0a4dca447e7f4a75704e866c6ba65dc90f7484b4f59c947db0bbe702d08b",
-  "snapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
-  "gameVersion": "9.0.2.0",
-  "scope": {
-    "key": "faction_to_force_own_unseen",
-    "location": "factionwide",
-    "ownership": "yours",
-    "source": "faction",
-    "target": "force",
-    "territory": "any"
-  },
-  "modifiers": [
-    {
-      "id": "ca-research:wh_dlc07_tech_brt_economy_industry_tournaments:wh2_main_effect_force_stat_melee_attack_brt_knights",
-      "sourceType": "research",
-      "sourceId": "wh_dlc07_tech_brt_economy_industry_tournaments",
-      "targetType": "unit",
-      "targetId": "ca_unit_wh_main_brt_cav_grail_knights",
-      "stat": "melee.meleeAttack",
-      "operation": "add",
-      "value": 5,
-      "scope": "faction",
-      "gameVersion": "9.0.2.0",
-      "source": "CA_RESEARCH · wh2_main_effect_force_stat_melee_attack_brt_knights",
-      "tags": []
+[
+  {
+    "sourceKind": "CA_RESEARCH",
+    "researchKey": "wh_dlc07_tech_brt_economy_industry_tournaments",
+    "name": "Regular Tournaments",
+    "unitId": "ca_unit_wh_main_brt_cav_grail_knights",
+    "mainKey": "wh_main_brt_cav_grail_knights",
+    "landKey": "wh_main_brt_cav_grail_knights",
+    "sourceSha256": "27b33c07a14d7de90f23aef9db4eaad9e1423b3c736addb38f13f213ecfa9f97",
+    "reviewSha256": "962f0a4dca447e7f4a75704e866c6ba65dc90f7484b4f59c947db0bbe702d08b",
+    "snapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+    "gameVersion": "9.0.2.0",
+    "scope": {
+      "key": "faction_to_force_own_unseen",
+      "location": "factionwide",
+      "ownership": "yours",
+      "source": "faction",
+      "target": "force",
+      "territory": "any"
     },
-    {
-      "id": "ca-research:wh_dlc07_tech_brt_economy_industry_tournaments:wh2_main_effect_force_stat_melee_defence_brt_knights",
-      "sourceType": "research",
-      "sourceId": "wh_dlc07_tech_brt_economy_industry_tournaments",
-      "targetType": "unit",
-      "targetId": "ca_unit_wh_main_brt_cav_grail_knights",
-      "stat": "defense.meleeDefense",
-      "operation": "add",
-      "value": 5,
-      "scope": "faction",
-      "gameVersion": "9.0.2.0",
-      "source": "CA_RESEARCH · wh2_main_effect_force_stat_melee_defence_brt_knights",
-      "tags": []
-    }
-  ]
-}
+    "modifiers": [
+      {
+        "id": "ca-research:wh_dlc07_tech_brt_economy_industry_tournaments:wh2_main_effect_force_stat_melee_attack_brt_knights",
+        "sourceType": "research",
+        "sourceId": "wh_dlc07_tech_brt_economy_industry_tournaments",
+        "targetType": "unit",
+        "targetId": "ca_unit_wh_main_brt_cav_grail_knights",
+        "stat": "melee.meleeAttack",
+        "operation": "add",
+        "value": 5,
+        "scope": "faction",
+        "gameVersion": "9.0.2.0",
+        "source": "CA_RESEARCH · wh2_main_effect_force_stat_melee_attack_brt_knights",
+        "tags": []
+      },
+      {
+        "id": "ca-research:wh_dlc07_tech_brt_economy_industry_tournaments:wh2_main_effect_force_stat_melee_defence_brt_knights",
+        "sourceType": "research",
+        "sourceId": "wh_dlc07_tech_brt_economy_industry_tournaments",
+        "targetType": "unit",
+        "targetId": "ca_unit_wh_main_brt_cav_grail_knights",
+        "stat": "defense.meleeDefense",
+        "operation": "add",
+        "value": 5,
+        "scope": "faction",
+        "gameVersion": "9.0.2.0",
+        "source": "CA_RESEARCH · wh2_main_effect_force_stat_melee_defence_brt_knights",
+        "tags": []
+      }
+    ]
+  },
+  {
+    "sourceKind": "CA_RESEARCH",
+    "researchKey": "wh_dlc07_tech_brt_economy_farm_hoods",
+    "name": "Blinker Hoods",
+    "unitId": "ca_unit_wh_dlc07_brt_cav_grail_guardians_0",
+    "mainKey": "wh_dlc07_brt_cav_grail_guardians_0",
+    "landKey": "wh_dlc07_brt_cav_grail_guardians_0",
+    "sourceSha256": "bf658783ef8fd44abad4a25109535ee7acc380baad28c12c4d5d0ad867b5b297",
+    "reviewSha256": "46ca5a1c71d5543da316997930f8d4019b438c97b660166c71992c8d9bb6d544",
+    "snapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+    "gameVersion": "9.0.2.0",
+    "scope": {
+      "key": "faction_to_force_own_unseen",
+      "location": "factionwide",
+      "ownership": "yours",
+      "source": "faction",
+      "target": "force",
+      "territory": "any"
+    },
+    "modifiers": [
+      {
+        "id": "ca-research:wh_dlc07_tech_brt_economy_farm_hoods:wh2_main_effect_force_stat_charge_bonus_pct_brt_knights:melee.chargeBonus",
+        "sourceType": "research",
+        "sourceId": "wh_dlc07_tech_brt_economy_farm_hoods",
+        "targetType": "unit",
+        "targetId": "ca_unit_wh_dlc07_brt_cav_grail_guardians_0",
+        "stat": "melee.chargeBonus",
+        "operation": "multiply",
+        "value": 10,
+        "scope": "faction",
+        "gameVersion": "9.0.2.0",
+        "source": "CA_RESEARCH · wh2_main_effect_force_stat_charge_bonus_pct_brt_knights",
+        "tags": []
+      },
+      {
+        "id": "ca-research:wh_dlc07_tech_brt_economy_farm_hoods:wh_dlc07_effect_force_stat_leadership_knights:defense.leadership",
+        "sourceType": "research",
+        "sourceId": "wh_dlc07_tech_brt_economy_farm_hoods",
+        "targetType": "unit",
+        "targetId": "ca_unit_wh_dlc07_brt_cav_grail_guardians_0",
+        "stat": "defense.leadership",
+        "operation": "add",
+        "value": 5,
+        "scope": "faction",
+        "gameVersion": "9.0.2.0",
+        "source": "CA_RESEARCH · wh_dlc07_effect_force_stat_leadership_knights",
+        "tags": []
+      }
+    ],
+    "omittedEffects": []
+  },
+  {
+    "sourceKind": "CA_RESEARCH",
+    "researchKey": "wh_dlc07_tech_brt_economy_farm_hoods",
+    "name": "Blinker Hoods",
+    "unitId": "ca_unit_wh_dlc07_brt_cav_knights_errant_0",
+    "mainKey": "wh_dlc07_brt_cav_knights_errant_0",
+    "landKey": "wh_dlc07_brt_cav_knights_errant_0",
+    "sourceSha256": "bf658783ef8fd44abad4a25109535ee7acc380baad28c12c4d5d0ad867b5b297",
+    "reviewSha256": "46ca5a1c71d5543da316997930f8d4019b438c97b660166c71992c8d9bb6d544",
+    "snapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+    "gameVersion": "9.0.2.0",
+    "scope": {
+      "key": "faction_to_force_own_unseen",
+      "location": "factionwide",
+      "ownership": "yours",
+      "source": "faction",
+      "target": "force",
+      "territory": "any"
+    },
+    "modifiers": [
+      {
+        "id": "ca-research:wh_dlc07_tech_brt_economy_farm_hoods:wh2_main_effect_force_stat_charge_bonus_pct_brt_knights:melee.chargeBonus",
+        "sourceType": "research",
+        "sourceId": "wh_dlc07_tech_brt_economy_farm_hoods",
+        "targetType": "unit",
+        "targetId": "ca_unit_wh_dlc07_brt_cav_knights_errant_0",
+        "stat": "melee.chargeBonus",
+        "operation": "multiply",
+        "value": 10,
+        "scope": "faction",
+        "gameVersion": "9.0.2.0",
+        "source": "CA_RESEARCH · wh2_main_effect_force_stat_charge_bonus_pct_brt_knights",
+        "tags": []
+      },
+      {
+        "id": "ca-research:wh_dlc07_tech_brt_economy_farm_hoods:wh_dlc07_effect_force_stat_leadership_knights:defense.leadership",
+        "sourceType": "research",
+        "sourceId": "wh_dlc07_tech_brt_economy_farm_hoods",
+        "targetType": "unit",
+        "targetId": "ca_unit_wh_dlc07_brt_cav_knights_errant_0",
+        "stat": "defense.leadership",
+        "operation": "add",
+        "value": 5,
+        "scope": "faction",
+        "gameVersion": "9.0.2.0",
+        "source": "CA_RESEARCH · wh_dlc07_effect_force_stat_leadership_knights",
+        "tags": []
+      }
+    ],
+    "omittedEffects": []
+  },
+  {
+    "sourceKind": "CA_RESEARCH",
+    "researchKey": "wh_dlc07_tech_brt_economy_farm_hoods",
+    "name": "Blinker Hoods",
+    "unitId": "ca_unit_wh_dlc07_brt_cav_questing_knights_0",
+    "mainKey": "wh_dlc07_brt_cav_questing_knights_0",
+    "landKey": "wh_dlc07_brt_cav_questing_knights_0",
+    "sourceSha256": "bf658783ef8fd44abad4a25109535ee7acc380baad28c12c4d5d0ad867b5b297",
+    "reviewSha256": "46ca5a1c71d5543da316997930f8d4019b438c97b660166c71992c8d9bb6d544",
+    "snapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+    "gameVersion": "9.0.2.0",
+    "scope": {
+      "key": "faction_to_force_own_unseen",
+      "location": "factionwide",
+      "ownership": "yours",
+      "source": "faction",
+      "target": "force",
+      "territory": "any"
+    },
+    "modifiers": [
+      {
+        "id": "ca-research:wh_dlc07_tech_brt_economy_farm_hoods:wh2_main_effect_force_stat_charge_bonus_pct_brt_knights:melee.chargeBonus",
+        "sourceType": "research",
+        "sourceId": "wh_dlc07_tech_brt_economy_farm_hoods",
+        "targetType": "unit",
+        "targetId": "ca_unit_wh_dlc07_brt_cav_questing_knights_0",
+        "stat": "melee.chargeBonus",
+        "operation": "multiply",
+        "value": 10,
+        "scope": "faction",
+        "gameVersion": "9.0.2.0",
+        "source": "CA_RESEARCH · wh2_main_effect_force_stat_charge_bonus_pct_brt_knights",
+        "tags": []
+      },
+      {
+        "id": "ca-research:wh_dlc07_tech_brt_economy_farm_hoods:wh_dlc07_effect_force_stat_leadership_knights:defense.leadership",
+        "sourceType": "research",
+        "sourceId": "wh_dlc07_tech_brt_economy_farm_hoods",
+        "targetType": "unit",
+        "targetId": "ca_unit_wh_dlc07_brt_cav_questing_knights_0",
+        "stat": "defense.leadership",
+        "operation": "add",
+        "value": 5,
+        "scope": "faction",
+        "gameVersion": "9.0.2.0",
+        "source": "CA_RESEARCH · wh_dlc07_effect_force_stat_leadership_knights",
+        "tags": []
+      }
+    ],
+    "omittedEffects": []
+  },
+  {
+    "sourceKind": "CA_RESEARCH",
+    "researchKey": "wh_dlc07_tech_brt_economy_farm_hoods",
+    "name": "Blinker Hoods",
+    "unitId": "ca_unit_wh_dlc07_brt_cav_royal_pegasus_knights_0",
+    "mainKey": "wh_dlc07_brt_cav_royal_pegasus_knights_0",
+    "landKey": "wh_dlc07_brt_cav_royal_pegasus_knights_0",
+    "sourceSha256": "bf658783ef8fd44abad4a25109535ee7acc380baad28c12c4d5d0ad867b5b297",
+    "reviewSha256": "46ca5a1c71d5543da316997930f8d4019b438c97b660166c71992c8d9bb6d544",
+    "snapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+    "gameVersion": "9.0.2.0",
+    "scope": {
+      "key": "faction_to_force_own_unseen",
+      "location": "factionwide",
+      "ownership": "yours",
+      "source": "faction",
+      "target": "force",
+      "territory": "any"
+    },
+    "modifiers": [
+      {
+        "id": "ca-research:wh_dlc07_tech_brt_economy_farm_hoods:wh2_main_effect_force_stat_charge_bonus_pct_brt_knights:melee.chargeBonus",
+        "sourceType": "research",
+        "sourceId": "wh_dlc07_tech_brt_economy_farm_hoods",
+        "targetType": "unit",
+        "targetId": "ca_unit_wh_dlc07_brt_cav_royal_pegasus_knights_0",
+        "stat": "melee.chargeBonus",
+        "operation": "multiply",
+        "value": 10,
+        "scope": "faction",
+        "gameVersion": "9.0.2.0",
+        "source": "CA_RESEARCH · wh2_main_effect_force_stat_charge_bonus_pct_brt_knights",
+        "tags": []
+      },
+      {
+        "id": "ca-research:wh_dlc07_tech_brt_economy_farm_hoods:wh_dlc07_effect_force_stat_leadership_knights:defense.leadership",
+        "sourceType": "research",
+        "sourceId": "wh_dlc07_tech_brt_economy_farm_hoods",
+        "targetType": "unit",
+        "targetId": "ca_unit_wh_dlc07_brt_cav_royal_pegasus_knights_0",
+        "stat": "defense.leadership",
+        "operation": "add",
+        "value": 5,
+        "scope": "faction",
+        "gameVersion": "9.0.2.0",
+        "source": "CA_RESEARCH · wh_dlc07_effect_force_stat_leadership_knights",
+        "tags": []
+      }
+    ],
+    "omittedEffects": []
+  },
+  {
+    "sourceKind": "CA_RESEARCH",
+    "researchKey": "wh_dlc07_tech_brt_economy_farm_hoods",
+    "name": "Blinker Hoods",
+    "unitId": "ca_unit_wh_main_brt_cav_grail_knights",
+    "mainKey": "wh_main_brt_cav_grail_knights",
+    "landKey": "wh_main_brt_cav_grail_knights",
+    "sourceSha256": "bf658783ef8fd44abad4a25109535ee7acc380baad28c12c4d5d0ad867b5b297",
+    "reviewSha256": "46ca5a1c71d5543da316997930f8d4019b438c97b660166c71992c8d9bb6d544",
+    "snapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+    "gameVersion": "9.0.2.0",
+    "scope": {
+      "key": "faction_to_force_own_unseen",
+      "location": "factionwide",
+      "ownership": "yours",
+      "source": "faction",
+      "target": "force",
+      "territory": "any"
+    },
+    "modifiers": [
+      {
+        "id": "ca-research:wh_dlc07_tech_brt_economy_farm_hoods:wh2_main_effect_force_stat_charge_bonus_pct_brt_knights:melee.chargeBonus",
+        "sourceType": "research",
+        "sourceId": "wh_dlc07_tech_brt_economy_farm_hoods",
+        "targetType": "unit",
+        "targetId": "ca_unit_wh_main_brt_cav_grail_knights",
+        "stat": "melee.chargeBonus",
+        "operation": "multiply",
+        "value": 10,
+        "scope": "faction",
+        "gameVersion": "9.0.2.0",
+        "source": "CA_RESEARCH · wh2_main_effect_force_stat_charge_bonus_pct_brt_knights",
+        "tags": []
+      },
+      {
+        "id": "ca-research:wh_dlc07_tech_brt_economy_farm_hoods:wh_dlc07_effect_force_stat_leadership_knights:defense.leadership",
+        "sourceType": "research",
+        "sourceId": "wh_dlc07_tech_brt_economy_farm_hoods",
+        "targetType": "unit",
+        "targetId": "ca_unit_wh_main_brt_cav_grail_knights",
+        "stat": "defense.leadership",
+        "operation": "add",
+        "value": 5,
+        "scope": "faction",
+        "gameVersion": "9.0.2.0",
+        "source": "CA_RESEARCH · wh_dlc07_effect_force_stat_leadership_knights",
+        "tags": []
+      }
+    ],
+    "omittedEffects": []
+  },
+  {
+    "sourceKind": "CA_RESEARCH",
+    "researchKey": "wh_dlc07_tech_brt_economy_farm_hoods",
+    "name": "Blinker Hoods",
+    "unitId": "ca_unit_wh_main_brt_cav_knights_of_the_realm",
+    "mainKey": "wh_main_brt_cav_knights_of_the_realm",
+    "landKey": "wh_main_brt_cav_knights_of_the_realm",
+    "sourceSha256": "bf658783ef8fd44abad4a25109535ee7acc380baad28c12c4d5d0ad867b5b297",
+    "reviewSha256": "46ca5a1c71d5543da316997930f8d4019b438c97b660166c71992c8d9bb6d544",
+    "snapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+    "gameVersion": "9.0.2.0",
+    "scope": {
+      "key": "faction_to_force_own_unseen",
+      "location": "factionwide",
+      "ownership": "yours",
+      "source": "faction",
+      "target": "force",
+      "territory": "any"
+    },
+    "modifiers": [
+      {
+        "id": "ca-research:wh_dlc07_tech_brt_economy_farm_hoods:wh2_main_effect_force_stat_charge_bonus_pct_brt_knights:melee.chargeBonus",
+        "sourceType": "research",
+        "sourceId": "wh_dlc07_tech_brt_economy_farm_hoods",
+        "targetType": "unit",
+        "targetId": "ca_unit_wh_main_brt_cav_knights_of_the_realm",
+        "stat": "melee.chargeBonus",
+        "operation": "multiply",
+        "value": 10,
+        "scope": "faction",
+        "gameVersion": "9.0.2.0",
+        "source": "CA_RESEARCH · wh2_main_effect_force_stat_charge_bonus_pct_brt_knights",
+        "tags": []
+      },
+      {
+        "id": "ca-research:wh_dlc07_tech_brt_economy_farm_hoods:wh_dlc07_effect_force_stat_leadership_knights:defense.leadership",
+        "sourceType": "research",
+        "sourceId": "wh_dlc07_tech_brt_economy_farm_hoods",
+        "targetType": "unit",
+        "targetId": "ca_unit_wh_main_brt_cav_knights_of_the_realm",
+        "stat": "defense.leadership",
+        "operation": "add",
+        "value": 5,
+        "scope": "faction",
+        "gameVersion": "9.0.2.0",
+        "source": "CA_RESEARCH · wh_dlc07_effect_force_stat_leadership_knights",
+        "tags": []
+      }
+    ],
+    "omittedEffects": []
+  },
+  {
+    "sourceKind": "CA_RESEARCH",
+    "researchKey": "wh_dlc07_tech_brt_economy_farm_hoods",
+    "name": "Blinker Hoods",
+    "unitId": "ca_unit_wh_main_brt_cav_pegasus_knights",
+    "mainKey": "wh_main_brt_cav_pegasus_knights",
+    "landKey": "wh_main_brt_cav_pegasus_knights",
+    "sourceSha256": "bf658783ef8fd44abad4a25109535ee7acc380baad28c12c4d5d0ad867b5b297",
+    "reviewSha256": "46ca5a1c71d5543da316997930f8d4019b438c97b660166c71992c8d9bb6d544",
+    "snapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+    "gameVersion": "9.0.2.0",
+    "scope": {
+      "key": "faction_to_force_own_unseen",
+      "location": "factionwide",
+      "ownership": "yours",
+      "source": "faction",
+      "target": "force",
+      "territory": "any"
+    },
+    "modifiers": [
+      {
+        "id": "ca-research:wh_dlc07_tech_brt_economy_farm_hoods:wh2_main_effect_force_stat_charge_bonus_pct_brt_knights:melee.chargeBonus",
+        "sourceType": "research",
+        "sourceId": "wh_dlc07_tech_brt_economy_farm_hoods",
+        "targetType": "unit",
+        "targetId": "ca_unit_wh_main_brt_cav_pegasus_knights",
+        "stat": "melee.chargeBonus",
+        "operation": "multiply",
+        "value": 10,
+        "scope": "faction",
+        "gameVersion": "9.0.2.0",
+        "source": "CA_RESEARCH · wh2_main_effect_force_stat_charge_bonus_pct_brt_knights",
+        "tags": []
+      },
+      {
+        "id": "ca-research:wh_dlc07_tech_brt_economy_farm_hoods:wh_dlc07_effect_force_stat_leadership_knights:defense.leadership",
+        "sourceType": "research",
+        "sourceId": "wh_dlc07_tech_brt_economy_farm_hoods",
+        "targetType": "unit",
+        "targetId": "ca_unit_wh_main_brt_cav_pegasus_knights",
+        "stat": "defense.leadership",
+        "operation": "add",
+        "value": 5,
+        "scope": "faction",
+        "gameVersion": "9.0.2.0",
+        "source": "CA_RESEARCH · wh_dlc07_effect_force_stat_leadership_knights",
+        "tags": []
+      }
+    ],
+    "omittedEffects": []
+  },
+  {
+    "sourceKind": "CA_RESEARCH",
+    "researchKey": "wh_dlc07_tech_brt_economy_industry_swords",
+    "name": "Master Swordsmiths",
+    "unitId": "ca_unit_wh_dlc07_brt_cav_grail_guardians_0",
+    "mainKey": "wh_dlc07_brt_cav_grail_guardians_0",
+    "landKey": "wh_dlc07_brt_cav_grail_guardians_0",
+    "sourceSha256": "bf658783ef8fd44abad4a25109535ee7acc380baad28c12c4d5d0ad867b5b297",
+    "reviewSha256": "46ca5a1c71d5543da316997930f8d4019b438c97b660166c71992c8d9bb6d544",
+    "snapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+    "gameVersion": "9.0.2.0",
+    "scope": {
+      "key": "faction_to_force_own_unseen",
+      "location": "factionwide",
+      "ownership": "yours",
+      "source": "faction",
+      "target": "force",
+      "territory": "any"
+    },
+    "modifiers": [
+      {
+        "id": "ca-research:wh_dlc07_tech_brt_economy_industry_swords:wh2_main_effect_force_stat_weapon_strength_brt_knights_swordsmen_footsquires:melee.damage.armorPiercing",
+        "sourceType": "research",
+        "sourceId": "wh_dlc07_tech_brt_economy_industry_swords",
+        "targetType": "unit",
+        "targetId": "ca_unit_wh_dlc07_brt_cav_grail_guardians_0",
+        "stat": "melee.damage.armorPiercing",
+        "operation": "multiply",
+        "value": 12,
+        "scope": "faction",
+        "gameVersion": "9.0.2.0",
+        "source": "CA_RESEARCH · wh2_main_effect_force_stat_weapon_strength_brt_knights_swordsmen_footsquires",
+        "tags": []
+      },
+      {
+        "id": "ca-research:wh_dlc07_tech_brt_economy_industry_swords:wh2_main_effect_force_stat_weapon_strength_brt_knights_swordsmen_footsquires:melee.damage.base",
+        "sourceType": "research",
+        "sourceId": "wh_dlc07_tech_brt_economy_industry_swords",
+        "targetType": "unit",
+        "targetId": "ca_unit_wh_dlc07_brt_cav_grail_guardians_0",
+        "stat": "melee.damage.base",
+        "operation": "multiply",
+        "value": 12,
+        "scope": "faction",
+        "gameVersion": "9.0.2.0",
+        "source": "CA_RESEARCH · wh2_main_effect_force_stat_weapon_strength_brt_knights_swordsmen_footsquires",
+        "tags": []
+      }
+    ],
+    "omittedEffects": []
+  },
+  {
+    "sourceKind": "CA_RESEARCH",
+    "researchKey": "wh_dlc07_tech_brt_economy_industry_swords",
+    "name": "Master Swordsmiths",
+    "unitId": "ca_unit_wh_dlc07_brt_cav_knights_errant_0",
+    "mainKey": "wh_dlc07_brt_cav_knights_errant_0",
+    "landKey": "wh_dlc07_brt_cav_knights_errant_0",
+    "sourceSha256": "bf658783ef8fd44abad4a25109535ee7acc380baad28c12c4d5d0ad867b5b297",
+    "reviewSha256": "46ca5a1c71d5543da316997930f8d4019b438c97b660166c71992c8d9bb6d544",
+    "snapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+    "gameVersion": "9.0.2.0",
+    "scope": {
+      "key": "faction_to_force_own_unseen",
+      "location": "factionwide",
+      "ownership": "yours",
+      "source": "faction",
+      "target": "force",
+      "territory": "any"
+    },
+    "modifiers": [
+      {
+        "id": "ca-research:wh_dlc07_tech_brt_economy_industry_swords:wh2_main_effect_force_stat_weapon_strength_brt_knights_swordsmen_footsquires:melee.damage.armorPiercing",
+        "sourceType": "research",
+        "sourceId": "wh_dlc07_tech_brt_economy_industry_swords",
+        "targetType": "unit",
+        "targetId": "ca_unit_wh_dlc07_brt_cav_knights_errant_0",
+        "stat": "melee.damage.armorPiercing",
+        "operation": "multiply",
+        "value": 12,
+        "scope": "faction",
+        "gameVersion": "9.0.2.0",
+        "source": "CA_RESEARCH · wh2_main_effect_force_stat_weapon_strength_brt_knights_swordsmen_footsquires",
+        "tags": []
+      },
+      {
+        "id": "ca-research:wh_dlc07_tech_brt_economy_industry_swords:wh2_main_effect_force_stat_weapon_strength_brt_knights_swordsmen_footsquires:melee.damage.base",
+        "sourceType": "research",
+        "sourceId": "wh_dlc07_tech_brt_economy_industry_swords",
+        "targetType": "unit",
+        "targetId": "ca_unit_wh_dlc07_brt_cav_knights_errant_0",
+        "stat": "melee.damage.base",
+        "operation": "multiply",
+        "value": 12,
+        "scope": "faction",
+        "gameVersion": "9.0.2.0",
+        "source": "CA_RESEARCH · wh2_main_effect_force_stat_weapon_strength_brt_knights_swordsmen_footsquires",
+        "tags": []
+      }
+    ],
+    "omittedEffects": []
+  },
+  {
+    "sourceKind": "CA_RESEARCH",
+    "researchKey": "wh_dlc07_tech_brt_economy_industry_swords",
+    "name": "Master Swordsmiths",
+    "unitId": "ca_unit_wh_dlc07_brt_cav_questing_knights_0",
+    "mainKey": "wh_dlc07_brt_cav_questing_knights_0",
+    "landKey": "wh_dlc07_brt_cav_questing_knights_0",
+    "sourceSha256": "bf658783ef8fd44abad4a25109535ee7acc380baad28c12c4d5d0ad867b5b297",
+    "reviewSha256": "46ca5a1c71d5543da316997930f8d4019b438c97b660166c71992c8d9bb6d544",
+    "snapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+    "gameVersion": "9.0.2.0",
+    "scope": {
+      "key": "faction_to_force_own_unseen",
+      "location": "factionwide",
+      "ownership": "yours",
+      "source": "faction",
+      "target": "force",
+      "territory": "any"
+    },
+    "modifiers": [
+      {
+        "id": "ca-research:wh_dlc07_tech_brt_economy_industry_swords:wh2_main_effect_force_stat_weapon_strength_brt_knights_swordsmen_footsquires:melee.damage.armorPiercing",
+        "sourceType": "research",
+        "sourceId": "wh_dlc07_tech_brt_economy_industry_swords",
+        "targetType": "unit",
+        "targetId": "ca_unit_wh_dlc07_brt_cav_questing_knights_0",
+        "stat": "melee.damage.armorPiercing",
+        "operation": "multiply",
+        "value": 12,
+        "scope": "faction",
+        "gameVersion": "9.0.2.0",
+        "source": "CA_RESEARCH · wh2_main_effect_force_stat_weapon_strength_brt_knights_swordsmen_footsquires",
+        "tags": []
+      },
+      {
+        "id": "ca-research:wh_dlc07_tech_brt_economy_industry_swords:wh2_main_effect_force_stat_weapon_strength_brt_knights_swordsmen_footsquires:melee.damage.base",
+        "sourceType": "research",
+        "sourceId": "wh_dlc07_tech_brt_economy_industry_swords",
+        "targetType": "unit",
+        "targetId": "ca_unit_wh_dlc07_brt_cav_questing_knights_0",
+        "stat": "melee.damage.base",
+        "operation": "multiply",
+        "value": 12,
+        "scope": "faction",
+        "gameVersion": "9.0.2.0",
+        "source": "CA_RESEARCH · wh2_main_effect_force_stat_weapon_strength_brt_knights_swordsmen_footsquires",
+        "tags": []
+      }
+    ],
+    "omittedEffects": []
+  },
+  {
+    "sourceKind": "CA_RESEARCH",
+    "researchKey": "wh_dlc07_tech_brt_economy_industry_swords",
+    "name": "Master Swordsmiths",
+    "unitId": "ca_unit_wh_dlc07_brt_cav_royal_pegasus_knights_0",
+    "mainKey": "wh_dlc07_brt_cav_royal_pegasus_knights_0",
+    "landKey": "wh_dlc07_brt_cav_royal_pegasus_knights_0",
+    "sourceSha256": "bf658783ef8fd44abad4a25109535ee7acc380baad28c12c4d5d0ad867b5b297",
+    "reviewSha256": "46ca5a1c71d5543da316997930f8d4019b438c97b660166c71992c8d9bb6d544",
+    "snapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+    "gameVersion": "9.0.2.0",
+    "scope": {
+      "key": "faction_to_force_own_unseen",
+      "location": "factionwide",
+      "ownership": "yours",
+      "source": "faction",
+      "target": "force",
+      "territory": "any"
+    },
+    "modifiers": [
+      {
+        "id": "ca-research:wh_dlc07_tech_brt_economy_industry_swords:wh2_main_effect_force_stat_weapon_strength_brt_knights_swordsmen_footsquires:melee.damage.armorPiercing",
+        "sourceType": "research",
+        "sourceId": "wh_dlc07_tech_brt_economy_industry_swords",
+        "targetType": "unit",
+        "targetId": "ca_unit_wh_dlc07_brt_cav_royal_pegasus_knights_0",
+        "stat": "melee.damage.armorPiercing",
+        "operation": "multiply",
+        "value": 12,
+        "scope": "faction",
+        "gameVersion": "9.0.2.0",
+        "source": "CA_RESEARCH · wh2_main_effect_force_stat_weapon_strength_brt_knights_swordsmen_footsquires",
+        "tags": []
+      },
+      {
+        "id": "ca-research:wh_dlc07_tech_brt_economy_industry_swords:wh2_main_effect_force_stat_weapon_strength_brt_knights_swordsmen_footsquires:melee.damage.base",
+        "sourceType": "research",
+        "sourceId": "wh_dlc07_tech_brt_economy_industry_swords",
+        "targetType": "unit",
+        "targetId": "ca_unit_wh_dlc07_brt_cav_royal_pegasus_knights_0",
+        "stat": "melee.damage.base",
+        "operation": "multiply",
+        "value": 12,
+        "scope": "faction",
+        "gameVersion": "9.0.2.0",
+        "source": "CA_RESEARCH · wh2_main_effect_force_stat_weapon_strength_brt_knights_swordsmen_footsquires",
+        "tags": []
+      }
+    ],
+    "omittedEffects": []
+  },
+  {
+    "sourceKind": "CA_RESEARCH",
+    "researchKey": "wh_dlc07_tech_brt_economy_industry_swords",
+    "name": "Master Swordsmiths",
+    "unitId": "ca_unit_wh_dlc07_brt_inf_battle_pilgrims_0",
+    "mainKey": "wh_dlc07_brt_inf_battle_pilgrims_0",
+    "landKey": "wh_dlc07_brt_inf_battle_pilgrims_0",
+    "sourceSha256": "bf658783ef8fd44abad4a25109535ee7acc380baad28c12c4d5d0ad867b5b297",
+    "reviewSha256": "46ca5a1c71d5543da316997930f8d4019b438c97b660166c71992c8d9bb6d544",
+    "snapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+    "gameVersion": "9.0.2.0",
+    "scope": {
+      "key": "faction_to_force_own_unseen",
+      "location": "factionwide",
+      "ownership": "yours",
+      "source": "faction",
+      "target": "force",
+      "territory": "any"
+    },
+    "modifiers": [
+      {
+        "id": "ca-research:wh_dlc07_tech_brt_economy_industry_swords:wh2_main_effect_force_stat_weapon_strength_brt_knights_swordsmen_footsquires:melee.damage.armorPiercing",
+        "sourceType": "research",
+        "sourceId": "wh_dlc07_tech_brt_economy_industry_swords",
+        "targetType": "unit",
+        "targetId": "ca_unit_wh_dlc07_brt_inf_battle_pilgrims_0",
+        "stat": "melee.damage.armorPiercing",
+        "operation": "multiply",
+        "value": 12,
+        "scope": "faction",
+        "gameVersion": "9.0.2.0",
+        "source": "CA_RESEARCH · wh2_main_effect_force_stat_weapon_strength_brt_knights_swordsmen_footsquires",
+        "tags": []
+      },
+      {
+        "id": "ca-research:wh_dlc07_tech_brt_economy_industry_swords:wh2_main_effect_force_stat_weapon_strength_brt_knights_swordsmen_footsquires:melee.damage.base",
+        "sourceType": "research",
+        "sourceId": "wh_dlc07_tech_brt_economy_industry_swords",
+        "targetType": "unit",
+        "targetId": "ca_unit_wh_dlc07_brt_inf_battle_pilgrims_0",
+        "stat": "melee.damage.base",
+        "operation": "multiply",
+        "value": 12,
+        "scope": "faction",
+        "gameVersion": "9.0.2.0",
+        "source": "CA_RESEARCH · wh2_main_effect_force_stat_weapon_strength_brt_knights_swordsmen_footsquires",
+        "tags": []
+      }
+    ],
+    "omittedEffects": []
+  },
+  {
+    "sourceKind": "CA_RESEARCH",
+    "researchKey": "wh_dlc07_tech_brt_economy_industry_swords",
+    "name": "Master Swordsmiths",
+    "unitId": "ca_unit_wh_dlc07_brt_inf_foot_squires_0",
+    "mainKey": "wh_dlc07_brt_inf_foot_squires_0",
+    "landKey": "wh_dlc07_brt_inf_foot_squires_0",
+    "sourceSha256": "bf658783ef8fd44abad4a25109535ee7acc380baad28c12c4d5d0ad867b5b297",
+    "reviewSha256": "46ca5a1c71d5543da316997930f8d4019b438c97b660166c71992c8d9bb6d544",
+    "snapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+    "gameVersion": "9.0.2.0",
+    "scope": {
+      "key": "faction_to_force_own_unseen",
+      "location": "factionwide",
+      "ownership": "yours",
+      "source": "faction",
+      "target": "force",
+      "territory": "any"
+    },
+    "modifiers": [
+      {
+        "id": "ca-research:wh_dlc07_tech_brt_economy_industry_swords:wh2_main_effect_force_stat_weapon_strength_brt_knights_swordsmen_footsquires:melee.damage.armorPiercing",
+        "sourceType": "research",
+        "sourceId": "wh_dlc07_tech_brt_economy_industry_swords",
+        "targetType": "unit",
+        "targetId": "ca_unit_wh_dlc07_brt_inf_foot_squires_0",
+        "stat": "melee.damage.armorPiercing",
+        "operation": "multiply",
+        "value": 12,
+        "scope": "faction",
+        "gameVersion": "9.0.2.0",
+        "source": "CA_RESEARCH · wh2_main_effect_force_stat_weapon_strength_brt_knights_swordsmen_footsquires",
+        "tags": []
+      },
+      {
+        "id": "ca-research:wh_dlc07_tech_brt_economy_industry_swords:wh2_main_effect_force_stat_weapon_strength_brt_knights_swordsmen_footsquires:melee.damage.base",
+        "sourceType": "research",
+        "sourceId": "wh_dlc07_tech_brt_economy_industry_swords",
+        "targetType": "unit",
+        "targetId": "ca_unit_wh_dlc07_brt_inf_foot_squires_0",
+        "stat": "melee.damage.base",
+        "operation": "multiply",
+        "value": 12,
+        "scope": "faction",
+        "gameVersion": "9.0.2.0",
+        "source": "CA_RESEARCH · wh2_main_effect_force_stat_weapon_strength_brt_knights_swordsmen_footsquires",
+        "tags": []
+      }
+    ],
+    "omittedEffects": []
+  },
+  {
+    "sourceKind": "CA_RESEARCH",
+    "researchKey": "wh_dlc07_tech_brt_economy_industry_swords",
+    "name": "Master Swordsmiths",
+    "unitId": "ca_unit_wh_dlc07_brt_inf_men_at_arms_1",
+    "mainKey": "wh_dlc07_brt_inf_men_at_arms_1",
+    "landKey": "wh_dlc07_brt_inf_men_at_arms_1",
+    "sourceSha256": "bf658783ef8fd44abad4a25109535ee7acc380baad28c12c4d5d0ad867b5b297",
+    "reviewSha256": "46ca5a1c71d5543da316997930f8d4019b438c97b660166c71992c8d9bb6d544",
+    "snapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+    "gameVersion": "9.0.2.0",
+    "scope": {
+      "key": "faction_to_force_own_unseen",
+      "location": "factionwide",
+      "ownership": "yours",
+      "source": "faction",
+      "target": "force",
+      "territory": "any"
+    },
+    "modifiers": [
+      {
+        "id": "ca-research:wh_dlc07_tech_brt_economy_industry_swords:wh2_main_effect_force_stat_weapon_strength_brt_knights_swordsmen_footsquires:melee.damage.armorPiercing",
+        "sourceType": "research",
+        "sourceId": "wh_dlc07_tech_brt_economy_industry_swords",
+        "targetType": "unit",
+        "targetId": "ca_unit_wh_dlc07_brt_inf_men_at_arms_1",
+        "stat": "melee.damage.armorPiercing",
+        "operation": "multiply",
+        "value": 12,
+        "scope": "faction",
+        "gameVersion": "9.0.2.0",
+        "source": "CA_RESEARCH · wh2_main_effect_force_stat_weapon_strength_brt_knights_swordsmen_footsquires",
+        "tags": []
+      },
+      {
+        "id": "ca-research:wh_dlc07_tech_brt_economy_industry_swords:wh2_main_effect_force_stat_weapon_strength_brt_knights_swordsmen_footsquires:melee.damage.base",
+        "sourceType": "research",
+        "sourceId": "wh_dlc07_tech_brt_economy_industry_swords",
+        "targetType": "unit",
+        "targetId": "ca_unit_wh_dlc07_brt_inf_men_at_arms_1",
+        "stat": "melee.damage.base",
+        "operation": "multiply",
+        "value": 12,
+        "scope": "faction",
+        "gameVersion": "9.0.2.0",
+        "source": "CA_RESEARCH · wh2_main_effect_force_stat_weapon_strength_brt_knights_swordsmen_footsquires",
+        "tags": []
+      }
+    ],
+    "omittedEffects": []
+  },
+  {
+    "sourceKind": "CA_RESEARCH",
+    "researchKey": "wh_dlc07_tech_brt_economy_industry_swords",
+    "name": "Master Swordsmiths",
+    "unitId": "ca_unit_wh_dlc07_brt_inf_men_at_arms_2",
+    "mainKey": "wh_dlc07_brt_inf_men_at_arms_2",
+    "landKey": "wh_dlc07_brt_inf_men_at_arms_2",
+    "sourceSha256": "bf658783ef8fd44abad4a25109535ee7acc380baad28c12c4d5d0ad867b5b297",
+    "reviewSha256": "46ca5a1c71d5543da316997930f8d4019b438c97b660166c71992c8d9bb6d544",
+    "snapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+    "gameVersion": "9.0.2.0",
+    "scope": {
+      "key": "faction_to_force_own_unseen",
+      "location": "factionwide",
+      "ownership": "yours",
+      "source": "faction",
+      "target": "force",
+      "territory": "any"
+    },
+    "modifiers": [
+      {
+        "id": "ca-research:wh_dlc07_tech_brt_economy_industry_swords:wh2_main_effect_force_stat_weapon_strength_brt_knights_swordsmen_footsquires:melee.damage.armorPiercing",
+        "sourceType": "research",
+        "sourceId": "wh_dlc07_tech_brt_economy_industry_swords",
+        "targetType": "unit",
+        "targetId": "ca_unit_wh_dlc07_brt_inf_men_at_arms_2",
+        "stat": "melee.damage.armorPiercing",
+        "operation": "multiply",
+        "value": 12,
+        "scope": "faction",
+        "gameVersion": "9.0.2.0",
+        "source": "CA_RESEARCH · wh2_main_effect_force_stat_weapon_strength_brt_knights_swordsmen_footsquires",
+        "tags": []
+      },
+      {
+        "id": "ca-research:wh_dlc07_tech_brt_economy_industry_swords:wh2_main_effect_force_stat_weapon_strength_brt_knights_swordsmen_footsquires:melee.damage.base",
+        "sourceType": "research",
+        "sourceId": "wh_dlc07_tech_brt_economy_industry_swords",
+        "targetType": "unit",
+        "targetId": "ca_unit_wh_dlc07_brt_inf_men_at_arms_2",
+        "stat": "melee.damage.base",
+        "operation": "multiply",
+        "value": 12,
+        "scope": "faction",
+        "gameVersion": "9.0.2.0",
+        "source": "CA_RESEARCH · wh2_main_effect_force_stat_weapon_strength_brt_knights_swordsmen_footsquires",
+        "tags": []
+      }
+    ],
+    "omittedEffects": []
+  },
+  {
+    "sourceKind": "CA_RESEARCH",
+    "researchKey": "wh_dlc07_tech_brt_economy_industry_swords",
+    "name": "Master Swordsmiths",
+    "unitId": "ca_unit_wh_main_brt_cav_grail_knights",
+    "mainKey": "wh_main_brt_cav_grail_knights",
+    "landKey": "wh_main_brt_cav_grail_knights",
+    "sourceSha256": "bf658783ef8fd44abad4a25109535ee7acc380baad28c12c4d5d0ad867b5b297",
+    "reviewSha256": "46ca5a1c71d5543da316997930f8d4019b438c97b660166c71992c8d9bb6d544",
+    "snapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+    "gameVersion": "9.0.2.0",
+    "scope": {
+      "key": "faction_to_force_own_unseen",
+      "location": "factionwide",
+      "ownership": "yours",
+      "source": "faction",
+      "target": "force",
+      "territory": "any"
+    },
+    "modifiers": [
+      {
+        "id": "ca-research:wh_dlc07_tech_brt_economy_industry_swords:wh2_main_effect_force_stat_weapon_strength_brt_knights_swordsmen_footsquires:melee.damage.armorPiercing",
+        "sourceType": "research",
+        "sourceId": "wh_dlc07_tech_brt_economy_industry_swords",
+        "targetType": "unit",
+        "targetId": "ca_unit_wh_main_brt_cav_grail_knights",
+        "stat": "melee.damage.armorPiercing",
+        "operation": "multiply",
+        "value": 12,
+        "scope": "faction",
+        "gameVersion": "9.0.2.0",
+        "source": "CA_RESEARCH · wh2_main_effect_force_stat_weapon_strength_brt_knights_swordsmen_footsquires",
+        "tags": []
+      },
+      {
+        "id": "ca-research:wh_dlc07_tech_brt_economy_industry_swords:wh2_main_effect_force_stat_weapon_strength_brt_knights_swordsmen_footsquires:melee.damage.base",
+        "sourceType": "research",
+        "sourceId": "wh_dlc07_tech_brt_economy_industry_swords",
+        "targetType": "unit",
+        "targetId": "ca_unit_wh_main_brt_cav_grail_knights",
+        "stat": "melee.damage.base",
+        "operation": "multiply",
+        "value": 12,
+        "scope": "faction",
+        "gameVersion": "9.0.2.0",
+        "source": "CA_RESEARCH · wh2_main_effect_force_stat_weapon_strength_brt_knights_swordsmen_footsquires",
+        "tags": []
+      }
+    ],
+    "omittedEffects": []
+  },
+  {
+    "sourceKind": "CA_RESEARCH",
+    "researchKey": "wh_dlc07_tech_brt_economy_industry_swords",
+    "name": "Master Swordsmiths",
+    "unitId": "ca_unit_wh_main_brt_cav_knights_of_the_realm",
+    "mainKey": "wh_main_brt_cav_knights_of_the_realm",
+    "landKey": "wh_main_brt_cav_knights_of_the_realm",
+    "sourceSha256": "bf658783ef8fd44abad4a25109535ee7acc380baad28c12c4d5d0ad867b5b297",
+    "reviewSha256": "46ca5a1c71d5543da316997930f8d4019b438c97b660166c71992c8d9bb6d544",
+    "snapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+    "gameVersion": "9.0.2.0",
+    "scope": {
+      "key": "faction_to_force_own_unseen",
+      "location": "factionwide",
+      "ownership": "yours",
+      "source": "faction",
+      "target": "force",
+      "territory": "any"
+    },
+    "modifiers": [
+      {
+        "id": "ca-research:wh_dlc07_tech_brt_economy_industry_swords:wh2_main_effect_force_stat_weapon_strength_brt_knights_swordsmen_footsquires:melee.damage.armorPiercing",
+        "sourceType": "research",
+        "sourceId": "wh_dlc07_tech_brt_economy_industry_swords",
+        "targetType": "unit",
+        "targetId": "ca_unit_wh_main_brt_cav_knights_of_the_realm",
+        "stat": "melee.damage.armorPiercing",
+        "operation": "multiply",
+        "value": 12,
+        "scope": "faction",
+        "gameVersion": "9.0.2.0",
+        "source": "CA_RESEARCH · wh2_main_effect_force_stat_weapon_strength_brt_knights_swordsmen_footsquires",
+        "tags": []
+      },
+      {
+        "id": "ca-research:wh_dlc07_tech_brt_economy_industry_swords:wh2_main_effect_force_stat_weapon_strength_brt_knights_swordsmen_footsquires:melee.damage.base",
+        "sourceType": "research",
+        "sourceId": "wh_dlc07_tech_brt_economy_industry_swords",
+        "targetType": "unit",
+        "targetId": "ca_unit_wh_main_brt_cav_knights_of_the_realm",
+        "stat": "melee.damage.base",
+        "operation": "multiply",
+        "value": 12,
+        "scope": "faction",
+        "gameVersion": "9.0.2.0",
+        "source": "CA_RESEARCH · wh2_main_effect_force_stat_weapon_strength_brt_knights_swordsmen_footsquires",
+        "tags": []
+      }
+    ],
+    "omittedEffects": []
+  },
+  {
+    "sourceKind": "CA_RESEARCH",
+    "researchKey": "wh_dlc07_tech_brt_economy_industry_swords",
+    "name": "Master Swordsmiths",
+    "unitId": "ca_unit_wh_main_brt_cav_pegasus_knights",
+    "mainKey": "wh_main_brt_cav_pegasus_knights",
+    "landKey": "wh_main_brt_cav_pegasus_knights",
+    "sourceSha256": "bf658783ef8fd44abad4a25109535ee7acc380baad28c12c4d5d0ad867b5b297",
+    "reviewSha256": "46ca5a1c71d5543da316997930f8d4019b438c97b660166c71992c8d9bb6d544",
+    "snapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+    "gameVersion": "9.0.2.0",
+    "scope": {
+      "key": "faction_to_force_own_unseen",
+      "location": "factionwide",
+      "ownership": "yours",
+      "source": "faction",
+      "target": "force",
+      "territory": "any"
+    },
+    "modifiers": [
+      {
+        "id": "ca-research:wh_dlc07_tech_brt_economy_industry_swords:wh2_main_effect_force_stat_weapon_strength_brt_knights_swordsmen_footsquires:melee.damage.armorPiercing",
+        "sourceType": "research",
+        "sourceId": "wh_dlc07_tech_brt_economy_industry_swords",
+        "targetType": "unit",
+        "targetId": "ca_unit_wh_main_brt_cav_pegasus_knights",
+        "stat": "melee.damage.armorPiercing",
+        "operation": "multiply",
+        "value": 12,
+        "scope": "faction",
+        "gameVersion": "9.0.2.0",
+        "source": "CA_RESEARCH · wh2_main_effect_force_stat_weapon_strength_brt_knights_swordsmen_footsquires",
+        "tags": []
+      },
+      {
+        "id": "ca-research:wh_dlc07_tech_brt_economy_industry_swords:wh2_main_effect_force_stat_weapon_strength_brt_knights_swordsmen_footsquires:melee.damage.base",
+        "sourceType": "research",
+        "sourceId": "wh_dlc07_tech_brt_economy_industry_swords",
+        "targetType": "unit",
+        "targetId": "ca_unit_wh_main_brt_cav_pegasus_knights",
+        "stat": "melee.damage.base",
+        "operation": "multiply",
+        "value": 12,
+        "scope": "faction",
+        "gameVersion": "9.0.2.0",
+        "source": "CA_RESEARCH · wh2_main_effect_force_stat_weapon_strength_brt_knights_swordsmen_footsquires",
+        "tags": []
+      }
+    ],
+    "omittedEffects": []
+  },
+  {
+    "sourceKind": "CA_RESEARCH",
+    "researchKey": "wh_dlc07_tech_brt_economy_other_fanaticism",
+    "name": "Encourage Fanaticism",
+    "unitId": "ca_unit_wh_dlc07_brt_inf_battle_pilgrims_0",
+    "mainKey": "wh_dlc07_brt_inf_battle_pilgrims_0",
+    "landKey": "wh_dlc07_brt_inf_battle_pilgrims_0",
+    "sourceSha256": "bf658783ef8fd44abad4a25109535ee7acc380baad28c12c4d5d0ad867b5b297",
+    "reviewSha256": "46ca5a1c71d5543da316997930f8d4019b438c97b660166c71992c8d9bb6d544",
+    "snapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+    "gameVersion": "9.0.2.0",
+    "scope": {
+      "key": "faction_to_force_own_unseen",
+      "location": "factionwide",
+      "ownership": "yours",
+      "source": "faction",
+      "target": "force",
+      "territory": "any"
+    },
+    "modifiers": [
+      {
+        "id": "ca-research:wh_dlc07_tech_brt_economy_other_fanaticism:wh2_main_effect_force_stat_melee_attack_pilgrims_reliquae:melee.meleeAttack",
+        "sourceType": "research",
+        "sourceId": "wh_dlc07_tech_brt_economy_other_fanaticism",
+        "targetType": "unit",
+        "targetId": "ca_unit_wh_dlc07_brt_inf_battle_pilgrims_0",
+        "stat": "melee.meleeAttack",
+        "operation": "add",
+        "value": 5,
+        "scope": "faction",
+        "gameVersion": "9.0.2.0",
+        "source": "CA_RESEARCH · wh2_main_effect_force_stat_melee_attack_pilgrims_reliquae",
+        "tags": []
+      },
+      {
+        "id": "ca-research:wh_dlc07_tech_brt_economy_other_fanaticism:wh2_main_effect_force_stat_melee_defence_brt_pilgrims_reliquae:defense.meleeDefense",
+        "sourceType": "research",
+        "sourceId": "wh_dlc07_tech_brt_economy_other_fanaticism",
+        "targetType": "unit",
+        "targetId": "ca_unit_wh_dlc07_brt_inf_battle_pilgrims_0",
+        "stat": "defense.meleeDefense",
+        "operation": "add",
+        "value": 5,
+        "scope": "faction",
+        "gameVersion": "9.0.2.0",
+        "source": "CA_RESEARCH · wh2_main_effect_force_stat_melee_defence_brt_pilgrims_reliquae",
+        "tags": []
+      }
+    ],
+    "omittedEffects": []
+  },
+  {
+    "sourceKind": "CA_RESEARCH",
+    "researchKey": "wh_dlc07_tech_brt_economy_other_3",
+    "name": "Subsidised Tools",
+    "unitId": "ca_unit_wh_dlc07_brt_peasant_mob_0",
+    "mainKey": "wh_dlc07_brt_peasant_mob_0",
+    "landKey": "wh_dlc07_brt_inf_peasant_mob_0",
+    "sourceSha256": "bf658783ef8fd44abad4a25109535ee7acc380baad28c12c4d5d0ad867b5b297",
+    "reviewSha256": "46ca5a1c71d5543da316997930f8d4019b438c97b660166c71992c8d9bb6d544",
+    "snapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+    "gameVersion": "9.0.2.0",
+    "scope": {
+      "key": "faction_to_force_own_unseen",
+      "location": "factionwide",
+      "ownership": "yours",
+      "source": "faction",
+      "target": "force",
+      "territory": "any"
+    },
+    "modifiers": [
+      {
+        "id": "ca-research:wh_dlc07_tech_brt_economy_other_3:wh_dlc07_effect_force_stat_melee_attack_peasant_mob:melee.meleeAttack",
+        "sourceType": "research",
+        "sourceId": "wh_dlc07_tech_brt_economy_other_3",
+        "targetType": "unit",
+        "targetId": "ca_unit_wh_dlc07_brt_peasant_mob_0",
+        "stat": "melee.meleeAttack",
+        "operation": "add",
+        "value": 10,
+        "scope": "faction",
+        "gameVersion": "9.0.2.0",
+        "source": "CA_RESEARCH · wh_dlc07_effect_force_stat_melee_attack_peasant_mob",
+        "tags": []
+      },
+      {
+        "id": "ca-research:wh_dlc07_tech_brt_economy_other_3:wh_main_effect_tech_recruitment_cost_reduction_peasant_mob:campaign.recruitmentCost",
+        "sourceType": "research",
+        "sourceId": "wh_dlc07_tech_brt_economy_other_3",
+        "targetType": "unit",
+        "targetId": "ca_unit_wh_dlc07_brt_peasant_mob_0",
+        "stat": "campaign.recruitmentCost",
+        "operation": "multiply",
+        "value": -10,
+        "scope": "faction",
+        "gameVersion": "9.0.2.0",
+        "source": "CA_RESEARCH · wh_main_effect_tech_recruitment_cost_reduction_peasant_mob",
+        "tags": []
+      }
+    ],
+    "omittedEffects": [
+      {
+        "effectKey": "wh_main_effect_building_construction_cost_mod_infrastructure",
+        "classification": "NON_UNIT_STAT",
+        "reason": "Building cost is not unit recruitment cost."
+      }
+    ]
+  }
+]

@@ -3,6 +3,9 @@
 Status: **VERIFIED for this exact Grail Knights calculator target**. Local and
 remote `main` baseline: `cf432e7ec9cd396817b2fcae552df12a84121af9`.
 This is one real CA research, not a synthetic fixture or a faction research importer.
+The subsequent [eight-candidate batch](../research-batch-01/REVIEW.md) extends
+the same app/replay path. This original projection remains the identical first
+entry; its source/admission/review evidence is unchanged.
 
 ## Selected identity and source
 

@@ -7,7 +7,12 @@ const { renderToString } = require('react-dom/server');
 const { MemoryRouter } = require('react-router-dom');
 const App = require('../.test-build/src/App.js').default;
 const { comparisonUnit, comparisonOptions } = require('../.test-build/src/repositories/productionUnitSelection.js');
-const { caResearchEffect: research, calculateResearchAndManual: calculate, researchModifiers, modifierSourceLabel } = require('../.test-build/src/domain/caResearchEffect.js');
+const { caResearchEffects, calculateResearchAndManual: calculateSelected, researchModifiers: modifiersSelected, modifierSourceLabel: sourceSelected } = require('../.test-build/src/domain/caResearchEffect.js');
+const research = caResearchEffects[0];
+// Original single-slice assertions retained against the identical first entry.
+const calculate = (unit, rows, selected) => calculateSelected(unit, rows, selected ? [research.researchKey] : []);
+const researchModifiers = unit => modifiersSelected(unit, [research.researchKey]);
+const modifierSourceLabel = (id, selected) => sourceSelected(id, selected ? [research.researchKey] : []);
 const { wikiRepository: wiki } = require('../.test-build/src/repositories/wikiRepository.js');
 const { memoryIndexedDb } = require('./fixtures/memoryIndexedDb.cjs');
 const grail = comparisonUnit('ca_unit_wh_main_brt_cav_grail_knights');
