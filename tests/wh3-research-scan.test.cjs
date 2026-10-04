@@ -39,7 +39,7 @@ test('exact affiliation breaks on culture drift; an effectless technology stays 
   const d=discoverTree(empty);assert.equal(d.technologies.length,68);assert.equal(d.technologies.find(t=>t.key===key).effectRowIds.length,0);
 });
 
-test('whitelist unchanged, classifier integration is export-only, batch-01 identities/states/candidates exactly retained',async()=>{
+test('reviewed whitelist pin, classifier integration is export-only, batch-01 identities/states/candidates exactly retained',async()=>{
   const {sha256,classifyBatch}=await core;
   assert.equal(sha256(codeLF(policyBytes)),manifest.policySha256);
   assert.equal(sha256(codeLF(classifierBytes).replace('export function classifyResearchEffect','function classifyResearchEffect')),manifest.originalClassifierSha256);
@@ -69,15 +69,15 @@ test('scan replay is byte/digest deterministic and works with CRLF code checkout
 
 test('DIRECT totals, exact expansion, per Unit/stat/operation and main!=land chain are correct',async()=>{
   const r=await run(),s=r.summary;
-  assert.deepEqual(s.effects.counts,{DIRECT_CANDIDATE:9,REVIEW_REQUIRED:157,UNSUPPORTED:1,NON_UNIT_STAT:12,UNCLASSIFIABLE_INPUT:0});
-  assert.equal(s.technologies.withDirect,5);assert.equal(s.technologies.withoutDirect,63);assert.equal(s.technologies.mixed,9);
-  assert.equal(s.candidates.total,54);assert.equal(s.candidates.units,12);assert.equal(s.candidates.paths,7);
-  assert.deepEqual(s.candidates.operations,{add:24,multiply:30});assert.equal(candidates(r).length,54);
-  assert.equal(Object.values(s.candidates.perUnit).reduce((a,b)=>a+b,0),54);
-  assert.equal(Object.values(s.candidates.perPath).reduce((a,b)=>a+b,0),54);
+  assert.deepEqual(s.effects.counts,{DIRECT_CANDIDATE:15,REVIEW_REQUIRED:151,UNSUPPORTED:1,NON_UNIT_STAT:12,UNCLASSIFIABLE_INPUT:0});
+  assert.equal(s.technologies.withDirect,10);assert.equal(s.technologies.withoutDirect,58);assert.equal(s.technologies.mixed,12);
+  assert.equal(s.candidates.total,96);assert.equal(s.candidates.units,22);assert.equal(s.candidates.paths,10);
+  assert.deepEqual(s.candidates.operations,{add:37,multiply:59});assert.equal(candidates(r).length,96);
+  assert.equal(Object.values(s.candidates.perUnit).reduce((a,b)=>a+b,0),96);
+  assert.equal(Object.values(s.candidates.perPath).reduce((a,b)=>a+b,0),96);
   for(const e of effects(r).filter(e=>e.status!=='DIRECT_CANDIDATE')) assert.equal(e.candidates.length,0);
   const peasant=candidates(r).filter(c=>c.mainKey==='wh_dlc07_brt_peasant_mob_0');
-  assert.equal(peasant.length,2);assert(peasant.every(c=>c.landKey==='wh_dlc07_brt_inf_peasant_mob_0'));
+  assert.equal(peasant.length,4);assert(peasant.every(c=>c.landKey==='wh_dlc07_brt_inf_peasant_mob_0'));
   assert(candidates(r).every(c=>c.provenance.sourceRef==='source'&&c.ruleIds.length===6));
 });
 
@@ -98,7 +98,7 @@ test('all scope records, target/selector and semantics inventories are derived f
 
 test('actual rejection frequencies and distinct representative patterns are deterministic, bounded, non-admitting',async()=>{
   const r=await run();assert.equal(r.rejections.reasons[0].key,'SCOPE_NOT_VERIFIED_OWN_FORCE');assert.equal(r.rejections.reasons[0].count,105);
-  assert.equal(r.rejections.reasons[1].key,'EFFECT_MAPPING_UNVERIFIED');assert.equal(r.rejections.reasons[1].count,48);
+  assert.equal(r.rejections.reasons[1].key,'EFFECT_MAPPING_UNVERIFIED');assert.equal(r.rejections.reasons[1].count,42);
   assert.equal(r.representatives.length,10);assert.equal(new Set(r.representatives.map(r=>r.pattern)).size,10);
   for(const c of r.representatives) {
     const e=effects(r).find(e=>e.technologyKey===c.technologyKey&&e.effectKey===c.effectKey);assert(e);assert.notEqual(e.status,'DIRECT_CANDIDATE');
@@ -139,7 +139,7 @@ test('full scanner flags same technology/effect conflicting source values withou
   assert.equal(blocked.length,2);assert(blocked.every(e=>e.status==='REVIEW_REQUIRED'&&e.reasonIds.includes('SCAN_SOURCE_CONFLICT')&&e.candidates.length===0));
 });
 
-test('existing app/Calculator/Manual/Production/HP/Speed/diagnostic/shared and baseline classifier report are unchanged',async()=>{
+test('existing app/Calculator/Manual/Production/HP/Speed/diagnostic/shared unchanged; bounded report only changes whitelist digest',async()=>{
   const {sha256}=await core;
   const hashes={
     'src/data/units.json':'da22d7eb4d6af13856274e3f81fe18c789ed6588b6e0c956cbf97583f1350dc1',
@@ -152,9 +152,11 @@ test('existing app/Calculator/Manual/Production/HP/Speed/diagnostic/shared and b
     'src/domain/caResearchEffect.ts':'865bbb4f21ecabdbbf4b4d7195d695e4fd06aaee190f650c07bc25130d8e25d3',
     'src/domain/unitModifiers.ts':'c185726116535146a58aab97a6c3208382d8e98effb8f7d8cfe72ae371e1ff91',
     'src/domain/manualModifierProfile.ts':'7fe69637988e86d1fa1dfca29f6bea48ef87e8866ac930d7d27ce9c9d650179a',
-    'tools/wh3-importer/research-classifier/report.json':'fe66a08d2788929cdd5e300c3f29b69e6b858c3f6f03976806b258377ba266eb',
   };
   for(const [file,hash] of Object.entries(hashes)) assert.equal(sha256(file.endsWith('.json')?readFileSync(file):readFileSync(file,'utf8').replace(/\r\n/g,'\n')),hash,file);
+  const previous=JSON.parse(readFileSync('tools/wh3-importer/research-mapping-review-01/manifest.json')).batchBefore;
+  const report=JSON.parse(readFileSync('tools/wh3-importer/research-classifier/report.json'));
+  assert.equal(sha256(JSON.stringify({...report,whitelistSha256:previous.whitelistSha256},null,2)+'\n'),previous.reportSha256);
   const units=JSON.parse(unitsBytes);assert.equal(units.filter(u=>u.gameVersion!=='sample').length,101);assert.equal(units.filter(u=>u.gameVersion==='sample').length,5);
 });
 

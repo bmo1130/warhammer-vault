@@ -5,6 +5,11 @@ produce numerical candidates from the committed Bretonnia batch-01 source.
 It does not admit candidates, write Calculator data, or scan new technologies.
 The existing human review and admission remain separate and unchanged.
 
+Mapping review 01 also reuses this pure classifier for the committed full-tree
+source. Its six exact additions produce **15 DIRECT effects / 96 candidates /
+22 target Units** there. Batch-01 remains **9 / 54 / 12**. See
+[`research-mapping-review-01/REVIEW.md`](../research-mapping-review-01/REVIEW.md).
+
 `policy.mjs` centralizes the reviewed semantics whitelist and immutable source
 pins. `classify.mjs` is pure; the CLI reads only batch-01 `source.json` and
 `src/data/units.json`. Neither the old policy/admission nor review answers feed
@@ -49,13 +54,23 @@ cannot inherit this approval.
 | `melee_damage_mod_mult` | `melee.damage.base` | multiply | `OP_BASE_DAMAGE_PERCENT` |
 | `melee_damage_ap_mod_mult` | `melee.damage.armorPiercing` | multiply | `OP_AP_DAMAGE_PERCENT` |
 | `cost_mod` | `campaign.recruitmentCost` | multiply | `OP_RECRUITMENT_PERCENT` |
+| `armour_mod` (review 01 exact effect) | `defense.armor` | add | `OP_ARMOR_FLAT` |
+| `upkeep_mod` (review 01 explicit set only) | `campaign.upkeep` | multiply | `OP_UPKEEP_PERCENT` |
+| `range_mod` (review 01 exact effect) | `missile.range` | multiply | `OP_RANGE_PERCENT` |
 
-These bonus names alone never authorize a mapping. `policy.mjs` lists the nine
+These bonus names alone never authorize a mapping. `policy.mjs` lists the fifteen
 exact effect keys, reviewed Loc strings and their exact unit sets. `%+n` versus
 `%+n%` is checked against that already-reviewed interpretation; there is no
 generic Loc/effect-name inference and no percent inference from magnitude.
 `multiply 10` means the existing engine's +10%, not a factor of ten. SET,
-upkeep, missile strength and reload are absent from the automatic mapping list.
+missile strength and reload are absent from the automatic mapping list. Upkeep
+is approved only for exact `wh_dlc07_peasant_upkeep_penalty` and its reviewed
+explicit set; the original caste-selector upkeep effect stays rejected. Raw
+`-5` is retained as multiply `-5`. Ward save stays REVIEW_REQUIRED: its `%` Loc
+does not establish additive percentage points versus relative modification.
+Existing nine mappings, scope, membership and selector gates are unchanged.
+New mappings carry a review reference with exact Loc/bonus proof, first
+technology, snapshot/schema/pack and value/operation semantics.
 
 ## Membership and identity
 
@@ -150,6 +165,8 @@ justified by this eight-technology sample.
 
 ```powershell
 node scripts/classify-bretonnia-research.mjs
+node scripts/review-research-mappings.mjs
+node scripts/scan-bretonnia-research.mjs
 node scripts/review-bretonnia-research.mjs --check
 npm test
 npm run build
@@ -162,7 +179,8 @@ semantic/target guards, zero/fraction preservation, deterministic duplicates,
 conflicts, human-oracle equality, mixed summaries and protected file hashes.
 Existing calculator/manual Profile/HP/Speed/runtime regressions remain active.
 
-Validation: classifier replay and original slice/batch replay PASS; **421/421**
+Original classifier validation (before full scan/review 01): classifier replay
+and original slice/batch replay PASS; **421/421**
 tests and build PASS. A clean tracked-file snapshot with no `.git`, `generated`
 or importer `.local` also passes both replays and build; **419 passed / 2 skipped**.
 The two existing optional local diagnostic/saved-speed-trace checks skip because

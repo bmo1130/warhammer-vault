@@ -22,9 +22,45 @@ export const operations = Object.freeze({
   'melee.meleeAttack': 'add', 'defense.meleeDefense': 'add', 'defense.leadership': 'add',
   'melee.chargeBonus': 'multiply', 'melee.damage.base': 'multiply',
   'melee.damage.armorPiercing': 'multiply', 'campaign.recruitmentCost': 'multiply',
+  'defense.armor': 'add', 'campaign.upkeep': 'multiply', 'missile.range': 'multiply',
 });
 const mapping = (bonus, stat, ruleId) => ({ bonus, stat, operation: operations[stat], ruleId });
 export const effectMappings = {
+  // Exact reviewed additions only; CA Loc, bonus/schema joins and snapshot
+  // proof are in research-mapping-review-01/review.json. No family inference.
+  wh2_dlc09_effect_force_stat_armour_brt_knights: {
+    description: 'Armour: %+n for Knight units', sets: ['brt_knights'],
+    reviewRef: 'research-mapping-review-01/review.json#wh2_dlc09_effect_force_stat_armour_brt_knights',
+    mappings: [mapping('armour_mod', 'defense.armor', 'OP_ARMOR_FLAT')],
+  },
+  wh_dlc07_effect_force_stat_leadership_peasant_mob: {
+    description: 'Leadership: %+n for Peasant Mob units', sets: ['wh_dlc07_peasant_mob'],
+    reviewRef: 'research-mapping-review-01/review.json#wh_dlc07_effect_force_stat_leadership_peasant_mob',
+    mappings: [mapping('morale', 'defense.leadership', 'OP_LEADERSHIP_FLAT')],
+  },
+  wh_dlc07_peasant_upkeep_penalty: {
+    description: 'Upkeep: %+n% for non-Knight units', sets: ['wh_dlc07_peasant_economy_unit_set'],
+    reviewRef: 'research-mapping-review-01/review.json#wh_dlc07_peasant_upkeep_penalty',
+    mappings: [mapping('upkeep_mod', 'campaign.upkeep', 'OP_UPKEEP_PERCENT')],
+  },
+  wh2_main_effect_force_stat_range_brt_bowmen_yeomen: {
+    description: 'Range: %+n% for Peasant Bowmen and Mounted Yeomen Archers units', sets: ['brt_bow_cav', 'brt_bow_inf'],
+    reviewRef: 'research-mapping-review-01/review.json#wh2_main_effect_force_stat_range_brt_bowmen_yeomen',
+    mappings: [mapping('range_mod', 'missile.range', 'OP_RANGE_PERCENT')],
+  },
+  wh2_main_effect_force_stat_weapon_strength_brt_spearmen_polemen_yeomen: {
+    description: 'Weapon strength: %+n% for Spearmen-at-Arms, Men-at-Arms (Polearms) and Mounted Yeomen units',
+    sets: ['brt_polearms', 'brt_spear_inf', 'brt_squires_yeomen'],
+    reviewRef: 'research-mapping-review-01/review.json#wh2_main_effect_force_stat_weapon_strength_brt_spearmen_polemen_yeomen',
+    mappings: [mapping('melee_damage_mod_mult', 'melee.damage.base', 'OP_BASE_DAMAGE_PERCENT'),
+      mapping('melee_damage_ap_mod_mult', 'melee.damage.armorPiercing', 'OP_AP_DAMAGE_PERCENT')],
+  },
+  wh2_main_effect_force_stat_melee_attack_brt_spearmen_polemen_yeomen: {
+    description: 'Melee attack: %+n for Spearmen-at-Arms, Men-at-Arms (Polearms) and Mounted Yeomen units',
+    sets: ['brt_polearms', 'brt_spear_inf', 'brt_squires_yeomen'],
+    reviewRef: 'research-mapping-review-01/review.json#wh2_main_effect_force_stat_melee_attack_brt_spearmen_polemen_yeomen',
+    mappings: [mapping('melee_attack_mod', 'melee.meleeAttack', 'OP_MELEE_ATTACK_FLAT')],
+  },
   wh2_main_effect_force_stat_melee_attack_brt_knights: {
     description: 'Melee attack: %+n for Knights units', sets: ['brt_knights'],
     mappings: [mapping('melee_attack_mod', 'melee.meleeAttack', 'OP_MELEE_ATTACK_FLAT')],

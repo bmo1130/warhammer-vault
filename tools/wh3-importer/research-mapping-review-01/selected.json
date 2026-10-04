@@ -1,0 +1,1936 @@
+[
+  {
+    "technologyKey": "wh_dlc07_tech_brt_economy_industry_steel",
+    "technologyName": "Steel Furnaces",
+    "effectKey": "wh2_dlc09_effect_force_stat_armour_brt_knights",
+    "sourceRowId": "technology_effects_junction_tables:af7762ed61b3842a3e36",
+    "rawValue": 8,
+    "description": "Armour: %+n for Knight units",
+    "localisationRowId": "Loc:f1fe8fc8a8e00bfcfa57",
+    "scope": "faction_to_force_own_unseen",
+    "reasonIds": [
+      "EFFECT_MAPPING_UNVERIFIED"
+    ],
+    "targetShape": {
+      "kind": "EXPLICIT_UNIT_SET",
+      "relationRowIds": [
+        "effect_bonus_value_ids_unit_sets_tables:4e1d9680d89cca0a9565"
+      ],
+      "relationTables": [
+        "effect_bonus_value_ids_unit_sets_tables"
+      ],
+      "bonusIds": [
+        "armour_mod"
+      ],
+      "sets": [
+        {
+          "key": "brt_knights",
+          "definitionRowIds": [
+            "unit_sets_tables:32787572d3dcc7aca5c4"
+          ],
+          "membershipRowIds": [
+            "unit_set_to_unit_junctions_tables:51a20cd889ef93f6a061",
+            "unit_set_to_unit_junctions_tables:5e275409a5adc8543a5c",
+            "unit_set_to_unit_junctions_tables:693c2590d49911c30949",
+            "unit_set_to_unit_junctions_tables:7db7aec6cbe840cca295",
+            "unit_set_to_unit_junctions_tables:83df201012fc88e6ca22",
+            "unit_set_to_unit_junctions_tables:9c8c338786e791063247",
+            "unit_set_to_unit_junctions_tables:c252623e5288af7e4712",
+            "unit_set_to_unit_junctions_tables:d3707b840414ca2713a1",
+            "unit_set_to_unit_junctions_tables:dd8fc090dc39361c4fc6",
+            "unit_set_to_unit_junctions_tables:e57ce01652efbc7d8c6e",
+            "unit_set_to_unit_junctions_tables:fde0213cbbe115410114"
+          ],
+          "selectors": [],
+          "exclusions": [],
+          "identityTraces": [
+            {
+              "membershipRowId": "unit_set_to_unit_junctions_tables:51a20cd889ef93f6a061",
+              "mainKey": "wh_pro04_brt_cav_knights_of_the_realm_ror_0",
+              "mainRowIds": [
+                "main_units_tables:a056e48d5ca3165e0bae"
+              ],
+              "landKey": "wh_pro04_brt_cav_knights_of_the_realm_ror_0",
+              "landRowIds": [
+                "land_units_tables:bfca8e78225ba5c49386"
+              ],
+              "status": "EXACT_STATIC_CHAIN",
+              "production": false,
+              "relationshipRefs": [
+                [
+                  "unit_set_to_unit_junctions_tables:51a20cd889ef93f6a061",
+                  "unit_record",
+                  "main_units_tables:a056e48d5ca3165e0bae"
+                ],
+                [
+                  "main_units_tables:a056e48d5ca3165e0bae",
+                  "land_unit",
+                  "land_units_tables:bfca8e78225ba5c49386"
+                ]
+              ]
+            },
+            {
+              "membershipRowId": "unit_set_to_unit_junctions_tables:5e275409a5adc8543a5c",
+              "mainKey": "wh_main_brt_cav_knights_of_the_realm",
+              "mainRowIds": [
+                "main_units_tables:7411499650e816114558"
+              ],
+              "landKey": "wh_main_brt_cav_knights_of_the_realm",
+              "landRowIds": [
+                "land_units_tables:0dade6b083f9c0a1ae1d"
+              ],
+              "status": "EXACT_STATIC_CHAIN",
+              "production": true,
+              "relationshipRefs": [
+                [
+                  "unit_set_to_unit_junctions_tables:5e275409a5adc8543a5c",
+                  "unit_record",
+                  "main_units_tables:7411499650e816114558"
+                ],
+                [
+                  "main_units_tables:7411499650e816114558",
+                  "land_unit",
+                  "land_units_tables:0dade6b083f9c0a1ae1d"
+                ]
+              ]
+            },
+            {
+              "membershipRowId": "unit_set_to_unit_junctions_tables:693c2590d49911c30949",
+              "mainKey": "wh_main_brt_cav_pegasus_knights",
+              "mainRowIds": [
+                "main_units_tables:68208c461b32a3752b51"
+              ],
+              "landKey": "wh_main_brt_cav_pegasus_knights",
+              "landRowIds": [
+                "land_units_tables:1aa7caac79c3ce7163ba"
+              ],
+              "status": "EXACT_STATIC_CHAIN",
+              "production": true,
+              "relationshipRefs": [
+                [
+                  "unit_set_to_unit_junctions_tables:693c2590d49911c30949",
+                  "unit_record",
+                  "main_units_tables:68208c461b32a3752b51"
+                ],
+                [
+                  "main_units_tables:68208c461b32a3752b51",
+                  "land_unit",
+                  "land_units_tables:1aa7caac79c3ce7163ba"
+                ]
+              ]
+            },
+            {
+              "membershipRowId": "unit_set_to_unit_junctions_tables:7db7aec6cbe840cca295",
+              "mainKey": "wh_pro04_brt_cav_questing_knights_ror_0",
+              "mainRowIds": [
+                "main_units_tables:3c8139262f646d43bb1d"
+              ],
+              "landKey": "wh_pro04_brt_cav_questing_knights_ror_0",
+              "landRowIds": [
+                "land_units_tables:192fa71d6f8f4ae2a9e9"
+              ],
+              "status": "EXACT_STATIC_CHAIN",
+              "production": false,
+              "relationshipRefs": [
+                [
+                  "unit_set_to_unit_junctions_tables:7db7aec6cbe840cca295",
+                  "unit_record",
+                  "main_units_tables:3c8139262f646d43bb1d"
+                ],
+                [
+                  "main_units_tables:3c8139262f646d43bb1d",
+                  "land_unit",
+                  "land_units_tables:192fa71d6f8f4ae2a9e9"
+                ]
+              ]
+            },
+            {
+              "membershipRowId": "unit_set_to_unit_junctions_tables:83df201012fc88e6ca22",
+              "mainKey": "wh_dlc07_brt_cav_royal_hippogryph_knights_0",
+              "mainRowIds": [
+                "main_units_tables:d1b160a1ed49abbc3875"
+              ],
+              "landKey": "wh_dlc07_brt_cav_royal_hippogryph_knights_0",
+              "landRowIds": [
+                "land_units_tables:d4b236e20c9278e7fde7"
+              ],
+              "status": "EXACT_STATIC_CHAIN",
+              "production": false,
+              "relationshipRefs": [
+                [
+                  "unit_set_to_unit_junctions_tables:83df201012fc88e6ca22",
+                  "unit_record",
+                  "main_units_tables:d1b160a1ed49abbc3875"
+                ],
+                [
+                  "main_units_tables:d1b160a1ed49abbc3875",
+                  "land_unit",
+                  "land_units_tables:d4b236e20c9278e7fde7"
+                ]
+              ]
+            },
+            {
+              "membershipRowId": "unit_set_to_unit_junctions_tables:9c8c338786e791063247",
+              "mainKey": "wh_dlc07_brt_cav_royal_pegasus_knights_0",
+              "mainRowIds": [
+                "main_units_tables:a120fab10e98e92904fd"
+              ],
+              "landKey": "wh_dlc07_brt_cav_royal_pegasus_knights_0",
+              "landRowIds": [
+                "land_units_tables:5c91ff4a8398ae9785c1"
+              ],
+              "status": "EXACT_STATIC_CHAIN",
+              "production": true,
+              "relationshipRefs": [
+                [
+                  "unit_set_to_unit_junctions_tables:9c8c338786e791063247",
+                  "unit_record",
+                  "main_units_tables:a120fab10e98e92904fd"
+                ],
+                [
+                  "main_units_tables:a120fab10e98e92904fd",
+                  "land_unit",
+                  "land_units_tables:5c91ff4a8398ae9785c1"
+                ]
+              ]
+            },
+            {
+              "membershipRowId": "unit_set_to_unit_junctions_tables:c252623e5288af7e4712",
+              "mainKey": "wh_main_brt_cav_grail_knights",
+              "mainRowIds": [
+                "main_units_tables:59c055d24df1f59c75a3"
+              ],
+              "landKey": "wh_main_brt_cav_grail_knights",
+              "landRowIds": [
+                "land_units_tables:b1b34300e348a7f28dd9"
+              ],
+              "status": "EXACT_STATIC_CHAIN",
+              "production": true,
+              "relationshipRefs": [
+                [
+                  "unit_set_to_unit_junctions_tables:c252623e5288af7e4712",
+                  "unit_record",
+                  "main_units_tables:59c055d24df1f59c75a3"
+                ],
+                [
+                  "main_units_tables:59c055d24df1f59c75a3",
+                  "land_unit",
+                  "land_units_tables:b1b34300e348a7f28dd9"
+                ]
+              ]
+            },
+            {
+              "membershipRowId": "unit_set_to_unit_junctions_tables:d3707b840414ca2713a1",
+              "mainKey": "wh_dlc07_brt_cav_questing_knights_0",
+              "mainRowIds": [
+                "main_units_tables:cd177b449efdbc06ae51"
+              ],
+              "landKey": "wh_dlc07_brt_cav_questing_knights_0",
+              "landRowIds": [
+                "land_units_tables:30a8ff35b71cb9bf34e5"
+              ],
+              "status": "EXACT_STATIC_CHAIN",
+              "production": true,
+              "relationshipRefs": [
+                [
+                  "unit_set_to_unit_junctions_tables:d3707b840414ca2713a1",
+                  "unit_record",
+                  "main_units_tables:cd177b449efdbc06ae51"
+                ],
+                [
+                  "main_units_tables:cd177b449efdbc06ae51",
+                  "land_unit",
+                  "land_units_tables:30a8ff35b71cb9bf34e5"
+                ]
+              ]
+            },
+            {
+              "membershipRowId": "unit_set_to_unit_junctions_tables:dd8fc090dc39361c4fc6",
+              "mainKey": "wh_pro04_brt_cav_knights_errant_ror_0",
+              "mainRowIds": [
+                "main_units_tables:f504c9e02891b9edcf11"
+              ],
+              "landKey": "wh_pro04_brt_cav_knights_errant_ror_0",
+              "landRowIds": [
+                "land_units_tables:88daee3479e27df0acd3"
+              ],
+              "status": "EXACT_STATIC_CHAIN",
+              "production": false,
+              "relationshipRefs": [
+                [
+                  "unit_set_to_unit_junctions_tables:dd8fc090dc39361c4fc6",
+                  "unit_record",
+                  "main_units_tables:f504c9e02891b9edcf11"
+                ],
+                [
+                  "main_units_tables:f504c9e02891b9edcf11",
+                  "land_unit",
+                  "land_units_tables:88daee3479e27df0acd3"
+                ]
+              ]
+            },
+            {
+              "membershipRowId": "unit_set_to_unit_junctions_tables:e57ce01652efbc7d8c6e",
+              "mainKey": "wh_dlc07_brt_cav_knights_errant_0",
+              "mainRowIds": [
+                "main_units_tables:12220ec181822d8cf591"
+              ],
+              "landKey": "wh_dlc07_brt_cav_knights_errant_0",
+              "landRowIds": [
+                "land_units_tables:b3c5c513c7be9b7200fb"
+              ],
+              "status": "EXACT_STATIC_CHAIN",
+              "production": true,
+              "relationshipRefs": [
+                [
+                  "unit_set_to_unit_junctions_tables:e57ce01652efbc7d8c6e",
+                  "unit_record",
+                  "main_units_tables:12220ec181822d8cf591"
+                ],
+                [
+                  "main_units_tables:12220ec181822d8cf591",
+                  "land_unit",
+                  "land_units_tables:b3c5c513c7be9b7200fb"
+                ]
+              ]
+            },
+            {
+              "membershipRowId": "unit_set_to_unit_junctions_tables:fde0213cbbe115410114",
+              "mainKey": "wh_dlc07_brt_cav_grail_guardians_0",
+              "mainRowIds": [
+                "main_units_tables:1cfe56e8e962d609b862"
+              ],
+              "landKey": "wh_dlc07_brt_cav_grail_guardians_0",
+              "landRowIds": [
+                "land_units_tables:7b26ed87ab237981ce05"
+              ],
+              "status": "EXACT_STATIC_CHAIN",
+              "production": true,
+              "relationshipRefs": [
+                [
+                  "unit_set_to_unit_junctions_tables:fde0213cbbe115410114",
+                  "unit_record",
+                  "main_units_tables:1cfe56e8e962d609b862"
+                ],
+                [
+                  "main_units_tables:1cfe56e8e962d609b862",
+                  "land_unit",
+                  "land_units_tables:7b26ed87ab237981ce05"
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "hasSelector": false,
+      "explicitMainResolvable": true
+    }
+  },
+  {
+    "technologyKey": "wh_dlc07_tech_brt_economy_other_1",
+    "technologyName": "Almshouses",
+    "effectKey": "wh_dlc07_effect_force_stat_leadership_peasant_mob",
+    "sourceRowId": "technology_effects_junction_tables:a183cf41c3ba95454503",
+    "rawValue": 5,
+    "description": "Leadership: %+n for Peasant Mob units",
+    "localisationRowId": "Loc:16f0d4e5373279fab582",
+    "scope": "faction_to_force_own_unseen",
+    "reasonIds": [
+      "EFFECT_MAPPING_UNVERIFIED"
+    ],
+    "targetShape": {
+      "kind": "EXPLICIT_UNIT_SET",
+      "relationRowIds": [
+        "effect_bonus_value_ids_unit_sets_tables:d1487eb9ce0517c3a0e0"
+      ],
+      "relationTables": [
+        "effect_bonus_value_ids_unit_sets_tables"
+      ],
+      "bonusIds": [
+        "morale"
+      ],
+      "sets": [
+        {
+          "key": "wh_dlc07_peasant_mob",
+          "definitionRowIds": [
+            "unit_sets_tables:3d9e361cde926ce3be97"
+          ],
+          "membershipRowIds": [
+            "unit_set_to_unit_junctions_tables:a844cbdeeb376a567ab9"
+          ],
+          "selectors": [],
+          "exclusions": [],
+          "identityTraces": [
+            {
+              "membershipRowId": "unit_set_to_unit_junctions_tables:a844cbdeeb376a567ab9",
+              "mainKey": "wh_dlc07_brt_peasant_mob_0",
+              "mainRowIds": [
+                "main_units_tables:637557c284a0db8da0f9"
+              ],
+              "landKey": "wh_dlc07_brt_inf_peasant_mob_0",
+              "landRowIds": [
+                "land_units_tables:7044434e161f4eefbbb2"
+              ],
+              "status": "EXACT_STATIC_CHAIN",
+              "production": true,
+              "relationshipRefs": [
+                [
+                  "unit_set_to_unit_junctions_tables:a844cbdeeb376a567ab9",
+                  "unit_record",
+                  "main_units_tables:637557c284a0db8da0f9"
+                ],
+                [
+                  "main_units_tables:637557c284a0db8da0f9",
+                  "land_unit",
+                  "land_units_tables:7044434e161f4eefbbb2"
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "hasSelector": false,
+      "explicitMainResolvable": true
+    }
+  },
+  {
+    "technologyKey": "wh_dlc07_tech_brt_economy_other_draft",
+    "technologyName": "Registered Draft",
+    "effectKey": "wh_dlc07_peasant_upkeep_penalty",
+    "sourceRowId": "technology_effects_junction_tables:a7c4871afcc1e3294543",
+    "rawValue": -5,
+    "description": "Upkeep: %+n% for non-Knight units",
+    "localisationRowId": "Loc:db02de3ad7ab88654b0b",
+    "scope": "faction_to_force_own_unseen",
+    "reasonIds": [
+      "EFFECT_MAPPING_UNVERIFIED"
+    ],
+    "targetShape": {
+      "kind": "EXPLICIT_UNIT_SET",
+      "relationRowIds": [
+        "effect_bonus_value_ids_unit_sets_tables:6c3859b6fa7269972451"
+      ],
+      "relationTables": [
+        "effect_bonus_value_ids_unit_sets_tables"
+      ],
+      "bonusIds": [
+        "upkeep_mod"
+      ],
+      "sets": [
+        {
+          "key": "wh_dlc07_peasant_economy_unit_set",
+          "definitionRowIds": [
+            "unit_sets_tables:914ad9fd166a61c7ca09"
+          ],
+          "membershipRowIds": [
+            "unit_set_to_unit_junctions_tables:0a35b13cae24d1c6df16",
+            "unit_set_to_unit_junctions_tables:15194e5718817f2c9534",
+            "unit_set_to_unit_junctions_tables:2995bf20dc45684c7339",
+            "unit_set_to_unit_junctions_tables:2aa6a89804f37ba24caf",
+            "unit_set_to_unit_junctions_tables:41875eedd3d636549714",
+            "unit_set_to_unit_junctions_tables:6144b2ffbc88db10e893",
+            "unit_set_to_unit_junctions_tables:61ec872f90afd217bf2a",
+            "unit_set_to_unit_junctions_tables:75981db19fddbf546365",
+            "unit_set_to_unit_junctions_tables:76ccd2b85212a74fa9b6",
+            "unit_set_to_unit_junctions_tables:924f543365b711083570",
+            "unit_set_to_unit_junctions_tables:b74fa95a67bec075c285",
+            "unit_set_to_unit_junctions_tables:b7ad9c25a68f1cc4e7f5",
+            "unit_set_to_unit_junctions_tables:c3dc6f5b8f324790d3d6",
+            "unit_set_to_unit_junctions_tables:ca542d534316cf21f456",
+            "unit_set_to_unit_junctions_tables:cd36d59d0179942a0879",
+            "unit_set_to_unit_junctions_tables:d322a9709ac7e5709367",
+            "unit_set_to_unit_junctions_tables:d8f272fd9b40051c9c0b",
+            "unit_set_to_unit_junctions_tables:f5d63e80acee3e795e7c",
+            "unit_set_to_unit_junctions_tables:ffa42c47d6a2b90549cb"
+          ],
+          "selectors": [],
+          "exclusions": [],
+          "identityTraces": [
+            {
+              "membershipRowId": "unit_set_to_unit_junctions_tables:0a35b13cae24d1c6df16",
+              "mainKey": "wh_main_brt_cav_mounted_yeomen_0",
+              "mainRowIds": [
+                "main_units_tables:32b3ab13eab4f86672c7"
+              ],
+              "landKey": "wh_main_brt_cav_mounted_yeomen_0",
+              "landRowIds": [
+                "land_units_tables:51b898cd84699cf89a27"
+              ],
+              "status": "EXACT_STATIC_CHAIN",
+              "production": true,
+              "relationshipRefs": [
+                [
+                  "unit_set_to_unit_junctions_tables:0a35b13cae24d1c6df16",
+                  "unit_record",
+                  "main_units_tables:32b3ab13eab4f86672c7"
+                ],
+                [
+                  "main_units_tables:32b3ab13eab4f86672c7",
+                  "land_unit",
+                  "land_units_tables:51b898cd84699cf89a27"
+                ]
+              ]
+            },
+            {
+              "membershipRowId": "unit_set_to_unit_junctions_tables:15194e5718817f2c9534",
+              "mainKey": "wh_dlc07_brt_inf_foot_squires_0",
+              "mainRowIds": [
+                "main_units_tables:1b3ae023893cc24447de"
+              ],
+              "landKey": "wh_dlc07_brt_inf_foot_squires_0",
+              "landRowIds": [
+                "land_units_tables:e6c45c82284106410c40"
+              ],
+              "status": "EXACT_STATIC_CHAIN",
+              "production": true,
+              "relationshipRefs": [
+                [
+                  "unit_set_to_unit_junctions_tables:15194e5718817f2c9534",
+                  "unit_record",
+                  "main_units_tables:1b3ae023893cc24447de"
+                ],
+                [
+                  "main_units_tables:1b3ae023893cc24447de",
+                  "land_unit",
+                  "land_units_tables:e6c45c82284106410c40"
+                ]
+              ]
+            },
+            {
+              "membershipRowId": "unit_set_to_unit_junctions_tables:2995bf20dc45684c7339",
+              "mainKey": "wh_pro04_brt_cav_mounted_yeomen_ror_0",
+              "mainRowIds": [
+                "main_units_tables:d014c0f60b133f6a742d"
+              ],
+              "landKey": "wh_pro04_brt_cav_mounted_yeomen_ror_0",
+              "landRowIds": [
+                "land_units_tables:13d6ddd20bdee5263d4f"
+              ],
+              "status": "EXACT_STATIC_CHAIN",
+              "production": false,
+              "relationshipRefs": [
+                [
+                  "unit_set_to_unit_junctions_tables:2995bf20dc45684c7339",
+                  "unit_record",
+                  "main_units_tables:d014c0f60b133f6a742d"
+                ],
+                [
+                  "main_units_tables:d014c0f60b133f6a742d",
+                  "land_unit",
+                  "land_units_tables:13d6ddd20bdee5263d4f"
+                ]
+              ]
+            },
+            {
+              "membershipRowId": "unit_set_to_unit_junctions_tables:2aa6a89804f37ba24caf",
+              "mainKey": "wh_dlc07_brt_inf_peasant_bowmen_1",
+              "mainRowIds": [
+                "main_units_tables:989fa04776757a1d0348"
+              ],
+              "landKey": "wh_dlc07_brt_inf_peasant_bowmen_1",
+              "landRowIds": [
+                "land_units_tables:d3709eb27beda8dec9fe"
+              ],
+              "status": "EXACT_STATIC_CHAIN",
+              "production": true,
+              "relationshipRefs": [
+                [
+                  "unit_set_to_unit_junctions_tables:2aa6a89804f37ba24caf",
+                  "unit_record",
+                  "main_units_tables:989fa04776757a1d0348"
+                ],
+                [
+                  "main_units_tables:989fa04776757a1d0348",
+                  "land_unit",
+                  "land_units_tables:d3709eb27beda8dec9fe"
+                ]
+              ]
+            },
+            {
+              "membershipRowId": "unit_set_to_unit_junctions_tables:41875eedd3d636549714",
+              "mainKey": "wh_dlc07_brt_inf_grail_reliquae_0",
+              "mainRowIds": [
+                "main_units_tables:9a2237e55197e64a9f9f"
+              ],
+              "landKey": "wh_dlc07_brt_inf_grail_reliquae_0",
+              "landRowIds": [
+                "land_units_tables:614714b8c312d51f3736"
+              ],
+              "status": "EXACT_STATIC_CHAIN",
+              "production": false,
+              "relationshipRefs": [
+                [
+                  "unit_set_to_unit_junctions_tables:41875eedd3d636549714",
+                  "unit_record",
+                  "main_units_tables:9a2237e55197e64a9f9f"
+                ],
+                [
+                  "main_units_tables:9a2237e55197e64a9f9f",
+                  "land_unit",
+                  "land_units_tables:614714b8c312d51f3736"
+                ]
+              ]
+            },
+            {
+              "membershipRowId": "unit_set_to_unit_junctions_tables:6144b2ffbc88db10e893",
+              "mainKey": "wh_pro04_brt_inf_battle_pilgrims_ror_0",
+              "mainRowIds": [
+                "main_units_tables:4a4cf6f09b5760623036"
+              ],
+              "landKey": "wh_pro04_brt_inf_battle_pilgrims_ror_0",
+              "landRowIds": [
+                "land_units_tables:2a718e71377e44135420"
+              ],
+              "status": "EXACT_STATIC_CHAIN",
+              "production": false,
+              "relationshipRefs": [
+                [
+                  "unit_set_to_unit_junctions_tables:6144b2ffbc88db10e893",
+                  "unit_record",
+                  "main_units_tables:4a4cf6f09b5760623036"
+                ],
+                [
+                  "main_units_tables:4a4cf6f09b5760623036",
+                  "land_unit",
+                  "land_units_tables:2a718e71377e44135420"
+                ]
+              ]
+            },
+            {
+              "membershipRowId": "unit_set_to_unit_junctions_tables:61ec872f90afd217bf2a",
+              "mainKey": "wh_dlc07_brt_inf_men_at_arms_2",
+              "mainRowIds": [
+                "main_units_tables:155862695b38d378ab00"
+              ],
+              "landKey": "wh_dlc07_brt_inf_men_at_arms_2",
+              "landRowIds": [
+                "land_units_tables:855db4b15b3fce41e5ad"
+              ],
+              "status": "EXACT_STATIC_CHAIN",
+              "production": true,
+              "relationshipRefs": [
+                [
+                  "unit_set_to_unit_junctions_tables:61ec872f90afd217bf2a",
+                  "unit_record",
+                  "main_units_tables:155862695b38d378ab00"
+                ],
+                [
+                  "main_units_tables:155862695b38d378ab00",
+                  "land_unit",
+                  "land_units_tables:855db4b15b3fce41e5ad"
+                ]
+              ]
+            },
+            {
+              "membershipRowId": "unit_set_to_unit_junctions_tables:75981db19fddbf546365",
+              "mainKey": "wh_main_brt_inf_men_at_arms",
+              "mainRowIds": [
+                "main_units_tables:ffca10b9d45993f81d0b"
+              ],
+              "landKey": "wh_main_brt_inf_men_at_arms",
+              "landRowIds": [
+                "land_units_tables:0e25a1c669735ec7f498"
+              ],
+              "status": "EXACT_STATIC_CHAIN",
+              "production": true,
+              "relationshipRefs": [
+                [
+                  "unit_set_to_unit_junctions_tables:75981db19fddbf546365",
+                  "unit_record",
+                  "main_units_tables:ffca10b9d45993f81d0b"
+                ],
+                [
+                  "main_units_tables:ffca10b9d45993f81d0b",
+                  "land_unit",
+                  "land_units_tables:0e25a1c669735ec7f498"
+                ]
+              ]
+            },
+            {
+              "membershipRowId": "unit_set_to_unit_junctions_tables:76ccd2b85212a74fa9b6",
+              "mainKey": "wh_dlc07_brt_inf_spearmen_at_arms_1",
+              "mainRowIds": [
+                "main_units_tables:6036f86b558dc9323143"
+              ],
+              "landKey": "wh_dlc07_brt_inf_spearmen_at_arms_1",
+              "landRowIds": [
+                "land_units_tables:80441aa56d5ad5a1e0a6"
+              ],
+              "status": "EXACT_STATIC_CHAIN",
+              "production": true,
+              "relationshipRefs": [
+                [
+                  "unit_set_to_unit_junctions_tables:76ccd2b85212a74fa9b6",
+                  "unit_record",
+                  "main_units_tables:6036f86b558dc9323143"
+                ],
+                [
+                  "main_units_tables:6036f86b558dc9323143",
+                  "land_unit",
+                  "land_units_tables:80441aa56d5ad5a1e0a6"
+                ]
+              ]
+            },
+            {
+              "membershipRowId": "unit_set_to_unit_junctions_tables:924f543365b711083570",
+              "mainKey": "wh_main_brt_cav_mounted_yeomen_1",
+              "mainRowIds": [
+                "main_units_tables:9ad9670f4eba8d566238"
+              ],
+              "landKey": "wh_main_brt_cav_mounted_yeomen_1",
+              "landRowIds": [
+                "land_units_tables:807cea270beac7a1c81c"
+              ],
+              "status": "EXACT_STATIC_CHAIN",
+              "production": true,
+              "relationshipRefs": [
+                [
+                  "unit_set_to_unit_junctions_tables:924f543365b711083570",
+                  "unit_record",
+                  "main_units_tables:9ad9670f4eba8d566238"
+                ],
+                [
+                  "main_units_tables:9ad9670f4eba8d566238",
+                  "land_unit",
+                  "land_units_tables:807cea270beac7a1c81c"
+                ]
+              ]
+            },
+            {
+              "membershipRowId": "unit_set_to_unit_junctions_tables:b74fa95a67bec075c285",
+              "mainKey": "wh_main_brt_art_field_trebuchet",
+              "mainRowIds": [
+                "main_units_tables:dc7b60f2ef2617f995da"
+              ],
+              "landKey": "wh_main_brt_art_field_trebuchet",
+              "landRowIds": [
+                "land_units_tables:46f537eba9dba7d02435"
+              ],
+              "status": "EXACT_STATIC_CHAIN",
+              "production": true,
+              "relationshipRefs": [
+                [
+                  "unit_set_to_unit_junctions_tables:b74fa95a67bec075c285",
+                  "unit_record",
+                  "main_units_tables:dc7b60f2ef2617f995da"
+                ],
+                [
+                  "main_units_tables:dc7b60f2ef2617f995da",
+                  "land_unit",
+                  "land_units_tables:46f537eba9dba7d02435"
+                ]
+              ]
+            },
+            {
+              "membershipRowId": "unit_set_to_unit_junctions_tables:b7ad9c25a68f1cc4e7f5",
+              "mainKey": "wh_pro04_brt_inf_foot_squires_ror_0",
+              "mainRowIds": [
+                "main_units_tables:98c81c9f6fce7b5bf431"
+              ],
+              "landKey": "wh_pro04_brt_inf_foot_squires_ror_0",
+              "landRowIds": [
+                "land_units_tables:72ac976973017d9ee844"
+              ],
+              "status": "EXACT_STATIC_CHAIN",
+              "production": false,
+              "relationshipRefs": [
+                [
+                  "unit_set_to_unit_junctions_tables:b7ad9c25a68f1cc4e7f5",
+                  "unit_record",
+                  "main_units_tables:98c81c9f6fce7b5bf431"
+                ],
+                [
+                  "main_units_tables:98c81c9f6fce7b5bf431",
+                  "land_unit",
+                  "land_units_tables:72ac976973017d9ee844"
+                ]
+              ]
+            },
+            {
+              "membershipRowId": "unit_set_to_unit_junctions_tables:c3dc6f5b8f324790d3d6",
+              "mainKey": "wh_dlc07_brt_art_blessed_field_trebuchet_0",
+              "mainRowIds": [
+                "main_units_tables:7760aaabedc43c9ea636"
+              ],
+              "landKey": "wh_dlc07_brt_art_blessed_field_trebuchet_0",
+              "landRowIds": [
+                "land_units_tables:66b2fb95f40787f4f4a5"
+              ],
+              "status": "EXACT_STATIC_CHAIN",
+              "production": true,
+              "relationshipRefs": [
+                [
+                  "unit_set_to_unit_junctions_tables:c3dc6f5b8f324790d3d6",
+                  "unit_record",
+                  "main_units_tables:7760aaabedc43c9ea636"
+                ],
+                [
+                  "main_units_tables:7760aaabedc43c9ea636",
+                  "land_unit",
+                  "land_units_tables:66b2fb95f40787f4f4a5"
+                ]
+              ]
+            },
+            {
+              "membershipRowId": "unit_set_to_unit_junctions_tables:ca542d534316cf21f456",
+              "mainKey": "wh_main_brt_inf_peasant_bowmen",
+              "mainRowIds": [
+                "main_units_tables:70f1c6db66224146f58c"
+              ],
+              "landKey": "wh_main_brt_inf_peasant_bowmen",
+              "landRowIds": [
+                "land_units_tables:1bf74ecd61831328eb23"
+              ],
+              "status": "EXACT_STATIC_CHAIN",
+              "production": true,
+              "relationshipRefs": [
+                [
+                  "unit_set_to_unit_junctions_tables:ca542d534316cf21f456",
+                  "unit_record",
+                  "main_units_tables:70f1c6db66224146f58c"
+                ],
+                [
+                  "main_units_tables:70f1c6db66224146f58c",
+                  "land_unit",
+                  "land_units_tables:1bf74ecd61831328eb23"
+                ]
+              ]
+            },
+            {
+              "membershipRowId": "unit_set_to_unit_junctions_tables:cd36d59d0179942a0879",
+              "mainKey": "wh_dlc07_brt_peasant_mob_0",
+              "mainRowIds": [
+                "main_units_tables:637557c284a0db8da0f9"
+              ],
+              "landKey": "wh_dlc07_brt_inf_peasant_mob_0",
+              "landRowIds": [
+                "land_units_tables:7044434e161f4eefbbb2"
+              ],
+              "status": "EXACT_STATIC_CHAIN",
+              "production": true,
+              "relationshipRefs": [
+                [
+                  "unit_set_to_unit_junctions_tables:cd36d59d0179942a0879",
+                  "unit_record",
+                  "main_units_tables:637557c284a0db8da0f9"
+                ],
+                [
+                  "main_units_tables:637557c284a0db8da0f9",
+                  "land_unit",
+                  "land_units_tables:7044434e161f4eefbbb2"
+                ]
+              ]
+            },
+            {
+              "membershipRowId": "unit_set_to_unit_junctions_tables:d322a9709ac7e5709367",
+              "mainKey": "wh_main_brt_inf_spearmen_at_arms",
+              "mainRowIds": [
+                "main_units_tables:766bd319443936e91bd1"
+              ],
+              "landKey": "wh_main_brt_inf_spearmen_at_arms",
+              "landRowIds": [
+                "land_units_tables:f6b9bcab278a5eb1a41b"
+              ],
+              "status": "EXACT_STATIC_CHAIN",
+              "production": true,
+              "relationshipRefs": [
+                [
+                  "unit_set_to_unit_junctions_tables:d322a9709ac7e5709367",
+                  "unit_record",
+                  "main_units_tables:766bd319443936e91bd1"
+                ],
+                [
+                  "main_units_tables:766bd319443936e91bd1",
+                  "land_unit",
+                  "land_units_tables:f6b9bcab278a5eb1a41b"
+                ]
+              ]
+            },
+            {
+              "membershipRowId": "unit_set_to_unit_junctions_tables:d8f272fd9b40051c9c0b",
+              "mainKey": "wh_dlc07_brt_inf_battle_pilgrims_0",
+              "mainRowIds": [
+                "main_units_tables:96cc0e4273da29fc6e23"
+              ],
+              "landKey": "wh_dlc07_brt_inf_battle_pilgrims_0",
+              "landRowIds": [
+                "land_units_tables:aac889b5d2f2e7ef8e70"
+              ],
+              "status": "EXACT_STATIC_CHAIN",
+              "production": true,
+              "relationshipRefs": [
+                [
+                  "unit_set_to_unit_junctions_tables:d8f272fd9b40051c9c0b",
+                  "unit_record",
+                  "main_units_tables:96cc0e4273da29fc6e23"
+                ],
+                [
+                  "main_units_tables:96cc0e4273da29fc6e23",
+                  "land_unit",
+                  "land_units_tables:aac889b5d2f2e7ef8e70"
+                ]
+              ]
+            },
+            {
+              "membershipRowId": "unit_set_to_unit_junctions_tables:f5d63e80acee3e795e7c",
+              "mainKey": "wh_dlc07_brt_inf_men_at_arms_1",
+              "mainRowIds": [
+                "main_units_tables:70523e563ecd42dfbad2"
+              ],
+              "landKey": "wh_dlc07_brt_inf_men_at_arms_1",
+              "landRowIds": [
+                "land_units_tables:250be4b814731cc8e3d0"
+              ],
+              "status": "EXACT_STATIC_CHAIN",
+              "production": true,
+              "relationshipRefs": [
+                [
+                  "unit_set_to_unit_junctions_tables:f5d63e80acee3e795e7c",
+                  "unit_record",
+                  "main_units_tables:70523e563ecd42dfbad2"
+                ],
+                [
+                  "main_units_tables:70523e563ecd42dfbad2",
+                  "land_unit",
+                  "land_units_tables:250be4b814731cc8e3d0"
+                ]
+              ]
+            },
+            {
+              "membershipRowId": "unit_set_to_unit_junctions_tables:ffa42c47d6a2b90549cb",
+              "mainKey": "wh_dlc07_brt_inf_peasant_bowmen_2",
+              "mainRowIds": [
+                "main_units_tables:8e5aff58c901856ffbe0"
+              ],
+              "landKey": "wh_dlc07_brt_inf_peasant_bowmen_2",
+              "landRowIds": [
+                "land_units_tables:ee3ef3c85d35c714d3e1"
+              ],
+              "status": "EXACT_STATIC_CHAIN",
+              "production": true,
+              "relationshipRefs": [
+                [
+                  "unit_set_to_unit_junctions_tables:ffa42c47d6a2b90549cb",
+                  "unit_record",
+                  "main_units_tables:8e5aff58c901856ffbe0"
+                ],
+                [
+                  "main_units_tables:8e5aff58c901856ffbe0",
+                  "land_unit",
+                  "land_units_tables:ee3ef3c85d35c714d3e1"
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "hasSelector": false,
+      "explicitMainResolvable": true
+    }
+  },
+  {
+    "technologyKey": "wh_dlc07_tech_brt_economy_other_fletchers",
+    "technologyName": "Professional Fletchers",
+    "effectKey": "wh2_main_effect_force_stat_missile_damage_brt_bowmen_yeomen",
+    "sourceRowId": "technology_effects_junction_tables:97ecf9987339fa7f8547",
+    "rawValue": 10,
+    "description": "Missile strength: %+n% for Peasant Bowmen and Mounted Yeomen Archers units",
+    "localisationRowId": "Loc:8e90a0c5501e03e41683",
+    "scope": "faction_to_force_own_unseen",
+    "reasonIds": [
+      "EFFECT_MAPPING_UNVERIFIED"
+    ],
+    "targetShape": {
+      "kind": "EXPLICIT_UNIT_SET",
+      "relationRowIds": [
+        "effect_bonus_value_ids_unit_sets_tables:1c4d56ae32642fb7e4bc",
+        "effect_bonus_value_ids_unit_sets_tables:b46c5b742f8eb1c39730",
+        "effect_bonus_value_ids_unit_sets_tables:c5f6fd0e69ab036037fd",
+        "effect_bonus_value_ids_unit_sets_tables:f5772762edb3e8746d06"
+      ],
+      "relationTables": [
+        "effect_bonus_value_ids_unit_sets_tables"
+      ],
+      "bonusIds": [
+        "missile_damage_ap_mod_mult",
+        "missile_damage_mod_mult"
+      ],
+      "sets": [
+        {
+          "key": "brt_bow_cav",
+          "definitionRowIds": [
+            "unit_sets_tables:a8eca1d8b6117219c348"
+          ],
+          "membershipRowIds": [
+            "unit_set_to_unit_junctions_tables:c1255c10653ae8602a46",
+            "unit_set_to_unit_junctions_tables:e0315466dae430eaf329"
+          ],
+          "selectors": [],
+          "exclusions": [],
+          "identityTraces": [
+            {
+              "membershipRowId": "unit_set_to_unit_junctions_tables:c1255c10653ae8602a46",
+              "mainKey": "wh_main_brt_cav_mounted_yeomen_1",
+              "mainRowIds": [
+                "main_units_tables:9ad9670f4eba8d566238"
+              ],
+              "landKey": "wh_main_brt_cav_mounted_yeomen_1",
+              "landRowIds": [
+                "land_units_tables:807cea270beac7a1c81c"
+              ],
+              "status": "EXACT_STATIC_CHAIN",
+              "production": true,
+              "relationshipRefs": [
+                [
+                  "unit_set_to_unit_junctions_tables:c1255c10653ae8602a46",
+                  "unit_record",
+                  "main_units_tables:9ad9670f4eba8d566238"
+                ],
+                [
+                  "main_units_tables:9ad9670f4eba8d566238",
+                  "land_unit",
+                  "land_units_tables:807cea270beac7a1c81c"
+                ]
+              ]
+            },
+            {
+              "membershipRowId": "unit_set_to_unit_junctions_tables:e0315466dae430eaf329",
+              "mainKey": "wh_pro04_brt_cav_mounted_yeomen_ror_0",
+              "mainRowIds": [
+                "main_units_tables:d014c0f60b133f6a742d"
+              ],
+              "landKey": "wh_pro04_brt_cav_mounted_yeomen_ror_0",
+              "landRowIds": [
+                "land_units_tables:13d6ddd20bdee5263d4f"
+              ],
+              "status": "EXACT_STATIC_CHAIN",
+              "production": false,
+              "relationshipRefs": [
+                [
+                  "unit_set_to_unit_junctions_tables:e0315466dae430eaf329",
+                  "unit_record",
+                  "main_units_tables:d014c0f60b133f6a742d"
+                ],
+                [
+                  "main_units_tables:d014c0f60b133f6a742d",
+                  "land_unit",
+                  "land_units_tables:13d6ddd20bdee5263d4f"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "key": "brt_bow_inf",
+          "definitionRowIds": [
+            "unit_sets_tables:48454dea636bf4b79e5d"
+          ],
+          "membershipRowIds": [
+            "unit_set_to_unit_junctions_tables:5ac226439d19d5b3806c",
+            "unit_set_to_unit_junctions_tables:a86d44350bd002126606",
+            "unit_set_to_unit_junctions_tables:d757d38542714c06912f"
+          ],
+          "selectors": [],
+          "exclusions": [],
+          "identityTraces": [
+            {
+              "membershipRowId": "unit_set_to_unit_junctions_tables:5ac226439d19d5b3806c",
+              "mainKey": "wh_main_brt_inf_peasant_bowmen",
+              "mainRowIds": [
+                "main_units_tables:70f1c6db66224146f58c"
+              ],
+              "landKey": "wh_main_brt_inf_peasant_bowmen",
+              "landRowIds": [
+                "land_units_tables:1bf74ecd61831328eb23"
+              ],
+              "status": "EXACT_STATIC_CHAIN",
+              "production": true,
+              "relationshipRefs": [
+                [
+                  "unit_set_to_unit_junctions_tables:5ac226439d19d5b3806c",
+                  "unit_record",
+                  "main_units_tables:70f1c6db66224146f58c"
+                ],
+                [
+                  "main_units_tables:70f1c6db66224146f58c",
+                  "land_unit",
+                  "land_units_tables:1bf74ecd61831328eb23"
+                ]
+              ]
+            },
+            {
+              "membershipRowId": "unit_set_to_unit_junctions_tables:a86d44350bd002126606",
+              "mainKey": "wh_dlc07_brt_inf_peasant_bowmen_1",
+              "mainRowIds": [
+                "main_units_tables:989fa04776757a1d0348"
+              ],
+              "landKey": "wh_dlc07_brt_inf_peasant_bowmen_1",
+              "landRowIds": [
+                "land_units_tables:d3709eb27beda8dec9fe"
+              ],
+              "status": "EXACT_STATIC_CHAIN",
+              "production": true,
+              "relationshipRefs": [
+                [
+                  "unit_set_to_unit_junctions_tables:a86d44350bd002126606",
+                  "unit_record",
+                  "main_units_tables:989fa04776757a1d0348"
+                ],
+                [
+                  "main_units_tables:989fa04776757a1d0348",
+                  "land_unit",
+                  "land_units_tables:d3709eb27beda8dec9fe"
+                ]
+              ]
+            },
+            {
+              "membershipRowId": "unit_set_to_unit_junctions_tables:d757d38542714c06912f",
+              "mainKey": "wh_dlc07_brt_inf_peasant_bowmen_2",
+              "mainRowIds": [
+                "main_units_tables:8e5aff58c901856ffbe0"
+              ],
+              "landKey": "wh_dlc07_brt_inf_peasant_bowmen_2",
+              "landRowIds": [
+                "land_units_tables:ee3ef3c85d35c714d3e1"
+              ],
+              "status": "EXACT_STATIC_CHAIN",
+              "production": true,
+              "relationshipRefs": [
+                [
+                  "unit_set_to_unit_junctions_tables:d757d38542714c06912f",
+                  "unit_record",
+                  "main_units_tables:8e5aff58c901856ffbe0"
+                ],
+                [
+                  "main_units_tables:8e5aff58c901856ffbe0",
+                  "land_unit",
+                  "land_units_tables:ee3ef3c85d35c714d3e1"
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "hasSelector": false,
+      "explicitMainResolvable": true
+    }
+  },
+  {
+    "technologyKey": "wh_dlc07_tech_brt_economy_other_fletchers",
+    "technologyName": "Professional Fletchers",
+    "effectKey": "wh2_main_effect_force_stat_range_brt_bowmen_yeomen",
+    "sourceRowId": "technology_effects_junction_tables:c0e948de33c0423bee0e",
+    "rawValue": 5,
+    "description": "Range: %+n% for Peasant Bowmen and Mounted Yeomen Archers units",
+    "localisationRowId": "Loc:afb24390a9983d4ced02",
+    "scope": "faction_to_force_own_unseen",
+    "reasonIds": [
+      "EFFECT_MAPPING_UNVERIFIED"
+    ],
+    "targetShape": {
+      "kind": "EXPLICIT_UNIT_SET",
+      "relationRowIds": [
+        "effect_bonus_value_ids_unit_sets_tables:5ccac773a638a676cff5",
+        "effect_bonus_value_ids_unit_sets_tables:66935def8d3e876defce"
+      ],
+      "relationTables": [
+        "effect_bonus_value_ids_unit_sets_tables"
+      ],
+      "bonusIds": [
+        "range_mod"
+      ],
+      "sets": [
+        {
+          "key": "brt_bow_cav",
+          "definitionRowIds": [
+            "unit_sets_tables:a8eca1d8b6117219c348"
+          ],
+          "membershipRowIds": [
+            "unit_set_to_unit_junctions_tables:c1255c10653ae8602a46",
+            "unit_set_to_unit_junctions_tables:e0315466dae430eaf329"
+          ],
+          "selectors": [],
+          "exclusions": [],
+          "identityTraces": [
+            {
+              "membershipRowId": "unit_set_to_unit_junctions_tables:c1255c10653ae8602a46",
+              "mainKey": "wh_main_brt_cav_mounted_yeomen_1",
+              "mainRowIds": [
+                "main_units_tables:9ad9670f4eba8d566238"
+              ],
+              "landKey": "wh_main_brt_cav_mounted_yeomen_1",
+              "landRowIds": [
+                "land_units_tables:807cea270beac7a1c81c"
+              ],
+              "status": "EXACT_STATIC_CHAIN",
+              "production": true,
+              "relationshipRefs": [
+                [
+                  "unit_set_to_unit_junctions_tables:c1255c10653ae8602a46",
+                  "unit_record",
+                  "main_units_tables:9ad9670f4eba8d566238"
+                ],
+                [
+                  "main_units_tables:9ad9670f4eba8d566238",
+                  "land_unit",
+                  "land_units_tables:807cea270beac7a1c81c"
+                ]
+              ]
+            },
+            {
+              "membershipRowId": "unit_set_to_unit_junctions_tables:e0315466dae430eaf329",
+              "mainKey": "wh_pro04_brt_cav_mounted_yeomen_ror_0",
+              "mainRowIds": [
+                "main_units_tables:d014c0f60b133f6a742d"
+              ],
+              "landKey": "wh_pro04_brt_cav_mounted_yeomen_ror_0",
+              "landRowIds": [
+                "land_units_tables:13d6ddd20bdee5263d4f"
+              ],
+              "status": "EXACT_STATIC_CHAIN",
+              "production": false,
+              "relationshipRefs": [
+                [
+                  "unit_set_to_unit_junctions_tables:e0315466dae430eaf329",
+                  "unit_record",
+                  "main_units_tables:d014c0f60b133f6a742d"
+                ],
+                [
+                  "main_units_tables:d014c0f60b133f6a742d",
+                  "land_unit",
+                  "land_units_tables:13d6ddd20bdee5263d4f"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "key": "brt_bow_inf",
+          "definitionRowIds": [
+            "unit_sets_tables:48454dea636bf4b79e5d"
+          ],
+          "membershipRowIds": [
+            "unit_set_to_unit_junctions_tables:5ac226439d19d5b3806c",
+            "unit_set_to_unit_junctions_tables:a86d44350bd002126606",
+            "unit_set_to_unit_junctions_tables:d757d38542714c06912f"
+          ],
+          "selectors": [],
+          "exclusions": [],
+          "identityTraces": [
+            {
+              "membershipRowId": "unit_set_to_unit_junctions_tables:5ac226439d19d5b3806c",
+              "mainKey": "wh_main_brt_inf_peasant_bowmen",
+              "mainRowIds": [
+                "main_units_tables:70f1c6db66224146f58c"
+              ],
+              "landKey": "wh_main_brt_inf_peasant_bowmen",
+              "landRowIds": [
+                "land_units_tables:1bf74ecd61831328eb23"
+              ],
+              "status": "EXACT_STATIC_CHAIN",
+              "production": true,
+              "relationshipRefs": [
+                [
+                  "unit_set_to_unit_junctions_tables:5ac226439d19d5b3806c",
+                  "unit_record",
+                  "main_units_tables:70f1c6db66224146f58c"
+                ],
+                [
+                  "main_units_tables:70f1c6db66224146f58c",
+                  "land_unit",
+                  "land_units_tables:1bf74ecd61831328eb23"
+                ]
+              ]
+            },
+            {
+              "membershipRowId": "unit_set_to_unit_junctions_tables:a86d44350bd002126606",
+              "mainKey": "wh_dlc07_brt_inf_peasant_bowmen_1",
+              "mainRowIds": [
+                "main_units_tables:989fa04776757a1d0348"
+              ],
+              "landKey": "wh_dlc07_brt_inf_peasant_bowmen_1",
+              "landRowIds": [
+                "land_units_tables:d3709eb27beda8dec9fe"
+              ],
+              "status": "EXACT_STATIC_CHAIN",
+              "production": true,
+              "relationshipRefs": [
+                [
+                  "unit_set_to_unit_junctions_tables:a86d44350bd002126606",
+                  "unit_record",
+                  "main_units_tables:989fa04776757a1d0348"
+                ],
+                [
+                  "main_units_tables:989fa04776757a1d0348",
+                  "land_unit",
+                  "land_units_tables:d3709eb27beda8dec9fe"
+                ]
+              ]
+            },
+            {
+              "membershipRowId": "unit_set_to_unit_junctions_tables:d757d38542714c06912f",
+              "mainKey": "wh_dlc07_brt_inf_peasant_bowmen_2",
+              "mainRowIds": [
+                "main_units_tables:8e5aff58c901856ffbe0"
+              ],
+              "landKey": "wh_dlc07_brt_inf_peasant_bowmen_2",
+              "landRowIds": [
+                "land_units_tables:ee3ef3c85d35c714d3e1"
+              ],
+              "status": "EXACT_STATIC_CHAIN",
+              "production": true,
+              "relationshipRefs": [
+                [
+                  "unit_set_to_unit_junctions_tables:d757d38542714c06912f",
+                  "unit_record",
+                  "main_units_tables:8e5aff58c901856ffbe0"
+                ],
+                [
+                  "main_units_tables:8e5aff58c901856ffbe0",
+                  "land_unit",
+                  "land_units_tables:ee3ef3c85d35c714d3e1"
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "hasSelector": false,
+      "explicitMainResolvable": true
+    }
+  },
+  {
+    "technologyKey": "wh_dlc07_tech_brt_economy_other_spears",
+    "technologyName": "Longer Spears",
+    "effectKey": "wh2_main_effect_force_stat_weapon_strength_brt_spearmen_polemen_yeomen",
+    "sourceRowId": "technology_effects_junction_tables:52b222308ba1130dc23e",
+    "rawValue": 10,
+    "description": "Weapon strength: %+n% for Spearmen-at-Arms, Men-at-Arms (Polearms) and Mounted Yeomen units",
+    "localisationRowId": "Loc:535e6c38a356c812ebb9",
+    "scope": "faction_to_force_own_unseen",
+    "reasonIds": [
+      "EFFECT_MAPPING_UNVERIFIED"
+    ],
+    "targetShape": {
+      "kind": "EXPLICIT_UNIT_SET",
+      "relationRowIds": [
+        "effect_bonus_value_ids_unit_sets_tables:28416269950b690b365a",
+        "effect_bonus_value_ids_unit_sets_tables:2f7bba9ca5612b91d76b",
+        "effect_bonus_value_ids_unit_sets_tables:82c7886c950fb846662d",
+        "effect_bonus_value_ids_unit_sets_tables:910b7e2d298130f43948",
+        "effect_bonus_value_ids_unit_sets_tables:dd9a6eb3d87f2d720aff",
+        "effect_bonus_value_ids_unit_sets_tables:eda5f591f3d900356258"
+      ],
+      "relationTables": [
+        "effect_bonus_value_ids_unit_sets_tables"
+      ],
+      "bonusIds": [
+        "melee_damage_ap_mod_mult",
+        "melee_damage_mod_mult"
+      ],
+      "sets": [
+        {
+          "key": "brt_polearms",
+          "definitionRowIds": [
+            "unit_sets_tables:96bada053c180cc3826f"
+          ],
+          "membershipRowIds": [
+            "unit_set_to_unit_junctions_tables:82eeac4aad9c54c33b0c"
+          ],
+          "selectors": [],
+          "exclusions": [],
+          "identityTraces": [
+            {
+              "membershipRowId": "unit_set_to_unit_junctions_tables:82eeac4aad9c54c33b0c",
+              "mainKey": "wh_main_brt_inf_men_at_arms",
+              "mainRowIds": [
+                "main_units_tables:ffca10b9d45993f81d0b"
+              ],
+              "landKey": "wh_main_brt_inf_men_at_arms",
+              "landRowIds": [
+                "land_units_tables:0e25a1c669735ec7f498"
+              ],
+              "status": "EXACT_STATIC_CHAIN",
+              "production": true,
+              "relationshipRefs": [
+                [
+                  "unit_set_to_unit_junctions_tables:82eeac4aad9c54c33b0c",
+                  "unit_record",
+                  "main_units_tables:ffca10b9d45993f81d0b"
+                ],
+                [
+                  "main_units_tables:ffca10b9d45993f81d0b",
+                  "land_unit",
+                  "land_units_tables:0e25a1c669735ec7f498"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "key": "brt_spear_inf",
+          "definitionRowIds": [
+            "unit_sets_tables:3e3780bb5a903cb4e363"
+          ],
+          "membershipRowIds": [
+            "unit_set_to_unit_junctions_tables:273fad666bbc84d5d8b3",
+            "unit_set_to_unit_junctions_tables:ec69f57bd59ddfb90de2"
+          ],
+          "selectors": [],
+          "exclusions": [],
+          "identityTraces": [
+            {
+              "membershipRowId": "unit_set_to_unit_junctions_tables:273fad666bbc84d5d8b3",
+              "mainKey": "wh_dlc07_brt_inf_spearmen_at_arms_1",
+              "mainRowIds": [
+                "main_units_tables:6036f86b558dc9323143"
+              ],
+              "landKey": "wh_dlc07_brt_inf_spearmen_at_arms_1",
+              "landRowIds": [
+                "land_units_tables:80441aa56d5ad5a1e0a6"
+              ],
+              "status": "EXACT_STATIC_CHAIN",
+              "production": true,
+              "relationshipRefs": [
+                [
+                  "unit_set_to_unit_junctions_tables:273fad666bbc84d5d8b3",
+                  "unit_record",
+                  "main_units_tables:6036f86b558dc9323143"
+                ],
+                [
+                  "main_units_tables:6036f86b558dc9323143",
+                  "land_unit",
+                  "land_units_tables:80441aa56d5ad5a1e0a6"
+                ]
+              ]
+            },
+            {
+              "membershipRowId": "unit_set_to_unit_junctions_tables:ec69f57bd59ddfb90de2",
+              "mainKey": "wh_main_brt_inf_spearmen_at_arms",
+              "mainRowIds": [
+                "main_units_tables:766bd319443936e91bd1"
+              ],
+              "landKey": "wh_main_brt_inf_spearmen_at_arms",
+              "landRowIds": [
+                "land_units_tables:f6b9bcab278a5eb1a41b"
+              ],
+              "status": "EXACT_STATIC_CHAIN",
+              "production": true,
+              "relationshipRefs": [
+                [
+                  "unit_set_to_unit_junctions_tables:ec69f57bd59ddfb90de2",
+                  "unit_record",
+                  "main_units_tables:766bd319443936e91bd1"
+                ],
+                [
+                  "main_units_tables:766bd319443936e91bd1",
+                  "land_unit",
+                  "land_units_tables:f6b9bcab278a5eb1a41b"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "key": "brt_squires_yeomen",
+          "definitionRowIds": [
+            "unit_sets_tables:c961f61b016bc76276dc"
+          ],
+          "membershipRowIds": [
+            "unit_set_to_unit_junctions_tables:5e036aafd20f8c9d1367",
+            "unit_set_to_unit_junctions_tables:6c2ee904f32e1250c610",
+            "unit_set_to_unit_junctions_tables:f89c7c1d577b99884308"
+          ],
+          "selectors": [],
+          "exclusions": [],
+          "identityTraces": [
+            {
+              "membershipRowId": "unit_set_to_unit_junctions_tables:5e036aafd20f8c9d1367",
+              "mainKey": "wh_main_brt_cav_mounted_yeomen_0",
+              "mainRowIds": [
+                "main_units_tables:32b3ab13eab4f86672c7"
+              ],
+              "landKey": "wh_main_brt_cav_mounted_yeomen_0",
+              "landRowIds": [
+                "land_units_tables:51b898cd84699cf89a27"
+              ],
+              "status": "EXACT_STATIC_CHAIN",
+              "production": true,
+              "relationshipRefs": [
+                [
+                  "unit_set_to_unit_junctions_tables:5e036aafd20f8c9d1367",
+                  "unit_record",
+                  "main_units_tables:32b3ab13eab4f86672c7"
+                ],
+                [
+                  "main_units_tables:32b3ab13eab4f86672c7",
+                  "land_unit",
+                  "land_units_tables:51b898cd84699cf89a27"
+                ]
+              ]
+            },
+            {
+              "membershipRowId": "unit_set_to_unit_junctions_tables:6c2ee904f32e1250c610",
+              "mainKey": "wh_main_brt_cav_mounted_yeomen_1",
+              "mainRowIds": [
+                "main_units_tables:9ad9670f4eba8d566238"
+              ],
+              "landKey": "wh_main_brt_cav_mounted_yeomen_1",
+              "landRowIds": [
+                "land_units_tables:807cea270beac7a1c81c"
+              ],
+              "status": "EXACT_STATIC_CHAIN",
+              "production": true,
+              "relationshipRefs": [
+                [
+                  "unit_set_to_unit_junctions_tables:6c2ee904f32e1250c610",
+                  "unit_record",
+                  "main_units_tables:9ad9670f4eba8d566238"
+                ],
+                [
+                  "main_units_tables:9ad9670f4eba8d566238",
+                  "land_unit",
+                  "land_units_tables:807cea270beac7a1c81c"
+                ]
+              ]
+            },
+            {
+              "membershipRowId": "unit_set_to_unit_junctions_tables:f89c7c1d577b99884308",
+              "mainKey": "wh_pro04_brt_cav_mounted_yeomen_ror_0",
+              "mainRowIds": [
+                "main_units_tables:d014c0f60b133f6a742d"
+              ],
+              "landKey": "wh_pro04_brt_cav_mounted_yeomen_ror_0",
+              "landRowIds": [
+                "land_units_tables:13d6ddd20bdee5263d4f"
+              ],
+              "status": "EXACT_STATIC_CHAIN",
+              "production": false,
+              "relationshipRefs": [
+                [
+                  "unit_set_to_unit_junctions_tables:f89c7c1d577b99884308",
+                  "unit_record",
+                  "main_units_tables:d014c0f60b133f6a742d"
+                ],
+                [
+                  "main_units_tables:d014c0f60b133f6a742d",
+                  "land_unit",
+                  "land_units_tables:13d6ddd20bdee5263d4f"
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "hasSelector": false,
+      "explicitMainResolvable": true
+    }
+  },
+  {
+    "technologyKey": "wh_dlc07_tech_brt_economy_other_spears",
+    "technologyName": "Longer Spears",
+    "effectKey": "wh2_main_effect_force_stat_melee_attack_brt_spearmen_polemen_yeomen",
+    "sourceRowId": "technology_effects_junction_tables:e9bfb302b3315b1dc316",
+    "rawValue": 5,
+    "description": "Melee attack: %+n for Spearmen-at-Arms, Men-at-Arms (Polearms) and Mounted Yeomen units",
+    "localisationRowId": "Loc:2706bdea4a425bce6ceb",
+    "scope": "faction_to_force_own_unseen",
+    "reasonIds": [
+      "EFFECT_MAPPING_UNVERIFIED"
+    ],
+    "targetShape": {
+      "kind": "EXPLICIT_UNIT_SET",
+      "relationRowIds": [
+        "effect_bonus_value_ids_unit_sets_tables:0154463383f80a7ab025",
+        "effect_bonus_value_ids_unit_sets_tables:3eb97d120eb81536a5a8",
+        "effect_bonus_value_ids_unit_sets_tables:a510569cc4f2b06a573c"
+      ],
+      "relationTables": [
+        "effect_bonus_value_ids_unit_sets_tables"
+      ],
+      "bonusIds": [
+        "melee_attack_mod"
+      ],
+      "sets": [
+        {
+          "key": "brt_polearms",
+          "definitionRowIds": [
+            "unit_sets_tables:96bada053c180cc3826f"
+          ],
+          "membershipRowIds": [
+            "unit_set_to_unit_junctions_tables:82eeac4aad9c54c33b0c"
+          ],
+          "selectors": [],
+          "exclusions": [],
+          "identityTraces": [
+            {
+              "membershipRowId": "unit_set_to_unit_junctions_tables:82eeac4aad9c54c33b0c",
+              "mainKey": "wh_main_brt_inf_men_at_arms",
+              "mainRowIds": [
+                "main_units_tables:ffca10b9d45993f81d0b"
+              ],
+              "landKey": "wh_main_brt_inf_men_at_arms",
+              "landRowIds": [
+                "land_units_tables:0e25a1c669735ec7f498"
+              ],
+              "status": "EXACT_STATIC_CHAIN",
+              "production": true,
+              "relationshipRefs": [
+                [
+                  "unit_set_to_unit_junctions_tables:82eeac4aad9c54c33b0c",
+                  "unit_record",
+                  "main_units_tables:ffca10b9d45993f81d0b"
+                ],
+                [
+                  "main_units_tables:ffca10b9d45993f81d0b",
+                  "land_unit",
+                  "land_units_tables:0e25a1c669735ec7f498"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "key": "brt_spear_inf",
+          "definitionRowIds": [
+            "unit_sets_tables:3e3780bb5a903cb4e363"
+          ],
+          "membershipRowIds": [
+            "unit_set_to_unit_junctions_tables:273fad666bbc84d5d8b3",
+            "unit_set_to_unit_junctions_tables:ec69f57bd59ddfb90de2"
+          ],
+          "selectors": [],
+          "exclusions": [],
+          "identityTraces": [
+            {
+              "membershipRowId": "unit_set_to_unit_junctions_tables:273fad666bbc84d5d8b3",
+              "mainKey": "wh_dlc07_brt_inf_spearmen_at_arms_1",
+              "mainRowIds": [
+                "main_units_tables:6036f86b558dc9323143"
+              ],
+              "landKey": "wh_dlc07_brt_inf_spearmen_at_arms_1",
+              "landRowIds": [
+                "land_units_tables:80441aa56d5ad5a1e0a6"
+              ],
+              "status": "EXACT_STATIC_CHAIN",
+              "production": true,
+              "relationshipRefs": [
+                [
+                  "unit_set_to_unit_junctions_tables:273fad666bbc84d5d8b3",
+                  "unit_record",
+                  "main_units_tables:6036f86b558dc9323143"
+                ],
+                [
+                  "main_units_tables:6036f86b558dc9323143",
+                  "land_unit",
+                  "land_units_tables:80441aa56d5ad5a1e0a6"
+                ]
+              ]
+            },
+            {
+              "membershipRowId": "unit_set_to_unit_junctions_tables:ec69f57bd59ddfb90de2",
+              "mainKey": "wh_main_brt_inf_spearmen_at_arms",
+              "mainRowIds": [
+                "main_units_tables:766bd319443936e91bd1"
+              ],
+              "landKey": "wh_main_brt_inf_spearmen_at_arms",
+              "landRowIds": [
+                "land_units_tables:f6b9bcab278a5eb1a41b"
+              ],
+              "status": "EXACT_STATIC_CHAIN",
+              "production": true,
+              "relationshipRefs": [
+                [
+                  "unit_set_to_unit_junctions_tables:ec69f57bd59ddfb90de2",
+                  "unit_record",
+                  "main_units_tables:766bd319443936e91bd1"
+                ],
+                [
+                  "main_units_tables:766bd319443936e91bd1",
+                  "land_unit",
+                  "land_units_tables:f6b9bcab278a5eb1a41b"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "key": "brt_squires_yeomen",
+          "definitionRowIds": [
+            "unit_sets_tables:c961f61b016bc76276dc"
+          ],
+          "membershipRowIds": [
+            "unit_set_to_unit_junctions_tables:5e036aafd20f8c9d1367",
+            "unit_set_to_unit_junctions_tables:6c2ee904f32e1250c610",
+            "unit_set_to_unit_junctions_tables:f89c7c1d577b99884308"
+          ],
+          "selectors": [],
+          "exclusions": [],
+          "identityTraces": [
+            {
+              "membershipRowId": "unit_set_to_unit_junctions_tables:5e036aafd20f8c9d1367",
+              "mainKey": "wh_main_brt_cav_mounted_yeomen_0",
+              "mainRowIds": [
+                "main_units_tables:32b3ab13eab4f86672c7"
+              ],
+              "landKey": "wh_main_brt_cav_mounted_yeomen_0",
+              "landRowIds": [
+                "land_units_tables:51b898cd84699cf89a27"
+              ],
+              "status": "EXACT_STATIC_CHAIN",
+              "production": true,
+              "relationshipRefs": [
+                [
+                  "unit_set_to_unit_junctions_tables:5e036aafd20f8c9d1367",
+                  "unit_record",
+                  "main_units_tables:32b3ab13eab4f86672c7"
+                ],
+                [
+                  "main_units_tables:32b3ab13eab4f86672c7",
+                  "land_unit",
+                  "land_units_tables:51b898cd84699cf89a27"
+                ]
+              ]
+            },
+            {
+              "membershipRowId": "unit_set_to_unit_junctions_tables:6c2ee904f32e1250c610",
+              "mainKey": "wh_main_brt_cav_mounted_yeomen_1",
+              "mainRowIds": [
+                "main_units_tables:9ad9670f4eba8d566238"
+              ],
+              "landKey": "wh_main_brt_cav_mounted_yeomen_1",
+              "landRowIds": [
+                "land_units_tables:807cea270beac7a1c81c"
+              ],
+              "status": "EXACT_STATIC_CHAIN",
+              "production": true,
+              "relationshipRefs": [
+                [
+                  "unit_set_to_unit_junctions_tables:6c2ee904f32e1250c610",
+                  "unit_record",
+                  "main_units_tables:9ad9670f4eba8d566238"
+                ],
+                [
+                  "main_units_tables:9ad9670f4eba8d566238",
+                  "land_unit",
+                  "land_units_tables:807cea270beac7a1c81c"
+                ]
+              ]
+            },
+            {
+              "membershipRowId": "unit_set_to_unit_junctions_tables:f89c7c1d577b99884308",
+              "mainKey": "wh_pro04_brt_cav_mounted_yeomen_ror_0",
+              "mainRowIds": [
+                "main_units_tables:d014c0f60b133f6a742d"
+              ],
+              "landKey": "wh_pro04_brt_cav_mounted_yeomen_ror_0",
+              "landRowIds": [
+                "land_units_tables:13d6ddd20bdee5263d4f"
+              ],
+              "status": "EXACT_STATIC_CHAIN",
+              "production": false,
+              "relationshipRefs": [
+                [
+                  "unit_set_to_unit_junctions_tables:f89c7c1d577b99884308",
+                  "unit_record",
+                  "main_units_tables:d014c0f60b133f6a742d"
+                ],
+                [
+                  "main_units_tables:d014c0f60b133f6a742d",
+                  "land_unit",
+                  "land_units_tables:13d6ddd20bdee5263d4f"
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "hasSelector": false,
+      "explicitMainResolvable": true
+    }
+  },
+  {
+    "technologyKey": "wh_dlc07_tech_brt_economy_other_tithes",
+    "technologyName": "Temple Tithes",
+    "effectKey": "wh2_main_effect_force_stat_ward_save_paladins",
+    "sourceRowId": "technology_effects_junction_tables:c2af39a26685537d301c",
+    "rawValue": 10,
+    "description": "Ward save: %+n% for Grail Knight and Grail Guardian units and embedded Paladin [[img:icon_hero]][[/img]]Heroes",
+    "localisationRowId": "Loc:dd1a0d04bec3585b7320",
+    "scope": "faction_to_force_own_unseen",
+    "reasonIds": [
+      "EFFECT_MAPPING_UNVERIFIED"
+    ],
+    "targetShape": {
+      "kind": "EXPLICIT_UNIT_SET",
+      "relationRowIds": [
+        "effect_bonus_value_ids_unit_sets_tables:cd308c16de8cc5b4ff2a",
+        "effect_bonus_value_ids_unit_sets_tables:fb8a4f2dfb286418bbc4"
+      ],
+      "relationTables": [
+        "effect_bonus_value_ids_unit_sets_tables"
+      ],
+      "bonusIds": [
+        "unit_damage_resistance_all_mod"
+      ],
+      "sets": [
+        {
+          "key": "dlc07_brt_grail_knights_guardians",
+          "definitionRowIds": [
+            "unit_sets_tables:17d957e01f81333de37b"
+          ],
+          "membershipRowIds": [
+            "unit_set_to_unit_junctions_tables:4b26d60cda9cec27c3d3",
+            "unit_set_to_unit_junctions_tables:82c5c2cde3db11c4c17c"
+          ],
+          "selectors": [],
+          "exclusions": [],
+          "identityTraces": [
+            {
+              "membershipRowId": "unit_set_to_unit_junctions_tables:4b26d60cda9cec27c3d3",
+              "mainKey": "wh_dlc07_brt_cav_grail_guardians_0",
+              "mainRowIds": [
+                "main_units_tables:1cfe56e8e962d609b862"
+              ],
+              "landKey": "wh_dlc07_brt_cav_grail_guardians_0",
+              "landRowIds": [
+                "land_units_tables:7b26ed87ab237981ce05"
+              ],
+              "status": "EXACT_STATIC_CHAIN",
+              "production": true,
+              "relationshipRefs": [
+                [
+                  "unit_set_to_unit_junctions_tables:4b26d60cda9cec27c3d3",
+                  "unit_record",
+                  "main_units_tables:1cfe56e8e962d609b862"
+                ],
+                [
+                  "main_units_tables:1cfe56e8e962d609b862",
+                  "land_unit",
+                  "land_units_tables:7b26ed87ab237981ce05"
+                ]
+              ]
+            },
+            {
+              "membershipRowId": "unit_set_to_unit_junctions_tables:82c5c2cde3db11c4c17c",
+              "mainKey": "wh_main_brt_cav_grail_knights",
+              "mainRowIds": [
+                "main_units_tables:59c055d24df1f59c75a3"
+              ],
+              "landKey": "wh_main_brt_cav_grail_knights",
+              "landRowIds": [
+                "land_units_tables:b1b34300e348a7f28dd9"
+              ],
+              "status": "EXACT_STATIC_CHAIN",
+              "production": true,
+              "relationshipRefs": [
+                [
+                  "unit_set_to_unit_junctions_tables:82c5c2cde3db11c4c17c",
+                  "unit_record",
+                  "main_units_tables:59c055d24df1f59c75a3"
+                ],
+                [
+                  "main_units_tables:59c055d24df1f59c75a3",
+                  "land_unit",
+                  "land_units_tables:b1b34300e348a7f28dd9"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "key": "dlc07_brt_paladins",
+          "definitionRowIds": [
+            "unit_sets_tables:2472507ad0e85a8d22e9"
+          ],
+          "membershipRowIds": [
+            "unit_set_to_unit_junctions_tables:093f7aace610c740fd8f",
+            "unit_set_to_unit_junctions_tables:ef5154ec847dc771d815",
+            "unit_set_to_unit_junctions_tables:f1376eff2501e534e43a"
+          ],
+          "selectors": [],
+          "exclusions": [],
+          "identityTraces": [
+            {
+              "membershipRowId": "unit_set_to_unit_junctions_tables:093f7aace610c740fd8f",
+              "mainKey": "wh_main_brt_cha_paladin_0",
+              "mainRowIds": [
+                "main_units_tables:08904e3d8a3927e37a26"
+              ],
+              "landKey": "wh_main_brt_cha_paladin_0",
+              "landRowIds": [
+                "land_units_tables:9fc4b0546bd850e4ecc5"
+              ],
+              "status": "EXACT_STATIC_CHAIN",
+              "production": false,
+              "relationshipRefs": [
+                [
+                  "unit_set_to_unit_junctions_tables:093f7aace610c740fd8f",
+                  "unit_record",
+                  "main_units_tables:08904e3d8a3927e37a26"
+                ],
+                [
+                  "main_units_tables:08904e3d8a3927e37a26",
+                  "land_unit",
+                  "land_units_tables:9fc4b0546bd850e4ecc5"
+                ]
+              ]
+            },
+            {
+              "membershipRowId": "unit_set_to_unit_junctions_tables:ef5154ec847dc771d815",
+              "mainKey": "wh_main_brt_cha_paladin_4",
+              "mainRowIds": [
+                "main_units_tables:e89f0076a5be0c7b3222"
+              ],
+              "landKey": "wh_main_brt_cha_paladin_4",
+              "landRowIds": [
+                "land_units_tables:5dae1b57a880bbd38d06"
+              ],
+              "status": "EXACT_STATIC_CHAIN",
+              "production": false,
+              "relationshipRefs": [
+                [
+                  "unit_set_to_unit_junctions_tables:ef5154ec847dc771d815",
+                  "unit_record",
+                  "main_units_tables:e89f0076a5be0c7b3222"
+                ],
+                [
+                  "main_units_tables:e89f0076a5be0c7b3222",
+                  "land_unit",
+                  "land_units_tables:5dae1b57a880bbd38d06"
+                ]
+              ]
+            },
+            {
+              "membershipRowId": "unit_set_to_unit_junctions_tables:f1376eff2501e534e43a",
+              "mainKey": "wh_main_brt_cha_paladin_3",
+              "mainRowIds": [
+                "main_units_tables:5f120447e49321dfd7f8"
+              ],
+              "landKey": "wh_main_brt_cha_paladin_3",
+              "landRowIds": [
+                "land_units_tables:6e360ad2b8f7025bba56"
+              ],
+              "status": "EXACT_STATIC_CHAIN",
+              "production": false,
+              "relationshipRefs": [
+                [
+                  "unit_set_to_unit_junctions_tables:f1376eff2501e534e43a",
+                  "unit_record",
+                  "main_units_tables:5f120447e49321dfd7f8"
+                ],
+                [
+                  "main_units_tables:5f120447e49321dfd7f8",
+                  "land_unit",
+                  "land_units_tables:6e360ad2b8f7025bba56"
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "hasSelector": false,
+      "explicitMainResolvable": true
+    }
+  }
+]

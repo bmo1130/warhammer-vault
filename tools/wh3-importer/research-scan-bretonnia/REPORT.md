@@ -1,5 +1,30 @@
 # Bretonnia full technology-tree classifier benchmark
 
+Current replay includes mapping review 01, bounded to eight mapping-unresolved
+occurrences from `5d0e1ea6a0283c3cbd086c8f65f1d468b2729884`. Six exact keys were
+approved; missile strength and ward save remain REVIEW_REQUIRED. Source bytes,
+discovery, scope, membership, selector and classifier body are unchanged.
+
+| Metric | Original benchmark | After mapping review 01 |
+| --- | ---: | ---: |
+| Technologies / effects | 68 / 179 | 68 / 179 |
+| DIRECT | 9 | 15 |
+| REVIEW_REQUIRED | 157 | 151 |
+| UNSUPPORTED / NON_UNIT_STAT | 1 / 12 | 1 / 12 |
+| Modifier candidates | 54 | 96 |
+| Target Production Units | 12 | 22 |
+| Technologies with DIRECT | 5 | 10 |
+
+`report.json`, `summary.json`, rejections and representatives now describe the
+AFTER state. [`../research-mapping-review-01/REVIEW.md`](../research-mapping-review-01/REVIEW.md)
+contains the exact inventory, evidence, BEFORE projection and per-mapping
+coverage delta. The old bounded report differs only in its whitelist metadata
+digest; original classifications/candidates are byte-reconstructible by
+restoring that digest. No app/Calculator/Research admission was added.
+
+The sections below document the **original benchmark**, including its original
+counts and unchanged-policy premise; they are retained as the BEFORE context.
+
 Baseline: `031666d408d8c92aa144c84b959410314859e099`. This is a scan and
 candidate benchmark, **not admission**. No effect/scope/selector/operation
 whitelist was expanded; no app/Calculator/Production projection was written.

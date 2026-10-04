@@ -1,0 +1,636 @@
+{
+  "format": "wh3-exact-research-mapping-review-v1",
+  "sourceKind": "MANUAL_CA_MAPPING_REVIEW",
+  "candidateOnly": true,
+  "snapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+  "sourceSha256": "72dc47e15caa9df8a6a79ccdbe21bdf6b71d3afda9ea0a6da8e895ee881146a8",
+  "provenance": {
+    "sourceKind": "ca-pack",
+    "gameVersion": "9.0.2.0",
+    "gameVersionSource": "Warhammer3.exe ProductVersion resource (not inferred from a wiki/Steam build)",
+    "rpfmVersion": "5.1.0",
+    "mcpServerInfo": {
+      "name": "rmcp",
+      "version": "3.1.0"
+    },
+    "schemaFormatVersion": 5,
+    "schemaSha256": "5d628a0167b34a096752c5c21acd16493834a987c80dc9f02364617f796ba2a4",
+    "packs": [
+      {
+        "file_name": "db.pack",
+        "file_path": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+        "pfh_version": "PFH5",
+        "pfh_file_type": "Release",
+        "bitmask": "",
+        "compress": "Zstd",
+        "timestamp": 0,
+        "sizeBytes": 8663017,
+        "filesystemModifiedAt": "2026-10-01T10:08:40.330Z",
+        "sha256": "d0fafac984b3985ec47cec0ea957591424f1077e52ef61941dbf2dc46e6cf723"
+      },
+      {
+        "file_name": "local_en.pack",
+        "file_path": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/local_en.pack",
+        "pfh_version": "PFH5",
+        "pfh_file_type": "Release",
+        "bitmask": "",
+        "compress": "Zstd",
+        "timestamp": 1645478083,
+        "sizeBytes": 33435496,
+        "filesystemModifiedAt": "2026-10-01T10:08:40.330Z",
+        "sha256": "f979527a5aaecf293a4e66afc25ed6c760e4107ef4920b73bd56e10e2652fd6a"
+      }
+    ],
+    "accessMethod": "RPFM MCP / decode_packed_file source=PackFile, directly opened CA Release/Patch packs"
+  },
+  "occurrences": [
+    {
+      "technologyKey": "wh_dlc07_tech_brt_economy_industry_steel",
+      "technologyName": "Steel Furnaces",
+      "effectKey": "wh2_dlc09_effect_force_stat_armour_brt_knights",
+      "sourceRowId": "technology_effects_junction_tables:af7762ed61b3842a3e36",
+      "effectDefinitionRowId": "effects_tables:30992e7bb0ca3f84873d",
+      "technologyRowId": "technologies_tables:811bbb10b1ab8f85688a",
+      "description": "Armour: %+n for Knight units",
+      "rawValue": 8,
+      "scope": "faction_to_force_own_unseen",
+      "classification": "DIRECT_CANDIDATE",
+      "reviewReason": null,
+      "mappings": [
+        {
+          "bonus": "armour_mod",
+          "stat": "defense.armor",
+          "operation": "add",
+          "ruleId": "OP_ARMOR_FLAT",
+          "rawValueSemantics": "FLAT_POINTS",
+          "rawValue": 8,
+          "conversion": "RAW_PRESERVED",
+          "evidenceRef": "source-trace.json#wh2_dlc09_effect_force_stat_armour_brt_knights",
+          "firstVerifiedTechnology": "wh_dlc07_tech_brt_economy_industry_steel",
+          "localisationIdentity": "effects_description_wh2_dlc09_effect_force_stat_armour_brt_knights",
+          "localisationRowId": "Loc:f1fe8fc8a8e00bfcfa57",
+          "localisationSha256": "fdd5f577bb0e0f6b84c0a5b85bc43305758a588cc7b2781403f366aca2f445cc",
+          "bonusRowIds": [
+            "effect_bonus_value_ids_unit_sets_tables:4e1d9680d89cca0a9565"
+          ],
+          "basis": "Exact CA Armour: %+n (no percent suffix), armour_mod unit-set bonus; existing numeric armor points path. Flat raw points."
+        }
+      ],
+      "basis": "Exact CA Armour: %+n (no percent suffix), armour_mod unit-set bonus; existing numeric armor points path. Flat raw points.",
+      "targetMainLandPairs": [
+        {
+          "mainKey": "wh_main_brt_cav_knights_of_the_realm",
+          "landKey": "wh_main_brt_cav_knights_of_the_realm"
+        },
+        {
+          "mainKey": "wh_main_brt_cav_pegasus_knights",
+          "landKey": "wh_main_brt_cav_pegasus_knights"
+        },
+        {
+          "mainKey": "wh_dlc07_brt_cav_royal_pegasus_knights_0",
+          "landKey": "wh_dlc07_brt_cav_royal_pegasus_knights_0"
+        },
+        {
+          "mainKey": "wh_main_brt_cav_grail_knights",
+          "landKey": "wh_main_brt_cav_grail_knights"
+        },
+        {
+          "mainKey": "wh_dlc07_brt_cav_questing_knights_0",
+          "landKey": "wh_dlc07_brt_cav_questing_knights_0"
+        },
+        {
+          "mainKey": "wh_dlc07_brt_cav_knights_errant_0",
+          "landKey": "wh_dlc07_brt_cav_knights_errant_0"
+        },
+        {
+          "mainKey": "wh_dlc07_brt_cav_grail_guardians_0",
+          "landKey": "wh_dlc07_brt_cav_grail_guardians_0"
+        }
+      ],
+      "candidateCount": 7,
+      "omittedTargets": [
+        {
+          "mainKey": "wh_dlc07_brt_cav_royal_hippogryph_knights_0",
+          "reasonIds": [
+            "TARGET_NOT_IN_PRODUCTION"
+          ],
+          "membershipRowIds": [
+            "unit_set_to_unit_junctions_tables:83df201012fc88e6ca22"
+          ],
+          "bonus": "armour_mod"
+        },
+        {
+          "mainKey": "wh_pro04_brt_cav_knights_errant_ror_0",
+          "reasonIds": [
+            "TARGET_NOT_IN_PRODUCTION"
+          ],
+          "membershipRowIds": [
+            "unit_set_to_unit_junctions_tables:dd8fc090dc39361c4fc6"
+          ],
+          "bonus": "armour_mod"
+        },
+        {
+          "mainKey": "wh_pro04_brt_cav_knights_of_the_realm_ror_0",
+          "reasonIds": [
+            "TARGET_NOT_IN_PRODUCTION"
+          ],
+          "membershipRowIds": [
+            "unit_set_to_unit_junctions_tables:51a20cd889ef93f6a061"
+          ],
+          "bonus": "armour_mod"
+        },
+        {
+          "mainKey": "wh_pro04_brt_cav_questing_knights_ror_0",
+          "reasonIds": [
+            "TARGET_NOT_IN_PRODUCTION"
+          ],
+          "membershipRowIds": [
+            "unit_set_to_unit_junctions_tables:7db7aec6cbe840cca295"
+          ],
+          "bonus": "armour_mod"
+        }
+      ]
+    },
+    {
+      "technologyKey": "wh_dlc07_tech_brt_economy_other_1",
+      "technologyName": "Almshouses",
+      "effectKey": "wh_dlc07_effect_force_stat_leadership_peasant_mob",
+      "sourceRowId": "technology_effects_junction_tables:a183cf41c3ba95454503",
+      "effectDefinitionRowId": "effects_tables:2ff8f494f386c86add78",
+      "technologyRowId": "technologies_tables:4927cdda035544d5a2bf",
+      "description": "Leadership: %+n for Peasant Mob units",
+      "rawValue": 5,
+      "scope": "faction_to_force_own_unseen",
+      "classification": "DIRECT_CANDIDATE",
+      "reviewReason": null,
+      "mappings": [
+        {
+          "bonus": "morale",
+          "stat": "defense.leadership",
+          "operation": "add",
+          "ruleId": "OP_LEADERSHIP_FLAT",
+          "rawValueSemantics": "FLAT_POINTS",
+          "rawValue": 5,
+          "conversion": "RAW_PRESERVED",
+          "evidenceRef": "source-trace.json#wh_dlc07_effect_force_stat_leadership_peasant_mob",
+          "firstVerifiedTechnology": "wh_dlc07_tech_brt_economy_other_1",
+          "localisationIdentity": "effects_description_wh_dlc07_effect_force_stat_leadership_peasant_mob",
+          "localisationRowId": "Loc:16f0d4e5373279fab582",
+          "localisationSha256": "5822ccdc276676b97400dfc365c2fbb6e194614ba107ecdbb90b855c9ad1facd",
+          "bonusRowIds": [
+            "effect_bonus_value_ids_unit_sets_tables:d1487eb9ce0517c3a0e0"
+          ],
+          "basis": "Exact CA Leadership: %+n and morale bonus, identical operation/bonus semantics to the existing Knight leadership mapping; explicit Peasant Mob set reviewed separately."
+        }
+      ],
+      "basis": "Exact CA Leadership: %+n and morale bonus, identical operation/bonus semantics to the existing Knight leadership mapping; explicit Peasant Mob set reviewed separately.",
+      "targetMainLandPairs": [
+        {
+          "mainKey": "wh_dlc07_brt_peasant_mob_0",
+          "landKey": "wh_dlc07_brt_inf_peasant_mob_0"
+        }
+      ],
+      "candidateCount": 1,
+      "omittedTargets": []
+    },
+    {
+      "technologyKey": "wh_dlc07_tech_brt_economy_other_draft",
+      "technologyName": "Registered Draft",
+      "effectKey": "wh_dlc07_peasant_upkeep_penalty",
+      "sourceRowId": "technology_effects_junction_tables:a7c4871afcc1e3294543",
+      "effectDefinitionRowId": "effects_tables:bc64f2ee8b290d154a68",
+      "technologyRowId": "technologies_tables:934571c2a597932ce497",
+      "description": "Upkeep: %+n% for non-Knight units",
+      "rawValue": -5,
+      "scope": "faction_to_force_own_unseen",
+      "classification": "DIRECT_CANDIDATE",
+      "reviewReason": null,
+      "mappings": [
+        {
+          "bonus": "upkeep_mod",
+          "stat": "campaign.upkeep",
+          "operation": "multiply",
+          "ruleId": "OP_UPKEEP_PERCENT",
+          "rawValueSemantics": "SIGNED_PERCENT_CHANGE",
+          "rawValue": -5,
+          "conversion": "RAW_PRESERVED",
+          "evidenceRef": "source-trace.json#wh_dlc07_peasant_upkeep_penalty",
+          "firstVerifiedTechnology": "wh_dlc07_tech_brt_economy_other_draft",
+          "localisationIdentity": "effects_description_wh_dlc07_peasant_upkeep_penalty",
+          "localisationRowId": "Loc:db02de3ad7ab88654b0b",
+          "localisationSha256": "15d9d78d066713e4d73cd509fa6abc5767c6759059ba405071430700adcd68b0",
+          "bonusRowIds": [
+            "effect_bonus_value_ids_unit_sets_tables:6c3859b6fa7269972451"
+          ],
+          "basis": "Exact CA Upkeep: %+n% and upkeep_mod bonus. Unit campaign upkeep is a numeric cost; raw -5 is a signed -5% change under the existing multiply percentage contract, not an inverted penalty."
+        }
+      ],
+      "basis": "Exact CA Upkeep: %+n% and upkeep_mod bonus. Unit campaign upkeep is a numeric cost; raw -5 is a signed -5% change under the existing multiply percentage contract, not an inverted penalty.",
+      "targetMainLandPairs": [
+        {
+          "mainKey": "wh_main_brt_cav_mounted_yeomen_0",
+          "landKey": "wh_main_brt_cav_mounted_yeomen_0"
+        },
+        {
+          "mainKey": "wh_dlc07_brt_inf_foot_squires_0",
+          "landKey": "wh_dlc07_brt_inf_foot_squires_0"
+        },
+        {
+          "mainKey": "wh_dlc07_brt_inf_peasant_bowmen_1",
+          "landKey": "wh_dlc07_brt_inf_peasant_bowmen_1"
+        },
+        {
+          "mainKey": "wh_dlc07_brt_inf_men_at_arms_2",
+          "landKey": "wh_dlc07_brt_inf_men_at_arms_2"
+        },
+        {
+          "mainKey": "wh_main_brt_inf_men_at_arms",
+          "landKey": "wh_main_brt_inf_men_at_arms"
+        },
+        {
+          "mainKey": "wh_dlc07_brt_inf_spearmen_at_arms_1",
+          "landKey": "wh_dlc07_brt_inf_spearmen_at_arms_1"
+        },
+        {
+          "mainKey": "wh_main_brt_cav_mounted_yeomen_1",
+          "landKey": "wh_main_brt_cav_mounted_yeomen_1"
+        },
+        {
+          "mainKey": "wh_main_brt_art_field_trebuchet",
+          "landKey": "wh_main_brt_art_field_trebuchet"
+        },
+        {
+          "mainKey": "wh_dlc07_brt_art_blessed_field_trebuchet_0",
+          "landKey": "wh_dlc07_brt_art_blessed_field_trebuchet_0"
+        },
+        {
+          "mainKey": "wh_main_brt_inf_peasant_bowmen",
+          "landKey": "wh_main_brt_inf_peasant_bowmen"
+        },
+        {
+          "mainKey": "wh_dlc07_brt_peasant_mob_0",
+          "landKey": "wh_dlc07_brt_inf_peasant_mob_0"
+        },
+        {
+          "mainKey": "wh_main_brt_inf_spearmen_at_arms",
+          "landKey": "wh_main_brt_inf_spearmen_at_arms"
+        },
+        {
+          "mainKey": "wh_dlc07_brt_inf_battle_pilgrims_0",
+          "landKey": "wh_dlc07_brt_inf_battle_pilgrims_0"
+        },
+        {
+          "mainKey": "wh_dlc07_brt_inf_men_at_arms_1",
+          "landKey": "wh_dlc07_brt_inf_men_at_arms_1"
+        },
+        {
+          "mainKey": "wh_dlc07_brt_inf_peasant_bowmen_2",
+          "landKey": "wh_dlc07_brt_inf_peasant_bowmen_2"
+        }
+      ],
+      "candidateCount": 15,
+      "omittedTargets": [
+        {
+          "mainKey": "wh_dlc07_brt_inf_grail_reliquae_0",
+          "reasonIds": [
+            "TARGET_NOT_IN_PRODUCTION"
+          ],
+          "membershipRowIds": [
+            "unit_set_to_unit_junctions_tables:41875eedd3d636549714"
+          ],
+          "bonus": "upkeep_mod"
+        },
+        {
+          "mainKey": "wh_pro04_brt_cav_mounted_yeomen_ror_0",
+          "reasonIds": [
+            "TARGET_NOT_IN_PRODUCTION"
+          ],
+          "membershipRowIds": [
+            "unit_set_to_unit_junctions_tables:2995bf20dc45684c7339"
+          ],
+          "bonus": "upkeep_mod"
+        },
+        {
+          "mainKey": "wh_pro04_brt_inf_battle_pilgrims_ror_0",
+          "reasonIds": [
+            "TARGET_NOT_IN_PRODUCTION"
+          ],
+          "membershipRowIds": [
+            "unit_set_to_unit_junctions_tables:6144b2ffbc88db10e893"
+          ],
+          "bonus": "upkeep_mod"
+        },
+        {
+          "mainKey": "wh_pro04_brt_inf_foot_squires_ror_0",
+          "reasonIds": [
+            "TARGET_NOT_IN_PRODUCTION"
+          ],
+          "membershipRowIds": [
+            "unit_set_to_unit_junctions_tables:b7ad9c25a68f1cc4e7f5"
+          ],
+          "bonus": "upkeep_mod"
+        }
+      ]
+    },
+    {
+      "technologyKey": "wh_dlc07_tech_brt_economy_other_fletchers",
+      "technologyName": "Professional Fletchers",
+      "effectKey": "wh2_main_effect_force_stat_missile_damage_brt_bowmen_yeomen",
+      "sourceRowId": "technology_effects_junction_tables:97ecf9987339fa7f8547",
+      "effectDefinitionRowId": "effects_tables:46093ee1ea2c3155bd92",
+      "technologyRowId": "technologies_tables:c5c4d54c1c558b4dde35",
+      "description": "Missile strength: %+n% for Peasant Bowmen and Mounted Yeomen Archers units",
+      "rawValue": 10,
+      "scope": "faction_to_force_own_unseen",
+      "classification": "REVIEW_REQUIRED",
+      "reviewReason": "MISSILE_STRENGTH_RESEARCH_OUT_OF_SCOPE",
+      "mappings": [],
+      "basis": "Card missile strength versus raw projectile/AP/explosion values is not an approved mapping. This task explicitly excludes missile-strength research.",
+      "targetMainLandPairs": [
+        {
+          "mainKey": "wh_main_brt_cav_mounted_yeomen_1",
+          "landKey": "wh_main_brt_cav_mounted_yeomen_1"
+        },
+        {
+          "mainKey": "wh_main_brt_inf_peasant_bowmen",
+          "landKey": "wh_main_brt_inf_peasant_bowmen"
+        },
+        {
+          "mainKey": "wh_dlc07_brt_inf_peasant_bowmen_1",
+          "landKey": "wh_dlc07_brt_inf_peasant_bowmen_1"
+        },
+        {
+          "mainKey": "wh_dlc07_brt_inf_peasant_bowmen_2",
+          "landKey": "wh_dlc07_brt_inf_peasant_bowmen_2"
+        }
+      ],
+      "candidateCount": 0,
+      "omittedTargets": []
+    },
+    {
+      "technologyKey": "wh_dlc07_tech_brt_economy_other_fletchers",
+      "technologyName": "Professional Fletchers",
+      "effectKey": "wh2_main_effect_force_stat_range_brt_bowmen_yeomen",
+      "sourceRowId": "technology_effects_junction_tables:c0e948de33c0423bee0e",
+      "effectDefinitionRowId": "effects_tables:eb234c1774773c9f8dd8",
+      "technologyRowId": "technologies_tables:c5c4d54c1c558b4dde35",
+      "description": "Range: %+n% for Peasant Bowmen and Mounted Yeomen Archers units",
+      "rawValue": 5,
+      "scope": "faction_to_force_own_unseen",
+      "classification": "DIRECT_CANDIDATE",
+      "reviewReason": null,
+      "mappings": [
+        {
+          "bonus": "range_mod",
+          "stat": "missile.range",
+          "operation": "multiply",
+          "ruleId": "OP_RANGE_PERCENT",
+          "rawValueSemantics": "SIGNED_PERCENT_CHANGE",
+          "rawValue": 5,
+          "conversion": "RAW_PRESERVED",
+          "evidenceRef": "source-trace.json#wh2_main_effect_force_stat_range_brt_bowmen_yeomen",
+          "firstVerifiedTechnology": "wh_dlc07_tech_brt_economy_other_fletchers",
+          "localisationIdentity": "effects_description_wh2_main_effect_force_stat_range_brt_bowmen_yeomen",
+          "localisationRowId": "Loc:afb24390a9983d4ced02",
+          "localisationSha256": "ed0e42614563a64f79dba162e7e64e73faa4695f22f53a87d62b707f40311954",
+          "bonusRowIds": [
+            "effect_bonus_value_ids_unit_sets_tables:5ccac773a638a676cff5",
+            "effect_bonus_value_ids_unit_sets_tables:66935def8d3e876defce"
+          ],
+          "basis": "Exact CA Range: %+n% and range_mod bonus. Existing numeric missile.range expresses range; percentage change is directly representable without card-strength decomposition or reload conversion."
+        }
+      ],
+      "basis": "Exact CA Range: %+n% and range_mod bonus. Existing numeric missile.range expresses range; percentage change is directly representable without card-strength decomposition or reload conversion.",
+      "targetMainLandPairs": [
+        {
+          "mainKey": "wh_main_brt_cav_mounted_yeomen_1",
+          "landKey": "wh_main_brt_cav_mounted_yeomen_1"
+        },
+        {
+          "mainKey": "wh_main_brt_inf_peasant_bowmen",
+          "landKey": "wh_main_brt_inf_peasant_bowmen"
+        },
+        {
+          "mainKey": "wh_dlc07_brt_inf_peasant_bowmen_1",
+          "landKey": "wh_dlc07_brt_inf_peasant_bowmen_1"
+        },
+        {
+          "mainKey": "wh_dlc07_brt_inf_peasant_bowmen_2",
+          "landKey": "wh_dlc07_brt_inf_peasant_bowmen_2"
+        }
+      ],
+      "candidateCount": 4,
+      "omittedTargets": [
+        {
+          "mainKey": "wh_pro04_brt_cav_mounted_yeomen_ror_0",
+          "reasonIds": [
+            "TARGET_NOT_IN_PRODUCTION"
+          ],
+          "membershipRowIds": [
+            "unit_set_to_unit_junctions_tables:e0315466dae430eaf329"
+          ],
+          "bonus": "range_mod"
+        }
+      ]
+    },
+    {
+      "technologyKey": "wh_dlc07_tech_brt_economy_other_spears",
+      "technologyName": "Longer Spears",
+      "effectKey": "wh2_main_effect_force_stat_weapon_strength_brt_spearmen_polemen_yeomen",
+      "sourceRowId": "technology_effects_junction_tables:52b222308ba1130dc23e",
+      "effectDefinitionRowId": "effects_tables:691916399a9ae8d30023",
+      "technologyRowId": "technologies_tables:58c9dc16e01eaf3ff369",
+      "description": "Weapon strength: %+n% for Spearmen-at-Arms, Men-at-Arms (Polearms) and Mounted Yeomen units",
+      "rawValue": 10,
+      "scope": "faction_to_force_own_unseen",
+      "classification": "DIRECT_CANDIDATE",
+      "reviewReason": null,
+      "mappings": [
+        {
+          "bonus": "melee_damage_mod_mult",
+          "stat": "melee.damage.base",
+          "operation": "multiply",
+          "ruleId": "OP_BASE_DAMAGE_PERCENT",
+          "rawValueSemantics": "SIGNED_PERCENT_CHANGE",
+          "rawValue": 10,
+          "conversion": "RAW_PRESERVED",
+          "evidenceRef": "source-trace.json#wh2_main_effect_force_stat_weapon_strength_brt_spearmen_polemen_yeomen",
+          "firstVerifiedTechnology": "wh_dlc07_tech_brt_economy_other_spears",
+          "localisationIdentity": "effects_description_wh2_main_effect_force_stat_weapon_strength_brt_spearmen_polemen_yeomen",
+          "localisationRowId": "Loc:535e6c38a356c812ebb9",
+          "localisationSha256": "848cf02c6e12b98c799f2c2d5e92b849be64d62b67643057bb05b4a8ae62d275",
+          "bonusRowIds": [
+            "effect_bonus_value_ids_unit_sets_tables:28416269950b690b365a",
+            "effect_bonus_value_ids_unit_sets_tables:2f7bba9ca5612b91d76b",
+            "effect_bonus_value_ids_unit_sets_tables:eda5f591f3d900356258"
+          ],
+          "basis": "Exact CA Weapon strength: %+n% with separate base and AP melee bonus rows, same two bonus/operation meanings as the existing reviewed weapon-strength mapping; all three explicit target sets independently verified."
+        },
+        {
+          "bonus": "melee_damage_ap_mod_mult",
+          "stat": "melee.damage.armorPiercing",
+          "operation": "multiply",
+          "ruleId": "OP_AP_DAMAGE_PERCENT",
+          "rawValueSemantics": "SIGNED_PERCENT_CHANGE",
+          "rawValue": 10,
+          "conversion": "RAW_PRESERVED",
+          "evidenceRef": "source-trace.json#wh2_main_effect_force_stat_weapon_strength_brt_spearmen_polemen_yeomen",
+          "firstVerifiedTechnology": "wh_dlc07_tech_brt_economy_other_spears",
+          "localisationIdentity": "effects_description_wh2_main_effect_force_stat_weapon_strength_brt_spearmen_polemen_yeomen",
+          "localisationRowId": "Loc:535e6c38a356c812ebb9",
+          "localisationSha256": "848cf02c6e12b98c799f2c2d5e92b849be64d62b67643057bb05b4a8ae62d275",
+          "bonusRowIds": [
+            "effect_bonus_value_ids_unit_sets_tables:82c7886c950fb846662d",
+            "effect_bonus_value_ids_unit_sets_tables:910b7e2d298130f43948",
+            "effect_bonus_value_ids_unit_sets_tables:dd9a6eb3d87f2d720aff"
+          ],
+          "basis": "Exact CA Weapon strength: %+n% with separate base and AP melee bonus rows, same two bonus/operation meanings as the existing reviewed weapon-strength mapping; all three explicit target sets independently verified."
+        }
+      ],
+      "basis": "Exact CA Weapon strength: %+n% with separate base and AP melee bonus rows, same two bonus/operation meanings as the existing reviewed weapon-strength mapping; all three explicit target sets independently verified.",
+      "targetMainLandPairs": [
+        {
+          "mainKey": "wh_main_brt_inf_men_at_arms",
+          "landKey": "wh_main_brt_inf_men_at_arms"
+        },
+        {
+          "mainKey": "wh_dlc07_brt_inf_spearmen_at_arms_1",
+          "landKey": "wh_dlc07_brt_inf_spearmen_at_arms_1"
+        },
+        {
+          "mainKey": "wh_main_brt_inf_spearmen_at_arms",
+          "landKey": "wh_main_brt_inf_spearmen_at_arms"
+        },
+        {
+          "mainKey": "wh_main_brt_cav_mounted_yeomen_0",
+          "landKey": "wh_main_brt_cav_mounted_yeomen_0"
+        },
+        {
+          "mainKey": "wh_main_brt_cav_mounted_yeomen_1",
+          "landKey": "wh_main_brt_cav_mounted_yeomen_1"
+        }
+      ],
+      "candidateCount": 10,
+      "omittedTargets": [
+        {
+          "mainKey": "wh_pro04_brt_cav_mounted_yeomen_ror_0",
+          "reasonIds": [
+            "TARGET_NOT_IN_PRODUCTION"
+          ],
+          "membershipRowIds": [
+            "unit_set_to_unit_junctions_tables:f89c7c1d577b99884308"
+          ],
+          "bonus": "melee_damage_mod_mult"
+        },
+        {
+          "mainKey": "wh_pro04_brt_cav_mounted_yeomen_ror_0",
+          "reasonIds": [
+            "TARGET_NOT_IN_PRODUCTION"
+          ],
+          "membershipRowIds": [
+            "unit_set_to_unit_junctions_tables:f89c7c1d577b99884308"
+          ],
+          "bonus": "melee_damage_ap_mod_mult"
+        }
+      ]
+    },
+    {
+      "technologyKey": "wh_dlc07_tech_brt_economy_other_spears",
+      "technologyName": "Longer Spears",
+      "effectKey": "wh2_main_effect_force_stat_melee_attack_brt_spearmen_polemen_yeomen",
+      "sourceRowId": "technology_effects_junction_tables:e9bfb302b3315b1dc316",
+      "effectDefinitionRowId": "effects_tables:f8f5b755557855bd1460",
+      "technologyRowId": "technologies_tables:58c9dc16e01eaf3ff369",
+      "description": "Melee attack: %+n for Spearmen-at-Arms, Men-at-Arms (Polearms) and Mounted Yeomen units",
+      "rawValue": 5,
+      "scope": "faction_to_force_own_unseen",
+      "classification": "DIRECT_CANDIDATE",
+      "reviewReason": null,
+      "mappings": [
+        {
+          "bonus": "melee_attack_mod",
+          "stat": "melee.meleeAttack",
+          "operation": "add",
+          "ruleId": "OP_MELEE_ATTACK_FLAT",
+          "rawValueSemantics": "FLAT_POINTS",
+          "rawValue": 5,
+          "conversion": "RAW_PRESERVED",
+          "evidenceRef": "source-trace.json#wh2_main_effect_force_stat_melee_attack_brt_spearmen_polemen_yeomen",
+          "firstVerifiedTechnology": "wh_dlc07_tech_brt_economy_other_spears",
+          "localisationIdentity": "effects_description_wh2_main_effect_force_stat_melee_attack_brt_spearmen_polemen_yeomen",
+          "localisationRowId": "Loc:2706bdea4a425bce6ceb",
+          "localisationSha256": "365caaef93e5ffe49155787adcae45be7abe0dd926b793c50040ff9cdb5634d0",
+          "bonusRowIds": [
+            "effect_bonus_value_ids_unit_sets_tables:0154463383f80a7ab025",
+            "effect_bonus_value_ids_unit_sets_tables:3eb97d120eb81536a5a8",
+            "effect_bonus_value_ids_unit_sets_tables:a510569cc4f2b06a573c"
+          ],
+          "basis": "Exact CA Melee attack: %+n (no percent suffix) and melee_attack_mod bonus; same flat meaning as existing melee attack mapping, with this exact effect and three sets reviewed separately."
+        }
+      ],
+      "basis": "Exact CA Melee attack: %+n (no percent suffix) and melee_attack_mod bonus; same flat meaning as existing melee attack mapping, with this exact effect and three sets reviewed separately.",
+      "targetMainLandPairs": [
+        {
+          "mainKey": "wh_main_brt_inf_men_at_arms",
+          "landKey": "wh_main_brt_inf_men_at_arms"
+        },
+        {
+          "mainKey": "wh_dlc07_brt_inf_spearmen_at_arms_1",
+          "landKey": "wh_dlc07_brt_inf_spearmen_at_arms_1"
+        },
+        {
+          "mainKey": "wh_main_brt_inf_spearmen_at_arms",
+          "landKey": "wh_main_brt_inf_spearmen_at_arms"
+        },
+        {
+          "mainKey": "wh_main_brt_cav_mounted_yeomen_0",
+          "landKey": "wh_main_brt_cav_mounted_yeomen_0"
+        },
+        {
+          "mainKey": "wh_main_brt_cav_mounted_yeomen_1",
+          "landKey": "wh_main_brt_cav_mounted_yeomen_1"
+        }
+      ],
+      "candidateCount": 5,
+      "omittedTargets": [
+        {
+          "mainKey": "wh_pro04_brt_cav_mounted_yeomen_ror_0",
+          "reasonIds": [
+            "TARGET_NOT_IN_PRODUCTION"
+          ],
+          "membershipRowIds": [
+            "unit_set_to_unit_junctions_tables:f89c7c1d577b99884308"
+          ],
+          "bonus": "melee_attack_mod"
+        }
+      ]
+    },
+    {
+      "technologyKey": "wh_dlc07_tech_brt_economy_other_tithes",
+      "technologyName": "Temple Tithes",
+      "effectKey": "wh2_main_effect_force_stat_ward_save_paladins",
+      "sourceRowId": "technology_effects_junction_tables:c2af39a26685537d301c",
+      "effectDefinitionRowId": "effects_tables:db841a4f29cf265c9fba",
+      "technologyRowId": "technologies_tables:e4712bc7c9e52b171e23",
+      "description": "Ward save: %+n% for Grail Knight and Grail Guardian units and embedded Paladin [[img:icon_hero]][[/img]]Heroes",
+      "rawValue": 10,
+      "scope": "faction_to_force_own_unseen",
+      "classification": "REVIEW_REQUIRED",
+      "reviewReason": "WARD_PERCENTAGE_POINT_OPERATION_UNVERIFIED",
+      "mappings": [],
+      "basis": "Unit ward is percentage points, but CA Ward save: %+n% and unit_damage_resistance_all_mod do not independently prove additive points versus a relative increase. The schema records references/types, not that operation; neither add nor multiply is approved.",
+      "targetMainLandPairs": [
+        {
+          "mainKey": "wh_dlc07_brt_cav_grail_guardians_0",
+          "landKey": "wh_dlc07_brt_cav_grail_guardians_0"
+        },
+        {
+          "mainKey": "wh_main_brt_cav_grail_knights",
+          "landKey": "wh_main_brt_cav_grail_knights"
+        }
+      ],
+      "candidateCount": 0,
+      "omittedTargets": []
+    }
+  ]
+}

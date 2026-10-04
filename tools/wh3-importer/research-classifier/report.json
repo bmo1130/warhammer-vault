@@ -1,7 +1,7 @@
 {
   "format": "wh3-research-candidate-report-v1",
   "candidateOnly": true,
-  "whitelistSha256": "0392cf5c393d7364f2cc0d3180ece67581c591a8398f36fda6a187849dfe5307",
+  "whitelistSha256": "423a38d421d169450e56c31ca1d1589f9c098fcd5eda5f2edf7cf5b993fe2aae",
   "source": {
     "sourcePath": "tools/wh3-importer/research-batch-01/source.json",
     "sourceSha256": "bf658783ef8fd44abad4a25109535ee7acc380baad28c12c4d5d0ad867b5b297",

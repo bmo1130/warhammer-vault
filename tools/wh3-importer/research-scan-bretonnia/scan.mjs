@@ -4,7 +4,9 @@ import { pins, ownForceScope, effectMappings } from '../research-classifier/poli
 import { isDeepStrictEqual as equal } from 'node:util';
 import { verifySource, discoverTree, sourceGraph, compare } from './source.mjs';
 
-export const policySha256 = 'c6a397517d1da83d2dd360780de19e9eea88f2a4974334ca39a98413b11a5729';
+// Mapping-only review 01 supersedes the original whitelist pin. The original
+// policy and BEFORE result remain committed in research-mapping-review-01.
+export const policySha256 = 'e9547fb5ee2967dee06a70bdf1848846b56d7a1667d91b90936b6c081866aba7';
 export const originalClassifierSha256 = '921e6778ea532cff17bfc94ece5b5c164eaabea08054089f79af29161cf8921c';
 export const scanStates = [...states,'UNCLASSIFIABLE_INPUT'];
 const countStates = effects => Object.fromEntries(scanStates.map(s=>[s,effects.filter(e=>e.status===s).length]));

@@ -4,76 +4,100 @@
     "nodes": 75,
     "withoutEffects": 0,
     "withEffects": 68,
-    "withDirect": 5,
-    "mixed": 9,
-    "withoutDirect": 63
+    "withDirect": 10,
+    "mixed": 12,
+    "withoutDirect": 58
   },
   "effects": {
     "total": 179,
     "uniqueEffectKeys": 132,
     "counts": {
-      "DIRECT_CANDIDATE": 9,
-      "REVIEW_REQUIRED": 157,
+      "DIRECT_CANDIDATE": 15,
+      "REVIEW_REQUIRED": 151,
       "UNSUPPORTED": 1,
       "NON_UNIT_STAT": 12,
       "UNCLASSIFIABLE_INPUT": 0
     },
     "percentages": {
-      "DIRECT_CANDIDATE": 5.027932960893855,
-      "REVIEW_REQUIRED": 87.70949720670392,
+      "DIRECT_CANDIDATE": 8.379888268156424,
+      "REVIEW_REQUIRED": 84.35754189944134,
       "UNSUPPORTED": 0.5586592178770949,
       "NON_UNIT_STAT": 6.70391061452514,
       "UNCLASSIFIABLE_INPUT": 0
     }
   },
   "candidates": {
-    "total": 54,
-    "units": 12,
-    "paths": 7,
+    "total": 96,
+    "units": 22,
+    "paths": 10,
     "operations": {
-      "add": 24,
-      "multiply": 30
+      "add": 37,
+      "multiply": 59
     },
     "perPath": {
       "campaign.recruitmentCost": 1,
-      "defense.leadership": 7,
+      "campaign.upkeep": 15,
+      "defense.armor": 7,
+      "defense.leadership": 8,
       "defense.meleeDefense": 8,
       "melee.chargeBonus": 7,
-      "melee.damage.armorPiercing": 11,
-      "melee.damage.base": 11,
-      "melee.meleeAttack": 9
+      "melee.damage.armorPiercing": 16,
+      "melee.damage.base": 16,
+      "melee.meleeAttack": 14,
+      "missile.range": 4
     },
     "perEffect": {
+      "wh2_dlc09_effect_force_stat_armour_brt_knights": 7,
       "wh2_main_effect_force_stat_charge_bonus_pct_brt_knights": 7,
       "wh2_main_effect_force_stat_melee_attack_brt_knights": 7,
+      "wh2_main_effect_force_stat_melee_attack_brt_spearmen_polemen_yeomen": 5,
       "wh2_main_effect_force_stat_melee_attack_pilgrims_reliquae": 1,
       "wh2_main_effect_force_stat_melee_defence_brt_knights": 7,
       "wh2_main_effect_force_stat_melee_defence_brt_pilgrims_reliquae": 1,
+      "wh2_main_effect_force_stat_range_brt_bowmen_yeomen": 4,
       "wh2_main_effect_force_stat_weapon_strength_brt_knights_swordsmen_footsquires": 22,
+      "wh2_main_effect_force_stat_weapon_strength_brt_spearmen_polemen_yeomen": 10,
       "wh_dlc07_effect_force_stat_leadership_knights": 7,
+      "wh_dlc07_effect_force_stat_leadership_peasant_mob": 1,
       "wh_dlc07_effect_force_stat_melee_attack_peasant_mob": 1,
+      "wh_dlc07_peasant_upkeep_penalty": 15,
       "wh_main_effect_tech_recruitment_cost_reduction_peasant_mob": 1
     },
     "perTechnology": {
       "wh_dlc07_tech_brt_economy_farm_hoods": 14,
+      "wh_dlc07_tech_brt_economy_industry_steel": 7,
       "wh_dlc07_tech_brt_economy_industry_swords": 22,
       "wh_dlc07_tech_brt_economy_industry_tournaments": 14,
+      "wh_dlc07_tech_brt_economy_other_1": 1,
       "wh_dlc07_tech_brt_economy_other_3": 2,
-      "wh_dlc07_tech_brt_economy_other_fanaticism": 2
+      "wh_dlc07_tech_brt_economy_other_draft": 15,
+      "wh_dlc07_tech_brt_economy_other_fanaticism": 2,
+      "wh_dlc07_tech_brt_economy_other_fletchers": 4,
+      "wh_dlc07_tech_brt_economy_other_spears": 15
     },
     "perUnit": {
-      "wh_dlc07_brt_cav_grail_guardians_0": 6,
-      "wh_dlc07_brt_cav_knights_errant_0": 6,
-      "wh_dlc07_brt_cav_questing_knights_0": 6,
-      "wh_dlc07_brt_cav_royal_pegasus_knights_0": 6,
-      "wh_dlc07_brt_inf_battle_pilgrims_0": 4,
-      "wh_dlc07_brt_inf_foot_squires_0": 2,
-      "wh_dlc07_brt_inf_men_at_arms_1": 2,
-      "wh_dlc07_brt_inf_men_at_arms_2": 2,
-      "wh_dlc07_brt_peasant_mob_0": 2,
-      "wh_main_brt_cav_grail_knights": 6,
-      "wh_main_brt_cav_knights_of_the_realm": 6,
-      "wh_main_brt_cav_pegasus_knights": 6
+      "wh_dlc07_brt_art_blessed_field_trebuchet_0": 1,
+      "wh_dlc07_brt_cav_grail_guardians_0": 7,
+      "wh_dlc07_brt_cav_knights_errant_0": 7,
+      "wh_dlc07_brt_cav_questing_knights_0": 7,
+      "wh_dlc07_brt_cav_royal_pegasus_knights_0": 7,
+      "wh_dlc07_brt_inf_battle_pilgrims_0": 5,
+      "wh_dlc07_brt_inf_foot_squires_0": 3,
+      "wh_dlc07_brt_inf_men_at_arms_1": 3,
+      "wh_dlc07_brt_inf_men_at_arms_2": 3,
+      "wh_dlc07_brt_inf_peasant_bowmen_1": 2,
+      "wh_dlc07_brt_inf_peasant_bowmen_2": 2,
+      "wh_dlc07_brt_inf_spearmen_at_arms_1": 4,
+      "wh_dlc07_brt_peasant_mob_0": 4,
+      "wh_main_brt_art_field_trebuchet": 1,
+      "wh_main_brt_cav_grail_knights": 7,
+      "wh_main_brt_cav_knights_of_the_realm": 7,
+      "wh_main_brt_cav_mounted_yeomen_0": 4,
+      "wh_main_brt_cav_mounted_yeomen_1": 5,
+      "wh_main_brt_cav_pegasus_knights": 7,
+      "wh_main_brt_inf_men_at_arms": 4,
+      "wh_main_brt_inf_peasant_bowmen": 2,
+      "wh_main_brt_inf_spearmen_at_arms": 4
     }
   },
   "duplicates": {

@@ -17,9 +17,9 @@
     "unitSetKeys": [],
     "targetKind": "BASIC_BONUS",
     "why": "Review an exact effect/Loc/bonus mapping; a key whitelist expansion is required.",
-    "patternEffectOccurrences": 48,
+    "patternEffectOccurrences": 42,
     "exactEffectOccurrences": 5,
-    "coverageGainUpperBound": 48,
+    "coverageGainUpperBound": 42,
     "coverageGainNote": "Overlapping occurrence ceiling only; not a predicted DIRECT gain. Other scope/target/mapping gates may still fail. No guarantee of numerical gain for non-Unit targets."
   },
   {
@@ -45,27 +45,29 @@
   },
   {
     "pattern": "EXPLICIT_TARGET_MAPPING_MISSING",
-    "technologyKey": "wh_dlc07_tech_brt_economy_industry_steel",
-    "technologyName": "Steel Furnaces",
-    "effectKey": "wh2_dlc09_effect_force_stat_armour_brt_knights",
-    "sourceRowId": "technology_effects_junction_tables:af7762ed61b3842a3e36",
-    "rawValue": 8,
-    "description": "Armour: %+n for Knight units",
+    "technologyKey": "wh_dlc07_tech_brt_economy_other_fletchers",
+    "technologyName": "Professional Fletchers",
+    "effectKey": "wh2_main_effect_force_stat_missile_damage_brt_bowmen_yeomen",
+    "sourceRowId": "technology_effects_junction_tables:97ecf9987339fa7f8547",
+    "rawValue": 10,
+    "description": "Missile strength: %+n% for Peasant Bowmen and Mounted Yeomen Archers units",
     "scope": "faction_to_force_own_unseen",
     "reasonIds": [
       "EFFECT_MAPPING_UNVERIFIED"
     ],
     "bonusIds": [
-      "armour_mod"
+      "missile_damage_ap_mod_mult",
+      "missile_damage_mod_mult"
     ],
     "unitSetKeys": [
-      "brt_knights"
+      "brt_bow_cav",
+      "brt_bow_inf"
     ],
     "targetKind": "EXPLICIT_UNIT_SET",
     "why": "Exact targets exist; effect mapping remains unapproved.",
-    "patternEffectOccurrences": 8,
+    "patternEffectOccurrences": 2,
     "exactEffectOccurrences": 1,
-    "coverageGainUpperBound": 8,
+    "coverageGainUpperBound": 2,
     "coverageGainNote": "Overlapping occurrence ceiling only; not a predicted DIRECT gain. Other scope/target/mapping gates may still fail. No guarantee of numerical gain for non-Unit targets."
   },
   {
@@ -121,23 +123,22 @@
   },
   {
     "pattern": "MISSILE_STRENGTH",
-    "technologyKey": "wh_dlc07_tech_brt_economy_other_fletchers",
-    "technologyName": "Professional Fletchers",
-    "effectKey": "wh2_main_effect_force_stat_missile_damage_brt_bowmen_yeomen",
-    "sourceRowId": "technology_effects_junction_tables:97ecf9987339fa7f8547",
+    "technologyKey": "wh_dlc07_tech_brt_economy_other_siege",
+    "technologyName": "Siege Engineering",
+    "effectKey": "wh2_main_effect_force_stat_missile_damage_brt_trebuchet",
+    "sourceRowId": "technology_effects_junction_tables:2e551e4edafd5712c5af",
     "rawValue": 10,
-    "description": "Missile strength: %+n% for Peasant Bowmen and Mounted Yeomen Archers units",
+    "description": "Missile strength: %+n% for Trebuchet units",
     "scope": "faction_to_force_own_unseen",
     "reasonIds": [
-      "EFFECT_MAPPING_UNVERIFIED"
+      "MISSILE_STRENGTH_MAPPING_UNVERIFIED"
     ],
     "bonusIds": [
       "missile_damage_ap_mod_mult",
       "missile_damage_mod_mult"
     ],
     "unitSetKeys": [
-      "brt_bow_cav",
-      "brt_bow_inf"
+      "brt_trebuchets"
     ],
     "targetKind": "EXPLICIT_UNIT_SET",
     "why": "Card strength versus raw missile fields is unverified.",
