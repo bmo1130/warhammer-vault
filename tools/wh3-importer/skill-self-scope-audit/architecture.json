@@ -1,0 +1,129 @@
+{
+  "format": "wh3-self-scope-architecture-v1",
+  "recommendation": "C",
+  "recommendedOption": "B",
+  "decision": "Separate Character Combat Calculator project; keep ordinary Production unchanged",
+  "basis": {
+    "selfJunctions": 596,
+    "combatJunctions": 77,
+    "combatSkills": 41,
+    "combatEffects": 14,
+    "minimalWholeSkills": 2,
+    "futureNumericWholeSkills": 26,
+    "characterProfiles": 48,
+    "productionCharacterProfiles": 0
+  },
+  "identity": {
+    "defaultSubtypeJoin": "DETERMINISTIC_STATIC_DEFAULT_ASSOCIATED_UNIT_OVERRIDE",
+    "activeBattleIdentity": "REQUIRES_EQUIPPED_MOUNT_AND_CONTEXT_SELECTION",
+    "mountModellingRequiredForFullSupport": true,
+    "onFootOrExactProfilePilotPossible": true,
+    "mountEffectRetention": "UNKNOWN_NOT_INVESTIGATED",
+    "sameUnitStatSourceChain": true,
+    "productionContractChanged": false
+  },
+  "existingModel": {
+    "lord": "SourceInfo + id/name/faction/title/summary/unitIds; no subtype/combat-profile/mount identity",
+    "hero": "SourceInfo + id/name/faction/category; no combat stats",
+    "unit": "Stat containers reusable; current identity, repository, routes, comparison and Production contract are ordinary Unit-oriented",
+    "modifier": "targetType already includes lord, but arithmetic engine receives only selected {id,stat,operation,value}; target/conditions resolution is external",
+    "engine": "((set ?? base) + sum(add)) * (1 + sum(percent)/100); unknown base remains unknown; no target/rank/mount semantics in arithmetic"
+  },
+  "options": [
+    {
+      "id": "A",
+      "name": "Keep self scope unsupported",
+      "coverageGain": 0,
+      "cost": "LOW",
+      "value": "Preserves core army Unit use cases; loses character build and rework comparison",
+      "risk": "LOW"
+    },
+    {
+      "id": "B",
+      "name": "Separate Character Combat Calculator",
+      "coverageTiers": [
+        {
+          "name": "MINIMAL_CHARACTER_PROFILE_DOMAIN",
+          "skills": 2,
+          "effects": 2,
+          "junctions": 2
+        },
+        {
+          "name": "EXISTING_PATH_EXPANSION_ONLY",
+          "skills": 2,
+          "effects": 2,
+          "junctions": 2
+        },
+        {
+          "name": "BOUNDED_RESISTANCE_OPERATION_REVIEW_PLUS_CHARACTER_DOMAIN",
+          "skills": 5,
+          "effects": 4,
+          "junctions": 6
+        },
+        {
+          "name": "FUTURE_ALL_NUMERIC_SELF_BLOCKERS_RESOLVED",
+          "skills": 26,
+          "effects": 11,
+          "junctions": 58
+        }
+      ],
+      "cost": "MEDIUM_HIGH",
+      "newModels": [
+        "CharacterCombatProfile identity: subtype + context + explicit main/land + mounted variant + snapshot",
+        "Combat stat containers reused from Unit without ordinary Production membership",
+        "CharacterSelf applicability/rank/acquisition provenance",
+        "Explicit mount/profile selector"
+      ],
+      "mount": "Required for full support; exact on-foot/profile pilot can avoid mount transitions",
+      "ui": "Lord/Hero link + profile/mount/rank selectors; mobile default collapsed details",
+      "engineReuse": "Reuse numeric paths/arithmetic through reviewed adapter; preserve source/application layer outside arithmetic",
+      "risk": "MEDIUM_HIGH: stat admission, mount retention, rank and owner semantics remain separate"
+    },
+    {
+      "id": "C",
+      "name": "Expand Unit model and one calculator to include characters",
+      "coverageCeiling": 26,
+      "cost": "HIGH",
+      "newModels": [
+        "Discriminated ordinary/character target with explicit subtype/profile/mount identity",
+        "Repository, routes, comparison, admission, Profile/backup migration or isolation"
+      ],
+      "risk": "HIGH: unit/lord keys and subtype identity are distinct; forced insertion changes Production and target assumptions",
+      "futureCompatibility": "Explicit discriminated identity can help save parsing/modding; subtype alone is insufficient"
+    }
+  ],
+  "reuseBoundaries": {
+    "existingPaths": [
+      "defense.armor",
+      "defense.leadership",
+      "defense.meleeDefense",
+      "defense.resistances.missile",
+      "defense.resistances.physical",
+      "defense.resistances.ward",
+      "entities.totalHealth",
+      "melee.chargeBonus",
+      "melee.damage.armorPiercing",
+      "melee.damage.base",
+      "melee.damage.bonusVsLarge",
+      "melee.meleeAttack",
+      "movement.speed"
+    ],
+    "canReuseArithmetic": true,
+    "canReuseOrdinaryApplicability": false,
+    "canUseExistingLordTargetWithoutAdapter": false,
+    "sameOperationMustBeProvedPerBonus": true,
+    "newEngineRequired": false,
+    "newStatPathImplemented": false
+  },
+  "userValue": {
+    "evidence": "Product-use-case evaluation, not observed user analytics",
+    "inGameReference": "HIGH for character builds if exact equipped profile is available",
+    "unitComparison": "LOW immediate benefit to ordinary Unit comparison; useful only separate character comparisons",
+    "legendaryLordReworkAndBalancing": "HIGH: raw unit, weapon, entity and mount changes directly affect character profiles",
+    "researchSkillsLandmarks": "MEDIUM_HIGH after character-specific target/condition review; ordinary army effects cannot be copied wholesale",
+    "mobile": "MEDIUM; profile/mount choices add complexity",
+    "recommendation": "Treat as a separately scoped character-profile feature, not the next ordinary Unit blocker"
+  },
+  "productionBehaviorChanged": false,
+  "multiRankInvestigationPerformed": false
+}
