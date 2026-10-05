@@ -1,0 +1,2913 @@
+{
+  "format": "wh3-resistance-source-v1",
+  "originalExtraction": {
+    "path": "generated/wh3/resistance-research/raw.json",
+    "sha256": "2b1b99dbedb6f67748b69ec8cac55f47c3e5d755fdd5b360e82d1e842afa4359",
+    "extractedAt": "2026-10-05T01:13:51.553Z"
+  },
+  "provenance": {
+    "sourceKind": "ca-pack",
+    "gameVersion": "9.0.2.0",
+    "gameVersionSource": "Warhammer3.exe ProductVersion resource (not inferred from a wiki/Steam build)",
+    "rpfmVersion": "5.1.0",
+    "mcpServerInfo": {
+      "name": "rmcp",
+      "version": "3.1.0"
+    },
+    "schemaFormatVersion": 5,
+    "schemaSha256": "5d628a0167b34a096752c5c21acd16493834a987c80dc9f02364617f796ba2a4",
+    "packs": [
+      {
+        "file_name": "db.pack",
+        "file_path": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+        "pfh_version": "PFH5",
+        "pfh_file_type": "Release",
+        "bitmask": "",
+        "compress": "Zstd",
+        "timestamp": 0,
+        "sizeBytes": 8663017,
+        "filesystemModifiedAt": "2026-10-01T10:08:40.330Z",
+        "sha256": "d0fafac984b3985ec47cec0ea957591424f1077e52ef61941dbf2dc46e6cf723"
+      },
+      {
+        "file_name": "local_en.pack",
+        "file_path": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/local_en.pack",
+        "pfh_version": "PFH5",
+        "pfh_file_type": "Release",
+        "bitmask": "",
+        "compress": "Zstd",
+        "timestamp": 1645478083,
+        "sizeBytes": 33435496,
+        "filesystemModifiedAt": "2026-10-01T10:08:40.330Z",
+        "sha256": "f979527a5aaecf293a4e66afc25ed6c760e4107ef4920b73bd56e10e2652fd6a"
+      }
+    ],
+    "accessMethod": "RPFM MCP / decode_packed_file source=PackFile, directly opened CA Release/Patch packs"
+  },
+  "sourceSha256": "479991adfb88fccece9f7040268e05a888e603f5dc767dc0a196d50b77697409",
+  "comparisonEffectKeys": [
+    "wh_dlc07_effect_force_stat_magic_resistance_battle_pilgrims",
+    "wh2_dlc09_effect_force_stat_magic_resistance_tmb_monster_rank7",
+    "wh2_dlc09_effect_force_stat_magic_resistance_tmb_monster",
+    "wh2_dlc11_effect_force_stat_magic_resistance_animated_hulks_mournguls",
+    "wh2_dlc11_effect_force_stat_magic_resistance_cairn_wraith_hex_wraith",
+    "wh2_dlc11_effect_force_stat_magic_resistance_cst_infantry",
+    "wh_main_effect_character_stat_magic_resistance"
+  ],
+  "schemas": [
+    {
+      "table": "effect_bonus_value_ids_unit_sets_tables",
+      "version": 0,
+      "fields": [
+        {
+          "name": "bonus_value_id",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "campaign_bonus_value_ids_unit_sets",
+            "key"
+          ],
+          "description": ""
+        },
+        {
+          "name": "effect",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "effects",
+            "effect"
+          ],
+          "description": ""
+        },
+        {
+          "name": "unit_set",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "unit_sets",
+            "key"
+          ],
+          "description": ""
+        }
+      ],
+      "localisedFields": []
+    },
+    {
+      "table": "effects_tables",
+      "version": 0,
+      "fields": [
+        {
+          "name": "effect",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": null,
+          "description": ""
+        },
+        {
+          "name": "icon",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": null,
+          "description": ""
+        },
+        {
+          "name": "priority",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null,
+          "description": "Higher number will be displayed lower down the list. Set to 0 to hide the effect entirely."
+        },
+        {
+          "name": "icon_negative",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": null,
+          "description": ""
+        },
+        {
+          "name": "category",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "effect_categories",
+            "key"
+          ],
+          "description": "Category for display in ui"
+        },
+        {
+          "name": "is_positive_value_good",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null,
+          "description": "If true, then positive values shown green in ui. Otherwise shown red and vice versa for negatives. (As sometimes -10% is a good thing like cost)"
+        }
+      ],
+      "localisedFields": [
+        {
+          "name": "description",
+          "field_type": "StringU8",
+          "is_key": false,
+          "default_value": null,
+          "is_filename": false,
+          "filename_relative_path": null,
+          "is_reference": null,
+          "lookup": null,
+          "description": "",
+          "ca_order": -1,
+          "is_bitwise": 0,
+          "enum_values": {},
+          "is_part_of_colour": null
+        }
+      ]
+    },
+    {
+      "table": "character_skill_level_to_effects_junctions_tables",
+      "version": 1,
+      "fields": [
+        {
+          "name": "character_skill_key",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "character_skills",
+            "key"
+          ],
+          "description": ""
+        },
+        {
+          "name": "effect_key",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "effects",
+            "effect"
+          ],
+          "description": ""
+        },
+        {
+          "name": "effect_scope",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "campaign_effect_scopes",
+            "key"
+          ],
+          "description": ""
+        },
+        {
+          "name": "level",
+          "field_type": "I32",
+          "is_key": true,
+          "is_reference": null,
+          "description": ""
+        },
+        {
+          "name": "value",
+          "field_type": "F32",
+          "is_key": false,
+          "is_reference": null,
+          "description": ""
+        }
+      ],
+      "localisedFields": []
+    },
+    {
+      "table": "technology_effects_junction_tables",
+      "version": 0,
+      "fields": [
+        {
+          "name": "technology",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "technologies",
+            "key"
+          ],
+          "description": ""
+        },
+        {
+          "name": "effect",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "effects",
+            "effect"
+          ],
+          "description": ""
+        },
+        {
+          "name": "effect_scope",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "campaign_effect_scopes",
+            "key"
+          ],
+          "description": ""
+        },
+        {
+          "name": "value",
+          "field_type": "F32",
+          "is_key": false,
+          "is_reference": null,
+          "description": ""
+        }
+      ],
+      "localisedFields": []
+    },
+    {
+      "table": "trait_level_effects_tables",
+      "version": 0,
+      "fields": [
+        {
+          "name": "trait_level",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "character_trait_levels",
+            "key"
+          ],
+          "description": ""
+        },
+        {
+          "name": "effect",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "effects",
+            "effect"
+          ],
+          "description": ""
+        },
+        {
+          "name": "effect_scope",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "campaign_effect_scopes",
+            "key"
+          ],
+          "description": ""
+        },
+        {
+          "name": "value",
+          "field_type": "F32",
+          "is_key": false,
+          "is_reference": null,
+          "description": ""
+        }
+      ],
+      "localisedFields": []
+    },
+    {
+      "table": "effect_bundles_to_effects_junctions_tables",
+      "version": 3,
+      "fields": [
+        {
+          "name": "effect_bundle_key",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "effect_bundles",
+            "key"
+          ],
+          "description": ""
+        },
+        {
+          "name": "effect_key",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "effects",
+            "effect"
+          ],
+          "description": ""
+        },
+        {
+          "name": "effect_scope",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "campaign_effect_scopes",
+            "key"
+          ],
+          "description": ""
+        },
+        {
+          "name": "value",
+          "field_type": "F32",
+          "is_key": false,
+          "is_reference": null,
+          "description": ""
+        },
+        {
+          "name": "advancement_stage",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "effect_bundle_advancement_stages",
+            "key"
+          ],
+          "description": ""
+        }
+      ],
+      "localisedFields": []
+    },
+    {
+      "table": "ui_unit_stats_tables",
+      "version": 10,
+      "fields": [
+        {
+          "name": "key",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": null,
+          "description": ""
+        },
+        {
+          "name": "max_value",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null,
+          "description": "Maximum value of stat, affects stat bars on info panel when calculating percentage full"
+        },
+        {
+          "name": "campaign_only",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null,
+          "description": "Is the stat only relevant to campaign? These are only shown in campaign."
+        },
+        {
+          "name": "sort_order",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null,
+          "description": "Determines order stats shown on info panel"
+        },
+        {
+          "name": "localisation",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "unit_stat_localisations",
+            "stat_key"
+          ],
+          "description": "Where the localisation lives"
+        },
+        {
+          "name": "icon",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": null,
+          "description": "Full path to icon"
+        },
+        {
+          "name": "min_value",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null,
+          "description": ""
+        },
+        {
+          "name": "clamp_displayed_minimum",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null,
+          "description": ""
+        },
+        {
+          "name": "clamp_displayed_maximum",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null,
+          "description": ""
+        }
+      ],
+      "localisedFields": []
+    },
+    {
+      "table": "unit_stat_localisations_tables",
+      "version": 0,
+      "fields": [
+        {
+          "name": "stat_key",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": null,
+          "description": ""
+        }
+      ],
+      "localisedFields": [
+        {
+          "name": "onscreen_name",
+          "field_type": "StringU8",
+          "is_key": false,
+          "default_value": null,
+          "is_filename": false,
+          "filename_relative_path": null,
+          "is_reference": null,
+          "lookup": null,
+          "description": "",
+          "ca_order": -1,
+          "is_bitwise": 0,
+          "enum_values": {},
+          "is_part_of_colour": null
+        },
+        {
+          "name": "tooltip_text",
+          "field_type": "StringU8",
+          "is_key": false,
+          "default_value": null,
+          "is_filename": false,
+          "filename_relative_path": null,
+          "is_reference": null,
+          "lookup": null,
+          "description": "",
+          "ca_order": -1,
+          "is_bitwise": 0,
+          "enum_values": {},
+          "is_part_of_colour": null
+        }
+      ]
+    },
+    {
+      "table": "modifiable_unit_stats_tables",
+      "version": 0,
+      "fields": [
+        {
+          "name": "localisation",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "unit_stat_localisations",
+            "stat_key"
+          ],
+          "description": ""
+        },
+        {
+          "name": "stat_key",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": null,
+          "description": ""
+        }
+      ],
+      "localisedFields": []
+    },
+    {
+      "table": "special_ability_phase_stat_effects_tables",
+      "version": 3,
+      "fields": [
+        {
+          "name": "phase",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "special_ability_phases",
+            "id"
+          ],
+          "description": ""
+        },
+        {
+          "name": "value",
+          "field_type": "F32",
+          "is_key": false,
+          "is_reference": null,
+          "description": ""
+        },
+        {
+          "name": "stat",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "modifiable_unit_stats",
+            "stat_key"
+          ],
+          "description": ""
+        },
+        {
+          "name": "how",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "unit_stat_modifiers_how_enums",
+            "key"
+          ],
+          "description": ""
+        }
+      ],
+      "localisedFields": []
+    },
+    {
+      "table": "Loc",
+      "version": 1,
+      "fields": [
+        {
+          "name": "key",
+          "field_type": "StringU16",
+          "is_key": true,
+          "is_reference": null,
+          "description": ""
+        },
+        {
+          "name": "text",
+          "field_type": "StringU16",
+          "is_key": false,
+          "is_reference": null,
+          "description": ""
+        },
+        {
+          "name": "tooltip",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null,
+          "description": ""
+        }
+      ],
+      "localisedFields": []
+    }
+  ],
+  "coverage": [
+    {
+      "table": "effect_bonus_value_ids_unit_sets_tables",
+      "where": {
+        "bonus_value_id": [
+          "unit_damage_resistance_magic_mod"
+        ],
+        "effect": [
+          "wh_dlc07_effect_force_stat_magic_resistance_battle_pilgrims",
+          "wh2_dlc09_effect_force_stat_magic_resistance_tmb_monster_rank7",
+          "wh2_dlc09_effect_force_stat_magic_resistance_tmb_monster",
+          "wh2_dlc11_effect_force_stat_magic_resistance_animated_hulks_mournguls",
+          "wh2_dlc11_effect_force_stat_magic_resistance_cairn_wraith_hex_wraith",
+          "wh2_dlc11_effect_force_stat_magic_resistance_cst_infantry",
+          "wh_main_effect_character_stat_magic_resistance"
+        ]
+      },
+      "tableFiles": 1,
+      "matchedRows": 13,
+      "retainedRows": 13,
+      "selection": "All exact matches"
+    },
+    {
+      "table": "effects_tables",
+      "where": {
+        "effect": [
+          "wh_dlc07_effect_force_stat_magic_resistance_battle_pilgrims",
+          "wh2_dlc09_effect_force_stat_magic_resistance_tmb_monster_rank7",
+          "wh2_dlc09_effect_force_stat_magic_resistance_tmb_monster",
+          "wh2_dlc11_effect_force_stat_magic_resistance_animated_hulks_mournguls",
+          "wh2_dlc11_effect_force_stat_magic_resistance_cairn_wraith_hex_wraith",
+          "wh2_dlc11_effect_force_stat_magic_resistance_cst_infantry",
+          "wh_main_effect_character_stat_magic_resistance"
+        ]
+      },
+      "tableFiles": 1,
+      "matchedRows": 7,
+      "retainedRows": 7,
+      "selection": "All exact matches"
+    },
+    {
+      "table": "character_skill_level_to_effects_junctions_tables",
+      "where": {
+        "effect_key": [
+          "wh_dlc07_effect_force_stat_magic_resistance_battle_pilgrims",
+          "wh2_dlc09_effect_force_stat_magic_resistance_tmb_monster_rank7",
+          "wh2_dlc09_effect_force_stat_magic_resistance_tmb_monster",
+          "wh2_dlc11_effect_force_stat_magic_resistance_animated_hulks_mournguls",
+          "wh2_dlc11_effect_force_stat_magic_resistance_cairn_wraith_hex_wraith",
+          "wh2_dlc11_effect_force_stat_magic_resistance_cst_infantry",
+          "wh_main_effect_character_stat_magic_resistance"
+        ]
+      },
+      "tableFiles": 1,
+      "matchedRows": 53,
+      "retainedRows": 53,
+      "selection": "All exact matches"
+    },
+    {
+      "table": "technology_effects_junction_tables",
+      "where": {
+        "effect": [
+          "wh_dlc07_effect_force_stat_magic_resistance_battle_pilgrims",
+          "wh2_dlc09_effect_force_stat_magic_resistance_tmb_monster_rank7",
+          "wh2_dlc09_effect_force_stat_magic_resistance_tmb_monster",
+          "wh2_dlc11_effect_force_stat_magic_resistance_animated_hulks_mournguls",
+          "wh2_dlc11_effect_force_stat_magic_resistance_cairn_wraith_hex_wraith",
+          "wh2_dlc11_effect_force_stat_magic_resistance_cst_infantry",
+          "wh_main_effect_character_stat_magic_resistance"
+        ]
+      },
+      "tableFiles": 1,
+      "matchedRows": 2,
+      "retainedRows": 2,
+      "selection": "All exact matches"
+    },
+    {
+      "table": "trait_level_effects_tables",
+      "where": {
+        "effect": [
+          "wh_dlc07_effect_force_stat_magic_resistance_battle_pilgrims",
+          "wh2_dlc09_effect_force_stat_magic_resistance_tmb_monster_rank7",
+          "wh2_dlc09_effect_force_stat_magic_resistance_tmb_monster",
+          "wh2_dlc11_effect_force_stat_magic_resistance_animated_hulks_mournguls",
+          "wh2_dlc11_effect_force_stat_magic_resistance_cairn_wraith_hex_wraith",
+          "wh2_dlc11_effect_force_stat_magic_resistance_cst_infantry",
+          "wh_main_effect_character_stat_magic_resistance"
+        ]
+      },
+      "tableFiles": 1,
+      "matchedRows": 8,
+      "retainedRows": 8,
+      "selection": "All exact matches"
+    },
+    {
+      "table": "effect_bundles_to_effects_junctions_tables",
+      "where": {
+        "effect_key": [
+          "wh_dlc07_effect_force_stat_magic_resistance_battle_pilgrims",
+          "wh2_dlc09_effect_force_stat_magic_resistance_tmb_monster_rank7",
+          "wh2_dlc09_effect_force_stat_magic_resistance_tmb_monster",
+          "wh2_dlc11_effect_force_stat_magic_resistance_animated_hulks_mournguls",
+          "wh2_dlc11_effect_force_stat_magic_resistance_cairn_wraith_hex_wraith",
+          "wh2_dlc11_effect_force_stat_magic_resistance_cst_infantry",
+          "wh_main_effect_character_stat_magic_resistance"
+        ]
+      },
+      "tableFiles": 1,
+      "matchedRows": 21,
+      "retainedRows": 21,
+      "selection": "All exact matches"
+    },
+    {
+      "table": "campaign_bonus_value_ids_unit_sets_tables",
+      "where": {
+        "key": [
+          "unit_damage_resistance_magic_mod"
+        ]
+      },
+      "tableFiles": 0,
+      "matchedRows": 0,
+      "retainedRows": 0,
+      "selection": "All exact matches"
+    },
+    {
+      "table": "ui_unit_stats_tables",
+      "where": {
+        "key": [
+          "stat_resistance_magic"
+        ]
+      },
+      "tableFiles": 1,
+      "matchedRows": 1,
+      "retainedRows": 1,
+      "selection": "All exact matches"
+    },
+    {
+      "table": "unit_stat_localisations_tables",
+      "where": {
+        "stat_key": [
+          "stat_resistance_magic"
+        ]
+      },
+      "tableFiles": 1,
+      "matchedRows": 1,
+      "retainedRows": 1,
+      "selection": "All exact matches"
+    },
+    {
+      "table": "modifiable_unit_stats_tables",
+      "where": {
+        "stat_key": [
+          "stat_resistance_magic"
+        ]
+      },
+      "tableFiles": 1,
+      "matchedRows": 1,
+      "retainedRows": 1,
+      "selection": "All exact matches"
+    },
+    {
+      "table": "special_ability_phase_stat_effects_tables",
+      "where": {
+        "stat": [
+          "stat_resistance_magic"
+        ]
+      },
+      "tableFiles": 1,
+      "matchedRows": 44,
+      "retainedRows": 1,
+      "selection": "One exact row per distinct how, chosen by sorted row ID; counterexamples only"
+    },
+    {
+      "table": "Loc",
+      "where": {
+        "key": [
+          "effects_description_wh_dlc07_effect_force_stat_magic_resistance_battle_pilgrims",
+          "effects_description_wh2_dlc09_effect_force_stat_magic_resistance_tmb_monster_rank7",
+          "effects_description_wh2_dlc09_effect_force_stat_magic_resistance_tmb_monster",
+          "effects_description_wh2_dlc11_effect_force_stat_magic_resistance_animated_hulks_mournguls",
+          "effects_description_wh2_dlc11_effect_force_stat_magic_resistance_cairn_wraith_hex_wraith",
+          "effects_description_wh2_dlc11_effect_force_stat_magic_resistance_cst_infantry",
+          "effects_description_wh_main_effect_character_stat_magic_resistance"
+        ]
+      },
+      "tableFiles": 1,
+      "matchedRows": 7,
+      "retainedRows": 7,
+      "selection": "All exact matches"
+    },
+    {
+      "table": "Loc",
+      "where": {
+        "key": [
+          "unit_stat_localisations_onscreen_name_stat_resistance_magic",
+          "unit_stat_localisations_tooltip_stat_resistance_magic"
+        ]
+      },
+      "tableFiles": 1,
+      "matchedRows": 1,
+      "retainedRows": 1,
+      "selection": "All exact matches"
+    }
+  ],
+  "reusedRowIds": [
+    "character_skill_level_to_effects_junctions_tables:4df13ea8b742a64189e6",
+    "effect_bonus_value_ids_unit_sets_tables:6a63e128f19095d46275",
+    "effects_tables:3cd9aa84acc876fe1e14",
+    "Loc:913c6d6a1e05e31e604d"
+  ],
+  "rows": [
+    {
+      "id": "character_skill_level_to_effects_junctions_tables:0cac48156f5d322ecb7f",
+      "table": "character_skill_level_to_effects_junctions_tables",
+      "key": {
+        "character_skill_key": "wh2_main_skill_skv_generic_magic_ward",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "level": 1
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/character_skill_level_to_effects_junctions_tables/data__",
+      "tableVersion": 1,
+      "row": {
+        "character_skill_key": "wh2_main_skill_skv_generic_magic_ward",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "effect_scope": "character_to_character_own",
+        "level": 1,
+        "value": 10
+      }
+    },
+    {
+      "id": "character_skill_level_to_effects_junctions_tables:0fa99d9558f21ad319ce",
+      "table": "character_skill_level_to_effects_junctions_tables",
+      "key": {
+        "character_skill_key": "wh3_dlc29_skill_skv_verminlord_corruptor_unique_5",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "level": 1
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/character_skill_level_to_effects_junctions_tables/data__",
+      "tableVersion": 1,
+      "row": {
+        "character_skill_key": "wh3_dlc29_skill_skv_verminlord_corruptor_unique_5",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "effect_scope": "character_to_character_own",
+        "level": 1,
+        "value": 10
+      }
+    },
+    {
+      "id": "character_skill_level_to_effects_junctions_tables:10dff2bc7b8aa4ba7b68",
+      "table": "character_skill_level_to_effects_junctions_tables",
+      "key": {
+        "character_skill_key": "wh2_dlc11_skill_cst_luthor_unique_2",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "level": 1
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/character_skill_level_to_effects_junctions_tables/data__",
+      "tableVersion": 1,
+      "row": {
+        "character_skill_key": "wh2_dlc11_skill_cst_luthor_unique_2",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "effect_scope": "character_to_character_own",
+        "level": 1,
+        "value": 15
+      }
+    },
+    {
+      "id": "character_skill_level_to_effects_junctions_tables:1140bbaa754b6f86db31",
+      "table": "character_skill_level_to_effects_junctions_tables",
+      "key": {
+        "character_skill_key": "wh2_dlc11_skill_vmp_bloodline_all_battle_evil_souls",
+        "effect_key": "wh2_dlc11_effect_force_stat_magic_resistance_cairn_wraith_hex_wraith",
+        "level": 1
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/character_skill_level_to_effects_junctions_tables/data__",
+      "tableVersion": 1,
+      "row": {
+        "character_skill_key": "wh2_dlc11_skill_vmp_bloodline_all_battle_evil_souls",
+        "effect_key": "wh2_dlc11_effect_force_stat_magic_resistance_cairn_wraith_hex_wraith",
+        "effect_scope": "general_to_force_own",
+        "level": 1,
+        "value": 5
+      }
+    },
+    {
+      "id": "character_skill_level_to_effects_junctions_tables:1ad7c069b20ff04d96dd",
+      "table": "character_skill_level_to_effects_junctions_tables",
+      "key": {
+        "character_skill_key": "wh2_dlc09_skill_tmb_khatep_arcane_knowledge",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "level": 1
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/character_skill_level_to_effects_junctions_tables/data__",
+      "tableVersion": 1,
+      "row": {
+        "character_skill_key": "wh2_dlc09_skill_tmb_khatep_arcane_knowledge",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "effect_scope": "character_to_character_own",
+        "level": 1,
+        "value": 15
+      }
+    },
+    {
+      "id": "character_skill_level_to_effects_junctions_tables:212b20dfcd4be694cd38",
+      "table": "character_skill_level_to_effects_junctions_tables",
+      "key": {
+        "character_skill_key": "wh3_dlc23_skill_chd_hashuts_scales",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "level": 1
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/character_skill_level_to_effects_junctions_tables/data__",
+      "tableVersion": 1,
+      "row": {
+        "character_skill_key": "wh3_dlc23_skill_chd_hashuts_scales",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "effect_scope": "character_to_character_own",
+        "level": 1,
+        "value": 10
+      }
+    },
+    {
+      "id": "character_skill_level_to_effects_junctions_tables:2431fc5efb23c6ea6e91",
+      "table": "character_skill_level_to_effects_junctions_tables",
+      "key": {
+        "character_skill_key": "wh3_main_skill_lzd_skink_priest_unique_3",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "level": 1
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/character_skill_level_to_effects_junctions_tables/data__",
+      "tableVersion": 1,
+      "row": {
+        "character_skill_key": "wh3_main_skill_lzd_skink_priest_unique_3",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "effect_scope": "character_to_character_own",
+        "level": 1,
+        "value": 10
+      }
+    },
+    {
+      "id": "character_skill_level_to_effects_junctions_tables:2a537864317b756f7260",
+      "table": "character_skill_level_to_effects_junctions_tables",
+      "key": {
+        "character_skill_key": "wh2_dlc09_skill_innate_tmb_proficient_caster",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "level": 1
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/character_skill_level_to_effects_junctions_tables/data__",
+      "tableVersion": 1,
+      "row": {
+        "character_skill_key": "wh2_dlc09_skill_innate_tmb_proficient_caster",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "effect_scope": "agent_to_parent_army_general_own",
+        "level": 1,
+        "value": 20
+      }
+    },
+    {
+      "id": "character_skill_level_to_effects_junctions_tables:2ccb9d7ccb670a1fe6ce",
+      "table": "character_skill_level_to_effects_junctions_tables",
+      "key": {
+        "character_skill_key": "wh_main_skill_chs_lord_unique_lord_of_change_daemon_of_tzeentch",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "level": 1
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/character_skill_level_to_effects_junctions_tables/data__",
+      "tableVersion": 1,
+      "row": {
+        "character_skill_key": "wh_main_skill_chs_lord_unique_lord_of_change_daemon_of_tzeentch",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "effect_scope": "character_to_character_own",
+        "level": 1,
+        "value": 15
+      }
+    },
+    {
+      "id": "character_skill_level_to_effects_junctions_tables:2e7a268ff905eb98689c",
+      "table": "character_skill_level_to_effects_junctions_tables",
+      "key": {
+        "character_skill_key": "wh2_main_skill_def_generic_ward_of_hekarti",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "level": 1
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/character_skill_level_to_effects_junctions_tables/data__",
+      "tableVersion": 1,
+      "row": {
+        "character_skill_key": "wh2_main_skill_def_generic_ward_of_hekarti",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "effect_scope": "character_to_character_own",
+        "level": 1,
+        "value": 10
+      }
+    },
+    {
+      "id": "character_skill_level_to_effects_junctions_tables:3c14b527af63f46eadfe",
+      "table": "character_skill_level_to_effects_junctions_tables",
+      "key": {
+        "character_skill_key": "wh2_dlc09_skill_innate_tmb_master_of_ceremony",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "level": 1
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/character_skill_level_to_effects_junctions_tables/data__",
+      "tableVersion": 1,
+      "row": {
+        "character_skill_key": "wh2_dlc09_skill_innate_tmb_master_of_ceremony",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "effect_scope": "character_to_character_own",
+        "level": 1,
+        "value": 35
+      }
+    },
+    {
+      "id": "character_skill_level_to_effects_junctions_tables:3f814a1b082c6ff47317",
+      "table": "character_skill_level_to_effects_junctions_tables",
+      "key": {
+        "character_skill_key": "wh3_dlc27_skill_innate_hef_mage_battle_7_protected_affinity",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "level": 1
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/character_skill_level_to_effects_junctions_tables/data__",
+      "tableVersion": 1,
+      "row": {
+        "character_skill_key": "wh3_dlc27_skill_innate_hef_mage_battle_7_protected_affinity",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "effect_scope": "character_to_character_own",
+        "level": 1,
+        "value": 20
+      }
+    },
+    {
+      "id": "character_skill_level_to_effects_junctions_tables:41d1d5f9c710029d7be6",
+      "table": "character_skill_level_to_effects_junctions_tables",
+      "key": {
+        "character_skill_key": "wh3_dlc24_skill_node_set_ksl_hag_witch_top_3",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "level": 1
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/character_skill_level_to_effects_junctions_tables/data__",
+      "tableVersion": 1,
+      "row": {
+        "character_skill_key": "wh3_dlc24_skill_node_set_ksl_hag_witch_top_3",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "effect_scope": "character_to_character_own",
+        "level": 1,
+        "value": 10
+      }
+    },
+    {
+      "id": "character_skill_level_to_effects_junctions_tables:46adc8f3195c3bc32c21",
+      "table": "character_skill_level_to_effects_junctions_tables",
+      "key": {
+        "character_skill_key": "wh_dlc03_skill_bst_bray_shaman_unique_uncanny_senses",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "level": 1
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/character_skill_level_to_effects_junctions_tables/data__",
+      "tableVersion": 1,
+      "row": {
+        "character_skill_key": "wh_dlc03_skill_bst_bray_shaman_unique_uncanny_senses",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "effect_scope": "character_to_character_own",
+        "level": 1,
+        "value": 15
+      }
+    },
+    {
+      "id": "character_skill_level_to_effects_junctions_tables:4bd10c3c31533fa9ce8a",
+      "table": "character_skill_level_to_effects_junctions_tables",
+      "key": {
+        "character_skill_key": "wh3_main_skill_ogr_generic_magic_ward",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "level": 1
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/character_skill_level_to_effects_junctions_tables/data__",
+      "tableVersion": 1,
+      "row": {
+        "character_skill_key": "wh3_main_skill_ogr_generic_magic_ward",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "effect_scope": "character_to_character_own",
+        "level": 1,
+        "value": 10
+      }
+    },
+    {
+      "id": "character_skill_level_to_effects_junctions_tables:4f3292ff187a8df14984",
+      "table": "character_skill_level_to_effects_junctions_tables",
+      "key": {
+        "character_skill_key": "wh_dlc08_skill_nor_fimir_balefiend_unique_eye_of_the_balefiend",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "level": 2
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/character_skill_level_to_effects_junctions_tables/data__",
+      "tableVersion": 1,
+      "row": {
+        "character_skill_key": "wh_dlc08_skill_nor_fimir_balefiend_unique_eye_of_the_balefiend",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "effect_scope": "character_to_character_own",
+        "level": 2,
+        "value": 25
+      }
+    },
+    {
+      "id": "character_skill_level_to_effects_junctions_tables:5fe6d12e6221330e77af",
+      "table": "character_skill_level_to_effects_junctions_tables",
+      "key": {
+        "character_skill_key": "wh_dlc08_skill_chs_kholek_unique_1",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "level": 1
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/character_skill_level_to_effects_junctions_tables/data__",
+      "tableVersion": 1,
+      "row": {
+        "character_skill_key": "wh_dlc08_skill_chs_kholek_unique_1",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "effect_scope": "character_to_character_own",
+        "level": 1,
+        "value": 15
+      }
+    },
+    {
+      "id": "character_skill_level_to_effects_junctions_tables:616f2a30b27b51fc6131",
+      "table": "character_skill_level_to_effects_junctions_tables",
+      "key": {
+        "character_skill_key": "wh2_dlc11_skill_vmp_bloodline_all_battle_evil_souls",
+        "effect_key": "wh2_dlc11_effect_force_stat_magic_resistance_cairn_wraith_hex_wraith",
+        "level": 2
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/character_skill_level_to_effects_junctions_tables/data__",
+      "tableVersion": 1,
+      "row": {
+        "character_skill_key": "wh2_dlc11_skill_vmp_bloodline_all_battle_evil_souls",
+        "effect_key": "wh2_dlc11_effect_force_stat_magic_resistance_cairn_wraith_hex_wraith",
+        "effect_scope": "general_to_force_own",
+        "level": 2,
+        "value": 10
+      }
+    },
+    {
+      "id": "character_skill_level_to_effects_junctions_tables:61f5bd63d5ed54145487",
+      "table": "character_skill_level_to_effects_junctions_tables",
+      "key": {
+        "character_skill_key": "wh3_dlc29_skill_nag_krell_unique_6",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "level": 1
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/character_skill_level_to_effects_junctions_tables/data__",
+      "tableVersion": 1,
+      "row": {
+        "character_skill_key": "wh3_dlc29_skill_nag_krell_unique_6",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "effect_scope": "character_to_character_own",
+        "level": 1,
+        "value": 20
+      }
+    },
+    {
+      "id": "character_skill_level_to_effects_junctions_tables:635a1874d239d52d09cb",
+      "table": "character_skill_level_to_effects_junctions_tables",
+      "key": {
+        "character_skill_key": "wh2_dlc09_skill_tmb_army_buff_vet_structure",
+        "effect_key": "wh2_dlc09_effect_force_stat_magic_resistance_tmb_monster_rank7",
+        "level": 1
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/character_skill_level_to_effects_junctions_tables/data__",
+      "tableVersion": 1,
+      "row": {
+        "character_skill_key": "wh2_dlc09_skill_tmb_army_buff_vet_structure",
+        "effect_key": "wh2_dlc09_effect_force_stat_magic_resistance_tmb_monster_rank7",
+        "effect_scope": "general_to_force_own",
+        "level": 1,
+        "value": 15
+      }
+    },
+    {
+      "id": "character_skill_level_to_effects_junctions_tables:6643bd8ceaec87102aae",
+      "table": "character_skill_level_to_effects_junctions_tables",
+      "key": {
+        "character_skill_key": "wh3_dlc27_skill_innate_hef_mist_mage_battle_7_protected",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "level": 1
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/character_skill_level_to_effects_junctions_tables/data__",
+      "tableVersion": 1,
+      "row": {
+        "character_skill_key": "wh3_dlc27_skill_innate_hef_mist_mage_battle_7_protected",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "effect_scope": "character_to_character_own",
+        "level": 1,
+        "value": 20
+      }
+    },
+    {
+      "id": "character_skill_level_to_effects_junctions_tables:6e0da3ec11648b87e8d6",
+      "table": "character_skill_level_to_effects_junctions_tables",
+      "key": {
+        "character_skill_key": "wh2_dlc09_skill_innate_tmb_dynasty_setep",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "level": 1
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/character_skill_level_to_effects_junctions_tables/data__",
+      "tableVersion": 1,
+      "row": {
+        "character_skill_key": "wh2_dlc09_skill_innate_tmb_dynasty_setep",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "effect_scope": "general_to_force_own",
+        "level": 1,
+        "value": 35
+      }
+    },
+    {
+      "id": "character_skill_level_to_effects_junctions_tables:70f006f0dafbdefc8d32",
+      "table": "character_skill_level_to_effects_junctions_tables",
+      "key": {
+        "character_skill_key": "wh3_dlc26_skill_ogr_slaughtermaster_personal_3",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "level": 1
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/character_skill_level_to_effects_junctions_tables/data__",
+      "tableVersion": 1,
+      "row": {
+        "character_skill_key": "wh3_dlc26_skill_ogr_slaughtermaster_personal_3",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "effect_scope": "character_to_character_own",
+        "level": 1,
+        "value": 20
+      }
+    },
+    {
+      "id": "character_skill_level_to_effects_junctions_tables:733ec8b657fa70ae50b6",
+      "table": "character_skill_level_to_effects_junctions_tables",
+      "key": {
+        "character_skill_key": "wh3_dlc27_skill_innate_hef_loremaster_battle_7_protected_affinity",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "level": 1
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/character_skill_level_to_effects_junctions_tables/data__",
+      "tableVersion": 1,
+      "row": {
+        "character_skill_key": "wh3_dlc27_skill_innate_hef_loremaster_battle_7_protected_affinity",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "effect_scope": "character_to_character_own",
+        "level": 1,
+        "value": 10
+      }
+    },
+    {
+      "id": "character_skill_level_to_effects_junctions_tables:77b804c03a7d8056ccc6",
+      "table": "character_skill_level_to_effects_junctions_tables",
+      "key": {
+        "character_skill_key": "wh_dlc08_skill_nor_fimir_balefiend_unique_eye_of_the_balefiend",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "level": 1
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/character_skill_level_to_effects_junctions_tables/data__",
+      "tableVersion": 1,
+      "row": {
+        "character_skill_key": "wh_dlc08_skill_nor_fimir_balefiend_unique_eye_of_the_balefiend",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "effect_scope": "character_to_character_own",
+        "level": 1,
+        "value": 15
+      }
+    },
+    {
+      "id": "character_skill_level_to_effects_junctions_tables:7d4763a3c6fb8f5a1faa",
+      "table": "character_skill_level_to_effects_junctions_tables",
+      "key": {
+        "character_skill_key": "wh3_dlc27_skill_innate_hef_archmage_battle_7_protected_affinity",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "level": 1
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/character_skill_level_to_effects_junctions_tables/data__",
+      "tableVersion": 1,
+      "row": {
+        "character_skill_key": "wh3_dlc27_skill_innate_hef_archmage_battle_7_protected_affinity",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "effect_scope": "character_to_character_own",
+        "level": 1,
+        "value": 20
+      }
+    },
+    {
+      "id": "character_skill_level_to_effects_junctions_tables:8184ad25e07d11db3abf",
+      "table": "character_skill_level_to_effects_junctions_tables",
+      "key": {
+        "character_skill_key": "wh2_main_skill_lzd_protection_of_the_old_ones",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "level": 1
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/character_skill_level_to_effects_junctions_tables/data__",
+      "tableVersion": 1,
+      "row": {
+        "character_skill_key": "wh2_main_skill_lzd_protection_of_the_old_ones",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "effect_scope": "character_to_character_own",
+        "level": 1,
+        "value": 10
+      }
+    },
+    {
+      "id": "character_skill_level_to_effects_junctions_tables:8531f69b38e3a4dc5ec8",
+      "table": "character_skill_level_to_effects_junctions_tables",
+      "key": {
+        "character_skill_key": "wh3_main_skill_innate_nurgle_4",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "level": 1
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/character_skill_level_to_effects_junctions_tables/data__",
+      "tableVersion": 1,
+      "row": {
+        "character_skill_key": "wh3_main_skill_innate_nurgle_4",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "effect_scope": "character_to_character_own",
+        "level": 1,
+        "value": 15
+      }
+    },
+    {
+      "id": "character_skill_level_to_effects_junctions_tables:90c410cb81c454073b89",
+      "table": "character_skill_level_to_effects_junctions_tables",
+      "key": {
+        "character_skill_key": "wh2_main_skill_def_morathi_1001_blessings",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "level": 2
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/character_skill_level_to_effects_junctions_tables/data__",
+      "tableVersion": 1,
+      "row": {
+        "character_skill_key": "wh2_main_skill_def_morathi_1001_blessings",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "effect_scope": "character_to_character_own",
+        "level": 2,
+        "value": 20
+      }
+    },
+    {
+      "id": "character_skill_level_to_effects_junctions_tables:989058c18c19ab820bef",
+      "table": "character_skill_level_to_effects_junctions_tables",
+      "key": {
+        "character_skill_key": "wh3_main_skill_cth_all_unique_magic_resist",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "level": 1
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/character_skill_level_to_effects_junctions_tables/data__",
+      "tableVersion": 1,
+      "row": {
+        "character_skill_key": "wh3_main_skill_cth_all_unique_magic_resist",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "effect_scope": "character_to_character_own",
+        "level": 1,
+        "value": 10
+      }
+    },
+    {
+      "id": "character_skill_level_to_effects_junctions_tables:9dac7a1e76b1de5e4030",
+      "table": "character_skill_level_to_effects_junctions_tables",
+      "key": {
+        "character_skill_key": "wh3_dlc24_skill_ksl_golden_knight_bodyguard_2",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "level": 1
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/character_skill_level_to_effects_junctions_tables/data__",
+      "tableVersion": 1,
+      "row": {
+        "character_skill_key": "wh3_dlc24_skill_ksl_golden_knight_bodyguard_2",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "effect_scope": "character_to_character_own",
+        "level": 1,
+        "value": 10
+      }
+    },
+    {
+      "id": "character_skill_level_to_effects_junctions_tables:9e097c97f6974129af19",
+      "table": "character_skill_level_to_effects_junctions_tables",
+      "key": {
+        "character_skill_key": "wh_dlc04_skill_emp_lord_unique_volkmar_the_grim_cooldown",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "level": 1
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/character_skill_level_to_effects_junctions_tables/data__",
+      "tableVersion": 1,
+      "row": {
+        "character_skill_key": "wh_dlc04_skill_emp_lord_unique_volkmar_the_grim_cooldown",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "effect_scope": "general_to_force_own",
+        "level": 1,
+        "value": 10
+      }
+    },
+    {
+      "id": "character_skill_level_to_effects_junctions_tables:9fcd1729e90f462e1f50",
+      "table": "character_skill_level_to_effects_junctions_tables",
+      "key": {
+        "character_skill_key": "wh3_main_skill_kho_all_unique_magic_resist",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "level": 1
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/character_skill_level_to_effects_junctions_tables/data__",
+      "tableVersion": 1,
+      "row": {
+        "character_skill_key": "wh3_main_skill_kho_all_unique_magic_resist",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "effect_scope": "character_to_character_own",
+        "level": 1,
+        "value": 10
+      }
+    },
+    {
+      "id": "character_skill_level_to_effects_junctions_tables:a4cec2350227e8dc0b33",
+      "table": "character_skill_level_to_effects_junctions_tables",
+      "key": {
+        "character_skill_key": "wh3_dlc27_skill_innate_hef_mist_mage_battle_7_protected_affinity",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "level": 1
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/character_skill_level_to_effects_junctions_tables/data__",
+      "tableVersion": 1,
+      "row": {
+        "character_skill_key": "wh3_dlc27_skill_innate_hef_mist_mage_battle_7_protected_affinity",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "effect_scope": "character_to_character_own",
+        "level": 1,
+        "value": 20
+      }
+    },
+    {
+      "id": "character_skill_level_to_effects_junctions_tables:b1a822f72f505a4b0c23",
+      "table": "character_skill_level_to_effects_junctions_tables",
+      "key": {
+        "character_skill_key": "wh3_dlc29_skill_vmp_necromancer_unique_4",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "level": 1
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/character_skill_level_to_effects_junctions_tables/data__",
+      "tableVersion": 1,
+      "row": {
+        "character_skill_key": "wh3_dlc29_skill_vmp_necromancer_unique_4",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "effect_scope": "character_to_character_own",
+        "level": 1,
+        "value": 20
+      }
+    },
+    {
+      "id": "character_skill_level_to_effects_junctions_tables:b4f7ff7967bb841b0cce",
+      "table": "character_skill_level_to_effects_junctions_tables",
+      "key": {
+        "character_skill_key": "wh2_dlc15_skill_innate_hef_archmage_battle_7_protected",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "level": 1
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/character_skill_level_to_effects_junctions_tables/data__",
+      "tableVersion": 1,
+      "row": {
+        "character_skill_key": "wh2_dlc15_skill_innate_hef_archmage_battle_7_protected",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "effect_scope": "character_to_character_own",
+        "level": 1,
+        "value": 20
+      }
+    },
+    {
+      "id": "character_skill_level_to_effects_junctions_tables:b66a6f36a3da7d773b71",
+      "table": "character_skill_level_to_effects_junctions_tables",
+      "key": {
+        "character_skill_key": "wh3_dlc20_skill_shared_chs_cha_chaos_sorcerer_resilient",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "level": 1
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/character_skill_level_to_effects_junctions_tables/data__",
+      "tableVersion": 1,
+      "row": {
+        "character_skill_key": "wh3_dlc20_skill_shared_chs_cha_chaos_sorcerer_resilient",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "effect_scope": "character_to_character_own",
+        "level": 1,
+        "value": 10
+      }
+    },
+    {
+      "id": "character_skill_level_to_effects_junctions_tables:b82f37b0152120d14531",
+      "table": "character_skill_level_to_effects_junctions_tables",
+      "key": {
+        "character_skill_key": "wh2_dlc12_skill_skv_ikit_personal_2",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "level": 1
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/character_skill_level_to_effects_junctions_tables/data__",
+      "tableVersion": 1,
+      "row": {
+        "character_skill_key": "wh2_dlc12_skill_skv_ikit_personal_2",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "effect_scope": "character_to_character_own",
+        "level": 1,
+        "value": 20
+      }
+    },
+    {
+      "id": "character_skill_level_to_effects_junctions_tables:b910edc1231b21602430",
+      "table": "character_skill_level_to_effects_junctions_tables",
+      "key": {
+        "character_skill_key": "wh2_main_skill_innate_hef_loremaster_battle_7_protected",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "level": 1
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/character_skill_level_to_effects_junctions_tables/data__",
+      "tableVersion": 1,
+      "row": {
+        "character_skill_key": "wh2_main_skill_innate_hef_loremaster_battle_7_protected",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "effect_scope": "character_to_character_own",
+        "level": 1,
+        "value": 10
+      }
+    },
+    {
+      "id": "character_skill_level_to_effects_junctions_tables:bc022205b18db9edb9a0",
+      "table": "character_skill_level_to_effects_junctions_tables",
+      "key": {
+        "character_skill_key": "wh2_dlc11_skill_vmp_bloodline_all_battle_evil_souls",
+        "effect_key": "wh2_dlc11_effect_force_stat_magic_resistance_cairn_wraith_hex_wraith",
+        "level": 3
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/character_skill_level_to_effects_junctions_tables/data__",
+      "tableVersion": 1,
+      "row": {
+        "character_skill_key": "wh2_dlc11_skill_vmp_bloodline_all_battle_evil_souls",
+        "effect_key": "wh2_dlc11_effect_force_stat_magic_resistance_cairn_wraith_hex_wraith",
+        "effect_scope": "general_to_force_own",
+        "level": 3,
+        "value": 15
+      }
+    },
+    {
+      "id": "character_skill_level_to_effects_junctions_tables:c544045fc9a49decfed9",
+      "table": "character_skill_level_to_effects_junctions_tables",
+      "key": {
+        "character_skill_key": "wh3_dlc29_skill_emp_battle_prayers_capstone",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "level": 1
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/character_skill_level_to_effects_junctions_tables/data__",
+      "tableVersion": 1,
+      "row": {
+        "character_skill_key": "wh3_dlc29_skill_emp_battle_prayers_capstone",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "effect_scope": "character_to_character_own",
+        "level": 1,
+        "value": 10
+      }
+    },
+    {
+      "id": "character_skill_level_to_effects_junctions_tables:ccaa5ebf9c708ea863ce",
+      "table": "character_skill_level_to_effects_junctions_tables",
+      "key": {
+        "character_skill_key": "wh3_dlc25_skill_emp_all_unique_mark_of_hysh",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "level": 1
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/character_skill_level_to_effects_junctions_tables/data__",
+      "tableVersion": 1,
+      "row": {
+        "character_skill_key": "wh3_dlc25_skill_emp_all_unique_mark_of_hysh",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "effect_scope": "character_to_character_own",
+        "level": 1,
+        "value": 10
+      }
+    },
+    {
+      "id": "character_skill_level_to_effects_junctions_tables:ce6b478204cd96ca01dc",
+      "table": "character_skill_level_to_effects_junctions_tables",
+      "key": {
+        "character_skill_key": "wh2_dlc13_skill_lzd_gor_rok_unique_1",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "level": 1
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/character_skill_level_to_effects_junctions_tables/data__",
+      "tableVersion": 1,
+      "row": {
+        "character_skill_key": "wh2_dlc13_skill_lzd_gor_rok_unique_1",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "effect_scope": "character_to_character_own",
+        "level": 1,
+        "value": 15
+      }
+    },
+    {
+      "id": "character_skill_level_to_effects_junctions_tables:cecd3c1ad567e8522164",
+      "table": "character_skill_level_to_effects_junctions_tables",
+      "key": {
+        "character_skill_key": "wh3_dlc29_skill_skv_verminlord_warpseer_unique_3",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "level": 1
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/character_skill_level_to_effects_junctions_tables/data__",
+      "tableVersion": 1,
+      "row": {
+        "character_skill_key": "wh3_dlc29_skill_skv_verminlord_warpseer_unique_3",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "effect_scope": "character_to_character_own",
+        "level": 1,
+        "value": 30
+      }
+    },
+    {
+      "id": "character_skill_level_to_effects_junctions_tables:d484fb34c047647dc63b",
+      "table": "character_skill_level_to_effects_junctions_tables",
+      "key": {
+        "character_skill_key": "wh3_dlc26_skill_ogr_unique_butcher_gore_soaked_ritualist",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "level": 1
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/character_skill_level_to_effects_junctions_tables/data__",
+      "tableVersion": 1,
+      "row": {
+        "character_skill_key": "wh3_dlc26_skill_ogr_unique_butcher_gore_soaked_ritualist",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "effect_scope": "character_to_character_own",
+        "level": 1,
+        "value": 10
+      }
+    },
+    {
+      "id": "character_skill_level_to_effects_junctions_tables:da2dded332787ceb4f44",
+      "table": "character_skill_level_to_effects_junctions_tables",
+      "key": {
+        "character_skill_key": "wh3_dlc23_skill_ksl_ulrika_unique_spell_resist",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "level": 1
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/character_skill_level_to_effects_junctions_tables/data__",
+      "tableVersion": 1,
+      "row": {
+        "character_skill_key": "wh3_dlc23_skill_ksl_ulrika_unique_spell_resist",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "effect_scope": "character_to_character_own",
+        "level": 1,
+        "value": 15
+      }
+    },
+    {
+      "id": "character_skill_level_to_effects_junctions_tables:df7123734aa2a285be96",
+      "table": "character_skill_level_to_effects_junctions_tables",
+      "key": {
+        "character_skill_key": "wh2_dlc09_skill_tmb_tomb_king_trapped_soul",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "level": 1
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/character_skill_level_to_effects_junctions_tables/data__",
+      "tableVersion": 1,
+      "row": {
+        "character_skill_key": "wh2_dlc09_skill_tmb_tomb_king_trapped_soul",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "effect_scope": "character_to_character_own",
+        "level": 1,
+        "value": 15
+      }
+    },
+    {
+      "id": "character_skill_level_to_effects_junctions_tables:e8c930585cb9923d9edb",
+      "table": "character_skill_level_to_effects_junctions_tables",
+      "key": {
+        "character_skill_key": "wh2_main_skill_def_morathi_1001_blessings",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "level": 1
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/character_skill_level_to_effects_junctions_tables/data__",
+      "tableVersion": 1,
+      "row": {
+        "character_skill_key": "wh2_main_skill_def_morathi_1001_blessings",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "effect_scope": "character_to_character_own",
+        "level": 1,
+        "value": 10
+      }
+    },
+    {
+      "id": "character_skill_level_to_effects_junctions_tables:f78f9d548da0b169cff0",
+      "table": "character_skill_level_to_effects_junctions_tables",
+      "key": {
+        "character_skill_key": "wh2_main_skill_hef_generic_warding_of_hoeth",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "level": 1
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/character_skill_level_to_effects_junctions_tables/data__",
+      "tableVersion": 1,
+      "row": {
+        "character_skill_key": "wh2_main_skill_hef_generic_warding_of_hoeth",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "effect_scope": "character_to_character_own",
+        "level": 1,
+        "value": 10
+      }
+    },
+    {
+      "id": "character_skill_level_to_effects_junctions_tables:fc63dfe66d7b96abe181",
+      "table": "character_skill_level_to_effects_junctions_tables",
+      "key": {
+        "character_skill_key": "wh2_dlc16_wef_ariel_battle_0",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "level": 1
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/character_skill_level_to_effects_junctions_tables/data__",
+      "tableVersion": 1,
+      "row": {
+        "character_skill_key": "wh2_dlc16_wef_ariel_battle_0",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "effect_scope": "character_to_character_own",
+        "level": 1,
+        "value": 25
+      }
+    },
+    {
+      "id": "character_skill_level_to_effects_junctions_tables:fc90ef55abab184a6d76",
+      "table": "character_skill_level_to_effects_junctions_tables",
+      "key": {
+        "character_skill_key": "wh3_main_skill_lzd_disciplines_soul_of_stone",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "level": 1
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/character_skill_level_to_effects_junctions_tables/data__",
+      "tableVersion": 1,
+      "row": {
+        "character_skill_key": "wh3_main_skill_lzd_disciplines_soul_of_stone",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "effect_scope": "character_to_character_own",
+        "level": 1,
+        "value": 20
+      }
+    },
+    {
+      "id": "character_skill_level_to_effects_junctions_tables:fdd84f3ec4ad79596ed5",
+      "table": "character_skill_level_to_effects_junctions_tables",
+      "key": {
+        "character_skill_key": "wh2_main_skill_innate_hef_mage_battle_7_protected",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "level": 1
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/character_skill_level_to_effects_junctions_tables/data__",
+      "tableVersion": 1,
+      "row": {
+        "character_skill_key": "wh2_main_skill_innate_hef_mage_battle_7_protected",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "effect_scope": "character_to_character_own",
+        "level": 1,
+        "value": 20
+      }
+    },
+    {
+      "id": "effect_bonus_value_ids_unit_sets_tables:268318519f3059e2c045",
+      "table": "effect_bonus_value_ids_unit_sets_tables",
+      "key": {
+        "bonus_value_id": "unit_damage_resistance_magic_mod",
+        "effect": "wh2_dlc11_effect_force_stat_magic_resistance_cst_infantry",
+        "unit_set": "wh2_dlc11_cst_infantry_melee"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/effect_bonus_value_ids_unit_sets_tables/data__",
+      "tableVersion": 0,
+      "row": {
+        "bonus_value_id": "unit_damage_resistance_magic_mod",
+        "effect": "wh2_dlc11_effect_force_stat_magic_resistance_cst_infantry",
+        "unit_set": "wh2_dlc11_cst_infantry_melee"
+      }
+    },
+    {
+      "id": "effect_bonus_value_ids_unit_sets_tables:653ea68db28a097d960b",
+      "table": "effect_bonus_value_ids_unit_sets_tables",
+      "key": {
+        "bonus_value_id": "unit_damage_resistance_magic_mod",
+        "effect": "wh2_dlc09_effect_force_stat_magic_resistance_tmb_monster",
+        "unit_set": "wh2_dlc09_tmb_vet_all_monster_ror"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/effect_bonus_value_ids_unit_sets_tables/data__",
+      "tableVersion": 0,
+      "row": {
+        "bonus_value_id": "unit_damage_resistance_magic_mod",
+        "effect": "wh2_dlc09_effect_force_stat_magic_resistance_tmb_monster",
+        "unit_set": "wh2_dlc09_tmb_vet_all_monster_ror"
+      }
+    },
+    {
+      "id": "effect_bonus_value_ids_unit_sets_tables:6b3f29ab2e87c4ac73c4",
+      "table": "effect_bonus_value_ids_unit_sets_tables",
+      "key": {
+        "bonus_value_id": "unit_damage_resistance_magic_mod",
+        "effect": "wh2_dlc09_effect_force_stat_magic_resistance_tmb_monster",
+        "unit_set": "wh2_dlc09_tmb_mon_ushabti_ror"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/effect_bonus_value_ids_unit_sets_tables/data__",
+      "tableVersion": 0,
+      "row": {
+        "bonus_value_id": "unit_damage_resistance_magic_mod",
+        "effect": "wh2_dlc09_effect_force_stat_magic_resistance_tmb_monster",
+        "unit_set": "wh2_dlc09_tmb_mon_ushabti_ror"
+      }
+    },
+    {
+      "id": "effect_bonus_value_ids_unit_sets_tables:7f9deba5be508fb4e704",
+      "table": "effect_bonus_value_ids_unit_sets_tables",
+      "key": {
+        "bonus_value_id": "unit_damage_resistance_magic_mod",
+        "effect": "wh_main_effect_character_stat_magic_resistance",
+        "unit_set": "all_units"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/effect_bonus_value_ids_unit_sets_tables/data__",
+      "tableVersion": 0,
+      "row": {
+        "bonus_value_id": "unit_damage_resistance_magic_mod",
+        "effect": "wh_main_effect_character_stat_magic_resistance",
+        "unit_set": "all_units"
+      }
+    },
+    {
+      "id": "effect_bonus_value_ids_unit_sets_tables:9684b250c56db7df1c7f",
+      "table": "effect_bonus_value_ids_unit_sets_tables",
+      "key": {
+        "bonus_value_id": "unit_damage_resistance_magic_mod",
+        "effect": "wh2_dlc11_effect_force_stat_magic_resistance_animated_hulks_mournguls",
+        "unit_set": "wh2_dlc11_cst_animated_hulk_mournguls"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/effect_bonus_value_ids_unit_sets_tables/data__",
+      "tableVersion": 0,
+      "row": {
+        "bonus_value_id": "unit_damage_resistance_magic_mod",
+        "effect": "wh2_dlc11_effect_force_stat_magic_resistance_animated_hulks_mournguls",
+        "unit_set": "wh2_dlc11_cst_animated_hulk_mournguls"
+      }
+    },
+    {
+      "id": "effect_bonus_value_ids_unit_sets_tables:a196c672a5ed72769e57",
+      "table": "effect_bonus_value_ids_unit_sets_tables",
+      "key": {
+        "bonus_value_id": "unit_damage_resistance_magic_mod",
+        "effect": "wh2_dlc11_effect_force_stat_magic_resistance_animated_hulks_mournguls",
+        "unit_set": "wh2_dlc11_cst_mon_bloated_corpse_0"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/effect_bonus_value_ids_unit_sets_tables/data__",
+      "tableVersion": 0,
+      "row": {
+        "bonus_value_id": "unit_damage_resistance_magic_mod",
+        "effect": "wh2_dlc11_effect_force_stat_magic_resistance_animated_hulks_mournguls",
+        "unit_set": "wh2_dlc11_cst_mon_bloated_corpse_0"
+      }
+    },
+    {
+      "id": "effect_bonus_value_ids_unit_sets_tables:a54e51e76e12936258c3",
+      "table": "effect_bonus_value_ids_unit_sets_tables",
+      "key": {
+        "bonus_value_id": "unit_damage_resistance_magic_mod",
+        "effect": "wh2_dlc09_effect_force_stat_magic_resistance_tmb_monster_rank7",
+        "unit_set": "wh2_dlc09_tmb_all_monster_rank7_ror"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/effect_bonus_value_ids_unit_sets_tables/data__",
+      "tableVersion": 0,
+      "row": {
+        "bonus_value_id": "unit_damage_resistance_magic_mod",
+        "effect": "wh2_dlc09_effect_force_stat_magic_resistance_tmb_monster_rank7",
+        "unit_set": "wh2_dlc09_tmb_all_monster_rank7_ror"
+      }
+    },
+    {
+      "id": "effect_bonus_value_ids_unit_sets_tables:b1846c05b8e6120a3c30",
+      "table": "effect_bonus_value_ids_unit_sets_tables",
+      "key": {
+        "bonus_value_id": "unit_damage_resistance_magic_mod",
+        "effect": "wh2_dlc09_effect_force_stat_magic_resistance_tmb_monster",
+        "unit_set": "wh2_dlc09_tmb_all_monster"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/effect_bonus_value_ids_unit_sets_tables/data__",
+      "tableVersion": 0,
+      "row": {
+        "bonus_value_id": "unit_damage_resistance_magic_mod",
+        "effect": "wh2_dlc09_effect_force_stat_magic_resistance_tmb_monster",
+        "unit_set": "wh2_dlc09_tmb_all_monster"
+      }
+    },
+    {
+      "id": "effect_bonus_value_ids_unit_sets_tables:cfb68d8156301ece6fff",
+      "table": "effect_bonus_value_ids_unit_sets_tables",
+      "key": {
+        "bonus_value_id": "unit_damage_resistance_magic_mod",
+        "effect": "wh2_dlc09_effect_force_stat_magic_resistance_tmb_monster_rank7",
+        "unit_set": "wh2_dlc09_tmb_all_monster_rank7"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/effect_bonus_value_ids_unit_sets_tables/data__",
+      "tableVersion": 0,
+      "row": {
+        "bonus_value_id": "unit_damage_resistance_magic_mod",
+        "effect": "wh2_dlc09_effect_force_stat_magic_resistance_tmb_monster_rank7",
+        "unit_set": "wh2_dlc09_tmb_all_monster_rank7"
+      }
+    },
+    {
+      "id": "effect_bonus_value_ids_unit_sets_tables:dce2ad1b37f2b24e9134",
+      "table": "effect_bonus_value_ids_unit_sets_tables",
+      "key": {
+        "bonus_value_id": "unit_damage_resistance_magic_mod",
+        "effect": "wh2_dlc11_effect_force_stat_magic_resistance_cairn_wraith_hex_wraith",
+        "unit_set": "wh3_dlc29_vmp_cairn_wraith_hex_wraith_mourngul_spirit_host"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/effect_bonus_value_ids_unit_sets_tables/data__",
+      "tableVersion": 0,
+      "row": {
+        "bonus_value_id": "unit_damage_resistance_magic_mod",
+        "effect": "wh2_dlc11_effect_force_stat_magic_resistance_cairn_wraith_hex_wraith",
+        "unit_set": "wh3_dlc29_vmp_cairn_wraith_hex_wraith_mourngul_spirit_host"
+      }
+    },
+    {
+      "id": "effect_bonus_value_ids_unit_sets_tables:de7a5d470c76916915c4",
+      "table": "effect_bonus_value_ids_unit_sets_tables",
+      "key": {
+        "bonus_value_id": "unit_damage_resistance_magic_mod",
+        "effect": "wh2_dlc09_effect_force_stat_magic_resistance_tmb_monster",
+        "unit_set": "wh2_dlc09_tmb_mon_necrosphinx_ror"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/effect_bonus_value_ids_unit_sets_tables/data__",
+      "tableVersion": 0,
+      "row": {
+        "bonus_value_id": "unit_damage_resistance_magic_mod",
+        "effect": "wh2_dlc09_effect_force_stat_magic_resistance_tmb_monster",
+        "unit_set": "wh2_dlc09_tmb_mon_necrosphinx_ror"
+      }
+    },
+    {
+      "id": "effect_bonus_value_ids_unit_sets_tables:e577058e17d80eb18851",
+      "table": "effect_bonus_value_ids_unit_sets_tables",
+      "key": {
+        "bonus_value_id": "unit_damage_resistance_magic_mod",
+        "effect": "wh2_dlc11_effect_force_stat_magic_resistance_cst_infantry",
+        "unit_set": "wh2_dlc11_cst_infantry_ranged"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/effect_bonus_value_ids_unit_sets_tables/data__",
+      "tableVersion": 0,
+      "row": {
+        "bonus_value_id": "unit_damage_resistance_magic_mod",
+        "effect": "wh2_dlc11_effect_force_stat_magic_resistance_cst_infantry",
+        "unit_set": "wh2_dlc11_cst_infantry_ranged"
+      }
+    },
+    {
+      "id": "effect_bundles_to_effects_junctions_tables:1de0ce2c36e4a32130f6",
+      "table": "effect_bundles_to_effects_junctions_tables",
+      "key": {
+        "effect_bundle_key": "wh3_dlc29_skv_chaotic_plans_enable_chieftain_abilities_3",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/effect_bundles_to_effects_junctions_tables/data__",
+      "tableVersion": 3,
+      "row": {
+        "effect_bundle_key": "wh3_dlc29_skv_chaotic_plans_enable_chieftain_abilities_3",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "effect_scope": "character_to_character_own",
+        "value": 10,
+        "advancement_stage": "start_turn_completed"
+      }
+    },
+    {
+      "id": "effect_bundles_to_effects_junctions_tables:24d2d00463e6b4331497",
+      "table": "effect_bundles_to_effects_junctions_tables",
+      "key": {
+        "effect_bundle_key": "wh3_dlc26_golgfag_contract_anc_banner_runes_of_protection",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/effect_bundles_to_effects_junctions_tables/data__",
+      "tableVersion": 3,
+      "row": {
+        "effect_bundle_key": "wh3_dlc26_golgfag_contract_anc_banner_runes_of_protection",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "effect_scope": "character_to_character_own_banner_maneater",
+        "value": 35,
+        "advancement_stage": "start_turn_completed"
+      }
+    },
+    {
+      "id": "effect_bundles_to_effects_junctions_tables:2be36595dc6339c06cea",
+      "table": "effect_bundles_to_effects_junctions_tables",
+      "key": {
+        "effect_bundle_key": "wh_main_bundle_anc_rune_master_rune_of_valaya",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/effect_bundles_to_effects_junctions_tables/data__",
+      "tableVersion": 3,
+      "row": {
+        "effect_bundle_key": "wh_main_bundle_anc_rune_master_rune_of_valaya",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "effect_scope": "character_to_character_own_banner_not_character",
+        "value": 50,
+        "advancement_stage": "start_turn_completed"
+      }
+    },
+    {
+      "id": "effect_bundles_to_effects_junctions_tables:2d074ae8613a4e8bf11c",
+      "table": "effect_bundles_to_effects_junctions_tables",
+      "key": {
+        "effect_bundle_key": "wh3_dlc29_skv_chaotic_plans_enable_plague_priest_spells_3",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/effect_bundles_to_effects_junctions_tables/data__",
+      "tableVersion": 3,
+      "row": {
+        "effect_bundle_key": "wh3_dlc29_skv_chaotic_plans_enable_plague_priest_spells_3",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "effect_scope": "character_to_character_own",
+        "value": 10,
+        "advancement_stage": "start_turn_completed"
+      }
+    },
+    {
+      "id": "effect_bundles_to_effects_junctions_tables:3131ba4c8db388c796c7",
+      "table": "effect_bundles_to_effects_junctions_tables",
+      "key": {
+        "effect_bundle_key": "wh2_dlc11_payload_incident_strength_from_shyish",
+        "effect_key": "wh2_dlc11_effect_force_stat_magic_resistance_cst_infantry"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/effect_bundles_to_effects_junctions_tables/data__",
+      "tableVersion": 3,
+      "row": {
+        "effect_bundle_key": "wh2_dlc11_payload_incident_strength_from_shyish",
+        "effect_key": "wh2_dlc11_effect_force_stat_magic_resistance_cst_infantry",
+        "effect_scope": "faction_to_force_own",
+        "value": 15,
+        "advancement_stage": "start_turn_completed"
+      }
+    },
+    {
+      "id": "effect_bundles_to_effects_junctions_tables:36a6f51a47476fd468c6",
+      "table": "effect_bundles_to_effects_junctions_tables",
+      "key": {
+        "effect_bundle_key": "wh3_dlc29_skv_chaotic_plans_enable_packmaster_abilities_3",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/effect_bundles_to_effects_junctions_tables/data__",
+      "tableVersion": 3,
+      "row": {
+        "effect_bundle_key": "wh3_dlc29_skv_chaotic_plans_enable_packmaster_abilities_3",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "effect_scope": "character_to_character_own",
+        "value": 10,
+        "advancement_stage": "start_turn_completed"
+      }
+    },
+    {
+      "id": "effect_bundles_to_effects_junctions_tables:36dcb18bb8f0136ccd33",
+      "table": "effect_bundles_to_effects_junctions_tables",
+      "key": {
+        "effect_bundle_key": "wh_main_bundle_anc_magic_standard_lichbone_pennant",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/effect_bundles_to_effects_junctions_tables/data__",
+      "tableVersion": 3,
+      "row": {
+        "effect_bundle_key": "wh_main_bundle_anc_magic_standard_lichbone_pennant",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "effect_scope": "character_to_character_own_banner",
+        "value": 25,
+        "advancement_stage": "start_turn_completed"
+      }
+    },
+    {
+      "id": "effect_bundles_to_effects_junctions_tables:4c4506a602f9c54cd302",
+      "table": "effect_bundles_to_effects_junctions_tables",
+      "key": {
+        "effect_bundle_key": "wh3_dlc29_skv_chaotic_plans_enable_eshin_sorceror_spells_3",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/effect_bundles_to_effects_junctions_tables/data__",
+      "tableVersion": 3,
+      "row": {
+        "effect_bundle_key": "wh3_dlc29_skv_chaotic_plans_enable_eshin_sorceror_spells_3",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "effect_scope": "character_to_character_own",
+        "value": 10,
+        "advancement_stage": "start_turn_completed"
+      }
+    },
+    {
+      "id": "effect_bundles_to_effects_junctions_tables:5c012a05812e681d4b70",
+      "table": "effect_bundles_to_effects_junctions_tables",
+      "key": {
+        "effect_bundle_key": "wh3_dlc29_skv_chaotic_plans_enable_warlock_engineer_spells_3",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/effect_bundles_to_effects_junctions_tables/data__",
+      "tableVersion": 3,
+      "row": {
+        "effect_bundle_key": "wh3_dlc29_skv_chaotic_plans_enable_warlock_engineer_spells_3",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "effect_scope": "character_to_character_own",
+        "value": 10,
+        "advancement_stage": "start_turn_completed"
+      }
+    },
+    {
+      "id": "effect_bundles_to_effects_junctions_tables:6904a59f4a8de28c21ce",
+      "table": "effect_bundles_to_effects_junctions_tables",
+      "key": {
+        "effect_bundle_key": "wh_main_bundle_anc_rune_master_rune_of_sanctuary",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/effect_bundles_to_effects_junctions_tables/data__",
+      "tableVersion": 3,
+      "row": {
+        "effect_bundle_key": "wh_main_bundle_anc_rune_master_rune_of_sanctuary",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "effect_scope": "character_to_character_own_banner_not_character",
+        "value": 30,
+        "advancement_stage": "start_turn_completed"
+      }
+    },
+    {
+      "id": "effect_bundles_to_effects_junctions_tables:694a0631499fb64f1c21",
+      "table": "effect_bundles_to_effects_junctions_tables",
+      "key": {
+        "effect_bundle_key": "wh3_dlc29_skv_chaotic_plans_enable_plague_priest_spells_2",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/effect_bundles_to_effects_junctions_tables/data__",
+      "tableVersion": 3,
+      "row": {
+        "effect_bundle_key": "wh3_dlc29_skv_chaotic_plans_enable_plague_priest_spells_2",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "effect_scope": "character_to_character_own",
+        "value": 10,
+        "advancement_stage": "start_turn_completed"
+      }
+    },
+    {
+      "id": "effect_bundles_to_effects_junctions_tables:6d4f513e050eaaa90e3e",
+      "table": "effect_bundles_to_effects_junctions_tables",
+      "key": {
+        "effect_bundle_key": "wh3_dlc29_skv_chaotic_plans_enable_assassin_abilities_3",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/effect_bundles_to_effects_junctions_tables/data__",
+      "tableVersion": 3,
+      "row": {
+        "effect_bundle_key": "wh3_dlc29_skv_chaotic_plans_enable_assassin_abilities_3",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "effect_scope": "character_to_character_own",
+        "value": 10,
+        "advancement_stage": "start_turn_completed"
+      }
+    },
+    {
+      "id": "effect_bundles_to_effects_junctions_tables:6d812ad1d25a63b3ffbe",
+      "table": "effect_bundles_to_effects_junctions_tables",
+      "key": {
+        "effect_bundle_key": "wh_main_bundle_anc_magic_standard_morks_war_banner",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/effect_bundles_to_effects_junctions_tables/data__",
+      "tableVersion": 3,
+      "row": {
+        "effect_bundle_key": "wh_main_bundle_anc_magic_standard_morks_war_banner",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "effect_scope": "character_to_character_own_banner",
+        "value": 35,
+        "advancement_stage": "start_turn_completed"
+      }
+    },
+    {
+      "id": "effect_bundles_to_effects_junctions_tables:7b2e24c21c65d2bc77cb",
+      "table": "effect_bundles_to_effects_junctions_tables",
+      "key": {
+        "effect_bundle_key": "wh3_dlc29_skv_chaotic_plans_enable_warlock_engineer_spells_2",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/effect_bundles_to_effects_junctions_tables/data__",
+      "tableVersion": 3,
+      "row": {
+        "effect_bundle_key": "wh3_dlc29_skv_chaotic_plans_enable_warlock_engineer_spells_2",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "effect_scope": "character_to_character_own",
+        "value": 10,
+        "advancement_stage": "start_turn_completed"
+      }
+    },
+    {
+      "id": "effect_bundles_to_effects_junctions_tables:ac7a34ff725ebf0c28a7",
+      "table": "effect_bundles_to_effects_junctions_tables",
+      "key": {
+        "effect_bundle_key": "wh2_dlc16_throt_flesh_lab_inf_aug_1",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/effect_bundles_to_effects_junctions_tables/data__",
+      "tableVersion": 3,
+      "row": {
+        "effect_bundle_key": "wh2_dlc16_throt_flesh_lab_inf_aug_1",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "effect_scope": "character_to_character_own",
+        "value": 15,
+        "advancement_stage": "start_turn_completed"
+      }
+    },
+    {
+      "id": "effect_bundles_to_effects_junctions_tables:c05098c5d95ba1510034",
+      "table": "effect_bundles_to_effects_junctions_tables",
+      "key": {
+        "effect_bundle_key": "wh3_dlc29_skv_chaotic_plans_enable_assassin_abilities_2",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/effect_bundles_to_effects_junctions_tables/data__",
+      "tableVersion": 3,
+      "row": {
+        "effect_bundle_key": "wh3_dlc29_skv_chaotic_plans_enable_assassin_abilities_2",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "effect_scope": "character_to_character_own",
+        "value": 10,
+        "advancement_stage": "start_turn_completed"
+      }
+    },
+    {
+      "id": "effect_bundles_to_effects_junctions_tables:cb294a2d0d926953a704",
+      "table": "effect_bundles_to_effects_junctions_tables",
+      "key": {
+        "effect_bundle_key": "wh3_dlc29_skv_chaotic_plans_enable_chieftain_abilities_2",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/effect_bundles_to_effects_junctions_tables/data__",
+      "tableVersion": 3,
+      "row": {
+        "effect_bundle_key": "wh3_dlc29_skv_chaotic_plans_enable_chieftain_abilities_2",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "effect_scope": "character_to_character_own",
+        "value": 10,
+        "advancement_stage": "start_turn_completed"
+      }
+    },
+    {
+      "id": "effect_bundles_to_effects_junctions_tables:d0a83fe5451fa185a71a",
+      "table": "effect_bundles_to_effects_junctions_tables",
+      "key": {
+        "effect_bundle_key": "wh3_dlc29_skv_chaotic_plans_enable_eshin_sorceror_spells_2",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/effect_bundles_to_effects_junctions_tables/data__",
+      "tableVersion": 3,
+      "row": {
+        "effect_bundle_key": "wh3_dlc29_skv_chaotic_plans_enable_eshin_sorceror_spells_2",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "effect_scope": "character_to_character_own",
+        "value": 10,
+        "advancement_stage": "start_turn_completed"
+      }
+    },
+    {
+      "id": "effect_bundles_to_effects_junctions_tables:dfb8f7383f3653f28ae3",
+      "table": "effect_bundles_to_effects_junctions_tables",
+      "key": {
+        "effect_bundle_key": "wh_dlc05_bundle_anc_magic_standard_the_banner_of_the_eternal_queen",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/effect_bundles_to_effects_junctions_tables/data__",
+      "tableVersion": 3,
+      "row": {
+        "effect_bundle_key": "wh_dlc05_bundle_anc_magic_standard_the_banner_of_the_eternal_queen",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "effect_scope": "character_to_character_own_banner",
+        "value": 25,
+        "advancement_stage": "start_turn_completed"
+      }
+    },
+    {
+      "id": "effect_bundles_to_effects_junctions_tables:f26893bc7f65273faa7f",
+      "table": "effect_bundles_to_effects_junctions_tables",
+      "key": {
+        "effect_bundle_key": "wh2_main_bundle_anc_magic_standard_banner_of_the_world_dragon",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/effect_bundles_to_effects_junctions_tables/data__",
+      "tableVersion": 3,
+      "row": {
+        "effect_bundle_key": "wh2_main_bundle_anc_magic_standard_banner_of_the_world_dragon",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "effect_scope": "character_to_character_own_banner",
+        "value": 25,
+        "advancement_stage": "start_turn_completed"
+      }
+    },
+    {
+      "id": "effect_bundles_to_effects_junctions_tables:f284f5b1c5b65c1121b5",
+      "table": "effect_bundles_to_effects_junctions_tables",
+      "key": {
+        "effect_bundle_key": "wh3_dlc29_skv_chaotic_plans_enable_packmaster_abilities_2",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/effect_bundles_to_effects_junctions_tables/data__",
+      "tableVersion": 3,
+      "row": {
+        "effect_bundle_key": "wh3_dlc29_skv_chaotic_plans_enable_packmaster_abilities_2",
+        "effect_key": "wh_main_effect_character_stat_magic_resistance",
+        "effect_scope": "character_to_character_own",
+        "value": 10,
+        "advancement_stage": "start_turn_completed"
+      }
+    },
+    {
+      "id": "effects_tables:18ed5fa048e4225e9ab9",
+      "table": "effects_tables",
+      "key": {
+        "effect": "wh2_dlc09_effect_force_stat_magic_resistance_tmb_monster"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/effects_tables/data__",
+      "tableVersion": 0,
+      "row": {
+        "effect": "wh2_dlc09_effect_force_stat_magic_resistance_tmb_monster",
+        "icon": "resistance_magic.png",
+        "priority": 582,
+        "icon_negative": "resistance_magic.png",
+        "category": "battle",
+        "is_positive_value_good": true
+      }
+    },
+    {
+      "id": "effects_tables:678ff88f565a1020a6db",
+      "table": "effects_tables",
+      "key": {
+        "effect": "wh2_dlc09_effect_force_stat_magic_resistance_tmb_monster_rank7"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/effects_tables/data__",
+      "tableVersion": 0,
+      "row": {
+        "effect": "wh2_dlc09_effect_force_stat_magic_resistance_tmb_monster_rank7",
+        "icon": "resistance_magic.png",
+        "priority": 582,
+        "icon_negative": "resistance_magic.png",
+        "category": "battle",
+        "is_positive_value_good": true
+      }
+    },
+    {
+      "id": "effects_tables:78bdca9349790d1eced5",
+      "table": "effects_tables",
+      "key": {
+        "effect": "wh2_dlc11_effect_force_stat_magic_resistance_cairn_wraith_hex_wraith"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/effects_tables/data__",
+      "tableVersion": 0,
+      "row": {
+        "effect": "wh2_dlc11_effect_force_stat_magic_resistance_cairn_wraith_hex_wraith",
+        "icon": "resistance_magic.png",
+        "priority": 581,
+        "icon_negative": "resistance_magic.png",
+        "category": "battle",
+        "is_positive_value_good": true
+      }
+    },
+    {
+      "id": "effects_tables:9ef1a421912e92b2cf74",
+      "table": "effects_tables",
+      "key": {
+        "effect": "wh2_dlc11_effect_force_stat_magic_resistance_cst_infantry"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/effects_tables/data__",
+      "tableVersion": 0,
+      "row": {
+        "effect": "wh2_dlc11_effect_force_stat_magic_resistance_cst_infantry",
+        "icon": "resistance_magic.png",
+        "priority": 581,
+        "icon_negative": "resistance_magic.png",
+        "category": "battle",
+        "is_positive_value_good": true
+      }
+    },
+    {
+      "id": "effects_tables:ca7ba627c7e9076f3d12",
+      "table": "effects_tables",
+      "key": {
+        "effect": "wh2_dlc11_effect_force_stat_magic_resistance_animated_hulks_mournguls"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/effects_tables/data__",
+      "tableVersion": 0,
+      "row": {
+        "effect": "wh2_dlc11_effect_force_stat_magic_resistance_animated_hulks_mournguls",
+        "icon": "resistance_magic.png",
+        "priority": 581,
+        "icon_negative": "resistance_magic.png",
+        "category": "battle",
+        "is_positive_value_good": true
+      }
+    },
+    {
+      "id": "effects_tables:f824d11384a2012dc281",
+      "table": "effects_tables",
+      "key": {
+        "effect": "wh_main_effect_character_stat_magic_resistance"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/effects_tables/data__",
+      "tableVersion": 0,
+      "row": {
+        "effect": "wh_main_effect_character_stat_magic_resistance",
+        "icon": "resistance_magic.png",
+        "priority": 280,
+        "icon_negative": "resistance_magic.png",
+        "category": "both",
+        "is_positive_value_good": true
+      }
+    },
+    {
+      "id": "Loc:2096ac6afbaa7d764e91",
+      "table": "Loc",
+      "key": {
+        "key": "effects_description_wh2_dlc11_effect_force_stat_magic_resistance_cst_infantry"
+      },
+      "sourcePack": "local_en.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/local_en.pack",
+      "path": "text/db/effects__.loc",
+      "tableVersion": 1,
+      "row": {
+        "key": "effects_description_wh2_dlc11_effect_force_stat_magic_resistance_cst_infantry",
+        "text": "Spell resistance: %n% for Infantry units",
+        "tooltip": false
+      }
+    },
+    {
+      "id": "Loc:34d3ed2ca4f8b00d7c24",
+      "table": "Loc",
+      "key": {
+        "key": "effects_description_wh2_dlc09_effect_force_stat_magic_resistance_tmb_monster_rank7"
+      },
+      "sourcePack": "local_en.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/local_en.pack",
+      "path": "text/db/effects__.loc",
+      "tableVersion": 1,
+      "row": {
+        "key": "effects_description_wh2_dlc09_effect_force_stat_magic_resistance_tmb_monster_rank7",
+        "text": "Spell resistance: %n% for Ushabti, Khemric Titan, Tomb Scorpion, Hierotitan, Necrosphinx and Khemrian Warsphinx units {{tr:rank7}}",
+        "tooltip": false
+      }
+    },
+    {
+      "id": "Loc:5badbe6922865380d12b",
+      "table": "Loc",
+      "key": {
+        "key": "effects_description_wh2_dlc11_effect_force_stat_magic_resistance_cairn_wraith_hex_wraith"
+      },
+      "sourcePack": "local_en.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/local_en.pack",
+      "path": "text/db/effects__.loc",
+      "tableVersion": 1,
+      "row": {
+        "key": "effects_description_wh2_dlc11_effect_force_stat_magic_resistance_cairn_wraith_hex_wraith",
+        "text": "Spell resistance: %n% for Spirit Host, Cairn Wraiths, Mournguls and Hexwraiths units",
+        "tooltip": false
+      }
+    },
+    {
+      "id": "Loc:5bfe1a5b4992d0f9ef9b",
+      "table": "Loc",
+      "key": {
+        "key": "effects_description_wh2_dlc09_effect_force_stat_magic_resistance_tmb_monster"
+      },
+      "sourcePack": "local_en.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/local_en.pack",
+      "path": "text/db/effects__.loc",
+      "tableVersion": 1,
+      "row": {
+        "key": "effects_description_wh2_dlc09_effect_force_stat_magic_resistance_tmb_monster",
+        "text": "Spell resistance: %n% for Ushabti, Tomb Scorpion, Hierotitan, Necrosphinx and Khemrian Warsphinx units",
+        "tooltip": false
+      }
+    },
+    {
+      "id": "Loc:977eb9c96cbf9258e42d",
+      "table": "Loc",
+      "key": {
+        "key": "unit_stat_localisations_onscreen_name_stat_resistance_magic"
+      },
+      "sourcePack": "local_en.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/local_en.pack",
+      "path": "text/db/unit_stat_localisations__.loc",
+      "tableVersion": 1,
+      "row": {
+        "key": "unit_stat_localisations_onscreen_name_stat_resistance_magic",
+        "text": "[[img:ui/Battle UI/ability_icons/resistance_magic.png]][[/img]] Spell Resistance",
+        "tooltip": false
+      }
+    },
+    {
+      "id": "Loc:991c3a0827d7debf5ae5",
+      "table": "Loc",
+      "key": {
+        "key": "effects_description_wh2_dlc11_effect_force_stat_magic_resistance_animated_hulks_mournguls"
+      },
+      "sourcePack": "local_en.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/local_en.pack",
+      "path": "text/db/effects__.loc",
+      "tableVersion": 1,
+      "row": {
+        "key": "effects_description_wh2_dlc11_effect_force_stat_magic_resistance_animated_hulks_mournguls",
+        "text": "Spell resistance: %n% for Animated Hulks, Bloated Corpse, and Mourngul units",
+        "tooltip": false
+      }
+    },
+    {
+      "id": "Loc:b2e12aa69ba76b9d438d",
+      "table": "Loc",
+      "key": {
+        "key": "effects_description_wh_main_effect_character_stat_magic_resistance"
+      },
+      "sourcePack": "local_en.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/local_en.pack",
+      "path": "text/db/effects__.loc",
+      "tableVersion": 1,
+      "row": {
+        "key": "effects_description_wh_main_effect_character_stat_magic_resistance",
+        "text": "Spell resistance: %n%",
+        "tooltip": false
+      }
+    },
+    {
+      "id": "modifiable_unit_stats_tables:efa7c5664d955d7f2437",
+      "table": "modifiable_unit_stats_tables",
+      "key": {
+        "stat_key": "stat_resistance_magic"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/modifiable_unit_stats_tables/data__",
+      "tableVersion": 0,
+      "row": {
+        "localisation": "stat_resistance_magic",
+        "stat_key": "stat_resistance_magic"
+      }
+    },
+    {
+      "id": "special_ability_phase_stat_effects_tables:08aed4c45d2a15656303",
+      "table": "special_ability_phase_stat_effects_tables",
+      "key": {
+        "phase": "wh3_dlc23_lord_passive_presence_of_the_master_runelord",
+        "stat": "stat_resistance_magic"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/special_ability_phase_stat_effects_tables/data__",
+      "tableVersion": 3,
+      "row": {
+        "phase": "wh3_dlc23_lord_passive_presence_of_the_master_runelord",
+        "value": 20,
+        "stat": "stat_resistance_magic",
+        "how": "add"
+      }
+    },
+    {
+      "id": "technology_effects_junction_tables:7b2fd48a6e1dc01c4ea0",
+      "table": "technology_effects_junction_tables",
+      "key": {
+        "technology": "wh3_dlc24_tech_the_changeling_fires_of_change",
+        "effect": "wh_main_effect_character_stat_magic_resistance"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/technology_effects_junction_tables/data__",
+      "tableVersion": 0,
+      "row": {
+        "technology": "wh3_dlc24_tech_the_changeling_fires_of_change",
+        "effect": "wh_main_effect_character_stat_magic_resistance",
+        "effect_scope": "faction_to_character_own",
+        "value": 25
+      }
+    },
+    {
+      "id": "technology_effects_junction_tables:d81d2087992e75110586",
+      "table": "technology_effects_junction_tables",
+      "key": {
+        "technology": "wh2_dlc11_tech_cst_vampiric_07",
+        "effect": "wh2_dlc11_effect_force_stat_magic_resistance_animated_hulks_mournguls"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/technology_effects_junction_tables/data__",
+      "tableVersion": 0,
+      "row": {
+        "technology": "wh2_dlc11_tech_cst_vampiric_07",
+        "effect": "wh2_dlc11_effect_force_stat_magic_resistance_animated_hulks_mournguls",
+        "effect_scope": "faction_to_force_own_unseen",
+        "value": 20
+      }
+    },
+    {
+      "id": "trait_level_effects_tables:178180704316732b9b63",
+      "table": "trait_level_effects_tables",
+      "key": {
+        "trait_level": "wh3_dlc24_trait_defeated_mother_ostankya",
+        "effect": "wh_main_effect_character_stat_magic_resistance"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/trait_level_effects_tables/data__",
+      "tableVersion": 0,
+      "row": {
+        "trait_level": "wh3_dlc24_trait_defeated_mother_ostankya",
+        "effect": "wh_main_effect_character_stat_magic_resistance",
+        "effect_scope": "general_to_force_own",
+        "value": 5
+      }
+    },
+    {
+      "id": "trait_level_effects_tables:1a00d6d9dc0c3c2a30bf",
+      "table": "trait_level_effects_tables",
+      "key": {
+        "trait_level": "wh2_dlc11_trait_defeated_luthor_harkon",
+        "effect": "wh_main_effect_character_stat_magic_resistance"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/trait_level_effects_tables/data__",
+      "tableVersion": 0,
+      "row": {
+        "trait_level": "wh2_dlc11_trait_defeated_luthor_harkon",
+        "effect": "wh_main_effect_character_stat_magic_resistance",
+        "effect_scope": "character_to_character_own",
+        "value": 15
+      }
+    },
+    {
+      "id": "trait_level_effects_tables:2c94db678de8987adeca",
+      "table": "trait_level_effects_tables",
+      "key": {
+        "trait_level": "wh2_main_trait_defeated_archaon_the_everchosen",
+        "effect": "wh_main_effect_character_stat_magic_resistance"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/trait_level_effects_tables/data__",
+      "tableVersion": 0,
+      "row": {
+        "trait_level": "wh2_main_trait_defeated_archaon_the_everchosen",
+        "effect": "wh_main_effect_character_stat_magic_resistance",
+        "effect_scope": "character_to_character_own",
+        "value": 10
+      }
+    },
+    {
+      "id": "trait_level_effects_tables:6cfec665d228d6f256cf",
+      "table": "trait_level_effects_tables",
+      "key": {
+        "trait_level": "wh2_main_trait_defeated_azhag_the_slaughterer",
+        "effect": "wh_main_effect_character_stat_magic_resistance"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/trait_level_effects_tables/data__",
+      "tableVersion": 0,
+      "row": {
+        "trait_level": "wh2_main_trait_defeated_azhag_the_slaughterer",
+        "effect": "wh_main_effect_character_stat_magic_resistance",
+        "effect_scope": "character_to_character_own",
+        "value": 30
+      }
+    },
+    {
+      "id": "trait_level_effects_tables:8317c920992e0611804e",
+      "table": "trait_level_effects_tables",
+      "key": {
+        "trait_level": "wh_dlc23_trait_defeated_astragoth",
+        "effect": "wh_main_effect_character_stat_magic_resistance"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/trait_level_effects_tables/data__",
+      "tableVersion": 0,
+      "row": {
+        "trait_level": "wh_dlc23_trait_defeated_astragoth",
+        "effect": "wh_main_effect_character_stat_magic_resistance",
+        "effect_scope": "character_to_character_own",
+        "value": 15
+      }
+    },
+    {
+      "id": "trait_level_effects_tables:891955efcf641e931bfe",
+      "table": "trait_level_effects_tables",
+      "key": {
+        "trait_level": "wh3_dlc29_trait_defeated_glottkin",
+        "effect": "wh_main_effect_character_stat_magic_resistance"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/trait_level_effects_tables/data__",
+      "tableVersion": 0,
+      "row": {
+        "trait_level": "wh3_dlc29_trait_defeated_glottkin",
+        "effect": "wh_main_effect_character_stat_magic_resistance",
+        "effect_scope": "character_to_character_own",
+        "value": 10
+      }
+    },
+    {
+      "id": "trait_level_effects_tables:963d603e3a0839d14765",
+      "table": "trait_level_effects_tables",
+      "key": {
+        "trait_level": "wh2_main_trait_defeated_ungrim_ironfist",
+        "effect": "wh_main_effect_character_stat_magic_resistance"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/trait_level_effects_tables/data__",
+      "tableVersion": 0,
+      "row": {
+        "trait_level": "wh2_main_trait_defeated_ungrim_ironfist",
+        "effect": "wh_main_effect_character_stat_magic_resistance",
+        "effect_scope": "character_to_character_own",
+        "value": 5
+      }
+    },
+    {
+      "id": "trait_level_effects_tables:d5c7f31fae1177c8e49e",
+      "table": "trait_level_effects_tables",
+      "key": {
+        "trait_level": "wh2_dlc09_dummy_trait_dynasty_5",
+        "effect": "wh_main_effect_character_stat_magic_resistance"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/trait_level_effects_tables/data__",
+      "tableVersion": 0,
+      "row": {
+        "trait_level": "wh2_dlc09_dummy_trait_dynasty_5",
+        "effect": "wh_main_effect_character_stat_magic_resistance",
+        "effect_scope": "general_to_force_own",
+        "value": 35
+      }
+    },
+    {
+      "id": "ui_unit_stats_tables:81f177f1f8fe148c6d86",
+      "table": "ui_unit_stats_tables",
+      "key": {
+        "key": "stat_resistance_magic"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/ui_unit_stats_tables/data__",
+      "tableVersion": 10,
+      "row": {
+        "key": "stat_resistance_magic",
+        "max_value": 100,
+        "campaign_only": false,
+        "sort_order": 10,
+        "localisation": "stat_resistance_magic",
+        "icon": "ui/Battle UI/ability_icons/resistance_magic.png",
+        "min_value": 0,
+        "clamp_displayed_minimum": true,
+        "clamp_displayed_maximum": false
+      }
+    },
+    {
+      "id": "unit_stat_localisations_tables:4d395f653448fd2d331a",
+      "table": "unit_stat_localisations_tables",
+      "key": {
+        "stat_key": "stat_resistance_magic"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/unit_stat_localisations_tables/data__",
+      "tableVersion": 0,
+      "row": {
+        "stat_key": "stat_resistance_magic"
+      }
+    }
+  ]
+}

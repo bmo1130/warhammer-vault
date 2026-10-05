@@ -1,0 +1,305 @@
+{
+  "format": "wh3-resistance-semantics-v1",
+  "verdict": "E",
+  "operation": null,
+  "gameVersion": "9.0.2.0",
+  "runtimeObservation": "NOT_OBSERVED",
+  "directOperationProofForExactCampaignBonus": false,
+  "schemaInspection": [
+    {
+      "table": "character_skill_level_to_effects_junctions_tables",
+      "version": 1,
+      "fields": [
+        {
+          "name": "character_skill_key",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "character_skills",
+            "key"
+          ],
+          "description": ""
+        },
+        {
+          "name": "effect_key",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "effects",
+            "effect"
+          ],
+          "description": ""
+        },
+        {
+          "name": "effect_scope",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "campaign_effect_scopes",
+            "key"
+          ],
+          "description": ""
+        },
+        {
+          "name": "level",
+          "field_type": "I32",
+          "is_key": true,
+          "is_reference": null,
+          "description": ""
+        },
+        {
+          "name": "value",
+          "field_type": "F32",
+          "is_key": false,
+          "is_reference": null,
+          "description": ""
+        }
+      ],
+      "explicitOperationFields": []
+    },
+    {
+      "table": "effects_tables",
+      "version": 0,
+      "fields": [
+        {
+          "name": "effect",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": null,
+          "description": ""
+        },
+        {
+          "name": "icon",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": null,
+          "description": ""
+        },
+        {
+          "name": "priority",
+          "field_type": "I32",
+          "is_key": false,
+          "is_reference": null,
+          "description": "Higher number will be displayed lower down the list. Set to 0 to hide the effect entirely."
+        },
+        {
+          "name": "icon_negative",
+          "field_type": "OptionalStringU8",
+          "is_key": false,
+          "is_reference": null,
+          "description": ""
+        },
+        {
+          "name": "category",
+          "field_type": "StringU8",
+          "is_key": false,
+          "is_reference": [
+            "effect_categories",
+            "key"
+          ],
+          "description": "Category for display in ui"
+        },
+        {
+          "name": "is_positive_value_good",
+          "field_type": "Boolean",
+          "is_key": false,
+          "is_reference": null,
+          "description": "If true, then positive values shown green in ui. Otherwise shown red and vice versa for negatives. (As sometimes -10% is a good thing like cost)"
+        }
+      ],
+      "explicitOperationFields": []
+    },
+    {
+      "table": "effect_bonus_value_ids_unit_sets_tables",
+      "version": 0,
+      "fields": [
+        {
+          "name": "bonus_value_id",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "campaign_bonus_value_ids_unit_sets",
+            "key"
+          ],
+          "description": ""
+        },
+        {
+          "name": "effect",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "effects",
+            "effect"
+          ],
+          "description": ""
+        },
+        {
+          "name": "unit_set",
+          "field_type": "StringU8",
+          "is_key": true,
+          "is_reference": [
+            "unit_sets",
+            "key"
+          ],
+          "description": ""
+        }
+      ],
+      "explicitOperationFields": []
+    }
+  ],
+  "bonusDefinitionQuery": {
+    "table": "campaign_bonus_value_ids_unit_sets_tables",
+    "where": {
+      "key": [
+        "unit_damage_resistance_magic_mod"
+      ]
+    },
+    "tableFiles": 0,
+    "matchedRows": 0,
+    "retainedRows": 0,
+    "selection": "All exact matches"
+  },
+  "baseStat": {
+    "unitId": "ca_unit_wh_dlc07_brt_inf_battle_pilgrims_0",
+    "mainKey": "wh_dlc07_brt_inf_battle_pilgrims_0",
+    "mainRowId": "main_units_tables:96cc0e4273da29fc6e23",
+    "landKey": "wh_dlc07_brt_inf_battle_pilgrims_0",
+    "landRowId": "land_units_tables:aac889b5d2f2e7ef8e70",
+    "sourceField": {
+      "name": "damage_mod_magic",
+      "field_type": "I32",
+      "is_key": false,
+      "is_reference": null,
+      "description": "How much we modify magical damage, 0 is unaffected, -100 is double damage, +100 is negation"
+    },
+    "rawValue": 0,
+    "rawDamageScale": "Schema endpoints: 0 unaffected, -100 double damage, +100 negation; integer percentage-point scale",
+    "unitModelScale": "UnitResistances stores percentage points: 20 = 20%, not 0.2",
+    "displayedSpellBase": null,
+    "displayedSpellBaseStatus": "UNAVAILABLE",
+    "missingProductionBaseIsZero": false,
+    "rawToDisplayConversion": "UNKNOWN",
+    "normalizationGate": [
+      "defense.resistances",
+      "resistances",
+      "Raw-to-runtime resistance mapping is only STRONGLY SUPPORTED; no opt-in in conservative mode."
+    ]
+  },
+  "uiStat": {
+    "rowId": "ui_unit_stats_tables:81f177f1f8fe148c6d86",
+    "raw": {
+      "key": "stat_resistance_magic",
+      "max_value": 100,
+      "campaign_only": false,
+      "sort_order": 10,
+      "localisation": "stat_resistance_magic",
+      "icon": "ui/Battle UI/ability_icons/resistance_magic.png",
+      "min_value": 0,
+      "clamp_displayed_minimum": true,
+      "clamp_displayed_maximum": false
+    },
+    "meaning": "Display metadata only. max_value=100 and displayed clamp flags do not prove battle/campaign effective clamp, stacking or raw conversion."
+  },
+  "resistanceEffectUnit": "F32 value 20 in the campaign junction; percentage-labelled magnitude. ADD percentage points vs MULTIPLY percentage vs SET remains unproved.",
+  "engineFit": {
+    "add": "Can express B + 20 if exact campaign ADD and stat conversion are proved",
+    "multiply": "Can express B * 1.20 if exact percentage MULTIPLY is proved",
+    "set": "Can express 20 for a known baseline if SET is proved",
+    "unknownBase": "All operations retain unknown base in the existing engine, including SET",
+    "clamp": "No resistance clamp in current engine; need proof of required semantics before selecting a supported operation",
+    "changed": false
+  },
+  "candidatePredictions": [
+    {
+      "hypotheticalKnownBasePercentagePoints": 0,
+      "rawEffectValue": 20,
+      "add": 20,
+      "multiply": 0,
+      "set": 20,
+      "otherOrClamp": null,
+      "observed": false
+    },
+    {
+      "hypotheticalKnownBasePercentagePoints": 10,
+      "rawEffectValue": 20,
+      "add": 30,
+      "multiply": 12,
+      "set": 20,
+      "otherOrClamp": null,
+      "observed": false
+    },
+    {
+      "hypotheticalKnownBasePercentagePoints": 50,
+      "rawEffectValue": 20,
+      "add": 70,
+      "multiply": 60,
+      "set": 20,
+      "otherOrClamp": null,
+      "observed": false
+    },
+    {
+      "hypotheticalKnownBasePercentagePoints": 90,
+      "rawEffectValue": 20,
+      "add": 110,
+      "multiply": 108,
+      "set": 20,
+      "otherOrClamp": null,
+      "observed": false
+    }
+  ],
+  "whyUnknown": [
+    "No declared operation for the exact campaign bonus in its effect/junction/typed-route source",
+    "Same-bonus comparison consumers have no independent verified stat before/after readings",
+    "Ability-phase how=add cannot establish a different campaign bonus implementation",
+    "Source damage_mod_magic zero is not an admitted displayed spell-resistance zero",
+    "Effective conversion, stacking and cap behavior are unobserved"
+  ],
+  "requiredRuntimeEvidence": [
+    "Exact target main/land identity, game version, owner and rank; no other changing modifiers",
+    "Independent displayed baseline, including a known nonzero baseline; zero alone cannot separate ADD from SET",
+    "Secrets rank 1 on/off with that baseline; compare ADD/MULTIPLY/SET predictions",
+    "Same exact bonus stacking and a boundary capture if a clamp can affect the projected result; distinguish UI display clamp from effective stat"
+  ],
+  "wholeSkillGate": {
+    "rankOne": true,
+    "exactOwner": [
+      "wh_dlc07_brt_fay_enchantress"
+    ],
+    "supportedScope": true,
+    "exactTargets": [
+      {
+        "unitId": "ca_unit_wh_dlc07_brt_inf_battle_pilgrims_0",
+        "mainKey": "wh_dlc07_brt_inf_battle_pilgrims_0",
+        "landKey": "wh_dlc07_brt_inf_battle_pilgrims_0"
+      }
+    ],
+    "materializationUnresolved": 0,
+    "allUnitStatOperationsVerified": false,
+    "existingPath": "defense.resistances.spell",
+    "wholeEffectCount": 1,
+    "omittedOrUnsupportedEffects": 0,
+    "omittedNonProductionTargets": [
+      {
+        "mainKey": "wh_dlc07_brt_inf_grail_reliquae_0",
+        "landKey": "wh_dlc07_brt_inf_grail_reliquae_0",
+        "reason": "TARGET_NOT_IN_PRODUCTION"
+      },
+      {
+        "mainKey": "wh_pro04_brt_inf_battle_pilgrims_ror_0",
+        "landKey": "wh_pro04_brt_inf_battle_pilgrims_ror_0",
+        "reason": "TARGET_NOT_IN_PRODUCTION"
+      }
+    ],
+    "partialAdmissionIntroduced": false,
+    "remainingBlockers": [
+      "NO_VERIFIED_NUMERIC_MAPPING",
+      "UNREVIEWED_RESISTANCE_OPERATION",
+      "TARGET_BASE_SPELL_RESISTANCE_NOT_ADMITTED",
+      "RAW_TO_DISPLAYED_SPELL_STAT_CONVERSION_UNCONFIRMED",
+      "CAMPAIGN_RESISTANCE_STACKING_AND_CAP_UNCONFIRMED"
+    ],
+    "admission": "HOLD",
+    "admittedSkills": 0,
+    "effectiveModifiers": []
+  }
+}

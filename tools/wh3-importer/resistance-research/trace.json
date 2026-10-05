@@ -1,0 +1,458 @@
+{
+  "format": "wh3-secrets-resistance-trace-v1",
+  "skillKey": "wh_dlc07_skill_brt_fay_battle_secrets_of_the_grail",
+  "skillName": "Secrets of the Grail",
+  "skillRowId": "character_skills_tables:acaa6c2b6b0201ded14d",
+  "ownerKeys": [
+    "wh_dlc07_brt_fay_enchantress"
+  ],
+  "admissionOwnerKeys": [
+    "wh_dlc07_brt_fay_enchantress"
+  ],
+  "ownerChains": [
+    {
+      "subtypeKey": "wh_dlc07_brt_fay_enchantress",
+      "nodeKey": "wh_dlc07_skill_node_brt_fay_enchantress_unique_10",
+      "setKey": "wh_dlc07_skill_node_set_brt_fay_enchantress",
+      "nodeRowId": "character_skill_nodes_tables:1f55724f3b06916f1043",
+      "itemRowId": "character_skill_node_set_items_tables:ec3c1bb0a262c251486b",
+      "setRowId": "character_skill_node_sets_tables:1a13acf51d8af48bcce9",
+      "enabled": true,
+      "joins": [
+        [
+          "character_skill_nodes_tables:1f55724f3b06916f1043",
+          "character_skill_key",
+          "character_skills_tables:acaa6c2b6b0201ded14d",
+          "key"
+        ],
+        [
+          "character_skill_node_set_items_tables:ec3c1bb0a262c251486b",
+          "item",
+          "character_skill_nodes_tables:1f55724f3b06916f1043",
+          "key"
+        ],
+        [
+          "character_skill_node_set_items_tables:ec3c1bb0a262c251486b",
+          "set",
+          "character_skill_node_sets_tables:1a13acf51d8af48bcce9",
+          "key"
+        ],
+        [
+          "character_skill_node_sets_tables:1a13acf51d8af48bcce9",
+          "agent_subtype_key",
+          "agent_subtypes_tables:cae4fc22d99cad5a6d62",
+          "key"
+        ],
+        [
+          "character_skill_node_sets_tables:1a13acf51d8af48bcce9",
+          "agent_key",
+          "agents_tables:073101e312bbb9038fea",
+          "key"
+        ]
+      ],
+      "restrictions": {
+        "node": [
+          "",
+          "",
+          ""
+        ],
+        "set": [
+          "",
+          "",
+          ""
+        ]
+      },
+      "ownerName": "Fay Enchantress",
+      "characterType": "legendary_lord",
+      "availability": "STATIC_TREE_RUNTIME_UNLOCK_NOT_OBSERVED",
+      "prerequisites": [],
+      "lockRowIds": [],
+      "ancillaryLockRowIds": [],
+      "blockers": [],
+      "safeStaticOwner": true
+    }
+  ],
+  "rank": 1,
+  "rankRows": [
+    {
+      "rowId": "character_skill_level_to_effects_junctions_tables:4df13ea8b742a64189e6",
+      "raw": {
+        "character_skill_key": "wh_dlc07_skill_brt_fay_battle_secrets_of_the_grail",
+        "effect_key": "wh_dlc07_effect_force_stat_magic_resistance_battle_pilgrims",
+        "effect_scope": "general_to_force_own",
+        "level": 1,
+        "value": 20
+      }
+    }
+  ],
+  "effectKey": "wh_dlc07_effect_force_stat_magic_resistance_battle_pilgrims",
+  "effectRowId": "effects_tables:3cd9aa84acc876fe1e14",
+  "effectJunctionRowId": "character_skill_level_to_effects_junctions_tables:4df13ea8b742a64189e6",
+  "rawValue": 20,
+  "scope": {
+    "key": "general_to_force_own",
+    "location": "forcewide_when_commanding",
+    "ownership": "yours",
+    "source": "character",
+    "target": "force",
+    "territory": "any"
+  },
+  "scopeRowId": "campaign_effect_scopes_tables:ac8ad42676de36b22a6c",
+  "effectPriority": 581,
+  "prioritySchemaDescription": "Higher number will be displayed lower down the list. Set to 0 to hide the effect entirely.",
+  "typedRoute": {
+    "rowId": "effect_bonus_value_ids_unit_sets_tables:6a63e128f19095d46275",
+    "table": "effect_bonus_value_ids_unit_sets_tables",
+    "raw": {
+      "bonus_value_id": "unit_damage_resistance_magic_mod",
+      "effect": "wh_dlc07_effect_force_stat_magic_resistance_battle_pilgrims",
+      "unit_set": "dlc07_brt_inf_battle_pilgrims"
+    },
+    "join": [
+      "effect_bonus_value_ids_unit_sets_tables:6a63e128f19095d46275",
+      "effect",
+      "effects_tables:3cd9aa84acc876fe1e14",
+      "effect"
+    ],
+    "selectorKey": "dlc07_brt_inf_battle_pilgrims",
+    "selectorType": "EXPLICIT_UNIT_SET",
+    "materialization": "STATIC_EXACT_MEMBERSHIP",
+    "selectorJoin": [
+      "effect_bonus_value_ids_unit_sets_tables:6a63e128f19095d46275",
+      "unit_set",
+      "unit_sets_tables:d203e9dca4e43df5e303",
+      "key"
+    ]
+  },
+  "statIdentity": {
+    "bonusKey": "unit_damage_resistance_magic_mod",
+    "candidatePath": "defense.resistances.spell",
+    "uiStatKey": "stat_resistance_magic",
+    "uiRowId": "ui_unit_stats_tables:81f177f1f8fe148c6d86",
+    "modifiableStatRowId": "modifiable_unit_stats_tables:efa7c5664d955d7f2437",
+    "currentLabelRowId": "Loc:977eb9c96cbf9258e42d",
+    "label": "[[img:ui/Battle UI/ability_icons/resistance_magic.png]][[/img]] Spell Resistance",
+    "campaignBonusToUiStatDeclarativeJoin": "NOT_FOUND_IN_BOUNDED_SOURCE"
+  },
+  "targetMaterialization": {
+    "key": "dlc07_brt_inf_battle_pilgrims",
+    "definitionRowId": "unit_sets_tables:d203e9dca4e43df5e303",
+    "definition": {
+      "key": "dlc07_brt_inf_battle_pilgrims",
+      "use_unit_exp_level_range": false,
+      "min_unit_exp_level_inclusive": -1,
+      "max_unit_exp_level_inclusive": -1,
+      "special_category": ""
+    },
+    "status": "STATIC_EXACT_MEMBERSHIP",
+    "taxonomy": "EXPLICIT_UNIT_SET",
+    "branchKinds": [
+      "EXPLICIT_UNIT_SET"
+    ],
+    "blockers": [],
+    "branches": [
+      {
+        "rowId": "unit_set_to_unit_junctions_tables:16c7544fa07a7dd3be0e",
+        "raw": {
+          "exclude": false,
+          "unit_caste": "",
+          "unit_category": "",
+          "unit_class": "",
+          "unit_record": "wh_pro04_brt_inf_battle_pilgrims_ror_0",
+          "unit_set": "dlc07_brt_inf_battle_pilgrims"
+        },
+        "kind": "EXPLICIT_UNIT_SET",
+        "joins": [
+          [
+            "unit_set_to_unit_junctions_tables:16c7544fa07a7dd3be0e",
+            "unit_set",
+            "unit_sets_tables:d203e9dca4e43df5e303",
+            "key"
+          ],
+          [
+            "unit_set_to_unit_junctions_tables:16c7544fa07a7dd3be0e",
+            "unit_record",
+            "main_units_tables:4a4cf6f09b5760623036",
+            "unit"
+          ]
+        ],
+        "mainKeys": [
+          "wh_pro04_brt_inf_battle_pilgrims_ror_0"
+        ]
+      },
+      {
+        "rowId": "unit_set_to_unit_junctions_tables:8a5e59b0d9ca5cd65c5e",
+        "raw": {
+          "exclude": false,
+          "unit_caste": "",
+          "unit_category": "",
+          "unit_class": "",
+          "unit_record": "wh_dlc07_brt_inf_battle_pilgrims_0",
+          "unit_set": "dlc07_brt_inf_battle_pilgrims"
+        },
+        "kind": "EXPLICIT_UNIT_SET",
+        "joins": [
+          [
+            "unit_set_to_unit_junctions_tables:8a5e59b0d9ca5cd65c5e",
+            "unit_set",
+            "unit_sets_tables:d203e9dca4e43df5e303",
+            "key"
+          ],
+          [
+            "unit_set_to_unit_junctions_tables:8a5e59b0d9ca5cd65c5e",
+            "unit_record",
+            "main_units_tables:96cc0e4273da29fc6e23",
+            "unit"
+          ]
+        ],
+        "mainKeys": [
+          "wh_dlc07_brt_inf_battle_pilgrims_0"
+        ]
+      },
+      {
+        "rowId": "unit_set_to_unit_junctions_tables:edafd5427338fc010539",
+        "raw": {
+          "exclude": false,
+          "unit_caste": "",
+          "unit_category": "",
+          "unit_class": "",
+          "unit_record": "wh_dlc07_brt_inf_grail_reliquae_0",
+          "unit_set": "dlc07_brt_inf_battle_pilgrims"
+        },
+        "kind": "EXPLICIT_UNIT_SET",
+        "joins": [
+          [
+            "unit_set_to_unit_junctions_tables:edafd5427338fc010539",
+            "unit_set",
+            "unit_sets_tables:d203e9dca4e43df5e303",
+            "key"
+          ],
+          [
+            "unit_set_to_unit_junctions_tables:edafd5427338fc010539",
+            "unit_record",
+            "main_units_tables:9a2237e55197e64a9f9f",
+            "unit"
+          ]
+        ],
+        "mainKeys": [
+          "wh_dlc07_brt_inf_grail_reliquae_0"
+        ]
+      }
+    ],
+    "exactMembers": [
+      {
+        "mainKey": "wh_dlc07_brt_inf_battle_pilgrims_0",
+        "landKey": "wh_dlc07_brt_inf_battle_pilgrims_0",
+        "mainRowId": "main_units_tables:96cc0e4273da29fc6e23",
+        "landRowId": "land_units_tables:aac889b5d2f2e7ef8e70",
+        "caste": "melee_infantry",
+        "landClass": "inf_mel",
+        "landCategory": "inf_melee",
+        "isRenown": false,
+        "branchRowIds": [
+          "unit_set_to_unit_junctions_tables:8a5e59b0d9ca5cd65c5e"
+        ],
+        "joins": [
+          [
+            "main_units_tables:96cc0e4273da29fc6e23",
+            "land_unit",
+            "land_units_tables:aac889b5d2f2e7ef8e70",
+            "key"
+          ]
+        ],
+        "productionUnitIds": [
+          "ca_unit_wh_dlc07_brt_inf_battle_pilgrims_0"
+        ]
+      },
+      {
+        "mainKey": "wh_dlc07_brt_inf_grail_reliquae_0",
+        "landKey": "wh_dlc07_brt_inf_grail_reliquae_0",
+        "mainRowId": "main_units_tables:9a2237e55197e64a9f9f",
+        "landRowId": "land_units_tables:614714b8c312d51f3736",
+        "caste": "melee_infantry",
+        "landClass": "spcl",
+        "landCategory": "inf_melee",
+        "isRenown": false,
+        "branchRowIds": [
+          "unit_set_to_unit_junctions_tables:edafd5427338fc010539"
+        ],
+        "joins": [
+          [
+            "main_units_tables:9a2237e55197e64a9f9f",
+            "land_unit",
+            "land_units_tables:614714b8c312d51f3736",
+            "key"
+          ]
+        ],
+        "productionUnitIds": []
+      },
+      {
+        "mainKey": "wh_pro04_brt_inf_battle_pilgrims_ror_0",
+        "landKey": "wh_pro04_brt_inf_battle_pilgrims_ror_0",
+        "mainRowId": "main_units_tables:4a4cf6f09b5760623036",
+        "landRowId": "land_units_tables:2a718e71377e44135420",
+        "caste": "melee_infantry",
+        "landClass": "inf_mel",
+        "landCategory": "inf_melee",
+        "isRenown": true,
+        "branchRowIds": [
+          "unit_set_to_unit_junctions_tables:16c7544fa07a7dd3be0e"
+        ],
+        "joins": [
+          [
+            "main_units_tables:4a4cf6f09b5760623036",
+            "land_unit",
+            "land_units_tables:2a718e71377e44135420",
+            "key"
+          ]
+        ],
+        "productionUnitIds": []
+      }
+    ],
+    "productionMembers": [
+      {
+        "mainKey": "wh_dlc07_brt_inf_battle_pilgrims_0",
+        "landKey": "wh_dlc07_brt_inf_battle_pilgrims_0",
+        "mainRowId": "main_units_tables:96cc0e4273da29fc6e23",
+        "landRowId": "land_units_tables:aac889b5d2f2e7ef8e70",
+        "caste": "melee_infantry",
+        "landClass": "inf_mel",
+        "landCategory": "inf_melee",
+        "isRenown": false,
+        "branchRowIds": [
+          "unit_set_to_unit_junctions_tables:8a5e59b0d9ca5cd65c5e"
+        ],
+        "joins": [
+          [
+            "main_units_tables:96cc0e4273da29fc6e23",
+            "land_unit",
+            "land_units_tables:aac889b5d2f2e7ef8e70",
+            "key"
+          ]
+        ],
+        "productionUnitIds": [
+          "ca_unit_wh_dlc07_brt_inf_battle_pilgrims_0"
+        ]
+      }
+    ],
+    "omittedNonProduction": [
+      {
+        "mainKey": "wh_dlc07_brt_inf_grail_reliquae_0",
+        "landKey": "wh_dlc07_brt_inf_grail_reliquae_0",
+        "reason": "TARGET_NOT_IN_PRODUCTION"
+      },
+      {
+        "mainKey": "wh_pro04_brt_inf_battle_pilgrims_ror_0",
+        "landKey": "wh_pro04_brt_inf_battle_pilgrims_ror_0",
+        "reason": "TARGET_NOT_IN_PRODUCTION"
+      }
+    ],
+    "landWithoutMain": [],
+    "navalOmissions": [],
+    "ambiguous": [],
+    "unionCollisions": [],
+    "mainLandAliases": [],
+    "membershipIsEffectApplicability": false,
+    "runtimeMembership": "NOT_OBSERVED",
+    "runtimeAdditionalFilterEvidence": "NONE_IN_TRACED_SELECTOR_ROWS",
+    "sourceBranches": [
+      {
+        "rowId": "unit_set_to_unit_junctions_tables:16c7544fa07a7dd3be0e",
+        "raw": {
+          "exclude": false,
+          "unit_caste": "",
+          "unit_category": "",
+          "unit_class": "",
+          "unit_record": "wh_pro04_brt_inf_battle_pilgrims_ror_0",
+          "unit_set": "dlc07_brt_inf_battle_pilgrims"
+        }
+      },
+      {
+        "rowId": "unit_set_to_unit_junctions_tables:8a5e59b0d9ca5cd65c5e",
+        "raw": {
+          "exclude": false,
+          "unit_caste": "",
+          "unit_category": "",
+          "unit_class": "",
+          "unit_record": "wh_dlc07_brt_inf_battle_pilgrims_0",
+          "unit_set": "dlc07_brt_inf_battle_pilgrims"
+        }
+      },
+      {
+        "rowId": "unit_set_to_unit_junctions_tables:edafd5427338fc010539",
+        "raw": {
+          "exclude": false,
+          "unit_caste": "",
+          "unit_category": "",
+          "unit_class": "",
+          "unit_record": "wh_dlc07_brt_inf_grail_reliquae_0",
+          "unit_set": "dlc07_brt_inf_battle_pilgrims"
+        }
+      }
+    ],
+    "unresolvedCount": 0,
+    "duplicateCount": 0,
+    "branchOverlapCount": 0
+  },
+  "classifier": {
+    "skillKey": "wh_dlc07_skill_brt_fay_battle_secrets_of_the_grail",
+    "name": "Secrets of the Grail",
+    "ownerKeys": [
+      "wh_dlc07_brt_fay_enchantress"
+    ],
+    "admissionOwnerKeys": [
+      "wh_dlc07_brt_fay_enchantress"
+    ],
+    "excludedOwners": [],
+    "classification": "REVIEW_REQUIRED",
+    "blockers": [
+      "NO_VERIFIED_NUMERIC_MAPPING",
+      "UNREVIEWED_RESISTANCE_OPERATION"
+    ],
+    "effects": [
+      {
+        "skillKey": "wh_dlc07_skill_brt_fay_battle_secrets_of_the_grail",
+        "junctionRowId": "character_skill_level_to_effects_junctions_tables:4df13ea8b742a64189e6",
+        "effectKey": "wh_dlc07_effect_force_stat_magic_resistance_battle_pilgrims",
+        "rank": 1,
+        "rawValue": 20,
+        "scopeKey": "general_to_force_own",
+        "classification": "REVIEW_REQUIRED",
+        "blockers": [
+          "NO_VERIFIED_NUMERIC_MAPPING",
+          "UNREVIEWED_RESISTANCE_OPERATION"
+        ],
+        "candidateStats": [
+          "defense.resistances.spell"
+        ],
+        "mappings": [],
+        "targets": [
+          {
+            "unitId": "ca_unit_wh_dlc07_brt_inf_battle_pilgrims_0",
+            "mainKey": "wh_dlc07_brt_inf_battle_pilgrims_0",
+            "landKey": "wh_dlc07_brt_inf_battle_pilgrims_0"
+          }
+        ],
+        "typedTargets": [
+          {
+            "rowId": "effect_bonus_value_ids_unit_sets_tables:6a63e128f19095d46275",
+            "table": "effect_bonus_value_ids_unit_sets_tables",
+            "bonus": "unit_damage_resistance_magic_mod",
+            "selectorKey": "dlc07_brt_inf_battle_pilgrims"
+          }
+        ],
+        "selectorKeys": [
+          "dlc07_brt_inf_battle_pilgrims"
+        ],
+        "productionTargetCount": 1,
+        "nonProductionTargetCount": 2,
+        "unresolvedIdentityCount": 0,
+        "unresolvedApplicabilityBranches": 0,
+        "eligible": false
+      }
+    ],
+    "directEffects": 0,
+    "eligible": false
+  },
+  "historicalBlockersChanged": false
+}

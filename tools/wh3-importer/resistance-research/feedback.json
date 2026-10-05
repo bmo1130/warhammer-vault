@@ -1,0 +1,41 @@
+{
+  "format": "wh3-resistance-full-pipeline-feedback-v1",
+  "historicalClassifierChanged": false,
+  "automaticallyReadmitted": false,
+  "fullInventory": {
+    "skills": 226,
+    "ranks": 434,
+    "junctions": 840
+  },
+  "broadResistanceFamily": {
+    "junctions": 10,
+    "distinctEffects": 8,
+    "eligibleForProofTransfer": false
+  },
+  "exactBonusFamily": {
+    "bonus": "unit_damage_resistance_magic_mod",
+    "junctions": 1,
+    "effects": 1,
+    "candidates": [
+      {
+        "skillKey": "wh_dlc07_skill_brt_fay_battle_secrets_of_the_grail",
+        "effectKey": "wh_dlc07_effect_force_stat_magic_resistance_battle_pilgrims",
+        "junctionRowId": "character_skill_level_to_effects_junctions_tables:4df13ea8b742a64189e6",
+        "blockers": [
+          "NO_VERIFIED_NUMERIC_MAPPING",
+          "UNREVIEWED_RESISTANCE_OPERATION"
+        ]
+      }
+    ],
+    "releasedOperationJunctions": 0,
+    "otherJunctionsReleased": 0,
+    "conditionalStatement": "If this exact bonus operation is proved, one existing junction is a mapping review candidate. Production base/conversion gates and whole-Skill gate still apply. Other resistance types do not inherit proof."
+  },
+  "newAdmission": {
+    "skills": 0,
+    "effects": 0,
+    "modifiers": 0
+  },
+  "multiRankVerdict": "UNKNOWN_UNCHANGED",
+  "characterSupportImplemented": false
+}

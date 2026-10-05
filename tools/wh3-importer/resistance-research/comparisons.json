@@ -1,0 +1,1192 @@
+{
+  "format": "wh3-spell-resistance-comparisons-v1",
+  "exactBonusFamily": "unit_damage_resistance_magic_mod",
+  "comparisonEffects": 7,
+  "independentComparisonEffects": 6,
+  "usedIndependentComparisonEffects": 5,
+  "comparisonConsumerRows": 84,
+  "exactEffectReuse": {
+    "character_skill_level_to_effects_junctions_tables": 1,
+    "technology_effects_junction_tables": 0,
+    "trait_level_effects_tables": 0,
+    "effect_bundles_to_effects_junctions_tables": 0
+  },
+  "valueRepresentation": {
+    "values": [
+      5,
+      10,
+      15,
+      20,
+      25,
+      30,
+      35,
+      50
+    ],
+    "negativeExamples": 0,
+    "raw1Examples": 0,
+    "rawPoint1Examples": 0,
+    "limitation": "Only the seven exact effect keys and four usage tables were queried. Positive integer patterns/labels are not operation or direction proof."
+  },
+  "effects": [
+    {
+      "effectKey": "wh_dlc07_effect_force_stat_magic_resistance_battle_pilgrims",
+      "sameExactBonus": "unit_damage_resistance_magic_mod",
+      "definitionRowId": "effects_tables:3cd9aa84acc876fe1e14",
+      "priority": 581,
+      "description": "Spell resistance: %n% for Battle Pilgrim and Grail Reliquae units",
+      "positiveIsGoodUiFlag": true,
+      "priorityMeaning": "UI_ORDER_ONLY",
+      "routeRowIds": [
+        "effect_bonus_value_ids_unit_sets_tables:6a63e128f19095d46275"
+      ],
+      "unitSetKeys": [
+        "dlc07_brt_inf_battle_pilgrims"
+      ],
+      "usageCounts": {
+        "character_skill_level_to_effects_junctions_tables": 1,
+        "technology_effects_junction_tables": 0,
+        "trait_level_effects_tables": 0,
+        "effect_bundles_to_effects_junctions_tables": 0
+      },
+      "rawValues": [
+        20
+      ],
+      "scopes": [
+        "general_to_force_own"
+      ],
+      "usages": [
+        {
+          "rowId": "character_skill_level_to_effects_junctions_tables:4df13ea8b742a64189e6",
+          "table": "character_skill_level_to_effects_junctions_tables",
+          "sourceKey": {
+            "character_skill_key": "wh_dlc07_skill_brt_fay_battle_secrets_of_the_grail",
+            "effect_key": "wh_dlc07_effect_force_stat_magic_resistance_battle_pilgrims",
+            "level": 1
+          },
+          "rawValue": 20,
+          "scope": "general_to_force_own"
+        }
+      ],
+      "declaredOperation": null,
+      "runtime": "NOT_OBSERVED",
+      "operationEvidence": "SAME_TYPED_BONUS_NO_DECLARED_OPERATION",
+      "definitionOnlyInQueriedUsageTables": false
+    },
+    {
+      "effectKey": "wh2_dlc09_effect_force_stat_magic_resistance_tmb_monster_rank7",
+      "sameExactBonus": "unit_damage_resistance_magic_mod",
+      "definitionRowId": "effects_tables:678ff88f565a1020a6db",
+      "priority": 582,
+      "description": "Spell resistance: %n% for Ushabti, Khemric Titan, Tomb Scorpion, Hierotitan, Necrosphinx and Khemrian Warsphinx units {{tr:rank7}}",
+      "positiveIsGoodUiFlag": true,
+      "priorityMeaning": "UI_ORDER_ONLY",
+      "routeRowIds": [
+        "effect_bonus_value_ids_unit_sets_tables:a54e51e76e12936258c3",
+        "effect_bonus_value_ids_unit_sets_tables:cfb68d8156301ece6fff"
+      ],
+      "unitSetKeys": [
+        "wh2_dlc09_tmb_all_monster_rank7",
+        "wh2_dlc09_tmb_all_monster_rank7_ror"
+      ],
+      "usageCounts": {
+        "character_skill_level_to_effects_junctions_tables": 1,
+        "technology_effects_junction_tables": 0,
+        "trait_level_effects_tables": 0,
+        "effect_bundles_to_effects_junctions_tables": 0
+      },
+      "rawValues": [
+        15
+      ],
+      "scopes": [
+        "general_to_force_own"
+      ],
+      "usages": [
+        {
+          "rowId": "character_skill_level_to_effects_junctions_tables:635a1874d239d52d09cb",
+          "table": "character_skill_level_to_effects_junctions_tables",
+          "sourceKey": {
+            "character_skill_key": "wh2_dlc09_skill_tmb_army_buff_vet_structure",
+            "effect_key": "wh2_dlc09_effect_force_stat_magic_resistance_tmb_monster_rank7",
+            "level": 1
+          },
+          "rawValue": 15,
+          "scope": "general_to_force_own"
+        }
+      ],
+      "declaredOperation": null,
+      "runtime": "NOT_OBSERVED",
+      "operationEvidence": "SAME_TYPED_BONUS_NO_DECLARED_OPERATION",
+      "definitionOnlyInQueriedUsageTables": false
+    },
+    {
+      "effectKey": "wh2_dlc09_effect_force_stat_magic_resistance_tmb_monster",
+      "sameExactBonus": "unit_damage_resistance_magic_mod",
+      "definitionRowId": "effects_tables:18ed5fa048e4225e9ab9",
+      "priority": 582,
+      "description": "Spell resistance: %n% for Ushabti, Tomb Scorpion, Hierotitan, Necrosphinx and Khemrian Warsphinx units",
+      "positiveIsGoodUiFlag": true,
+      "priorityMeaning": "UI_ORDER_ONLY",
+      "routeRowIds": [
+        "effect_bonus_value_ids_unit_sets_tables:653ea68db28a097d960b",
+        "effect_bonus_value_ids_unit_sets_tables:6b3f29ab2e87c4ac73c4",
+        "effect_bonus_value_ids_unit_sets_tables:b1846c05b8e6120a3c30",
+        "effect_bonus_value_ids_unit_sets_tables:de7a5d470c76916915c4"
+      ],
+      "unitSetKeys": [
+        "wh2_dlc09_tmb_all_monster",
+        "wh2_dlc09_tmb_mon_necrosphinx_ror",
+        "wh2_dlc09_tmb_mon_ushabti_ror",
+        "wh2_dlc09_tmb_vet_all_monster_ror"
+      ],
+      "usageCounts": {
+        "character_skill_level_to_effects_junctions_tables": 0,
+        "technology_effects_junction_tables": 0,
+        "trait_level_effects_tables": 0,
+        "effect_bundles_to_effects_junctions_tables": 0
+      },
+      "rawValues": [],
+      "scopes": [],
+      "usages": [],
+      "declaredOperation": null,
+      "runtime": "NOT_OBSERVED",
+      "operationEvidence": "SAME_TYPED_BONUS_NO_DECLARED_OPERATION",
+      "definitionOnlyInQueriedUsageTables": true
+    },
+    {
+      "effectKey": "wh2_dlc11_effect_force_stat_magic_resistance_animated_hulks_mournguls",
+      "sameExactBonus": "unit_damage_resistance_magic_mod",
+      "definitionRowId": "effects_tables:ca7ba627c7e9076f3d12",
+      "priority": 581,
+      "description": "Spell resistance: %n% for Animated Hulks, Bloated Corpse, and Mourngul units",
+      "positiveIsGoodUiFlag": true,
+      "priorityMeaning": "UI_ORDER_ONLY",
+      "routeRowIds": [
+        "effect_bonus_value_ids_unit_sets_tables:9684b250c56db7df1c7f",
+        "effect_bonus_value_ids_unit_sets_tables:a196c672a5ed72769e57"
+      ],
+      "unitSetKeys": [
+        "wh2_dlc11_cst_animated_hulk_mournguls",
+        "wh2_dlc11_cst_mon_bloated_corpse_0"
+      ],
+      "usageCounts": {
+        "character_skill_level_to_effects_junctions_tables": 0,
+        "technology_effects_junction_tables": 1,
+        "trait_level_effects_tables": 0,
+        "effect_bundles_to_effects_junctions_tables": 0
+      },
+      "rawValues": [
+        20
+      ],
+      "scopes": [
+        "faction_to_force_own_unseen"
+      ],
+      "usages": [
+        {
+          "rowId": "technology_effects_junction_tables:d81d2087992e75110586",
+          "table": "technology_effects_junction_tables",
+          "sourceKey": {
+            "technology": "wh2_dlc11_tech_cst_vampiric_07",
+            "effect": "wh2_dlc11_effect_force_stat_magic_resistance_animated_hulks_mournguls"
+          },
+          "rawValue": 20,
+          "scope": "faction_to_force_own_unseen"
+        }
+      ],
+      "declaredOperation": null,
+      "runtime": "NOT_OBSERVED",
+      "operationEvidence": "SAME_TYPED_BONUS_NO_DECLARED_OPERATION",
+      "definitionOnlyInQueriedUsageTables": false
+    },
+    {
+      "effectKey": "wh2_dlc11_effect_force_stat_magic_resistance_cairn_wraith_hex_wraith",
+      "sameExactBonus": "unit_damage_resistance_magic_mod",
+      "definitionRowId": "effects_tables:78bdca9349790d1eced5",
+      "priority": 581,
+      "description": "Spell resistance: %n% for Spirit Host, Cairn Wraiths, Mournguls and Hexwraiths units",
+      "positiveIsGoodUiFlag": true,
+      "priorityMeaning": "UI_ORDER_ONLY",
+      "routeRowIds": [
+        "effect_bonus_value_ids_unit_sets_tables:dce2ad1b37f2b24e9134"
+      ],
+      "unitSetKeys": [
+        "wh3_dlc29_vmp_cairn_wraith_hex_wraith_mourngul_spirit_host"
+      ],
+      "usageCounts": {
+        "character_skill_level_to_effects_junctions_tables": 3,
+        "technology_effects_junction_tables": 0,
+        "trait_level_effects_tables": 0,
+        "effect_bundles_to_effects_junctions_tables": 0
+      },
+      "rawValues": [
+        5,
+        10,
+        15
+      ],
+      "scopes": [
+        "general_to_force_own"
+      ],
+      "usages": [
+        {
+          "rowId": "character_skill_level_to_effects_junctions_tables:1140bbaa754b6f86db31",
+          "table": "character_skill_level_to_effects_junctions_tables",
+          "sourceKey": {
+            "character_skill_key": "wh2_dlc11_skill_vmp_bloodline_all_battle_evil_souls",
+            "effect_key": "wh2_dlc11_effect_force_stat_magic_resistance_cairn_wraith_hex_wraith",
+            "level": 1
+          },
+          "rawValue": 5,
+          "scope": "general_to_force_own"
+        },
+        {
+          "rowId": "character_skill_level_to_effects_junctions_tables:616f2a30b27b51fc6131",
+          "table": "character_skill_level_to_effects_junctions_tables",
+          "sourceKey": {
+            "character_skill_key": "wh2_dlc11_skill_vmp_bloodline_all_battle_evil_souls",
+            "effect_key": "wh2_dlc11_effect_force_stat_magic_resistance_cairn_wraith_hex_wraith",
+            "level": 2
+          },
+          "rawValue": 10,
+          "scope": "general_to_force_own"
+        },
+        {
+          "rowId": "character_skill_level_to_effects_junctions_tables:bc022205b18db9edb9a0",
+          "table": "character_skill_level_to_effects_junctions_tables",
+          "sourceKey": {
+            "character_skill_key": "wh2_dlc11_skill_vmp_bloodline_all_battle_evil_souls",
+            "effect_key": "wh2_dlc11_effect_force_stat_magic_resistance_cairn_wraith_hex_wraith",
+            "level": 3
+          },
+          "rawValue": 15,
+          "scope": "general_to_force_own"
+        }
+      ],
+      "declaredOperation": null,
+      "runtime": "NOT_OBSERVED",
+      "operationEvidence": "SAME_TYPED_BONUS_NO_DECLARED_OPERATION",
+      "definitionOnlyInQueriedUsageTables": false
+    },
+    {
+      "effectKey": "wh2_dlc11_effect_force_stat_magic_resistance_cst_infantry",
+      "sameExactBonus": "unit_damage_resistance_magic_mod",
+      "definitionRowId": "effects_tables:9ef1a421912e92b2cf74",
+      "priority": 581,
+      "description": "Spell resistance: %n% for Infantry units",
+      "positiveIsGoodUiFlag": true,
+      "priorityMeaning": "UI_ORDER_ONLY",
+      "routeRowIds": [
+        "effect_bonus_value_ids_unit_sets_tables:268318519f3059e2c045",
+        "effect_bonus_value_ids_unit_sets_tables:e577058e17d80eb18851"
+      ],
+      "unitSetKeys": [
+        "wh2_dlc11_cst_infantry_melee",
+        "wh2_dlc11_cst_infantry_ranged"
+      ],
+      "usageCounts": {
+        "character_skill_level_to_effects_junctions_tables": 0,
+        "technology_effects_junction_tables": 0,
+        "trait_level_effects_tables": 0,
+        "effect_bundles_to_effects_junctions_tables": 1
+      },
+      "rawValues": [
+        15
+      ],
+      "scopes": [
+        "faction_to_force_own"
+      ],
+      "usages": [
+        {
+          "rowId": "effect_bundles_to_effects_junctions_tables:3131ba4c8db388c796c7",
+          "table": "effect_bundles_to_effects_junctions_tables",
+          "sourceKey": {
+            "effect_bundle_key": "wh2_dlc11_payload_incident_strength_from_shyish",
+            "effect_key": "wh2_dlc11_effect_force_stat_magic_resistance_cst_infantry"
+          },
+          "rawValue": 15,
+          "scope": "faction_to_force_own"
+        }
+      ],
+      "declaredOperation": null,
+      "runtime": "NOT_OBSERVED",
+      "operationEvidence": "SAME_TYPED_BONUS_NO_DECLARED_OPERATION",
+      "definitionOnlyInQueriedUsageTables": false
+    },
+    {
+      "effectKey": "wh_main_effect_character_stat_magic_resistance",
+      "sameExactBonus": "unit_damage_resistance_magic_mod",
+      "definitionRowId": "effects_tables:f824d11384a2012dc281",
+      "priority": 280,
+      "description": "Spell resistance: %n%",
+      "positiveIsGoodUiFlag": true,
+      "priorityMeaning": "UI_ORDER_ONLY",
+      "routeRowIds": [
+        "effect_bonus_value_ids_unit_sets_tables:7f9deba5be508fb4e704"
+      ],
+      "unitSetKeys": [
+        "all_units"
+      ],
+      "usageCounts": {
+        "character_skill_level_to_effects_junctions_tables": 48,
+        "technology_effects_junction_tables": 1,
+        "trait_level_effects_tables": 8,
+        "effect_bundles_to_effects_junctions_tables": 20
+      },
+      "rawValues": [
+        5,
+        10,
+        15,
+        20,
+        25,
+        30,
+        35,
+        50
+      ],
+      "scopes": [
+        "agent_to_parent_army_general_own",
+        "character_to_character_own",
+        "character_to_character_own_banner",
+        "character_to_character_own_banner_maneater",
+        "character_to_character_own_banner_not_character",
+        "faction_to_character_own",
+        "general_to_force_own"
+      ],
+      "usages": [
+        {
+          "rowId": "character_skill_level_to_effects_junctions_tables:0cac48156f5d322ecb7f",
+          "table": "character_skill_level_to_effects_junctions_tables",
+          "sourceKey": {
+            "character_skill_key": "wh2_main_skill_skv_generic_magic_ward",
+            "effect_key": "wh_main_effect_character_stat_magic_resistance",
+            "level": 1
+          },
+          "rawValue": 10,
+          "scope": "character_to_character_own"
+        },
+        {
+          "rowId": "character_skill_level_to_effects_junctions_tables:0fa99d9558f21ad319ce",
+          "table": "character_skill_level_to_effects_junctions_tables",
+          "sourceKey": {
+            "character_skill_key": "wh3_dlc29_skill_skv_verminlord_corruptor_unique_5",
+            "effect_key": "wh_main_effect_character_stat_magic_resistance",
+            "level": 1
+          },
+          "rawValue": 10,
+          "scope": "character_to_character_own"
+        },
+        {
+          "rowId": "character_skill_level_to_effects_junctions_tables:10dff2bc7b8aa4ba7b68",
+          "table": "character_skill_level_to_effects_junctions_tables",
+          "sourceKey": {
+            "character_skill_key": "wh2_dlc11_skill_cst_luthor_unique_2",
+            "effect_key": "wh_main_effect_character_stat_magic_resistance",
+            "level": 1
+          },
+          "rawValue": 15,
+          "scope": "character_to_character_own"
+        },
+        {
+          "rowId": "character_skill_level_to_effects_junctions_tables:1ad7c069b20ff04d96dd",
+          "table": "character_skill_level_to_effects_junctions_tables",
+          "sourceKey": {
+            "character_skill_key": "wh2_dlc09_skill_tmb_khatep_arcane_knowledge",
+            "effect_key": "wh_main_effect_character_stat_magic_resistance",
+            "level": 1
+          },
+          "rawValue": 15,
+          "scope": "character_to_character_own"
+        },
+        {
+          "rowId": "character_skill_level_to_effects_junctions_tables:212b20dfcd4be694cd38",
+          "table": "character_skill_level_to_effects_junctions_tables",
+          "sourceKey": {
+            "character_skill_key": "wh3_dlc23_skill_chd_hashuts_scales",
+            "effect_key": "wh_main_effect_character_stat_magic_resistance",
+            "level": 1
+          },
+          "rawValue": 10,
+          "scope": "character_to_character_own"
+        },
+        {
+          "rowId": "character_skill_level_to_effects_junctions_tables:2431fc5efb23c6ea6e91",
+          "table": "character_skill_level_to_effects_junctions_tables",
+          "sourceKey": {
+            "character_skill_key": "wh3_main_skill_lzd_skink_priest_unique_3",
+            "effect_key": "wh_main_effect_character_stat_magic_resistance",
+            "level": 1
+          },
+          "rawValue": 10,
+          "scope": "character_to_character_own"
+        },
+        {
+          "rowId": "character_skill_level_to_effects_junctions_tables:2a537864317b756f7260",
+          "table": "character_skill_level_to_effects_junctions_tables",
+          "sourceKey": {
+            "character_skill_key": "wh2_dlc09_skill_innate_tmb_proficient_caster",
+            "effect_key": "wh_main_effect_character_stat_magic_resistance",
+            "level": 1
+          },
+          "rawValue": 20,
+          "scope": "agent_to_parent_army_general_own"
+        },
+        {
+          "rowId": "character_skill_level_to_effects_junctions_tables:2ccb9d7ccb670a1fe6ce",
+          "table": "character_skill_level_to_effects_junctions_tables",
+          "sourceKey": {
+            "character_skill_key": "wh_main_skill_chs_lord_unique_lord_of_change_daemon_of_tzeentch",
+            "effect_key": "wh_main_effect_character_stat_magic_resistance",
+            "level": 1
+          },
+          "rawValue": 15,
+          "scope": "character_to_character_own"
+        },
+        {
+          "rowId": "character_skill_level_to_effects_junctions_tables:2e7a268ff905eb98689c",
+          "table": "character_skill_level_to_effects_junctions_tables",
+          "sourceKey": {
+            "character_skill_key": "wh2_main_skill_def_generic_ward_of_hekarti",
+            "effect_key": "wh_main_effect_character_stat_magic_resistance",
+            "level": 1
+          },
+          "rawValue": 10,
+          "scope": "character_to_character_own"
+        },
+        {
+          "rowId": "character_skill_level_to_effects_junctions_tables:3c14b527af63f46eadfe",
+          "table": "character_skill_level_to_effects_junctions_tables",
+          "sourceKey": {
+            "character_skill_key": "wh2_dlc09_skill_innate_tmb_master_of_ceremony",
+            "effect_key": "wh_main_effect_character_stat_magic_resistance",
+            "level": 1
+          },
+          "rawValue": 35,
+          "scope": "character_to_character_own"
+        },
+        {
+          "rowId": "character_skill_level_to_effects_junctions_tables:3f814a1b082c6ff47317",
+          "table": "character_skill_level_to_effects_junctions_tables",
+          "sourceKey": {
+            "character_skill_key": "wh3_dlc27_skill_innate_hef_mage_battle_7_protected_affinity",
+            "effect_key": "wh_main_effect_character_stat_magic_resistance",
+            "level": 1
+          },
+          "rawValue": 20,
+          "scope": "character_to_character_own"
+        },
+        {
+          "rowId": "character_skill_level_to_effects_junctions_tables:41d1d5f9c710029d7be6",
+          "table": "character_skill_level_to_effects_junctions_tables",
+          "sourceKey": {
+            "character_skill_key": "wh3_dlc24_skill_node_set_ksl_hag_witch_top_3",
+            "effect_key": "wh_main_effect_character_stat_magic_resistance",
+            "level": 1
+          },
+          "rawValue": 10,
+          "scope": "character_to_character_own"
+        },
+        {
+          "rowId": "character_skill_level_to_effects_junctions_tables:46adc8f3195c3bc32c21",
+          "table": "character_skill_level_to_effects_junctions_tables",
+          "sourceKey": {
+            "character_skill_key": "wh_dlc03_skill_bst_bray_shaman_unique_uncanny_senses",
+            "effect_key": "wh_main_effect_character_stat_magic_resistance",
+            "level": 1
+          },
+          "rawValue": 15,
+          "scope": "character_to_character_own"
+        },
+        {
+          "rowId": "character_skill_level_to_effects_junctions_tables:4bd10c3c31533fa9ce8a",
+          "table": "character_skill_level_to_effects_junctions_tables",
+          "sourceKey": {
+            "character_skill_key": "wh3_main_skill_ogr_generic_magic_ward",
+            "effect_key": "wh_main_effect_character_stat_magic_resistance",
+            "level": 1
+          },
+          "rawValue": 10,
+          "scope": "character_to_character_own"
+        },
+        {
+          "rowId": "character_skill_level_to_effects_junctions_tables:4f3292ff187a8df14984",
+          "table": "character_skill_level_to_effects_junctions_tables",
+          "sourceKey": {
+            "character_skill_key": "wh_dlc08_skill_nor_fimir_balefiend_unique_eye_of_the_balefiend",
+            "effect_key": "wh_main_effect_character_stat_magic_resistance",
+            "level": 2
+          },
+          "rawValue": 25,
+          "scope": "character_to_character_own"
+        },
+        {
+          "rowId": "character_skill_level_to_effects_junctions_tables:5fe6d12e6221330e77af",
+          "table": "character_skill_level_to_effects_junctions_tables",
+          "sourceKey": {
+            "character_skill_key": "wh_dlc08_skill_chs_kholek_unique_1",
+            "effect_key": "wh_main_effect_character_stat_magic_resistance",
+            "level": 1
+          },
+          "rawValue": 15,
+          "scope": "character_to_character_own"
+        },
+        {
+          "rowId": "character_skill_level_to_effects_junctions_tables:61f5bd63d5ed54145487",
+          "table": "character_skill_level_to_effects_junctions_tables",
+          "sourceKey": {
+            "character_skill_key": "wh3_dlc29_skill_nag_krell_unique_6",
+            "effect_key": "wh_main_effect_character_stat_magic_resistance",
+            "level": 1
+          },
+          "rawValue": 20,
+          "scope": "character_to_character_own"
+        },
+        {
+          "rowId": "character_skill_level_to_effects_junctions_tables:6643bd8ceaec87102aae",
+          "table": "character_skill_level_to_effects_junctions_tables",
+          "sourceKey": {
+            "character_skill_key": "wh3_dlc27_skill_innate_hef_mist_mage_battle_7_protected",
+            "effect_key": "wh_main_effect_character_stat_magic_resistance",
+            "level": 1
+          },
+          "rawValue": 20,
+          "scope": "character_to_character_own"
+        },
+        {
+          "rowId": "character_skill_level_to_effects_junctions_tables:6e0da3ec11648b87e8d6",
+          "table": "character_skill_level_to_effects_junctions_tables",
+          "sourceKey": {
+            "character_skill_key": "wh2_dlc09_skill_innate_tmb_dynasty_setep",
+            "effect_key": "wh_main_effect_character_stat_magic_resistance",
+            "level": 1
+          },
+          "rawValue": 35,
+          "scope": "general_to_force_own"
+        },
+        {
+          "rowId": "character_skill_level_to_effects_junctions_tables:70f006f0dafbdefc8d32",
+          "table": "character_skill_level_to_effects_junctions_tables",
+          "sourceKey": {
+            "character_skill_key": "wh3_dlc26_skill_ogr_slaughtermaster_personal_3",
+            "effect_key": "wh_main_effect_character_stat_magic_resistance",
+            "level": 1
+          },
+          "rawValue": 20,
+          "scope": "character_to_character_own"
+        },
+        {
+          "rowId": "character_skill_level_to_effects_junctions_tables:733ec8b657fa70ae50b6",
+          "table": "character_skill_level_to_effects_junctions_tables",
+          "sourceKey": {
+            "character_skill_key": "wh3_dlc27_skill_innate_hef_loremaster_battle_7_protected_affinity",
+            "effect_key": "wh_main_effect_character_stat_magic_resistance",
+            "level": 1
+          },
+          "rawValue": 10,
+          "scope": "character_to_character_own"
+        },
+        {
+          "rowId": "character_skill_level_to_effects_junctions_tables:77b804c03a7d8056ccc6",
+          "table": "character_skill_level_to_effects_junctions_tables",
+          "sourceKey": {
+            "character_skill_key": "wh_dlc08_skill_nor_fimir_balefiend_unique_eye_of_the_balefiend",
+            "effect_key": "wh_main_effect_character_stat_magic_resistance",
+            "level": 1
+          },
+          "rawValue": 15,
+          "scope": "character_to_character_own"
+        },
+        {
+          "rowId": "character_skill_level_to_effects_junctions_tables:7d4763a3c6fb8f5a1faa",
+          "table": "character_skill_level_to_effects_junctions_tables",
+          "sourceKey": {
+            "character_skill_key": "wh3_dlc27_skill_innate_hef_archmage_battle_7_protected_affinity",
+            "effect_key": "wh_main_effect_character_stat_magic_resistance",
+            "level": 1
+          },
+          "rawValue": 20,
+          "scope": "character_to_character_own"
+        },
+        {
+          "rowId": "character_skill_level_to_effects_junctions_tables:8184ad25e07d11db3abf",
+          "table": "character_skill_level_to_effects_junctions_tables",
+          "sourceKey": {
+            "character_skill_key": "wh2_main_skill_lzd_protection_of_the_old_ones",
+            "effect_key": "wh_main_effect_character_stat_magic_resistance",
+            "level": 1
+          },
+          "rawValue": 10,
+          "scope": "character_to_character_own"
+        },
+        {
+          "rowId": "character_skill_level_to_effects_junctions_tables:8531f69b38e3a4dc5ec8",
+          "table": "character_skill_level_to_effects_junctions_tables",
+          "sourceKey": {
+            "character_skill_key": "wh3_main_skill_innate_nurgle_4",
+            "effect_key": "wh_main_effect_character_stat_magic_resistance",
+            "level": 1
+          },
+          "rawValue": 15,
+          "scope": "character_to_character_own"
+        },
+        {
+          "rowId": "character_skill_level_to_effects_junctions_tables:90c410cb81c454073b89",
+          "table": "character_skill_level_to_effects_junctions_tables",
+          "sourceKey": {
+            "character_skill_key": "wh2_main_skill_def_morathi_1001_blessings",
+            "effect_key": "wh_main_effect_character_stat_magic_resistance",
+            "level": 2
+          },
+          "rawValue": 20,
+          "scope": "character_to_character_own"
+        },
+        {
+          "rowId": "character_skill_level_to_effects_junctions_tables:989058c18c19ab820bef",
+          "table": "character_skill_level_to_effects_junctions_tables",
+          "sourceKey": {
+            "character_skill_key": "wh3_main_skill_cth_all_unique_magic_resist",
+            "effect_key": "wh_main_effect_character_stat_magic_resistance",
+            "level": 1
+          },
+          "rawValue": 10,
+          "scope": "character_to_character_own"
+        },
+        {
+          "rowId": "character_skill_level_to_effects_junctions_tables:9dac7a1e76b1de5e4030",
+          "table": "character_skill_level_to_effects_junctions_tables",
+          "sourceKey": {
+            "character_skill_key": "wh3_dlc24_skill_ksl_golden_knight_bodyguard_2",
+            "effect_key": "wh_main_effect_character_stat_magic_resistance",
+            "level": 1
+          },
+          "rawValue": 10,
+          "scope": "character_to_character_own"
+        },
+        {
+          "rowId": "character_skill_level_to_effects_junctions_tables:9e097c97f6974129af19",
+          "table": "character_skill_level_to_effects_junctions_tables",
+          "sourceKey": {
+            "character_skill_key": "wh_dlc04_skill_emp_lord_unique_volkmar_the_grim_cooldown",
+            "effect_key": "wh_main_effect_character_stat_magic_resistance",
+            "level": 1
+          },
+          "rawValue": 10,
+          "scope": "general_to_force_own"
+        },
+        {
+          "rowId": "character_skill_level_to_effects_junctions_tables:9fcd1729e90f462e1f50",
+          "table": "character_skill_level_to_effects_junctions_tables",
+          "sourceKey": {
+            "character_skill_key": "wh3_main_skill_kho_all_unique_magic_resist",
+            "effect_key": "wh_main_effect_character_stat_magic_resistance",
+            "level": 1
+          },
+          "rawValue": 10,
+          "scope": "character_to_character_own"
+        },
+        {
+          "rowId": "character_skill_level_to_effects_junctions_tables:a4cec2350227e8dc0b33",
+          "table": "character_skill_level_to_effects_junctions_tables",
+          "sourceKey": {
+            "character_skill_key": "wh3_dlc27_skill_innate_hef_mist_mage_battle_7_protected_affinity",
+            "effect_key": "wh_main_effect_character_stat_magic_resistance",
+            "level": 1
+          },
+          "rawValue": 20,
+          "scope": "character_to_character_own"
+        },
+        {
+          "rowId": "character_skill_level_to_effects_junctions_tables:b1a822f72f505a4b0c23",
+          "table": "character_skill_level_to_effects_junctions_tables",
+          "sourceKey": {
+            "character_skill_key": "wh3_dlc29_skill_vmp_necromancer_unique_4",
+            "effect_key": "wh_main_effect_character_stat_magic_resistance",
+            "level": 1
+          },
+          "rawValue": 20,
+          "scope": "character_to_character_own"
+        },
+        {
+          "rowId": "character_skill_level_to_effects_junctions_tables:b4f7ff7967bb841b0cce",
+          "table": "character_skill_level_to_effects_junctions_tables",
+          "sourceKey": {
+            "character_skill_key": "wh2_dlc15_skill_innate_hef_archmage_battle_7_protected",
+            "effect_key": "wh_main_effect_character_stat_magic_resistance",
+            "level": 1
+          },
+          "rawValue": 20,
+          "scope": "character_to_character_own"
+        },
+        {
+          "rowId": "character_skill_level_to_effects_junctions_tables:b66a6f36a3da7d773b71",
+          "table": "character_skill_level_to_effects_junctions_tables",
+          "sourceKey": {
+            "character_skill_key": "wh3_dlc20_skill_shared_chs_cha_chaos_sorcerer_resilient",
+            "effect_key": "wh_main_effect_character_stat_magic_resistance",
+            "level": 1
+          },
+          "rawValue": 10,
+          "scope": "character_to_character_own"
+        },
+        {
+          "rowId": "character_skill_level_to_effects_junctions_tables:b82f37b0152120d14531",
+          "table": "character_skill_level_to_effects_junctions_tables",
+          "sourceKey": {
+            "character_skill_key": "wh2_dlc12_skill_skv_ikit_personal_2",
+            "effect_key": "wh_main_effect_character_stat_magic_resistance",
+            "level": 1
+          },
+          "rawValue": 20,
+          "scope": "character_to_character_own"
+        },
+        {
+          "rowId": "character_skill_level_to_effects_junctions_tables:b910edc1231b21602430",
+          "table": "character_skill_level_to_effects_junctions_tables",
+          "sourceKey": {
+            "character_skill_key": "wh2_main_skill_innate_hef_loremaster_battle_7_protected",
+            "effect_key": "wh_main_effect_character_stat_magic_resistance",
+            "level": 1
+          },
+          "rawValue": 10,
+          "scope": "character_to_character_own"
+        },
+        {
+          "rowId": "character_skill_level_to_effects_junctions_tables:c544045fc9a49decfed9",
+          "table": "character_skill_level_to_effects_junctions_tables",
+          "sourceKey": {
+            "character_skill_key": "wh3_dlc29_skill_emp_battle_prayers_capstone",
+            "effect_key": "wh_main_effect_character_stat_magic_resistance",
+            "level": 1
+          },
+          "rawValue": 10,
+          "scope": "character_to_character_own"
+        },
+        {
+          "rowId": "character_skill_level_to_effects_junctions_tables:ccaa5ebf9c708ea863ce",
+          "table": "character_skill_level_to_effects_junctions_tables",
+          "sourceKey": {
+            "character_skill_key": "wh3_dlc25_skill_emp_all_unique_mark_of_hysh",
+            "effect_key": "wh_main_effect_character_stat_magic_resistance",
+            "level": 1
+          },
+          "rawValue": 10,
+          "scope": "character_to_character_own"
+        },
+        {
+          "rowId": "character_skill_level_to_effects_junctions_tables:ce6b478204cd96ca01dc",
+          "table": "character_skill_level_to_effects_junctions_tables",
+          "sourceKey": {
+            "character_skill_key": "wh2_dlc13_skill_lzd_gor_rok_unique_1",
+            "effect_key": "wh_main_effect_character_stat_magic_resistance",
+            "level": 1
+          },
+          "rawValue": 15,
+          "scope": "character_to_character_own"
+        },
+        {
+          "rowId": "character_skill_level_to_effects_junctions_tables:cecd3c1ad567e8522164",
+          "table": "character_skill_level_to_effects_junctions_tables",
+          "sourceKey": {
+            "character_skill_key": "wh3_dlc29_skill_skv_verminlord_warpseer_unique_3",
+            "effect_key": "wh_main_effect_character_stat_magic_resistance",
+            "level": 1
+          },
+          "rawValue": 30,
+          "scope": "character_to_character_own"
+        },
+        {
+          "rowId": "character_skill_level_to_effects_junctions_tables:d484fb34c047647dc63b",
+          "table": "character_skill_level_to_effects_junctions_tables",
+          "sourceKey": {
+            "character_skill_key": "wh3_dlc26_skill_ogr_unique_butcher_gore_soaked_ritualist",
+            "effect_key": "wh_main_effect_character_stat_magic_resistance",
+            "level": 1
+          },
+          "rawValue": 10,
+          "scope": "character_to_character_own"
+        },
+        {
+          "rowId": "character_skill_level_to_effects_junctions_tables:da2dded332787ceb4f44",
+          "table": "character_skill_level_to_effects_junctions_tables",
+          "sourceKey": {
+            "character_skill_key": "wh3_dlc23_skill_ksl_ulrika_unique_spell_resist",
+            "effect_key": "wh_main_effect_character_stat_magic_resistance",
+            "level": 1
+          },
+          "rawValue": 15,
+          "scope": "character_to_character_own"
+        },
+        {
+          "rowId": "character_skill_level_to_effects_junctions_tables:df7123734aa2a285be96",
+          "table": "character_skill_level_to_effects_junctions_tables",
+          "sourceKey": {
+            "character_skill_key": "wh2_dlc09_skill_tmb_tomb_king_trapped_soul",
+            "effect_key": "wh_main_effect_character_stat_magic_resistance",
+            "level": 1
+          },
+          "rawValue": 15,
+          "scope": "character_to_character_own"
+        },
+        {
+          "rowId": "character_skill_level_to_effects_junctions_tables:e8c930585cb9923d9edb",
+          "table": "character_skill_level_to_effects_junctions_tables",
+          "sourceKey": {
+            "character_skill_key": "wh2_main_skill_def_morathi_1001_blessings",
+            "effect_key": "wh_main_effect_character_stat_magic_resistance",
+            "level": 1
+          },
+          "rawValue": 10,
+          "scope": "character_to_character_own"
+        },
+        {
+          "rowId": "character_skill_level_to_effects_junctions_tables:f78f9d548da0b169cff0",
+          "table": "character_skill_level_to_effects_junctions_tables",
+          "sourceKey": {
+            "character_skill_key": "wh2_main_skill_hef_generic_warding_of_hoeth",
+            "effect_key": "wh_main_effect_character_stat_magic_resistance",
+            "level": 1
+          },
+          "rawValue": 10,
+          "scope": "character_to_character_own"
+        },
+        {
+          "rowId": "character_skill_level_to_effects_junctions_tables:fc63dfe66d7b96abe181",
+          "table": "character_skill_level_to_effects_junctions_tables",
+          "sourceKey": {
+            "character_skill_key": "wh2_dlc16_wef_ariel_battle_0",
+            "effect_key": "wh_main_effect_character_stat_magic_resistance",
+            "level": 1
+          },
+          "rawValue": 25,
+          "scope": "character_to_character_own"
+        },
+        {
+          "rowId": "character_skill_level_to_effects_junctions_tables:fc90ef55abab184a6d76",
+          "table": "character_skill_level_to_effects_junctions_tables",
+          "sourceKey": {
+            "character_skill_key": "wh3_main_skill_lzd_disciplines_soul_of_stone",
+            "effect_key": "wh_main_effect_character_stat_magic_resistance",
+            "level": 1
+          },
+          "rawValue": 20,
+          "scope": "character_to_character_own"
+        },
+        {
+          "rowId": "character_skill_level_to_effects_junctions_tables:fdd84f3ec4ad79596ed5",
+          "table": "character_skill_level_to_effects_junctions_tables",
+          "sourceKey": {
+            "character_skill_key": "wh2_main_skill_innate_hef_mage_battle_7_protected",
+            "effect_key": "wh_main_effect_character_stat_magic_resistance",
+            "level": 1
+          },
+          "rawValue": 20,
+          "scope": "character_to_character_own"
+        },
+        {
+          "rowId": "technology_effects_junction_tables:7b2fd48a6e1dc01c4ea0",
+          "table": "technology_effects_junction_tables",
+          "sourceKey": {
+            "technology": "wh3_dlc24_tech_the_changeling_fires_of_change",
+            "effect": "wh_main_effect_character_stat_magic_resistance"
+          },
+          "rawValue": 25,
+          "scope": "faction_to_character_own"
+        },
+        {
+          "rowId": "trait_level_effects_tables:178180704316732b9b63",
+          "table": "trait_level_effects_tables",
+          "sourceKey": {
+            "trait_level": "wh3_dlc24_trait_defeated_mother_ostankya",
+            "effect": "wh_main_effect_character_stat_magic_resistance"
+          },
+          "rawValue": 5,
+          "scope": "general_to_force_own"
+        },
+        {
+          "rowId": "trait_level_effects_tables:1a00d6d9dc0c3c2a30bf",
+          "table": "trait_level_effects_tables",
+          "sourceKey": {
+            "trait_level": "wh2_dlc11_trait_defeated_luthor_harkon",
+            "effect": "wh_main_effect_character_stat_magic_resistance"
+          },
+          "rawValue": 15,
+          "scope": "character_to_character_own"
+        },
+        {
+          "rowId": "trait_level_effects_tables:2c94db678de8987adeca",
+          "table": "trait_level_effects_tables",
+          "sourceKey": {
+            "trait_level": "wh2_main_trait_defeated_archaon_the_everchosen",
+            "effect": "wh_main_effect_character_stat_magic_resistance"
+          },
+          "rawValue": 10,
+          "scope": "character_to_character_own"
+        },
+        {
+          "rowId": "trait_level_effects_tables:6cfec665d228d6f256cf",
+          "table": "trait_level_effects_tables",
+          "sourceKey": {
+            "trait_level": "wh2_main_trait_defeated_azhag_the_slaughterer",
+            "effect": "wh_main_effect_character_stat_magic_resistance"
+          },
+          "rawValue": 30,
+          "scope": "character_to_character_own"
+        },
+        {
+          "rowId": "trait_level_effects_tables:8317c920992e0611804e",
+          "table": "trait_level_effects_tables",
+          "sourceKey": {
+            "trait_level": "wh_dlc23_trait_defeated_astragoth",
+            "effect": "wh_main_effect_character_stat_magic_resistance"
+          },
+          "rawValue": 15,
+          "scope": "character_to_character_own"
+        },
+        {
+          "rowId": "trait_level_effects_tables:891955efcf641e931bfe",
+          "table": "trait_level_effects_tables",
+          "sourceKey": {
+            "trait_level": "wh3_dlc29_trait_defeated_glottkin",
+            "effect": "wh_main_effect_character_stat_magic_resistance"
+          },
+          "rawValue": 10,
+          "scope": "character_to_character_own"
+        },
+        {
+          "rowId": "trait_level_effects_tables:963d603e3a0839d14765",
+          "table": "trait_level_effects_tables",
+          "sourceKey": {
+            "trait_level": "wh2_main_trait_defeated_ungrim_ironfist",
+            "effect": "wh_main_effect_character_stat_magic_resistance"
+          },
+          "rawValue": 5,
+          "scope": "character_to_character_own"
+        },
+        {
+          "rowId": "trait_level_effects_tables:d5c7f31fae1177c8e49e",
+          "table": "trait_level_effects_tables",
+          "sourceKey": {
+            "trait_level": "wh2_dlc09_dummy_trait_dynasty_5",
+            "effect": "wh_main_effect_character_stat_magic_resistance"
+          },
+          "rawValue": 35,
+          "scope": "general_to_force_own"
+        },
+        {
+          "rowId": "effect_bundles_to_effects_junctions_tables:1de0ce2c36e4a32130f6",
+          "table": "effect_bundles_to_effects_junctions_tables",
+          "sourceKey": {
+            "effect_bundle_key": "wh3_dlc29_skv_chaotic_plans_enable_chieftain_abilities_3",
+            "effect_key": "wh_main_effect_character_stat_magic_resistance"
+          },
+          "rawValue": 10,
+          "scope": "character_to_character_own"
+        },
+        {
+          "rowId": "effect_bundles_to_effects_junctions_tables:24d2d00463e6b4331497",
+          "table": "effect_bundles_to_effects_junctions_tables",
+          "sourceKey": {
+            "effect_bundle_key": "wh3_dlc26_golgfag_contract_anc_banner_runes_of_protection",
+            "effect_key": "wh_main_effect_character_stat_magic_resistance"
+          },
+          "rawValue": 35,
+          "scope": "character_to_character_own_banner_maneater"
+        },
+        {
+          "rowId": "effect_bundles_to_effects_junctions_tables:2be36595dc6339c06cea",
+          "table": "effect_bundles_to_effects_junctions_tables",
+          "sourceKey": {
+            "effect_bundle_key": "wh_main_bundle_anc_rune_master_rune_of_valaya",
+            "effect_key": "wh_main_effect_character_stat_magic_resistance"
+          },
+          "rawValue": 50,
+          "scope": "character_to_character_own_banner_not_character"
+        },
+        {
+          "rowId": "effect_bundles_to_effects_junctions_tables:2d074ae8613a4e8bf11c",
+          "table": "effect_bundles_to_effects_junctions_tables",
+          "sourceKey": {
+            "effect_bundle_key": "wh3_dlc29_skv_chaotic_plans_enable_plague_priest_spells_3",
+            "effect_key": "wh_main_effect_character_stat_magic_resistance"
+          },
+          "rawValue": 10,
+          "scope": "character_to_character_own"
+        },
+        {
+          "rowId": "effect_bundles_to_effects_junctions_tables:36a6f51a47476fd468c6",
+          "table": "effect_bundles_to_effects_junctions_tables",
+          "sourceKey": {
+            "effect_bundle_key": "wh3_dlc29_skv_chaotic_plans_enable_packmaster_abilities_3",
+            "effect_key": "wh_main_effect_character_stat_magic_resistance"
+          },
+          "rawValue": 10,
+          "scope": "character_to_character_own"
+        },
+        {
+          "rowId": "effect_bundles_to_effects_junctions_tables:36dcb18bb8f0136ccd33",
+          "table": "effect_bundles_to_effects_junctions_tables",
+          "sourceKey": {
+            "effect_bundle_key": "wh_main_bundle_anc_magic_standard_lichbone_pennant",
+            "effect_key": "wh_main_effect_character_stat_magic_resistance"
+          },
+          "rawValue": 25,
+          "scope": "character_to_character_own_banner"
+        },
+        {
+          "rowId": "effect_bundles_to_effects_junctions_tables:4c4506a602f9c54cd302",
+          "table": "effect_bundles_to_effects_junctions_tables",
+          "sourceKey": {
+            "effect_bundle_key": "wh3_dlc29_skv_chaotic_plans_enable_eshin_sorceror_spells_3",
+            "effect_key": "wh_main_effect_character_stat_magic_resistance"
+          },
+          "rawValue": 10,
+          "scope": "character_to_character_own"
+        },
+        {
+          "rowId": "effect_bundles_to_effects_junctions_tables:5c012a05812e681d4b70",
+          "table": "effect_bundles_to_effects_junctions_tables",
+          "sourceKey": {
+            "effect_bundle_key": "wh3_dlc29_skv_chaotic_plans_enable_warlock_engineer_spells_3",
+            "effect_key": "wh_main_effect_character_stat_magic_resistance"
+          },
+          "rawValue": 10,
+          "scope": "character_to_character_own"
+        },
+        {
+          "rowId": "effect_bundles_to_effects_junctions_tables:6904a59f4a8de28c21ce",
+          "table": "effect_bundles_to_effects_junctions_tables",
+          "sourceKey": {
+            "effect_bundle_key": "wh_main_bundle_anc_rune_master_rune_of_sanctuary",
+            "effect_key": "wh_main_effect_character_stat_magic_resistance"
+          },
+          "rawValue": 30,
+          "scope": "character_to_character_own_banner_not_character"
+        },
+        {
+          "rowId": "effect_bundles_to_effects_junctions_tables:694a0631499fb64f1c21",
+          "table": "effect_bundles_to_effects_junctions_tables",
+          "sourceKey": {
+            "effect_bundle_key": "wh3_dlc29_skv_chaotic_plans_enable_plague_priest_spells_2",
+            "effect_key": "wh_main_effect_character_stat_magic_resistance"
+          },
+          "rawValue": 10,
+          "scope": "character_to_character_own"
+        },
+        {
+          "rowId": "effect_bundles_to_effects_junctions_tables:6d4f513e050eaaa90e3e",
+          "table": "effect_bundles_to_effects_junctions_tables",
+          "sourceKey": {
+            "effect_bundle_key": "wh3_dlc29_skv_chaotic_plans_enable_assassin_abilities_3",
+            "effect_key": "wh_main_effect_character_stat_magic_resistance"
+          },
+          "rawValue": 10,
+          "scope": "character_to_character_own"
+        },
+        {
+          "rowId": "effect_bundles_to_effects_junctions_tables:6d812ad1d25a63b3ffbe",
+          "table": "effect_bundles_to_effects_junctions_tables",
+          "sourceKey": {
+            "effect_bundle_key": "wh_main_bundle_anc_magic_standard_morks_war_banner",
+            "effect_key": "wh_main_effect_character_stat_magic_resistance"
+          },
+          "rawValue": 35,
+          "scope": "character_to_character_own_banner"
+        },
+        {
+          "rowId": "effect_bundles_to_effects_junctions_tables:7b2e24c21c65d2bc77cb",
+          "table": "effect_bundles_to_effects_junctions_tables",
+          "sourceKey": {
+            "effect_bundle_key": "wh3_dlc29_skv_chaotic_plans_enable_warlock_engineer_spells_2",
+            "effect_key": "wh_main_effect_character_stat_magic_resistance"
+          },
+          "rawValue": 10,
+          "scope": "character_to_character_own"
+        },
+        {
+          "rowId": "effect_bundles_to_effects_junctions_tables:ac7a34ff725ebf0c28a7",
+          "table": "effect_bundles_to_effects_junctions_tables",
+          "sourceKey": {
+            "effect_bundle_key": "wh2_dlc16_throt_flesh_lab_inf_aug_1",
+            "effect_key": "wh_main_effect_character_stat_magic_resistance"
+          },
+          "rawValue": 15,
+          "scope": "character_to_character_own"
+        },
+        {
+          "rowId": "effect_bundles_to_effects_junctions_tables:c05098c5d95ba1510034",
+          "table": "effect_bundles_to_effects_junctions_tables",
+          "sourceKey": {
+            "effect_bundle_key": "wh3_dlc29_skv_chaotic_plans_enable_assassin_abilities_2",
+            "effect_key": "wh_main_effect_character_stat_magic_resistance"
+          },
+          "rawValue": 10,
+          "scope": "character_to_character_own"
+        },
+        {
+          "rowId": "effect_bundles_to_effects_junctions_tables:cb294a2d0d926953a704",
+          "table": "effect_bundles_to_effects_junctions_tables",
+          "sourceKey": {
+            "effect_bundle_key": "wh3_dlc29_skv_chaotic_plans_enable_chieftain_abilities_2",
+            "effect_key": "wh_main_effect_character_stat_magic_resistance"
+          },
+          "rawValue": 10,
+          "scope": "character_to_character_own"
+        },
+        {
+          "rowId": "effect_bundles_to_effects_junctions_tables:d0a83fe5451fa185a71a",
+          "table": "effect_bundles_to_effects_junctions_tables",
+          "sourceKey": {
+            "effect_bundle_key": "wh3_dlc29_skv_chaotic_plans_enable_eshin_sorceror_spells_2",
+            "effect_key": "wh_main_effect_character_stat_magic_resistance"
+          },
+          "rawValue": 10,
+          "scope": "character_to_character_own"
+        },
+        {
+          "rowId": "effect_bundles_to_effects_junctions_tables:dfb8f7383f3653f28ae3",
+          "table": "effect_bundles_to_effects_junctions_tables",
+          "sourceKey": {
+            "effect_bundle_key": "wh_dlc05_bundle_anc_magic_standard_the_banner_of_the_eternal_queen",
+            "effect_key": "wh_main_effect_character_stat_magic_resistance"
+          },
+          "rawValue": 25,
+          "scope": "character_to_character_own_banner"
+        },
+        {
+          "rowId": "effect_bundles_to_effects_junctions_tables:f26893bc7f65273faa7f",
+          "table": "effect_bundles_to_effects_junctions_tables",
+          "sourceKey": {
+            "effect_bundle_key": "wh2_main_bundle_anc_magic_standard_banner_of_the_world_dragon",
+            "effect_key": "wh_main_effect_character_stat_magic_resistance"
+          },
+          "rawValue": 25,
+          "scope": "character_to_character_own_banner"
+        },
+        {
+          "rowId": "effect_bundles_to_effects_junctions_tables:f284f5b1c5b65c1121b5",
+          "table": "effect_bundles_to_effects_junctions_tables",
+          "sourceKey": {
+            "effect_bundle_key": "wh3_dlc29_skv_chaotic_plans_enable_packmaster_abilities_2",
+            "effect_key": "wh_main_effect_character_stat_magic_resistance"
+          },
+          "rawValue": 10,
+          "scope": "character_to_character_own"
+        }
+      ],
+      "declaredOperation": null,
+      "runtime": "NOT_OBSERVED",
+      "operationEvidence": "SAME_TYPED_BONUS_NO_DECLARED_OPERATION",
+      "definitionOnlyInQueriedUsageTables": false
+    }
+  ],
+  "phaseCounterexamples": [
+    {
+      "rowId": "special_ability_phase_stat_effects_tables:08aed4c45d2a15656303",
+      "phase": "wh3_dlc23_lord_passive_presence_of_the_master_runelord",
+      "value": 20,
+      "stat": "stat_resistance_magic",
+      "how": "add",
+      "sourceDeclaresHow": true,
+      "transfersToCampaignBonus": false,
+      "reason": "Ability-phase how directly declares only this phase operation. No FK/declaration links it to the campaign unit-set bonus implementation."
+    }
+  ],
+  "reviewedExistingSameBonusAdmissions": [],
+  "noPhaseOrOtherResistanceTypeOperationTransfer": true
+}
