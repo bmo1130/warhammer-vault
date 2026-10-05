@@ -1,0 +1,2 @@
+# Original runtime capture bytes include CRLF.
+runtime-1150-original.jsonl -text -whitespace

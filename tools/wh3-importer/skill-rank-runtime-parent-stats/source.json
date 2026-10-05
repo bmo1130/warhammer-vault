@@ -1,0 +1,368 @@
+{
+  "format": "wh3-parent-details-runtime-source-v1",
+  "baseline": "b61c19a6ec352b4d8fe2cb377b45d7d619f1e305",
+  "input": {
+    "path": "C:/Users/lsh12/OneDrive/Desktop/script_log_051026_1150.txt",
+    "bytes": 336250,
+    "sha256": "cff2b578c290745b238721b4ba5823faf04259ac78a4eec232b4b9ea9c6852fd",
+    "reference": {
+      "file": "C:/Users/lsh12/OneDrive/Desktop/script_log_051026_1150.txt",
+      "line": 3004,
+      "inputSha256": "cff2b578c290745b238721b4ba5823faf04259ac78a4eec232b4b9ea9c6852fd"
+    },
+    "captureSha256": "b1ace97558cf6e229a8a92d56253fe7a9f9893048bedf5be9ab33df919c69f19",
+    "excerpt": "runtime-1150-original.jsonl"
+  },
+  "owner": {
+    "AgentSubtypeRecordContextKey": {
+      "status": "VALUE",
+      "value": "wh_main_brt_lord"
+    },
+    "CQI": {
+      "status": "VALUE",
+      "value": 1065
+    },
+    "CurrentXp": {
+      "status": "VALUE",
+      "value": 99999
+    },
+    "HasUncommitedSkills": {
+      "status": "VALUE",
+      "value": false
+    },
+    "IsPlayerCharacter": {
+      "status": "VALUE",
+      "value": true
+    },
+    "Rank": {
+      "status": "VALUE",
+      "value": 32
+    }
+  },
+  "force": {
+    "CQI": {
+      "status": "VALUE",
+      "value": 949
+    },
+    "CommandingCharacterCQI": {
+      "status": "VALUE",
+      "value": 1065
+    },
+    "IsPreviewingStance": {
+      "status": "VALUE",
+      "value": true
+    },
+    "StanceKey": {
+      "status": "VALUE",
+      "value": "MILITARY_FORCE_ACTIVE_STANCE_TYPE_DEFAULT"
+    }
+  },
+  "units": [
+    {
+      "mainKey": {
+        "status": "VALUE",
+        "value": "wh_main_brt_inf_men_at_arms"
+      },
+      "landKey": {
+        "status": "VALUE",
+        "value": "wh_main_brt_inf_men_at_arms"
+      },
+      "unitId": {
+        "status": "VALUE",
+        "value": "8078"
+      },
+      "detailsAccess": {
+        "query": "UnitDetailsContext.PreBonusUnitDetailsContext",
+        "status": "CONTEXT"
+      },
+      "size": {
+        "status": "VALUE",
+        "value": 7
+      },
+      "rows": [
+        {
+          "index": 0,
+          "access": {
+            "query": "StatList.At(0)",
+            "status": "NULL"
+          },
+          "luaType": "nil",
+          "key": {
+            "status": "VALUE",
+            "value": "stat_armour"
+          },
+          "value": {
+            "status": "VALUE",
+            "value": 30
+          },
+          "keyQuery": "CcoCampaignUnit.UnitDetailsContext.PreBonusUnitDetailsContext.StatList.At(0).Key",
+          "valueQuery": "CcoCampaignUnit.UnitDetailsContext.PreBonusUnitDetailsContext.StatList.At(0).Value"
+        },
+        {
+          "index": 1,
+          "access": {
+            "query": "StatList.At(1)",
+            "status": "NULL"
+          },
+          "luaType": "nil",
+          "key": {
+            "status": "VALUE",
+            "value": "stat_morale"
+          },
+          "value": {
+            "status": "VALUE",
+            "value": 52
+          },
+          "keyQuery": "CcoCampaignUnit.UnitDetailsContext.PreBonusUnitDetailsContext.StatList.At(1).Key",
+          "valueQuery": "CcoCampaignUnit.UnitDetailsContext.PreBonusUnitDetailsContext.StatList.At(1).Value"
+        },
+        {
+          "index": 2,
+          "access": {
+            "query": "StatList.At(2)",
+            "status": "NULL"
+          },
+          "luaType": "nil",
+          "key": {
+            "status": "VALUE",
+            "value": "scalar_speed"
+          },
+          "value": {
+            "status": "VALUE",
+            "value": 30
+          },
+          "keyQuery": "CcoCampaignUnit.UnitDetailsContext.PreBonusUnitDetailsContext.StatList.At(2).Key",
+          "valueQuery": "CcoCampaignUnit.UnitDetailsContext.PreBonusUnitDetailsContext.StatList.At(2).Value"
+        },
+        {
+          "index": 3,
+          "access": {
+            "query": "StatList.At(3)",
+            "status": "NULL"
+          },
+          "luaType": "nil",
+          "key": {
+            "status": "VALUE",
+            "value": "stat_melee_attack"
+          },
+          "value": {
+            "status": "VALUE",
+            "value": 22
+          },
+          "keyQuery": "CcoCampaignUnit.UnitDetailsContext.PreBonusUnitDetailsContext.StatList.At(3).Key",
+          "valueQuery": "CcoCampaignUnit.UnitDetailsContext.PreBonusUnitDetailsContext.StatList.At(3).Value"
+        },
+        {
+          "index": 4,
+          "access": {
+            "query": "StatList.At(4)",
+            "status": "NULL"
+          },
+          "luaType": "nil",
+          "key": {
+            "status": "VALUE",
+            "value": "stat_melee_defence"
+          },
+          "value": {
+            "status": "VALUE",
+            "value": 40
+          },
+          "keyQuery": "CcoCampaignUnit.UnitDetailsContext.PreBonusUnitDetailsContext.StatList.At(4).Key",
+          "valueQuery": "CcoCampaignUnit.UnitDetailsContext.PreBonusUnitDetailsContext.StatList.At(4).Value"
+        },
+        {
+          "index": 5,
+          "access": {
+            "query": "StatList.At(5)",
+            "status": "NULL"
+          },
+          "luaType": "nil",
+          "key": {
+            "status": "VALUE",
+            "value": "stat_weapon_damage"
+          },
+          "value": {
+            "status": "VALUE",
+            "value": 25
+          },
+          "keyQuery": "CcoCampaignUnit.UnitDetailsContext.PreBonusUnitDetailsContext.StatList.At(5).Key",
+          "valueQuery": "CcoCampaignUnit.UnitDetailsContext.PreBonusUnitDetailsContext.StatList.At(5).Value"
+        },
+        {
+          "index": 6,
+          "access": {
+            "query": "StatList.At(6)",
+            "status": "NULL"
+          },
+          "luaType": "nil",
+          "key": {
+            "status": "VALUE",
+            "value": "stat_charge_bonus"
+          },
+          "value": {
+            "status": "VALUE",
+            "value": 6
+          },
+          "keyQuery": "CcoCampaignUnit.UnitDetailsContext.PreBonusUnitDetailsContext.StatList.At(6).Key",
+          "valueQuery": "CcoCampaignUnit.UnitDetailsContext.PreBonusUnitDetailsContext.StatList.At(6).Value"
+        }
+      ]
+    },
+    {
+      "mainKey": {
+        "status": "VALUE",
+        "value": "wh_dlc07_brt_inf_foot_squires_0"
+      },
+      "landKey": {
+        "status": "VALUE",
+        "value": "wh_dlc07_brt_inf_foot_squires_0"
+      },
+      "unitId": {
+        "status": "VALUE",
+        "value": "8079"
+      },
+      "detailsAccess": {
+        "query": "UnitDetailsContext.PreBonusUnitDetailsContext",
+        "status": "CONTEXT"
+      },
+      "size": {
+        "status": "VALUE",
+        "value": 7
+      },
+      "rows": [
+        {
+          "index": 0,
+          "access": {
+            "query": "StatList.At(0)",
+            "status": "NULL"
+          },
+          "luaType": "nil",
+          "key": {
+            "status": "VALUE",
+            "value": "stat_armour"
+          },
+          "value": {
+            "status": "VALUE",
+            "value": 70
+          },
+          "keyQuery": "CcoCampaignUnit.UnitDetailsContext.PreBonusUnitDetailsContext.StatList.At(0).Key",
+          "valueQuery": "CcoCampaignUnit.UnitDetailsContext.PreBonusUnitDetailsContext.StatList.At(0).Value"
+        },
+        {
+          "index": 1,
+          "access": {
+            "query": "StatList.At(1)",
+            "status": "NULL"
+          },
+          "luaType": "nil",
+          "key": {
+            "status": "VALUE",
+            "value": "stat_morale"
+          },
+          "value": {
+            "status": "VALUE",
+            "value": 72
+          },
+          "keyQuery": "CcoCampaignUnit.UnitDetailsContext.PreBonusUnitDetailsContext.StatList.At(1).Key",
+          "valueQuery": "CcoCampaignUnit.UnitDetailsContext.PreBonusUnitDetailsContext.StatList.At(1).Value"
+        },
+        {
+          "index": 2,
+          "access": {
+            "query": "StatList.At(2)",
+            "status": "NULL"
+          },
+          "luaType": "nil",
+          "key": {
+            "status": "VALUE",
+            "value": "scalar_speed"
+          },
+          "value": {
+            "status": "VALUE",
+            "value": 28
+          },
+          "keyQuery": "CcoCampaignUnit.UnitDetailsContext.PreBonusUnitDetailsContext.StatList.At(2).Key",
+          "valueQuery": "CcoCampaignUnit.UnitDetailsContext.PreBonusUnitDetailsContext.StatList.At(2).Value"
+        },
+        {
+          "index": 3,
+          "access": {
+            "query": "StatList.At(3)",
+            "status": "NULL"
+          },
+          "luaType": "nil",
+          "key": {
+            "status": "VALUE",
+            "value": "stat_melee_attack"
+          },
+          "value": {
+            "status": "VALUE",
+            "value": 28
+          },
+          "keyQuery": "CcoCampaignUnit.UnitDetailsContext.PreBonusUnitDetailsContext.StatList.At(3).Key",
+          "valueQuery": "CcoCampaignUnit.UnitDetailsContext.PreBonusUnitDetailsContext.StatList.At(3).Value"
+        },
+        {
+          "index": 4,
+          "access": {
+            "query": "StatList.At(4)",
+            "status": "NULL"
+          },
+          "luaType": "nil",
+          "key": {
+            "status": "VALUE",
+            "value": "stat_melee_defence"
+          },
+          "value": {
+            "status": "VALUE",
+            "value": 26
+          },
+          "keyQuery": "CcoCampaignUnit.UnitDetailsContext.PreBonusUnitDetailsContext.StatList.At(4).Key",
+          "valueQuery": "CcoCampaignUnit.UnitDetailsContext.PreBonusUnitDetailsContext.StatList.At(4).Value"
+        },
+        {
+          "index": 5,
+          "access": {
+            "query": "StatList.At(5)",
+            "status": "NULL"
+          },
+          "luaType": "nil",
+          "key": {
+            "status": "VALUE",
+            "value": "stat_weapon_damage"
+          },
+          "value": {
+            "status": "VALUE",
+            "value": 35
+          },
+          "keyQuery": "CcoCampaignUnit.UnitDetailsContext.PreBonusUnitDetailsContext.StatList.At(5).Key",
+          "valueQuery": "CcoCampaignUnit.UnitDetailsContext.PreBonusUnitDetailsContext.StatList.At(5).Value"
+        },
+        {
+          "index": 6,
+          "access": {
+            "query": "StatList.At(6)",
+            "status": "NULL"
+          },
+          "luaType": "nil",
+          "key": {
+            "status": "VALUE",
+            "value": "stat_charge_bonus"
+          },
+          "value": {
+            "status": "VALUE",
+            "value": 18
+          },
+          "keyQuery": "CcoCampaignUnit.UnitDetailsContext.PreBonusUnitDetailsContext.StatList.At(6).Key",
+          "valueQuery": "CcoCampaignUnit.UnitDetailsContext.PreBonusUnitDetailsContext.StatList.At(6).Value"
+        }
+      ]
+    }
+  ],
+  "observedPath": "PARENT_DETAILS_STAT_LIST_KEY_VALUE",
+  "materialization": "NULL_FOR_ALL_14_ITEMS",
+  "canonicalNewCapture": "NOT_OBSERVED",
+  "multiRankSemantics": "UNKNOWN",
+  "newAdmission": 0,
+  "controlBlocker": "IsPreviewingStance=true: original rank-trial validator remains unchanged"
+}
