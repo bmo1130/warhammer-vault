@@ -6,7 +6,7 @@ import type { ManualModifierProfile } from './manualModifierProfile';
 export type * from './unit';
 export type SourceInfo = { gameVersion: string; source: string; tags: string[]; updatedAt?: string };
 export type Faction = SourceInfo & { id: string; name: string; subtitle: string; description: string };
-export type CharacterIdentity = { characterKind: 'legendary_lord' | 'generic_lord' | 'legendary_hero' | 'generic_hero'; subtypeKey: string; subtypeAliases: string[]; mainKey: string; landKey: string; factionIds?: string[] };
+export type CharacterIdentity = { characterKind: 'legendary_lord' | 'generic_lord' | 'special_lord' | 'legendary_hero' | 'generic_hero' | 'special_hero'; subtypeKey: string; subtypeAliases: string[]; mainKey: string; landKey: string; factionIds?: string[] };
 export type Lord = SourceInfo & CharacterIdentity & { id: string; name: string; factionId: string; title: string; summary: string; unitIds: string[] };
 export type Hero = SourceInfo & CharacterIdentity & { id: string; name: string; factionId: string; category: string };
 export type Research = SourceInfo & { id: string; name: string; factionId: string; description: string; modifierIds: string[] };

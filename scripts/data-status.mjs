@@ -21,4 +21,4 @@ console.log('Roster workflow: tools/wh3-importer/faction-rosters/ROSTERS.md');
 console.log('  Check: node scripts/review-faction-rosters.mjs --check');
 console.log('  Extract: node scripts/extract-faction-rosters.mjs (reviewed local WH3/RPFM required)');
 console.log('No automatic admission. Historical mobile steps: docs/MOBILE_MVP.md');
-console.log('USER ACTION: stance-preview 5-state F9 diagnostic first; rank trial remains blocked/UNKNOWN.');
+console.log('Next closure: high_elves — five Dragonship captain acquisition/name/trait identities are HOLD.');

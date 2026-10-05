@@ -117,6 +117,6 @@ test('protected admission/diagnostic/shared identities retain baseline bytes as 
     'unitSharedIdentities.json': '3e256bf5c850df65e70a539062a5109a36c75757f8f3a34bc75d8b492aa9d13e',
   };
   for (const [file, sha] of Object.entries(expected)) assert.equal(hash(readFileSync(`src/data/${file}`)), sha, file);
-  assert.equal(comparisonOptions().length, 478);
+  assert.equal(comparisonOptions().length, require('../src/data/units.json').filter(u => u.gameVersion !== 'sample').length);
   assert.equal(JSON.parse(readFileSync('src/data/units.json')).filter(u => u.gameVersion === 'sample').length, 5);
 });

@@ -2,11 +2,14 @@
 
 Total War: Warhammer III 개인 위키의 첫 버전입니다. 원본 게임 데이터와 개인 기록을 분리했습니다.
 
-현재 source-driven race roster는 **9개 ROSTER COMPLETE**입니다.
-Production Units 478개 · Lords 138개 · Heroes 87개이며, 각 팩션에서 전설/일반 군주·영웅과 유닛을 구분해 개인 문서를 작성할 수 있습니다.
+현재 source-driven race roster는 **23개 ROSTER COMPLETE**입니다.
+Production Units 1,110개 · canonical Lords 284개 · Heroes 210개이며, 각 팩션에서 전설/일반/특수 군주·영웅과 유닛을 구분해 개인 문서를 작성할 수 있습니다.
 [범위·inventory·제외·데이터 투입 방법](tools/wh3-importer/faction-rosters/ROSTERS.md)을 확인하세요.
 
-Android 320~430px 위키 MVP의 사용법, GitHub Pages 배포, 실제 데이터 수량,
+기존 478개 Production Unit facts를 보존하고 subtype alias 15개를 정리했습니다.
+High Elves는 Dragonship Admiral 5개의 identity 판정이 HOLD입니다. 옛 캐릭터 ID의 기록은 별도로 보존됩니다.
+
+Android 320~430px 위키 MVP의 사용법과 GitHub Pages 배포,
 PC 데이터 투입 명령과 다음 F9 USER ACTION은 [MOBILE_MVP.md](docs/MOBILE_MVP.md)에 정리했습니다.
 `npm run data:status`로 상태와 다음 명령, `npm run check:data`로 기존 evidence replay를 확인합니다.
 이번 작업의 로컬 commit은 push되지 않았으므로 외부 폰 URL은 사용자의 Pages 설정·push 후 활성화됩니다.
@@ -81,7 +84,7 @@ own-force / explicit Battle Pilgrims membership / 기존 charge +30% mapping을
 artifact와 Unit 데이터는 보존하며 `node scripts/review-skill-batch-02.mjs`로 독립 replay합니다.
 
 - `src/data`: 읽기 전용 WH3 Unit JSON과 별도의 diagnostic 표시 자료. 구조 검증용 샘플 수치는 비워 두고, 검토된 production 부분집합만 실제 기본값을 포함합니다.
-- `src/domain/types.ts`: WH3 엔티티와 향후 Modifier, ModProfile, CampaignProfile, Roster 타입. 팩션 소속 관계는 각 엔티티의 `factionId`만 사용합니다.
+- `src/domain/types.ts`: WH3 엔티티와 향후 Modifier, ModProfile, CampaignProfile, Roster 타입. 공유 캐릭터는 `factionIds`, 추가 race의 기존 Unit 소속은 reviewed roster inventory로 연결합니다.
 - `src/domain/unit.ts`: 의미별 유닛 스키마와 원본 숫자 필드의 `UnitStatPath` 타입.
 - `src/domain/unitCalculations.ts`: 확인된 기본·관통 피해 합계를 계산하는 순수 함수.
 - `src/domain/unitLabels.ts`: 능력·공격·유닛 속성의 ID별 한국어 표시 이름.

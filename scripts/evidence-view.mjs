@@ -17,7 +17,7 @@ const evolving = new Set(['README.md', '.gitignore', 'package.json', 'scripts/te
   'src/pages/SettingsPage.tsx', 'src/pages/CalculatorPage.tsx']);
 // Reviewed roster projections are checked in the live tree before replay.
 for (const path of ['src/App.tsx','src/domain/types.ts','src/domain/unit.ts','src/domain/unitValidation.ts',
-  'src/repositories/gameRepository.ts','src/components/EntityRow.tsx','src/pages/FactionsPage.tsx','src/pages/HomePage.tsx',
+  'src/repositories/gameRepository.ts','src/repositories/unitDiagnosticRepository.ts','src/components/EntityRow.tsx','src/pages/FactionsPage.tsx','src/pages/HomePage.tsx',
   'src/data/units.json','src/data/factions.json','src/data/lords.json',
   'tools/wh3-importer/normalization/normalizer.mjs','tools/wh3-importer/promotion/first-batch.mjs',
   'tests/app.test.cjs','tests/unit-catalog.test.cjs','tests/unit-comparison.test.cjs',

@@ -5,9 +5,11 @@ import {removeField} from '../promotion/partial-review.mjs';
 import {restoreTrace} from '../promotion/partial-review.mjs';
 import {isReviewedSource} from '../reviewed-snapshots.mjs';
 import {portable} from '../expansion-batch-01/projection.mjs';
-export const categories=['legendaryLords','genericLords','legendaryHeroes','genericHeroes','units'];
+import {resolveCharacterLoc,canonicalizeCharacters,specialLordNotices,legendaryHeroNotices} from './characters.mjs';
+export const categories=['legendaryLords','genericLords','specialLords','legendaryHeroes','genericHeroes','specialHeroes','units'];
+export const expectedRosterEntries=(roster,category)=>[...roster[category],...(roster.heldCharacters??[]).filter(e=>e.category===category)];
 // Reviewed extraction pin, using the existing expansion dictionary contract.
-export const rosterSourceHash='15206b218154f221b355dbe3ffe8d79e737929099b9b0d4ca9ce81ba1b25f9b9';
+export const rosterSourceHash='1a86a9c2659daabbb6385bfdd030bf1dc5d1983b1ba10a5200d7c9178c7502e3';
 const aliases={wh_main_vmp_heinrich_kemmler:'heinrich_kemmler',wh_dlc04_vmp_vlad_con_carstein:'vlad_von_carstein'};
 const one=(rows,table,field,value)=>{const xs=rows.filter(r=>r.table===table&&r.row[field]===value);assert.equal(xs.length,1,`${table}.${field}=${value}: expected one source row`);return xs[0];};
 export function discoverRoster(source){
@@ -18,12 +20,12 @@ export function discoverRoster(source){
   assert.equal(count,coverage.matchedRows,'Incomplete selected source rows');
  }
  return source.catalog.map(seed=>{
-  const result={...seed,legendaryLords:[],genericLords:[],legendaryHeroes:[],genericHeroes:[],units:[],explicitlyExcluded:[],holds:[]};
+  const result={...seed,...Object.fromEntries(categories.map(c=>[c,[]])),explicitlyExcluded:[],holds:[]};
   const excluded=(kind,key,reason,sourceRowIds)=>result.explicitlyExcluded.push({kind,key,reason,sourceRowIds});
   const factionRows=seed.factionKeys.map(k=>one(rows,'factions_tables','key',k));
   const subcultures=rows.filter(p=>p.table==='cultures_subcultures_tables'&&p.row.culture===seed.cultureKey).map(p=>p.row.subculture);
   assert.deepEqual([...seed.factionKeys].sort(),rows.filter(p=>p.table==='factions_tables'&&subcultures.includes(p.row.subculture)).map(p=>p.row.key).sort(),'Unexplained faction missing from culture');
-  const nativeSubculture=one(rows,'factions_tables','key',seed.cultureKey).row.subculture;
+  const nativeSubculture=one(rows,'factions_tables','key',seed.nativeFactionKey??seed.cultureKey).row.subculture;
   const allowed=factionRows.filter(f=>f.row.subculture===nativeSubculture&&!f.row.is_quest_faction&&!f.row.is_rebel&&(f.row.military_group===seed.militaryGroup||rows.some(p=>p.table==='frontend_factions_tables'&&p.row.faction===f.row.key))).map(f=>f.row.key);
   assert.deepEqual([...allowed].sort(),[...seed.allowedFactionKeys].sort(),'Race membership drift');
   const leaders=rows.filter(p=>p.table==='frontend_faction_leaders_tables'&&seed.factionKeys.includes(p.row.faction));
@@ -43,24 +45,42 @@ export function discoverRoster(source){
    if(!subtype.row.recruitable&&!starting.length){excluded('character',key,'NON_RECRUITABLE_SPAWN_OR_BACKGROUND_SUBTYPE',[subtype.id,...playable.map(p=>p.id)]);continue;}
    const main=one(rows,'main_units_tables','unit',subtype.row.associated_unit_override);
    const land=one(rows,'land_units_tables','key',main.row.land_unit);
+   if(!['lord','hero'].includes(main.row.caste)){
+    excluded('character',key,'NON_CHARACTER_BATTLE_CASTE: permitted subtype is a monster/background battle actor, not a lord/hero',[subtype.id,main.id,land.id,...playable.map(p=>p.id)]);continue;
+   }
+   const nativeBattles=rows.filter(r=>r.table==='units_custom_battle_permissions_tables'&&r.row.unit===main.row.unit&&allowed.includes(r.row.faction));
+   // Black Ark Admirals have a campaign-only force identity. Their exact
+   // native permission + dedicated subtype/Loc are retained as that exception.
+   const blackArk=seed.factionId==='dark_elves'&&key==='wh2_main_def_black_ark'&&main.row.unit==='wh2_main_def_cha_dreadlord_0_black_ark';
+   if(!nativeBattles.length&&!starting.length&&!blackArk){excluded('character',key,'NO_NATIVE_PLAYER_CHARACTER_IDENTITY: broad agent permission has no native frontend/battle identity',[subtype.id,main.id,land.id,...playable.map(p=>p.id)]);continue;}
    const unique=rows.find(r=>r.table==='unique_agents_tables'&&r.row.agent_subtype===key);
    // Some campaign companions use a unique set-piece battle identity instead
    // of unique_agents (e.g. the Damned Paladin). Retain that exact proof too.
    const battleCharacter=rows.find(r=>r.table==='units_custom_battle_permissions_tables'&&r.row.unit===main.row.unit&&allowed.includes(r.row.faction)&&r.row.campaign_exclusive&&r.row.set_piece_character===main.row.unit);
    const uniqueBattle=battleCharacter&&subtype.row.auto_generate&&rows.filter(r=>r.table==='agent_subtypes_tables'&&r.row.associated_unit_override===main.row.unit).length===1;
    const general=starting.length>0||playable.some(p=>p.row.agent==='general');
-   const legend=general?(starting.length>0||subtype.row.recruitment_category==='legendary_lords'):(!!unique||!!uniqueBattle);
+   const subtypeLoc=rows.find(r=>r.table==='Loc'&&r.row.key===`agent_subtypes_onscreen_name_override_${key}`);
+   const heroNotice=legendaryHeroNotices[key]?resolveCharacterLoc(rows,legendaryHeroNotices[key]):null;
+   const legend=general?(starting.length>0||subtype.row.recruitment_category==='legendary_lords'):(!!heroNotice||subtypeLoc&&resolveCharacterLoc(rows,subtypeLoc.row.key).text==='Legendary Hero');
    // Hidden background subtypes lack a proved selectable character identity.
    // Retain them as explicit unverified-membership exclusions.
    if(!subtype.row.show_in_ui&&!unique&&!uniqueBattle&&!starting.length){excluded('character',key,'PLAYER_ARCHETYPE_NOT_VERIFIED: no UI entry or unique-agent definition',[subtype.id,...playable.map(p=>p.id)]);continue;}
    const localisationKey=`land_units_onscreen_name_${land.row.key}`;
    const loc=one(rows,'Loc','key',localisationKey);
-   const kind=general?(legend?'legendary_lord':'generic_lord'):(legend?'legendary_hero':'generic_hero');
+   const special=general?(!!specialLordNotices[key]||blackArk||key==='wh2_dlc12_lzd_red_crested_skink_chief_legendary'||['wh3_main_ogr_tyrant_camp','wh3_dlc27_hef_dragonships'].includes(subtype.row.recruitment_category)):(!!unique||!!uniqueBattle&&!subtype.row.show_in_ui);
+   const kind=general?(legend?'legendary_lord':special?'special_lord':'generic_lord'):(legend?'legendary_hero':special?'special_hero':'generic_hero');
    const id=aliases[key]??`ca_${general?'lord':'hero'}_${key}`;
    const nameRows=unique?['forename','surname','other_name','clan_name'].filter(k=>unique.row[k]).map(k=>one(rows,'Loc','key',`names_name_${unique.row[k]}`)):[];
-   const properName=nameRows.map(r=>r.row.text).filter(Boolean).join(' ');
-   const entry={id,subtypeKey:key,mainKey:main.row.unit,landKey:land.row.key,localisationKey,name:properName||loc.row.text,factionId:seed.factionId,characterKind:kind,sourceRowIds:[subtype.id,main.id,land.id,loc.id,...playable.map(p=>p.id),...starting.map(p=>p.id),...(unique?[unique.id]:[]),...(uniqueBattle?[battleCharacter.id]:[]),...nameRows.map(p=>p.id)]};
-   result[general?(legend?'legendaryLords':'genericLords'):(legend?'legendaryHeroes':'genericHeroes')].push(entry);
+   const nameParts=nameRows.map(r=>resolveCharacterLoc(rows,r.row.key));
+   const properName=nameParts.map(r=>r.text).filter(Boolean).join(' ');
+   if(heroNotice)assert(properName&&heroNotice.text.includes('Legendary Hero')&&heroNotice.text.includes(properName),'Named CA Legendary Hero statement does not match the exact character');
+   const resolved=resolveCharacterLoc(rows,localisationKey);
+   const override=subtypeLoc?resolveCharacterLoc(rows,subtypeLoc.row.key):null;
+   const archetype=override?.text&&!['Legendary Hero','Legendary Lord'].includes(override.text)?override.text:resolved.text;
+   const notice=specialLordNotices[key]?resolveCharacterLoc(rows,specialLordNotices[key]):null;
+   const specialName=notice?.text.match(/\[\[col:yellow\]\](.*?)\[\[\/col\]\]/)?.[1];assert(!notice||specialName,'Exact named recruitment notice missing');
+   const entry={id,subtypeKey:key,subtypeAliases:[],mainKey:main.row.unit,landKey:land.row.key,localisationKey,name:specialName||properName||archetype,factionId:seed.factionId,characterKind:kind,sourceRowIds:[subtype.id,main.id,land.id,...resolved.sourceRowIds,...playable.map(p=>p.id),...starting.map(p=>p.id),...nativeBattles.map(p=>p.id),...(unique?[unique.id]:[]),...(uniqueBattle?[battleCharacter.id]:[]),...(override?.sourceRowIds??[]),...nameParts.flatMap(p=>p.sourceRowIds),...(notice?.sourceRowIds??[]),...(heroNotice?.sourceRowIds??[])]};
+   result[general?(legend?'legendaryLords':special?'specialLords':'genericLords'):(legend?'legendaryHeroes':special?'specialHeroes':'genericHeroes')].push(entry);
   }
   for(const key of seed.mainKeys){
    const main=one(rows,'main_units_tables','unit',key);
@@ -75,6 +95,7 @@ export function discoverRoster(source){
    result.units.push({id:`ca_unit_${key}`,mainKey:key,landKey:land.row.key,name:loc.row.text,localisationKey,factionId:seed.factionId,militaryGroup:primary?.row.military_group??null,customBattleFaction:primary?null:customs[0].row.faction,isRenown:main.row.is_renown,campaignExclusive:customs.every(p=>p.row.campaign_exclusive),sourceRowIds:[main.id,land.id,loc.id,...(primary?[primary.id]:[]),...customs.map(p=>p.id)]});
   }
   for(const f of factionRows.filter(f=>!allowed.includes(f.row.key)))excluded('faction',f.row.key,f.row.is_quest_faction?'QUEST_BATTLE_FACTION':f.row.is_rebel?'REBEL_FACTION':'FOREIGN_CATALOG_GROUP',[f.id]);
+  canonicalizeCharacters(result,rows,categories);
   for(const category of categories)result[category].sort((a,b)=>a.id.localeCompare(b.id));
   return result;
  });
@@ -103,12 +124,13 @@ export function checkCoverage(rosters,units,lords,heroes){
  return rosters.map(r=>{
   const missing=[];
   const counts=Object.fromEntries(categories.map(category=>{
-   const admitted=r[category].filter(e=>{
-    const found=(category==='units'?units:category.endsWith('Lords')?lords:heroes).some(a=>a.id===e.id&&(a.factionId===e.factionId||a.factionIds?.includes(e.factionId))&&a.gameVersion!=='sample'&&(category==='units'||a.characterKind===e.characterKind&&a.subtypeKey===e.subtypeKey));
+   const expected=expectedRosterEntries(r,category);
+   const admitted=expected.filter(e=>{
+    const found=(category==='units'?units:category.endsWith('Lords')?lords:heroes).some(a=>a.id===e.id&&(category==='units'||a.factionId===e.factionId||a.factionIds?.includes(e.factionId))&&a.gameVersion!=='sample'&&(category==='units'||a.characterKind===e.characterKind&&a.subtypeKey===e.subtypeKey&&JSON.stringify(a.subtypeAliases)===JSON.stringify(e.subtypeAliases)&&a.name===e.name&&!a.name.includes('{{tr:')));
     if(!found)missing.push(e.id);return found;
    });
-   return [category,{admitted:admitted.length,expected:r[category].length}];
+   return [category,{admitted:admitted.length,expected:expected.length}];
   }));
-  return {factionId:r.factionId,counts,missing,status:missing.length||r.holds.length?'HOLD':'ROSTER COMPLETE',exclusions:r.explicitlyExcluded.length};
+  return {factionId:r.factionId,sourceStatus:r.sourceStatus,counts,missing,status:missing.length||r.holds.length?'HOLD':'ROSTER COMPLETE',exclusions:r.explicitlyExcluded.length};
  });
 }

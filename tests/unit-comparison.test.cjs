@@ -15,7 +15,7 @@ const ogres = comparisonUnit('ca_unit_wh_dlc01_chs_mon_dragon_ogre');
 const render = (url) => renderToString(React.createElement(MemoryRouter, { initialEntries: [url] }, React.createElement(App)));
 
 test('Production selection excludes Sample and includes Production with evidence; searches names and exact IDs', () => {
-  assert.equal(comparisonOptions().length, 478);
+  assert.equal(comparisonOptions().length, require('../src/data/units.json').filter(u => u.gameVersion !== 'sample').length);
   for (const entry of comparisonOptions()) assert(entry.hasProduction && !entry.isSample);
   for (const unit of gameRepository.listUnits().filter(u => u.gameVersion === 'sample')) assert.equal(comparisonUnit(unit.id), undefined);
   for (const entry of unitCatalogRepository.list().filter(e => e.hasDiagnostic && e.hasProduction && !e.isSample)) assert(comparisonUnit(entry.id));

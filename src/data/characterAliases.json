@@ -1,0 +1,107 @@
+[
+  {
+    "id": "ca_lord_wh2_dlc13_lzd_slann_mage_priest_beasts_horde",
+    "canonicalId": "ca_lord_wh2_dlc13_lzd_slann_mage_priest_beasts",
+    "entityType": "lord",
+    "subtypeKey": "wh2_dlc13_lzd_slann_mage_priest_beasts_horde",
+    "reason": "IDENTICAL_ARCHETYPE_HORDE_CAMPAIGN_IMPLEMENTATION"
+  },
+  {
+    "id": "ca_lord_wh2_dlc13_lzd_slann_mage_priest_death_horde",
+    "canonicalId": "ca_lord_wh2_dlc13_lzd_slann_mage_priest_death",
+    "entityType": "lord",
+    "subtypeKey": "wh2_dlc13_lzd_slann_mage_priest_death_horde",
+    "reason": "IDENTICAL_ARCHETYPE_HORDE_CAMPAIGN_IMPLEMENTATION"
+  },
+  {
+    "id": "ca_lord_wh2_dlc13_lzd_slann_mage_priest_metal_horde",
+    "canonicalId": "ca_lord_wh2_dlc13_lzd_slann_mage_priest_metal",
+    "entityType": "lord",
+    "subtypeKey": "wh2_dlc13_lzd_slann_mage_priest_metal_horde",
+    "reason": "IDENTICAL_ARCHETYPE_HORDE_CAMPAIGN_IMPLEMENTATION"
+  },
+  {
+    "id": "ca_lord_wh2_dlc13_lzd_slann_mage_priest_shadows_horde",
+    "canonicalId": "ca_lord_wh2_dlc13_lzd_slann_mage_priest_shadows",
+    "entityType": "lord",
+    "subtypeKey": "wh2_dlc13_lzd_slann_mage_priest_shadows_horde",
+    "reason": "IDENTICAL_ARCHETYPE_HORDE_CAMPAIGN_IMPLEMENTATION"
+  },
+  {
+    "id": "ca_lord_wh2_dlc13_lzd_slann_mage_priest_fire_horde",
+    "canonicalId": "ca_lord_wh2_dlc13_lzd_slann_mage_priest_fire",
+    "entityType": "lord",
+    "subtypeKey": "wh2_dlc13_lzd_slann_mage_priest_fire_horde",
+    "reason": "IDENTICAL_ARCHETYPE_HORDE_CAMPAIGN_IMPLEMENTATION"
+  },
+  {
+    "id": "ca_lord_wh2_dlc13_lzd_slann_mage_priest_heavens_horde",
+    "canonicalId": "ca_lord_wh2_dlc13_lzd_slann_mage_priest_heavens",
+    "entityType": "lord",
+    "subtypeKey": "wh2_dlc13_lzd_slann_mage_priest_heavens_horde",
+    "reason": "IDENTICAL_ARCHETYPE_HORDE_CAMPAIGN_IMPLEMENTATION"
+  },
+  {
+    "id": "ca_lord_wh2_dlc13_lzd_slann_mage_priest_high_horde",
+    "canonicalId": "ca_lord_wh2_dlc13_lzd_slann_mage_priest_high",
+    "entityType": "lord",
+    "subtypeKey": "wh2_dlc13_lzd_slann_mage_priest_high_horde",
+    "reason": "IDENTICAL_ARCHETYPE_HORDE_CAMPAIGN_IMPLEMENTATION"
+  },
+  {
+    "id": "ca_lord_wh2_dlc13_lzd_slann_mage_priest_life_horde",
+    "canonicalId": "ca_lord_wh2_dlc13_lzd_slann_mage_priest_life",
+    "entityType": "lord",
+    "subtypeKey": "wh2_dlc13_lzd_slann_mage_priest_life_horde",
+    "reason": "IDENTICAL_ARCHETYPE_HORDE_CAMPAIGN_IMPLEMENTATION"
+  },
+  {
+    "id": "ca_lord_wh2_main_lzd_slann_mage_priest_horde",
+    "canonicalId": "ca_lord_wh2_main_lzd_slann_mage_priest",
+    "entityType": "lord",
+    "subtypeKey": "wh2_main_lzd_slann_mage_priest_horde",
+    "reason": "IDENTICAL_ARCHETYPE_DUPLICATED_CAMPAIGN_CAMPAIGN_IMPLEMENTATION"
+  },
+  {
+    "id": "ca_lord_wh2_dlc13_lzd_saurus_old_blood_horde",
+    "canonicalId": "ca_lord_wh2_main_lzd_saurus_old_blood",
+    "entityType": "lord",
+    "subtypeKey": "wh2_dlc13_lzd_saurus_old_blood_horde",
+    "reason": "IDENTICAL_ARCHETYPE_HORDE_CAMPAIGN_IMPLEMENTATION"
+  },
+  {
+    "id": "ca_lord_wh2_dlc13_lzd_kroxigor_ancient_horde",
+    "canonicalId": "ca_lord_wh2_dlc13_lzd_kroxigor_ancient",
+    "entityType": "lord",
+    "subtypeKey": "wh2_dlc13_lzd_kroxigor_ancient_horde",
+    "reason": "IDENTICAL_ARCHETYPE_HORDE_CAMPAIGN_IMPLEMENTATION"
+  },
+  {
+    "id": "ca_lord_wh2_dlc13_lzd_red_crested_skink_chief_horde",
+    "canonicalId": "ca_lord_wh2_dlc12_lzd_red_crested_skink_chief",
+    "entityType": "lord",
+    "subtypeKey": "wh2_dlc13_lzd_red_crested_skink_chief_horde",
+    "reason": "IDENTICAL_ARCHETYPE_HORDE_CAMPAIGN_IMPLEMENTATION"
+  },
+  {
+    "id": "ca_hero_wh2_dlc12_lzd_tlaqua_skink_chief",
+    "canonicalId": "ca_hero_wh2_main_lzd_skink_chief",
+    "entityType": "hero",
+    "subtypeKey": "wh2_dlc12_lzd_tlaqua_skink_chief",
+    "reason": "IDENTICAL_ARCHETYPE_TLAQUA_CAMPAIGN_IMPLEMENTATION"
+  },
+  {
+    "id": "ca_hero_wh2_dlc12_lzd_tlaqua_skink_priest_beasts",
+    "canonicalId": "ca_hero_wh2_main_lzd_skink_priest_beasts",
+    "entityType": "hero",
+    "subtypeKey": "wh2_dlc12_lzd_tlaqua_skink_priest_beasts",
+    "reason": "IDENTICAL_ARCHETYPE_TLAQUA_CAMPAIGN_IMPLEMENTATION"
+  },
+  {
+    "id": "ca_hero_wh2_dlc12_lzd_tlaqua_skink_priest_heavens",
+    "canonicalId": "ca_hero_wh2_main_lzd_skink_priest_heavens",
+    "entityType": "hero",
+    "subtypeKey": "wh2_dlc12_lzd_tlaqua_skink_priest_heavens",
+    "reason": "IDENTICAL_ARCHETYPE_TLAQUA_CAMPAIGN_IMPLEMENTATION"
+  }
+]

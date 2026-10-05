@@ -1,0 +1,57 @@
+[
+  {
+    "id": "ca_lord_wh2_dlc10_lzd_mon_carnosaur_boss",
+    "name": "Gargantulzan",
+    "factionId": "lizardmen",
+    "characterKind": "generic_lord",
+    "subtypeKey": "wh2_dlc10_lzd_mon_carnosaur_boss",
+    "subtypeAliases": [],
+    "mainKey": "wh2_dlc10_lzd_mon_carnosaur_boss",
+    "landKey": "wh2_dlc10_lzd_mon_carnosaur_boss",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh2_dlc10_lzd_mon_carnosaur_boss / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "title": "일반 군주",
+    "summary": "검토된 캐릭터 identity입니다. 스킬·효과·mount와 세부 스탯은 미입력입니다.",
+    "unitIds": [],
+    "entityType": "lord",
+    "exclusionReason": "NON_CHARACTER_BATTLE_CASTE: permitted subtype is a monster/background battle actor, not a lord/hero"
+  },
+  {
+    "id": "ca_lord_wh2_dlc15_hef_star_dragon_boss_imrik",
+    "name": "Ymwrath the Eternal",
+    "factionId": "lizardmen",
+    "characterKind": "generic_lord",
+    "subtypeKey": "wh2_dlc15_hef_star_dragon_boss_imrik",
+    "subtypeAliases": [],
+    "mainKey": "wh2_dlc15_hef_mon_star_dragon_imrik_boss",
+    "landKey": "wh2_dlc15_hef_mon_star_dragon_imrik_boss",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh2_dlc15_hef_star_dragon_boss_imrik / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "title": "일반 군주",
+    "summary": "검토된 캐릭터 identity입니다. 스킬·효과·mount와 세부 스탯은 미입력입니다.",
+    "unitIds": [],
+    "entityType": "lord",
+    "exclusionReason": "NON_CHARACTER_BATTLE_CASTE: permitted subtype is a monster/background battle actor, not a lord/hero"
+  },
+  {
+    "id": "ca_hero_wh2_dlc17_lzd_mon_dread_saurian_qb_boss",
+    "name": "The Big One",
+    "factionId": "lizardmen",
+    "characterKind": "legendary_hero",
+    "subtypeKey": "wh2_dlc17_lzd_mon_dread_saurian_qb_boss",
+    "subtypeAliases": [],
+    "mainKey": "wh2_dlc17_lzd_mon_dread_saurian_qb_boss",
+    "landKey": "wh2_dlc17_lzd_mon_dread_saurian_qb_boss",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh2_dlc17_lzd_mon_dread_saurian_qb_boss / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "lizardmen"
+    ],
+    "category": "전설 영웅",
+    "entityType": "hero",
+    "exclusionReason": "NON_CHARACTER_BATTLE_CASTE: permitted subtype is a monster/background battle actor, not a lord/hero"
+  }
+]

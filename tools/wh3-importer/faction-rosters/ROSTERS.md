@@ -1,79 +1,77 @@
-# Reviewed race roster catalogs — WH3 9.0.2.0
+# Reviewed canonical race rosters — WH3 9.0.2.0
 
-Baseline: 0205595380d4dcb95a9df83a2e3b405b518160c9 (101 Production Units, 5 structural Unit Samples, 2 sample Lords, no Heroes, no complete inventories).
+Baseline: 68910e320d7759047cecf705b4c6e16b104831f4 (478 Production Units, 5 Samples, nine complete source inventories).
 
-## Result and scope
+## Character normalization first
 
-| Race | Status | LL | Generic Lord | Legendary Hero | Generic Hero | Units |
-|---|---|---:|---:|---:|---:|---:|
-| empire | ROSTER COMPLETE | 6/6 | 5/5 | 7/7 | 13/13 | 75/75 |
-| vampire_counts | ROSTER COMPLETE | 7/7 | 9/9 | 7/7 | 8/8 | 43/43 |
-| greenskins | ROSTER COMPLETE | 6/6 | 6/6 | 1/1 | 6/6 | 70/70 |
-| bretonnia | ROSTER COMPLETE | 4/4 | 4/4 | 2/2 | 4/4 | 30/30 |
-| tomb_kings | ROSTER COMPLETE | 4/4 | 12/12 | 0/0 | 8/8 | 45/45 |
-| vampire_coast | ROSTER COMPLETE | 4/4 | 12/12 | 1/1 | 6/6 | 36/36 |
-| skaven | ROSTER COMPLETE | 7/7 | 10/10 | 2/2 | 6/6 | 67/67 |
-| lizardmen | ROSTER COMPLETE | 7/7 | 27/27 | 2/2 | 8/8 | 71/71 |
-| kislev | ROSTER COMPLETE | 4/4 | 4/4 | 2/2 | 7/7 | 36/36 |
+For the existing nine races: Lords 138 → 124; Heroes 87 → 83; 15 subtype aliases; special Lords 13 / Heroes 7; unresolved display translation references 9 → 0. All nine remain ROSTER COMPLETE. Twelve Lord variants and three Hero variants become aliases. Two monster Lords and one monster Hero are explicit battle-caste exclusions; their old personal-record routes remain available.
 
-0 → 9 COMPLETE catalogs. Production Units 101 → 478; Lords 2 Samples → 138 Production (136 new identities plus Kemmler/Vlad promoted with their existing wiki IDs); Heroes 0 → 87. Counts preserve subtype variants separately. Ulrika has three proved race memberships; two Mourngul units have two race memberships. Shared exact identities count in each roster and only once in the global collection.
+The existing 478 Production Unit objects, original 101 facts, original nine Unit memberships/exclusions and previous Unit admission fields/omissions remain exactly unchanged. New Units are appended. No HP, Speed, missile, ability, Skill, Research, Buildings, Calculator or runtime-probe expansion.
 
-HP is unknown for 465/478 Production Units, Speed for 397/478. No new HP or Speed is inferred. The original 101 Production Unit facts and five legacy structural samples are unchanged. Those samples remain labelled separately in global search and do not count in faction roster lists or completeness.
+## Current inventory
 
-COMPLETE means every selected player character/troop identity is present and every other discovered identity has an explicit exclusion. It does not claim complete stats, Research, Buildings, Skills, campaign unlock rules, DLC entitlement or lore. Warriors of Chaos remains PARTIAL, with an unreviewed expected universe.
+| Race | Status | LL | GL | Special Lord | LH | GH | Special Hero | Units |
+|---|---|---:|---:|---:|---:|---:|---:|---:|
+| empire | ROSTER COMPLETE | 6 | 5 | 0 | 3 | 13 | 4 | 75 |
+| vampire_counts | ROSTER COMPLETE | 7 | 9 | 0 | 6 | 8 | 1 | 43 |
+| greenskins | ROSTER COMPLETE | 6 | 4 | 2 | 1 | 6 | 0 | 70 |
+| bretonnia | ROSTER COMPLETE | 4 | 4 | 0 | 1 | 4 | 1 | 30 |
+| tomb_kings | ROSTER COMPLETE | 4 | 6 | 6 | 0 | 8 | 0 | 45 |
+| vampire_coast | ROSTER COMPLETE | 4 | 8 | 4 | 0 | 6 | 1 | 36 |
+| skaven | ROSTER COMPLETE | 7 | 10 | 0 | 2 | 6 | 0 | 67 |
+| lizardmen | ROSTER COMPLETE | 7 | 12 | 1 | 1 | 5 | 0 | 71 |
+| kislev | ROSTER COMPLETE | 4 | 4 | 0 | 2 | 7 | 0 | 36 |
+| ogre_kingdoms | ROSTER COMPLETE | 3 | 6 | 1 | 1 | 7 | 0 | 36 |
+| khorne | ROSTER COMPLETE | 3 | 4 | 0 | 3 | 3 | 0 | 43 |
+| chaos_dwarfs | ROSTER COMPLETE | 3 | 5 | 0 | 1 | 6 | 0 | 42 |
+| tzeentch | ROSTER COMPLETE | 3 | 7 | 0 | 2 | 6 | 0 | 39 |
+| slaanesh | ROSTER COMPLETE | 3 | 7 | 0 | 1 | 7 | 0 | 43 |
+| beastmen | ROSTER COMPLETE | 4 | 6 | 0 | 0 | 6 | 0 | 48 |
+| dark_elves | ROSTER COMPLETE | 6 | 8 | 1 | 0 | 8 | 0 | 51 |
+| wood_elves | ROSTER COMPLETE | 4 | 11 | 0 | 2 | 9 | 0 | 46 |
+| dwarfs | ROSTER COMPLETE | 6 | 4 | 0 | 1 | 4 | 5 | 54 |
+| nurgle | ROSTER COMPLETE | 4 | 7 | 0 | 2 | 6 | 5 | 62 |
+| norsca | ROSTER COMPLETE | 3 | 6 | 0 | 3 | 7 | 2 | 55 |
+| high_elves | HOLD | 8 | 12 | 0/5 | 1 | 14 | 0 | 64 |
+| cathay | ROSTER COMPLETE | 4 | 7 | 0 | 2 | 6 | 0 | 36 |
+| daemons_of_chaos | ROSTER COMPLETE | 2 | 7 | 0 | 1 | 7 | 0 | 65 |
+| warriors_of_chaos | ROSTER COMPLETE | 9 | 8 | 0 | 7 | 15 | 1 | 173 |
 
-## Selection from exact source relations
+23 ROSTER COMPLETE races; 1110 Production Units + 5 Samples; 284 canonical Lords / 210 Heroes. Shared exact subtype identities count once globally and once in each verified race membership. Existing Unit objects are immutable; a newly reviewed race can reference an existing Unit through its inventory.
 
-The existing reviewed hotfix snapshot is required: local WH3 9.0.2.0, schema and db/local pack hashes from reviewed-snapshots.mjs. The game is never executed. The pipeline is read-only against the installed game.
+HP: 13 known / 1097 unknown. Speed: 81 known / 1029 unknown. No new values or formulas were researched.
 
-1. Start from exact culture keys. Follow culture → subculture → factions; derive the native military group from the matching race catalog faction. Keep native-subculture, nonquest, nonrebel factions using that group, plus verified frontend faction variants. Thus Southern Realms sharing the Empire culture and Greenskin rogue foreign military groups do not become player Empire/Greenskin archetypes.
-2. Union all faction-agent subtype permissions and frontend faction leaders. Retain all candidates including disabled, foreign, quest and background rows in the inventory. Starting leaders can qualify even when regular recruitment is false; this retains Isabella, Boris Todbringer and Neferata.
-3. General permission or frontend leader defines a Lord. Frontend leader / legendary_lords recruitment category defines LL; the rest are Generic Lords. Hero uniqueness uses unique_agents and actual forename/surname Loc records. A unique auto-generated campaign set-piece character with a single associated subtype also qualifies: the Damned Paladin has exact Vampire Coast campaign-exclusive battle permission and is not discarded just because show_in_ui is false.
-4. Other characters require an enabled playable agent permission and recruitable subtype. Nonunique hidden subtypes without a selectable UI or proved unique character definition are explicit unverified-membership exclusions, not invented generic archetypes. These exclusions are not assertions of AI-only status. General visual/magic variants keep distinct CA subtype IDs; no name-based merging occurs.
-5. Troop universe is the union of military permissions, race faction battle permissions, and associated character main-unit identities. Character/mount battle forms are accounted for in character inventory, never as separate troops. Nonquest player battle permission admits ordinary, RoR and campaign-exclusive special units; campaign_exclusive is not an exclusion. No exact battle permission means an explicit unverified-membership exclusion. main_units.is_renown preserves RoR identity; base/RoR IDs never merge.
-6. Missing units are diffed against the fixed baseline and traced by exact main/land/Loc identity. Table queries are bounded to 24 selected keys; normalization/admission is one candidate at a time. The original trace, normalizer, conservative growth gate, Unit validator and complete optional-group omission policy are reused. Units without military permission use one connected exact faction battle permission; this is the only added core affiliation path. Missile, ability/passive/attribute groups stay absent in full when withheld. No new field mappings or entity/HP/Speed formulas.
+## Exact source and identity rules
 
-## Inventory and exclusions
+- The installed WH3 9.0.2.0 db/local packs and schema must match the existing reviewed snapshot. The game is never executed. Queries remain bounded; oversized key batches split instead of allowing truncated source data. Cathay and Daemons use explicit native catalog faction keys because those keys differ from their culture keys.
+- Culture → subculture → faction/native military group, all enabled playable subtype permissions, frontend leaders and exact main/land identities retain the existing inventory accounting. Non-native, quest, rebel, disabled, non-recruitable, hidden unverified and character battle-form exclusions are explicit. Unit selection/admission is unchanged.
+- Character membership also needs a connected native frontend/battle identity. A broad common agent permission alone does not admit unrelated race characters. This removes mono-god Lords from the Warriors catalog where the actual native battle/frontend relation is absent, and prologue actors from Norsca. Black Ark is the explicitly reviewed campaign-force exception: exact Dark Elf permission, dedicated associated main identity and subtype display Loc; it remains a separate special Lord.
+- Recursive CA {{tr:KEY}} references resolve only through exact Loc keys, retaining every raw parent/child source row. Missing keys, ambiguity or cycles fail review. Subtype display override takes precedence over a shared battle-model name; unique_agents name references and named recruitment notices supply exact proper names. No guessed names.
+- LL uses the exact frontend leader or legendary_lords recruitment category. LH requires an explicit Legendary Hero subtype label or a reviewed named CA quest/recruitment UI statement. Ariel, Coeddil and Kihar have the latter direct statements. unique_agents alone supplies a unique identity/name, not a Legendary Hero title. Ordinary autogenerated visible set-piece archetypes remain generic. Named unique companions and hidden proved companions may be special Heroes.
+- Only the 15 explicitly reviewed Lizardmen pairs in production-growth/characters.mjs merge. Every pair must have equal race, kind, main, land and resolved name, identical full subtype fields except key, and exact campaign permission context. Horde context additionally verifies factions.feature_forest = LOCKED_HORDE. The older Light Slann pair uses an actual shared Oxyotl campaign context. Tlaqua variants use that exact faction permission. Suffixes never trigger automatic merges.
+- The Red Crested Skink Chief special subtype is retained separately: it is not autogenerated and has a different saving rule from the generic archetype. The horde archetype merges only with the ordinary version. The six dynasty Lords, four technology Admirals and Raknik/Oglok retain separate IDs/names, proved by their dedicated recruitment categories and exact named CA recruitment notices, even with shared battle models. Camp Tyrant likewise has a separate exact display name and recruitment category.
 
-source.json is one shared source dictionary using the existing expansion-batch-01 lossless format, not a source copy per race. Its single reviewed expanded hash uses the existing decoder contract. admission.json contains every expected entry and exclusion with exact source row IDs, omissions and any admission HOLD. src/data/factionRosters.json is a small display inventory; numeric status is recomputed from actual loaded Production entities, kind, subtype and memberships. Only the display inventory is shipped in the app, not raw source or full admission evidence.
+## SOURCE COMPLETE and ROSTER COMPLETE
 
-686 exclusion occurrences across race inventories (not 686 unique global entities):
+SOURCE COMPLETE accounts for every discovered subtype exactly once as an admitted canonical subtype/alias or explicit exclusion, and every discovered main as a Unit or explicit exclusion. Each alias carries both subtype rows and its reviewed campaign context.
 
-- NO_ENABLED_NONQUEST_PLAYABLE_AGENT_PERMISSION: 14
-- NON_RECRUITABLE_SPAWN_OR_BACKGROUND_SUBTYPE: 7
-- CHARACTER_BATTLE_FORM: character/mount identity belongs in subtype inventory, not troop roster: 511
-- QUEST_BATTLE_FACTION: 58
-- FOREIGN_CATALOG_GROUP: 38
-- REBEL_FACTION: 16
-- PLAYER_ARCHETYPE_NOT_VERIFIED: no UI entry or unique-agent definition: 5
-- NO_NONQUEST_PLAYER_BATTLE_PERMISSION: spawn/background membership unverified: 37
+ROSTER COMPLETE additionally requires every expected canonical entry, matching kind/subtype/aliases, a resolved display name, and zero unexplained duplicate or missing identities / HOLD. UI counts are recomputed against loaded records. Production character IDs remain globally unique.
 
-Exact hidden subtypes with unverified selectable archetype membership:
+High Elves is HOLD: wh3_dlc27_hef_dragonship_captain_01..05 share one main/land and the resolved Dragonship Admiral label; all use the Dragonships recruitment category and Aislinn faction permission. Their separate acquisition/name/trait identities versus implementation aliases are unverified. They are explicit admission exclusions with five retained HOLD expectations (0/5 Special Lords), and are neither merged nor emitted as guessed duplicate production entries. The other High Elf characters and 64 Units are admitted. Next closure candidate: these five High Elf identities.
 
-- wh2_dlc17_vmp_kevon_lloydstein
-- wh3_dlc29_vmp_handmaiden
-- wh2_dlc09_tmb_necrotect_ritual
-- wh2_main_skv_plague_priest_ritual
-- wh2_main_skv_warlock_engineer_ritual
+## Existing personal records
 
-These rows remain in source/admission with exact permissions and flags. They are excluded under the rule above; they are not silently counted as members, renamed, treated as proved AI-only or discarded from accounting. Other concrete exclusions include disabled old/new Gotrek permissions, the disabled gold-wizard general, quest-only Greenskin bosses, ritual/background agent variants, and character mount forms. No admission candidate is currently HOLD; unexplained missing count is zero in all nine complete catalogs.
+Canonical IDs remain stable. src/data/characterAliases.json maps 15 former IDs deterministically to canonical data. Old URLs retain their original ArticleTarget; representative pages link each former record separately. Documents, bookmarks and recent views are never silently migrated, merged or overwritten. src/data/legacyCharacters.json preserves the three formerly admitted monster-record routes outside roster/search. Every old character ID is verified accessible. IndexedDB remains version 2; v1 backup format and generic storage are unchanged.
 
-## Reproduce / extend
+## Reproduce and verify
 
-- node scripts/review-faction-rosters.mjs --check — offline current source + admission + all app projections, baseline preservation, character identity, duplicate and membership checks.
-- node scripts/review-faction-rosters.mjs --preview — same review without writing; includes exact HOLD reasons.
-- node scripts/extract-faction-rosters.mjs — local reviewed WH3/RPFM required. Adjust the target culture list to extend a race. Extraction is based on source permissions, not display-name batches. It diffs against the fixed baseline, so rerunning after admission retains the whole evidence batch.
-- Review the changed source and update the existing rosterSourceHash pin only after that review. node scripts/review-faction-rosters.mjs --write writes the reviewed baseline-derived projection. It is not automatic admission of a changed snapshot.
+source.json remains one shared lossless expansion-batch-01 dictionary; no raw copy per race or new evidence framework. Its reviewed expanded hash is 1a86a9c2659daabbb6385bfdd030bf1dc5d1983b1ba10a5200d7c9178c7502e3. admission.json retains full exact rows/IDs, aliases, exclusions, Unit admission fields/whole-group omissions and HOLD reasons. Only the small app projections are bundled.
+
+- node scripts/extract-faction-rosters.mjs — existing local reviewed WH3/RPFM; exact source universe and Loc dependency closure. Unit tracing stays relative to the original 0205595 batch baseline so prior admission evidence remains reproducible.
+- Review the source before updating the existing rosterSourceHash pin.
+- node scripts/review-faction-rosters.mjs --preview / --write / --check — preserve baseline 68910e3 facts, verify prior Unit inventories/admissions, normalize characters and project all app data.
 - npm run check:data; npm test; npm run build; npm run check:pages.
 
-The existing historical evidence-view architecture remains intact. Live roster admission/projection runs first; current app, storage and roster tests run against current data. The original 623 tests and 17 reports replay their original baseline, preserving their original whole-app byte contracts. Research/Skill/HP/Speed admission and diagnostic artifacts are unchanged; no new manifests, replay architecture or validation-of-validation framework were added. Relevant live app tests now expect the larger catalog, multiple substring name matches and correctly escaped localized names.
+Live tests cover Loc 0, canonical uniqueness, one canonical/alias/exclusion per subtype, missing/misclassified members, special identities, valid old IDs, separate alias/canonical personal documents through backup restore, all previous Unit facts/admissions and HOLD visibility. The original 623 tests / 17 historical reports replay their unchanged original evidence baseline. Diagnostic JSON and runtime interpretations remain unchanged; one TypeScript array-union annotation fixes compilation of the existing diagnostic cases without changing their data.
 
-## UI and verification
-
-Faction Roster separates LL/GL/LH/GH and all Production units, with source expected/admitted coverage. Lord/Hero detail links provide generic personal ArticleEditor, Bookmark, Recent view and “내 기록으로”. Hero search accepts name, stable ID and exact CA subtype. IndexedDB schema and v1 backup format are unchanged. Kemmler/Vlad keep heinrich_kemmler / vlad_von_carstein and vampire_counts keeps its faction ID.
-
-Mobile smoke uses the isolated 127.0.0.1:4181 origin with built Pages semantics, not the user's dev-origin personal records. 320/430px widths cover roster, Hero links, shared faction membership, article save/reload, bookmarks, recent views and search. Screenshots are in docs/screenshots. The bundle remains above Vite's 500 kB warning threshold (about 197 kB gzip); raw roster source is not bundled.
-
-## Next closure candidate
-
-A read-only source-size comparison of remaining native catalog races found Ogre Kingdoms next: 36 troop candidates + 18 character candidates (54), versus Khorne 56, Chaos Dwarfs/Tzeentch 57 and Warriors of Chaos 229 missing identity candidates. These are discovery estimates, not reviewed COMPLETE inventories; campaign-only special definitions still require the same final identity review. This comparison changes no dataset and introduces no evidence framework.
+Mobile smoke uses the isolated built Pages origin 127.0.0.1:4181 at 320/430px. It checks all race statuses, navigation/search, named special identities, alias personal-record save/reload and canonical-record separation, bookmarks/recent views and overflow. Screenshots are in docs/screenshots. Raw source/admission files are not bundled; Vite's existing large-chunk warning remains.

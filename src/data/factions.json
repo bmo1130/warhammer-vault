@@ -11,10 +11,10 @@
   {
     "id": "warriors_of_chaos",
     "name": "Warriors of Chaos",
-    "subtitle": "Primary catalog · wh_main_group_chaos",
-    "description": "검토된 military permission의 기본 catalog 분류입니다. 현재 첫 production 유닛 1개만 포함하며, 전체 roster나 캠페인 모집 가능성을 뜻하지 않습니다.",
+    "subtitle": "Warriors of Chaos",
+    "description": "검토된 CA race roster catalog입니다. Roster 상태는 캐릭터·유닛 entry coverage만 뜻하며 Research·Buildings·Skill 완성을 뜻하지 않습니다.",
     "gameVersion": "9.0.2.0",
-    "source": "Reviewed primary catalog alias: wh_main_group_chaos → warriors_of_chaos; promotion/PROMOTION.md",
+    "source": "CA culture wh_main_chs_chaos / faction permissions / faction-rosters/ROSTERS.md",
     "tags": []
   },
   {
@@ -87,6 +87,132 @@
     "description": "검토된 CA race roster catalog입니다. Roster 상태는 캐릭터·유닛 entry coverage만 뜻하며 Research·Buildings·Skill 완성을 뜻하지 않습니다.",
     "gameVersion": "9.0.2.0",
     "source": "CA culture wh3_main_ksl_kislev / faction permissions / faction-rosters/ROSTERS.md",
+    "tags": []
+  },
+  {
+    "id": "ogre_kingdoms",
+    "name": "Ogre Kingdoms",
+    "subtitle": "Ogre Kingdoms",
+    "description": "검토된 CA race roster catalog입니다. Roster 상태는 캐릭터·유닛 entry coverage만 뜻하며 Research·Buildings·Skill 완성을 뜻하지 않습니다.",
+    "gameVersion": "9.0.2.0",
+    "source": "CA culture wh3_main_ogr_ogre_kingdoms / faction permissions / faction-rosters/ROSTERS.md",
+    "tags": []
+  },
+  {
+    "id": "khorne",
+    "name": "Khorne",
+    "subtitle": "Khorne",
+    "description": "검토된 CA race roster catalog입니다. Roster 상태는 캐릭터·유닛 entry coverage만 뜻하며 Research·Buildings·Skill 완성을 뜻하지 않습니다.",
+    "gameVersion": "9.0.2.0",
+    "source": "CA culture wh3_main_kho_khorne / faction permissions / faction-rosters/ROSTERS.md",
+    "tags": []
+  },
+  {
+    "id": "chaos_dwarfs",
+    "name": "Chaos Dwarfs",
+    "subtitle": "Chaos Dwarfs",
+    "description": "검토된 CA race roster catalog입니다. Roster 상태는 캐릭터·유닛 entry coverage만 뜻하며 Research·Buildings·Skill 완성을 뜻하지 않습니다.",
+    "gameVersion": "9.0.2.0",
+    "source": "CA culture wh3_dlc23_chd_chaos_dwarfs / faction permissions / faction-rosters/ROSTERS.md",
+    "tags": []
+  },
+  {
+    "id": "tzeentch",
+    "name": "Tzeentch",
+    "subtitle": "Tzeentch",
+    "description": "검토된 CA race roster catalog입니다. Roster 상태는 캐릭터·유닛 entry coverage만 뜻하며 Research·Buildings·Skill 완성을 뜻하지 않습니다.",
+    "gameVersion": "9.0.2.0",
+    "source": "CA culture wh3_main_tze_tzeentch / faction permissions / faction-rosters/ROSTERS.md",
+    "tags": []
+  },
+  {
+    "id": "slaanesh",
+    "name": "Slaanesh",
+    "subtitle": "Slaanesh",
+    "description": "검토된 CA race roster catalog입니다. Roster 상태는 캐릭터·유닛 entry coverage만 뜻하며 Research·Buildings·Skill 완성을 뜻하지 않습니다.",
+    "gameVersion": "9.0.2.0",
+    "source": "CA culture wh3_main_sla_slaanesh / faction permissions / faction-rosters/ROSTERS.md",
+    "tags": []
+  },
+  {
+    "id": "beastmen",
+    "name": "Beastmen",
+    "subtitle": "Beastmen",
+    "description": "검토된 CA race roster catalog입니다. Roster 상태는 캐릭터·유닛 entry coverage만 뜻하며 Research·Buildings·Skill 완성을 뜻하지 않습니다.",
+    "gameVersion": "9.0.2.0",
+    "source": "CA culture wh_dlc03_bst_beastmen / faction permissions / faction-rosters/ROSTERS.md",
+    "tags": []
+  },
+  {
+    "id": "dark_elves",
+    "name": "Dark Elves",
+    "subtitle": "Dark Elves",
+    "description": "검토된 CA race roster catalog입니다. Roster 상태는 캐릭터·유닛 entry coverage만 뜻하며 Research·Buildings·Skill 완성을 뜻하지 않습니다.",
+    "gameVersion": "9.0.2.0",
+    "source": "CA culture wh2_main_def_dark_elves / faction permissions / faction-rosters/ROSTERS.md",
+    "tags": []
+  },
+  {
+    "id": "wood_elves",
+    "name": "Wood Elves",
+    "subtitle": "Wood Elves",
+    "description": "검토된 CA race roster catalog입니다. Roster 상태는 캐릭터·유닛 entry coverage만 뜻하며 Research·Buildings·Skill 완성을 뜻하지 않습니다.",
+    "gameVersion": "9.0.2.0",
+    "source": "CA culture wh_dlc05_wef_wood_elves / faction permissions / faction-rosters/ROSTERS.md",
+    "tags": []
+  },
+  {
+    "id": "dwarfs",
+    "name": "Dwarfs",
+    "subtitle": "Dwarfs",
+    "description": "검토된 CA race roster catalog입니다. Roster 상태는 캐릭터·유닛 entry coverage만 뜻하며 Research·Buildings·Skill 완성을 뜻하지 않습니다.",
+    "gameVersion": "9.0.2.0",
+    "source": "CA culture wh_main_dwf_dwarfs / faction permissions / faction-rosters/ROSTERS.md",
+    "tags": []
+  },
+  {
+    "id": "nurgle",
+    "name": "Nurgle",
+    "subtitle": "Nurgle",
+    "description": "검토된 CA race roster catalog입니다. Roster 상태는 캐릭터·유닛 entry coverage만 뜻하며 Research·Buildings·Skill 완성을 뜻하지 않습니다.",
+    "gameVersion": "9.0.2.0",
+    "source": "CA culture wh3_main_nur_nurgle / faction permissions / faction-rosters/ROSTERS.md",
+    "tags": []
+  },
+  {
+    "id": "norsca",
+    "name": "Norsca",
+    "subtitle": "Norsca",
+    "description": "검토된 CA race roster catalog입니다. Roster 상태는 캐릭터·유닛 entry coverage만 뜻하며 Research·Buildings·Skill 완성을 뜻하지 않습니다.",
+    "gameVersion": "9.0.2.0",
+    "source": "CA culture wh_dlc08_nor_norsca / faction permissions / faction-rosters/ROSTERS.md",
+    "tags": []
+  },
+  {
+    "id": "high_elves",
+    "name": "High Elves",
+    "subtitle": "High Elves",
+    "description": "검토된 CA race roster catalog입니다. Roster 상태는 캐릭터·유닛 entry coverage만 뜻하며 Research·Buildings·Skill 완성을 뜻하지 않습니다.",
+    "gameVersion": "9.0.2.0",
+    "source": "CA culture wh2_main_hef_high_elves / faction permissions / faction-rosters/ROSTERS.md",
+    "tags": []
+  },
+  {
+    "id": "cathay",
+    "name": "Cathay",
+    "subtitle": "Cathay",
+    "description": "검토된 CA race roster catalog입니다. Roster 상태는 캐릭터·유닛 entry coverage만 뜻하며 Research·Buildings·Skill 완성을 뜻하지 않습니다.",
+    "gameVersion": "9.0.2.0",
+    "source": "CA culture wh3_main_cth_cathay / faction permissions / faction-rosters/ROSTERS.md",
+    "tags": []
+  },
+  {
+    "id": "daemons_of_chaos",
+    "name": "Daemons",
+    "subtitle": "Daemons",
+    "description": "검토된 CA race roster catalog입니다. Roster 상태는 캐릭터·유닛 entry coverage만 뜻하며 Research·Buildings·Skill 완성을 뜻하지 않습니다.",
+    "gameVersion": "9.0.2.0",
+    "source": "CA culture wh3_main_dae_daemons / faction permissions / faction-rosters/ROSTERS.md",
     "tags": []
   }
 ]

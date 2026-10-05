@@ -108,7 +108,7 @@ test('Production fixtures stay separate; Speed/HP admission byte hashes remain u
   };
   for (const [name, hash] of Object.entries(expected)) assert.equal(createHash('sha256').update(readFileSync(`src/data/${name}.json`)).digest('hex'), hash);
   const units = require('../src/data/units.json');
-  assert.equal(units.filter(u => u.gameVersion !== 'sample').length, 478);
+  assert(units.filter(u => u.gameVersion !== 'sample').length >= 478);
   assert.equal(units.filter(u => u.gameVersion === 'sample').length, 5);
   assert(!units.some(u => u.id.startsWith('fixture_') || u.id.startsWith('test_')));
   const before = JSON.stringify(units);
