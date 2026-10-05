@@ -24,6 +24,10 @@ export function validateUnits(units: readonly Unit[], factionIds: Iterable<strin
     if (!unit.id || ids.has(unit.id)) issue('id', '유닛 ID가 비었거나 중복되었습니다.');
     ids.add(unit.id);
     if (!factions.has(unit.factionId)) issue('factionId', '존재하지 않는 팩션입니다.');
+    if (unit.factionIds) {
+      if (!unit.factionIds.includes(unit.factionId) || new Set(unit.factionIds).size !== unit.factionIds.length) issue('factionIds', '대표 소속을 포함한 중복 없는 소속 목록이어야 합니다.');
+      unit.factionIds.forEach(id => { if (!factions.has(id)) issue('factionIds', '존재하지 않는 팩션입니다.'); });
+    }
     const count = unit.entities.count;
     if (count !== undefined && (!Number.isInteger(count) || count <= 0)) issue('entities.count', '확인된 개체 수는 양의 정수여야 합니다.');
     if (unit.entities.unitScale !== undefined && !['small', 'large'].includes(unit.entities.unitScale)) issue('entities.unitScale', '지원하지 않는 부대 규모입니다.');

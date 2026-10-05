@@ -126,6 +126,8 @@ export type Unit = SourceInfo & {
   id: string;
   name: string;
   factionId: string;
+  // Additional race catalogs, proved by exact faction permissions.
+  factionIds?: string[];
   summary: string;
   classification: UnitClassification;
   entities: UnitEntities;

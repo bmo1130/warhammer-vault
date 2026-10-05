@@ -1,0 +1,2961 @@
+{
+  "gameVersion": "9.0.2.0",
+  "rosters": [
+    {
+      "factionId": "empire",
+      "holds": [],
+      "explicitlyExcludedCount": 147,
+      "legendaryLords": [
+        {
+          "id": "ca_lord_wh_dlc03_emp_boris_todbringer",
+          "characterKind": "legendary_lord",
+          "subtypeKey": "wh_dlc03_emp_boris_todbringer"
+        },
+        {
+          "id": "ca_lord_wh_dlc04_emp_volkmar",
+          "characterKind": "legendary_lord",
+          "subtypeKey": "wh_dlc04_emp_volkmar"
+        },
+        {
+          "id": "ca_lord_wh_main_emp_balthasar_gelt",
+          "characterKind": "legendary_lord",
+          "subtypeKey": "wh_main_emp_balthasar_gelt"
+        },
+        {
+          "id": "ca_lord_wh_main_emp_karl_franz",
+          "characterKind": "legendary_lord",
+          "subtypeKey": "wh_main_emp_karl_franz"
+        },
+        {
+          "id": "ca_lord_wh2_dlc13_emp_cha_markus_wulfhart",
+          "characterKind": "legendary_lord",
+          "subtypeKey": "wh2_dlc13_emp_cha_markus_wulfhart"
+        },
+        {
+          "id": "ca_lord_wh3_dlc25_emp_elspeth_von_draken",
+          "characterKind": "legendary_lord",
+          "subtypeKey": "wh3_dlc25_emp_elspeth_von_draken"
+        }
+      ],
+      "genericLords": [
+        {
+          "id": "ca_lord_wh_dlc04_emp_arch_lector",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh_dlc04_emp_arch_lector"
+        },
+        {
+          "id": "ca_lord_wh_main_emp_lord",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh_main_emp_lord"
+        },
+        {
+          "id": "ca_lord_wh2_dlc13_emp_cha_huntsmarshal",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh2_dlc13_emp_cha_huntsmarshal"
+        },
+        {
+          "id": "ca_lord_wh3_dlc25_emp_master_engineer",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh3_dlc25_emp_master_engineer"
+        },
+        {
+          "id": "ca_lord_wh3_dlc29_emp_cha_seneschal_of_the_white_wolf",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh3_dlc29_emp_cha_seneschal_of_the_white_wolf"
+        }
+      ],
+      "legendaryHeroes": [
+        {
+          "id": "ca_hero_wh2_dlc13_emp_hunter_doctor_hertwig_van_hal",
+          "characterKind": "legendary_hero",
+          "subtypeKey": "wh2_dlc13_emp_hunter_doctor_hertwig_van_hal"
+        },
+        {
+          "id": "ca_hero_wh2_dlc13_emp_hunter_jorek_grimm",
+          "characterKind": "legendary_hero",
+          "subtypeKey": "wh2_dlc13_emp_hunter_jorek_grimm"
+        },
+        {
+          "id": "ca_hero_wh2_dlc13_emp_hunter_kalara_of_wydrioth",
+          "characterKind": "legendary_hero",
+          "subtypeKey": "wh2_dlc13_emp_hunter_kalara_of_wydrioth"
+        },
+        {
+          "id": "ca_hero_wh2_dlc13_emp_hunter_rodrik_l_anguille",
+          "characterKind": "legendary_hero",
+          "subtypeKey": "wh2_dlc13_emp_hunter_rodrik_l_anguille"
+        },
+        {
+          "id": "ca_hero_wh3_dlc23_neu_ulrika",
+          "characterKind": "legendary_hero",
+          "subtypeKey": "wh3_dlc23_neu_ulrika"
+        },
+        {
+          "id": "ca_hero_wh3_dlc25_emp_theodore_bruckner",
+          "characterKind": "legendary_hero",
+          "subtypeKey": "wh3_dlc25_emp_theodore_bruckner"
+        },
+        {
+          "id": "ca_hero_wh3_dlc29_emp_cha_emil_valgeir",
+          "characterKind": "legendary_hero",
+          "subtypeKey": "wh3_dlc29_emp_cha_emil_valgeir"
+        }
+      ],
+      "genericHeroes": [
+        {
+          "id": "ca_hero_wh_dlc03_emp_amber_wizard",
+          "characterKind": "generic_hero",
+          "subtypeKey": "wh_dlc03_emp_amber_wizard"
+        },
+        {
+          "id": "ca_hero_wh_dlc05_emp_grey_wizard",
+          "characterKind": "generic_hero",
+          "subtypeKey": "wh_dlc05_emp_grey_wizard"
+        },
+        {
+          "id": "ca_hero_wh_dlc05_emp_jade_wizard",
+          "characterKind": "generic_hero",
+          "subtypeKey": "wh_dlc05_emp_jade_wizard"
+        },
+        {
+          "id": "ca_hero_wh_main_emp_bright_wizard",
+          "characterKind": "generic_hero",
+          "subtypeKey": "wh_main_emp_bright_wizard"
+        },
+        {
+          "id": "ca_hero_wh_main_emp_captain",
+          "characterKind": "generic_hero",
+          "subtypeKey": "wh_main_emp_captain"
+        },
+        {
+          "id": "ca_hero_wh_main_emp_celestial_wizard",
+          "characterKind": "generic_hero",
+          "subtypeKey": "wh_main_emp_celestial_wizard"
+        },
+        {
+          "id": "ca_hero_wh_main_emp_light_wizard",
+          "characterKind": "generic_hero",
+          "subtypeKey": "wh_main_emp_light_wizard"
+        },
+        {
+          "id": "ca_hero_wh_main_emp_warrior_priest",
+          "characterKind": "generic_hero",
+          "subtypeKey": "wh_main_emp_warrior_priest"
+        },
+        {
+          "id": "ca_hero_wh_main_emp_witch_hunter",
+          "characterKind": "generic_hero",
+          "subtypeKey": "wh_main_emp_witch_hunter"
+        },
+        {
+          "id": "ca_hero_wh2_pro07_emp_amethyst_wizard",
+          "characterKind": "generic_hero",
+          "subtypeKey": "wh2_pro07_emp_amethyst_wizard"
+        },
+        {
+          "id": "ca_hero_wh3_dlc25_emp_engineer",
+          "characterKind": "generic_hero",
+          "subtypeKey": "wh3_dlc25_emp_engineer"
+        },
+        {
+          "id": "ca_hero_wh3_dlc25_emp_gold_wizard",
+          "characterKind": "generic_hero",
+          "subtypeKey": "wh3_dlc25_emp_gold_wizard"
+        },
+        {
+          "id": "ca_hero_wh3_dlc29_emp_cha_priest_of_ulric",
+          "characterKind": "generic_hero",
+          "subtypeKey": "wh3_dlc29_emp_cha_priest_of_ulric"
+        }
+      ],
+      "units": [
+        {
+          "id": "ca_unit_wh_dlc04_emp_art_hammer_of_the_witches_0"
+        },
+        {
+          "id": "ca_unit_wh_dlc04_emp_art_sunmaker_0"
+        },
+        {
+          "id": "ca_unit_wh_dlc04_emp_cav_knights_blazing_sun_0"
+        },
+        {
+          "id": "ca_unit_wh_dlc04_emp_cav_royal_altdorf_gryphites_0"
+        },
+        {
+          "id": "ca_unit_wh_dlc04_emp_cav_zintlers_reiksguard_0"
+        },
+        {
+          "id": "ca_unit_wh_dlc04_emp_inf_flagellants_0"
+        },
+        {
+          "id": "ca_unit_wh_dlc04_emp_inf_free_company_militia_0"
+        },
+        {
+          "id": "ca_unit_wh_dlc04_emp_inf_sigmars_sons_0"
+        },
+        {
+          "id": "ca_unit_wh_dlc04_emp_inf_silver_bullets_0"
+        },
+        {
+          "id": "ca_unit_wh_dlc04_emp_inf_stirlands_revenge_0"
+        },
+        {
+          "id": "ca_unit_wh_dlc04_emp_inf_tattersouls_0"
+        },
+        {
+          "id": "ca_unit_wh_dlc04_emp_veh_templehof_luminark_0"
+        },
+        {
+          "id": "ca_unit_wh_main_emp_art_great_cannon"
+        },
+        {
+          "id": "ca_unit_wh_main_emp_art_helblaster_volley_gun"
+        },
+        {
+          "id": "ca_unit_wh_main_emp_art_helstorm_rocket_battery"
+        },
+        {
+          "id": "ca_unit_wh_main_emp_art_mortar"
+        },
+        {
+          "id": "ca_unit_wh_main_emp_cav_demigryph_knights_0"
+        },
+        {
+          "id": "ca_unit_wh_main_emp_cav_demigryph_knights_1"
+        },
+        {
+          "id": "ca_unit_wh_main_emp_cav_empire_knights"
+        },
+        {
+          "id": "ca_unit_wh_main_emp_cav_outriders_0"
+        },
+        {
+          "id": "ca_unit_wh_main_emp_cav_outriders_1"
+        },
+        {
+          "id": "ca_unit_wh_main_emp_cav_pistoliers_1"
+        },
+        {
+          "id": "ca_unit_wh_main_emp_cav_reiksguard"
+        },
+        {
+          "id": "ca_unit_wh_main_emp_inf_crossbowmen"
+        },
+        {
+          "id": "ca_unit_wh_main_emp_inf_greatswords"
+        },
+        {
+          "id": "ca_unit_wh_main_emp_inf_halberdiers"
+        },
+        {
+          "id": "ca_unit_wh_main_emp_inf_handgunners"
+        },
+        {
+          "id": "ca_unit_wh_main_emp_inf_spearmen_0"
+        },
+        {
+          "id": "ca_unit_wh_main_emp_inf_spearmen_1"
+        },
+        {
+          "id": "ca_unit_wh_main_emp_inf_swordsmen"
+        },
+        {
+          "id": "ca_unit_wh_main_emp_veh_luminark_of_hysh_0"
+        },
+        {
+          "id": "ca_unit_wh_main_emp_veh_steam_tank"
+        },
+        {
+          "id": "ca_unit_wh2_dlc13_emp_art_mortar_ror_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc13_emp_cav_empire_knights_ror_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc13_emp_cav_empire_knights_ror_1"
+        },
+        {
+          "id": "ca_unit_wh2_dlc13_emp_cav_empire_knights_ror_2"
+        },
+        {
+          "id": "ca_unit_wh2_dlc13_emp_cav_outriders_ror_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc13_emp_cav_pistoliers_ror_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc13_emp_inf_archers_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc13_emp_inf_archers_ror_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc13_emp_inf_crossbowmen_ror_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc13_emp_inf_greatswords_ror_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc13_emp_inf_halberdiers_ror_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc13_emp_inf_handgunners_ror_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc13_emp_inf_huntsmen_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc13_emp_inf_huntsmen_ror_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc13_emp_inf_spearmen_ror_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc13_emp_inf_swordsmen_ror_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc13_emp_veh_steam_tank_ror_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc13_emp_veh_war_wagon_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc13_emp_veh_war_wagon_1"
+        },
+        {
+          "id": "ca_unit_wh2_dlc13_emp_veh_war_wagon_ror_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc13_huntmarshall_veh_obsinite_gyrocopter_0"
+        },
+        {
+          "id": "ca_unit_wh3_dlc25_emp_art_helstorm_rocket_battery_morr"
+        },
+        {
+          "id": "ca_unit_wh3_dlc25_emp_cav_knights_of_the_black_rose"
+        },
+        {
+          "id": "ca_unit_wh3_dlc25_emp_cav_outriders_morr"
+        },
+        {
+          "id": "ca_unit_wh3_dlc25_emp_inf_hochland_long_rifles"
+        },
+        {
+          "id": "ca_unit_wh3_dlc25_emp_inf_hochland_long_rifles_ror"
+        },
+        {
+          "id": "ca_unit_wh3_dlc25_emp_inf_nuln_ironsides"
+        },
+        {
+          "id": "ca_unit_wh3_dlc25_emp_inf_nuln_ironsides_morr"
+        },
+        {
+          "id": "ca_unit_wh3_dlc25_emp_inf_spearmen_shields_ror"
+        },
+        {
+          "id": "ca_unit_wh3_dlc25_emp_veh_marienburg_land_ship"
+        },
+        {
+          "id": "ca_unit_wh3_dlc25_emp_veh_marienburg_land_ship_morr"
+        },
+        {
+          "id": "ca_unit_wh3_dlc25_emp_veh_marienburg_land_ship_ror"
+        },
+        {
+          "id": "ca_unit_wh3_dlc25_emp_veh_steam_tank_volley_gun"
+        },
+        {
+          "id": "ca_unit_wh3_dlc29_emp_cav_knights_of_the_white_wolf"
+        },
+        {
+          "id": "ca_unit_wh3_dlc29_emp_cav_knights_of_the_white_wolf_ror"
+        },
+        {
+          "id": "ca_unit_wh3_dlc29_emp_cav_knights_panther"
+        },
+        {
+          "id": "ca_unit_wh3_dlc29_emp_inf_hunting_hounds"
+        },
+        {
+          "id": "ca_unit_wh3_dlc29_emp_inf_hunting_hounds_ror"
+        },
+        {
+          "id": "ca_unit_wh3_dlc29_emp_inf_teutogen_guard"
+        },
+        {
+          "id": "ca_unit_wh3_dlc29_emp_inf_teutogen_guard_ror"
+        },
+        {
+          "id": "ca_unit_wh3_dlc29_emp_inf_warriors_of_ulric"
+        },
+        {
+          "id": "ca_unit_wh3_dlc29_emp_inf_wolf_kin"
+        },
+        {
+          "id": "ca_unit_wh3_dlc29_emp_veh_celestial_hurricanum_0"
+        }
+      ]
+    },
+    {
+      "factionId": "vampire_counts",
+      "holds": [],
+      "explicitlyExcludedCount": 116,
+      "legendaryLords": [
+        {
+          "id": "ca_lord_wh_dlc04_vmp_helman_ghorst",
+          "characterKind": "legendary_lord",
+          "subtypeKey": "wh_dlc04_vmp_helman_ghorst"
+        },
+        {
+          "id": "ca_lord_wh_dlc05_vmp_red_duke",
+          "characterKind": "legendary_lord",
+          "subtypeKey": "wh_dlc05_vmp_red_duke"
+        },
+        {
+          "id": "ca_lord_wh_main_vmp_mannfred_von_carstein",
+          "characterKind": "legendary_lord",
+          "subtypeKey": "wh_main_vmp_mannfred_von_carstein"
+        },
+        {
+          "id": "ca_lord_wh_pro02_vmp_isabella_von_carstein",
+          "characterKind": "legendary_lord",
+          "subtypeKey": "wh_pro02_vmp_isabella_von_carstein"
+        },
+        {
+          "id": "ca_lord_wh3_dlc29_vmp_neferata",
+          "characterKind": "legendary_lord",
+          "subtypeKey": "wh3_dlc29_vmp_neferata"
+        },
+        {
+          "id": "heinrich_kemmler",
+          "characterKind": "legendary_lord",
+          "subtypeKey": "wh_main_vmp_heinrich_kemmler"
+        },
+        {
+          "id": "vlad_von_carstein",
+          "characterKind": "legendary_lord",
+          "subtypeKey": "wh_dlc04_vmp_vlad_con_carstein"
+        }
+      ],
+      "genericLords": [
+        {
+          "id": "ca_lord_wh_dlc04_vmp_strigoi_ghoul_king",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh_dlc04_vmp_strigoi_ghoul_king"
+        },
+        {
+          "id": "ca_lord_wh_main_vmp_lord",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh_main_vmp_lord"
+        },
+        {
+          "id": "ca_lord_wh_main_vmp_master_necromancer",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh_main_vmp_master_necromancer"
+        },
+        {
+          "id": "ca_lord_wh2_dlc11_vmp_bloodline_blood_dragon",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh2_dlc11_vmp_bloodline_blood_dragon"
+        },
+        {
+          "id": "ca_lord_wh2_dlc11_vmp_bloodline_lahmian",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh2_dlc11_vmp_bloodline_lahmian"
+        },
+        {
+          "id": "ca_lord_wh2_dlc11_vmp_bloodline_necrarch",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh2_dlc11_vmp_bloodline_necrarch"
+        },
+        {
+          "id": "ca_lord_wh2_dlc11_vmp_bloodline_strigoi",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh2_dlc11_vmp_bloodline_strigoi"
+        },
+        {
+          "id": "ca_lord_wh2_dlc11_vmp_bloodline_von_carstein",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh2_dlc11_vmp_bloodline_von_carstein"
+        },
+        {
+          "id": "ca_lord_wh3_dlc29_vmp_master_necromancer_undeath",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh3_dlc29_vmp_master_necromancer_undeath"
+        }
+      ],
+      "legendaryHeroes": [
+        {
+          "id": "ca_hero_wh_dlc04_vmp_vlad_von_carstein_hero",
+          "characterKind": "legendary_hero",
+          "subtypeKey": "wh_dlc04_vmp_vlad_von_carstein_hero"
+        },
+        {
+          "id": "ca_hero_wh_pro02_vmp_isabella_von_carstein_hero",
+          "characterKind": "legendary_hero",
+          "subtypeKey": "wh_pro02_vmp_isabella_von_carstein_hero"
+        },
+        {
+          "id": "ca_hero_wh3_dlc23_neu_ulrika",
+          "characterKind": "legendary_hero",
+          "subtypeKey": "wh3_dlc23_neu_ulrika"
+        },
+        {
+          "id": "ca_hero_wh3_dlc29_vmp_dieter_helsnicht",
+          "characterKind": "legendary_hero",
+          "subtypeKey": "wh3_dlc29_vmp_dieter_helsnicht"
+        },
+        {
+          "id": "ca_hero_wh3_dlc29_vmp_handmaiden_imentet",
+          "characterKind": "legendary_hero",
+          "subtypeKey": "wh3_dlc29_vmp_handmaiden_imentet"
+        },
+        {
+          "id": "ca_hero_wh3_dlc29_vmp_krell",
+          "characterKind": "legendary_hero",
+          "subtypeKey": "wh3_dlc29_vmp_krell"
+        },
+        {
+          "id": "ca_hero_wh3_dlc29_vmp_walach_harkon",
+          "characterKind": "legendary_hero",
+          "subtypeKey": "wh3_dlc29_vmp_walach_harkon"
+        }
+      ],
+      "genericHeroes": [
+        {
+          "id": "ca_hero_wh_dlc05_vmp_vampire_shadow",
+          "characterKind": "generic_hero",
+          "subtypeKey": "wh_dlc05_vmp_vampire_shadow"
+        },
+        {
+          "id": "ca_hero_wh_main_vmp_banshee",
+          "characterKind": "generic_hero",
+          "subtypeKey": "wh_main_vmp_banshee"
+        },
+        {
+          "id": "ca_hero_wh_main_vmp_necromancer",
+          "characterKind": "generic_hero",
+          "subtypeKey": "wh_main_vmp_necromancer"
+        },
+        {
+          "id": "ca_hero_wh_main_vmp_vampire_death",
+          "characterKind": "generic_hero",
+          "subtypeKey": "wh_main_vmp_vampire_death"
+        },
+        {
+          "id": "ca_hero_wh_main_vmp_wight_king",
+          "characterKind": "generic_hero",
+          "subtypeKey": "wh_main_vmp_wight_king"
+        },
+        {
+          "id": "ca_hero_wh2_dlc11_cst_mourngul",
+          "characterKind": "generic_hero",
+          "subtypeKey": "wh2_dlc11_cst_mourngul"
+        },
+        {
+          "id": "ca_hero_wh3_dlc29_vmp_lahmian_vampire",
+          "characterKind": "generic_hero",
+          "subtypeKey": "wh3_dlc29_vmp_lahmian_vampire"
+        },
+        {
+          "id": "ca_hero_wh3_dlc29_vmp_necromancer_undeath",
+          "characterKind": "generic_hero",
+          "subtypeKey": "wh3_dlc29_vmp_necromancer_undeath"
+        }
+      ],
+      "units": [
+        {
+          "id": "ca_unit_wh_dlc02_vmp_cav_blood_knights_0"
+        },
+        {
+          "id": "ca_unit_wh_dlc04_vmp_cav_chillgheists_0"
+        },
+        {
+          "id": "ca_unit_wh_dlc04_vmp_cav_vereks_reavers_0"
+        },
+        {
+          "id": "ca_unit_wh_dlc04_vmp_inf_feasters_in_the_dusk_0"
+        },
+        {
+          "id": "ca_unit_wh_dlc04_vmp_inf_konigstein_stalkers_0"
+        },
+        {
+          "id": "ca_unit_wh_dlc04_vmp_inf_sternsmen_0"
+        },
+        {
+          "id": "ca_unit_wh_dlc04_vmp_inf_tithe_0"
+        },
+        {
+          "id": "ca_unit_wh_dlc04_vmp_mon_devils_swartzhafen_0"
+        },
+        {
+          "id": "ca_unit_wh_dlc04_vmp_mon_direpack_0"
+        },
+        {
+          "id": "ca_unit_wh_dlc04_vmp_veh_claw_of_nagash_0"
+        },
+        {
+          "id": "ca_unit_wh_dlc04_vmp_veh_corpse_cart_0"
+        },
+        {
+          "id": "ca_unit_wh_dlc04_vmp_veh_corpse_cart_1"
+        },
+        {
+          "id": "ca_unit_wh_dlc04_vmp_veh_corpse_cart_2"
+        },
+        {
+          "id": "ca_unit_wh_dlc04_vmp_veh_mortis_engine_0"
+        },
+        {
+          "id": "ca_unit_wh_main_vmp_cav_black_knights_0"
+        },
+        {
+          "id": "ca_unit_wh_main_vmp_cav_black_knights_3"
+        },
+        {
+          "id": "ca_unit_wh_main_vmp_cav_hexwraiths"
+        },
+        {
+          "id": "ca_unit_wh_main_vmp_inf_cairn_wraiths"
+        },
+        {
+          "id": "ca_unit_wh_main_vmp_inf_crypt_ghouls"
+        },
+        {
+          "id": "ca_unit_wh_main_vmp_inf_grave_guard_0"
+        },
+        {
+          "id": "ca_unit_wh_main_vmp_inf_grave_guard_1"
+        },
+        {
+          "id": "ca_unit_wh_main_vmp_inf_skeleton_warriors_0"
+        },
+        {
+          "id": "ca_unit_wh_main_vmp_inf_skeleton_warriors_1"
+        },
+        {
+          "id": "ca_unit_wh_main_vmp_inf_zombie"
+        },
+        {
+          "id": "ca_unit_wh_main_vmp_mon_crypt_horrors"
+        },
+        {
+          "id": "ca_unit_wh_main_vmp_mon_dire_wolves"
+        },
+        {
+          "id": "ca_unit_wh_main_vmp_mon_fell_bats"
+        },
+        {
+          "id": "ca_unit_wh_main_vmp_mon_terrorgheist"
+        },
+        {
+          "id": "ca_unit_wh_main_vmp_mon_vargheists"
+        },
+        {
+          "id": "ca_unit_wh_main_vmp_mon_varghulf"
+        },
+        {
+          "id": "ca_unit_wh_main_vmp_veh_black_coach"
+        },
+        {
+          "id": "ca_unit_wh2_dlc11_cst_mon_mournguls_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc11_cst_mon_mournguls_ror_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc11_vmp_inf_crossbowmen"
+        },
+        {
+          "id": "ca_unit_wh2_dlc11_vmp_inf_handgunners"
+        },
+        {
+          "id": "ca_unit_wh3_dlc29_vmp_cav_drakenhof_templars"
+        },
+        {
+          "id": "ca_unit_wh3_dlc29_vmp_inf_lahmian_handmaidens_death"
+        },
+        {
+          "id": "ca_unit_wh3_dlc29_vmp_inf_lahmian_handmaidens_shadow"
+        },
+        {
+          "id": "ca_unit_wh3_dlc29_vmp_inf_spirit_host"
+        },
+        {
+          "id": "ca_unit_wh3_dlc29_vmp_mon_zombie_dragon"
+        },
+        {
+          "id": "ca_unit_wh3_dlc29_vmp_veh_coven_throne"
+        },
+        {
+          "id": "ca_unit_wh3_main_vmp_blood_knights_sword_shield"
+        },
+        {
+          "id": "ca_unit_wh3_main_vmp_inf_grave_guard_2"
+        }
+      ]
+    },
+    {
+      "factionId": "greenskins",
+      "holds": [],
+      "explicitlyExcludedCount": 72,
+      "legendaryLords": [
+        {
+          "id": "ca_lord_wh_dlc06_grn_skarsnik",
+          "characterKind": "legendary_lord",
+          "subtypeKey": "wh_dlc06_grn_skarsnik"
+        },
+        {
+          "id": "ca_lord_wh_dlc06_grn_wurrzag_da_great_prophet",
+          "characterKind": "legendary_lord",
+          "subtypeKey": "wh_dlc06_grn_wurrzag_da_great_prophet"
+        },
+        {
+          "id": "ca_lord_wh_main_grn_azhag_the_slaughterer",
+          "characterKind": "legendary_lord",
+          "subtypeKey": "wh_main_grn_azhag_the_slaughterer"
+        },
+        {
+          "id": "ca_lord_wh_main_grn_grimgor_ironhide",
+          "characterKind": "legendary_lord",
+          "subtypeKey": "wh_main_grn_grimgor_ironhide"
+        },
+        {
+          "id": "ca_lord_wh2_dlc15_grn_grom_the_paunch",
+          "characterKind": "legendary_lord",
+          "subtypeKey": "wh2_dlc15_grn_grom_the_paunch"
+        },
+        {
+          "id": "ca_lord_wh3_dlc26_grn_gorbad_ironclaw",
+          "characterKind": "legendary_lord",
+          "subtypeKey": "wh3_dlc26_grn_gorbad_ironclaw"
+        }
+      ],
+      "genericLords": [
+        {
+          "id": "ca_lord_wh_dlc06_grn_night_goblin_warboss",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh_dlc06_grn_night_goblin_warboss"
+        },
+        {
+          "id": "ca_lord_wh_main_grn_goblin_great_shaman",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh_main_grn_goblin_great_shaman"
+        },
+        {
+          "id": "ca_lord_wh_main_grn_orc_warboss",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh_main_grn_orc_warboss"
+        },
+        {
+          "id": "ca_lord_wh2_dlc15_grn_goblin_great_shaman_raknik",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh2_dlc15_grn_goblin_great_shaman_raknik"
+        },
+        {
+          "id": "ca_lord_wh2_dlc15_grn_orc_warboss_oglok",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh2_dlc15_grn_orc_warboss_oglok"
+        },
+        {
+          "id": "ca_lord_wh3_dlc26_grn_savage_orc_great_shaman",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh3_dlc26_grn_savage_orc_great_shaman"
+        }
+      ],
+      "legendaryHeroes": [
+        {
+          "id": "ca_hero_wh3_dlc26_grn_snagla_grobpsit",
+          "characterKind": "legendary_hero",
+          "subtypeKey": "wh3_dlc26_grn_snagla_grobpsit"
+        }
+      ],
+      "genericHeroes": [
+        {
+          "id": "ca_hero_wh_main_grn_goblin_big_boss",
+          "characterKind": "generic_hero",
+          "subtypeKey": "wh_main_grn_goblin_big_boss"
+        },
+        {
+          "id": "ca_hero_wh_main_grn_night_goblin_shaman",
+          "characterKind": "generic_hero",
+          "subtypeKey": "wh_main_grn_night_goblin_shaman"
+        },
+        {
+          "id": "ca_hero_wh_main_grn_orc_shaman",
+          "characterKind": "generic_hero",
+          "subtypeKey": "wh_main_grn_orc_shaman"
+        },
+        {
+          "id": "ca_hero_wh2_dlc15_grn_river_troll_hag",
+          "characterKind": "generic_hero",
+          "subtypeKey": "wh2_dlc15_grn_river_troll_hag"
+        },
+        {
+          "id": "ca_hero_wh2_pro09_grn_black_orc_big_boss",
+          "characterKind": "generic_hero",
+          "subtypeKey": "wh2_pro09_grn_black_orc_big_boss"
+        },
+        {
+          "id": "ca_hero_wh3_dlc26_grn_night_goblin_big_boss",
+          "characterKind": "generic_hero",
+          "subtypeKey": "wh3_dlc26_grn_night_goblin_big_boss"
+        }
+      ],
+      "units": [
+        {
+          "id": "ca_unit_wh_dlc06_grn_art_hammer_of_gork_0"
+        },
+        {
+          "id": "ca_unit_wh_dlc06_grn_cav_broken_tusks_mob_0"
+        },
+        {
+          "id": "ca_unit_wh_dlc06_grn_cav_deff_creepers_0"
+        },
+        {
+          "id": "ca_unit_wh_dlc06_grn_cav_durkits_squigs_0"
+        },
+        {
+          "id": "ca_unit_wh_dlc06_grn_cav_mogrubbs_marauders_0"
+        },
+        {
+          "id": "ca_unit_wh_dlc06_grn_cav_moon_howlers_0"
+        },
+        {
+          "id": "ca_unit_wh_dlc06_grn_cav_squig_hoppers_0"
+        },
+        {
+          "id": "ca_unit_wh_dlc06_grn_cav_teef_robbers_0"
+        },
+        {
+          "id": "ca_unit_wh_dlc06_grn_inf_da_eight_peaks_loonies_0"
+        },
+        {
+          "id": "ca_unit_wh_dlc06_grn_inf_da_rusty_arrers_0"
+        },
+        {
+          "id": "ca_unit_wh_dlc06_grn_inf_da_warlords_boyz_0"
+        },
+        {
+          "id": "ca_unit_wh_dlc06_grn_inf_krimson_killerz_0"
+        },
+        {
+          "id": "ca_unit_wh_dlc06_grn_inf_nasty_skulkers_0"
+        },
+        {
+          "id": "ca_unit_wh_dlc06_grn_inf_squig_explosive_0"
+        },
+        {
+          "id": "ca_unit_wh_dlc06_grn_inf_squig_herd_0"
+        },
+        {
+          "id": "ca_unit_wh_dlc06_grn_mon_spider_hatchlings_0"
+        },
+        {
+          "id": "ca_unit_wh_dlc06_grn_mon_venom_queen_0"
+        },
+        {
+          "id": "ca_unit_wh_dlc15_grn_mon_arachnarok_spider_waaagh_0"
+        },
+        {
+          "id": "ca_unit_wh_main_grn_art_doom_diver_catapult"
+        },
+        {
+          "id": "ca_unit_wh_main_grn_art_goblin_rock_lobber"
+        },
+        {
+          "id": "ca_unit_wh_main_grn_cav_forest_goblin_spider_riders_0"
+        },
+        {
+          "id": "ca_unit_wh_main_grn_cav_forest_goblin_spider_riders_1"
+        },
+        {
+          "id": "ca_unit_wh_main_grn_cav_goblin_wolf_chariot"
+        },
+        {
+          "id": "ca_unit_wh_main_grn_cav_goblin_wolf_riders_0"
+        },
+        {
+          "id": "ca_unit_wh_main_grn_cav_goblin_wolf_riders_1"
+        },
+        {
+          "id": "ca_unit_wh_main_grn_cav_orc_boar_boy_big_uns"
+        },
+        {
+          "id": "ca_unit_wh_main_grn_cav_orc_boar_boyz"
+        },
+        {
+          "id": "ca_unit_wh_main_grn_cav_orc_boar_chariot"
+        },
+        {
+          "id": "ca_unit_wh_main_grn_cav_savage_orc_boar_boy_big_uns"
+        },
+        {
+          "id": "ca_unit_wh_main_grn_cav_savage_orc_boar_boyz"
+        },
+        {
+          "id": "ca_unit_wh_main_grn_inf_black_orcs"
+        },
+        {
+          "id": "ca_unit_wh_main_grn_inf_goblin_archers"
+        },
+        {
+          "id": "ca_unit_wh_main_grn_inf_goblin_spearmen"
+        },
+        {
+          "id": "ca_unit_wh_main_grn_inf_night_goblin_archers"
+        },
+        {
+          "id": "ca_unit_wh_main_grn_inf_night_goblin_fanatics"
+        },
+        {
+          "id": "ca_unit_wh_main_grn_inf_night_goblin_fanatics_1"
+        },
+        {
+          "id": "ca_unit_wh_main_grn_inf_night_goblins"
+        },
+        {
+          "id": "ca_unit_wh_main_grn_inf_orc_arrer_boyz"
+        },
+        {
+          "id": "ca_unit_wh_main_grn_inf_orc_big_uns"
+        },
+        {
+          "id": "ca_unit_wh_main_grn_inf_orc_boyz"
+        },
+        {
+          "id": "ca_unit_wh_main_grn_inf_savage_orc_arrer_boyz"
+        },
+        {
+          "id": "ca_unit_wh_main_grn_inf_savage_orc_big_uns"
+        },
+        {
+          "id": "ca_unit_wh_main_grn_inf_savage_orcs"
+        },
+        {
+          "id": "ca_unit_wh_main_grn_mon_arachnarok_spider_0"
+        },
+        {
+          "id": "ca_unit_wh_main_grn_mon_giant"
+        },
+        {
+          "id": "ca_unit_wh_main_grn_mon_trolls"
+        },
+        {
+          "id": "ca_unit_wh2_dlc15_grn_cav_forest_goblin_spider_riders_waaagh_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc15_grn_cav_squig_hoppers_waaagh_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc15_grn_mon_feral_hydra_waaagh_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc15_grn_mon_river_trolls_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc15_grn_mon_river_trolls_ror_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc15_grn_mon_rogue_idol_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc15_grn_mon_rogue_idol_ror_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc15_grn_mon_stone_trolls_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc15_grn_mon_wyvern_waaagh_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc15_grn_veh_snotling_pump_wagon_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc15_grn_veh_snotling_pump_wagon_flappas_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc15_grn_veh_snotling_pump_wagon_roller_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc15_grn_veh_snotling_pump_wagon_ror_0"
+        },
+        {
+          "id": "ca_unit_wh2_twa03_grn_mon_wyvern_0"
+        },
+        {
+          "id": "ca_unit_wh3_dlc26_grn_art_bolt_throwa"
+        },
+        {
+          "id": "ca_unit_wh3_dlc26_grn_art_bolt_throwa_ror"
+        },
+        {
+          "id": "ca_unit_wh3_dlc26_grn_cav_mangler_squig"
+        },
+        {
+          "id": "ca_unit_wh3_dlc26_grn_inf_black_orcs_shield"
+        },
+        {
+          "id": "ca_unit_wh3_dlc26_grn_inf_rugluds_armoured_orcs"
+        },
+        {
+          "id": "ca_unit_wh3_dlc26_grn_mon_arachnarok_spider_flinger"
+        },
+        {
+          "id": "ca_unit_wh3_dlc26_grn_mon_colossal_squig"
+        },
+        {
+          "id": "ca_unit_wh3_dlc26_grn_mon_colossal_squig_ror"
+        },
+        {
+          "id": "ca_unit_wh3_main_grn_inf_goblins_sword_shield"
+        },
+        {
+          "id": "ca_unit_wh3_main_grn_inf_orc_boyz_spear_shield"
+        }
+      ]
+    },
+    {
+      "factionId": "bretonnia",
+      "holds": [],
+      "explicitlyExcludedCount": 60,
+      "legendaryLords": [
+        {
+          "id": "ca_lord_wh_dlc07_brt_alberic",
+          "characterKind": "legendary_lord",
+          "subtypeKey": "wh_dlc07_brt_alberic"
+        },
+        {
+          "id": "ca_lord_wh_dlc07_brt_fay_enchantress",
+          "characterKind": "legendary_lord",
+          "subtypeKey": "wh_dlc07_brt_fay_enchantress"
+        },
+        {
+          "id": "ca_lord_wh_main_brt_louen_leoncouer",
+          "characterKind": "legendary_lord",
+          "subtypeKey": "wh_main_brt_louen_leoncouer"
+        },
+        {
+          "id": "ca_lord_wh2_dlc14_brt_repanse",
+          "characterKind": "legendary_lord",
+          "subtypeKey": "wh2_dlc14_brt_repanse"
+        }
+      ],
+      "genericLords": [
+        {
+          "id": "ca_lord_wh_dlc07_brt_prophetess_beasts",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh_dlc07_brt_prophetess_beasts"
+        },
+        {
+          "id": "ca_lord_wh_dlc07_brt_prophetess_heavens",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh_dlc07_brt_prophetess_heavens"
+        },
+        {
+          "id": "ca_lord_wh_dlc07_brt_prophetess_life",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh_dlc07_brt_prophetess_life"
+        },
+        {
+          "id": "ca_lord_wh_main_brt_lord",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh_main_brt_lord"
+        }
+      ],
+      "legendaryHeroes": [
+        {
+          "id": "ca_hero_wh_dlc07_brt_green_knight",
+          "characterKind": "legendary_hero",
+          "subtypeKey": "wh_dlc07_brt_green_knight"
+        },
+        {
+          "id": "ca_hero_wh2_dlc14_brt_henri_le_massif",
+          "characterKind": "legendary_hero",
+          "subtypeKey": "wh2_dlc14_brt_henri_le_massif"
+        }
+      ],
+      "genericHeroes": [
+        {
+          "id": "ca_hero_wh_dlc07_brt_damsel_beasts",
+          "characterKind": "generic_hero",
+          "subtypeKey": "wh_dlc07_brt_damsel_beasts"
+        },
+        {
+          "id": "ca_hero_wh_dlc07_brt_damsel_life",
+          "characterKind": "generic_hero",
+          "subtypeKey": "wh_dlc07_brt_damsel_life"
+        },
+        {
+          "id": "ca_hero_wh_main_brt_damsel_heavens",
+          "characterKind": "generic_hero",
+          "subtypeKey": "wh_main_brt_damsel_heavens"
+        },
+        {
+          "id": "ca_hero_wh_main_brt_paladin",
+          "characterKind": "generic_hero",
+          "subtypeKey": "wh_main_brt_paladin"
+        }
+      ],
+      "units": [
+        {
+          "id": "ca_unit_wh_dlc07_brt_art_blessed_field_trebuchet_0"
+        },
+        {
+          "id": "ca_unit_wh_dlc07_brt_cav_grail_guardians_0"
+        },
+        {
+          "id": "ca_unit_wh_dlc07_brt_cav_knights_errant_0"
+        },
+        {
+          "id": "ca_unit_wh_dlc07_brt_cav_questing_knights_0"
+        },
+        {
+          "id": "ca_unit_wh_dlc07_brt_cav_royal_hippogryph_knights_0"
+        },
+        {
+          "id": "ca_unit_wh_dlc07_brt_cav_royal_pegasus_knights_0"
+        },
+        {
+          "id": "ca_unit_wh_dlc07_brt_inf_battle_pilgrims_0"
+        },
+        {
+          "id": "ca_unit_wh_dlc07_brt_inf_foot_squires_0"
+        },
+        {
+          "id": "ca_unit_wh_dlc07_brt_inf_grail_reliquae_0"
+        },
+        {
+          "id": "ca_unit_wh_dlc07_brt_inf_men_at_arms_1"
+        },
+        {
+          "id": "ca_unit_wh_dlc07_brt_inf_men_at_arms_2"
+        },
+        {
+          "id": "ca_unit_wh_dlc07_brt_inf_peasant_bowmen_1"
+        },
+        {
+          "id": "ca_unit_wh_dlc07_brt_inf_peasant_bowmen_2"
+        },
+        {
+          "id": "ca_unit_wh_dlc07_brt_inf_spearmen_at_arms_1"
+        },
+        {
+          "id": "ca_unit_wh_dlc07_brt_peasant_mob_0"
+        },
+        {
+          "id": "ca_unit_wh_main_brt_art_field_trebuchet"
+        },
+        {
+          "id": "ca_unit_wh_main_brt_cav_grail_knights"
+        },
+        {
+          "id": "ca_unit_wh_main_brt_cav_knights_of_the_realm"
+        },
+        {
+          "id": "ca_unit_wh_main_brt_cav_mounted_yeomen_0"
+        },
+        {
+          "id": "ca_unit_wh_main_brt_cav_mounted_yeomen_1"
+        },
+        {
+          "id": "ca_unit_wh_main_brt_cav_pegasus_knights"
+        },
+        {
+          "id": "ca_unit_wh_main_brt_inf_men_at_arms"
+        },
+        {
+          "id": "ca_unit_wh_main_brt_inf_peasant_bowmen"
+        },
+        {
+          "id": "ca_unit_wh_main_brt_inf_spearmen_at_arms"
+        },
+        {
+          "id": "ca_unit_wh_pro04_brt_cav_knights_errant_ror_0"
+        },
+        {
+          "id": "ca_unit_wh_pro04_brt_cav_knights_of_the_realm_ror_0"
+        },
+        {
+          "id": "ca_unit_wh_pro04_brt_cav_mounted_yeomen_ror_0"
+        },
+        {
+          "id": "ca_unit_wh_pro04_brt_cav_questing_knights_ror_0"
+        },
+        {
+          "id": "ca_unit_wh_pro04_brt_inf_battle_pilgrims_ror_0"
+        },
+        {
+          "id": "ca_unit_wh_pro04_brt_inf_foot_squires_ror_0"
+        }
+      ]
+    },
+    {
+      "factionId": "tomb_kings",
+      "holds": [],
+      "explicitlyExcludedCount": 60,
+      "legendaryLords": [
+        {
+          "id": "ca_lord_wh2_dlc09_tmb_arkhan",
+          "characterKind": "legendary_lord",
+          "subtypeKey": "wh2_dlc09_tmb_arkhan"
+        },
+        {
+          "id": "ca_lord_wh2_dlc09_tmb_khalida",
+          "characterKind": "legendary_lord",
+          "subtypeKey": "wh2_dlc09_tmb_khalida"
+        },
+        {
+          "id": "ca_lord_wh2_dlc09_tmb_khatep",
+          "characterKind": "legendary_lord",
+          "subtypeKey": "wh2_dlc09_tmb_khatep"
+        },
+        {
+          "id": "ca_lord_wh2_dlc09_tmb_settra",
+          "characterKind": "legendary_lord",
+          "subtypeKey": "wh2_dlc09_tmb_settra"
+        }
+      ],
+      "genericLords": [
+        {
+          "id": "ca_lord_wh2_dlc09_tmb_tomb_king",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh2_dlc09_tmb_tomb_king"
+        },
+        {
+          "id": "ca_lord_wh2_dlc09_tmb_tomb_king_alkhazzar_ii",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh2_dlc09_tmb_tomb_king_alkhazzar_ii"
+        },
+        {
+          "id": "ca_lord_wh2_dlc09_tmb_tomb_king_lahmizzash",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh2_dlc09_tmb_tomb_king_lahmizzash"
+        },
+        {
+          "id": "ca_lord_wh2_dlc09_tmb_tomb_king_rakhash",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh2_dlc09_tmb_tomb_king_rakhash"
+        },
+        {
+          "id": "ca_lord_wh2_dlc09_tmb_tomb_king_setep",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh2_dlc09_tmb_tomb_king_setep"
+        },
+        {
+          "id": "ca_lord_wh2_dlc09_tmb_tomb_king_thutep",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh2_dlc09_tmb_tomb_king_thutep"
+        },
+        {
+          "id": "ca_lord_wh2_dlc09_tmb_tomb_king_wakhaf",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh2_dlc09_tmb_tomb_king_wakhaf"
+        },
+        {
+          "id": "ca_lord_wh3_dlc29_tmb_liche_high_priest_death",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh3_dlc29_tmb_liche_high_priest_death"
+        },
+        {
+          "id": "ca_lord_wh3_dlc29_tmb_liche_high_priest_light",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh3_dlc29_tmb_liche_high_priest_light"
+        },
+        {
+          "id": "ca_lord_wh3_dlc29_tmb_liche_high_priest_nehekhara",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh3_dlc29_tmb_liche_high_priest_nehekhara"
+        },
+        {
+          "id": "ca_lord_wh3_dlc29_tmb_liche_high_priest_shadow",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh3_dlc29_tmb_liche_high_priest_shadow"
+        },
+        {
+          "id": "ca_lord_wh3_dlc29_tmb_liche_high_priest_undeath",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh3_dlc29_tmb_liche_high_priest_undeath"
+        }
+      ],
+      "legendaryHeroes": [],
+      "genericHeroes": [
+        {
+          "id": "ca_hero_wh2_dlc09_tmb_liche_priest_death",
+          "characterKind": "generic_hero",
+          "subtypeKey": "wh2_dlc09_tmb_liche_priest_death"
+        },
+        {
+          "id": "ca_hero_wh2_dlc09_tmb_liche_priest_light",
+          "characterKind": "generic_hero",
+          "subtypeKey": "wh2_dlc09_tmb_liche_priest_light"
+        },
+        {
+          "id": "ca_hero_wh2_dlc09_tmb_liche_priest_nehekhara",
+          "characterKind": "generic_hero",
+          "subtypeKey": "wh2_dlc09_tmb_liche_priest_nehekhara"
+        },
+        {
+          "id": "ca_hero_wh2_dlc09_tmb_liche_priest_shadow",
+          "characterKind": "generic_hero",
+          "subtypeKey": "wh2_dlc09_tmb_liche_priest_shadow"
+        },
+        {
+          "id": "ca_hero_wh2_dlc09_tmb_necrotect",
+          "characterKind": "generic_hero",
+          "subtypeKey": "wh2_dlc09_tmb_necrotect"
+        },
+        {
+          "id": "ca_hero_wh2_dlc09_tmb_tomb_prince",
+          "characterKind": "generic_hero",
+          "subtypeKey": "wh2_dlc09_tmb_tomb_prince"
+        },
+        {
+          "id": "ca_hero_wh3_dlc29_tmb_liche_priest_undeath",
+          "characterKind": "generic_hero",
+          "subtypeKey": "wh3_dlc29_tmb_liche_priest_undeath"
+        },
+        {
+          "id": "ca_hero_wh3_dlc29_tmb_tomb_herald",
+          "characterKind": "generic_hero",
+          "subtypeKey": "wh3_dlc29_tmb_tomb_herald"
+        }
+      ],
+      "units": [
+        {
+          "id": "ca_unit_wh2_dlc09_tmb_art_casket_of_souls_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc09_tmb_art_screaming_skull_catapult_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc09_tmb_cav_hexwraiths"
+        },
+        {
+          "id": "ca_unit_wh2_dlc09_tmb_cav_necropolis_knights_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc09_tmb_cav_necropolis_knights_1"
+        },
+        {
+          "id": "ca_unit_wh2_dlc09_tmb_cav_necropolis_knights_ror"
+        },
+        {
+          "id": "ca_unit_wh2_dlc09_tmb_cav_nehekhara_horsemen_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc09_tmb_cav_nehekhara_horsemen_ror"
+        },
+        {
+          "id": "ca_unit_wh2_dlc09_tmb_cav_skeleton_horsemen_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc09_tmb_cav_skeleton_horsemen_archers_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc09_tmb_inf_cairn_wraiths"
+        },
+        {
+          "id": "ca_unit_wh2_dlc09_tmb_inf_crypt_ghouls"
+        },
+        {
+          "id": "ca_unit_wh2_dlc09_tmb_inf_nehekhara_warriors_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc09_tmb_inf_nehekhara_warriors_ror"
+        },
+        {
+          "id": "ca_unit_wh2_dlc09_tmb_inf_skeleton_archers_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc09_tmb_inf_skeleton_archers_ror"
+        },
+        {
+          "id": "ca_unit_wh2_dlc09_tmb_inf_skeleton_spearmen_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc09_tmb_inf_skeleton_spearmen_ror"
+        },
+        {
+          "id": "ca_unit_wh2_dlc09_tmb_inf_skeleton_warriors_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc09_tmb_inf_spirit_host"
+        },
+        {
+          "id": "ca_unit_wh2_dlc09_tmb_inf_tomb_guard_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc09_tmb_inf_tomb_guard_1"
+        },
+        {
+          "id": "ca_unit_wh2_dlc09_tmb_inf_tomb_guard_ror"
+        },
+        {
+          "id": "ca_unit_wh2_dlc09_tmb_mon_carrion_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc09_tmb_mon_carrion_ror"
+        },
+        {
+          "id": "ca_unit_wh2_dlc09_tmb_mon_crypt_horrors"
+        },
+        {
+          "id": "ca_unit_wh2_dlc09_tmb_mon_dire_wolves"
+        },
+        {
+          "id": "ca_unit_wh2_dlc09_tmb_mon_fell_bats"
+        },
+        {
+          "id": "ca_unit_wh2_dlc09_tmb_mon_heirotitan_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc09_tmb_mon_morghast_archai"
+        },
+        {
+          "id": "ca_unit_wh2_dlc09_tmb_mon_morghast_harbingers"
+        },
+        {
+          "id": "ca_unit_wh2_dlc09_tmb_mon_necrosphinx_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc09_tmb_mon_necrosphinx_ror"
+        },
+        {
+          "id": "ca_unit_wh2_dlc09_tmb_mon_sepulchral_stalkers_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc09_tmb_mon_sepulchral_stalkers_ror"
+        },
+        {
+          "id": "ca_unit_wh2_dlc09_tmb_mon_tomb_scorpion_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc09_tmb_mon_ushabti_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc09_tmb_mon_ushabti_1"
+        },
+        {
+          "id": "ca_unit_wh2_dlc09_tmb_mon_ushabti_ror"
+        },
+        {
+          "id": "ca_unit_wh2_dlc09_tmb_veh_khemrian_warsphinx_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc09_tmb_veh_skeleton_archer_chariot_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc09_tmb_veh_skeleton_chariot_0"
+        },
+        {
+          "id": "ca_unit_wh2_pro06_tmb_mon_bone_giant_0"
+        },
+        {
+          "id": "ca_unit_wh3_dlc29_tmb_mon_khemric_titan"
+        },
+        {
+          "id": "ca_unit_wh3_dlc29_tmb_mon_khemric_titan_ror"
+        }
+      ]
+    },
+    {
+      "factionId": "vampire_coast",
+      "holds": [],
+      "explicitlyExcludedCount": 48,
+      "legendaryLords": [
+        {
+          "id": "ca_lord_wh2_dlc11_cst_aranessa",
+          "characterKind": "legendary_lord",
+          "subtypeKey": "wh2_dlc11_cst_aranessa"
+        },
+        {
+          "id": "ca_lord_wh2_dlc11_cst_cylostra",
+          "characterKind": "legendary_lord",
+          "subtypeKey": "wh2_dlc11_cst_cylostra"
+        },
+        {
+          "id": "ca_lord_wh2_dlc11_cst_harkon",
+          "characterKind": "legendary_lord",
+          "subtypeKey": "wh2_dlc11_cst_harkon"
+        },
+        {
+          "id": "ca_lord_wh2_dlc11_cst_noctilus",
+          "characterKind": "legendary_lord",
+          "subtypeKey": "wh2_dlc11_cst_noctilus"
+        }
+      ],
+      "genericLords": [
+        {
+          "id": "ca_lord_wh2_dlc11_cst_admiral_death",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh2_dlc11_cst_admiral_death"
+        },
+        {
+          "id": "ca_lord_wh2_dlc11_cst_admiral_deep",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh2_dlc11_cst_admiral_deep"
+        },
+        {
+          "id": "ca_lord_wh2_dlc11_cst_admiral_fem_death",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh2_dlc11_cst_admiral_fem_death"
+        },
+        {
+          "id": "ca_lord_wh2_dlc11_cst_admiral_fem_deep",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh2_dlc11_cst_admiral_fem_deep"
+        },
+        {
+          "id": "ca_lord_wh2_dlc11_cst_admiral_fem_vampires",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh2_dlc11_cst_admiral_fem_vampires"
+        },
+        {
+          "id": "ca_lord_wh2_dlc11_cst_admiral_tech_01",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh2_dlc11_cst_admiral_tech_01"
+        },
+        {
+          "id": "ca_lord_wh2_dlc11_cst_admiral_tech_02",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh2_dlc11_cst_admiral_tech_02"
+        },
+        {
+          "id": "ca_lord_wh2_dlc11_cst_admiral_tech_03",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh2_dlc11_cst_admiral_tech_03"
+        },
+        {
+          "id": "ca_lord_wh2_dlc11_cst_admiral_tech_04",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh2_dlc11_cst_admiral_tech_04"
+        },
+        {
+          "id": "ca_lord_wh2_dlc11_cst_admiral_vampires",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh2_dlc11_cst_admiral_vampires"
+        },
+        {
+          "id": "ca_lord_wh3_dlc29_cst_vampire_fleet_admiral_female_undeath",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh3_dlc29_cst_vampire_fleet_admiral_female_undeath"
+        },
+        {
+          "id": "ca_lord_wh3_dlc29_cst_vampire_fleet_admiral_undeath",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh3_dlc29_cst_vampire_fleet_admiral_undeath"
+        }
+      ],
+      "legendaryHeroes": [
+        {
+          "id": "ca_hero_wh2_dlc11_cst_ghost_paladin",
+          "characterKind": "legendary_hero",
+          "subtypeKey": "wh2_dlc11_cst_ghost_paladin"
+        }
+      ],
+      "genericHeroes": [
+        {
+          "id": "ca_hero_wh2_dlc11_cst_fleet_captain_death",
+          "characterKind": "generic_hero",
+          "subtypeKey": "wh2_dlc11_cst_fleet_captain_death"
+        },
+        {
+          "id": "ca_hero_wh2_dlc11_cst_fleet_captain_deep",
+          "characterKind": "generic_hero",
+          "subtypeKey": "wh2_dlc11_cst_fleet_captain_deep"
+        },
+        {
+          "id": "ca_hero_wh2_dlc11_cst_fleet_captain_vampires",
+          "characterKind": "generic_hero",
+          "subtypeKey": "wh2_dlc11_cst_fleet_captain_vampires"
+        },
+        {
+          "id": "ca_hero_wh2_dlc11_cst_gunnery_wight",
+          "characterKind": "generic_hero",
+          "subtypeKey": "wh2_dlc11_cst_gunnery_wight"
+        },
+        {
+          "id": "ca_hero_wh2_dlc11_cst_mourngul",
+          "characterKind": "generic_hero",
+          "subtypeKey": "wh2_dlc11_cst_mourngul"
+        },
+        {
+          "id": "ca_hero_wh3_dlc29_cst_vampire_fleet_captain_undeath",
+          "characterKind": "generic_hero",
+          "subtypeKey": "wh3_dlc29_cst_vampire_fleet_captain_undeath"
+        }
+      ],
+      "units": [
+        {
+          "id": "ca_unit_wh2_dlc11_cst_art_carronade"
+        },
+        {
+          "id": "ca_unit_wh2_dlc11_cst_art_mortar"
+        },
+        {
+          "id": "ca_unit_wh2_dlc11_cst_art_queen_bess"
+        },
+        {
+          "id": "ca_unit_wh2_dlc11_cst_cav_deck_droppers_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc11_cst_cav_deck_droppers_1"
+        },
+        {
+          "id": "ca_unit_wh2_dlc11_cst_cav_deck_droppers_2"
+        },
+        {
+          "id": "ca_unit_wh2_dlc11_cst_cav_deck_droppers_ror_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc11_cst_inf_deck_gunners_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc11_cst_inf_deck_gunners_ror_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc11_cst_inf_depth_guard_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc11_cst_inf_depth_guard_1"
+        },
+        {
+          "id": "ca_unit_wh2_dlc11_cst_inf_depth_guard_ror_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc11_cst_inf_sartosa_free_company_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc11_cst_inf_sartosa_militia_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc11_cst_inf_syreens"
+        },
+        {
+          "id": "ca_unit_wh2_dlc11_cst_inf_zombie_deckhands_mob_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc11_cst_inf_zombie_deckhands_mob_1"
+        },
+        {
+          "id": "ca_unit_wh2_dlc11_cst_inf_zombie_deckhands_mob_ror_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc11_cst_inf_zombie_gunnery_mob_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc11_cst_inf_zombie_gunnery_mob_1"
+        },
+        {
+          "id": "ca_unit_wh2_dlc11_cst_inf_zombie_gunnery_mob_2"
+        },
+        {
+          "id": "ca_unit_wh2_dlc11_cst_inf_zombie_gunnery_mob_3"
+        },
+        {
+          "id": "ca_unit_wh2_dlc11_cst_inf_zombie_gunnery_mob_ror_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc11_cst_mon_animated_hulks_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc11_cst_mon_bloated_corpse_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc11_cst_mon_fell_bats"
+        },
+        {
+          "id": "ca_unit_wh2_dlc11_cst_mon_mournguls_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc11_cst_mon_mournguls_ror_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc11_cst_mon_necrofex_colossus_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc11_cst_mon_necrofex_colossus_ror_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc11_cst_mon_rotting_leviathan_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc11_cst_mon_rotting_prometheans_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc11_cst_mon_rotting_prometheans_gunnery_mob_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc11_cst_mon_rotting_prometheans_gunnery_mob_ror"
+        },
+        {
+          "id": "ca_unit_wh2_dlc11_cst_mon_scurvy_dogs"
+        },
+        {
+          "id": "ca_unit_wh2_dlc11_cst_mon_terrorgheist"
+        }
+      ]
+    },
+    {
+      "factionId": "skaven",
+      "holds": [],
+      "explicitlyExcludedCount": 65,
+      "legendaryLords": [
+        {
+          "id": "ca_lord_wh2_dlc09_skv_tretch_craventail",
+          "characterKind": "legendary_lord",
+          "subtypeKey": "wh2_dlc09_skv_tretch_craventail"
+        },
+        {
+          "id": "ca_lord_wh2_dlc12_skv_ikit_claw",
+          "characterKind": "legendary_lord",
+          "subtypeKey": "wh2_dlc12_skv_ikit_claw"
+        },
+        {
+          "id": "ca_lord_wh2_dlc14_skv_deathmaster_snikch",
+          "characterKind": "legendary_lord",
+          "subtypeKey": "wh2_dlc14_skv_deathmaster_snikch"
+        },
+        {
+          "id": "ca_lord_wh2_dlc16_skv_throt_the_unclean",
+          "characterKind": "legendary_lord",
+          "subtypeKey": "wh2_dlc16_skv_throt_the_unclean"
+        },
+        {
+          "id": "ca_lord_wh2_main_skv_lord_skrolk",
+          "characterKind": "legendary_lord",
+          "subtypeKey": "wh2_main_skv_lord_skrolk"
+        },
+        {
+          "id": "ca_lord_wh2_main_skv_queek_headtaker",
+          "characterKind": "legendary_lord",
+          "subtypeKey": "wh2_main_skv_queek_headtaker"
+        },
+        {
+          "id": "ca_lord_wh3_dlc29_skv_thanquol",
+          "characterKind": "legendary_lord",
+          "subtypeKey": "wh3_dlc29_skv_thanquol"
+        }
+      ],
+      "genericLords": [
+        {
+          "id": "ca_lord_wh2_dlc12_skv_warlock_master",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh2_dlc12_skv_warlock_master"
+        },
+        {
+          "id": "ca_lord_wh2_dlc14_skv_master_assassin",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh2_dlc14_skv_master_assassin"
+        },
+        {
+          "id": "ca_lord_wh2_main_skv_grey_seer_plague",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh2_main_skv_grey_seer_plague"
+        },
+        {
+          "id": "ca_lord_wh2_main_skv_grey_seer_ruin",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh2_main_skv_grey_seer_ruin"
+        },
+        {
+          "id": "ca_lord_wh2_main_skv_warlord",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh2_main_skv_warlord"
+        },
+        {
+          "id": "ca_lord_wh3_dlc29_skv_skreech_verminking_general",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh3_dlc29_skv_skreech_verminking_general"
+        },
+        {
+          "id": "ca_lord_wh3_dlc29_skv_verminlord_corruptor",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh3_dlc29_skv_verminlord_corruptor"
+        },
+        {
+          "id": "ca_lord_wh3_dlc29_skv_verminlord_deceiver",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh3_dlc29_skv_verminlord_deceiver"
+        },
+        {
+          "id": "ca_lord_wh3_dlc29_skv_verminlord_warbringer",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh3_dlc29_skv_verminlord_warbringer"
+        },
+        {
+          "id": "ca_lord_wh3_dlc29_skv_verminlord_warpseer",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh3_dlc29_skv_verminlord_warpseer"
+        }
+      ],
+      "legendaryHeroes": [
+        {
+          "id": "ca_hero_wh2_dlc16_skv_ghoritch",
+          "characterKind": "legendary_hero",
+          "subtypeKey": "wh2_dlc16_skv_ghoritch"
+        },
+        {
+          "id": "ca_hero_wh3_dlc29_skv_skreech_verminking",
+          "characterKind": "legendary_hero",
+          "subtypeKey": "wh3_dlc29_skv_skreech_verminking"
+        }
+      ],
+      "genericHeroes": [
+        {
+          "id": "ca_hero_wh2_dlc14_skv_eshin_sorcerer",
+          "characterKind": "generic_hero",
+          "subtypeKey": "wh2_dlc14_skv_eshin_sorcerer"
+        },
+        {
+          "id": "ca_hero_wh2_dlc16_skv_chieftain",
+          "characterKind": "generic_hero",
+          "subtypeKey": "wh2_dlc16_skv_chieftain"
+        },
+        {
+          "id": "ca_hero_wh2_dlc16_skv_packmaster",
+          "characterKind": "generic_hero",
+          "subtypeKey": "wh2_dlc16_skv_packmaster"
+        },
+        {
+          "id": "ca_hero_wh2_main_skv_assassin",
+          "characterKind": "generic_hero",
+          "subtypeKey": "wh2_main_skv_assassin"
+        },
+        {
+          "id": "ca_hero_wh2_main_skv_plague_priest",
+          "characterKind": "generic_hero",
+          "subtypeKey": "wh2_main_skv_plague_priest"
+        },
+        {
+          "id": "ca_hero_wh2_main_skv_warlock_engineer",
+          "characterKind": "generic_hero",
+          "subtypeKey": "wh2_main_skv_warlock_engineer"
+        }
+      ],
+      "units": [
+        {
+          "id": "ca_unit_wh2_dlc12_skv_art_warp_lightning_cannon_ror_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc12_skv_art_warplock_jezzails_ror_tech_lab_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc12_skv_inf_clanrats_ror_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc12_skv_inf_plague_monk_censer_bearer_ror_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc12_skv_inf_ratling_gun_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc12_skv_inf_ratling_gun_ror_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc12_skv_inf_ratling_gun_ror_tech_lab_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc12_skv_inf_stormvermin_ror_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc12_skv_inf_warpfire_thrower_ror_tech_lab_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc12_skv_inf_warplock_jezzails_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc12_skv_inf_warplock_jezzails_ror_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc12_skv_veh_doom_flayer_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc12_skv_veh_doom_flayer_ror_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc12_skv_veh_doom_flayer_ror_tech_lab_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc12_skv_veh_doomwheel_ror_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc12_skv_veh_doomwheel_ror_tech_lab_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc14_skv_inf_death_runners_ror_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc14_skv_inf_eshin_triads_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc14_skv_inf_eshin_triads_ror_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc14_skv_inf_poison_wind_mortar_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc14_skv_inf_poison_wind_mortar_ror_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc14_skv_inf_warp_grinder_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc16_skv_mon_brood_horror_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc16_skv_mon_hell_pit_abomination_ror_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc16_skv_mon_rat_ogre_mutant"
+        },
+        {
+          "id": "ca_unit_wh2_dlc16_skv_mon_rat_ogre_mutant_ror_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc16_skv_mon_rat_ogres_ror_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc16_skv_mon_wolf_rats_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc16_skv_mon_wolf_rats_1"
+        },
+        {
+          "id": "ca_unit_wh2_main_skv_art_plagueclaw_catapult"
+        },
+        {
+          "id": "ca_unit_wh2_main_skv_art_warp_lightning_cannon"
+        },
+        {
+          "id": "ca_unit_wh2_main_skv_inf_clanrat_spearmen_0"
+        },
+        {
+          "id": "ca_unit_wh2_main_skv_inf_clanrat_spearmen_1"
+        },
+        {
+          "id": "ca_unit_wh2_main_skv_inf_clanrats_0"
+        },
+        {
+          "id": "ca_unit_wh2_main_skv_inf_clanrats_1"
+        },
+        {
+          "id": "ca_unit_wh2_main_skv_inf_death_globe_bombardiers"
+        },
+        {
+          "id": "ca_unit_wh2_main_skv_inf_death_runners_0"
+        },
+        {
+          "id": "ca_unit_wh2_main_skv_inf_gutter_runner_slingers_0"
+        },
+        {
+          "id": "ca_unit_wh2_main_skv_inf_gutter_runner_slingers_1"
+        },
+        {
+          "id": "ca_unit_wh2_main_skv_inf_gutter_runners_0"
+        },
+        {
+          "id": "ca_unit_wh2_main_skv_inf_gutter_runners_1"
+        },
+        {
+          "id": "ca_unit_wh2_main_skv_inf_night_runners_0"
+        },
+        {
+          "id": "ca_unit_wh2_main_skv_inf_night_runners_1"
+        },
+        {
+          "id": "ca_unit_wh2_main_skv_inf_plague_monk_censer_bearer"
+        },
+        {
+          "id": "ca_unit_wh2_main_skv_inf_plague_monks"
+        },
+        {
+          "id": "ca_unit_wh2_main_skv_inf_poison_wind_globadiers"
+        },
+        {
+          "id": "ca_unit_wh2_main_skv_inf_skavenslave_slingers_0"
+        },
+        {
+          "id": "ca_unit_wh2_main_skv_inf_skavenslave_spearmen_0"
+        },
+        {
+          "id": "ca_unit_wh2_main_skv_inf_skavenslaves_0"
+        },
+        {
+          "id": "ca_unit_wh2_main_skv_inf_stormvermin_0"
+        },
+        {
+          "id": "ca_unit_wh2_main_skv_inf_stormvermin_1"
+        },
+        {
+          "id": "ca_unit_wh2_main_skv_inf_warpfire_thrower"
+        },
+        {
+          "id": "ca_unit_wh2_main_skv_mon_hell_pit_abomination"
+        },
+        {
+          "id": "ca_unit_wh2_main_skv_mon_rat_ogres"
+        },
+        {
+          "id": "ca_unit_wh2_main_skv_veh_doomwheel"
+        },
+        {
+          "id": "ca_unit_wh3_dlc29_skv_art_plagueclaw_catapult_ror"
+        },
+        {
+          "id": "ca_unit_wh3_dlc29_skv_art_warp_doom_magma_cannon"
+        },
+        {
+          "id": "ca_unit_wh3_dlc29_skv_inf_deathvermin_ror"
+        },
+        {
+          "id": "ca_unit_wh3_dlc29_skv_inf_pusbags"
+        },
+        {
+          "id": "ca_unit_wh3_dlc29_skv_mon_stormfiend_doomflayer_gauntlets"
+        },
+        {
+          "id": "ca_unit_wh3_dlc29_skv_mon_stormfiend_grinderfists"
+        },
+        {
+          "id": "ca_unit_wh3_dlc29_skv_mon_stormfiend_ratling_cannons"
+        },
+        {
+          "id": "ca_unit_wh3_dlc29_skv_mon_stormfiend_shock_gauntlets"
+        },
+        {
+          "id": "ca_unit_wh3_dlc29_skv_mon_stormfiend_warpfire_projectors"
+        },
+        {
+          "id": "ca_unit_wh3_dlc29_skv_mon_stormfiend_windlaunchers"
+        },
+        {
+          "id": "ca_unit_wh3_dlc29_skv_mon_stormfiends_ratling_cannons_ror"
+        },
+        {
+          "id": "ca_unit_wh3_dlc29_skv_veh_cauldron_of_a_thousand_poxes"
+        }
+      ]
+    },
+    {
+      "factionId": "lizardmen",
+      "holds": [],
+      "explicitlyExcludedCount": 67,
+      "legendaryLords": [
+        {
+          "id": "ca_lord_wh2_dlc12_lzd_tehenhauin",
+          "characterKind": "legendary_lord",
+          "subtypeKey": "wh2_dlc12_lzd_tehenhauin"
+        },
+        {
+          "id": "ca_lord_wh2_dlc12_lzd_tiktaqto",
+          "characterKind": "legendary_lord",
+          "subtypeKey": "wh2_dlc12_lzd_tiktaqto"
+        },
+        {
+          "id": "ca_lord_wh2_dlc13_lzd_gor_rok",
+          "characterKind": "legendary_lord",
+          "subtypeKey": "wh2_dlc13_lzd_gor_rok"
+        },
+        {
+          "id": "ca_lord_wh2_dlc13_lzd_nakai",
+          "characterKind": "legendary_lord",
+          "subtypeKey": "wh2_dlc13_lzd_nakai"
+        },
+        {
+          "id": "ca_lord_wh2_dlc17_lzd_oxyotl",
+          "characterKind": "legendary_lord",
+          "subtypeKey": "wh2_dlc17_lzd_oxyotl"
+        },
+        {
+          "id": "ca_lord_wh2_main_lzd_kroq_gar",
+          "characterKind": "legendary_lord",
+          "subtypeKey": "wh2_main_lzd_kroq_gar"
+        },
+        {
+          "id": "ca_lord_wh2_main_lzd_lord_mazdamundi",
+          "characterKind": "legendary_lord",
+          "subtypeKey": "wh2_main_lzd_lord_mazdamundi"
+        }
+      ],
+      "genericLords": [
+        {
+          "id": "ca_lord_wh2_dlc10_lzd_mon_carnosaur_boss",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh2_dlc10_lzd_mon_carnosaur_boss"
+        },
+        {
+          "id": "ca_lord_wh2_dlc12_lzd_red_crested_skink_chief",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh2_dlc12_lzd_red_crested_skink_chief"
+        },
+        {
+          "id": "ca_lord_wh2_dlc12_lzd_red_crested_skink_chief_legendary",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh2_dlc12_lzd_red_crested_skink_chief_legendary"
+        },
+        {
+          "id": "ca_lord_wh2_dlc13_lzd_kroxigor_ancient",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh2_dlc13_lzd_kroxigor_ancient"
+        },
+        {
+          "id": "ca_lord_wh2_dlc13_lzd_kroxigor_ancient_horde",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh2_dlc13_lzd_kroxigor_ancient_horde"
+        },
+        {
+          "id": "ca_lord_wh2_dlc13_lzd_red_crested_skink_chief_horde",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh2_dlc13_lzd_red_crested_skink_chief_horde"
+        },
+        {
+          "id": "ca_lord_wh2_dlc13_lzd_saurus_old_blood_horde",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh2_dlc13_lzd_saurus_old_blood_horde"
+        },
+        {
+          "id": "ca_lord_wh2_dlc13_lzd_slann_mage_priest_beasts",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh2_dlc13_lzd_slann_mage_priest_beasts"
+        },
+        {
+          "id": "ca_lord_wh2_dlc13_lzd_slann_mage_priest_beasts_horde",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh2_dlc13_lzd_slann_mage_priest_beasts_horde"
+        },
+        {
+          "id": "ca_lord_wh2_dlc13_lzd_slann_mage_priest_death",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh2_dlc13_lzd_slann_mage_priest_death"
+        },
+        {
+          "id": "ca_lord_wh2_dlc13_lzd_slann_mage_priest_death_horde",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh2_dlc13_lzd_slann_mage_priest_death_horde"
+        },
+        {
+          "id": "ca_lord_wh2_dlc13_lzd_slann_mage_priest_fire",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh2_dlc13_lzd_slann_mage_priest_fire"
+        },
+        {
+          "id": "ca_lord_wh2_dlc13_lzd_slann_mage_priest_fire_horde",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh2_dlc13_lzd_slann_mage_priest_fire_horde"
+        },
+        {
+          "id": "ca_lord_wh2_dlc13_lzd_slann_mage_priest_heavens",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh2_dlc13_lzd_slann_mage_priest_heavens"
+        },
+        {
+          "id": "ca_lord_wh2_dlc13_lzd_slann_mage_priest_heavens_horde",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh2_dlc13_lzd_slann_mage_priest_heavens_horde"
+        },
+        {
+          "id": "ca_lord_wh2_dlc13_lzd_slann_mage_priest_high",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh2_dlc13_lzd_slann_mage_priest_high"
+        },
+        {
+          "id": "ca_lord_wh2_dlc13_lzd_slann_mage_priest_high_horde",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh2_dlc13_lzd_slann_mage_priest_high_horde"
+        },
+        {
+          "id": "ca_lord_wh2_dlc13_lzd_slann_mage_priest_life",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh2_dlc13_lzd_slann_mage_priest_life"
+        },
+        {
+          "id": "ca_lord_wh2_dlc13_lzd_slann_mage_priest_life_horde",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh2_dlc13_lzd_slann_mage_priest_life_horde"
+        },
+        {
+          "id": "ca_lord_wh2_dlc13_lzd_slann_mage_priest_metal",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh2_dlc13_lzd_slann_mage_priest_metal"
+        },
+        {
+          "id": "ca_lord_wh2_dlc13_lzd_slann_mage_priest_metal_horde",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh2_dlc13_lzd_slann_mage_priest_metal_horde"
+        },
+        {
+          "id": "ca_lord_wh2_dlc13_lzd_slann_mage_priest_shadows",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh2_dlc13_lzd_slann_mage_priest_shadows"
+        },
+        {
+          "id": "ca_lord_wh2_dlc13_lzd_slann_mage_priest_shadows_horde",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh2_dlc13_lzd_slann_mage_priest_shadows_horde"
+        },
+        {
+          "id": "ca_lord_wh2_dlc15_hef_star_dragon_boss_imrik",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh2_dlc15_hef_star_dragon_boss_imrik"
+        },
+        {
+          "id": "ca_lord_wh2_main_lzd_saurus_old_blood",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh2_main_lzd_saurus_old_blood"
+        },
+        {
+          "id": "ca_lord_wh2_main_lzd_slann_mage_priest",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh2_main_lzd_slann_mage_priest"
+        },
+        {
+          "id": "ca_lord_wh2_main_lzd_slann_mage_priest_horde",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh2_main_lzd_slann_mage_priest_horde"
+        }
+      ],
+      "legendaryHeroes": [
+        {
+          "id": "ca_hero_wh2_dlc12_lzd_lord_kroak",
+          "characterKind": "legendary_hero",
+          "subtypeKey": "wh2_dlc12_lzd_lord_kroak"
+        },
+        {
+          "id": "ca_hero_wh2_dlc17_lzd_mon_dread_saurian_qb_boss",
+          "characterKind": "legendary_hero",
+          "subtypeKey": "wh2_dlc17_lzd_mon_dread_saurian_qb_boss"
+        }
+      ],
+      "genericHeroes": [
+        {
+          "id": "ca_hero_wh2_dlc12_lzd_tlaqua_skink_chief",
+          "characterKind": "generic_hero",
+          "subtypeKey": "wh2_dlc12_lzd_tlaqua_skink_chief"
+        },
+        {
+          "id": "ca_hero_wh2_dlc12_lzd_tlaqua_skink_priest_beasts",
+          "characterKind": "generic_hero",
+          "subtypeKey": "wh2_dlc12_lzd_tlaqua_skink_priest_beasts"
+        },
+        {
+          "id": "ca_hero_wh2_dlc12_lzd_tlaqua_skink_priest_heavens",
+          "characterKind": "generic_hero",
+          "subtypeKey": "wh2_dlc12_lzd_tlaqua_skink_priest_heavens"
+        },
+        {
+          "id": "ca_hero_wh2_dlc17_lzd_skink_oracle_troglodon",
+          "characterKind": "generic_hero",
+          "subtypeKey": "wh2_dlc17_lzd_skink_oracle_troglodon"
+        },
+        {
+          "id": "ca_hero_wh2_main_lzd_saurus_scar_veteran",
+          "characterKind": "generic_hero",
+          "subtypeKey": "wh2_main_lzd_saurus_scar_veteran"
+        },
+        {
+          "id": "ca_hero_wh2_main_lzd_skink_chief",
+          "characterKind": "generic_hero",
+          "subtypeKey": "wh2_main_lzd_skink_chief"
+        },
+        {
+          "id": "ca_hero_wh2_main_lzd_skink_priest_beasts",
+          "characterKind": "generic_hero",
+          "subtypeKey": "wh2_main_lzd_skink_priest_beasts"
+        },
+        {
+          "id": "ca_hero_wh2_main_lzd_skink_priest_heavens",
+          "characterKind": "generic_hero",
+          "subtypeKey": "wh2_main_lzd_skink_priest_heavens"
+        }
+      ],
+      "units": [
+        {
+          "id": "ca_unit_wh2_dlc12_lzd_cav_cold_one_spearriders_ror_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc12_lzd_cav_ripperdactyl_riders_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc12_lzd_cav_ripperdactyl_riders_0_blessed"
+        },
+        {
+          "id": "ca_unit_wh2_dlc12_lzd_cav_ripperdactyl_riders_ror_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc12_lzd_cav_terradon_riders_ror_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc12_lzd_inf_saurus_warriors_ror_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc12_lzd_inf_skink_red_crested_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc12_lzd_inf_skink_red_crested_ror_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc12_lzd_inf_temple_guards_ror_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc12_lzd_mon_ancient_salamander_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc12_lzd_mon_ancient_salamander_0_blessed"
+        },
+        {
+          "id": "ca_unit_wh2_dlc12_lzd_mon_ancient_stegadon_1"
+        },
+        {
+          "id": "ca_unit_wh2_dlc12_lzd_mon_ancient_stegadon_ror_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc12_lzd_mon_bastiladon_3"
+        },
+        {
+          "id": "ca_unit_wh2_dlc12_lzd_mon_salamander_pack_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc12_lzd_mon_salamander_pack_0_blessed"
+        },
+        {
+          "id": "ca_unit_wh2_dlc12_lzd_mon_salamander_pack_ror_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc13_lzd_mon_dread_saurian_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc13_lzd_mon_dread_saurian_1"
+        },
+        {
+          "id": "ca_unit_wh2_dlc13_lzd_mon_dread_saurian_ror_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc13_lzd_mon_razordon_pack_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc13_lzd_mon_razordon_pack_0_blessed"
+        },
+        {
+          "id": "ca_unit_wh2_dlc13_lzd_mon_razordon_pack_ror_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc13_lzd_mon_sacred_kroxigors_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc13_lzd_mon_sacred_kroxigors_0_blessed"
+        },
+        {
+          "id": "ca_unit_wh2_dlc13_lzd_mon_sacred_kroxigors_ror_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc17_lzd_inf_chameleon_stalkers_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc17_lzd_inf_chameleon_stalkers_0_blessed"
+        },
+        {
+          "id": "ca_unit_wh2_dlc17_lzd_mon_carnosaur_ror_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc17_lzd_mon_coatl_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc17_lzd_mon_coatl_ror_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc17_lzd_mon_troglodon_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc17_lzd_mon_troglodon_ror_0"
+        },
+        {
+          "id": "ca_unit_wh2_main_lzd_cav_cold_one_spearmen_1"
+        },
+        {
+          "id": "ca_unit_wh2_main_lzd_cav_cold_one_spearriders_blessed_0"
+        },
+        {
+          "id": "ca_unit_wh2_main_lzd_cav_cold_ones_1"
+        },
+        {
+          "id": "ca_unit_wh2_main_lzd_cav_cold_ones_feral_0"
+        },
+        {
+          "id": "ca_unit_wh2_main_lzd_cav_horned_ones_0"
+        },
+        {
+          "id": "ca_unit_wh2_main_lzd_cav_horned_ones_blessed_0"
+        },
+        {
+          "id": "ca_unit_wh2_main_lzd_cav_terradon_riders_0"
+        },
+        {
+          "id": "ca_unit_wh2_main_lzd_cav_terradon_riders_0_blessed"
+        },
+        {
+          "id": "ca_unit_wh2_main_lzd_cav_terradon_riders_1"
+        },
+        {
+          "id": "ca_unit_wh2_main_lzd_cav_terradon_riders_blessed_1"
+        },
+        {
+          "id": "ca_unit_wh2_main_lzd_inf_chameleon_skinks_0"
+        },
+        {
+          "id": "ca_unit_wh2_main_lzd_inf_chameleon_skinks_blessed_0"
+        },
+        {
+          "id": "ca_unit_wh2_main_lzd_inf_saurus_spearmen_0"
+        },
+        {
+          "id": "ca_unit_wh2_main_lzd_inf_saurus_spearmen_1"
+        },
+        {
+          "id": "ca_unit_wh2_main_lzd_inf_saurus_spearmen_blessed_1"
+        },
+        {
+          "id": "ca_unit_wh2_main_lzd_inf_saurus_warriors_0"
+        },
+        {
+          "id": "ca_unit_wh2_main_lzd_inf_saurus_warriors_1"
+        },
+        {
+          "id": "ca_unit_wh2_main_lzd_inf_saurus_warriors_blessed_1"
+        },
+        {
+          "id": "ca_unit_wh2_main_lzd_inf_skink_cohort_0"
+        },
+        {
+          "id": "ca_unit_wh2_main_lzd_inf_skink_cohort_1"
+        },
+        {
+          "id": "ca_unit_wh2_main_lzd_inf_skink_cohort_1_blessed"
+        },
+        {
+          "id": "ca_unit_wh2_main_lzd_inf_skink_skirmishers_0"
+        },
+        {
+          "id": "ca_unit_wh2_main_lzd_inf_skink_skirmishers_blessed_0"
+        },
+        {
+          "id": "ca_unit_wh2_main_lzd_inf_temple_guards"
+        },
+        {
+          "id": "ca_unit_wh2_main_lzd_inf_temple_guards_blessed"
+        },
+        {
+          "id": "ca_unit_wh2_main_lzd_mon_ancient_stegadon"
+        },
+        {
+          "id": "ca_unit_wh2_main_lzd_mon_ancient_stegadon_blessed"
+        },
+        {
+          "id": "ca_unit_wh2_main_lzd_mon_bastiladon_0"
+        },
+        {
+          "id": "ca_unit_wh2_main_lzd_mon_bastiladon_1"
+        },
+        {
+          "id": "ca_unit_wh2_main_lzd_mon_bastiladon_2"
+        },
+        {
+          "id": "ca_unit_wh2_main_lzd_mon_bastiladon_blessed_2"
+        },
+        {
+          "id": "ca_unit_wh2_main_lzd_mon_carnosaur_0"
+        },
+        {
+          "id": "ca_unit_wh2_main_lzd_mon_carnosaur_blessed_0"
+        },
+        {
+          "id": "ca_unit_wh2_main_lzd_mon_kroxigors"
+        },
+        {
+          "id": "ca_unit_wh2_main_lzd_mon_kroxigors_blessed"
+        },
+        {
+          "id": "ca_unit_wh2_main_lzd_mon_stegadon_0"
+        },
+        {
+          "id": "ca_unit_wh2_main_lzd_mon_stegadon_1"
+        },
+        {
+          "id": "ca_unit_wh2_main_lzd_mon_stegadon_blessed_1"
+        }
+      ]
+    },
+    {
+      "factionId": "kislev",
+      "holds": [],
+      "explicitlyExcludedCount": 51,
+      "legendaryLords": [
+        {
+          "id": "ca_lord_wh3_dlc24_ksl_mother_ostankya",
+          "characterKind": "legendary_lord",
+          "subtypeKey": "wh3_dlc24_ksl_mother_ostankya"
+        },
+        {
+          "id": "ca_lord_wh3_main_ksl_boris",
+          "characterKind": "legendary_lord",
+          "subtypeKey": "wh3_main_ksl_boris"
+        },
+        {
+          "id": "ca_lord_wh3_main_ksl_katarin",
+          "characterKind": "legendary_lord",
+          "subtypeKey": "wh3_main_ksl_katarin"
+        },
+        {
+          "id": "ca_lord_wh3_main_ksl_kostaltyn",
+          "characterKind": "legendary_lord",
+          "subtypeKey": "wh3_main_ksl_kostaltyn"
+        }
+      ],
+      "genericLords": [
+        {
+          "id": "ca_lord_wh3_dlc24_ksl_druzhina",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh3_dlc24_ksl_druzhina"
+        },
+        {
+          "id": "ca_lord_wh3_main_ksl_boyar",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh3_main_ksl_boyar"
+        },
+        {
+          "id": "ca_lord_wh3_main_ksl_ice_witch_ice",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh3_main_ksl_ice_witch_ice"
+        },
+        {
+          "id": "ca_lord_wh3_main_ksl_ice_witch_tempest",
+          "characterKind": "generic_lord",
+          "subtypeKey": "wh3_main_ksl_ice_witch_tempest"
+        }
+      ],
+      "legendaryHeroes": [
+        {
+          "id": "ca_hero_wh3_dlc23_neu_ulrika",
+          "characterKind": "legendary_hero",
+          "subtypeKey": "wh3_dlc23_neu_ulrika"
+        },
+        {
+          "id": "ca_hero_wh3_dlc24_ksl_the_golden_knight",
+          "characterKind": "legendary_hero",
+          "subtypeKey": "wh3_dlc24_ksl_the_golden_knight"
+        }
+      ],
+      "genericHeroes": [
+        {
+          "id": "ca_hero_wh3_dlc24_ksl_hag_witch_beasts",
+          "characterKind": "generic_hero",
+          "subtypeKey": "wh3_dlc24_ksl_hag_witch_beasts"
+        },
+        {
+          "id": "ca_hero_wh3_dlc24_ksl_hag_witch_death",
+          "characterKind": "generic_hero",
+          "subtypeKey": "wh3_dlc24_ksl_hag_witch_death"
+        },
+        {
+          "id": "ca_hero_wh3_dlc24_ksl_hag_witch_hag",
+          "characterKind": "generic_hero",
+          "subtypeKey": "wh3_dlc24_ksl_hag_witch_hag"
+        },
+        {
+          "id": "ca_hero_wh3_dlc24_ksl_hag_witch_shadows",
+          "characterKind": "generic_hero",
+          "subtypeKey": "wh3_dlc24_ksl_hag_witch_shadows"
+        },
+        {
+          "id": "ca_hero_wh3_main_ksl_frost_maiden_ice",
+          "characterKind": "generic_hero",
+          "subtypeKey": "wh3_main_ksl_frost_maiden_ice"
+        },
+        {
+          "id": "ca_hero_wh3_main_ksl_frost_maiden_tempest",
+          "characterKind": "generic_hero",
+          "subtypeKey": "wh3_main_ksl_frost_maiden_tempest"
+        },
+        {
+          "id": "ca_hero_wh3_main_ksl_patriarch",
+          "characterKind": "generic_hero",
+          "subtypeKey": "wh3_main_ksl_patriarch"
+        }
+      ],
+      "units": [
+        {
+          "id": "ca_unit_wh2_dlc16_wef_mon_cave_bats"
+        },
+        {
+          "id": "ca_unit_wh2_dlc16_wef_mon_giant_spiders_0"
+        },
+        {
+          "id": "ca_unit_wh2_dlc16_wef_mon_spider_hatchlings_0"
+        },
+        {
+          "id": "ca_unit_wh3_dlc24_ksl_inf_akshina_ambushers"
+        },
+        {
+          "id": "ca_unit_wh3_dlc24_ksl_inf_akshina_ambushers_ror"
+        },
+        {
+          "id": "ca_unit_wh3_dlc24_ksl_inf_kislevite_warriors"
+        },
+        {
+          "id": "ca_unit_wh3_dlc24_ksl_inf_streltsi_ror"
+        },
+        {
+          "id": "ca_unit_wh3_dlc24_ksl_mon_frost_wyrm"
+        },
+        {
+          "id": "ca_unit_wh3_dlc24_ksl_mon_incarnate_elemental_of_beasts"
+        },
+        {
+          "id": "ca_unit_wh3_dlc24_ksl_mon_the_things_in_the_woods"
+        },
+        {
+          "id": "ca_unit_wh3_dlc24_ksl_mon_the_things_in_the_woods_ror"
+        },
+        {
+          "id": "ca_unit_wh3_main_ksl_cav_gryphon_legion_0"
+        },
+        {
+          "id": "ca_unit_wh3_main_ksl_cav_horse_archers_0"
+        },
+        {
+          "id": "ca_unit_wh3_main_ksl_cav_horse_raiders_0"
+        },
+        {
+          "id": "ca_unit_wh3_main_ksl_cav_war_bear_riders_1"
+        },
+        {
+          "id": "ca_unit_wh3_main_ksl_cav_winged_lancers_0"
+        },
+        {
+          "id": "ca_unit_wh3_main_ksl_inf_armoured_kossars_0"
+        },
+        {
+          "id": "ca_unit_wh3_main_ksl_inf_armoured_kossars_1"
+        },
+        {
+          "id": "ca_unit_wh3_main_ksl_inf_ice_guard_0"
+        },
+        {
+          "id": "ca_unit_wh3_main_ksl_inf_ice_guard_1"
+        },
+        {
+          "id": "ca_unit_wh3_main_ksl_inf_kossars_0"
+        },
+        {
+          "id": "ca_unit_wh3_main_ksl_inf_kossars_1"
+        },
+        {
+          "id": "ca_unit_wh3_main_ksl_inf_streltsi_0"
+        },
+        {
+          "id": "ca_unit_wh3_main_ksl_inf_tzar_guard_0"
+        },
+        {
+          "id": "ca_unit_wh3_main_ksl_inf_tzar_guard_1"
+        },
+        {
+          "id": "ca_unit_wh3_main_ksl_mon_elemental_bear_0"
+        },
+        {
+          "id": "ca_unit_wh3_main_ksl_mon_snow_leopard_0"
+        },
+        {
+          "id": "ca_unit_wh3_main_ksl_veh_heavy_war_sled_0"
+        },
+        {
+          "id": "ca_unit_wh3_main_ksl_veh_light_war_sled_0"
+        },
+        {
+          "id": "ca_unit_wh3_main_ksl_veh_little_grom_0"
+        },
+        {
+          "id": "ca_unit_wh3_main_monster_feral_bears"
+        },
+        {
+          "id": "ca_unit_wh3_main_monster_feral_ice_bears"
+        },
+        {
+          "id": "ca_unit_wh3_twa06_ksl_inf_tzar_guard_ror_0"
+        },
+        {
+          "id": "ca_unit_wh3_twa07_ksl_cav_war_bear_riders_ror_0"
+        },
+        {
+          "id": "ca_unit_wh3_twa08_ksl_mon_elemental_bear_0_ror"
+        },
+        {
+          "id": "ca_unit_wh3_twa10_ksl_inf_armoured_kossars_ror"
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "factionId": "empire",
+      "counts": {
+        "legendaryLords": {
+          "admitted": 6,
+          "expected": 6
+        },
+        "genericLords": {
+          "admitted": 5,
+          "expected": 5
+        },
+        "legendaryHeroes": {
+          "admitted": 7,
+          "expected": 7
+        },
+        "genericHeroes": {
+          "admitted": 13,
+          "expected": 13
+        },
+        "units": {
+          "admitted": 75,
+          "expected": 75
+        }
+      },
+      "missing": [],
+      "status": "ROSTER COMPLETE",
+      "exclusions": 147,
+      "holds": []
+    },
+    {
+      "factionId": "vampire_counts",
+      "counts": {
+        "legendaryLords": {
+          "admitted": 7,
+          "expected": 7
+        },
+        "genericLords": {
+          "admitted": 9,
+          "expected": 9
+        },
+        "legendaryHeroes": {
+          "admitted": 7,
+          "expected": 7
+        },
+        "genericHeroes": {
+          "admitted": 8,
+          "expected": 8
+        },
+        "units": {
+          "admitted": 43,
+          "expected": 43
+        }
+      },
+      "missing": [],
+      "status": "ROSTER COMPLETE",
+      "exclusions": 116,
+      "holds": []
+    },
+    {
+      "factionId": "greenskins",
+      "counts": {
+        "legendaryLords": {
+          "admitted": 6,
+          "expected": 6
+        },
+        "genericLords": {
+          "admitted": 6,
+          "expected": 6
+        },
+        "legendaryHeroes": {
+          "admitted": 1,
+          "expected": 1
+        },
+        "genericHeroes": {
+          "admitted": 6,
+          "expected": 6
+        },
+        "units": {
+          "admitted": 70,
+          "expected": 70
+        }
+      },
+      "missing": [],
+      "status": "ROSTER COMPLETE",
+      "exclusions": 72,
+      "holds": []
+    },
+    {
+      "factionId": "bretonnia",
+      "counts": {
+        "legendaryLords": {
+          "admitted": 4,
+          "expected": 4
+        },
+        "genericLords": {
+          "admitted": 4,
+          "expected": 4
+        },
+        "legendaryHeroes": {
+          "admitted": 2,
+          "expected": 2
+        },
+        "genericHeroes": {
+          "admitted": 4,
+          "expected": 4
+        },
+        "units": {
+          "admitted": 30,
+          "expected": 30
+        }
+      },
+      "missing": [],
+      "status": "ROSTER COMPLETE",
+      "exclusions": 60,
+      "holds": []
+    },
+    {
+      "factionId": "tomb_kings",
+      "counts": {
+        "legendaryLords": {
+          "admitted": 4,
+          "expected": 4
+        },
+        "genericLords": {
+          "admitted": 12,
+          "expected": 12
+        },
+        "legendaryHeroes": {
+          "admitted": 0,
+          "expected": 0
+        },
+        "genericHeroes": {
+          "admitted": 8,
+          "expected": 8
+        },
+        "units": {
+          "admitted": 45,
+          "expected": 45
+        }
+      },
+      "missing": [],
+      "status": "ROSTER COMPLETE",
+      "exclusions": 60,
+      "holds": []
+    },
+    {
+      "factionId": "vampire_coast",
+      "counts": {
+        "legendaryLords": {
+          "admitted": 4,
+          "expected": 4
+        },
+        "genericLords": {
+          "admitted": 12,
+          "expected": 12
+        },
+        "legendaryHeroes": {
+          "admitted": 1,
+          "expected": 1
+        },
+        "genericHeroes": {
+          "admitted": 6,
+          "expected": 6
+        },
+        "units": {
+          "admitted": 36,
+          "expected": 36
+        }
+      },
+      "missing": [],
+      "status": "ROSTER COMPLETE",
+      "exclusions": 48,
+      "holds": []
+    },
+    {
+      "factionId": "skaven",
+      "counts": {
+        "legendaryLords": {
+          "admitted": 7,
+          "expected": 7
+        },
+        "genericLords": {
+          "admitted": 10,
+          "expected": 10
+        },
+        "legendaryHeroes": {
+          "admitted": 2,
+          "expected": 2
+        },
+        "genericHeroes": {
+          "admitted": 6,
+          "expected": 6
+        },
+        "units": {
+          "admitted": 67,
+          "expected": 67
+        }
+      },
+      "missing": [],
+      "status": "ROSTER COMPLETE",
+      "exclusions": 65,
+      "holds": []
+    },
+    {
+      "factionId": "lizardmen",
+      "counts": {
+        "legendaryLords": {
+          "admitted": 7,
+          "expected": 7
+        },
+        "genericLords": {
+          "admitted": 27,
+          "expected": 27
+        },
+        "legendaryHeroes": {
+          "admitted": 2,
+          "expected": 2
+        },
+        "genericHeroes": {
+          "admitted": 8,
+          "expected": 8
+        },
+        "units": {
+          "admitted": 71,
+          "expected": 71
+        }
+      },
+      "missing": [],
+      "status": "ROSTER COMPLETE",
+      "exclusions": 67,
+      "holds": []
+    },
+    {
+      "factionId": "kislev",
+      "counts": {
+        "legendaryLords": {
+          "admitted": 4,
+          "expected": 4
+        },
+        "genericLords": {
+          "admitted": 4,
+          "expected": 4
+        },
+        "legendaryHeroes": {
+          "admitted": 2,
+          "expected": 2
+        },
+        "genericHeroes": {
+          "admitted": 7,
+          "expected": 7
+        },
+        "units": {
+          "admitted": 36,
+          "expected": 36
+        }
+      },
+      "missing": [],
+      "status": "ROSTER COMPLETE",
+      "exclusions": 51,
+      "holds": []
+    }
+  ]
+}

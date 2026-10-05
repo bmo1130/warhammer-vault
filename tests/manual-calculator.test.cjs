@@ -18,7 +18,7 @@ const render = url => renderToString(React.createElement(MemoryRouter, { initial
 const close = (value, expected) => assert(Math.abs(value - expected) < 1e-10);
 
 test('calculator input bridge reuses exact production selection and handles add/percent/set/stacking without mutation', () => {
-  assert.equal(comparisonOptions().length, 101);
+  assert.equal(comparisonOptions().length, 478);
   assert(comparisonOptions().every(entry => !entry.isSample));
   assert.equal(comparisonUnit('zombies'), undefined);
   const before = JSON.stringify(grail);

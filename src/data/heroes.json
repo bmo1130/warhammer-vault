@@ -1,0 +1,1484 @@
+[
+  {
+    "id": "ca_hero_wh2_dlc13_emp_hunter_doctor_hertwig_van_hal",
+    "name": "Hertwig van Hal",
+    "factionId": "empire",
+    "characterKind": "legendary_hero",
+    "subtypeKey": "wh2_dlc13_emp_hunter_doctor_hertwig_van_hal",
+    "subtypeAliases": [],
+    "mainKey": "wh2_dlc13_emp_cha_hunter_doctor_hertwig_van_hal_0",
+    "landKey": "wh2_dlc13_emp_cha_hunter_doctor_hertwig_van_hal_0",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh2_dlc13_emp_hunter_doctor_hertwig_van_hal / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "empire"
+    ],
+    "category": "전설 영웅"
+  },
+  {
+    "id": "ca_hero_wh2_dlc13_emp_hunter_jorek_grimm",
+    "name": "Jorek Grimm",
+    "factionId": "empire",
+    "characterKind": "legendary_hero",
+    "subtypeKey": "wh2_dlc13_emp_hunter_jorek_grimm",
+    "subtypeAliases": [],
+    "mainKey": "wh2_dlc13_emp_cha_hunter_jorek_grimm_0",
+    "landKey": "wh2_dlc13_emp_cha_hunter_jorek_grimm_0",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh2_dlc13_emp_hunter_jorek_grimm / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "empire"
+    ],
+    "category": "전설 영웅"
+  },
+  {
+    "id": "ca_hero_wh2_dlc13_emp_hunter_kalara_of_wydrioth",
+    "name": "Kalara",
+    "factionId": "empire",
+    "characterKind": "legendary_hero",
+    "subtypeKey": "wh2_dlc13_emp_hunter_kalara_of_wydrioth",
+    "subtypeAliases": [],
+    "mainKey": "wh2_dlc13_emp_cha_hunter_kalara_of_wydrioth_0",
+    "landKey": "wh2_dlc13_emp_cha_hunter_kalara_of_wydrioth_0",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh2_dlc13_emp_hunter_kalara_of_wydrioth / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "empire"
+    ],
+    "category": "전설 영웅"
+  },
+  {
+    "id": "ca_hero_wh2_dlc13_emp_hunter_rodrik_l_anguille",
+    "name": "Rodrik L'Anguille",
+    "factionId": "empire",
+    "characterKind": "legendary_hero",
+    "subtypeKey": "wh2_dlc13_emp_hunter_rodrik_l_anguille",
+    "subtypeAliases": [],
+    "mainKey": "wh2_dlc13_emp_cha_hunter_rodrik_l_anguille_0",
+    "landKey": "wh2_dlc13_emp_cha_hunter_rodrik_l_anguille_0",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh2_dlc13_emp_hunter_rodrik_l_anguille / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "empire"
+    ],
+    "category": "전설 영웅"
+  },
+  {
+    "id": "ca_hero_wh3_dlc23_neu_ulrika",
+    "name": "Ulrika Magdova",
+    "factionId": "empire",
+    "characterKind": "legendary_hero",
+    "subtypeKey": "wh3_dlc23_neu_ulrika",
+    "subtypeAliases": [],
+    "mainKey": "wh3_dlc23_neu_cha_ulrika",
+    "landKey": "wh3_dlc23_neu_cha_ulrika",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh3_dlc23_neu_ulrika / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "empire",
+      "vampire_counts",
+      "kislev"
+    ],
+    "category": "전설 영웅"
+  },
+  {
+    "id": "ca_hero_wh3_dlc25_emp_theodore_bruckner",
+    "name": "Theodore Bruckner",
+    "factionId": "empire",
+    "characterKind": "legendary_hero",
+    "subtypeKey": "wh3_dlc25_emp_theodore_bruckner",
+    "subtypeAliases": [],
+    "mainKey": "wh3_dlc25_emp_cha_theodore_bruckner",
+    "landKey": "wh3_dlc25_emp_cha_theodore_bruckner",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh3_dlc25_emp_theodore_bruckner / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "empire"
+    ],
+    "category": "전설 영웅"
+  },
+  {
+    "id": "ca_hero_wh3_dlc29_emp_cha_emil_valgeir",
+    "name": "Emil Valgeir",
+    "factionId": "empire",
+    "characterKind": "legendary_hero",
+    "subtypeKey": "wh3_dlc29_emp_cha_emil_valgeir",
+    "subtypeAliases": [],
+    "mainKey": "wh3_dlc29_emp_cha_emil_valgeir",
+    "landKey": "wh3_dlc29_emp_cha_emil_valgeir",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh3_dlc29_emp_cha_emil_valgeir / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "empire"
+    ],
+    "category": "전설 영웅"
+  },
+  {
+    "id": "ca_hero_wh_dlc03_emp_amber_wizard",
+    "name": "Amber Wizard",
+    "factionId": "empire",
+    "characterKind": "generic_hero",
+    "subtypeKey": "wh_dlc03_emp_amber_wizard",
+    "subtypeAliases": [],
+    "mainKey": "wh_dlc03_emp_cha_wizard_beasts_0",
+    "landKey": "wh_dlc03_emp_cha_wizard_beasts_0",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh_dlc03_emp_amber_wizard / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "empire"
+    ],
+    "category": "일반 영웅"
+  },
+  {
+    "id": "ca_hero_wh_dlc05_emp_grey_wizard",
+    "name": "Grey Wizard",
+    "factionId": "empire",
+    "characterKind": "generic_hero",
+    "subtypeKey": "wh_dlc05_emp_grey_wizard",
+    "subtypeAliases": [],
+    "mainKey": "wh_dlc05_emp_cha_wizard_shadows_0",
+    "landKey": "wh_dlc05_emp_cha_wizard_shadows_0",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh_dlc05_emp_grey_wizard / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "empire"
+    ],
+    "category": "일반 영웅"
+  },
+  {
+    "id": "ca_hero_wh_dlc05_emp_jade_wizard",
+    "name": "Jade Wizard",
+    "factionId": "empire",
+    "characterKind": "generic_hero",
+    "subtypeKey": "wh_dlc05_emp_jade_wizard",
+    "subtypeAliases": [],
+    "mainKey": "wh_dlc05_emp_cha_wizard_life_0",
+    "landKey": "wh_dlc05_emp_cha_wizard_life_0",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh_dlc05_emp_jade_wizard / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "empire"
+    ],
+    "category": "일반 영웅"
+  },
+  {
+    "id": "ca_hero_wh_main_emp_bright_wizard",
+    "name": "Bright Wizard",
+    "factionId": "empire",
+    "characterKind": "generic_hero",
+    "subtypeKey": "wh_main_emp_bright_wizard",
+    "subtypeAliases": [],
+    "mainKey": "wh_main_emp_cha_wizard_fire_0",
+    "landKey": "wh_main_emp_cha_wizard_fire_0",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh_main_emp_bright_wizard / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "empire"
+    ],
+    "category": "일반 영웅"
+  },
+  {
+    "id": "ca_hero_wh_main_emp_captain",
+    "name": "Empire Captain",
+    "factionId": "empire",
+    "characterKind": "generic_hero",
+    "subtypeKey": "wh_main_emp_captain",
+    "subtypeAliases": [],
+    "mainKey": "wh_main_emp_cha_captain_0",
+    "landKey": "wh_main_emp_cha_captain_0",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh_main_emp_captain / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "empire"
+    ],
+    "category": "일반 영웅"
+  },
+  {
+    "id": "ca_hero_wh_main_emp_celestial_wizard",
+    "name": "Celestial Wizard",
+    "factionId": "empire",
+    "characterKind": "generic_hero",
+    "subtypeKey": "wh_main_emp_celestial_wizard",
+    "subtypeAliases": [],
+    "mainKey": "wh_main_emp_cha_wizard_heavens_0",
+    "landKey": "wh_main_emp_cha_wizard_heavens_0",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh_main_emp_celestial_wizard / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "empire"
+    ],
+    "category": "일반 영웅"
+  },
+  {
+    "id": "ca_hero_wh_main_emp_light_wizard",
+    "name": "Light Wizard",
+    "factionId": "empire",
+    "characterKind": "generic_hero",
+    "subtypeKey": "wh_main_emp_light_wizard",
+    "subtypeAliases": [],
+    "mainKey": "wh_main_emp_cha_wizard_light_0",
+    "landKey": "wh_main_emp_cha_wizard_light_0",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh_main_emp_light_wizard / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "empire"
+    ],
+    "category": "일반 영웅"
+  },
+  {
+    "id": "ca_hero_wh_main_emp_warrior_priest",
+    "name": "Warrior Priest",
+    "factionId": "empire",
+    "characterKind": "generic_hero",
+    "subtypeKey": "wh_main_emp_warrior_priest",
+    "subtypeAliases": [],
+    "mainKey": "wh_main_emp_cha_warrior_priest_0",
+    "landKey": "wh_main_emp_cha_warrior_priest_0",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh_main_emp_warrior_priest / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "empire"
+    ],
+    "category": "일반 영웅"
+  },
+  {
+    "id": "ca_hero_wh_main_emp_witch_hunter",
+    "name": "Witch Hunter",
+    "factionId": "empire",
+    "characterKind": "generic_hero",
+    "subtypeKey": "wh_main_emp_witch_hunter",
+    "subtypeAliases": [],
+    "mainKey": "wh_main_emp_cha_witch_hunter",
+    "landKey": "wh_main_emp_cha_witch_hunter",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh_main_emp_witch_hunter / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "empire"
+    ],
+    "category": "일반 영웅"
+  },
+  {
+    "id": "ca_hero_wh2_pro07_emp_amethyst_wizard",
+    "name": "Amethyst Wizard",
+    "factionId": "empire",
+    "characterKind": "generic_hero",
+    "subtypeKey": "wh2_pro07_emp_amethyst_wizard",
+    "subtypeAliases": [],
+    "mainKey": "wh2_pro07_emp_cha_wizard_death_0",
+    "landKey": "wh2_pro07_emp_cha_wizard_death_0",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh2_pro07_emp_amethyst_wizard / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "empire"
+    ],
+    "category": "일반 영웅"
+  },
+  {
+    "id": "ca_hero_wh3_dlc25_emp_engineer",
+    "name": "Engineer",
+    "factionId": "empire",
+    "characterKind": "generic_hero",
+    "subtypeKey": "wh3_dlc25_emp_engineer",
+    "subtypeAliases": [],
+    "mainKey": "wh3_dlc25_emp_cha_engineer",
+    "landKey": "wh3_dlc25_emp_cha_engineer",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh3_dlc25_emp_engineer / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "empire"
+    ],
+    "category": "일반 영웅"
+  },
+  {
+    "id": "ca_hero_wh3_dlc25_emp_gold_wizard",
+    "name": "Gold Wizard",
+    "factionId": "empire",
+    "characterKind": "generic_hero",
+    "subtypeKey": "wh3_dlc25_emp_gold_wizard",
+    "subtypeAliases": [],
+    "mainKey": "wh3_dlc25_emp_cha_wizard_metal",
+    "landKey": "wh3_dlc25_emp_cha_wizard_metal",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh3_dlc25_emp_gold_wizard / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "empire"
+    ],
+    "category": "일반 영웅"
+  },
+  {
+    "id": "ca_hero_wh3_dlc29_emp_cha_priest_of_ulric",
+    "name": "Priest of Ulric",
+    "factionId": "empire",
+    "characterKind": "generic_hero",
+    "subtypeKey": "wh3_dlc29_emp_cha_priest_of_ulric",
+    "subtypeAliases": [],
+    "mainKey": "wh3_dlc29_emp_cha_priest_of_ulric",
+    "landKey": "wh3_dlc29_emp_cha_priest_of_ulric",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh3_dlc29_emp_cha_priest_of_ulric / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "empire"
+    ],
+    "category": "일반 영웅"
+  },
+  {
+    "id": "ca_hero_wh_dlc04_vmp_vlad_von_carstein_hero",
+    "name": "Vlad von Carstein",
+    "factionId": "vampire_counts",
+    "characterKind": "legendary_hero",
+    "subtypeKey": "wh_dlc04_vmp_vlad_von_carstein_hero",
+    "subtypeAliases": [],
+    "mainKey": "wh_dlc04_vmp_cha_vlad_von_carstein_0",
+    "landKey": "wh_dlc04_vmp_cha_vlad_von_carstein_0",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh_dlc04_vmp_vlad_von_carstein_hero / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "vampire_counts"
+    ],
+    "category": "전설 영웅"
+  },
+  {
+    "id": "ca_hero_wh_pro02_vmp_isabella_von_carstein_hero",
+    "name": "Isabella von Carstein",
+    "factionId": "vampire_counts",
+    "characterKind": "legendary_hero",
+    "subtypeKey": "wh_pro02_vmp_isabella_von_carstein_hero",
+    "subtypeAliases": [],
+    "mainKey": "wh_pro02_vmp_cha_isabella_von_carstein_0",
+    "landKey": "wh_pro02_vmp_cha_isabella_von_carstein_0",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh_pro02_vmp_isabella_von_carstein_hero / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "vampire_counts"
+    ],
+    "category": "전설 영웅"
+  },
+  {
+    "id": "ca_hero_wh3_dlc29_vmp_dieter_helsnicht",
+    "name": "Dieter Helsnicht",
+    "factionId": "vampire_counts",
+    "characterKind": "legendary_hero",
+    "subtypeKey": "wh3_dlc29_vmp_dieter_helsnicht",
+    "subtypeAliases": [],
+    "mainKey": "wh3_dlc29_vmp_cha_dieter_helsnicht",
+    "landKey": "wh3_dlc29_vmp_cha_dieter_helsnicht",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh3_dlc29_vmp_dieter_helsnicht / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "vampire_counts"
+    ],
+    "category": "전설 영웅"
+  },
+  {
+    "id": "ca_hero_wh3_dlc29_vmp_handmaiden_imentet",
+    "name": "Imentet the First",
+    "factionId": "vampire_counts",
+    "characterKind": "legendary_hero",
+    "subtypeKey": "wh3_dlc29_vmp_handmaiden_imentet",
+    "subtypeAliases": [],
+    "mainKey": "wh3_dlc29_vmp_cha_lahmian_vampire",
+    "landKey": "wh3_dlc29_vmp_cha_lahmian_vampire",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh3_dlc29_vmp_handmaiden_imentet / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "vampire_counts"
+    ],
+    "category": "전설 영웅"
+  },
+  {
+    "id": "ca_hero_wh3_dlc29_vmp_krell",
+    "name": "Krell",
+    "factionId": "vampire_counts",
+    "characterKind": "legendary_hero",
+    "subtypeKey": "wh3_dlc29_vmp_krell",
+    "subtypeAliases": [],
+    "mainKey": "wh3_dlc29_vmp_cha_krell",
+    "landKey": "wh3_dlc29_vmp_cha_krell",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh3_dlc29_vmp_krell / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "vampire_counts"
+    ],
+    "category": "전설 영웅"
+  },
+  {
+    "id": "ca_hero_wh3_dlc29_vmp_walach_harkon",
+    "name": "Walach Harkon",
+    "factionId": "vampire_counts",
+    "characterKind": "legendary_hero",
+    "subtypeKey": "wh3_dlc29_vmp_walach_harkon",
+    "subtypeAliases": [],
+    "mainKey": "wh3_dlc29_vmp_cha_walach_harkon",
+    "landKey": "wh3_dlc29_vmp_cha_walach_harkon",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh3_dlc29_vmp_walach_harkon / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "vampire_counts"
+    ],
+    "category": "전설 영웅"
+  },
+  {
+    "id": "ca_hero_wh_dlc05_vmp_vampire_shadow",
+    "name": "Vampire (Shadows)",
+    "factionId": "vampire_counts",
+    "characterKind": "generic_hero",
+    "subtypeKey": "wh_dlc05_vmp_vampire_shadow",
+    "subtypeAliases": [],
+    "mainKey": "wh_dlc05_vmp_cha_vampire_shadows_0",
+    "landKey": "wh_dlc05_vmp_cha_vampire_shadows_0",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh_dlc05_vmp_vampire_shadow / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "vampire_counts"
+    ],
+    "category": "일반 영웅"
+  },
+  {
+    "id": "ca_hero_wh_main_vmp_banshee",
+    "name": "Banshee",
+    "factionId": "vampire_counts",
+    "characterKind": "generic_hero",
+    "subtypeKey": "wh_main_vmp_banshee",
+    "subtypeAliases": [],
+    "mainKey": "wh_main_vmp_cha_banshee",
+    "landKey": "wh_main_vmp_cha_banshee",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh_main_vmp_banshee / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "vampire_counts"
+    ],
+    "category": "일반 영웅"
+  },
+  {
+    "id": "ca_hero_wh_main_vmp_necromancer",
+    "name": "Necromancer (Vampires)",
+    "factionId": "vampire_counts",
+    "characterKind": "generic_hero",
+    "subtypeKey": "wh_main_vmp_necromancer",
+    "subtypeAliases": [],
+    "mainKey": "wh_main_vmp_cha_necromancer_0",
+    "landKey": "wh_main_vmp_cha_necromancer_0",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh_main_vmp_necromancer / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "vampire_counts"
+    ],
+    "category": "일반 영웅"
+  },
+  {
+    "id": "ca_hero_wh_main_vmp_vampire_death",
+    "name": "Vampire (Death)",
+    "factionId": "vampire_counts",
+    "characterKind": "generic_hero",
+    "subtypeKey": "wh_main_vmp_vampire_death",
+    "subtypeAliases": [],
+    "mainKey": "wh_main_vmp_cha_vampire_0",
+    "landKey": "wh_main_vmp_cha_vampire_0",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh_main_vmp_vampire_death / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "vampire_counts"
+    ],
+    "category": "일반 영웅"
+  },
+  {
+    "id": "ca_hero_wh_main_vmp_wight_king",
+    "name": "Wight King",
+    "factionId": "vampire_counts",
+    "characterKind": "generic_hero",
+    "subtypeKey": "wh_main_vmp_wight_king",
+    "subtypeAliases": [],
+    "mainKey": "wh_main_vmp_cha_wight_king_0",
+    "landKey": "wh_main_vmp_cha_wight_king_0",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh_main_vmp_wight_king / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "vampire_counts"
+    ],
+    "category": "일반 영웅"
+  },
+  {
+    "id": "ca_hero_wh2_dlc11_cst_mourngul",
+    "name": "Mourngul Haunter",
+    "factionId": "vampire_counts",
+    "characterKind": "generic_hero",
+    "subtypeKey": "wh2_dlc11_cst_mourngul",
+    "subtypeAliases": [],
+    "mainKey": "wh2_dlc11_cst_cha_mourngul_haunter",
+    "landKey": "wh2_dlc11_cst_cha_mourngul_haunter",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh2_dlc11_cst_mourngul / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "vampire_counts",
+      "vampire_coast"
+    ],
+    "category": "일반 영웅"
+  },
+  {
+    "id": "ca_hero_wh3_dlc29_vmp_lahmian_vampire",
+    "name": "Lahmian Vampire",
+    "factionId": "vampire_counts",
+    "characterKind": "generic_hero",
+    "subtypeKey": "wh3_dlc29_vmp_lahmian_vampire",
+    "subtypeAliases": [],
+    "mainKey": "wh3_dlc29_vmp_cha_lahmian_vampire",
+    "landKey": "wh3_dlc29_vmp_cha_lahmian_vampire",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh3_dlc29_vmp_lahmian_vampire / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "vampire_counts"
+    ],
+    "category": "일반 영웅"
+  },
+  {
+    "id": "ca_hero_wh3_dlc29_vmp_necromancer_undeath",
+    "name": "Necromancer (Undeath)",
+    "factionId": "vampire_counts",
+    "characterKind": "generic_hero",
+    "subtypeKey": "wh3_dlc29_vmp_necromancer_undeath",
+    "subtypeAliases": [],
+    "mainKey": "wh3_dlc29_vmp_cha_necromancer_undeath",
+    "landKey": "wh3_dlc29_vmp_cha_necromancer_undeath",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh3_dlc29_vmp_necromancer_undeath / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "vampire_counts"
+    ],
+    "category": "일반 영웅"
+  },
+  {
+    "id": "ca_hero_wh3_dlc26_grn_snagla_grobpsit",
+    "name": "Snagla Grobspit",
+    "factionId": "greenskins",
+    "characterKind": "legendary_hero",
+    "subtypeKey": "wh3_dlc26_grn_snagla_grobpsit",
+    "subtypeAliases": [],
+    "mainKey": "wh3_dlc26_grn_cha_snagla_grobspit",
+    "landKey": "wh3_dlc26_grn_cha_snagla_grobspit",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh3_dlc26_grn_snagla_grobpsit / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "greenskins"
+    ],
+    "category": "전설 영웅"
+  },
+  {
+    "id": "ca_hero_wh_main_grn_goblin_big_boss",
+    "name": "Goblin Big Boss",
+    "factionId": "greenskins",
+    "characterKind": "generic_hero",
+    "subtypeKey": "wh_main_grn_goblin_big_boss",
+    "subtypeAliases": [],
+    "mainKey": "wh_main_grn_cha_goblin_big_boss_0",
+    "landKey": "wh_main_grn_cha_goblin_big_boss_0",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh_main_grn_goblin_big_boss / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "greenskins"
+    ],
+    "category": "일반 영웅"
+  },
+  {
+    "id": "ca_hero_wh_main_grn_night_goblin_shaman",
+    "name": "Night Goblin Shaman",
+    "factionId": "greenskins",
+    "characterKind": "generic_hero",
+    "subtypeKey": "wh_main_grn_night_goblin_shaman",
+    "subtypeAliases": [],
+    "mainKey": "wh_main_grn_cha_night_goblin_shaman",
+    "landKey": "wh_main_grn_cha_night_goblin_shaman",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh_main_grn_night_goblin_shaman / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "greenskins"
+    ],
+    "category": "일반 영웅"
+  },
+  {
+    "id": "ca_hero_wh_main_grn_orc_shaman",
+    "name": "Orc Shaman",
+    "factionId": "greenskins",
+    "characterKind": "generic_hero",
+    "subtypeKey": "wh_main_grn_orc_shaman",
+    "subtypeAliases": [],
+    "mainKey": "wh_main_grn_cha_orc_shaman_0",
+    "landKey": "wh_main_grn_cha_orc_shaman_0",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh_main_grn_orc_shaman / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "greenskins"
+    ],
+    "category": "일반 영웅"
+  },
+  {
+    "id": "ca_hero_wh2_dlc15_grn_river_troll_hag",
+    "name": "Giant River Troll Hag",
+    "factionId": "greenskins",
+    "characterKind": "generic_hero",
+    "subtypeKey": "wh2_dlc15_grn_river_troll_hag",
+    "subtypeAliases": [],
+    "mainKey": "wh2_dlc15_grn_cha_river_troll_hag_0",
+    "landKey": "wh2_dlc15_grn_cha_river_troll_hag_0",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh2_dlc15_grn_river_troll_hag / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "greenskins"
+    ],
+    "category": "일반 영웅"
+  },
+  {
+    "id": "ca_hero_wh2_pro09_grn_black_orc_big_boss",
+    "name": "Black Orc Big Boss",
+    "factionId": "greenskins",
+    "characterKind": "generic_hero",
+    "subtypeKey": "wh2_pro09_grn_black_orc_big_boss",
+    "subtypeAliases": [],
+    "mainKey": "wh2_pro09_grn_cha_black_orc_big_boss_0",
+    "landKey": "wh2_pro09_grn_cha_black_orc_big_boss_0",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh2_pro09_grn_black_orc_big_boss / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "greenskins"
+    ],
+    "category": "일반 영웅"
+  },
+  {
+    "id": "ca_hero_wh3_dlc26_grn_night_goblin_big_boss",
+    "name": "Night Goblin Big Boss",
+    "factionId": "greenskins",
+    "characterKind": "generic_hero",
+    "subtypeKey": "wh3_dlc26_grn_night_goblin_big_boss",
+    "subtypeAliases": [],
+    "mainKey": "wh3_dlc26_grn_cha_night_goblin_big_boss",
+    "landKey": "wh3_dlc26_grn_cha_night_goblin_big_boss",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh3_dlc26_grn_night_goblin_big_boss / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "greenskins"
+    ],
+    "category": "일반 영웅"
+  },
+  {
+    "id": "ca_hero_wh_dlc07_brt_green_knight",
+    "name": "The Green Knight",
+    "factionId": "bretonnia",
+    "characterKind": "legendary_hero",
+    "subtypeKey": "wh_dlc07_brt_green_knight",
+    "subtypeAliases": [],
+    "mainKey": "wh_dlc07_brt_cha_green_knight_0",
+    "landKey": "wh_dlc07_brt_cha_green_knight_0",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh_dlc07_brt_green_knight / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "bretonnia"
+    ],
+    "category": "전설 영웅"
+  },
+  {
+    "id": "ca_hero_wh2_dlc14_brt_henri_le_massif",
+    "name": "Henri le Massif",
+    "factionId": "bretonnia",
+    "characterKind": "legendary_hero",
+    "subtypeKey": "wh2_dlc14_brt_henri_le_massif",
+    "subtypeAliases": [],
+    "mainKey": "wh2_dlc14_brt_cha_henri_le_massif_0",
+    "landKey": "wh2_dlc14_brt_cha_henri_le_massif_0",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh2_dlc14_brt_henri_le_massif / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "bretonnia"
+    ],
+    "category": "전설 영웅"
+  },
+  {
+    "id": "ca_hero_wh_dlc07_brt_damsel_beasts",
+    "name": "Damsel (Beasts)",
+    "factionId": "bretonnia",
+    "characterKind": "generic_hero",
+    "subtypeKey": "wh_dlc07_brt_damsel_beasts",
+    "subtypeAliases": [],
+    "mainKey": "wh_dlc07_brt_cha_damsel_beasts_0",
+    "landKey": "wh_dlc07_brt_cha_damsel_beasts_0",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh_dlc07_brt_damsel_beasts / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "bretonnia"
+    ],
+    "category": "일반 영웅"
+  },
+  {
+    "id": "ca_hero_wh_dlc07_brt_damsel_life",
+    "name": "Damsel (Life)",
+    "factionId": "bretonnia",
+    "characterKind": "generic_hero",
+    "subtypeKey": "wh_dlc07_brt_damsel_life",
+    "subtypeAliases": [],
+    "mainKey": "wh_dlc07_brt_cha_damsel_life_0",
+    "landKey": "wh_dlc07_brt_cha_damsel_life_0",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh_dlc07_brt_damsel_life / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "bretonnia"
+    ],
+    "category": "일반 영웅"
+  },
+  {
+    "id": "ca_hero_wh_main_brt_damsel_heavens",
+    "name": "Damsel (Heavens)",
+    "factionId": "bretonnia",
+    "characterKind": "generic_hero",
+    "subtypeKey": "wh_main_brt_damsel_heavens",
+    "subtypeAliases": [],
+    "mainKey": "wh_main_brt_cha_damsel_0",
+    "landKey": "wh_main_brt_cha_damsel_0",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh_main_brt_damsel_heavens / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "bretonnia"
+    ],
+    "category": "일반 영웅"
+  },
+  {
+    "id": "ca_hero_wh_main_brt_paladin",
+    "name": "Paladin",
+    "factionId": "bretonnia",
+    "characterKind": "generic_hero",
+    "subtypeKey": "wh_main_brt_paladin",
+    "subtypeAliases": [],
+    "mainKey": "wh_main_brt_cha_paladin_0",
+    "landKey": "wh_main_brt_cha_paladin_0",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh_main_brt_paladin / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "bretonnia"
+    ],
+    "category": "일반 영웅"
+  },
+  {
+    "id": "ca_hero_wh2_dlc09_tmb_liche_priest_death",
+    "name": "Liche Priest (Death)",
+    "factionId": "tomb_kings",
+    "characterKind": "generic_hero",
+    "subtypeKey": "wh2_dlc09_tmb_liche_priest_death",
+    "subtypeAliases": [],
+    "mainKey": "wh2_dlc09_tmb_cha_liche_priest_death_0",
+    "landKey": "wh2_dlc09_tmb_cha_liche_priest_death_0",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh2_dlc09_tmb_liche_priest_death / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "tomb_kings"
+    ],
+    "category": "일반 영웅"
+  },
+  {
+    "id": "ca_hero_wh2_dlc09_tmb_liche_priest_light",
+    "name": "Liche Priest (Light)",
+    "factionId": "tomb_kings",
+    "characterKind": "generic_hero",
+    "subtypeKey": "wh2_dlc09_tmb_liche_priest_light",
+    "subtypeAliases": [],
+    "mainKey": "wh2_dlc09_tmb_cha_liche_priest_light_0",
+    "landKey": "wh2_dlc09_tmb_cha_liche_priest_light_0",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh2_dlc09_tmb_liche_priest_light / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "tomb_kings"
+    ],
+    "category": "일반 영웅"
+  },
+  {
+    "id": "ca_hero_wh2_dlc09_tmb_liche_priest_nehekhara",
+    "name": "Liche Priest (Nehekhara)",
+    "factionId": "tomb_kings",
+    "characterKind": "generic_hero",
+    "subtypeKey": "wh2_dlc09_tmb_liche_priest_nehekhara",
+    "subtypeAliases": [],
+    "mainKey": "wh2_dlc09_tmb_cha_liche_priest_nehekhara_0",
+    "landKey": "wh2_dlc09_tmb_cha_liche_priest_nehekhara_0",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh2_dlc09_tmb_liche_priest_nehekhara / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "tomb_kings"
+    ],
+    "category": "일반 영웅"
+  },
+  {
+    "id": "ca_hero_wh2_dlc09_tmb_liche_priest_shadow",
+    "name": "Liche Priest (Shadows)",
+    "factionId": "tomb_kings",
+    "characterKind": "generic_hero",
+    "subtypeKey": "wh2_dlc09_tmb_liche_priest_shadow",
+    "subtypeAliases": [],
+    "mainKey": "wh2_dlc09_tmb_cha_liche_priest_shadow_0",
+    "landKey": "wh2_dlc09_tmb_cha_liche_priest_shadow_0",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh2_dlc09_tmb_liche_priest_shadow / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "tomb_kings"
+    ],
+    "category": "일반 영웅"
+  },
+  {
+    "id": "ca_hero_wh2_dlc09_tmb_necrotect",
+    "name": "Necrotect",
+    "factionId": "tomb_kings",
+    "characterKind": "generic_hero",
+    "subtypeKey": "wh2_dlc09_tmb_necrotect",
+    "subtypeAliases": [],
+    "mainKey": "wh2_dlc09_tmb_cha_necrotect_0",
+    "landKey": "wh2_dlc09_tmb_cha_necrotect_0",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh2_dlc09_tmb_necrotect / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "tomb_kings"
+    ],
+    "category": "일반 영웅"
+  },
+  {
+    "id": "ca_hero_wh2_dlc09_tmb_tomb_prince",
+    "name": "Tomb Prince",
+    "factionId": "tomb_kings",
+    "characterKind": "generic_hero",
+    "subtypeKey": "wh2_dlc09_tmb_tomb_prince",
+    "subtypeAliases": [],
+    "mainKey": "wh2_dlc09_tmb_cha_tomb_prince_0",
+    "landKey": "wh2_dlc09_tmb_cha_tomb_prince_0",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh2_dlc09_tmb_tomb_prince / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "tomb_kings"
+    ],
+    "category": "일반 영웅"
+  },
+  {
+    "id": "ca_hero_wh3_dlc29_tmb_liche_priest_undeath",
+    "name": "Liche Priest (Undeath)",
+    "factionId": "tomb_kings",
+    "characterKind": "generic_hero",
+    "subtypeKey": "wh3_dlc29_tmb_liche_priest_undeath",
+    "subtypeAliases": [],
+    "mainKey": "wh3_dlc29_tmb_cha_liche_priest_undeath",
+    "landKey": "wh3_dlc29_tmb_cha_liche_priest_undeath",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh3_dlc29_tmb_liche_priest_undeath / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "tomb_kings"
+    ],
+    "category": "일반 영웅"
+  },
+  {
+    "id": "ca_hero_wh3_dlc29_tmb_tomb_herald",
+    "name": "Tomb Herald",
+    "factionId": "tomb_kings",
+    "characterKind": "generic_hero",
+    "subtypeKey": "wh3_dlc29_tmb_tomb_herald",
+    "subtypeAliases": [],
+    "mainKey": "wh3_dlc29_tmb_cha_tomb_herald",
+    "landKey": "wh3_dlc29_tmb_cha_tomb_herald",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh3_dlc29_tmb_tomb_herald / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "tomb_kings"
+    ],
+    "category": "일반 영웅"
+  },
+  {
+    "id": "ca_hero_wh2_dlc11_cst_ghost_paladin",
+    "name": "Damned Paladin",
+    "factionId": "vampire_coast",
+    "characterKind": "legendary_hero",
+    "subtypeKey": "wh2_dlc11_cst_ghost_paladin",
+    "subtypeAliases": [],
+    "mainKey": "wh2_dlc11_cst_cha_damned_paladin_0",
+    "landKey": "wh2_dlc11_cst_cha_damned_paladin_0",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh2_dlc11_cst_ghost_paladin / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "vampire_coast"
+    ],
+    "category": "전설 영웅"
+  },
+  {
+    "id": "ca_hero_wh2_dlc11_cst_fleet_captain_death",
+    "name": "Vampire Fleet Captain (Death)",
+    "factionId": "vampire_coast",
+    "characterKind": "generic_hero",
+    "subtypeKey": "wh2_dlc11_cst_fleet_captain_death",
+    "subtypeAliases": [],
+    "mainKey": "wh2_dlc11_cst_cha_vampire_fleet_captain_death_0",
+    "landKey": "wh2_dlc11_cst_cha_vampire_fleet_captain_death_0",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh2_dlc11_cst_fleet_captain_death / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "vampire_coast"
+    ],
+    "category": "일반 영웅"
+  },
+  {
+    "id": "ca_hero_wh2_dlc11_cst_fleet_captain_deep",
+    "name": "Vampire Fleet Captain (Deep)",
+    "factionId": "vampire_coast",
+    "characterKind": "generic_hero",
+    "subtypeKey": "wh2_dlc11_cst_fleet_captain_deep",
+    "subtypeAliases": [],
+    "mainKey": "wh2_dlc11_cst_cha_vampire_fleet_captain_deeps_0",
+    "landKey": "wh2_dlc11_cst_cha_vampire_fleet_captain_deeps_0",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh2_dlc11_cst_fleet_captain_deep / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "vampire_coast"
+    ],
+    "category": "일반 영웅"
+  },
+  {
+    "id": "ca_hero_wh2_dlc11_cst_fleet_captain_vampires",
+    "name": "Vampire Fleet Captain (Vampires)",
+    "factionId": "vampire_coast",
+    "characterKind": "generic_hero",
+    "subtypeKey": "wh2_dlc11_cst_fleet_captain_vampires",
+    "subtypeAliases": [],
+    "mainKey": "wh2_dlc11_cst_cha_vampire_fleet_captain_0",
+    "landKey": "wh2_dlc11_cst_cha_vampire_fleet_captain_0",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh2_dlc11_cst_fleet_captain_vampires / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "vampire_coast"
+    ],
+    "category": "일반 영웅"
+  },
+  {
+    "id": "ca_hero_wh2_dlc11_cst_gunnery_wight",
+    "name": "Gunnery Wight",
+    "factionId": "vampire_coast",
+    "characterKind": "generic_hero",
+    "subtypeKey": "wh2_dlc11_cst_gunnery_wight",
+    "subtypeAliases": [],
+    "mainKey": "wh2_dlc11_cst_cha_gunnery_wight_0",
+    "landKey": "wh2_dlc11_cst_cha_gunnery_wight_0",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh2_dlc11_cst_gunnery_wight / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "vampire_coast"
+    ],
+    "category": "일반 영웅"
+  },
+  {
+    "id": "ca_hero_wh3_dlc29_cst_vampire_fleet_captain_undeath",
+    "name": "Vampire Fleet Captain (Undeath)",
+    "factionId": "vampire_coast",
+    "characterKind": "generic_hero",
+    "subtypeKey": "wh3_dlc29_cst_vampire_fleet_captain_undeath",
+    "subtypeAliases": [],
+    "mainKey": "wh3_dlc29_cst_cha_vampire_fleet_captain_undeath",
+    "landKey": "wh3_dlc29_cst_cha_vampire_fleet_captain_undeath",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh3_dlc29_cst_vampire_fleet_captain_undeath / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "vampire_coast"
+    ],
+    "category": "일반 영웅"
+  },
+  {
+    "id": "ca_hero_wh2_dlc16_skv_ghoritch",
+    "name": "Ghoritch",
+    "factionId": "skaven",
+    "characterKind": "legendary_hero",
+    "subtypeKey": "wh2_dlc16_skv_ghoritch",
+    "subtypeAliases": [],
+    "mainKey": "wh2_dlc16_skv_cha_ghoritch_0",
+    "landKey": "wh2_dlc16_skv_cha_ghoritch_0",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh2_dlc16_skv_ghoritch / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "skaven"
+    ],
+    "category": "전설 영웅"
+  },
+  {
+    "id": "ca_hero_wh3_dlc29_skv_skreech_verminking",
+    "name": "Skreech Verminking",
+    "factionId": "skaven",
+    "characterKind": "legendary_hero",
+    "subtypeKey": "wh3_dlc29_skv_skreech_verminking",
+    "subtypeAliases": [],
+    "mainKey": "wh3_dlc29_skv_cha_skreech_verminking",
+    "landKey": "wh3_dlc29_skv_cha_skreech_verminking",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh3_dlc29_skv_skreech_verminking / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "skaven"
+    ],
+    "category": "전설 영웅"
+  },
+  {
+    "id": "ca_hero_wh2_dlc14_skv_eshin_sorcerer",
+    "name": "Eshin Sorcerer",
+    "factionId": "skaven",
+    "characterKind": "generic_hero",
+    "subtypeKey": "wh2_dlc14_skv_eshin_sorcerer",
+    "subtypeAliases": [],
+    "mainKey": "wh2_dlc14_skv_cha_eshin_sorcerer_0",
+    "landKey": "wh2_dlc14_skv_cha_eshin_sorcerer_0",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh2_dlc14_skv_eshin_sorcerer / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "skaven"
+    ],
+    "category": "일반 영웅"
+  },
+  {
+    "id": "ca_hero_wh2_dlc16_skv_chieftain",
+    "name": "Chieftain",
+    "factionId": "skaven",
+    "characterKind": "generic_hero",
+    "subtypeKey": "wh2_dlc16_skv_chieftain",
+    "subtypeAliases": [],
+    "mainKey": "wh2_dlc16_skv_cha_chieftain_0",
+    "landKey": "wh2_dlc16_skv_cha_chieftain_0",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh2_dlc16_skv_chieftain / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "skaven"
+    ],
+    "category": "일반 영웅"
+  },
+  {
+    "id": "ca_hero_wh2_dlc16_skv_packmaster",
+    "name": "Packmaster",
+    "factionId": "skaven",
+    "characterKind": "generic_hero",
+    "subtypeKey": "wh2_dlc16_skv_packmaster",
+    "subtypeAliases": [],
+    "mainKey": "wh2_dlc16_skv_cha_packmaster_0",
+    "landKey": "wh2_dlc16_skv_cha_packmaster_0",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh2_dlc16_skv_packmaster / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "skaven"
+    ],
+    "category": "일반 영웅"
+  },
+  {
+    "id": "ca_hero_wh2_main_skv_assassin",
+    "name": "Assassin",
+    "factionId": "skaven",
+    "characterKind": "generic_hero",
+    "subtypeKey": "wh2_main_skv_assassin",
+    "subtypeAliases": [],
+    "mainKey": "wh2_main_skv_cha_assassin",
+    "landKey": "wh2_main_skv_cha_assassin",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh2_main_skv_assassin / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "skaven"
+    ],
+    "category": "일반 영웅"
+  },
+  {
+    "id": "ca_hero_wh2_main_skv_plague_priest",
+    "name": "Plague Priest",
+    "factionId": "skaven",
+    "characterKind": "generic_hero",
+    "subtypeKey": "wh2_main_skv_plague_priest",
+    "subtypeAliases": [],
+    "mainKey": "wh2_main_skv_cha_plague_priest_0",
+    "landKey": "wh2_main_skv_cha_plague_priest_0",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh2_main_skv_plague_priest / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "skaven"
+    ],
+    "category": "일반 영웅"
+  },
+  {
+    "id": "ca_hero_wh2_main_skv_warlock_engineer",
+    "name": "Warlock Engineer",
+    "factionId": "skaven",
+    "characterKind": "generic_hero",
+    "subtypeKey": "wh2_main_skv_warlock_engineer",
+    "subtypeAliases": [],
+    "mainKey": "wh2_main_skv_cha_warlock_engineer",
+    "landKey": "wh2_main_skv_cha_warlock_engineer",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh2_main_skv_warlock_engineer / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "skaven"
+    ],
+    "category": "일반 영웅"
+  },
+  {
+    "id": "ca_hero_wh2_dlc12_lzd_lord_kroak",
+    "name": "Lord Kroak",
+    "factionId": "lizardmen",
+    "characterKind": "legendary_hero",
+    "subtypeKey": "wh2_dlc12_lzd_lord_kroak",
+    "subtypeAliases": [],
+    "mainKey": "wh2_dlc12_lzd_lzd_cha_kroak_0",
+    "landKey": "wh2_dlc12_lzd_lzd_cha_kroak_0",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh2_dlc12_lzd_lord_kroak / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "lizardmen"
+    ],
+    "category": "전설 영웅"
+  },
+  {
+    "id": "ca_hero_wh2_dlc17_lzd_mon_dread_saurian_qb_boss",
+    "name": "The Big One",
+    "factionId": "lizardmen",
+    "characterKind": "legendary_hero",
+    "subtypeKey": "wh2_dlc17_lzd_mon_dread_saurian_qb_boss",
+    "subtypeAliases": [],
+    "mainKey": "wh2_dlc17_lzd_mon_dread_saurian_qb_boss",
+    "landKey": "wh2_dlc17_lzd_mon_dread_saurian_qb_boss",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh2_dlc17_lzd_mon_dread_saurian_qb_boss / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "lizardmen"
+    ],
+    "category": "전설 영웅"
+  },
+  {
+    "id": "ca_hero_wh2_dlc12_lzd_tlaqua_skink_chief",
+    "name": "Skink Chief",
+    "factionId": "lizardmen",
+    "characterKind": "generic_hero",
+    "subtypeKey": "wh2_dlc12_lzd_tlaqua_skink_chief",
+    "subtypeAliases": [],
+    "mainKey": "wh2_main_lzd_cha_skink_chief_0",
+    "landKey": "wh2_main_lzd_cha_skink_chief_0",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh2_dlc12_lzd_tlaqua_skink_chief / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "lizardmen"
+    ],
+    "category": "일반 영웅"
+  },
+  {
+    "id": "ca_hero_wh2_dlc12_lzd_tlaqua_skink_priest_beasts",
+    "name": "Skink Priest (Beasts)",
+    "factionId": "lizardmen",
+    "characterKind": "generic_hero",
+    "subtypeKey": "wh2_dlc12_lzd_tlaqua_skink_priest_beasts",
+    "subtypeAliases": [],
+    "mainKey": "wh2_main_lzd_cha_skink_priest_beasts_0",
+    "landKey": "wh2_main_lzd_cha_skink_priest_beasts_0",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh2_dlc12_lzd_tlaqua_skink_priest_beasts / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "lizardmen"
+    ],
+    "category": "일반 영웅"
+  },
+  {
+    "id": "ca_hero_wh2_dlc12_lzd_tlaqua_skink_priest_heavens",
+    "name": "Skink Priest (Heavens)",
+    "factionId": "lizardmen",
+    "characterKind": "generic_hero",
+    "subtypeKey": "wh2_dlc12_lzd_tlaqua_skink_priest_heavens",
+    "subtypeAliases": [],
+    "mainKey": "wh2_main_lzd_cha_skink_priest_heavens_0",
+    "landKey": "wh2_main_lzd_cha_skink_priest_heavens_0",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh2_dlc12_lzd_tlaqua_skink_priest_heavens / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "lizardmen"
+    ],
+    "category": "일반 영웅"
+  },
+  {
+    "id": "ca_hero_wh2_dlc17_lzd_skink_oracle_troglodon",
+    "name": "Skink Oracle",
+    "factionId": "lizardmen",
+    "characterKind": "generic_hero",
+    "subtypeKey": "wh2_dlc17_lzd_skink_oracle_troglodon",
+    "subtypeAliases": [],
+    "mainKey": "wh2_dlc17_lzd_cha_skink_oracle_troglodon_0",
+    "landKey": "wh2_dlc17_lzd_cha_skink_oracle_troglodon_0",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh2_dlc17_lzd_skink_oracle_troglodon / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "lizardmen"
+    ],
+    "category": "일반 영웅"
+  },
+  {
+    "id": "ca_hero_wh2_main_lzd_saurus_scar_veteran",
+    "name": "Saurus Scar-Veteran",
+    "factionId": "lizardmen",
+    "characterKind": "generic_hero",
+    "subtypeKey": "wh2_main_lzd_saurus_scar_veteran",
+    "subtypeAliases": [],
+    "mainKey": "wh2_main_lzd_cha_saurus_scar_veteran_0",
+    "landKey": "wh2_main_lzd_cha_saurus_scar_veteran_0",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh2_main_lzd_saurus_scar_veteran / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "lizardmen"
+    ],
+    "category": "일반 영웅"
+  },
+  {
+    "id": "ca_hero_wh2_main_lzd_skink_chief",
+    "name": "Skink Chief",
+    "factionId": "lizardmen",
+    "characterKind": "generic_hero",
+    "subtypeKey": "wh2_main_lzd_skink_chief",
+    "subtypeAliases": [],
+    "mainKey": "wh2_main_lzd_cha_skink_chief_0",
+    "landKey": "wh2_main_lzd_cha_skink_chief_0",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh2_main_lzd_skink_chief / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "lizardmen"
+    ],
+    "category": "일반 영웅"
+  },
+  {
+    "id": "ca_hero_wh2_main_lzd_skink_priest_beasts",
+    "name": "Skink Priest (Beasts)",
+    "factionId": "lizardmen",
+    "characterKind": "generic_hero",
+    "subtypeKey": "wh2_main_lzd_skink_priest_beasts",
+    "subtypeAliases": [],
+    "mainKey": "wh2_main_lzd_cha_skink_priest_beasts_0",
+    "landKey": "wh2_main_lzd_cha_skink_priest_beasts_0",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh2_main_lzd_skink_priest_beasts / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "lizardmen"
+    ],
+    "category": "일반 영웅"
+  },
+  {
+    "id": "ca_hero_wh2_main_lzd_skink_priest_heavens",
+    "name": "Skink Priest (Heavens)",
+    "factionId": "lizardmen",
+    "characterKind": "generic_hero",
+    "subtypeKey": "wh2_main_lzd_skink_priest_heavens",
+    "subtypeAliases": [],
+    "mainKey": "wh2_main_lzd_cha_skink_priest_heavens_0",
+    "landKey": "wh2_main_lzd_cha_skink_priest_heavens_0",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh2_main_lzd_skink_priest_heavens / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "lizardmen"
+    ],
+    "category": "일반 영웅"
+  },
+  {
+    "id": "ca_hero_wh3_dlc24_ksl_the_golden_knight",
+    "name": "The Golden Knight Naryska Leysa",
+    "factionId": "kislev",
+    "characterKind": "legendary_hero",
+    "subtypeKey": "wh3_dlc24_ksl_the_golden_knight",
+    "subtypeAliases": [],
+    "mainKey": "wh3_dlc24_ksl_cha_golden_knight",
+    "landKey": "wh3_dlc24_ksl_cha_golden_knight",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh3_dlc24_ksl_the_golden_knight / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "kislev"
+    ],
+    "category": "전설 영웅"
+  },
+  {
+    "id": "ca_hero_wh3_dlc24_ksl_hag_witch_beasts",
+    "name": "Hag Witch (Beasts)",
+    "factionId": "kislev",
+    "characterKind": "generic_hero",
+    "subtypeKey": "wh3_dlc24_ksl_hag_witch_beasts",
+    "subtypeAliases": [],
+    "mainKey": "wh3_dlc24_ksl_cha_hag_witch_beast",
+    "landKey": "wh3_dlc24_ksl_cha_hag_witch_beast",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh3_dlc24_ksl_hag_witch_beasts / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "kislev"
+    ],
+    "category": "일반 영웅"
+  },
+  {
+    "id": "ca_hero_wh3_dlc24_ksl_hag_witch_death",
+    "name": "Hag Witch (Death)",
+    "factionId": "kislev",
+    "characterKind": "generic_hero",
+    "subtypeKey": "wh3_dlc24_ksl_hag_witch_death",
+    "subtypeAliases": [],
+    "mainKey": "wh3_dlc24_ksl_cha_hag_witch_death",
+    "landKey": "wh3_dlc24_ksl_cha_hag_witch_death",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh3_dlc24_ksl_hag_witch_death / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "kislev"
+    ],
+    "category": "일반 영웅"
+  },
+  {
+    "id": "ca_hero_wh3_dlc24_ksl_hag_witch_hag",
+    "name": "Hag Witch (Hag)",
+    "factionId": "kislev",
+    "characterKind": "generic_hero",
+    "subtypeKey": "wh3_dlc24_ksl_hag_witch_hag",
+    "subtypeAliases": [],
+    "mainKey": "wh3_dlc24_ksl_cha_hag_witch_hag",
+    "landKey": "wh3_dlc24_ksl_cha_hag_witch_hag",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh3_dlc24_ksl_hag_witch_hag / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "kislev"
+    ],
+    "category": "일반 영웅"
+  },
+  {
+    "id": "ca_hero_wh3_dlc24_ksl_hag_witch_shadows",
+    "name": "Hag Witch (Shadows)",
+    "factionId": "kislev",
+    "characterKind": "generic_hero",
+    "subtypeKey": "wh3_dlc24_ksl_hag_witch_shadows",
+    "subtypeAliases": [],
+    "mainKey": "wh3_dlc24_ksl_cha_hag_witch_shadow",
+    "landKey": "wh3_dlc24_ksl_cha_hag_witch_shadow",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh3_dlc24_ksl_hag_witch_shadows / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "kislev"
+    ],
+    "category": "일반 영웅"
+  },
+  {
+    "id": "ca_hero_wh3_main_ksl_frost_maiden_ice",
+    "name": "Frost Maiden (Ice)",
+    "factionId": "kislev",
+    "characterKind": "generic_hero",
+    "subtypeKey": "wh3_main_ksl_frost_maiden_ice",
+    "subtypeAliases": [],
+    "mainKey": "wh3_main_ksl_cha_frost_maiden_ice_0",
+    "landKey": "wh3_main_ksl_cha_frost_maiden_ice_0",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh3_main_ksl_frost_maiden_ice / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "kislev"
+    ],
+    "category": "일반 영웅"
+  },
+  {
+    "id": "ca_hero_wh3_main_ksl_frost_maiden_tempest",
+    "name": "Frost Maiden (Tempest)",
+    "factionId": "kislev",
+    "characterKind": "generic_hero",
+    "subtypeKey": "wh3_main_ksl_frost_maiden_tempest",
+    "subtypeAliases": [],
+    "mainKey": "wh3_main_ksl_cha_frost_maiden_tempest_0",
+    "landKey": "wh3_main_ksl_cha_frost_maiden_tempest_0",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh3_main_ksl_frost_maiden_tempest / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "kislev"
+    ],
+    "category": "일반 영웅"
+  },
+  {
+    "id": "ca_hero_wh3_main_ksl_patriarch",
+    "name": "Patriarch",
+    "factionId": "kislev",
+    "characterKind": "generic_hero",
+    "subtypeKey": "wh3_main_ksl_patriarch",
+    "subtypeAliases": [],
+    "mainKey": "wh3_main_ksl_cha_patriarch_0",
+    "landKey": "wh3_main_ksl_cha_patriarch_0",
+    "gameVersion": "9.0.2.0",
+    "source": "CA agent subtype wh3_main_ksl_patriarch / exact faction permission / faction-rosters/source.json",
+    "tags": [],
+    "factionIds": [
+      "kislev"
+    ],
+    "category": "일반 영웅"
+  }
+]

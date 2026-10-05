@@ -2,15 +2,11 @@
   {
     "id": "vampire_counts",
     "name": "뱀파이어 카운트",
-    "subtitle": "Vampire Counts",
-    "description": "죽음의 군세를 이끄는 팩션. 이 항목은 앱 구조를 보여주기 위한 소량의 예시 데이터입니다.",
-    "gameVersion": "sample",
-    "source": "구조 검증용 샘플 · 수치 미검증",
-    "tags": [
-      "언데드",
-      "마법",
-      "근접"
-    ]
+    "subtitle": "뱀파이어 카운트",
+    "description": "검토된 CA race roster catalog입니다. Roster 상태는 캐릭터·유닛 entry coverage만 뜻하며 Research·Buildings·Skill 완성을 뜻하지 않습니다.",
+    "gameVersion": "9.0.2.0",
+    "source": "CA culture wh_main_vmp_vampire_counts / faction permissions / faction-rosters/ROSTERS.md",
+    "tags": []
   },
   {
     "id": "warriors_of_chaos",
@@ -24,55 +20,73 @@
   {
     "id": "empire",
     "name": "Empire",
-    "subtitle": "Primary catalog · wh_main_group_empire",
-    "description": "검토된 military permission의 기본 catalog 분류입니다. 승인된 production 부분집합만 포함하며, 전체 roster나 캠페인 모집 가능성을 뜻하지 않습니다.",
+    "subtitle": "Empire",
+    "description": "검토된 CA race roster catalog입니다. Roster 상태는 캐릭터·유닛 entry coverage만 뜻하며 Research·Buildings·Skill 완성을 뜻하지 않습니다.",
     "gameVersion": "9.0.2.0",
-    "source": "Reviewed primary catalog alias: wh_main_group_empire → empire; promotion/PARTIAL_REVIEW.md",
+    "source": "CA culture wh_main_emp_empire / faction permissions / faction-rosters/ROSTERS.md",
     "tags": []
   },
   {
     "id": "skaven",
     "name": "Skaven",
-    "subtitle": "Primary catalog · wh2_main_skv",
-    "description": "검토된 military permission의 기본 catalog 분류입니다. 승인된 production 부분집합만 포함하며, 전체 roster나 캠페인 모집 가능성을 뜻하지 않습니다.",
+    "subtitle": "Skaven",
+    "description": "검토된 CA race roster catalog입니다. Roster 상태는 캐릭터·유닛 entry coverage만 뜻하며 Research·Buildings·Skill 완성을 뜻하지 않습니다.",
     "gameVersion": "9.0.2.0",
-    "source": "Reviewed primary catalog alias: wh2_main_skv → skaven; promotion/PARTIAL_REVIEW.md",
+    "source": "CA culture wh2_main_skv_skaven / faction permissions / faction-rosters/ROSTERS.md",
     "tags": []
   },
   {
     "id": "bretonnia",
     "name": "Bretonnia",
-    "subtitle": "Primary catalog · wh_main_group_bretonnia",
-    "description": "검토된 military permission의 기본 catalog 분류입니다. 승인된 production 부분집합만 포함하며, 전체 roster나 캠페인 모집 가능성을 뜻하지 않습니다.",
+    "subtitle": "Bretonnia",
+    "description": "검토된 CA race roster catalog입니다. Roster 상태는 캐릭터·유닛 entry coverage만 뜻하며 Research·Buildings·Skill 완성을 뜻하지 않습니다.",
     "gameVersion": "9.0.2.0",
-    "source": "Reviewed primary catalog alias: wh_main_group_bretonnia → bretonnia; promotion/PARTIAL_REVIEW.md",
+    "source": "CA culture wh_main_brt_bretonnia / faction permissions / faction-rosters/ROSTERS.md",
     "tags": []
   },
   {
     "id": "vampire_coast",
     "name": "Vampire Coast",
-    "subtitle": "Primary catalog · wh2_dlc11_group_vampire_coast",
-    "description": "검토된 military permission의 기본 catalog 분류입니다. 승인된 production 부분집합만 포함하며, 전체 roster나 캠페인 모집 가능성을 뜻하지 않습니다.",
+    "subtitle": "Vampire Coast",
+    "description": "검토된 CA race roster catalog입니다. Roster 상태는 캐릭터·유닛 entry coverage만 뜻하며 Research·Buildings·Skill 완성을 뜻하지 않습니다.",
     "gameVersion": "9.0.2.0",
-    "source": "Reviewed primary catalog alias: wh2_dlc11_group_vampire_coast → vampire_coast; promotion/EVIDENCE_LINKED_ADMISSION.md",
+    "source": "CA culture wh2_dlc11_cst_vampire_coast / faction permissions / faction-rosters/ROSTERS.md",
     "tags": []
   },
   {
     "id": "tomb_kings",
     "name": "Tomb Kings",
-    "subtitle": "Primary catalog · wh2_dlc09_tomb_kings",
-    "description": "검토된 military permission의 기본 catalog 분류입니다. 승인된 production 부분집합만 포함하며, 전체 roster나 캠페인 모집 가능성을 뜻하지 않습니다.",
+    "subtitle": "Tomb Kings",
+    "description": "검토된 CA race roster catalog입니다. Roster 상태는 캐릭터·유닛 entry coverage만 뜻하며 Research·Buildings·Skill 완성을 뜻하지 않습니다.",
     "gameVersion": "9.0.2.0",
-    "source": "Reviewed primary catalog alias: wh2_dlc09_tomb_kings → tomb_kings; promotion/EVIDENCE_LINKED_ADMISSION.md",
+    "source": "CA culture wh2_dlc09_tmb_tomb_kings / faction permissions / faction-rosters/ROSTERS.md",
     "tags": []
   },
   {
     "id": "lizardmen",
     "name": "Lizardmen",
-    "subtitle": "Primary catalog · wh2_main_lzd",
-    "description": "검토된 military permission의 기본 catalog 분류입니다. 승인된 production 부분집합만 포함하며, 전체 roster나 캠페인 모집 가능성을 뜻하지 않습니다.",
+    "subtitle": "Lizardmen",
+    "description": "검토된 CA race roster catalog입니다. Roster 상태는 캐릭터·유닛 entry coverage만 뜻하며 Research·Buildings·Skill 완성을 뜻하지 않습니다.",
     "gameVersion": "9.0.2.0",
-    "source": "Reviewed primary catalog alias: wh2_main_lzd → lizardmen; promotion/EVIDENCE_LINKED_ADMISSION.md",
+    "source": "CA culture wh2_main_lzd_lizardmen / faction permissions / faction-rosters/ROSTERS.md",
+    "tags": []
+  },
+  {
+    "id": "greenskins",
+    "name": "Greenskins",
+    "subtitle": "Greenskins",
+    "description": "검토된 CA race roster catalog입니다. Roster 상태는 캐릭터·유닛 entry coverage만 뜻하며 Research·Buildings·Skill 완성을 뜻하지 않습니다.",
+    "gameVersion": "9.0.2.0",
+    "source": "CA culture wh_main_grn_greenskins / faction permissions / faction-rosters/ROSTERS.md",
+    "tags": []
+  },
+  {
+    "id": "kislev",
+    "name": "Kislev",
+    "subtitle": "Kislev",
+    "description": "검토된 CA race roster catalog입니다. Roster 상태는 캐릭터·유닛 entry coverage만 뜻하며 Research·Buildings·Skill 완성을 뜻하지 않습니다.",
+    "gameVersion": "9.0.2.0",
+    "source": "CA culture wh3_main_ksl_kislev / faction permissions / faction-rosters/ROSTERS.md",
     "tags": []
   }
 ]

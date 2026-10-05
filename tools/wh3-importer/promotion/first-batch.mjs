@@ -29,6 +29,10 @@ export function assertReviewedProductionResult(result, validate, factionIds, rev
   requireGate(result?.format === 'warhammer-vault-normalized-unit-v1' && result.mode === 'conservative' && result.sourceKind === 'ca-pack', 'not a conservative CA static result');
   requireGate(identity?.caMainUnitKey === review.mainKey && identity.caLandUnitKey === review.landKey && identity.internalId === review.id, 'exact source identity mismatch');
   requireGate(unit?.id === review.id && unit.name === review.name && unit.factionId === review.factionId, 'presentation identity mismatch');
+  if (review.customBattleFaction) {
+    const affiliation = result.provenance.fields.find(p => p.field === 'factionId');
+    requireGate(review.militaryGroup === null && affiliation?.source?.table === 'units_custom_battle_permissions_tables' && affiliation.source.field === 'faction' && affiliation.rawValue === review.customBattleFaction, 'exact roster faction permission differs');
+  }
   requireGate(identity.primaryCatalogGroup === review.militaryGroup && !result.provenance.catalog, 'not the reviewed primary static catalog affiliation');
   requireGate(unit.gameVersion === hotfixSnapshot.gameVersion && isReviewedSource(result.provenance.rawTrace, '') && isReviewedSource(result.provenance.affiliationEvidence, ''), 'unreviewed game/schema/pack snapshot');
   requireGate(result.provenance.baseValuesOnly === true, 'non-base values');

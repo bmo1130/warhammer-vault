@@ -24,7 +24,7 @@ test('searches, ID lookups and faction indexes use migrated unit classification'
     assert(gameRepository.search(unit.classification.category).some((item) => item.id === unit.id && item.detail === unit.classification.category));
   }
   assert(gameRepository.search('뱀파이어').some((item) => item.type === 'faction'));
-  assert(gameRepository.search('케믈러').some((item) => item.type === 'lord'));
+  assert(gameRepository.search('Heinrich Kemmler').some((item) => item.type === 'lord'));
   assert.deepEqual(gameRepository.search('  '), []);
   assert.equal(gameRepository.getUnit('missing'), undefined);
   assert.equal(gameRepository.getFactionUnits('vampire_counts').filter(unit => unit.gameVersion === 'sample').length, 5);
@@ -32,7 +32,7 @@ test('searches, ID lookups and faction indexes use migrated unit classification'
 });
 
 test('main routes render existing content including unfilled unit values', () => {
-  for (const [url, text] of [['/', '전쟁 서고'], ['/factions', '팩션 목록'], ['/factions/vampire_counts', '모두 보기'], ['/lords/heinrich_kemmler', '하인리히 케믈러'], ['/notes', '자유 메모'], ['/settings', '백업 및 복원'], ['/units/missing', '항목을 찾을 수 없습니다']]) assert(render(url).includes(text), url);
+  for (const [url, text] of [['/', '전쟁 서고'], ['/factions', '팩션 목록'], ['/factions/vampire_counts', 'ROSTER COMPLETE'], ['/lords/heinrich_kemmler', 'Heinrich Kemmler'], ['/notes', '자유 메모'], ['/settings', '백업 및 복원'], ['/units/missing', '항목을 찾을 수 없습니다']]) assert(render(url).includes(text), url);
   const html = render('/units/zombies');
   for (const label of ['좀비', '보병', '근접 공격', '근접 방어', '속도', '장갑', '리더십', '생명력', '돌격 보너스', '소속 팩션', '티어', '모집비 / 유지비', '미입력', '내 기록', '즐겨찾기']) assert(html.includes(label), label);
 });

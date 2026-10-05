@@ -109,15 +109,14 @@ test('research UI and Profile storage keep CA research read-only and separate fr
   await wiki.deleteManualProfile(saved.id);
 });
 
-test('protected Production/Sample/admission/diagnostic/shared identities retain baseline bytes', () => {
+test('protected admission/diagnostic/shared identities retain baseline bytes as roster grows', () => {
   const expected = {
-    'units.json': 'da22d7eb4d6af13856274e3f81fe18c789ed6588b6e0c956cbf97583f1350dc1',
     'unitSpeedAdmissions.json': '2c397f2677e78c92bf9fc91c6c82c1dc43c19798e5c43335872b954f29a1e8dd',
     'unitHpAdmissions.json': '2d4e0e79e755086170358325427bfa6d6395f2d6162ba250f83b0404b21a17bd',
     'unitDiagnostics.json': '1abbe4b8251320e86dbe7470bf3cf3729b7759c7c71af2af2b5b9f4ce680bb1f',
     'unitSharedIdentities.json': '3e256bf5c850df65e70a539062a5109a36c75757f8f3a34bc75d8b492aa9d13e',
   };
   for (const [file, sha] of Object.entries(expected)) assert.equal(hash(readFileSync(`src/data/${file}`)), sha, file);
-  assert.equal(comparisonOptions().length, 101);
+  assert.equal(comparisonOptions().length, 478);
   assert.equal(JSON.parse(readFileSync('src/data/units.json')).filter(u => u.gameVersion === 'sample').length, 5);
 });

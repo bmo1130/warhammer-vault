@@ -6,6 +6,9 @@ import { resolve } from 'node:path';
 import { prepareEvidenceView } from './evidence-view.mjs';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
+const roster = spawnSync(process.execPath, ['scripts/review-faction-rosters.mjs', '--check'], {cwd:root,stdio:'inherit'});
+if (roster.error) throw roster.error;
+if (roster.status !== 0) process.exit(roster.status ?? 1);
 const require = createRequire(import.meta.url);
 // Compile with the project's existing TypeScript dependency, then run Node's
 // built-in tests. No framework, custom module loader, or runtime dependency.

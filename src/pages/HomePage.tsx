@@ -30,7 +30,7 @@ export default function HomePage() {
   const results = searchArchive(query);
   return <>
     <PageIntro eyebrow="PERSONAL FIELD ARCHIVE" title="전쟁 서고" description="읽고, 기록하고, 다음 전투를 준비하는 나만의 햄탈워 기록장."/>
-    <SearchBox value={query} onChange={setQuery}/>
+    <SearchBox value={query} onChange={setQuery} label="팩션, 군주, 영웅, 유닛 검색"/>
     {query.trim() ? <section className="section">
       <SectionTitle title="검색 결과" count={results.length}/>
       <div className="list-card">{results.length ? results.map(result => {
@@ -47,7 +47,7 @@ export default function HomePage() {
       </section>
       <div className="two-columns">
         <section className="section"><SectionTitle title="즐겨찾기" count={bookmarks.length}/>
-          <div className="list-card">{bookmarks.length ? bookmarks.map(entry => <SavedTargetRow key={entry.id} target={entry}/>) : <EmptyState title="아직 즐겨찾기가 없습니다" text="자주 보는 팩션, 군주, 유닛을 상세 화면에서 저장하세요."/>}</div>
+          <div className="list-card">{bookmarks.length ? bookmarks.map(entry => <SavedTargetRow key={entry.id} target={entry}/>) : <EmptyState title="아직 즐겨찾기가 없습니다" text="자주 보는 팩션, 군주, 영웅, 유닛을 상세 화면에서 저장하세요."/>}</div>
         </section>
         <section className="section"><SectionTitle title="최근 본 항목" count={recent.length}/>
           <div className="list-card">{recent.length ? recent.map(entry => <SavedTargetRow key={entry.id} target={entry}/>) : <EmptyState title="최근 본 항목이 없습니다" text="항목을 열면 이곳에서 빠르게 다시 찾을 수 있습니다."/>}</div>
@@ -55,7 +55,7 @@ export default function HomePage() {
       </div>
       {error && <p className="message error" role="status">{error}</p>}
       <section className="section"><SectionTitle title="팩션 탐색" count={gameRepository.listFactions().length} to="/factions" action="전체 팩션"/>
-        <div className="feature-card"><div className="feature-top"><span className="feature-label">샘플 팩션</span><span className="feature-symbol">☾</span></div><h3>뱀파이어 카운트</h3><p>죽음의 군세와 전설 군주, 유닛 기록을 둘러보세요.</p><Link className="button button-primary" to={pathFor('faction', 'vampire_counts')}>팩션 보기 <Icon name="arrow"/></Link></div>
+        <div className="feature-card"><div className="feature-top"><span className="feature-label">{gameRepository.getRosterCoverage('vampire_counts')?.status ?? 'ROSTER PARTIAL'}</span><span className="feature-symbol">☾</span></div><h3>뱀파이어 카운트</h3><p>검토된 군주·영웅·유닛 roster와 내 기록을 둘러보세요.</p><Link className="button button-primary" to={pathFor('faction', 'vampire_counts')}>팩션 보기 <Icon name="arrow"/></Link></div>
       </section>
     </>}
   </>;

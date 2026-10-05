@@ -11,6 +11,7 @@ import UnitsPage from './pages/UnitsPage';
 import ComparePage from './pages/ComparePage';
 import CalculatorPage from './pages/CalculatorPage';
 import LordPage from './pages/LordPage';
+import HeroPage from './pages/HeroPage';
 import NotesPage from './pages/NotesPage';
 import SettingsPage from './pages/SettingsPage';
 import NotFound from './pages/NotFound';
@@ -30,6 +31,7 @@ export default function AppShell() {
           <Route path={`/${entityRoutes.unit}/:id`} element={<UnitPage/>}/>
           <Route path={`/${entityRoutes.unit}`} element={<UnitsPage/>}/>
           <Route path={`/${entityRoutes.lord}/:id`} element={<LordPage/>}/>
+          <Route path={`/${entityRoutes.hero}/:id`} element={<HeroPage/>}/>
           <Route path="/notes" element={<NotesPage/>}/>
           <Route path="/compare" element={<ComparePage/>}/>
           <Route path="/calculator" element={<CalculatorPage/>}/>

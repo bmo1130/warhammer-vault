@@ -2,6 +2,10 @@
 
 Total War: Warhammer III 개인 위키의 첫 버전입니다. 원본 게임 데이터와 개인 기록을 분리했습니다.
 
+현재 source-driven race roster는 **9개 ROSTER COMPLETE**입니다.
+Production Units 478개 · Lords 138개 · Heroes 87개이며, 각 팩션에서 전설/일반 군주·영웅과 유닛을 구분해 개인 문서를 작성할 수 있습니다.
+[범위·inventory·제외·데이터 투입 방법](tools/wh3-importer/faction-rosters/ROSTERS.md)을 확인하세요.
+
 Android 320~430px 위키 MVP의 사용법, GitHub Pages 배포, 실제 데이터 수량,
 PC 데이터 투입 명령과 다음 F9 USER ACTION은 [MOBILE_MVP.md](docs/MOBILE_MVP.md)에 정리했습니다.
 `npm run data:status`로 상태와 다음 명령, `npm run check:data`로 기존 evidence replay를 확인합니다.

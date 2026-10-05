@@ -43,9 +43,11 @@ export function normalizeUnit(dump, context) {
   if (roots.length !== 1 || !/^[a-z][a-z0-9_]*$/.test(factionId)) throw new Error('Unique permission root and an explicit internal faction ID are required.');
   const permissionSelectors = factSelectors({ ...permissions, rootRow: roots[0].id });
   const candidates = permissions.rows.filter((row) => row.table === 'units_to_groupings_military_permissions_tables' && permissionSelectors.reachable(row) && row.row.unit === mainKey.value);
-  const affiliations = candidates.filter((row) => row.row.military_group === context.militaryGroup);
+  const affiliations = context.rosterFaction
+    ? permissions.rows.filter(row => row.table === 'units_custom_battle_permissions_tables' && row.row.unit === mainKey.value && row.row.faction === context.rosterFaction && !row.row.set_piece_character && permissionSelectors.reachable(row))
+    : candidates.filter((row) => row.row.military_group === context.militaryGroup);
   if (!catalog && affiliations.length !== 1) throw new Error('The curated primary catalog group has no unique verified permission relation for this unit.');
-  const affiliation = catalog ? permissionSelectors.fact(roots[0], 'unit') : permissionSelectors.fact(affiliations[0], 'military_group');
+  const affiliation = catalog ? permissionSelectors.fact(roots[0], 'unit') : permissionSelectors.fact(affiliations[0], context.rosterFaction ? 'faction' : 'military_group');
   if (!affiliation) throw new Error('Military affiliation lacks processed schema evidence.');
 
   const unit = {

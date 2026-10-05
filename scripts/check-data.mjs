@@ -1,5 +1,8 @@
 import { spawnSync } from 'node:child_process';
 import { prepareEvidenceView } from './evidence-view.mjs';
+const roster = spawnSync(process.execPath, ['scripts/review-faction-rosters.mjs', '--check'], {stdio:'inherit'});
+if (roster.error) throw roster.error;
+if (roster.status !== 0) process.exit(roster.status ?? 1);
 const cwd = prepareEvidenceView();
 const commands = [
   ['scripts/review-production-growth.mjs', '--check'], ['scripts/promote-production-growth.mjs', '--check'],
@@ -19,4 +22,4 @@ for (const args of commands) {
   if (result.status !== 0) { process.stdout.write(result.stdout); process.stderr.write(result.stderr); process.exit(result.status ?? 1); }
   console.log(`PASS node ${args.join(' ')}`);
 }
-console.log(`PASS ${commands.length} deterministic replays; current protected data equal to replay inputs.`);
+console.log(`PASS live roster admission/projection and ${commands.length} historical replays; protected evidence and unrelated datasets unchanged.`);

@@ -101,15 +101,14 @@ test('conflicting SET and arithmetic overflow fail closed; identical SET is dete
   assert.throws(() => applyModifiers(base, [modifier('a', 'set', Number.MAX_VALUE), modifier('b', 'multiply', 100)]), /overflow/);
 });
 
-test('Production fixtures stay separate; full catalog and Speed/HP admission byte hashes remain unchanged', () => {
+test('Production fixtures stay separate; Speed/HP admission byte hashes remain unchanged', () => {
   const expected = {
-    units: 'da22d7eb4d6af13856274e3f81fe18c789ed6588b6e0c956cbf97583f1350dc1',
     unitSpeedAdmissions: '2c397f2677e78c92bf9fc91c6c82c1dc43c19798e5c43335872b954f29a1e8dd',
     unitHpAdmissions: '2d4e0e79e755086170358325427bfa6d6395f2d6162ba250f83b0404b21a17bd',
   };
   for (const [name, hash] of Object.entries(expected)) assert.equal(createHash('sha256').update(readFileSync(`src/data/${name}.json`)).digest('hex'), hash);
   const units = require('../src/data/units.json');
-  assert.equal(units.filter(u => u.gameVersion !== 'sample').length, 101);
+  assert.equal(units.filter(u => u.gameVersion !== 'sample').length, 478);
   assert.equal(units.filter(u => u.gameVersion === 'sample').length, 5);
   assert(!units.some(u => u.id.startsWith('fixture_') || u.id.startsWith('test_')));
   const before = JSON.stringify(units);

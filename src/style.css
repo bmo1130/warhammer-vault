@@ -99,3 +99,11 @@
   .setting-card{padding:20px}.archive-links{gap:10px}.main{padding-bottom:calc(125px + env(safe-area-inset-bottom))}
 }
 .confirm-action{border:1px solid #8b615d;border-radius:6px;padding:14px;background:#302824}.confirm-action p{font-size:13px;line-height:1.7;margin-bottom:10px;overflow-wrap:anywhere}
+/* Roster and character identity use the existing mobile page layout. */
+.roster-coverage { margin-bottom: 24px; }
+.coverage-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(135px, 1fr)); gap: 10px; }
+.coverage-grid > div { display: flex; justify-content: space-between; gap: 12px; padding: 12px; background: #222a23; border: 1px solid #394239; border-radius: 8px; }
+.character-faction { display: inline-block; margin-right: 12px; }
+.character-source { margin-top: 16px; overflow-wrap: anywhere; }
+.character-source summary { cursor: pointer; }
+.character-source dd { margin: 4px 0 12px; }

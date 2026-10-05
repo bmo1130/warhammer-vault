@@ -1,5 +1,7 @@
 # Android 위키 MVP 운영 안내
 
+> 이 문서는 mobile MVP baseline `0205595`의 기록입니다. 최신 roster 수량과 완료 상태는 [ROSTERS.md](../tools/wh3-importer/faction-rosters/ROSTERS.md)와 `npm run data:status`를 확인하세요.
+
 감사 기준: main `93130d543cc927cdd69cb8b920dc3553538b69f0` (2026-10-05).
 기존 React/Vite/Router, IndexedDB v2, JSON backup v1, Modifier 엔진을 유지했다.
 CA 원본·review·admission·runtime evidence는 변경하지 않았다.

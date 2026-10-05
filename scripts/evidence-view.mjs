@@ -15,6 +15,14 @@ const evolving = new Set(['README.md', '.gitignore', 'package.json', 'scripts/te
   'src/components/ArticleEditor.tsx', 'src/pages/NotesPage.tsx',
   'src/pages/UnitPage.tsx', 'src/pages/FactionPage.tsx', 'src/pages/LordPage.tsx',
   'src/pages/SettingsPage.tsx', 'src/pages/CalculatorPage.tsx']);
+// Reviewed roster projections are checked in the live tree before replay.
+for (const path of ['src/App.tsx','src/domain/types.ts','src/domain/unit.ts','src/domain/unitValidation.ts',
+  'src/repositories/gameRepository.ts','src/components/EntityRow.tsx','src/pages/FactionsPage.tsx','src/pages/HomePage.tsx',
+  'src/data/units.json','src/data/factions.json','src/data/lords.json',
+  'tools/wh3-importer/normalization/normalizer.mjs','tools/wh3-importer/promotion/first-batch.mjs',
+  'tests/app.test.cjs','tests/unit-catalog.test.cjs','tests/unit-comparison.test.cjs',
+  'tests/unit-modifiers.test.cjs','tests/ca-research.test.cjs',
+  'tests/manual-calculator.test.cjs','tests/unit-diagnostics.test.cjs']) evolving.add(path);
 const normalized = (path, bytes) => /\.(?:mjs|cjs|mts|cts|ts|tsx|ps1|md|css|html|json|yml|svg|lua|gitattributes|gitignore)$/.test(path) ? bytes.toString().replace(/\r\n/g, '\n') : bytes;
 export function prepareEvidenceView() {
   const archive = spawnSync('git', ['archive', baseline], { cwd: root, maxBuffer: 128 * 1024 * 1024 });
