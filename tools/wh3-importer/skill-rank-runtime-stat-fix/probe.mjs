@@ -5,6 +5,7 @@ import {STAT_KEYS} from '../skill-rank-runtime-resolution/experiment.mjs';
 import * as historical from '../skill-rank-runtime-resolution/resolve.mjs';
 
 export const REVISION = 'campaign-exact-stat-key-v1';
+export const DIAGNOSTIC_REVISION = 'campaign-stat-items-v1';
 export const ORIGINAL_SHA256 = '0d012becf1feba6d7e08362e6447ba5ed30268050f73d83145925bc52f7a9b8a';
 export const query = key => {
  assert(STAT_KEYS.includes(key));
@@ -26,7 +27,7 @@ export function buildProbe() {
     for _, unit in ipairs(f.units.rows) do
         assert(unit.statStatus == "COMPLETE", "Exact stat lookup unavailable; inspect units.rows[].detailsAccess/stats")
     end
-${finish}`).replace('local ok, err = pcall(function()', `f.probeRevision = "${REVISION}"\nlocal ok, err = pcall(function()`);
+${finish}`).replace('local ok, err = pcall(function()', `f.probeRevision = "${REVISION}"\nf.statDiagnosticRevision = "${DIAGNOSTIC_REVISION}"\nlocal ok, err = pcall(function()`);
 }
 export function inspectFrame(entry, setup) {
  const checked = historical.inspectFrame(entry, setup);

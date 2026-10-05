@@ -4,7 +4,8 @@ import {resolve as pathResolve,join,basename} from 'node:path';
 import {createHash,randomUUID} from 'node:crypto';
 import {VERSION,SNAPSHOT,verifySetup} from '../skill-rank-runtime-resolution/experiment.mjs';
 import {parseLogs} from '../skill-rank-runtime-resolution/resolve.mjs';
-import {buildProbe,inspectFrame,resolve,REVISION} from './probe.mjs';
+import {buildProbe,inspectFrame,resolve,REVISION,DIAGNOSTIC_REVISION} from './probe.mjs';
+import {diagnose} from './stat-items.mjs';
 const [command,...args]=process.argv.slice(2),options={};
 for(let i=0;i<args.length;i++){assert(args[i].startsWith('--')&&args[i+1]&&!args[i+1].startsWith('--'),'Expected --key value');(options[args[i].slice(2)]??=[]).push(args[++i]);}
 const one=k=>{assert(options[k]?.length===1,`Exactly one --${k} required`);return options[k][0];};
@@ -20,7 +21,15 @@ if(command==='prepare'){
  const prelude='WV_SKILL_RANK_CONFIG = {'+Object.entries(config).map(([k,v])=>`${k} = ${JSON.stringify(v)}`).join(',')+'}\n';
  write(join(out,'setup.json'),setup);
  writeFileSync(join(out,'exec.lua'),prelude+source,{flag:'wx'});
- console.log(JSON.stringify({bundle:out,next:'Reuse historical install.ps1; capture baseline before bind',probeRevision:REVISION,liveApiVerified:false}));
+ console.log(JSON.stringify({bundle:out,next:'Reuse historical install.ps1; capture baseline before bind',probeRevision:REVISION,statDiagnosticRevision:DIAGNOSTIC_REVISION,liveApiVerified:false}));
+}else if(command==='diagnose'){
+ const setup=verifySetup(json(one('setup'))),inputs=logs(),parsed=parseLogs(inputs);
+ assert.equal(parsed.problems.length,0);assert.equal(parsed.frames.length,1,'Expected only the new first 0/0 capture');
+ const result=diagnose(parsed.frames[0],setup),out=newDir();mkdirSync(join(out,'raw'));
+ inputs.forEach((input,i)=>copyFileSync(input.path,join(out,'raw',`${i}-${input.name}`)));
+ write(join(out,'setup.json'),setup);write(join(out,'parsed.json'),parsed);write(join(out,'diagnostic-report.json'),result);
+ console.log(JSON.stringify({output:out,...result},null,2));
+ if(result.status!=='COMPLETE')process.exitCode=2;
 }else if(command==='bind'){
  const setup=verifySetup(json(one('setup'))),parsed=parseLogs(logs());
  assert.equal(parsed.problems.length,0);assert(parsed.frames.length>=1);
@@ -37,4 +46,4 @@ if(command==='prepare'){
  write(join(out,'review-template.json'),{...setup,review:{controlledSetup:false,loadedSaveAttested:false,baselineSaveSha256:setup.baselineSaveSha256??null,captureSha256s:parsed.frames.map(f=>f.captureSha256),channel:setup.channel,currentValuesNotTooltipOrPreview:false,reviewer:'',evidenceNote:'Record unchanged difficulty/research/mods/campaign modifiers; baseline save reload; verify this CCO Value channel reflects committed campaign bonuses.'}});
  console.log(JSON.stringify({output:out,verdict:result.verdict,semantics:result.semantics,errors:result.errors.length,productionEligible:false}));
  if(result.errors.length)process.exitCode=2;
-}else throw new Error('Commands: prepare --unit-size ULTRA --out DIR | bind --setup FILE --log FILE --save FILE --out DIR | ingest --setup FILE --log FILE [--log FILE] --out DIR');
+}else throw new Error('Commands: prepare --unit-size ULTRA --out DIR | diagnose --setup FILE --log FILE --out DIR | bind --setup FILE --log FILE --save FILE --out DIR | ingest --setup FILE --log FILE [--log FILE] --out DIR');

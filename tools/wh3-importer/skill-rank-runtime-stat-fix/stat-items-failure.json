@@ -1,0 +1,257 @@
+{
+  "format": "wh3-campaign-stat-items-failure-v1",
+  "baseline": "4bd04c314e1eb8f16d88d60c64f8dad3fbab0dd9",
+  "source": {
+    "path": "C:/Users/lsh12/OneDrive/Desktop/script_log_051026_1132.txt",
+    "bytes": 330847,
+    "sha256": "658cb1eb33b6ce84e9035958365cc15398e899e68196c02f59ea9341e1d03564",
+    "reference": {
+      "file": "C:/Users/lsh12/OneDrive/Desktop/script_log_051026_1132.txt",
+      "line": 3038,
+      "inputSha256": "658cb1eb33b6ce84e9035958365cc15398e899e68196c02f59ea9341e1d03564"
+    },
+    "captureSha256": "94db293771aa2172380e892b75428224e1080fc6a152b3d42d8d7fdc264b81df",
+    "excerpt": "stat-items-original-capture.jsonl",
+    "excerptSha256": "12fa1a4fc075c62755e252e70b30aa7473e8cd59cebed50b89bd5e4cf6463efc"
+  },
+  "status": "UNAVAILABLE",
+  "error": "exec.lua:133: Exact stat lookup unavailable; inspect units.rows[].detailsAccess/stats",
+  "owner": {
+    "AgentSubtypeRecordContextKey": {
+      "status": "VALUE",
+      "value": "wh_main_brt_lord"
+    },
+    "CQI": {
+      "status": "VALUE",
+      "value": 1065
+    },
+    "CurrentXp": {
+      "status": "VALUE",
+      "value": 99999
+    },
+    "HasUncommitedSkills": {
+      "status": "VALUE",
+      "value": false
+    },
+    "IsPlayerCharacter": {
+      "status": "VALUE",
+      "value": true
+    },
+    "Rank": {
+      "status": "VALUE",
+      "value": 32
+    }
+  },
+  "force": {
+    "CQI": {
+      "status": "VALUE",
+      "value": 949
+    },
+    "CommandingCharacterCQI": {
+      "status": "VALUE",
+      "value": 1065
+    },
+    "IsPreviewingStance": {
+      "status": "VALUE",
+      "value": true
+    },
+    "StanceKey": {
+      "status": "VALUE",
+      "value": "MILITARY_FORCE_ACTIVE_STANCE_TYPE_DEFAULT"
+    }
+  },
+  "units": [
+    {
+      "mainKey": {
+        "status": "VALUE",
+        "value": "wh_main_brt_inf_men_at_arms"
+      },
+      "landKey": {
+        "status": "VALUE",
+        "value": "wh_main_brt_inf_men_at_arms"
+      },
+      "unitId": {
+        "status": "VALUE",
+        "value": "8078"
+      },
+      "detailsAccess": {
+        "query": "UnitDetailsContext.PreBonusUnitDetailsContext",
+        "status": "CONTEXT"
+      },
+      "statScan": {
+        "size": {
+          "status": "VALUE",
+          "value": 7
+        },
+        "status": "DIAGNOSTIC_ONLY"
+      },
+      "directLookup": {
+        "stat_armour": {
+          "Key": {
+            "error": "exec.lua:46: attempt to index upvalue 'ctx' (a nil value)",
+            "status": "UNSUPPORTED"
+          },
+          "Value": {
+            "error": "exec.lua:46: attempt to index upvalue 'ctx' (a nil value)",
+            "status": "UNSUPPORTED"
+          },
+          "access": {
+            "query": "StatContextFromKey(\"stat_armour\")",
+            "status": "NULL"
+          },
+          "query": "CcoCampaignUnit.UnitDetailsContext.PreBonusUnitDetailsContext.StatContextFromKey(\"stat_armour\").Value"
+        },
+        "stat_melee_attack": {
+          "Key": {
+            "error": "exec.lua:46: attempt to index upvalue 'ctx' (a nil value)",
+            "status": "UNSUPPORTED"
+          },
+          "Value": {
+            "error": "exec.lua:46: attempt to index upvalue 'ctx' (a nil value)",
+            "status": "UNSUPPORTED"
+          },
+          "access": {
+            "query": "StatContextFromKey(\"stat_melee_attack\")",
+            "status": "NULL"
+          },
+          "query": "CcoCampaignUnit.UnitDetailsContext.PreBonusUnitDetailsContext.StatContextFromKey(\"stat_melee_attack\").Value"
+        },
+        "stat_melee_defence": {
+          "Key": {
+            "error": "exec.lua:46: attempt to index upvalue 'ctx' (a nil value)",
+            "status": "UNSUPPORTED"
+          },
+          "Value": {
+            "error": "exec.lua:46: attempt to index upvalue 'ctx' (a nil value)",
+            "status": "UNSUPPORTED"
+          },
+          "access": {
+            "query": "StatContextFromKey(\"stat_melee_defence\")",
+            "status": "NULL"
+          },
+          "query": "CcoCampaignUnit.UnitDetailsContext.PreBonusUnitDetailsContext.StatContextFromKey(\"stat_melee_defence\").Value"
+        },
+        "stat_morale": {
+          "Key": {
+            "error": "exec.lua:46: attempt to index upvalue 'ctx' (a nil value)",
+            "status": "UNSUPPORTED"
+          },
+          "Value": {
+            "error": "exec.lua:46: attempt to index upvalue 'ctx' (a nil value)",
+            "status": "UNSUPPORTED"
+          },
+          "access": {
+            "query": "StatContextFromKey(\"stat_morale\")",
+            "status": "NULL"
+          },
+          "query": "CcoCampaignUnit.UnitDetailsContext.PreBonusUnitDetailsContext.StatContextFromKey(\"stat_morale\").Value"
+        }
+      }
+    },
+    {
+      "mainKey": {
+        "status": "VALUE",
+        "value": "wh_dlc07_brt_inf_foot_squires_0"
+      },
+      "landKey": {
+        "status": "VALUE",
+        "value": "wh_dlc07_brt_inf_foot_squires_0"
+      },
+      "unitId": {
+        "status": "VALUE",
+        "value": "8079"
+      },
+      "detailsAccess": {
+        "query": "UnitDetailsContext.PreBonusUnitDetailsContext",
+        "status": "CONTEXT"
+      },
+      "statScan": {
+        "size": {
+          "status": "VALUE",
+          "value": 7
+        },
+        "status": "DIAGNOSTIC_ONLY"
+      },
+      "directLookup": {
+        "stat_armour": {
+          "Key": {
+            "error": "exec.lua:46: attempt to index upvalue 'ctx' (a nil value)",
+            "status": "UNSUPPORTED"
+          },
+          "Value": {
+            "error": "exec.lua:46: attempt to index upvalue 'ctx' (a nil value)",
+            "status": "UNSUPPORTED"
+          },
+          "access": {
+            "query": "StatContextFromKey(\"stat_armour\")",
+            "status": "NULL"
+          },
+          "query": "CcoCampaignUnit.UnitDetailsContext.PreBonusUnitDetailsContext.StatContextFromKey(\"stat_armour\").Value"
+        },
+        "stat_melee_attack": {
+          "Key": {
+            "error": "exec.lua:46: attempt to index upvalue 'ctx' (a nil value)",
+            "status": "UNSUPPORTED"
+          },
+          "Value": {
+            "error": "exec.lua:46: attempt to index upvalue 'ctx' (a nil value)",
+            "status": "UNSUPPORTED"
+          },
+          "access": {
+            "query": "StatContextFromKey(\"stat_melee_attack\")",
+            "status": "NULL"
+          },
+          "query": "CcoCampaignUnit.UnitDetailsContext.PreBonusUnitDetailsContext.StatContextFromKey(\"stat_melee_attack\").Value"
+        },
+        "stat_melee_defence": {
+          "Key": {
+            "error": "exec.lua:46: attempt to index upvalue 'ctx' (a nil value)",
+            "status": "UNSUPPORTED"
+          },
+          "Value": {
+            "error": "exec.lua:46: attempt to index upvalue 'ctx' (a nil value)",
+            "status": "UNSUPPORTED"
+          },
+          "access": {
+            "query": "StatContextFromKey(\"stat_melee_defence\")",
+            "status": "NULL"
+          },
+          "query": "CcoCampaignUnit.UnitDetailsContext.PreBonusUnitDetailsContext.StatContextFromKey(\"stat_melee_defence\").Value"
+        },
+        "stat_morale": {
+          "Key": {
+            "error": "exec.lua:46: attempt to index upvalue 'ctx' (a nil value)",
+            "status": "UNSUPPORTED"
+          },
+          "Value": {
+            "error": "exec.lua:46: attempt to index upvalue 'ctx' (a nil value)",
+            "status": "UNSUPPORTED"
+          },
+          "access": {
+            "query": "StatContextFromKey(\"stat_morale\")",
+            "status": "NULL"
+          },
+          "query": "CcoCampaignUnit.UnitDetailsContext.PreBonusUnitDetailsContext.StatContextFromKey(\"stat_morale\").Value"
+        }
+      }
+    }
+  ],
+  "confirmed": [
+    "Exact preview-free Unit details contexts and their identity fields succeeded for both target Units",
+    "Both StatList.Size calls returned VALUE 7",
+    "All four supplied exact stat key lookup contexts returned NULL for both Units",
+    "Key/Value UNSUPPORTED errors are downstream nil context errors, not observed stat values",
+    "Original frame has no seven item rows; actual item keys/structure/Value paths cannot be recovered from this log",
+    "Force IsPreviewingStance is true: separate existing rank-trial control blocker"
+  ],
+  "retractedHypothesis": "This capture does not support the previous generic StatList access-unavailable hypothesis",
+  "remainingUnknowns": [
+    "Actual StatList.At(0..6) context accessibility/type",
+    "Actual item Key/Value and chained path accessibility",
+    "Why requested keys are absent/invisible or differ from actual list keys"
+  ],
+  "nextStep": "One new same-baseline 0/0 F9 with bounded item diagnostics; no alias map or stat fallback",
+  "semantics": "UNKNOWN",
+  "productionEligible": false,
+  "newAdmission": 0
+}
