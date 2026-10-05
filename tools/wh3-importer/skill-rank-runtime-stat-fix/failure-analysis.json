@@ -1,0 +1,452 @@
+{
+  "format": "wh3-skill-rank-stat-failure-v1",
+  "baseline": "6dd11ee45d0a6aa35681cbe81a511b2066761590",
+  "requestedLog": {
+    "name": "script_log_051026_1047.txt",
+    "status": "NOT_AVAILABLE",
+    "note": "Not found in supplied attachments or current game root; no substitution claimed"
+  },
+  "relatedLog": {
+    "name": "script_log_051026_1045.txt",
+    "path": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/script_log_051026_1045.txt",
+    "sha256": "988ff7b6aa7a373f4c39eb8899ab776aea80bafb19ae9c4fedf57fee0ac6b1d9",
+    "bytes": 793582,
+    "excerpts": "related-runtime-events.jsonl",
+    "excerptSha256": "a2a2e91e50ccb097d467fa97da43bf5637e47881c713c66c56eaf216f18ad908"
+  },
+  "captures": [
+    {
+      "reference": {
+        "file": "script_log_051026_1045.txt",
+        "line": 5856,
+        "inputSha256": "988ff7b6aa7a373f4c39eb8899ab776aea80bafb19ae9c4fedf57fee0ac6b1d9"
+      },
+      "captureSha256": "1dc6a29588fb8052a574710b29f40536d3449ae107758d75723bcde94c05dbab",
+      "captureId": "d8f08067-22be-4d6e-8f78-cef8cbe37217:table: 00000000C08D2938:1791164800:374.43801879883:1",
+      "status": "UNAVAILABLE",
+      "error": "exec.lua:113: Stat list incomplete",
+      "owner": {
+        "AgentSubtypeRecordContextKey": {
+          "status": "VALUE",
+          "value": "wh_main_brt_lord"
+        },
+        "CQI": {
+          "status": "VALUE",
+          "value": 1065
+        },
+        "CurrentXp": {
+          "status": "VALUE",
+          "value": 99999
+        },
+        "HasUncommitedSkills": {
+          "status": "VALUE",
+          "value": false
+        },
+        "IsPlayerCharacter": {
+          "status": "VALUE",
+          "value": true
+        },
+        "Rank": {
+          "status": "VALUE",
+          "value": 32
+        }
+      },
+      "ranks": [
+        {
+          "skillKey": "wh2_dlc11_skill_brt_army_buff_low_born_militia",
+          "level": {
+            "status": "VALUE",
+            "value": 0
+          }
+        },
+        {
+          "skillKey": "wh2_dlc11_skill_brt_army_buff_worshippers_of_the_grail",
+          "level": {
+            "status": "VALUE",
+            "value": 0
+          }
+        }
+      ],
+      "roster": {
+        "rows": [
+          {
+            "Key": {
+              "status": "VALUE",
+              "value": "8083"
+            },
+            "MainKey": {
+              "status": "VALUE",
+              "value": "wh_main_brt_cha_lord_2"
+            }
+          },
+          {
+            "Key": {
+              "status": "VALUE",
+              "value": "8078"
+            },
+            "MainKey": {
+              "status": "VALUE",
+              "value": "wh_main_brt_inf_men_at_arms"
+            }
+          },
+          {
+            "Key": {
+              "status": "VALUE",
+              "value": "8079"
+            },
+            "MainKey": {
+              "status": "VALUE",
+              "value": "wh_dlc07_brt_inf_foot_squires_0"
+            }
+          }
+        ],
+        "status": "COMPLETE"
+      },
+      "selectionScan": {
+        "rows": [],
+        "status": "COMPLETE"
+      },
+      "unitDetailsRetained": false,
+      "statObservationStatus": "NOT_OBSERVED"
+    },
+    {
+      "reference": {
+        "file": "script_log_051026_1045.txt",
+        "line": 5905,
+        "inputSha256": "988ff7b6aa7a373f4c39eb8899ab776aea80bafb19ae9c4fedf57fee0ac6b1d9"
+      },
+      "captureSha256": "edbd89f1c21c72bc1c833c3b47c8900c7aa10ca1549b32ca9de0dac84a577803",
+      "captureId": "d8f08067-22be-4d6e-8f78-cef8cbe37217:table: 00000000C08D2938:1791164800:374.43801879883:2",
+      "status": "UNAVAILABLE",
+      "error": "exec.lua:113: Stat list incomplete",
+      "owner": {
+        "AgentSubtypeRecordContextKey": {
+          "status": "VALUE",
+          "value": "wh_main_brt_lord"
+        },
+        "CQI": {
+          "status": "VALUE",
+          "value": 1065
+        },
+        "CurrentXp": {
+          "status": "VALUE",
+          "value": 99999
+        },
+        "HasUncommitedSkills": {
+          "status": "VALUE",
+          "value": false
+        },
+        "IsPlayerCharacter": {
+          "status": "VALUE",
+          "value": true
+        },
+        "Rank": {
+          "status": "VALUE",
+          "value": 32
+        }
+      },
+      "ranks": [
+        {
+          "skillKey": "wh2_dlc11_skill_brt_army_buff_low_born_militia",
+          "level": {
+            "status": "VALUE",
+            "value": 1
+          }
+        },
+        {
+          "skillKey": "wh2_dlc11_skill_brt_army_buff_worshippers_of_the_grail",
+          "level": {
+            "status": "VALUE",
+            "value": 0
+          }
+        }
+      ],
+      "roster": {
+        "rows": [
+          {
+            "Key": {
+              "status": "VALUE",
+              "value": "8083"
+            },
+            "MainKey": {
+              "status": "VALUE",
+              "value": "wh_main_brt_cha_lord_2"
+            }
+          },
+          {
+            "Key": {
+              "status": "VALUE",
+              "value": "8078"
+            },
+            "MainKey": {
+              "status": "VALUE",
+              "value": "wh_main_brt_inf_men_at_arms"
+            }
+          },
+          {
+            "Key": {
+              "status": "VALUE",
+              "value": "8079"
+            },
+            "MainKey": {
+              "status": "VALUE",
+              "value": "wh_dlc07_brt_inf_foot_squires_0"
+            }
+          }
+        ],
+        "status": "COMPLETE"
+      },
+      "selectionScan": {
+        "rows": [],
+        "status": "COMPLETE"
+      },
+      "unitDetailsRetained": false,
+      "statObservationStatus": "NOT_OBSERVED"
+    },
+    {
+      "reference": {
+        "file": "script_log_051026_1045.txt",
+        "line": 5954,
+        "inputSha256": "988ff7b6aa7a373f4c39eb8899ab776aea80bafb19ae9c4fedf57fee0ac6b1d9"
+      },
+      "captureSha256": "b328607f715e112d0c01cb62d0ba759ce51a255d896285c73293a1bdb9be225a",
+      "captureId": "d8f08067-22be-4d6e-8f78-cef8cbe37217:table: 00000000C08D2938:1791164800:374.43801879883:3",
+      "status": "UNAVAILABLE",
+      "error": "exec.lua:113: Stat list incomplete",
+      "owner": {
+        "AgentSubtypeRecordContextKey": {
+          "status": "VALUE",
+          "value": "wh_main_brt_lord"
+        },
+        "CQI": {
+          "status": "VALUE",
+          "value": 1065
+        },
+        "CurrentXp": {
+          "status": "VALUE",
+          "value": 99999
+        },
+        "HasUncommitedSkills": {
+          "status": "VALUE",
+          "value": false
+        },
+        "IsPlayerCharacter": {
+          "status": "VALUE",
+          "value": true
+        },
+        "Rank": {
+          "status": "VALUE",
+          "value": 32
+        }
+      },
+      "ranks": [
+        {
+          "skillKey": "wh2_dlc11_skill_brt_army_buff_low_born_militia",
+          "level": {
+            "status": "VALUE",
+            "value": 2
+          }
+        },
+        {
+          "skillKey": "wh2_dlc11_skill_brt_army_buff_worshippers_of_the_grail",
+          "level": {
+            "status": "VALUE",
+            "value": 0
+          }
+        }
+      ],
+      "roster": {
+        "rows": [
+          {
+            "Key": {
+              "status": "VALUE",
+              "value": "8083"
+            },
+            "MainKey": {
+              "status": "VALUE",
+              "value": "wh_main_brt_cha_lord_2"
+            }
+          },
+          {
+            "Key": {
+              "status": "VALUE",
+              "value": "8078"
+            },
+            "MainKey": {
+              "status": "VALUE",
+              "value": "wh_main_brt_inf_men_at_arms"
+            }
+          },
+          {
+            "Key": {
+              "status": "VALUE",
+              "value": "8079"
+            },
+            "MainKey": {
+              "status": "VALUE",
+              "value": "wh_dlc07_brt_inf_foot_squires_0"
+            }
+          }
+        ],
+        "status": "COMPLETE"
+      },
+      "selectionScan": {
+        "rows": [],
+        "status": "COMPLETE"
+      },
+      "unitDetailsRetained": false,
+      "statObservationStatus": "NOT_OBSERVED"
+    },
+    {
+      "reference": {
+        "file": "script_log_051026_1045.txt",
+        "line": 6003,
+        "inputSha256": "988ff7b6aa7a373f4c39eb8899ab776aea80bafb19ae9c4fedf57fee0ac6b1d9"
+      },
+      "captureSha256": "f44a941f0756f23b1e6a418298cd7716f9740fdd77cb1bbb2781c6639f4c30c3",
+      "captureId": "d8f08067-22be-4d6e-8f78-cef8cbe37217:table: 00000000C08D2938:1791164800:374.43801879883:4",
+      "status": "UNAVAILABLE",
+      "error": "exec.lua:113: Stat list incomplete",
+      "owner": {
+        "AgentSubtypeRecordContextKey": {
+          "status": "VALUE",
+          "value": "wh_main_brt_lord"
+        },
+        "CQI": {
+          "status": "VALUE",
+          "value": 1065
+        },
+        "CurrentXp": {
+          "status": "VALUE",
+          "value": 99999
+        },
+        "HasUncommitedSkills": {
+          "status": "VALUE",
+          "value": false
+        },
+        "IsPlayerCharacter": {
+          "status": "VALUE",
+          "value": true
+        },
+        "Rank": {
+          "status": "VALUE",
+          "value": 32
+        }
+      },
+      "ranks": [
+        {
+          "skillKey": "wh2_dlc11_skill_brt_army_buff_low_born_militia",
+          "level": {
+            "status": "VALUE",
+            "value": 3
+          }
+        },
+        {
+          "skillKey": "wh2_dlc11_skill_brt_army_buff_worshippers_of_the_grail",
+          "level": {
+            "status": "VALUE",
+            "value": 0
+          }
+        }
+      ],
+      "roster": {
+        "rows": [
+          {
+            "Key": {
+              "status": "VALUE",
+              "value": "8083"
+            },
+            "MainKey": {
+              "status": "VALUE",
+              "value": "wh_main_brt_cha_lord_2"
+            }
+          },
+          {
+            "Key": {
+              "status": "VALUE",
+              "value": "8078"
+            },
+            "MainKey": {
+              "status": "VALUE",
+              "value": "wh_main_brt_inf_men_at_arms"
+            }
+          },
+          {
+            "Key": {
+              "status": "VALUE",
+              "value": "8079"
+            },
+            "MainKey": {
+              "status": "VALUE",
+              "value": "wh_dlc07_brt_inf_foot_squires_0"
+            }
+          }
+        ],
+        "status": "COMPLETE"
+      },
+      "selectionScan": {
+        "rows": [],
+        "status": "COMPLETE"
+      },
+      "unitDetailsRetained": false,
+      "statObservationStatus": "NOT_OBSERVED"
+    }
+  ],
+  "confirmed": [
+    "Owner and both exact Skill rows/army roster captured before failure",
+    "selectionScan.rows=[] follows callback behavior, not failed selection",
+    "Exception prevents assignment to f.units and erases StatList diagnostics"
+  ],
+  "hypothesis": {
+    "status": "NOT_RUNTIME_PROVEN",
+    "reason": "ExpressionState-dependent UnitDetailsContext/StatList queried outside UI evaluation state; original log cannot identify failing subexpression"
+  },
+  "resolution": {
+    "semantics": "UNKNOWN",
+    "productionEligible": false,
+    "newAdmission": 0,
+    "correctedProbeRuntime": "NOT_OBSERVED"
+  },
+  "documentation": {
+    "url": "https://chadvandy.github.io/tw_modding_resources/WH3/cco/documentation.html",
+    "cachedSha256": "e4d1601a6e98a9c07345495f41bc935672318e4705c0cdb5f4a4d8975d96d4cf",
+    "signatures": [
+      {
+        "context": "CcoCampaignUnit",
+        "method": "UnitDetailsContext",
+        "returns": "CcoUnitDetails",
+        "arguments": "ExpressionState"
+      },
+      {
+        "context": "CcoUnitDetails",
+        "method": "PreBonusUnitDetailsContext",
+        "returns": "CcoUnitDetails",
+        "arguments": "Void"
+      },
+      {
+        "context": "CcoUnitDetails",
+        "method": "StatList",
+        "returns": "CcoUnitStat (list)",
+        "arguments": "ExpressionState"
+      },
+      {
+        "context": "CcoUnitDetails",
+        "method": "StatContextFromKey",
+        "returns": "CcoUnitStat",
+        "arguments": "String"
+      },
+      {
+        "context": "CcoUnitStat",
+        "method": "Key",
+        "returns": "String",
+        "arguments": "Void"
+      },
+      {
+        "context": "CcoUnitStat",
+        "method": "Value",
+        "returns": "Float",
+        "arguments": "Void"
+      }
+    ]
+  }
+}

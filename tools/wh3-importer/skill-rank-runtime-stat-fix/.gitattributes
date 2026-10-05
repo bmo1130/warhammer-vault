@@ -1,0 +1,2 @@
+# Keep the original captured probe lines byte-for-byte, including CRLF.
+related-runtime-events.jsonl -text -whitespace
