@@ -2,6 +2,11 @@
 
 Total War: Warhammer III 개인 위키의 첫 버전입니다. 원본 게임 데이터와 개인 기록을 분리했습니다.
 
+Android 320~430px 위키 MVP의 사용법, GitHub Pages 배포, 실제 데이터 수량,
+PC 데이터 투입 명령과 다음 F9 USER ACTION은 [MOBILE_MVP.md](docs/MOBILE_MVP.md)에 정리했습니다.
+`npm run data:status`로 상태와 다음 명령, `npm run check:data`로 기존 evidence replay를 확인합니다.
+이번 작업의 로컬 commit은 push되지 않았으므로 외부 폰 URL은 사용자의 Pages 설정·push 후 활성화됩니다.
+
 ## 실행
 
 ```bash
@@ -142,7 +147,7 @@ ID, 이름, `factionId`, 설명과 출처 메타데이터는 최상위에 유지
 
 총 무기 피해, 총 직격·폭발 피해, 사격 위력, 현재 장전 시간은 저장 필드가 아닙니다. `getTotalDamage` / `getMeleeWeaponDamage`는 기본 피해와 관통 피해가 모두 확인되었을 때만 합계를 반환하며, 하나라도 없으면 `undefined`를 반환합니다. `getMissileDirectDamage`와 `getExplosionDamage`는 직격과 폭발을 분리합니다. 대형·보병 보너스는 조건부이므로 합계에 넣지 않습니다. 장전 공식과 DPS 계산은 구현하지 않았습니다.
 
-기존 `UnitStats`는 제거했으며 미래 `Modifier.stat`은 `melee.meleeAttack`, `entities.totalHealth` 등 원본 숫자 필드의 경로인 `UnitStatPath`를 참조합니다. 실제 modifier 적용 시스템은 아직 없습니다. 개인 기록은 유닛 ID로 연결되므로 유닛 JSON 구조 변경에 따른 IndexedDB나 백업 구조 변경은 없습니다.
+기존 `UnitStats`는 제거했으며 미래 `Modifier.stat`은 `melee.meleeAttack`, `entities.totalHealth` 등 원본 숫자 필드의 경로인 `UnitStatPath`를 참조합니다. Modifier 적용은 위의 최소 계산 엔진과 검토된 CA projection을 사용합니다. 개인 기록은 유닛 ID로 연결되므로 유닛 JSON 구조 변경에 따른 IndexedDB나 백업 구조 변경은 없습니다.
 
 ## 검증
 
@@ -229,7 +234,7 @@ npm run extract:wh3-unit -- bloodthirster --game-path 'YOUR_WH3_INSTALLATION_ROO
 
 팩션, 군주, 유닛 검색과 상세 조회, 개인 서술 및 메모의 생성·수정·삭제, 즐겨찾기, 최근 본 항목, JSON 백업·복원을 지원합니다. 게임 원본 데이터는 UI에서 수정할 수 없습니다.
 
-세이브 파싱, 계산기, 비교기, 모드 오버라이드 편집, 동기화, APK는 아직 구현하지 않았습니다. 향후 계산기는 `Modifier` 타입을 바탕으로 별도 계산 모듈을 만들고 `gameRepository`가 제공하는 기본 스탯과 선택한 캠페인·모드 문맥을 입력으로 받도록 확장할 수 있습니다.
+유닛 비교와 수동 Modifier/검토된 CA Research·Skill 계산기를 지원합니다. 세이브 파싱, 모드 오버라이드 편집, 동기화, APK는 아직 구현하지 않았습니다. 미검증 캠페인 조건과 rank 의미론은 자동 계산하지 않습니다.
 
 [ULTRA HP admission](tools/wh3-importer/hp-policy/HP_POLICY.md)은 exact main/land 및 snapshot, 모든 record의 ULTRA/DECLARED_SETUP, VALUE HealthMax/NumEntitiesInitial을 검증합니다. 현재 direct runtime 10종과 [명시적으로 승인된 동일 HP-chain profile 3종](tools/wh3-importer/hp-policy/STATIC_DERIVED_HP.md)의 totalHealth를 채웠으며, 나머지 Production 88개는 공석입니다. Static-derived provenance는 `STATIC_DERIVED_HP`로 구분하며 Spearmen (Shields), Battle Pilgrims, Blessed Field Trebuchets에만 허용합니다. Component list 개수는 HP multiplier로 쓰지 않으며 기존 MEDIUM evidence/속도/다른 스탯은 유지합니다. `node scripts/promote-ultra-hp.mjs --check`로 원본 log/static source hash → exact identity/profile → 별도 review → 명시적 admission → Production/projection equality를 clean checkout에서 재현합니다. 기존 static promotion commands는 승인된 HP overlay만 분리해 원래 static gates를 확인하고 보존합니다.
 

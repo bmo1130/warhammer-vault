@@ -7,6 +7,16 @@
     <meta name="description" content="Total War: Warhammer III 개인 위키와 전술 메모" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>전쟁 서고 · WH3 개인 위키</title>
+    <script>
+      var route = new URLSearchParams(location.search).get('__vault_route');
+      if (route !== null) {
+        var base = '%BASE_URL%';
+        var restored = new URL(base + route, location.origin);
+        if (restored.origin === location.origin && restored.pathname.startsWith(base)) {
+          history.replaceState(null, '', restored.pathname + restored.search + restored.hash);
+        }
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>

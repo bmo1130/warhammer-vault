@@ -5,3 +5,5 @@ dist/
 .test-build/
 tools/wh3-importer/.local/
 generated/wh3/
+generated/mobile-*
+generated/serve-pages-smoke.mjs

@@ -1,0 +1,18 @@
+import { readFileSync } from 'node:fs';
+const json = path => JSON.parse(readFileSync(new URL('../' + path, import.meta.url)));
+const units = json('src/data/units.json'), production = units.filter(u => u.gameVersion !== 'sample');
+const research = json('src/data/caResearchEffect.json');
+const skills = ['caSkillEffect', 'caSkillBatch01', 'caSkillBatch02'].map(name => json(`src/data/${name}.json`));
+const coverage = json('tools/wh3-importer/skill-production-bretonnia/coverage.json');
+console.log(`Production ${production.length} / Sample ${units.length - production.length}`);
+console.log(`HP ${production.filter(u => u.entities.totalHealth !== undefined).length}/${production.length}; Speed ${production.filter(u => u.movement.speed !== undefined).length}/${production.length}`);
+console.log(`Research ${research.technologies.length} technologies / ${research.effects.length} effects / ${research.modifiers.length} modifiers / ${research.targets.length} exact targets`);
+console.log(`Skill ${skills.length} admitted; scan ${coverage.totalSkills} Skills / ${coverage.totalSkillRanks} ranks / ${coverage.totalEffectJunctions} junctions`);
+for (const skill of skills) console.log(`  ${skill.name} (Rank 1, ${skill.owner.name}) → ${skill.targets.map(t => production.find(u => u.id === t.unitId)?.name ?? t.unitId).join(', ')}`);
+console.log('\nRead-only verification: npm run check:data; npm test; npm run build; npm run check:pages');
+console.log('Extraction needs local WH3/RPFM and the reviewed snapshot:');
+console.log('  Unit: npm run extract:wh3-unit -- grail-knights --game-path YOUR_WH3_ROOT');
+console.log('  Research: node scripts/extract-bretonnia-research-scan.mjs --game-path YOUR_WH3_ROOT');
+console.log('  Skill: set WH3_GAME_PATH, then node scripts/extract-skill-production-bretonnia.mjs');
+console.log('No automatic admission. Exact next steps: docs/MOBILE_MVP.md');
+console.log('USER ACTION: stance-preview 5-state F9 diagnostic first; rank trial remains blocked/UNKNOWN.');

@@ -9,5 +9,6 @@
     "rootDir": ".",
     "outDir": ".test-build"
   },
-  "include": ["src", "tests/fixtures"]
+  "include": ["src", "tests/fixtures"],
+  "exclude": ["src/main.tsx"]
 }

@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>전쟁 서고로 이동</title></head>
+<body><p>전쟁 서고를 여는 중… <a href="/warhammer-vault/">홈으로 이동</a></p>
+<script>
+// Pages serves this for deep routes. Carry the complete route through a
+// same-origin root URL; index.html restores it before BrowserRouter mounts.
+var base = '/warhammer-vault/';
+if (location.pathname.startsWith(base)) {
+  var route = location.pathname.slice(base.length) + location.search + location.hash;
+  location.replace(base + '?__vault_route=' + encodeURIComponent(route));
+}
+</script></body></html>

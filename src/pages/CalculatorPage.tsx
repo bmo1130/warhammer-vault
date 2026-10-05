@@ -87,6 +87,7 @@ export default function CalculatorPage() {
   return <>
     <PageIntro eyebrow="MODIFIER CALCULATOR" title="스탯 계산기" description="수동 Modifier와 검토된 WH3 연구·캐릭터 스킬을 선택해 기본값과 계산 결과를 확인하세요."/>
     <ProductionUnitSelector label="계산할 유닛" id={unitId} onSelect={selectUnit} disabled={busy}/>
+    {unit && <p className="data-note" role="status">이 유닛에 승인된 Research {availableResearch.length}개 · Skill {availableSkills.length}개. 검증된 exact 유닛/버전의 효과만 선택할 수 있습니다. 0개는 적용 근거가 없다는 뜻이며, 원본 데이터의 공석은 —로 유지합니다.</p>}
     {availableResearch.length > 0 && <section className="panel calculator-research section" aria-label="WH3 Research">
       <h2>WH3 Research</h2>
       <p className="data-note">선택한 exact 유닛에 검토된 숫자 효과만 표시합니다. 소유한 브레토니아 팩션에서 연구를 완료한 조건이며, 선택은 Profile에 저장되지 않습니다.</p>

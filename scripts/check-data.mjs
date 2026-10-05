@@ -1,0 +1,22 @@
+import { spawnSync } from 'node:child_process';
+import { prepareEvidenceView } from './evidence-view.mjs';
+const cwd = prepareEvidenceView();
+const commands = [
+  ['scripts/review-production-growth.mjs', '--check'], ['scripts/promote-production-growth.mjs', '--check'],
+  ['scripts/promote-ultra-hp.mjs', '--check'], ['scripts/promote-static-speed.mjs', '--check'],
+  ['scripts/review-bretonnia-research.mjs', '--check'], ['scripts/classify-bretonnia-research.mjs'],
+  ['scripts/scan-bretonnia-research.mjs'], ['scripts/review-research-mappings.mjs'],
+  ['scripts/review-research-scopes.mjs'], ['scripts/admit-bretonnia-research.mjs'],
+  ['scripts/review-skill-production-bretonnia.mjs'], ['scripts/review-skill-slice-01.mjs'],
+  ['scripts/review-skill-batch-01.mjs'], ['scripts/review-skill-batch-02.mjs'],
+  ['scripts/review-skill-rank-runtime-resolution.mjs'],
+  ['tools/wh3-importer/skill-rank-runtime-parent-stats/replay.mjs'],
+  ['tools/wh3-importer/skill-stance-preview-research/replay.mjs'],
+];
+for (const args of commands) {
+  const result = spawnSync(process.execPath, args, { cwd, encoding: 'utf8', maxBuffer: 16 * 1024 * 1024 });
+  if (result.error) throw result.error;
+  if (result.status !== 0) { process.stdout.write(result.stdout); process.stderr.write(result.stderr); process.exit(result.status ?? 1); }
+  console.log(`PASS node ${args.join(' ')}`);
+}
+console.log(`PASS ${commands.length} deterministic replays; current protected data equal to replay inputs.`);

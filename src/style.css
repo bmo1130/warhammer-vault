@@ -80,3 +80,22 @@
 .research-entry { margin-block: 1rem; overflow-wrap: anywhere; }
 .research-entry label { display: flex; align-items: baseline; gap: .4rem; }
 .research-entry input { flex: 0 0 auto; }
+/* Mobile wiki: readable inputs, large controls, bounded panels and keyboard space. */
+#my-record{scroll-margin-top:20px}.draft-status{font-size:12px;line-height:1.7;color:#d8c08f;margin:0}
+.note-card strong,.note-card p{overflow-wrap:anywhere;max-width:100%}
+.detail-actions{display:flex;flex-wrap:wrap;gap:9px;align-items:center;flex:none}
+@media(max-width:680px){
+  input,textarea,select,.search-box input,.editor input,.editor textarea,.calculator-profile input,.calculator-profile select,.calculator-row input,.calculator-row select{font-size:16px}
+  .search-box input{min-height:44px}.top-link,.brand,.text-button,.section-head a{min-height:44px}
+  .breadcrumbs{flex-wrap:wrap;white-space:normal;overflow:visible;gap:4px 8px}.breadcrumbs a{display:inline-flex;align-items:center;min-height:44px;overflow-wrap:anywhere}
+  .section-head{flex-wrap:wrap}.editor{padding:16px;gap:16px}.editor-actions{padding-block:8px;scroll-margin-bottom:95px}
+  .editor textarea,.editor input{scroll-margin-block:80px 110px}.editor-actions .button{flex:1 1 auto}
+  .research-entry label{min-height:44px;align-items:center;flex-wrap:wrap;line-height:1.6}
+  .research-entry input[type=checkbox]{width:24px;height:24px;margin:10px 5px;accent-color:#d2b783}
+  .research-entry select{min-height:44px;max-width:100%;padding:8px;color:#ecefe5;background:#192119;border:1px solid #586355;border-radius:5px}
+  .research-entry summary,.production-source summary,.diagnostic-provenance summary,.calculator-table summary{min-height:44px;padding-block:12px}
+  .comparison-scroll{position:relative}.comparison-table thead th{position:sticky;top:0}
+  .info-card>div{flex-wrap:wrap;padding-block:12px}.info-card strong,.info-card a{overflow-wrap:anywhere;max-width:100%}
+  .setting-card{padding:20px}.archive-links{gap:10px}.main{padding-bottom:calc(125px + env(safe-area-inset-bottom))}
+}
+.confirm-action{border:1px solid #8b615d;border-radius:6px;padding:14px;background:#302824}.confirm-action p{font-size:13px;line-height:1.7;margin-bottom:10px;overflow-wrap:anywhere}
