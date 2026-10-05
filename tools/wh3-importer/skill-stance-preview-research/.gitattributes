@@ -1,0 +1,5 @@
+*.mjs text eol=lf
+*.lua text eol=lf
+.gitattributes text eol=lf
+# Whole runtime log bytes, including CRLF, are historical evidence.
+evidence/*.txt -text -whitespace

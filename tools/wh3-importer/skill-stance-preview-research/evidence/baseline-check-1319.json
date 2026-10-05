@@ -1,0 +1,108 @@
+{
+  "format": "wh3-parent-stats-baseline-check-v1",
+  "status": "CANONICAL_COMPLETE_CONTROL_BLOCKED",
+  "canonicalStatus": "COMPLETE",
+  "trialReady": false,
+  "errors": [],
+  "trialBlockers": [
+    "Stance preview\n\ntrue !== false\n"
+  ],
+  "captureSha256": "30512b4658374d1221dca91bf6a16876253d4282fefd96341bdb114e1fbfcdeb",
+  "reference": {
+    "file": "script_log_051026_1319.txt",
+    "line": 3163,
+    "inputSha256": "3d3779c7430074113c37eadc2775e49fabc38123f4e691523d5207e8eacbf0a8"
+  },
+  "semantics": "UNKNOWN",
+  "productionEligible": false,
+  "stats": [
+    {
+      "unitMainKey": "wh_main_brt_inf_men_at_arms",
+      "key": "stat_morale",
+      "value": {
+        "status": "VALUE",
+        "value": 52
+      },
+      "query": "CcoCampaignUnit.UnitDetailsContext.PreBonusUnitDetailsContext.StatList.At(1).Value",
+      "keyQuery": "CcoCampaignUnit.UnitDetailsContext.PreBonusUnitDetailsContext.StatList.At(1).Key",
+      "rowIndex": 1
+    },
+    {
+      "unitMainKey": "wh_main_brt_inf_men_at_arms",
+      "key": "stat_melee_defence",
+      "value": {
+        "status": "VALUE",
+        "value": 40
+      },
+      "query": "CcoCampaignUnit.UnitDetailsContext.PreBonusUnitDetailsContext.StatList.At(4).Value",
+      "keyQuery": "CcoCampaignUnit.UnitDetailsContext.PreBonusUnitDetailsContext.StatList.At(4).Key",
+      "rowIndex": 4
+    },
+    {
+      "unitMainKey": "wh_main_brt_inf_men_at_arms",
+      "key": "stat_armour",
+      "value": {
+        "status": "VALUE",
+        "value": 30
+      },
+      "query": "CcoCampaignUnit.UnitDetailsContext.PreBonusUnitDetailsContext.StatList.At(0).Value",
+      "keyQuery": "CcoCampaignUnit.UnitDetailsContext.PreBonusUnitDetailsContext.StatList.At(0).Key",
+      "rowIndex": 0
+    },
+    {
+      "unitMainKey": "wh_main_brt_inf_men_at_arms",
+      "key": "stat_melee_attack",
+      "value": {
+        "status": "VALUE",
+        "value": 22
+      },
+      "query": "CcoCampaignUnit.UnitDetailsContext.PreBonusUnitDetailsContext.StatList.At(3).Value",
+      "keyQuery": "CcoCampaignUnit.UnitDetailsContext.PreBonusUnitDetailsContext.StatList.At(3).Key",
+      "rowIndex": 3
+    },
+    {
+      "unitMainKey": "wh_dlc07_brt_inf_foot_squires_0",
+      "key": "stat_morale",
+      "value": {
+        "status": "VALUE",
+        "value": 72
+      },
+      "query": "CcoCampaignUnit.UnitDetailsContext.PreBonusUnitDetailsContext.StatList.At(1).Value",
+      "keyQuery": "CcoCampaignUnit.UnitDetailsContext.PreBonusUnitDetailsContext.StatList.At(1).Key",
+      "rowIndex": 1
+    },
+    {
+      "unitMainKey": "wh_dlc07_brt_inf_foot_squires_0",
+      "key": "stat_melee_defence",
+      "value": {
+        "status": "VALUE",
+        "value": 26
+      },
+      "query": "CcoCampaignUnit.UnitDetailsContext.PreBonusUnitDetailsContext.StatList.At(4).Value",
+      "keyQuery": "CcoCampaignUnit.UnitDetailsContext.PreBonusUnitDetailsContext.StatList.At(4).Key",
+      "rowIndex": 4
+    },
+    {
+      "unitMainKey": "wh_dlc07_brt_inf_foot_squires_0",
+      "key": "stat_armour",
+      "value": {
+        "status": "VALUE",
+        "value": 70
+      },
+      "query": "CcoCampaignUnit.UnitDetailsContext.PreBonusUnitDetailsContext.StatList.At(0).Value",
+      "keyQuery": "CcoCampaignUnit.UnitDetailsContext.PreBonusUnitDetailsContext.StatList.At(0).Key",
+      "rowIndex": 0
+    },
+    {
+      "unitMainKey": "wh_dlc07_brt_inf_foot_squires_0",
+      "key": "stat_melee_attack",
+      "value": {
+        "status": "VALUE",
+        "value": 28
+      },
+      "query": "CcoCampaignUnit.UnitDetailsContext.PreBonusUnitDetailsContext.StatList.At(3).Value",
+      "keyQuery": "CcoCampaignUnit.UnitDetailsContext.PreBonusUnitDetailsContext.StatList.At(3).Key",
+      "rowIndex": 3
+    }
+  ]
+}

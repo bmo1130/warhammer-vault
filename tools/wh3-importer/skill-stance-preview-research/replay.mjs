@@ -1,0 +1,18 @@
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {sha,baseline} from './check.mjs';
+import {buildProbe,PREFIX} from './probe.mjs';
+import {checkBaseline,inspectFrame} from '../skill-rank-runtime-parent-stats/probe.mjs';
+const root=new URL('../../../',import.meta.url),dir=new URL('./',import.meta.url),json=p=>JSON.parse(readFileSync(new URL(p,dir)));
+const manifest=json('manifest.json'),source=json('source.json');
+for(const [p,h] of Object.entries(manifest.files))assert.equal(sha(readFileSync(new URL(p,root))),h,`Historical file changed: ${p}`);
+for(const [p,h] of Object.entries(manifest.evidenceFiles))assert.equal(sha(readFileSync(new URL(p,dir))),h,`Evidence changed: ${p}`);
+const b=baseline(),bytes=readFileSync(new URL(source.evidence.file,dir));assert.equal(bytes.length,source.evidence.bytes);assert.equal(sha(bytes),source.evidence.sha256);
+assert.equal(b.captureSha256,source.evidence.captureSha256);assert.equal(b.reference.line,source.evidence.captureLine);
+const setup=json('evidence/setup-1319.json'),original=json('evidence/baseline-check-1319.json');
+assert.deepEqual(checkBaseline(b,setup),original);assert.equal(original.canonicalStatus,'COMPLETE');assert.deepEqual(original.errors,[]);
+assert.equal(original.trialReady,false);assert.equal(original.trialBlockers.length,1);assert.match(original.trialBlockers[0],/Stance preview/);
+assert.throws(()=>inspectFrame(b,setup),/Stance preview/);assert.equal(b.frame.force.IsPreviewingStance.value,true);assert.equal(b.frame.force.StanceKey.value,source.evidence.observedStanceKey);
+assert.equal(source.flagMeaning,'UNKNOWN');assert.equal(source.multiRankSemantics,'UNKNOWN');assert.equal(source.newDiagnosticRuntime,'NOT_OBSERVED');assert.equal(source.gateDecision,'KEEP_EXISTING_FALSE_GATE');assert.equal(source.productionEligible,false);
+assert(buildProbe().includes(PREFIX));assert(!buildProbe().includes('WH3_SKILL_RANK_PROBE|'));
+console.log(JSON.stringify({status:'PASS',preservedFiles:Object.keys(manifest.files).length,historicalCanonical:'COMPLETE',historicalTrialReady:false,gate:'UNCHANGED',flagMeaning:'UNKNOWN',newDiagnosticRuntime:'NOT_OBSERVED',admission:0},null,2));

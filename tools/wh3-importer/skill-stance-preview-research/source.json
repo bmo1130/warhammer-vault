@@ -1,0 +1,86 @@
+{
+  "format": "wh3-stance-preview-source-audit-v1",
+  "baselineCommit": "5657c86fb75c0b3ec49564861c84a07f5fcc9a6f",
+  "observedGameVersion": "9.0.2.0",
+  "researchDate": "2026-10-05",
+  "evidence": {
+    "file": "evidence/script_log_051026_1319.txt",
+    "bytes": 351027,
+    "sha256": "3d3779c7430074113c37eadc2775e49fabc38123f4e691523d5207e8eacbf0a8",
+    "captureLine": 3163,
+    "captureSha256": "30512b4658374d1221dca91bf6a16876253d4282fefd96341bdb114e1fbfcdeb",
+    "originalChecker": "evidence/baseline-check-1319.json",
+    "originalSetup": "evidence/setup-1319.json",
+    "canonicalStatus": "COMPLETE",
+    "errors": [],
+    "trialReady": false,
+    "onlyBlocker": "Stance preview: true !== false",
+    "ownerCQI": 1065,
+    "forceCQI": 949,
+    "ownerSubtype": "wh_main_brt_lord",
+    "observedFlag": {"status": "VALUE", "value": true},
+    "observedStanceKey": "MILITARY_FORCE_ACTIVE_STANCE_TYPE_DEFAULT",
+    "flagQuery": "CcoCampaignCharacter.MilitaryForceContext -> materialized CcoCampaignMilitaryForce.IsPreviewingStance",
+    "uiState": {"source": "USER_REPORT", "stancePanelClosed": true, "selectedLordOnCampaignMap": true, "apiVerified": false}
+  },
+  "documentation": [
+    {
+      "url": "https://chadvandy.github.io/tw_modding_resources/WH3/cco/documentation.html",
+      "provenance": "CA-generated CCO API documentation hosted on a community mirror; runtime version parity is not established",
+      "localCache": "tools/wh3-importer/.local/cco-probe/documentation.html",
+      "localCacheSha256": "e4d1601a6e98a9c07345495f41bc935672318e4705c0cdb5f4a4d8975d96d4cf",
+      "class": "CcoCampaignMilitaryForce",
+      "method": "IsPreviewingStance",
+      "returnType": "Bool",
+      "arguments": "Void",
+      "descriptionQuote": "Returns true if this force is currently previewing an alternative stance (mousing over a stance choice for example)",
+      "relatedReadOnlyMethods": [
+        {"class": "CcoCampaignMilitaryForce", "method": "ActiveStanceContext", "returnType": "CcoCampaignMilitaryForceStance", "meaning": "Selected stance context; not explicitly identified as the committed model stance"},
+        {"class": "CcoCampaignMilitaryForce", "method": "IsSelected", "returnType": "Bool"},
+        {"class": "CcoCampaignMilitaryForce", "method": "StancePreviewPercentCost", "returnType": "Float", "unit": "AP fraction 0..1"},
+        {"class": "CcoCampaignMilitaryForce", "method": "CanSwitchToPreviewStance", "returnType": "Bool"},
+        {"class": "CcoCampaignCharacter", "method": "IsSelected", "returnType": "Bool"},
+        {"class": "CcoCampaignCharacter", "method": "IsPreviewingMove", "returnType": "Bool", "meaning": "Right-button movement preview"},
+        {"class": "CcoCampaignCharacter", "method": "ActionPointPreviewPercent", "returnType": "Float", "unit": "AP fraction 0..1"},
+        {"class": "CcoCampaignCharacter", "method": "ActionPointPercent", "returnType": "Float", "unit": "AP fraction 0..1"},
+        {"class": "CcoCampaignCharacter", "method": "IsDetailsOnly", "returnType": "Bool", "meaning": "No live character pointer"},
+        {"class": "CcoCampaignCharacter", "method": "IsOnMap", "returnType": "Bool"}
+      ],
+      "stanceContextLimitation": "CcoCampaignMilitaryForceStance methods have Void placeholders and empty descriptions; they cannot establish preview semantics. EnablePreview/DisablePreview/Activate are not invoked."
+    },
+    {
+      "url": "https://chadvandy.github.io/tw_modding_resources/WH3/campaign/campaign_manager.html#function:campaign_manager:get_military_force_by_cqi",
+      "method": "cm:get_military_force_by_cqi(number)",
+      "meaning": "Lookup the campaign model force by CQI, or return false if absent"
+    },
+    {
+      "url": "https://chadvandy.github.io/tw_modding_resources/WH3/scripting_doc.html#MILITARY_FORCE_SCRIPT_INTERFACE",
+      "methods": [
+        {"method": "is_null_interface()", "returnType": "Bool"},
+        {"method": "command_queue_index()", "returnType": "Int"},
+        {"method": "active_stance()", "returnType": "String", "meaning": "Active campaign force stance"},
+        {"method": "general_character()", "returnType": "CHARACTER_SCRIPT_INTERFACE"}
+      ]
+    },
+    {
+      "url": "https://chadvandy.github.io/tw_modding_resources/WH3/scripting_doc.html#CHARACTER_SCRIPT_INTERFACE",
+      "method": "action_points_remaining_percent()",
+      "returnType": "Int",
+      "unit": "Percentage, kept independently from CCO fractions"
+    }
+  ],
+  "internalEngineImplementationAvailable": false,
+  "hypotheses": [
+    "UI preview remains latched despite panel closure",
+    "Selection or details context changes flag evaluation",
+    "Context materialization and parent scalar routes differ",
+    "9.0.2 runtime semantics differ from documentation"
+  ],
+  "hypothesesProven": [],
+  "newDiagnosticRuntime": "NOT_OBSERVED",
+  "flagMeaning": "UNKNOWN",
+  "gateDecision": "KEEP_EXISTING_FALSE_GATE",
+  "multiRankSemantics": "UNKNOWN",
+  "productionEligible": false,
+  "newAdmission": 0
+}
