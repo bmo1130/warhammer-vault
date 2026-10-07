@@ -5,6 +5,7 @@ import { unitLocalisation } from '../repositories/unitLocalisation';
 import { unitAttributeAdmission } from '../repositories/unitAttributes';
 import { getUnitAttributeLabel, getUnitPassiveAbilityLabel } from '../domain/unitLabels';
 import { unitPassiveAdmission } from '../repositories/unitPassives';
+import { unitEntityAdmission } from '../repositories/unitEntities';
 
 // Read stored fields only; the optional total uses the existing approved sum.
 export default function UnitProductionDetails({ unit }: { unit: Unit }) {
@@ -12,6 +13,7 @@ export default function UnitProductionDetails({ unit }: { unit: Unit }) {
   const localisation = unitLocalisation(unit);
   const attributes = unitAttributeAdmission(unit);
   const passives = unitPassiveAdmission(unit);
+  const entities = unitEntityAdmission(unit);
   const damage = [
     ['기본 피해', unit.melee.damage.base], ['관통 피해', unit.melee.damage.armorPiercing],
     ['총 무기 피해', total], ['대형 보너스', unit.melee.damage.bonusVsLarge],
@@ -31,6 +33,15 @@ export default function UnitProductionDetails({ unit }: { unit: Unit }) {
     ['관통 저항 예산 (resistance budget)', missile?.projectile.penetration?.resistanceBudget],
   ] as const).filter(([, value]) => value !== undefined);
   return <>
+    <section className="section">
+      <SectionTitle title="개체 수 · 생명력"/>
+      <div className="stats-card">
+        <div className="stat"><span>전투 개체 수{entities ? ' (Ultra)' : ''}</span><strong>{unit.entities.count ?? '미확인'}</strong></div>
+        <div className="stat"><span>부대 총 생명력{entities ? ' (Ultra)' : ''}</span><strong>{unit.entities.totalHealth ?? '미확인'}</strong></div>
+        <div className="stat"><span>개체당 생명력</span><strong>{unit.entities.healthPerEntity ?? '미확인'}</strong></div>
+      </div>
+      {entities && <p className="data-note">Ultra 기준 기본값입니다. 개체 수는 전투 개체를 세며 포병 승무원이나 탑승자를 별도로 더하지 않습니다. 총 생명력을 개체 수로 나눈 값은 개체당 생명력으로 확정하지 않습니다.</p>}
+    </section>
     <section className="section">
       <SectionTitle title="특성"/>
       {unit.attributes?.length ? <ul>{unit.attributes.map(id => <li key={id}>{getUnitAttributeLabel(id)}</li>)}</ul>
@@ -67,6 +78,7 @@ export default function UnitProductionDetails({ unit }: { unit: Unit }) {
           {!!unit.passiveAbilities?.length && <p>능력 식별자: {unit.passiveAbilities.join(', ')}</p>}
           {!!passives.rawKeys.length && <p>원본 CA ability key: {passives.rawKeys.join(', ')}</p>}
         </>}
+        {entities && <p>개체 수·총 HP: Ultra · {entities.kind === 'DIRECT_ULTRA_RUNTIME' ? '기본 전투 원본 측정' : '기존 검증된 동일 profile'} · {entities.reviewReference} · {entities.references.join(', ')} · source SHA256 {entities.sourceHash}</p>}
         <p>미입력은 미확인입니다. 개체 수·HP·속도·저항 변환·모집 조건 등 미확인 값은 생략했습니다. 사격 자료가 없다는 사실만으로 사격 불가능을 확정하지 않습니다.</p>
       </div>
     </details>

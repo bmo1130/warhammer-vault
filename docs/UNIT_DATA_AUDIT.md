@@ -6,6 +6,9 @@
 이어진 [지속 능력 admission](UNIT_PASSIVE_ADMISSION.md)은 목록 1,105 / UNKNOWN 5,
 실제 능력 보유 832 / 확인된 빈 목록 273, COMPLETE 1,046 / PARTIAL 64입니다.
 audit 명령은 해당 passive projection도 현재 coverage에 반영합니다.
+이후 [Ultra entity count + HP admission](UNIT_ENTITY_HP_ADMISSION.md)은 개체 수 0 → 13 /
+UNKNOWN 1,110 → 1,097, HP 13 → 13 / UNKNOWN 1,097을 검증했습니다.
+나머지 raw 값은 count·HP 의미와 스케일 미확정으로 보류하며, audit 명령은 해당 count overlay도 반영합니다.
 
 감사 기준: 2026-10-07, 작업 시작 commit `52d4a40`의 실제 코드/JSON/CA trace.
 과거 README나 coverage 보고서의 숫자를 현재값으로 사용하지 않았다.

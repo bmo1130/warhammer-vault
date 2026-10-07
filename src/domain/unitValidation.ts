@@ -29,7 +29,7 @@ export function validateUnits(units: readonly Unit[], factionIds: Iterable<strin
       unit.factionIds.forEach(id => { if (!factions.has(id)) issue('factionIds', '존재하지 않는 팩션입니다.'); });
     }
     const count = unit.entities.count;
-    if (count !== undefined && (!Number.isInteger(count) || count <= 0)) issue('entities.count', '확인된 개체 수는 양의 정수여야 합니다.');
+    if (count !== undefined && (!Number.isSafeInteger(count) || count <= 0)) issue('entities.count', '확인된 개체 수는 양의 정수여야 합니다.');
     if (unit.entities.unitScale !== undefined && !['small', 'large'].includes(unit.entities.unitScale)) issue('entities.unitScale', '지원하지 않는 부대 규모입니다.');
     size('entities.entitySize', unit.entities.entitySize);
     size('melee.splash.maxTargetSize', unit.melee.splash?.maxTargetSize);

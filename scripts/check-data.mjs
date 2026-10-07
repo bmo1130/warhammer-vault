@@ -1,5 +1,8 @@
 import { spawnSync } from 'node:child_process';
 import { prepareEvidenceView } from './evidence-view.mjs';
+const entities = spawnSync(process.execPath, ['scripts/promote-unit-entities.mjs', '--check'], {stdio:'inherit'});
+if (entities.error) throw entities.error;
+if (entities.status !== 0) process.exit(entities.status ?? 1);
 const passives = spawnSync(process.execPath, ['scripts/promote-unit-passives.mjs', '--check'], {stdio:'inherit'});
 if (passives.error) throw passives.error;
 if (passives.status !== 0) process.exit(passives.status ?? 1);

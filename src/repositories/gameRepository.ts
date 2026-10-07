@@ -9,13 +9,14 @@ import type { EntityType, Faction, Lord, Hero, Unit } from '../domain/types';
 import { localiseUnit, originalUnitName } from './unitLocalisation';
 import { applyUnitAttributes } from './unitAttributes';
 import { applyUnitPassives } from './unitPassives';
+import { applyUnitEntities } from './unitEntities';
 
 const factions: Faction[] = factionsJson;
 const lords: Lord[] = lordsJson as Lord[];
 const heroes: Hero[] = heroesJson as Hero[];
 // JSON imports widen enum strings. The promotion gate and dataset tests run the
 // actual Unit validator; this assertion only restores the declared enum types.
-const units: Unit[] = (unitsJson as Unit[]).map(localiseUnit).map(applyUnitAttributes).map(applyUnitPassives);
+const units: Unit[] = (unitsJson as Unit[]).map(localiseUnit).map(applyUnitAttributes).map(applyUnitPassives).map(applyUnitEntities);
 
 const factionById = new Map(factions.map((item) => [item.id, item]));
 const lordById = new Map(lords.map((item) => [item.id, item]));

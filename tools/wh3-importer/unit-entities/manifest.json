@@ -1,0 +1,123 @@
+{
+  "format": "reviewed-ultra-unit-entities-scope-v1",
+  "baselineCommit": "464e844",
+  "unitSize": "ULTRA",
+  "unitsHash": "1484a2f8fd9cc39999d9a178a75c074d8a660f0548898742433b5fe19ab760bb",
+  "scopeHash": "901b5208c10794b2f34710ae18bc961b4ed300ed19fc9def2e5f1702108bd9e2",
+  "inputs": [
+    {
+      "file": "tools/wh3-importer/hp-policy/manifest.json",
+      "sha256": "2cd6086727dbc289e6db776da58498129ea7e2637ffccb8872ddf3a1a46a980d"
+    },
+    {
+      "file": "tools/wh3-importer/hp-policy/review.json",
+      "sha256": "4b094f4fb9ee1898674c68b686eafec22c15545808aa128283d5c62942b8f833"
+    },
+    {
+      "file": "tools/wh3-importer/hp-policy/static-manifest.json",
+      "sha256": "8823829b5a4e0e2159edc0d9afe7aaa3935bd0a414861c7a87168cef361acd67"
+    },
+    {
+      "file": "tools/wh3-importer/hp-policy/static-review.json",
+      "sha256": "2a717a9d31c2c1fc2e62fa75bc8d5574a7289cb708efa8dcd415a8d14e361a55"
+    },
+    {
+      "file": "tools/wh3-importer/hp-research/report.json",
+      "sha256": "cde3a364aee6b4ca0bcad74cfb83ff4c9509f06e98a181614abd111a7a8cbfa3"
+    },
+    {
+      "file": "tools/wh3-importer/hp-research/black-coach.json",
+      "sha256": "04ce4b633989d260851579ffc5de0358457343739cda534d0a00c4ac1c3b57af"
+    },
+    {
+      "file": "src/data/unitHpAdmissions.json",
+      "sha256": "2d4e0e79e755086170358325427bfa6d6395f2d6162ba250f83b0404b21a17bd"
+    },
+    {
+      "file": "tools/wh3-importer/faction-rosters/source.json",
+      "sha256": "09634a670e40600b6f051a1cff88ec187ca4f0853b82ac70d85bf60367632d4d"
+    }
+  ],
+  "samples": [
+    {
+      "id": "ca_unit_wh_main_emp_inf_swordsmen",
+      "category": "INFANTRY"
+    },
+    {
+      "id": "ca_unit_wh_main_brt_cav_mounted_yeomen_0",
+      "category": "CAVALRY"
+    },
+    {
+      "id": "ca_unit_wh_dlc01_chs_mon_dragon_ogre",
+      "category": "MONSTROUS_INFANTRY"
+    },
+    {
+      "id": "ca_unit_wh2_dlc13_lzd_mon_dread_saurian_1",
+      "category": "SINGLE_MONSTER_WITH_CREW"
+    },
+    {
+      "id": "ca_unit_wh2_dlc09_tmb_veh_skeleton_chariot_0",
+      "category": "CHARIOT"
+    },
+    {
+      "id": "ca_unit_wh_main_brt_art_field_trebuchet",
+      "category": "ARTILLERY"
+    },
+    {
+      "id": "ca_unit_wh2_dlc09_tmb_art_screaming_skull_catapult_0",
+      "category": "ARTILLERY"
+    },
+    {
+      "id": "ca_unit_wh2_main_skv_art_plagueclaw_catapult",
+      "category": "ARTILLERY"
+    },
+    {
+      "id": "ca_unit_wh2_dlc12_skv_veh_doom_flayer_0",
+      "category": "WAR_MACHINE"
+    },
+    {
+      "id": "ca_unit_wh_main_vmp_veh_black_coach",
+      "category": "ARTICULATED_VEHICLE"
+    },
+    {
+      "id": "ca_unit_wh_main_emp_inf_spearmen_1",
+      "category": "INFANTRY"
+    },
+    {
+      "id": "ca_unit_wh_dlc07_brt_inf_battle_pilgrims_0",
+      "category": "INFANTRY"
+    },
+    {
+      "id": "ca_unit_wh_dlc07_brt_art_blessed_field_trebuchet_0",
+      "category": "ARTILLERY"
+    },
+    {
+      "id": "ca_unit_wh_dlc06_chs_inf_aspiring_champions_0",
+      "category": "ELITE_LOW_COUNT_INFANTRY"
+    },
+    {
+      "id": "ca_unit_wh_main_brt_cav_pegasus_knights",
+      "category": "FLYING_MOUNTED"
+    },
+    {
+      "id": "ca_unit_wh3_main_nur_inf_nurglings_0",
+      "category": "SWARM"
+    },
+    {
+      "id": "ca_unit_wh_main_emp_veh_steam_tank",
+      "category": "WAR_MACHINE_UNMEASURED"
+    }
+  ],
+  "characters": [
+    {
+      "category": "LORD",
+      "id": "ca_lord_wh_main_emp_karl_franz",
+      "mainKey": "wh_main_emp_cha_karl_franz_0"
+    },
+    {
+      "category": "HERO",
+      "id": "ca_hero_wh_main_emp_captain",
+      "mainKey": "wh_main_emp_cha_captain_0"
+    }
+  ]
+}

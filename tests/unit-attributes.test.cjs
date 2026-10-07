@@ -1,3 +1,4 @@
+const {withoutUnitEntities}=require('../.test-build/src/repositories/unitEntities.js');
 const {test}=require('node:test');
 const assert=require('node:assert/strict');
 const {readFileSync}=require('node:fs');
@@ -30,7 +31,7 @@ test('attribute collections promote with exact provenance; all other Unit fields
   assert.equal(review.summary.rawKeys,58);assert.equal(review.summary.groups,1038);assert.equal(review.summary.junctions,3249);
   for(const baseline of raw){
     const current=game.getUnit(baseline.id);
-    assert.deepEqual(withoutUnitPassives(withoutUnitAttributes(withoutUnitLocalisation(current))),baseline,baseline.id);
+    assert.deepEqual(withoutUnitEntities(withoutUnitPassives(withoutUnitAttributes(withoutUnitLocalisation(current)))),baseline,baseline.id);
     if(baseline.gameVersion==='sample'){assert.deepEqual(current,baseline);continue;}
     assert(/[가-힣]/.test(current.name));
     const admission=review.admissions.find(a=>a.id===current.id);

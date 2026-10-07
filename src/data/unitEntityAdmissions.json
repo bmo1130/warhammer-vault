@@ -1,0 +1,218 @@
+{
+  "format": "reviewed-ultra-unit-entity-admissions-v1",
+  "gameVersion": "9.0.2.0",
+  "unitSize": "ULTRA",
+  "sourceHash": "8dad54ef389e7ea4eaf759b36c263cbd935c75576b6bba243b5f8277e03fa358",
+  "admissions": [
+    {
+      "id": "ca_unit_wh_main_emp_inf_swordsmen",
+      "mainKey": "wh_main_emp_inf_swordsmen",
+      "landKey": "wh_main_emp_inf_swordsmen",
+      "staticSnapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+      "count": 120,
+      "totalHealth": 8280,
+      "originalCount": null,
+      "kind": "DIRECT_ULTRA_RUNTIME",
+      "status": "COMPLETE",
+      "unitSizeSource": "DECLARED_SETUP",
+      "reviewReference": "tools/wh3-importer/hp-policy/review.json",
+      "references": [
+        "inputs/script_log_021026_1931.txt:83"
+      ]
+    },
+    {
+      "id": "ca_unit_wh_main_brt_cav_mounted_yeomen_0",
+      "mainKey": "wh_main_brt_cav_mounted_yeomen_0",
+      "landKey": "wh_main_brt_cav_mounted_yeomen_0",
+      "staticSnapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+      "count": 60,
+      "totalHealth": 5520,
+      "originalCount": null,
+      "kind": "DIRECT_ULTRA_RUNTIME",
+      "status": "COMPLETE",
+      "unitSizeSource": "DECLARED_SETUP",
+      "reviewReference": "tools/wh3-importer/hp-policy/review.json",
+      "references": [
+        "inputs/script_log_021026_1937.txt:83"
+      ]
+    },
+    {
+      "id": "ca_unit_wh_dlc01_chs_mon_dragon_ogre",
+      "mainKey": "wh_dlc01_chs_mon_dragon_ogre",
+      "landKey": "wh_dlc01_chs_mon_dragon_ogre",
+      "staticSnapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+      "count": 16,
+      "totalHealth": 9856,
+      "originalCount": null,
+      "kind": "DIRECT_ULTRA_RUNTIME",
+      "status": "COMPLETE",
+      "unitSizeSource": "DECLARED_SETUP",
+      "reviewReference": "tools/wh3-importer/hp-policy/review.json",
+      "references": [
+        "inputs/script_log_021026_1942.txt:103",
+        "inputs/script_log_021026_1942.txt:151"
+      ]
+    },
+    {
+      "id": "ca_unit_wh2_dlc13_lzd_mon_dread_saurian_1",
+      "mainKey": "wh2_dlc13_lzd_mon_dread_saurian_1",
+      "landKey": "wh2_dlc13_lzd_mon_dread_saurian_1",
+      "staticSnapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+      "count": 1,
+      "totalHealth": 15088,
+      "originalCount": null,
+      "kind": "DIRECT_ULTRA_RUNTIME",
+      "status": "COMPLETE",
+      "unitSizeSource": "DECLARED_SETUP",
+      "reviewReference": "tools/wh3-importer/hp-policy/review.json",
+      "references": [
+        "inputs/dread-saurian-ultra.log:13"
+      ]
+    },
+    {
+      "id": "ca_unit_wh2_dlc09_tmb_veh_skeleton_chariot_0",
+      "mainKey": "wh2_dlc09_tmb_veh_skeleton_chariot_0",
+      "landKey": "wh2_dlc09_tmb_veh_skeleton_chariot_0",
+      "staticSnapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+      "count": 12,
+      "totalHealth": 7032,
+      "originalCount": null,
+      "kind": "DIRECT_ULTRA_RUNTIME",
+      "status": "COMPLETE",
+      "unitSizeSource": "DECLARED_SETUP",
+      "reviewReference": "tools/wh3-importer/hp-policy/review.json",
+      "references": [
+        "inputs/skeleton-chariots-ultra.log:93"
+      ]
+    },
+    {
+      "id": "ca_unit_wh_main_brt_art_field_trebuchet",
+      "mainKey": "wh_main_brt_art_field_trebuchet",
+      "landKey": "wh_main_brt_art_field_trebuchet",
+      "staticSnapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+      "count": 4,
+      "totalHealth": 4512,
+      "originalCount": null,
+      "kind": "DIRECT_ULTRA_RUNTIME",
+      "status": "COMPLETE",
+      "unitSizeSource": "DECLARED_SETUP",
+      "reviewReference": "tools/wh3-importer/hp-policy/review.json",
+      "references": [
+        "inputs/script_log_031026_1244.txt:83"
+      ]
+    },
+    {
+      "id": "ca_unit_wh2_dlc09_tmb_art_screaming_skull_catapult_0",
+      "mainKey": "wh2_dlc09_tmb_art_screaming_skull_catapult_0",
+      "landKey": "wh2_dlc09_tmb_art_screaming_skull_catapult_0",
+      "staticSnapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+      "count": 4,
+      "totalHealth": 4356,
+      "originalCount": null,
+      "kind": "DIRECT_ULTRA_RUNTIME",
+      "status": "COMPLETE",
+      "unitSizeSource": "DECLARED_SETUP",
+      "reviewReference": "tools/wh3-importer/hp-policy/review.json",
+      "references": [
+        "inputs/script_log_031026_1246.txt:88"
+      ]
+    },
+    {
+      "id": "ca_unit_wh2_main_skv_art_plagueclaw_catapult",
+      "mainKey": "wh2_main_skv_art_plagueclaw_catapult",
+      "landKey": "wh2_main_skv_art_plagueclaw_catapult",
+      "staticSnapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+      "count": 4,
+      "totalHealth": 5028,
+      "originalCount": null,
+      "kind": "DIRECT_ULTRA_RUNTIME",
+      "status": "COMPLETE",
+      "unitSizeSource": "DECLARED_SETUP",
+      "reviewReference": "tools/wh3-importer/hp-policy/review.json",
+      "references": [
+        "inputs/script_log_031026_1248.txt:83"
+      ]
+    },
+    {
+      "id": "ca_unit_wh2_dlc12_skv_veh_doom_flayer_0",
+      "mainKey": "wh2_dlc12_skv_veh_doom_flayer_0",
+      "landKey": "wh2_dlc12_skv_veh_doom_flayer_0",
+      "staticSnapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+      "count": 8,
+      "totalHealth": 6128,
+      "originalCount": null,
+      "kind": "DIRECT_ULTRA_RUNTIME",
+      "status": "COMPLETE",
+      "unitSizeSource": "DECLARED_SETUP",
+      "reviewReference": "tools/wh3-importer/hp-policy/review.json",
+      "references": [
+        "inputs/script_log_031026_1251.txt:83"
+      ]
+    },
+    {
+      "id": "ca_unit_wh_main_vmp_veh_black_coach",
+      "mainKey": "wh_main_vmp_veh_black_coach",
+      "landKey": "wh_main_vmp_veh_black_coach",
+      "staticSnapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+      "count": 1,
+      "totalHealth": 5980,
+      "originalCount": null,
+      "kind": "DIRECT_ULTRA_RUNTIME",
+      "status": "COMPLETE",
+      "unitSizeSource": "DECLARED_SETUP",
+      "reviewReference": "tools/wh3-importer/hp-policy/review.json",
+      "references": [
+        "inputs/script_log_031026_1359.txt:88",
+        "inputs/script_log_031026_1359.txt:102"
+      ]
+    },
+    {
+      "id": "ca_unit_wh_main_emp_inf_spearmen_1",
+      "mainKey": "wh_main_emp_inf_spearmen_1",
+      "landKey": "wh_main_emp_inf_spearmen_1",
+      "staticSnapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+      "count": 120,
+      "totalHealth": 8280,
+      "originalCount": null,
+      "kind": "RUNTIME_VALIDATED_EXACT_PROFILE",
+      "status": "COMPLETE",
+      "unitSizeSource": "RUNTIME_VALIDATED_EXACT_PROFILE",
+      "reviewReference": "tools/wh3-importer/hp-policy/static-review.json",
+      "references": [
+        "inputs/script_log_021026_1931.txt:83"
+      ]
+    },
+    {
+      "id": "ca_unit_wh_dlc07_brt_inf_battle_pilgrims_0",
+      "mainKey": "wh_dlc07_brt_inf_battle_pilgrims_0",
+      "landKey": "wh_dlc07_brt_inf_battle_pilgrims_0",
+      "staticSnapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+      "count": 120,
+      "totalHealth": 8280,
+      "originalCount": null,
+      "kind": "RUNTIME_VALIDATED_EXACT_PROFILE",
+      "status": "COMPLETE",
+      "unitSizeSource": "RUNTIME_VALIDATED_EXACT_PROFILE",
+      "reviewReference": "tools/wh3-importer/hp-policy/static-review.json",
+      "references": [
+        "inputs/script_log_021026_1931.txt:83"
+      ]
+    },
+    {
+      "id": "ca_unit_wh_dlc07_brt_art_blessed_field_trebuchet_0",
+      "mainKey": "wh_dlc07_brt_art_blessed_field_trebuchet_0",
+      "landKey": "wh_dlc07_brt_art_blessed_field_trebuchet_0",
+      "staticSnapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+      "count": 4,
+      "totalHealth": 4512,
+      "originalCount": null,
+      "kind": "RUNTIME_VALIDATED_EXACT_PROFILE",
+      "status": "COMPLETE",
+      "unitSizeSource": "RUNTIME_VALIDATED_EXACT_PROFILE",
+      "reviewReference": "tools/wh3-importer/hp-policy/static-review.json",
+      "references": [
+        "inputs/script_log_031026_1244.txt:83"
+      ]
+    }
+  ]
+}
