@@ -13,6 +13,7 @@ import { pathFor } from '../domain/entities';
 import type { UnitStatPath } from '../domain/unit';
 import ProductionUnitSelector from '../components/ProductionUnitSelector';
 import PageIntro from '../components/PageIntro';
+import { gameRepository } from '../repositories/gameRepository';
 
 const display = (value?: number) => formatComparisonValue(value === undefined ? undefined : Number(value.toFixed(6)));
 const signed = (value: number) => `${value >= 0 ? '+' : ''}${display(value)}`;
@@ -105,7 +106,7 @@ export default function CalculatorPage() {
       <h2>Character Skills</h2>
       {availableSkills.map(skill => <div className="research-entry" key={skill.skillKey}>
         <h3>{skill.name}</h3>
-        <p className="data-note">Owner: {skill.owner.name} · Legendary Lord<br/>{skill.owner.key}<br/>이 exact 군주가 본인 군대를 지휘하는 조건입니다. 선택은 Profile에 저장되지 않습니다.</p>
+        <p className="data-note">군주: {gameRepository.getLordBySubtype(skill.owner.key)?.name ?? skill.owner.name} · 전설 군주<br/>{skill.owner.key}<br/>이 exact 군주가 본인 군대를 지휘하는 조건입니다. 선택은 Profile에 저장되지 않습니다.</p>
         <label>{skill.name} Rank <select value={skillRank} disabled={busy} onChange={event => setSkillRank(Number(event.target.value))}><option value={0}>0 · 비활성</option>{skill.ranks.map(r=><option value={r.rank} key={r.rank}>{`${r.rank} · 활성`}</option>)}</select></label>
         <p className="data-note">{skill.ranks[0].effects.map(e => `${modifierStatLabels[e.stat as UnitStatPath]} ${signed(e.value)}${e.operation === 'multiply' ? '%' : ''}`).join(' · ')}</p>
         <details><summary>{skill.name} · CA_SKILL · read-only</summary><p className="data-note">{skill.skillKey}<br/>Rank 1 · 단일 level의 exact 값 (누적 없음)<br/>Scope: forcewide_when_commanding · own force<br/>WH3 {skill.gameVersion}<br/>Source SHA256: {skill.provenance.sourceSha256}<br/>Snapshot: {skill.provenance.snapshotId}</p>

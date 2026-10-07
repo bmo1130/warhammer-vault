@@ -247,6 +247,8 @@ npm run extract:wh3-unit -- bloodthirster --game-path 'YOUR_WH3_INSTALLATION_ROO
 
 ## 현재 범위
 
+팩션 24개, 군주 284개, 영웅 210개와 기존 저장 경로용 캐릭터 3개의 이름을 CA `local_kr.pack` exact Loc로 표시합니다. 한국어·기존 영어 검색과 canonical/alias ID를 유지합니다. 유닛 검색은 공통 SearchBox의 composition draft로 한글/CJK IME를 지원합니다. 출처·coverage·검증은 [팩션·캐릭터 이름 및 IME 보고서](docs/ARCHIVE_LOCALISATION_IME.md), 재현은 `node scripts/promote-archive-localisation.mjs --check`를 참고하세요.
+
 원본값의 의미 조사와 다음 정규화 단계의 제한은 [SEMANTICS.md](tools/wh3-importer/SEMANTICS.md)에 정리했습니다. 보병·단발 사격·추가 다발 포병 표본과 UI 통계·경험·캠페인 효과 경로를 실제 CA pack에서 확인했으며, 미확인 공식은 조사 가설로만 보관합니다. 이 파일과 기계 판독용 findings는 앱 데이터에 반영하지 않습니다. Normalizer의 gate가 findings의 조사 상태와 검토된 게임 버전을 읽으며, 승인된 파생 공식은 아직 없습니다.
 
 보수적 normalizer의 구조·출처·생략 정책과 재현 명령은 [NORMALIZATION.md](tools/wh3-importer/NORMALIZATION.md)에 정리했습니다. `npm run normalize:wh3-unit -- grail-knights` (또는 `helstorm`, `bloodthirster`)는 `generated/wh3/normalized/`에 result JSON과 비교 요약을 생성합니다. 실제 앱의 `src/data/units.json`은 유지하며, 수동 참고값은 결과 비교에만 사용합니다. 기본 테스트 62개와 실제 CA 통합 테스트 4개가 통과했습니다.

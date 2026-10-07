@@ -151,7 +151,7 @@ test('saved target rows resolve production and diagnostics by ID, and preserve s
     assert(html.includes(entry.name.replaceAll('&','&amp;').replaceAll("'",'&#x27;').replaceAll('"','&quot;')) && html.includes(`href="${entry.route}"`));
     if (entry.kind === 'diagnostic-only') assert(html.includes('Diagnostic-only'));
   }
-  assert.equal(resolveSavedTargetName({ entityType: 'faction', entityId: 'vampire_counts' }), '뱀파이어 카운트');
+  assert.equal(resolveSavedTargetName({ entityType: 'faction', entityId: 'vampire_counts' }), '뱀파이어 백작');
   assert(resolveSavedTargetName({ entityType: 'lord', entityId: 'heinrich_kemmler' }));
   for (const stale of [target('past_unit_id'), { entityType: 'hero', entityId: 'old_hero' }, target('<script>stale</script>')]) {
     assert.equal(resolveSavedTargetName(stale), undefined);

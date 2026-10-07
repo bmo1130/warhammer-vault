@@ -10,6 +10,17 @@ export const unitsHash='871daf7a4aeeef0c941908e6509dac68158a3f2842d25ab4b333651a
 // No name matching, suffix heuristics, machine translation or pack precedence.
 // Every reference must have exactly one raw row; ambiguity stays HOLD.
 export function resolveUnitLoc(rows,key,stack=[]) {
+  const resolved=resolveKoreanText(rows,key,stack,resolveUnitLoc),text=resolved.text;
+  assert(text.trim(),'EMPTY_LOC');
+  assert(!text.includes('{{')&&!text.includes('[[')&&!/[\r\n]/.test(text),'UNRESOLVED_OR_NON_NAME_MARKUP');
+  assert(/[가-힣]/.test(text),'NO_KOREAN_TEXT');
+  return resolved;
+}
+
+// Shared exact Korean Loc dependency resolver. Name-part records may be empty
+// or contain Roman numerals; the final assembled display name is validated by
+// its admission, while Unit's existing whole-name rules remain unchanged.
+export function resolveKoreanText(rows,key,stack=[],resolveChild=resolveKoreanText) {
   assert(!stack.includes(key),`CYCLIC_LOC: ${key}`);
   const matches=rows.filter(r=>r.table==='Loc'&&r.row.key===key);
   assert.equal(matches.length,1,`MISSING_OR_AMBIGUOUS_LOC: ${key}`);
@@ -17,11 +28,9 @@ export function resolveUnitLoc(rows,key,stack=[]) {
   assert.equal(r.key.key,key,'Loc row key drift');
   assert.equal(r.sourcePack,'local_kr.pack','Wrong Loc language pack');
   assert.equal(r.id,`kr:${r.path}:${key}`,'Loc source pointer drift');
-  assert(typeof r.row.text==='string'&&r.row.text.trim(),'EMPTY_LOC');
+  assert(typeof r.row.text==='string','INVALID_LOC_TEXT');
   const sourceRowIds=[r.id];
-  const text=r.row.text.replace(/\{\{tr:([^}]+)\}\}/g,(_,child)=>{const v=resolveUnitLoc(rows,child,[...stack,key]);sourceRowIds.push(...v.sourceRowIds);return v.text;});
-  assert(!text.includes('{{')&&!text.includes('[[')&&!/[\r\n]/.test(text),'UNRESOLVED_OR_NON_NAME_MARKUP');
-  assert(/[가-힣]/.test(text),'NO_KOREAN_TEXT');
+  const text=r.row.text.replace(/\{\{tr:([^}]+)\}\}/g,(_,child)=>{const v=resolveChild(rows,child,[...stack,key]);sourceRowIds.push(...v.sourceRowIds);return v.text;});
   return {text,sourceRowIds:[...new Set(sourceRowIds)]};
 }
 

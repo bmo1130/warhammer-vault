@@ -87,7 +87,8 @@ test('production subtype identities preserve legacy wiki IDs and shared membersh
  for(const [type,collection]of [['lord',lords],['hero',heroes]])for(const c of collection){
   assert(!c.source.includes('sample'));assert(c.name&&c.mainKey&&c.landKey&&c.characterKind&&c.subtypeKey);
   assert(searchArchive(c.subtypeKey).some(e=>e.id===c.id&&e.type===type));
-  assert.equal(resolveSavedTargetName({entityType:type,entityId:c.id}),c.name);
+  assert.equal(resolveSavedTargetName({entityType:type,entityId:c.id}),game.getEntityName(type,c.id));
+  assert(searchArchive(c.name).some(e=>e.id===c.id&&e.type===type));
   const html=render(`/${type==='hero'?'heroes':'lords'}/${c.id}`);
   for(const text of ['내 기록으로','내 기록','즐겨찾기 추가'])assert(html.includes(text),c.id);
  }
@@ -104,7 +105,7 @@ test('Hero personal article, bookmark, recent view and v1 backup use existing ge
  await wiki.saveArticle(target,content);await wiki.setBookmark(target,true);await wiki.recordView(target);
  const backup=await wiki.exportBackup();global.indexedDB=memoryIndexedDb();await wiki.importBackup(parseBackup(backup));
  assert.equal((await wiki.getArticle(target)).evaluation,content.evaluation);assert.equal(await wiki.hasBookmark(target),true);
- assert.equal(resolveSavedTargetName((await wiki.listRecent())[0]),hero.name);
+ assert.equal(resolveSavedTargetName((await wiki.listRecent())[0]),game.getHero(hero.id).name);
  await wiki.saveArticle(target,{...content,evaluation:'수정 확인'});assert.equal((await wiki.getArticle(target)).evaluation,'수정 확인');
  await wiki.setBookmark(target,false);assert.equal(await wiki.hasBookmark(target),false);
 });

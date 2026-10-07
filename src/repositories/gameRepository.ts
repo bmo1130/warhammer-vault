@@ -10,10 +10,11 @@ import { localiseUnit, originalUnitName } from './unitLocalisation';
 import { applyUnitAttributes } from './unitAttributes';
 import { applyUnitPassives } from './unitPassives';
 import { applyUnitEntities } from './unitEntities';
+import { localiseArchiveName, archiveSearchNames } from './archiveLocalisation';
 
-const factions: Faction[] = factionsJson;
-const lords: Lord[] = lordsJson as Lord[];
-const heroes: Hero[] = heroesJson as Hero[];
+const factions: Faction[] = factionsJson.map(f => localiseArchiveName(f,'faction'));
+const lords: Lord[] = (lordsJson as Lord[]).map(c => localiseArchiveName(c,'lord'));
+const heroes: Hero[] = (heroesJson as Hero[]).map(c => localiseArchiveName(c,'hero'));
 // JSON imports widen enum strings. The promotion gate and dataset tests run the
 // actual Unit validator; this assertion only restores the declared enum types.
 const units: Unit[] = (unitsJson as Unit[]).map(localiseUnit).map(applyUnitAttributes).map(applyUnitPassives).map(applyUnitEntities);
@@ -22,8 +23,9 @@ const factionById = new Map(factions.map((item) => [item.id, item]));
 const lordById = new Map(lords.map((item) => [item.id, item]));
 const heroById = new Map(heroes.map((item) => [item.id, item]));
 const unitById = new Map(units.map((item) => [item.id, item]));
-const legacyLords = new Map((legacyCharacters.filter(c => c.entityType === 'lord') as unknown as Lord[]).map(c => [c.id, c]));
-const legacyHeroes = new Map((legacyCharacters.filter(c => c.entityType === 'hero') as unknown as Hero[]).map(c => [c.id, c]));
+const legacyLords = new Map((legacyCharacters.filter(c => c.entityType === 'lord') as unknown as Lord[]).map(c => [c.id, localiseArchiveName(c,'legacy_lord')]));
+const legacyHeroes = new Map((legacyCharacters.filter(c => c.entityType === 'hero') as unknown as Hero[]).map(c => [c.id, localiseArchiveName(c,'legacy_hero')]));
+const lordBySubtype = new Map(lords.flatMap(c => [c.subtypeKey,...c.subtypeAliases].map(key => [key,c] as const)));
 
 // Membership is stored only on the child entity, including future entity kinds.
 function indexByFaction<T extends { factionId: string; factionIds?: string[] }>(items: T[]): Map<string, T[]> {
@@ -57,6 +59,9 @@ export type SearchResult = { type: 'faction' | 'lord' | 'hero' | 'unit'; id: str
 
 export const gameRepository = {
   listFactions: () => factions,
+  listLords: () => lords,
+  listHeroes: () => heroes,
+  getLordBySubtype: (key: string) => lordBySubtype.get(key),
   getFaction: (id: string) => factionById.get(id),
   getLord: (id: string) => lordById.get(characterAliases.find(a => a.id === id && a.entityType === 'lord')?.canonicalId ?? id) ?? legacyLords.get(id),
   getHero: (id: string) => heroById.get(characterAliases.find(a => a.id === id && a.entityType === 'hero')?.canonicalId ?? id) ?? legacyHeroes.get(id),
@@ -99,7 +104,8 @@ export const gameRepository = {
     ].filter((item) => {
       const character = item.type === 'lord' ? lordById.get(item.id) : item.type === 'hero' ? heroById.get(item.id) : undefined;
       const originalName = item.type === 'unit' ? originalUnitName(unitById.get(item.id)!) : '';
-      return `${item.name} ${originalName ?? ''} ${item.id} ${item.detail} ${character?.subtypeKey ?? ''} ${character?.subtypeAliases.join(' ') ?? ''}`.toLocaleLowerCase().includes(term);
+      const originalArchiveName = item.type === 'faction' ? archiveSearchNames(factionById.get(item.id)!,'faction') : character ? archiveSearchNames(character,item.type as 'lord'|'hero') : '';
+      return `${item.name} ${originalName ?? ''} ${originalArchiveName} ${item.id} ${item.detail} ${character?.subtypeKey ?? ''} ${character?.subtypeAliases.join(' ') ?? ''}`.toLocaleLowerCase().includes(term);
     });
   },
 };

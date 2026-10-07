@@ -55,7 +55,7 @@ export default function HomePage() {
       </div>
       {error && <p className="message error" role="status">{error}</p>}
       <section className="section"><SectionTitle title="팩션 탐색" count={gameRepository.listFactions().length} to="/factions" action="전체 팩션"/>
-        <div className="feature-card"><div className="feature-top"><span className="feature-label">{gameRepository.getRosterCoverage('vampire_counts')?.status ?? 'ROSTER PARTIAL'}</span><span className="feature-symbol">☾</span></div><h3>뱀파이어 카운트</h3><p>검토된 군주·영웅·유닛 roster와 내 기록을 둘러보세요.</p><Link className="button button-primary" to={pathFor('faction', 'vampire_counts')}>팩션 보기 <Icon name="arrow"/></Link></div>
+        <div className="feature-card"><div className="feature-top"><span className="feature-label">{gameRepository.getRosterCoverage('vampire_counts')?.status ?? 'ROSTER PARTIAL'}</span><span className="feature-symbol">☾</span></div><h3>{gameRepository.getFaction('vampire_counts')?.name}</h3><p>검토된 군주·영웅·유닛 roster와 내 기록을 둘러보세요.</p><Link className="button button-primary" to={pathFor('faction', 'vampire_counts')}>팩션 보기 <Icon name="arrow"/></Link></div>
       </section>
     </>}
   </>;

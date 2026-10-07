@@ -8,6 +8,7 @@ import SectionTitle from '../components/SectionTitle';
 import BookmarkButton from '../components/BookmarkButton';
 import ArticleEditor from '../components/ArticleEditor';
 import CharacterRecords from '../components/CharacterRecords';
+import LocalisationSource from '../components/LocalisationSource';
 
 export default function HeroPage() {
   const { id = '' } = useParams();
@@ -27,7 +28,7 @@ export default function HeroPage() {
         <div><span>분류</span><strong>{hero.category}</strong></div>
         <div><span>고유 스킬 / 효과</span><strong>미입력</strong></div>
       </div>
-      <details className="character-source"><summary>데이터 출처 · WH3 {hero.gameVersion}</summary><p className="data-note">{hero.source}</p><dl><dt>CA subtype</dt><dd>{hero.subtypeKey}</dd><dt>CA subtype aliases</dt><dd>{hero.subtypeAliases.join(" / ") || "없음"}</dd><dt>Main / Land</dt><dd>{hero.mainKey} / {hero.landKey}</dd></dl></details>
+      <details className="character-source"><summary>데이터 출처 · WH3 {hero.gameVersion}</summary><p className="data-note">{hero.source}</p><LocalisationSource item={hero} type="hero"/><dl><dt>CA subtype</dt><dd>{hero.subtypeKey}</dd><dt>CA subtype aliases</dt><dd>{hero.subtypeAliases.join(" / ") || "없음"}</dd><dt>Main / Land</dt><dd>{hero.mainKey} / {hero.landKey}</dd></dl></details>
     </section>
     <CharacterRecords type="hero" canonicalId={hero.id} currentId={id}/>
     <ArticleEditor key={id} target={{ entityType: 'hero', entityId: id }} label={hero.name}/>

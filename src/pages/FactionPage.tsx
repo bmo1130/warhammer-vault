@@ -10,6 +10,7 @@ import EntityRow from '../components/EntityRow';
 import EmptyState from '../components/EmptyState';
 import BookmarkButton from '../components/BookmarkButton';
 import ArticleEditor from '../components/ArticleEditor';
+import LocalisationSource from '../components/LocalisationSource';
 
 const labels: Record<RosterCategory, string> = { legendaryLords: '전설 군주', genericLords: '일반 군주', specialLords: '특수 군주', legendaryHeroes: '전설 영웅', genericHeroes: '일반 영웅', specialHeroes: '특수 영웅', units: '유닛' };
 export default function FactionPage() {
@@ -34,6 +35,7 @@ export default function FactionPage() {
   return <>
     <div className="breadcrumbs"><Link to="/">탐색</Link><Icon name="arrow"/><Link to={`/${entityRoutes.faction}`}>팩션</Link></div>
     <div className="detail-hero"><div><div className="eyebrow">FACTION · {faction.subtitle.toUpperCase()}</div><h1>{faction.name}</h1><p>{faction.description}</p></div><div className="detail-actions"><a className="button button-secondary" href="#my-record" onClick={() => { setTab('overview'); requestAnimationFrame(() => document.getElementById('my-record')?.scrollIntoView()); }}>내 기록으로</a><BookmarkButton target={{ entityType: 'faction', entityId: id }}/></div></div>
+    <details className="character-source"><summary>한국어 이름 출처</summary><LocalisationSource item={faction} type="faction"/></details>
     <section className="roster-coverage" aria-label="Roster coverage">
       <strong className="tag">{coverage?.status ?? 'ROSTER PARTIAL'}</strong>
       <p className="data-note">캐릭터·유닛 entry coverage입니다. 연구·건물·스킬과 개별 스탯의 완성을 뜻하지 않습니다.</p>
