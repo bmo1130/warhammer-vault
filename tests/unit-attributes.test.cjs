@@ -10,6 +10,7 @@ const {createUnitCatalog}=require('../.test-build/src/repositories/unitCatalogRe
 const {unitDiagnosticRepository:diagnostics}=require('../.test-build/src/repositories/unitDiagnosticRepository.js');
 const {withoutUnitLocalisation}=require('../.test-build/src/repositories/unitLocalisation.js');
 const {applyUnitAttributes,withoutUnitAttributes,unitAttributeAdmission}=require('../.test-build/src/repositories/unitAttributes.js');
+const {withoutUnitPassives}=require('../.test-build/src/repositories/unitPassives.js');
 const {validateUnits}=require('../.test-build/src/domain/unitValidation.js');
 const {getUnitAttributeLabel}=require('../.test-build/src/domain/unitLabels.js');
 const json=p=>JSON.parse(readFileSync(p));
@@ -29,7 +30,7 @@ test('attribute collections promote with exact provenance; all other Unit fields
   assert.equal(review.summary.rawKeys,58);assert.equal(review.summary.groups,1038);assert.equal(review.summary.junctions,3249);
   for(const baseline of raw){
     const current=game.getUnit(baseline.id);
-    assert.deepEqual(withoutUnitAttributes(withoutUnitLocalisation(current)),baseline,baseline.id);
+    assert.deepEqual(withoutUnitPassives(withoutUnitAttributes(withoutUnitLocalisation(current))),baseline,baseline.id);
     if(baseline.gameVersion==='sample'){assert.deepEqual(current,baseline);continue;}
     assert(/[가-힣]/.test(current.name));
     const admission=review.admissions.find(a=>a.id===current.id);

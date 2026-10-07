@@ -1,0 +1,1796 @@
+{
+  "format": "warhammer-vault-passive-mappings-v1",
+  "sourceHash": "4e6df2a96af6038d8e684fae699a4eae9a7356adfeadc480a805f91d39f626cb",
+  "membershipSourceHash": "7d99580858e1b5ebaebd0561be0603d67abde8984cb6903aae39e435fe495044",
+  "aliasGroups": [
+    {
+      "canonicalId": "guardian",
+      "rawKeys": [
+        "wh2_dlc09_unit_passive_guardian",
+        "wh2_dlc10_unit_passive_guardian",
+        "wh_pro04_unit_passive_guardian"
+      ],
+      "reason": "Same verified title, native type/flag, shared exact phase, target flags, condition references and all non-display special fields. Original engine IDs and UI AOE visuals remain in source."
+    }
+  ],
+  "entries": [
+    {
+      "rawKey": "wh2_dlc09_faction_passive_realm_of_souls_tier_1",
+      "canonicalId": "realm_of_souls_tier_1",
+      "name": "영혼계 I",
+      "englishName": "Realm of Souls I",
+      "signature": "169da61f3875928a5f4d39fe11d285d9a9a66dff7d2f360a3d5ec4b1b114d276"
+    },
+    {
+      "rawKey": "wh2_dlc09_faction_passive_realm_of_souls_tier_2",
+      "canonicalId": "realm_of_souls_tier_2",
+      "name": "영혼계 II",
+      "englishName": "Realm of Souls II",
+      "signature": "06bb5a8109c50b7d2f5b944dc9d6288bdb3f1e91b2f92a5e5f2bc42fcc072ee3"
+    },
+    {
+      "rawKey": "wh2_dlc09_faction_passive_realm_of_souls_tier_3",
+      "canonicalId": "realm_of_souls_tier_3",
+      "name": "영혼계 III",
+      "englishName": "Realm of Souls III",
+      "signature": "3a90d65c61346565b4aa40ffdef26b1ed63f45db719ecdf217a99d8b7fccaa46"
+    },
+    {
+      "rawKey": "wh2_dlc09_unit_passive_covenant_of_power",
+      "canonicalId": "wh2_dlc09_unit_passive_covenant_of_power",
+      "name": "힘의 계약",
+      "englishName": "Covenant of Power",
+      "signature": "32b51b953c58efe3f381b20c9e06f16c0936b9639559d9a5c6a36de167bd97ef"
+    },
+    {
+      "rawKey": "wh2_dlc09_unit_passive_guardian",
+      "canonicalId": "guardian",
+      "name": "수호자",
+      "englishName": "Guardian",
+      "signature": "9e29b4af74a94d271b679f0d908a988673579e357ac519d54f57bd15b22d5ad3"
+    },
+    {
+      "rawKey": "wh2_dlc09_unit_passive_spirit_conduit",
+      "canonicalId": "wh2_dlc09_unit_passive_spirit_conduit",
+      "name": "혼령 매개체",
+      "englishName": "Spirit Conduit",
+      "signature": "31851e44ee07cb6c25aab2249f6f41de59d517c17f6de4574034d559eaf2b621"
+    },
+    {
+      "rawKey": "wh2_dlc09_unit_passive_unstable_mark_ii_sand",
+      "canonicalId": "wh2_dlc09_unit_passive_unstable_mark_ii_sand",
+      "name": "분해",
+      "englishName": "Disintegrating",
+      "signature": "aa34fae194e0a9af97d31651025d2ee378933e482799c3764b57a49275fa2831"
+    },
+    {
+      "rawKey": "wh2_dlc09_unit_passive_unstable_sand",
+      "canonicalId": "wh2_dlc09_unit_passive_unstable_sand",
+      "name": "붕괴",
+      "englishName": "Crumbling",
+      "signature": "7e415997174ddae5aee2f56156f630e6fb51325e9b5aa401dca05f0e87654d97"
+    },
+    {
+      "rawKey": "wh2_dlc10_item_passive_banner_of_avelorn",
+      "canonicalId": "wh2_dlc10_item_passive_banner_of_avelorn",
+      "name": "아벨로른의 군기",
+      "englishName": "Banner of Avelorn",
+      "signature": "9ea8873cc22b5b8bc0c4103e3683ef167e6a9aa1f8a9a0093575269cc79fe5f8"
+    },
+    {
+      "rawKey": "wh2_dlc10_unit_passive_abyssal_howl",
+      "canonicalId": "wh2_dlc10_unit_passive_abyssal_howl",
+      "name": "심연의 비명",
+      "englishName": "Abyssal Howl",
+      "signature": "01cbcf6f3bc1077bb519ac555a14ec0c577cd5d8b370dc56965752cdadca5338"
+    },
+    {
+      "rawKey": "wh2_dlc10_unit_passive_guardian",
+      "canonicalId": "guardian",
+      "name": "수호자",
+      "englishName": "Guardian",
+      "signature": "9e29b4af74a94d271b679f0d908a988673579e357ac519d54f57bd15b22d5ad3"
+    },
+    {
+      "rawKey": "wh2_dlc10_unit_passive_the_trial_of_blades",
+      "canonicalId": "wh2_dlc10_unit_passive_the_trial_of_blades",
+      "name": "칼날의 시련",
+      "englishName": "The Trial of Blades",
+      "signature": "648a443e416e6eb4740eb9aee10b4962d165f1f4d3905e3d7f437fbf521c54d0"
+    },
+    {
+      "rawKey": "wh2_dlc11_unit_passive_abandon_ship",
+      "canonicalId": "wh2_dlc11_unit_passive_abandon_ship",
+      "name": "배를 버려라!",
+      "englishName": "Abandon Ship!",
+      "signature": "f684ec60ac17be9542c268f3132944f874d8591b5704015b4fbe5fceafae78c6"
+    },
+    {
+      "rawKey": "wh2_dlc11_unit_passive_extra_powder",
+      "canonicalId": "wh2_dlc11_unit_passive_extra_powder",
+      "name": "넉넉한 화약",
+      "englishName": "Black Powder Aplenty",
+      "signature": "677478c3f93913816dfa3259b1175666df49f0cb631907b30985a8cc411f2e6d"
+    },
+    {
+      "rawKey": "wh2_dlc11_unit_passive_gaseous_demise",
+      "canonicalId": "wh2_dlc11_unit_passive_gaseous_demise",
+      "name": "기체로 꽉 찬 시체",
+      "englishName": "Gaseous Demise",
+      "signature": "c65ed1b7a4121124a83f110ad955bda1f04ecdbef1a259e20b590ef419f84c75"
+    },
+    {
+      "rawKey": "wh2_dlc11_unit_passive_noxious_unstable_mark_ii",
+      "canonicalId": "wh2_dlc11_unit_passive_noxious_unstable_mark_ii",
+      "name": "독성 붕괴",
+      "englishName": "Noxious Disintegration",
+      "signature": "2389876bd5b4d6f621beca3c891b6ec0732e40d323a4984428bdd42166c28ca8"
+    },
+    {
+      "rawKey": "wh2_dlc11_unit_passive_the_hunger",
+      "canonicalId": "wh2_dlc11_unit_passive_the_hunger",
+      "name": "굶주림",
+      "englishName": "The Hunger",
+      "signature": "f304eb48715b6721c69ae5bcf60d8b74e9d8b07c04b490817a5ee7672302d657"
+    },
+    {
+      "rawKey": "wh2_dlc12_unit_passive_arcane_configuration",
+      "canonicalId": "wh2_dlc12_unit_passive_arcane_configuration",
+      "name": "비전 배열",
+      "englishName": "Arcane Configuration",
+      "signature": "7f30249f2f0b4274d6c85c5f5532181c0e920661d925d0964c278d9fcb492c58"
+    },
+    {
+      "rawKey": "wh2_dlc12_unit_passive_demagoguery",
+      "canonicalId": "wh2_dlc12_unit_passive_demagoguery",
+      "name": "선동가",
+      "englishName": "Rabble-Rouse",
+      "signature": "f30069b9542a482bda53f37b64cd188fa657dde42c48744cccb13ebed2be87b3"
+    },
+    {
+      "rawKey": "wh2_dlc12_unit_passive_portent_of_warding",
+      "canonicalId": "wh2_dlc12_unit_passive_portent_of_warding",
+      "name": "수호의 징조",
+      "englishName": "Portent of Warding",
+      "signature": "4ad5a1fe01708b3483a8ec0b394275fc73d712876ba96df88baa9c7e12105e5f"
+    },
+    {
+      "rawKey": "wh2_dlc12_unit_passive_the_best_defence",
+      "canonicalId": "wh2_dlc12_unit_passive_the_best_defence",
+      "name": "최선의 방어",
+      "englishName": "The Best Defence",
+      "signature": "16b849c8e17f3b505e0943f3c9a1bbad71ec9ec19ff210de6701771a3617da77"
+    },
+    {
+      "rawKey": "wh2_dlc12_unit_passive_thunderous_one",
+      "canonicalId": "wh2_dlc12_unit_passive_thunderous_one",
+      "name": "욱스맥의 심판",
+      "englishName": "Judgement of the Uxmac",
+      "signature": "a460bf6eeb42606d8e48b91536027bb7ce4fe20e36a2040ecc5ee2f60a307152"
+    },
+    {
+      "rawKey": "wh2_dlc13_unit_abilities_bathed_in_blood",
+      "canonicalId": "wh2_dlc13_unit_abilities_bathed_in_blood",
+      "name": "피바다",
+      "englishName": "Bathed in Blood",
+      "signature": "632b087ae1339be2685c41a0050b4b989be0ed38832082627a9d665cc4bcb063"
+    },
+    {
+      "rawKey": "wh2_dlc13_unit_abilities_blinding_radiance",
+      "canonicalId": "wh2_dlc13_unit_abilities_blinding_radiance",
+      "name": "눈이 멀 듯한 광채",
+      "englishName": "Blinding Radiance",
+      "signature": "e1558b086a4bf2c067e8f5c2d96b05fbffab4e076d07bc1733b0fe51c3199000"
+    },
+    {
+      "rawKey": "wh2_dlc13_unit_passive_dread_aversion",
+      "canonicalId": "wh2_dlc13_unit_passive_dread_aversion",
+      "name": "공포 억제",
+      "englishName": "Dread Aversion",
+      "signature": "2b311f1e4f52adf516953c839b375da07e1806c41d4abc5875bb4ab5f3078696"
+    },
+    {
+      "rawKey": "wh2_dlc13_unit_passive_grim_resolve",
+      "canonicalId": "wh2_dlc13_unit_passive_grim_resolve",
+      "name": "옹골찬 의지",
+      "englishName": "Stern Resolve",
+      "signature": "f8a8f4ea48b07d213da0fb6a4e683494c5abcd556e512161c2aa365b9558d1e0"
+    },
+    {
+      "rawKey": "wh2_dlc13_unit_passive_kaboom",
+      "canonicalId": "wh2_dlc13_unit_passive_kaboom",
+      "name": "콰광!",
+      "englishName": "Kaboom!",
+      "signature": "e2189a61a17d046f2a76b44260631157975977d9ec0a758fa019c7d006efad46"
+    },
+    {
+      "rawKey": "wh2_dlc14_unit_passive_aura_of_agony",
+      "canonicalId": "wh2_dlc14_unit_passive_aura_of_agony",
+      "name": "고통의 오라",
+      "englishName": "Aura of Agony",
+      "signature": "c63475482be31865cbe712625aac086e6a1698366b9d88d403e0f4798aa7e3b9"
+    },
+    {
+      "rawKey": "wh2_dlc14_unit_passive_aura_of_ardour",
+      "canonicalId": "wh2_dlc14_unit_passive_aura_of_ardour",
+      "name": "열정의 오라",
+      "englishName": "Aura of Ardour",
+      "signature": "b29699f11aa40b101fd4b9140fdc28f40b844d18e3a7053d003f3c516636c514"
+    },
+    {
+      "rawKey": "wh2_dlc14_unit_passive_barbed_net",
+      "canonicalId": "wh2_dlc14_unit_passive_barbed_net",
+      "name": "가시 그물",
+      "englishName": "Barbed Net",
+      "signature": "abe7f24976c6a5b81791f428d61b7b55a79830ff643fa1ba4a930b165f1563f3"
+    },
+    {
+      "rawKey": "wh2_dlc14_unit_passive_crowfeast",
+      "canonicalId": "wh2_dlc14_unit_passive_crowfeast",
+      "name": "까마귀밥",
+      "englishName": "Crowfeast",
+      "signature": "82ec6b5454ccd0b3a1eaf0994f8099e154279c4af99b9ec11ceace4983f4fa1f"
+    },
+    {
+      "rawKey": "wh2_dlc14_unit_passive_duck_and_weave",
+      "canonicalId": "wh2_dlc14_unit_passive_duck_and_weave",
+      "name": "회피 기동",
+      "englishName": "Duck & Weave",
+      "signature": "d4aa40ffeab812784aaec735361b3ae8b9d82ae02f03fa823ef72a0f96cfae78"
+    },
+    {
+      "rawKey": "wh2_dlc15_unit_passive_fiery_rebirth",
+      "canonicalId": "wh2_dlc15_unit_passive_fiery_rebirth",
+      "name": "불타는 부활",
+      "englishName": "Fiery Rebirth",
+      "signature": "b5082b942c1a0206f71579acff1eb58a19e3ca4a231ff794e4ab350a3a6cded3"
+    },
+    {
+      "rawKey": "wh2_dlc15_unit_passive_giant_explodin_spores",
+      "canonicalId": "wh2_dlc15_unit_passive_giant_explodin_spores",
+      "name": "포자 대폭발",
+      "englishName": "Giant Explodin' Spores",
+      "signature": "94350f1839ce4a895d6f6bbf6a60f1d6bdb30b9db81f28c550ea6c6abbea8355"
+    },
+    {
+      "rawKey": "wh2_dlc15_unit_passive_omen_of_hope",
+      "canonicalId": "wh2_dlc15_unit_passive_omen_of_hope",
+      "name": "희망의 전조",
+      "englishName": "Omen of Hope",
+      "signature": "55271ff141284a3f306ef2fa9a5df70109c1fa41124333c5a6f68939a2d54e49"
+    },
+    {
+      "rawKey": "wh2_dlc15_unit_passive_overwhelming_odour",
+      "canonicalId": "wh2_dlc15_unit_passive_overwhelming_odour",
+      "name": "극악의 악취",
+      "englishName": "Overwhelming Odour",
+      "signature": "60f935bc70699ea504b38f1e93a4c4c018ea8a50c6004c2c7b7d535841048820"
+    },
+    {
+      "rawKey": "wh2_dlc15_unit_passive_pump_harder_ladz",
+      "canonicalId": "wh2_dlc15_unit_passive_pump_harder_ladz",
+      "name": "펌프 더 쑤셔, 이 자식들아!",
+      "englishName": "Pump Harder Ladz!",
+      "signature": "3d16b27b407f98b437dd90c5e372db2ccf14d892fcc63347103838f719c936c2"
+    },
+    {
+      "rawKey": "wh2_dlc15_unit_passive_rubble_and_ruin_tier_1",
+      "canonicalId": "wh2_dlc15_unit_passive_rubble_and_ruin_tier_1",
+      "name": "파괴와 파멸 I",
+      "englishName": "Rubble & Ruin I",
+      "signature": "3ca3df5795e362eee1e9a5a1c533952b508ac37d390e4a0ddb27896cf85fa326"
+    },
+    {
+      "rawKey": "wh2_dlc15_unit_passive_rubble_and_ruin_tier_2",
+      "canonicalId": "wh2_dlc15_unit_passive_rubble_and_ruin_tier_2",
+      "name": "파괴와 파멸 II",
+      "englishName": "Rubble & Ruin II",
+      "signature": "7be0a6f42f3260646ac033ef73fc212e1ed3524469789907771798e70f4655cf"
+    },
+    {
+      "rawKey": "wh2_dlc15_unit_passive_rubble_and_ruin_tier_3",
+      "canonicalId": "wh2_dlc15_unit_passive_rubble_and_ruin_tier_3",
+      "name": "파괴와 파멸 III",
+      "englishName": "Rubble & Ruin III",
+      "signature": "ea49ef48f97cf7e356e32bd5fa9544a2dd4d42e1aaeadd2c0d7d06bed0ba171e"
+    },
+    {
+      "rawKey": "wh2_dlc15_unit_passive_spirit_of_gork_or_mork",
+      "canonicalId": "wh2_dlc15_unit_passive_spirit_of_gork_or_mork",
+      "name": "고크(인지 모크인지)의 혼",
+      "englishName": "Spirit of Gork (or Mork)",
+      "signature": "57e8f6e380f00654d1f11752b1f1cc11a33a6f4bc36edfc1f2c732c7343b2d43"
+    },
+    {
+      "rawKey": "wh2_dlc15_unit_passive_thermal_thorax",
+      "canonicalId": "wh2_dlc15_unit_passive_thermal_thorax",
+      "name": "발열성 흉곽",
+      "englishName": "Thermal Thorax",
+      "signature": "fbee127c0a4d0bc49276e8eebe578e4c8e8b6c82418f016e6b79a10d05d358ca"
+    },
+    {
+      "rawKey": "wh2_dlc16_lord_passive_ceithin_hars_tenacity",
+      "canonicalId": "wh2_dlc16_lord_passive_ceithin_hars_tenacity",
+      "name": "케이틴 하르의 끈기",
+      "englishName": "Ceithin-Har's Tenacity",
+      "signature": "3b1d068bddc8c8b1f3c953030ae486d52f1e591981e9dee47472c967cc08d8e7"
+    },
+    {
+      "rawKey": "wh2_dlc16_unit_passive_warp_discharge",
+      "canonicalId": "wh2_dlc16_unit_passive_warp_discharge",
+      "name": "워프 방출",
+      "englishName": "Warp Discharge",
+      "signature": "eacfb58485a7f2921c7f2049a25461339f975640a8616b3b146040965006f720"
+    },
+    {
+      "rawKey": "wh2_dlc17_unit_passive_aura_of_madness",
+      "canonicalId": "wh2_dlc17_unit_passive_aura_of_madness",
+      "name": "광기의 기운",
+      "englishName": "Aura of Madness",
+      "signature": "19cb98f68cbf501e7fc0720779ef15474e831e61385407ba4e4ff0437c0f9607"
+    },
+    {
+      "rawKey": "wh2_dlc17_unit_passive_drunken_bravado",
+      "canonicalId": "wh2_dlc17_unit_passive_drunken_bravado",
+      "name": "술 취한 허세",
+      "englishName": "Drunken Bravado",
+      "signature": "7c8d48c045387cfd1c4d4cffdf3ecc2f8a6472f69eb8802738ccd4e556af0da6"
+    },
+    {
+      "rawKey": "wh2_dlc17_unit_passive_master_of_the_sacred_places",
+      "canonicalId": "wh2_dlc17_unit_passive_master_of_the_sacred_places",
+      "name": "성지의 주인",
+      "englishName": "Master of the Sacred Places",
+      "signature": "91cc14740f878c3d86c779d5840e817a2f038813edc2a507d536e6ff6024041a"
+    },
+    {
+      "rawKey": "wh2_dlc17_unit_passive_searing_bile_blood",
+      "canonicalId": "wh2_dlc17_unit_passive_searing_bile_blood",
+      "name": "작열하는 담즙피",
+      "englishName": "Searing Bile-Blood",
+      "signature": "764a951242b393b1d003438afc78263a115c8fdac608d1b215597e7022e119d8"
+    },
+    {
+      "rawKey": "wh2_dlc17_unit_passive_spurting_bile_blood",
+      "canonicalId": "wh2_dlc17_unit_passive_spurting_bile_blood",
+      "name": "치솟는 담즙피",
+      "englishName": "Spurting Bile-Blood",
+      "signature": "cafe8141d7b989f76327617a949d5dde49db1e53545aacaf09ca9f36ba93d017"
+    },
+    {
+      "rawKey": "wh2_dlc17_unit_passive_strength_from_flesh",
+      "canonicalId": "wh2_dlc17_unit_passive_strength_from_flesh",
+      "name": "살점에서 나오는 힘",
+      "englishName": "Strength from Flesh",
+      "signature": "89f2683991f494964ca206ed91c134fb4ae8cc76f5b8f5d74042d8cdccff6238"
+    },
+    {
+      "rawKey": "wh2_main_faction_abilities_murderous_mastery",
+      "canonicalId": "murderous_mastery",
+      "name": "살육의 극의",
+      "englishName": "Murderous Mastery",
+      "signature": "3482065455fc00d7d68f86ef70a2a9cbec58fe5a72900033b63149c5b98eb1a0"
+    },
+    {
+      "rawKey": "wh2_main_faction_abilities_murderous_prowess",
+      "canonicalId": "murderous_prowess",
+      "name": "살육 역량",
+      "englishName": "Murderous Prowess",
+      "signature": "30b2ba40cdeec525d640f478c4d1bdf78633ba9004065df79bd57072cb2d0a9b"
+    },
+    {
+      "rawKey": "wh2_main_unit_passive_another_takes_its_place",
+      "canonicalId": "wh2_main_unit_passive_another_takes_its_place",
+      "name": "대체제 확보",
+      "englishName": "Another Takes its Place",
+      "signature": "74959623b24aa885b82092f2ce5a1561bb456db18d71c200d50fb298c2aa3e6a"
+    },
+    {
+      "rawKey": "wh2_main_unit_passive_attuned_to_magic",
+      "canonicalId": "wh2_main_unit_passive_attuned_to_magic",
+      "name": "마법 적응",
+      "englishName": "Attuned to Magic",
+      "signature": "3a9591292c1303a0e73b67dd5e9421ee332cccd40da971439bb14fd5155d78dd"
+    },
+    {
+      "rawKey": "wh2_main_unit_passive_blizzard_aura",
+      "canonicalId": "wh2_main_unit_passive_blizzard_aura",
+      "name": "눈보라 오라",
+      "englishName": "Blizzard Aura",
+      "signature": "1122efe6550f3352eb4da9157b31ce7dc833b3c9c68282f5b205a596372fabaf"
+    },
+    {
+      "rawKey": "wh2_main_unit_passive_martial_mastery",
+      "canonicalId": "martial_mastery",
+      "name": "무예 통달",
+      "englishName": "Martial Mastery",
+      "signature": "3083b967ce2129b0cdf4c123088ca778b95e81e800162daf9855c3ad3ac93586"
+    },
+    {
+      "rawKey": "wh2_main_unit_passive_martial_prowess",
+      "canonicalId": "martial_prowess",
+      "name": "무용",
+      "englishName": "Martial Prowess",
+      "signature": "d04ba7c74fd990caa2dd2dd4d32451009e1f1535d1faf9327af2351bfa9d2e21"
+    },
+    {
+      "rawKey": "wh2_main_unit_passive_primal_instincts",
+      "canonicalId": "wh2_main_unit_passive_primal_instincts",
+      "name": "원시의 본능",
+      "englishName": "Primal Instincts",
+      "signature": "e89845b22c6ffe05f8ded4d2d7ae2cc348e9467a470f7730659279e9091db687"
+    },
+    {
+      "rawKey": "wh2_main_unit_passive_rebirth",
+      "canonicalId": "wh2_main_unit_passive_rebirth",
+      "name": "부활",
+      "englishName": "Rebirth",
+      "signature": "524a6e0e941dff47ffaf782f16d5606ac927249e30e7617d94577d352b3ab8cf"
+    },
+    {
+      "rawKey": "wh2_main_unit_passive_scurry_away",
+      "canonicalId": "wh2_main_unit_passive_scurry_away",
+      "name": "달아나라!",
+      "englishName": "Scurry Away!",
+      "signature": "ebb7bc1ba714c420ba57d6d49bbcc96cd78f1b55ddb2322d04381d781f3f000c"
+    },
+    {
+      "rawKey": "wh2_main_unit_passive_snare_net",
+      "canonicalId": "wh2_main_unit_passive_snare_net",
+      "name": "그물 덫",
+      "englishName": "Snare-Net",
+      "signature": "08077188f1236a8690991d6877b5f05add599cf1cd87a9ea2ef702c6294fcbf7"
+    },
+    {
+      "rawKey": "wh2_main_unit_passive_strength_in_numbers",
+      "canonicalId": "wh2_main_unit_passive_strength_in_numbers",
+      "name": "인해 전술",
+      "englishName": "Strength in Numbers",
+      "signature": "91ce023b9ee7b87dde45567890e9b34c3c99945da88eaaa79f58fb2026441739"
+    },
+    {
+      "rawKey": "wh2_main_unit_passive_the_rats_emerge",
+      "canonicalId": "wh2_main_unit_passive_the_rats_emerge",
+      "name": "쥐 등장",
+      "englishName": "The Rats Emerge",
+      "signature": "e4e798b5964e03c3880fb1d3250559dc19656909c2f3b59627714337a797ef73"
+    },
+    {
+      "rawKey": "wh2_main_unit_passive_too_horrible_to_die",
+      "canonicalId": "wh2_main_unit_passive_too_horrible_to_die",
+      "name": "죽지도 못하는 괴물",
+      "englishName": "Too Horrible to Die",
+      "signature": "c7e1a5bfb3b91a592f6db065430d22ccc965b74990e1941a5ceaa8fe7993a8f2"
+    },
+    {
+      "rawKey": "wh3_cp1_unit_passive_ferocious_ambush",
+      "canonicalId": "wh3_cp1_unit_passive_ferocious_ambush",
+      "name": "짐승의 매복",
+      "englishName": "Ferocious Ambush",
+      "signature": "0d74912715f8af3377035138d0f54cd909d656b47a22b26cd242fa70333058d5"
+    },
+    {
+      "rawKey": "wh3_dlc20_unit_passive_giver_of_abundant_glory",
+      "canonicalId": "wh3_dlc20_unit_passive_giver_of_abundant_glory",
+      "name": "엄청난 영광을 주는 자",
+      "englishName": "Giver of Abundant Glory",
+      "signature": "a4f1009076e092ae025709e2de76986ef41c4ee546eee32fa7c3618ccc1a1392"
+    },
+    {
+      "rawKey": "wh3_dlc20_unit_passive_giver_of_arcane_glory",
+      "canonicalId": "wh3_dlc20_unit_passive_giver_of_arcane_glory",
+      "name": "신비한 영광을 주는 자",
+      "englishName": "Giver of Arcane Glory",
+      "signature": "fe881f9ff6589347d1afbd4caa7b698b277202c528d52fb5e3a1a9fc6b528a6c"
+    },
+    {
+      "rawKey": "wh3_dlc20_unit_passive_giver_of_furious_glory",
+      "canonicalId": "wh3_dlc20_unit_passive_giver_of_furious_glory",
+      "name": "분노한 영광을 주는 자",
+      "englishName": "Giver of Furious Glory",
+      "signature": "80a38c34c3b55fb2032bb2df4410018cf7acc27ad3778ab06f0d2c12a09b9d27"
+    },
+    {
+      "rawKey": "wh3_dlc20_unit_passive_giver_of_glory",
+      "canonicalId": "wh3_dlc20_unit_passive_giver_of_glory",
+      "name": "영광을 주는 자",
+      "englishName": "Giver of Glory",
+      "signature": "45d5de836746c41a8abe9a48ac4e9c77991d29c22ca924321c3681f6897eb4c6"
+    },
+    {
+      "rawKey": "wh3_dlc20_unit_passive_giver_of_torturous_glory",
+      "canonicalId": "wh3_dlc20_unit_passive_giver_of_torturous_glory",
+      "name": "고통의 영광을 주는 자",
+      "englishName": "Giver of Torturous Glory",
+      "signature": "1650e91388a1bc60d26835464fb8c3eb425b9eb7a3afb4a4fcf35463718103fb"
+    },
+    {
+      "rawKey": "wh3_dlc20_unit_passive_murderous_charge",
+      "canonicalId": "wh3_dlc20_unit_passive_murderous_charge",
+      "name": "살인적 돌격",
+      "englishName": "Murderous Charge",
+      "signature": "a3dbdff5ea7e6165ac92d27a490d3892c15a2d14c827dd041763d11e78f65abd"
+    },
+    {
+      "rawKey": "wh3_dlc20_unit_passive_supreme_vanity",
+      "canonicalId": "wh3_dlc20_unit_passive_supreme_vanity",
+      "name": "극상의 허영심",
+      "englishName": "Supreme Vanity",
+      "signature": "89facdf4e44c2154e27ffbbf77b785395d679756aacb2c99b1736fc3a3ddc9b9"
+    },
+    {
+      "rawKey": "wh3_dlc23_unit_passive_backstabbers",
+      "canonicalId": "wh3_dlc23_unit_passive_backstabbers",
+      "name": "뒤통수치기",
+      "englishName": "Backstabbers",
+      "signature": "e764bbc3590a47bf188a7cff221569d3ae8c06c2da3c1e4f7afd1f1b7ff25290"
+    },
+    {
+      "rawKey": "wh3_dlc23_unit_passive_blazing_body",
+      "canonicalId": "wh3_dlc23_unit_passive_blazing_body",
+      "name": "불타는 몸",
+      "englishName": "Blazing Body",
+      "signature": "e69a11692ba60c6064ae81bf2cfc571240e2c415d6f676ceeb3c931b703b8b42"
+    },
+    {
+      "rawKey": "wh3_dlc23_unit_passive_burning_bright",
+      "canonicalId": "wh3_dlc23_unit_passive_burning_bright",
+      "name": "작열",
+      "englishName": "Burning Bright",
+      "signature": "5e65bb1fcc216a954470b1818eb88d430a0d868d32b3f7f8439ab90bd49070ef"
+    },
+    {
+      "rawKey": "wh3_dlc23_unit_passive_cowardly_despoilers",
+      "canonicalId": "wh3_dlc23_unit_passive_cowardly_despoilers",
+      "name": "겁쟁이 수탈자",
+      "englishName": "Cowardly Despoilers",
+      "signature": "81c6739bb8f0993b8a4c99265c7a8feec3eaefb00a51d691216ff5e8b8269d58"
+    },
+    {
+      "rawKey": "wh3_dlc23_unit_passive_dig_in",
+      "canonicalId": "wh3_dlc23_unit_passive_dig_in",
+      "name": "삽질 개시!",
+      "englishName": "Dig in!",
+      "signature": "bee4436a967ff7c2359e73c098dba031f1c1670e4d2384367ddc5b3849c03b2f"
+    },
+    {
+      "rawKey": "wh3_dlc23_unit_passive_extra_reload",
+      "canonicalId": "wh3_dlc23_unit_passive_extra_reload",
+      "name": "추가 장전",
+      "englishName": "Extra Reload",
+      "signature": "5e3e042561405f71480ac7062ba39f7c060e5746a27069aab29c5e770bcfed72"
+    },
+    {
+      "rawKey": "wh3_dlc23_unit_passive_hellish_frenzy",
+      "canonicalId": "wh3_dlc23_unit_passive_hellish_frenzy",
+      "name": "지옥의 광란",
+      "englishName": "Hellish Frenzy",
+      "signature": "11f4a287ea028ba810fea0f8523d638274d02868fe0c2ba074b04cf6cc838751"
+    },
+    {
+      "rawKey": "wh3_dlc23_unit_passive_malign_authority",
+      "canonicalId": "wh3_dlc23_unit_passive_malign_authority",
+      "name": "해로운 권위",
+      "englishName": "Malign Authority",
+      "signature": "8e9516eaa4c40a64826ac6c5dae0f59368c77f96d836b650181dc24ac0d83bca"
+    },
+    {
+      "rawKey": "wh3_dlc23_unit_passive_pelt_of_wulfag",
+      "canonicalId": "wh3_dlc23_unit_passive_pelt_of_wulfag",
+      "name": "울패그 가죽",
+      "englishName": "Pelt of Wulfag",
+      "signature": "76e601c6ec74e9a4fdd66b845de74045902fc7d4710faa634b1667e83a0bada2"
+    },
+    {
+      "rawKey": "wh3_dlc23_unit_passive_revel_in_fear",
+      "canonicalId": "wh3_dlc23_unit_passive_revel_in_fear",
+      "name": "공포의 만끽",
+      "englishName": "Revel in Fear",
+      "signature": "21116b23c48485f56c25d2be78ab837775daef74908ed415ec6890ff5e93499c"
+    },
+    {
+      "rawKey": "wh3_dlc23_unit_passive_sorcerous_miasma",
+      "canonicalId": "wh3_dlc23_unit_passive_sorcerous_miasma",
+      "name": "마술 독기",
+      "englishName": "Sorcerous Miasma",
+      "signature": "57d08fc939b236f9a81b912755b3d4a13c6c8110aab8f7e96eeaf45aa2f5dd35"
+    },
+    {
+      "rawKey": "wh3_dlc23_unit_passive_undying_will",
+      "canonicalId": "wh3_dlc23_unit_passive_undying_will",
+      "name": "불사의 의지",
+      "englishName": "Undying Will",
+      "signature": "942e82d3fbab8c540d177e7de1b45015274c212d42354fee9dc96f03401fdb3f"
+    },
+    {
+      "rawKey": "wh3_dlc24_mount_passive_wounded_pride",
+      "canonicalId": "wh3_dlc24_mount_passive_wounded_pride",
+      "name": "상처 입은 자존심",
+      "englishName": "Wounded Pride",
+      "signature": "d091811817b62e8c2c36f782396e9c79498bb10b17efa57b3c986b7f38253884"
+    },
+    {
+      "rawKey": "wh3_dlc24_passive_shield_of_thorns",
+      "canonicalId": "wh3_dlc24_passive_shield_of_thorns",
+      "name": "가시투성이",
+      "englishName": "Wreathed in Thorns",
+      "signature": "4020fbf1f28d16ea5e443163f2760e77e35ac222ea43209628a2ae7535aceee8"
+    },
+    {
+      "rawKey": "wh3_dlc24_unit_passive_arcane_charge",
+      "canonicalId": "wh3_dlc24_unit_passive_arcane_charge",
+      "name": "비전 충전",
+      "englishName": "Arcane Charge",
+      "signature": "fb04c354d17dae07df671ab12a7a9a24478011f39177a7fecc4755d928c041c6"
+    },
+    {
+      "rawKey": "wh3_dlc24_unit_passive_construct_instability",
+      "canonicalId": "wh3_dlc24_unit_passive_construct_instability",
+      "name": "해체",
+      "englishName": "Crumbling",
+      "signature": "7e415997174ddae5aee2f56156f630e6fb51325e9b5aa401dca05f0e87654d97"
+    },
+    {
+      "rawKey": "wh3_dlc24_unit_passive_construct_instability_ii",
+      "canonicalId": "wh3_dlc24_unit_passive_construct_instability_ii",
+      "name": "붕괴",
+      "englishName": "Disintegrating",
+      "signature": "aa34fae194e0a9af97d31651025d2ee378933e482799c3764b57a49275fa2831"
+    },
+    {
+      "rawKey": "wh3_dlc24_unit_passive_elemental_instability",
+      "canonicalId": "wh3_dlc24_unit_passive_elemental_instability",
+      "name": "정령의 불안정성",
+      "englishName": "Elemental Instability",
+      "signature": "01c18de6760e3d0dd6ba4eb1a7d650c7847779a8c7e7455f007140d6b15b3138"
+    },
+    {
+      "rawKey": "wh3_dlc24_unit_passive_elemental_instability_ii",
+      "canonicalId": "wh3_dlc24_unit_passive_elemental_instability_ii",
+      "name": "사라져라!",
+      "englishName": "Fade Away!",
+      "signature": "ab5054240d185dd978334e0c1f6f3e803f8d4a2ed8cf0b8553cbc1d142c3290c"
+    },
+    {
+      "rawKey": "wh3_dlc24_unit_passive_eternal_duty",
+      "canonicalId": "wh3_dlc24_unit_passive_eternal_duty",
+      "name": "영원한 의무",
+      "englishName": "Eternal Duty",
+      "signature": "be1f0d916f785082a2337c41abd168dbe13e6f96321e3a7d26ab7f9dfb02b531"
+    },
+    {
+      "rawKey": "wh3_dlc24_unit_passive_eyes_of_the_empress",
+      "canonicalId": "wh3_dlc24_unit_passive_eyes_of_the_empress",
+      "name": "월후의 눈",
+      "englishName": "Eyes of the Empress",
+      "signature": "048b3757684d831f3a19a051b6b3e56f3bc3e5536c7496ae925bb06fb6c95f58"
+    },
+    {
+      "rawKey": "wh3_dlc24_unit_passive_feral_rage_i",
+      "canonicalId": "wh3_dlc24_unit_passive_feral_rage_i",
+      "name": "야생의 분노 I",
+      "englishName": "Feral Rage I",
+      "signature": "c658270d4143c06f7d0019abb96a6e37c9d7fb37f05298035b95dfee7f32d2ac"
+    },
+    {
+      "rawKey": "wh3_dlc24_unit_passive_feral_rage_ii",
+      "canonicalId": "wh3_dlc24_unit_passive_feral_rage_ii",
+      "name": "야생의 분노 II",
+      "englishName": "Feral Rage II",
+      "signature": "bc11da1ac75fba3bcf50878608ef484579988230054a343b00ffebaae8c3e20a"
+    },
+    {
+      "rawKey": "wh3_dlc24_unit_passive_gift_of_mutation",
+      "canonicalId": "wh3_dlc24_unit_passive_gift_of_mutation",
+      "name": "변이의 선물",
+      "englishName": "Gift of Mutation",
+      "signature": "1b9314438c2e06907546039bc12bea6506c0cb934967697b7ca202d3d0ed4772"
+    },
+    {
+      "rawKey": "wh3_dlc24_unit_passive_guardian_shield",
+      "canonicalId": "wh3_dlc24_unit_passive_guardian_shield",
+      "name": "수호자 방패",
+      "englishName": "Guardian Shield",
+      "signature": "1ccf3137efb2c03aec69b113c23e8cb0d911d84ac1025ee509e09b8128414d0b"
+    },
+    {
+      "rawKey": "wh3_dlc24_unit_passive_icon_of_the_great_cities",
+      "canonicalId": "wh3_dlc24_unit_passive_icon_of_the_great_cities",
+      "name": "위대한 도시의 상징",
+      "englishName": "Icon of the Great Cities",
+      "signature": "97c15d196dcb308c02c2e20e6d3d9339b1cbb04522655dea5df7e780acadf95b"
+    },
+    {
+      "rawKey": "wh3_dlc24_unit_passive_incarnate_flock_of_doom",
+      "canonicalId": "wh3_dlc24_unit_passive_incarnate_flock_of_doom",
+      "name": "모여든 파멸의 깃털",
+      "englishName": "Incarnate Flock of Doom",
+      "signature": "8598346d15e2d29a8422e3d1280e927d049b67865f92e684a68b59f7a56ccd92"
+    },
+    {
+      "rawKey": "wh3_dlc24_unit_passive_jade_conduit",
+      "canonicalId": "wh3_dlc24_unit_passive_jade_conduit",
+      "name": "옥의 전도체",
+      "englishName": "Jade Conduit",
+      "signature": "de54200ce283a97ffb43eb8d7f74820078e450e2d6c60d6777b0c8752af616e0"
+    },
+    {
+      "rawKey": "wh3_dlc24_unit_passive_predatory_fighter",
+      "canonicalId": "wh3_dlc24_unit_passive_predatory_fighter",
+      "name": "포식성 전사",
+      "englishName": "Predatory Fighter",
+      "signature": "9d213d09b99cafc8b6c51df637b3d6f5a88ffd877556e3b26e54a1497427fd44"
+    },
+    {
+      "rawKey": "wh3_dlc24_unit_passive_sacred_duty",
+      "canonicalId": "wh3_dlc24_unit_passive_sacred_duty",
+      "name": "신성한 의무",
+      "englishName": "Sacred Duty",
+      "signature": "f7c0f0882d04ef6cffb3ee5035f76cf628012debb18105f9b1bb3fe6dc5a5864"
+    },
+    {
+      "rawKey": "wh3_dlc24_unit_passive_solar_engine",
+      "canonicalId": "wh3_dlc24_unit_passive_solar_engine",
+      "name": "태양 제단",
+      "englishName": "Solar Engine",
+      "signature": "b0d2013444e98a4a5384649eb4c9977d71bef338b3531084e7ad026d47453906"
+    },
+    {
+      "rawKey": "wh3_dlc24_unit_passive_sour_discharge",
+      "canonicalId": "wh3_dlc24_unit_passive_sour_discharge",
+      "name": "시큼한 분비물",
+      "englishName": "Sour Discharge",
+      "signature": "b6d8b2c64e8d0dc587294577c8236d0e2879b8fb8d3ee443c31465e814697a0d"
+    },
+    {
+      "rawKey": "wh3_dlc24_unit_passive_spawn_kin_kroxigors",
+      "canonicalId": "wh3_dlc24_unit_passive_spawn_kin_kroxigors",
+      "name": "번식 동족",
+      "englishName": "Spawn-Kin",
+      "signature": "37548d704251669eed2b84634420e2ba6d0d5a291ad0ec985b89a427edad34c9"
+    },
+    {
+      "rawKey": "wh3_dlc24_unit_passive_spawn_kin_skinks",
+      "canonicalId": "wh3_dlc24_unit_passive_spawn_kin_skinks",
+      "name": "번식 동족",
+      "englishName": "Spawn-Kin",
+      "signature": "64b69d1188ff895f3d88b4c7f5e0883cafcb21e175f86e156081ab463e2f4f5c"
+    },
+    {
+      "rawKey": "wh3_dlc24_unit_passive_tides_of_transformation",
+      "canonicalId": "wh3_dlc24_unit_passive_tides_of_transformation",
+      "name": "변화의 노도",
+      "englishName": "Tides of Transformation",
+      "signature": "34fbe108ff94b351efb81af18599f4a41efae6d58db09c8e7a83d2c065545cb3"
+    },
+    {
+      "rawKey": "wh3_dlc25_unit_passive_abandon_ship",
+      "canonicalId": "wh3_dlc25_unit_passive_abandon_ship",
+      "name": "배를 버려라!",
+      "englishName": "Abandon Ship!",
+      "signature": "23aba17d08319db591fe9a26184b341dfedc210d407a600846890a9584a85c6d"
+    },
+    {
+      "rawKey": "wh3_dlc25_unit_passive_blackpowder_discipline",
+      "canonicalId": "wh3_dlc25_unit_passive_blackpowder_discipline",
+      "name": "화약 규율",
+      "englishName": "Blackpowder Discipline",
+      "signature": "dcd0d1fd68a7206d882e0377f7dd5796e2763ce0f8593e223bb6a76fb45bb6e7"
+    },
+    {
+      "rawKey": "wh3_dlc25_unit_passive_corrosive_bile",
+      "canonicalId": "wh3_dlc25_unit_passive_corrosive_bile",
+      "name": "부식성 담즙",
+      "englishName": "Corrosive Bile",
+      "signature": "1f72a4e593c2ed3b278240b572b680b6247df99d6eb57ec6d0d1a537da02f84a"
+    },
+    {
+      "rawKey": "wh3_dlc25_unit_passive_dwarf_rum",
+      "canonicalId": "wh3_dlc25_unit_passive_dwarf_rum",
+      "name": "드워프 럼주",
+      "englishName": "Dwarf Rum",
+      "signature": "c23a3b47962ca9a298c60a4af22145b12328a46a458d48e2f78bd79516941eec"
+    },
+    {
+      "rawKey": "wh3_dlc25_unit_passive_nurgling_emergence",
+      "canonicalId": "wh3_dlc25_unit_passive_nurgling_emergence",
+      "name": "너글링 출현",
+      "englishName": "Nurgling Emergence",
+      "signature": "e07e7a6ee06759c1da56f8fb3286f367e16a267ca736eba8fcb4a826ed71b995"
+    },
+    {
+      "rawKey": "wh3_dlc25_unit_passive_rear_guardian",
+      "canonicalId": "wh3_dlc25_unit_passive_rear_guardian",
+      "name": "후위대",
+      "englishName": "Rear-Guardian",
+      "signature": "e1d21a8fdb566fb5896091f937f19356d46096b8a2a4705c0f2e943d01f8a224"
+    },
+    {
+      "rawKey": "wh3_dlc25_unit_passive_tears_of_nurgle",
+      "canonicalId": "wh3_dlc25_unit_passive_tears_of_nurgle",
+      "name": "너글의 눈물",
+      "englishName": "Tears of Nurgle",
+      "signature": "7b9412f65fe53cebcc72902f49236c1b038198479e3e882d7f9073c0183631d1"
+    },
+    {
+      "rawKey": "wh3_dlc25_unit_passive_the_blessing_of_the_father",
+      "canonicalId": "wh3_dlc25_unit_passive_the_blessing_of_the_father",
+      "name": "파리대왕의 축복",
+      "englishName": "The Blessings of the Fly Lord",
+      "signature": "11e693b5f46d132111612574478af0d12f046b8e539709fcb00afdf1d28635e2"
+    },
+    {
+      "rawKey": "wh3_dlc25_unit_passive_wards_of_grimnir",
+      "canonicalId": "wh3_dlc25_unit_passive_wards_of_grimnir",
+      "name": "그림니르의 보호",
+      "englishName": "Wards of Grimnir",
+      "signature": "ad07b8ac44e0f78bb1505d280b4da20476edc49908e528051ca2038d2c94511f"
+    },
+    {
+      "rawKey": "wh3_dlc26_unit_abilities_force_of_total_destruction",
+      "canonicalId": "wh3_dlc26_unit_abilities_force_of_total_destruction",
+      "name": "절멸의 힘",
+      "englishName": "Force of Total Destruction",
+      "signature": "adc99074a052ffaec024ebe0712c18c24cad88c86f12271f21d73380511f6de2"
+    },
+    {
+      "rawKey": "wh3_dlc26_unit_passive_aura_of_frost",
+      "canonicalId": "wh3_dlc26_unit_passive_aura_of_frost",
+      "name": "서리 오라",
+      "englishName": "Aura of Frost",
+      "signature": "b20180ae6c4c809afb86400fe0a318c8102faea5ddbc323e3d866db7b89929f3"
+    },
+    {
+      "rawKey": "wh3_dlc26_unit_passive_bloodstorm",
+      "canonicalId": "wh3_dlc26_unit_passive_bloodstorm",
+      "name": "혈풍",
+      "englishName": "Bloodstorm",
+      "signature": "426893487bef7a7adc2817c3b202aecefd2654ac3c79aeadb5ebe31acaac1a0e"
+    },
+    {
+      "rawKey": "wh3_dlc26_unit_passive_carrion_frenzy",
+      "canonicalId": "wh3_dlc26_unit_passive_carrion_frenzy",
+      "name": "광란의 포식",
+      "englishName": "Carrion Frenzy",
+      "signature": "0b20009b3428b161a99c6af3f3ba39a582a6ffcdff36c56e91f24e157e043bb7"
+    },
+    {
+      "rawKey": "wh3_dlc26_unit_passive_fury_of_the_skullthrone",
+      "canonicalId": "wh3_dlc26_unit_passive_fury_of_the_skullthrone",
+      "name": "해골 왕좌의 격노",
+      "englishName": "Fury of the Skull Throne",
+      "signature": "5155f3eda2959b2dcdba99b6cb2132ba7c2870341d0e93b74e881a00c6b395a9"
+    },
+    {
+      "rawKey": "wh3_dlc26_unit_passive_grey_supremacy",
+      "canonicalId": "wh3_dlc26_unit_passive_grey_supremacy",
+      "name": "회색 패권",
+      "englishName": "Grey Supremacy",
+      "signature": "187451fb525a1f836d71ce807d04ff219a9047911abc6e16254cf47264e25172"
+    },
+    {
+      "rawKey": "wh3_dlc26_unit_passive_hellraiser",
+      "canonicalId": "wh3_dlc26_unit_passive_hellraiser",
+      "name": "난폭한 주정꾼",
+      "englishName": "Hellraiser",
+      "signature": "9fbac1ed4c0182e9e4452600ba3ba63b360791f33c38d07abe3a5fec55962fac"
+    },
+    {
+      "rawKey": "wh3_dlc26_unit_passive_piggy_back_joust",
+      "canonicalId": "wh3_dlc26_unit_passive_piggy_back_joust",
+      "name": "돼지기수 기마전!",
+      "englishName": "Piggyback Joust!",
+      "signature": "3430545222a8b1772898365e34a1c0b6a120ffc61f6bd0b3907610cafcfd8923"
+    },
+    {
+      "rawKey": "wh3_dlc26_unit_passive_runes_of_binding",
+      "canonicalId": "wh3_dlc26_unit_passive_runes_of_binding",
+      "name": "결속의 룬",
+      "englishName": "Runes of Binding",
+      "signature": "b5ebc3c46b17d6232fdb68118fa7d3db081620779f29e30b8ed92af319ee6b88"
+    },
+    {
+      "rawKey": "wh3_dlc26_unit_passive_uncanny_coordination",
+      "canonicalId": "wh3_dlc26_unit_passive_uncanny_coordination",
+      "name": "기묘한 협력",
+      "englishName": "Uncanny Coordination",
+      "signature": "8e6ebe0a59565dc1b6499e244b5f5befcc5d63e5af301f8a028293b3285e964f"
+    },
+    {
+      "rawKey": "wh3_dlc27_character_abilities_murderous_mastery",
+      "canonicalId": "wh3_dlc27_character_abilities_murderous_mastery",
+      "name": "살육의 극의",
+      "englishName": "Murderous Mastery",
+      "signature": "d136ff0e09b1c13e51c2c297bf41c92b71a0b71b2fe4572bd925fe148e25034b"
+    },
+    {
+      "rawKey": "wh3_dlc27_unit_passive_abyssal_cloak",
+      "canonicalId": "wh3_dlc27_unit_passive_abyssal_cloak",
+      "name": "심연의 장막",
+      "englishName": "Abyssal Cloak",
+      "signature": "e9a26c40200bc93faf7199ddcefdc1240a04a7c53deaebb0c3de4ce6a48074fa"
+    },
+    {
+      "rawKey": "wh3_dlc27_unit_passive_battle_songs",
+      "canonicalId": "wh3_dlc27_unit_passive_battle_songs",
+      "name": "전투의 노래",
+      "englishName": "Battle Songs",
+      "signature": "0d7d951aa84aa183dac819ff825e9de37884db80d3e47d86f71ba48d77d717ce"
+    },
+    {
+      "rawKey": "wh3_dlc27_unit_passive_burrowing_instinct",
+      "canonicalId": "wh3_dlc27_unit_passive_burrowing_instinct",
+      "name": "생존 본능",
+      "englishName": "Survival Instinct",
+      "signature": "988c4b0fa14312c374f7ef109322b92c2d5a077747c8a0e3462c8f16572ad09b"
+    },
+    {
+      "rawKey": "wh3_dlc27_unit_passive_dual_personality_betrayer",
+      "canonicalId": "wh3_dlc27_unit_passive_dual_personality_betrayer",
+      "name": "두 인격 – 배신자",
+      "englishName": "Dual Personality – Betrayer",
+      "signature": "709003be71cedc443a835973a68260767e14dca4729ca97d734ead9055307a4a"
+    },
+    {
+      "rawKey": "wh3_dlc27_unit_passive_dual_personality_chaosbrand",
+      "canonicalId": "wh3_dlc27_unit_passive_dual_personality_chaosbrand",
+      "name": "두 인격 – 야만인",
+      "englishName": "Dual Personality – Savage",
+      "signature": "c653704eb04baf275fd6137bde455524e3230e4ea407f5407a99ac245821a3b2"
+    },
+    {
+      "rawKey": "wh3_dlc27_unit_passive_dual_personality_defiler",
+      "canonicalId": "wh3_dlc27_unit_passive_dual_personality_defiler",
+      "name": "두 인격 – 배신자",
+      "englishName": "Dual Personality – Betrayer",
+      "signature": "5be67d897b2d502f53846c6a8d67b088ecd6e0da04c91241ac9165bb4472d022"
+    },
+    {
+      "rawKey": "wh3_dlc27_unit_passive_dual_personality_savage",
+      "canonicalId": "wh3_dlc27_unit_passive_dual_personality_savage",
+      "name": "두 인격 – 야만인",
+      "englishName": "Dual Personality – Savage",
+      "signature": "0697630b08742ed013defc0327a376cbd594191e40c3d7d7bf842a51800d77fe"
+    },
+    {
+      "rawKey": "wh3_dlc27_unit_passive_endless_malice",
+      "canonicalId": "wh3_dlc27_unit_passive_endless_malice",
+      "name": "끝없는 악의",
+      "englishName": "Endless Malice",
+      "signature": "868c4ec64d93822b685f44617bc6b64b44280ead367f914afdbfdeaa3e02cba2"
+    },
+    {
+      "rawKey": "wh3_dlc27_unit_passive_enfeebling_cold",
+      "canonicalId": "wh3_dlc27_unit_passive_enfeebling_cold",
+      "name": "쇠약해지는 한기",
+      "englishName": "Enfeebling Cold",
+      "signature": "6dbc8d164eb9c7478d9653a4fc658af632e55618bbb4aef2fbb36a22f397510e"
+    },
+    {
+      "rawKey": "wh3_dlc27_unit_passive_momentum",
+      "canonicalId": "wh3_dlc27_unit_passive_momentum",
+      "name": "기세",
+      "englishName": "Momentum",
+      "signature": "60ac47c387a848c3fd8517d62a932f21cba67eddba4742ba324fb63e54899cdf"
+    },
+    {
+      "rawKey": "wh3_dlc27_unit_passive_murderous_euphoria",
+      "canonicalId": "wh3_dlc27_unit_passive_murderous_euphoria",
+      "name": "살의의 희열",
+      "englishName": "Murderous Euphoria",
+      "signature": "4655c1c7b4654ad994a01fc546f8bfb7b807644972816472dd7d796d840a0a29"
+    },
+    {
+      "rawKey": "wh3_dlc27_unit_passive_naval_discipline",
+      "canonicalId": "wh3_dlc27_unit_passive_naval_discipline",
+      "name": "해군 규율",
+      "englishName": "Naval Discipline",
+      "signature": "1b4640b88c2508cd9c901e0ac34a23585fad88bba6f2658d4f173083bce29177"
+    },
+    {
+      "rawKey": "wh3_dlc27_unit_passive_pleasure_through_pain",
+      "canonicalId": "wh3_dlc27_unit_passive_pleasure_through_pain",
+      "name": "고통을 통한 쾌락",
+      "englishName": "Pleasure Through Pain",
+      "signature": "b0cec1396391c1e23d957a0478f14d22d60eed7a3a885729d109f352ffac2022"
+    },
+    {
+      "rawKey": "wh3_dlc27_unit_passive_poisonous_blood",
+      "canonicalId": "wh3_dlc27_unit_passive_poisonous_blood",
+      "name": "독기 어린 피",
+      "englishName": "Poisonous Blood",
+      "signature": "3030474ef15fb5375b334f074438c3bf3246c35960e2aa3238b7d7a45a542ebd"
+    },
+    {
+      "rawKey": "wh3_dlc27_unit_passive_split_up",
+      "canonicalId": "wh3_dlc27_unit_passive_split_up",
+      "name": "분할",
+      "englishName": "Split Up",
+      "signature": "40a9d98f664a16a5b175ce51304253b64d185c66082d3b62a21f85cdc6184b49"
+    },
+    {
+      "rawKey": "wh3_dlc29_mount_passive_decadent_miasma",
+      "canonicalId": "wh3_dlc29_mount_passive_decadent_miasma",
+      "name": "타락한 독기",
+      "englishName": "Decadent Miasma",
+      "signature": "55ac23bb5eca215e1de753cebe424f81e8d7137c325f23600c5feb1b4481fd13"
+    },
+    {
+      "rawKey": "wh3_dlc29_mount_passive_unholiest_relic",
+      "canonicalId": "wh3_dlc29_mount_passive_unholiest_relic",
+      "name": "가장 불경한 유물",
+      "englishName": "Unholiest Relic",
+      "signature": "401d4815e85de4dc782144ac8249c35859250d61a80f050589557d48351af23a"
+    },
+    {
+      "rawKey": "wh3_dlc29_passive_spell_lightning_strike",
+      "canonicalId": "wh3_dlc29_passive_spell_lightning_strike",
+      "name": "번개의 일격",
+      "englishName": "Lightning Strike",
+      "signature": "1f99ac1f88773ed82a7d8b6f7104b6eb33cfcc8120f24febfe69ce8e01da173e"
+    },
+    {
+      "rawKey": "wh3_dlc29_unit_abilities_wrath_of_the_sands",
+      "canonicalId": "wh3_dlc29_unit_abilities_wrath_of_the_sands",
+      "name": "모래의 분노",
+      "englishName": "Wrath of the Sands",
+      "signature": "7e3a4eb7158bb054c201b8ea8b1de6a75a67921c5b4d30cf4903de29f703daa8"
+    },
+    {
+      "rawKey": "wh3_dlc29_unit_passive_aura_of_vitriol",
+      "canonicalId": "wh3_dlc29_unit_passive_aura_of_vitriol",
+      "name": "신랄한 기운",
+      "englishName": "Aura of Vitriol",
+      "signature": "a5a084b78b84c81b4632e1ce478c58329248c0dd0cdd76f7c6fefd3c16b45007"
+    },
+    {
+      "rawKey": "wh3_dlc29_unit_passive_carnage",
+      "canonicalId": "wh3_dlc29_unit_passive_carnage",
+      "name": "워프의 힘 입은 난동",
+      "englishName": "Warp-Fueled Rampage",
+      "signature": "2fe944765911d3e15732e47151cfdb9347c60f1d057bc64bcb3ff374c21a8f06"
+    },
+    {
+      "rawKey": "wh3_dlc29_unit_passive_chosen_of_the_plaguefather",
+      "canonicalId": "wh3_dlc29_unit_passive_chosen_of_the_plaguefather",
+      "name": "역병아비의 선택받은 자",
+      "englishName": "Chosen of the Plaguefather",
+      "signature": "254b0399e12ca1eef787f852ed69a47b60e5b6d48a0e4c77239b100bb6e90ca1"
+    },
+    {
+      "rawKey": "wh3_dlc29_unit_passive_crush_the_weak",
+      "canonicalId": "wh3_dlc29_unit_passive_crush_the_weak",
+      "name": "약자 섬멸",
+      "englishName": "Crush the Weak",
+      "signature": "93c63d3a6aedfd9663cfdda007d253dbb70cb8dd77a15f7e42eebe24f718321c"
+    },
+    {
+      "rawKey": "wh3_dlc29_unit_passive_curse_of_the_fallen",
+      "canonicalId": "wh3_dlc29_unit_passive_curse_of_the_fallen",
+      "name": "스러진 자의 저주",
+      "englishName": "Curse of the Fallen",
+      "signature": "5b4cb04341949717565722a4ab948fa234851ebd8cac2f0584c6478019397062"
+    },
+    {
+      "rawKey": "wh3_dlc29_unit_passive_doom_of_many",
+      "canonicalId": "wh3_dlc29_unit_passive_doom_of_many",
+      "name": "많은 이들의 파멸",
+      "englishName": "Doom of Many",
+      "signature": "09dab0b397c01e6a4bb2e62e7373e284d2b5892ee2fa208074829e612707760c"
+    },
+    {
+      "rawKey": "wh3_dlc29_unit_passive_drakenhof_banner",
+      "canonicalId": "wh3_dlc29_unit_passive_drakenhof_banner",
+      "name": "드라켄호프 군기",
+      "englishName": "Drakenhof Banner",
+      "signature": "b3cc9de5cf98862db613399007f28cf517f43da07b242804180f4079351e7dfd"
+    },
+    {
+      "rawKey": "wh3_dlc29_unit_passive_lieutenants_of_the_apocalypse",
+      "canonicalId": "wh3_dlc29_unit_passive_lieutenants_of_the_apocalypse",
+      "name": "몰락의 후예들",
+      "englishName": "Scions of the Downfall",
+      "signature": "453fe776a0a20419c0e59192e75acf49b7e062606b764eb58ecdd60171d8410a"
+    },
+    {
+      "rawKey": "wh3_dlc29_unit_passive_little_plague_i",
+      "canonicalId": "wh3_dlc29_unit_passive_little_plague_i",
+      "name": "통제된 역병",
+      "englishName": "Contained Plague",
+      "signature": "abe6b688f4fcd99881946f5f862637b818ae3029c157d5d6e711a604f4414b0e"
+    },
+    {
+      "rawKey": "wh3_dlc29_unit_passive_little_plague_ii",
+      "canonicalId": "wh3_dlc29_unit_passive_little_plague_ii",
+      "name": "통제된 역병 II",
+      "englishName": "Contained Plague II",
+      "signature": "4ec21331d8118895d6c17c82d7eed14bbec120e4f6bb9465526f60eefee0bd46"
+    },
+    {
+      "rawKey": "wh3_dlc29_unit_passive_locus_of_azyr",
+      "canonicalId": "wh3_dlc29_unit_passive_locus_of_azyr",
+      "name": "아지르의 핵",
+      "englishName": "Locus of Azyr",
+      "signature": "4b6ccd1d49869217cddaec9af2bbcfd12d5471fdf882ffd7d8cc9caec33fa567"
+    },
+    {
+      "rawKey": "wh3_dlc29_unit_passive_mutant_rush",
+      "canonicalId": "wh3_dlc29_unit_passive_mutant_rush",
+      "name": "변이체 돌격",
+      "englishName": "Mutant Rush",
+      "signature": "981bfc9e01da3e9b8e29d91d10b9808a8e0e8b6b31023bbb0a2b0b9f853b59bb"
+    },
+    {
+      "rawKey": "wh3_dlc29_unit_passive_pestilent_perfection",
+      "canonicalId": "wh3_dlc29_unit_passive_pestilent_perfection",
+      "name": "완벽한 역병",
+      "englishName": "Pestilent Perfection",
+      "signature": "e69b800b32735fe8be6c1ce4a3a0bf5a584c024613207fa6a3ef105f61da8f81"
+    },
+    {
+      "rawKey": "wh3_dlc29_unit_passive_portents_of_battle",
+      "canonicalId": "wh3_dlc29_unit_passive_portents_of_battle",
+      "name": "전투의 징후",
+      "englishName": "Portents of Battle",
+      "signature": "dcbdb9c77f02b02c7dfc01a57109777c7e300949f8d737d400c78240d0b75a22"
+    },
+    {
+      "rawKey": "wh3_dlc29_unit_passive_power_grab",
+      "canonicalId": "wh3_dlc29_unit_passive_power_grab",
+      "name": "권력 쟁취",
+      "englishName": "Power Grab",
+      "signature": "47c1160f44a7d72221cb1673482067c48eda0a56d149f25cb6f2cb115eed3563"
+    },
+    {
+      "rawKey": "wh3_dlc29_unit_passive_scrying_pool",
+      "canonicalId": "wh3_dlc29_unit_passive_scrying_pool",
+      "name": "점치는 연못",
+      "englishName": "Scrying Pool",
+      "signature": "ff0fc621e09a9ae4f55e27cbf36cf62f95df4298348170cd5957e5be2e717056"
+    },
+    {
+      "rawKey": "wh3_dlc29_unit_passive_spiky",
+      "canonicalId": "wh3_dlc29_unit_passive_spiky",
+      "name": "가시투성이",
+      "englishName": "Spiky",
+      "signature": "0b68cccd92f6c86bd1ad5d023a0262e161c181a209458fa90da8cd3852533712"
+    },
+    {
+      "rawKey": "wh3_dlc29_unit_passive_unshakable_pathogen",
+      "canonicalId": "wh3_dlc29_unit_passive_unshakable_pathogen",
+      "name": "흔들리지 않는 병원체",
+      "englishName": "Unshakable Pathogen",
+      "signature": "4d0ed2ad915bde7eac5580530f552dbb168009cfa02bc65e4bcf036c55fe8060"
+    },
+    {
+      "rawKey": "wh3_dlc29_unit_passive_yell_and_bawl",
+      "canonicalId": "wh3_dlc29_unit_passive_yell_and_bawl",
+      "name": "괴성과 난투",
+      "englishName": "Yell and Brawl",
+      "signature": "1f7a6395644e4a21311c633a4c64e4ca73830e005c717ca083dedc5cdd19313b"
+    },
+    {
+      "rawKey": "wh3_main_mount_passive_totem_of_endless_bloodletting",
+      "canonicalId": "wh3_main_mount_passive_totem_of_endless_bloodletting",
+      "name": "끝없는 출혈의 토템",
+      "englishName": "Totem of Endless Bloodletting",
+      "signature": "21e88388b3834bd2ecfe98828389287205fda2cdbba21a38665815f78d14213e"
+    },
+    {
+      "rawKey": "wh3_main_unit_abilities_gnoblar_traps",
+      "canonicalId": "wh3_main_unit_abilities_gnoblar_traps",
+      "name": "노블라 덫",
+      "englishName": "Gnoblar Traps",
+      "signature": "a24fae2ef591d85d5fcd92d1e011a4aae9e9193a208a1ba9fe84a4bbf3ef60a3"
+    },
+    {
+      "rawKey": "wh3_main_unit_passive_arcane_mirth",
+      "canonicalId": "wh3_main_unit_passive_arcane_mirth",
+      "name": "기이한 조소",
+      "englishName": "Arcane Mirth",
+      "signature": "fc1f5712c4415abb2473886232cde284e63500a483506e6ee52109b6b0506eeb"
+    },
+    {
+      "rawKey": "wh3_main_unit_passive_aura_of_immolation",
+      "canonicalId": "wh3_main_unit_passive_aura_of_immolation",
+      "name": "번제의 오라",
+      "englishName": "Aura of Immolation",
+      "signature": "a8d1804df43526331afbd2135389fd84fb00b13d421c4a2abfe37bba6dcf6a04"
+    },
+    {
+      "rawKey": "wh3_main_unit_passive_aura_of_mutation",
+      "canonicalId": "wh3_main_unit_passive_aura_of_mutation",
+      "name": "변형의 오라",
+      "englishName": "Aura of Mutation",
+      "signature": "4226691a07cae0ab2005590ad37ae1e19d14dc1b87f8026f2711ba4e6b886e9b"
+    },
+    {
+      "rawKey": "wh3_main_unit_passive_battle_harmony_yang",
+      "canonicalId": "battle_harmony_yang",
+      "name": "전투의 조화: 양",
+      "englishName": "Battle Harmony: Yang",
+      "signature": "cf73dfd0f8927e06103ce90dafb5ec85828294a92d620f37800649c0f8a69162"
+    },
+    {
+      "rawKey": "wh3_main_unit_passive_battle_harmony_yin",
+      "canonicalId": "battle_harmony_yin",
+      "name": "전투의 조화: 음",
+      "englishName": "Battle Harmony: Yin",
+      "signature": "a9b9480023a8d21b612890c313cdccb0c31e154a2d9433e809299f8ca7cd73f2"
+    },
+    {
+      "rawKey": "wh3_main_unit_passive_by_our_blood",
+      "canonicalId": "wh3_main_unit_passive_by_our_blood",
+      "name": "우리의 피로",
+      "englishName": "By Our Blood",
+      "signature": "28ea69b008d14615892e8d5035d6fcaf2fbb03e70322d9620ced80c01b0b49ba"
+    },
+    {
+      "rawKey": "wh3_main_unit_passive_cloud_of_flies",
+      "canonicalId": "wh3_main_unit_passive_cloud_of_flies",
+      "name": "파리 떼",
+      "englishName": "Cloud of Flies",
+      "signature": "0d274ebbd0b869462a526e8ae40e1b2d0f535af2aa16b8a89ea17c1c14b38676"
+    },
+    {
+      "rawKey": "wh3_main_unit_passive_daemonic_instability_daemon",
+      "canonicalId": "wh3_main_unit_passive_daemonic_instability_daemon",
+      "name": "악마의 불안정성",
+      "englishName": "Daemonic Instability",
+      "signature": "01c18de6760e3d0dd6ba4eb1a7d650c7847779a8c7e7455f007140d6b15b3138"
+    },
+    {
+      "rawKey": "wh3_main_unit_passive_daemonic_instability_daemon_ii",
+      "canonicalId": "wh3_main_unit_passive_daemonic_instability_daemon_ii",
+      "name": "추방!",
+      "englishName": "Banished!",
+      "signature": "ab5054240d185dd978334e0c1f6f3e803f8d4a2ed8cf0b8553cbc1d142c3290c"
+    },
+    {
+      "rawKey": "wh3_main_unit_passive_daemonic_instability_khorne",
+      "canonicalId": "daemonic_instability",
+      "name": "악마의 불안정성",
+      "englishName": "Daemonic Instability",
+      "signature": "18db7706bddb90d8a54b45602bb99517787148d5781677301b0b7693fb89d49a"
+    },
+    {
+      "rawKey": "wh3_main_unit_passive_daemonic_instability_khorne_ii",
+      "canonicalId": "banished",
+      "name": "추방!",
+      "englishName": "Banished!",
+      "signature": "50254bdd2800c748ad7b7f23ed901ddcbf4d1941fe247e33c8571d2dc9ae536c"
+    },
+    {
+      "rawKey": "wh3_main_unit_passive_daemonic_instability_nurgle",
+      "canonicalId": "wh3_main_unit_passive_daemonic_instability_nurgle",
+      "name": "악마의 불안정성",
+      "englishName": "Daemonic Instability",
+      "signature": "f4f1e8fa1a4b46a7a26f637e72c6d1e3c6aa52065042bb5e0b143a4f5637daa9"
+    },
+    {
+      "rawKey": "wh3_main_unit_passive_daemonic_instability_nurgle_ii",
+      "canonicalId": "wh3_main_unit_passive_daemonic_instability_nurgle_ii",
+      "name": "추방!",
+      "englishName": "Banished!",
+      "signature": "5ae4af69295984c5bedf605dc554bdf1912cceb7226f6ddbdf7622ab997d9af0"
+    },
+    {
+      "rawKey": "wh3_main_unit_passive_daemonic_instability_slaanesh",
+      "canonicalId": "wh3_main_unit_passive_daemonic_instability_slaanesh",
+      "name": "악마의 불안정성",
+      "englishName": "Daemonic Instability",
+      "signature": "4304493054df491f76340e0e16fd74b7fb1f805b88481e4d9a7eb4faed50b6ec"
+    },
+    {
+      "rawKey": "wh3_main_unit_passive_daemonic_instability_slaanesh_ii",
+      "canonicalId": "wh3_main_unit_passive_daemonic_instability_slaanesh_ii",
+      "name": "추방!",
+      "englishName": "Banished!",
+      "signature": "71f3a3c461e770e8d11e2247a07d7eb95d96ac9cfd22ec2734169b8932537d63"
+    },
+    {
+      "rawKey": "wh3_main_unit_passive_daemonic_instability_tzeentch",
+      "canonicalId": "wh3_main_unit_passive_daemonic_instability_tzeentch",
+      "name": "악마의 불안정성",
+      "englishName": "Daemonic Instability",
+      "signature": "e06e91ab18b69c3884b0f5a5c292b9525602220162b4f10fcd4101f15dee1cf3"
+    },
+    {
+      "rawKey": "wh3_main_unit_passive_daemonic_instability_tzeentch_ii",
+      "canonicalId": "wh3_main_unit_passive_daemonic_instability_tzeentch_ii",
+      "name": "추방!",
+      "englishName": "Banished!",
+      "signature": "c3e7e2c92416e9b7773c14a3d687d46fda0e6bcf4ff9b1041fcd30d5a3829eae"
+    },
+    {
+      "rawKey": "wh3_main_unit_passive_defensive_stance",
+      "canonicalId": "wh3_main_unit_passive_defensive_stance",
+      "name": "방어 태세",
+      "englishName": "Defensive Stance",
+      "signature": "4e2aba00fd0638911b5b982b9f42aece47ead9579e7b61b675bbb88eca43fa58"
+    },
+    {
+      "rawKey": "wh3_main_unit_passive_eye_of_the_dragon",
+      "canonicalId": "wh3_main_unit_passive_eye_of_the_dragon",
+      "name": "용의 눈",
+      "englishName": "Eye of the Dragon",
+      "signature": "0cd29747b22fb99a05c8b55fa690ad74c8c23899311bebcbc95c4f0b5d89c223"
+    },
+    {
+      "rawKey": "wh3_main_unit_passive_feasting_on_fear",
+      "canonicalId": "wh3_main_unit_passive_feasting_on_fear",
+      "name": "공포의 포식",
+      "englishName": "Feasting on Fear",
+      "signature": "0af39d27aba9b7c017736b228dbb793ba5997918085e8790ca0733b5ac11831f"
+    },
+    {
+      "rawKey": "wh3_main_unit_passive_gorefeast",
+      "canonicalId": "wh3_main_unit_passive_gorefeast",
+      "name": "내장 연회",
+      "englishName": "Gorefeast",
+      "signature": "429d98c84b3dca53f4dcebf1dd884592b1d95250a953ebb83337aa03e434ce85"
+    },
+    {
+      "rawKey": "wh3_main_unit_passive_hellblade",
+      "canonicalId": "wh3_main_unit_passive_hellblade",
+      "name": "지옥검",
+      "englishName": "Hellblade",
+      "signature": "dfc840bde2553dd1cedad5c7fe32df5d826c3e9cb6659bf3fa8918fe13c9928e"
+    },
+    {
+      "rawKey": "wh3_main_unit_passive_nexus_of_the_elemental_winds",
+      "canonicalId": "wh3_main_unit_passive_nexus_of_the_elemental_winds",
+      "name": "원소풍의 연결체",
+      "englishName": "Nexus of Elemental Winds",
+      "signature": "631c27f8c818b443c5092cbbb1935668d582d165ed3ed8ea5ef6c1de0b8260d8"
+    },
+    {
+      "rawKey": "wh3_main_unit_passive_single_entity",
+      "canonicalId": "wounds",
+      "name": "부상",
+      "englishName": "Wounds",
+      "signature": "9a1e0fed61f02738638b57c52afb4889927d019fd08cdcf56ec9b3b4d4492306"
+    },
+    {
+      "rawKey": "wh3_main_unit_passive_skullfeast",
+      "canonicalId": "wh3_main_unit_passive_skullfeast",
+      "name": "해골연회",
+      "englishName": "Skullfeast",
+      "signature": "7f6279e30b4f39ace230a67a43c7a18b0181ac17042b2f0774a553634606ca82"
+    },
+    {
+      "rawKey": "wh3_main_unit_passive_slime_trail",
+      "canonicalId": "wh3_main_unit_passive_slime_trail",
+      "name": "점액 자취",
+      "englishName": "Slime Trail",
+      "signature": "3c01f21a78824ddddbae15553cd21e27a9681a2f5ddc5c57fc5e49fbc65d0779"
+    },
+    {
+      "rawKey": "wh3_main_unit_passive_soul_hunters",
+      "canonicalId": "wh3_main_unit_passive_soul_hunters",
+      "name": "영혼 사냥",
+      "englishName": "Soul Hunters",
+      "signature": "72144039316e08625affb36f2e73ff5c8a56d187969ae0a293a89c27a756441b"
+    },
+    {
+      "rawKey": "wh3_main_unit_passive_soulscent",
+      "canonicalId": "wh3_main_unit_passive_soulscent",
+      "name": "영혼 내음",
+      "englishName": "Soulscent",
+      "signature": "5a2e2e7bfe2a4badc4fc610deedbbf76be869193dac5a3de74581045fe36f296"
+    },
+    {
+      "rawKey": "wh3_twa06_unit_passive_adaptive_tactics",
+      "canonicalId": "wh3_twa06_unit_passive_adaptive_tactics",
+      "name": "적응형 전술",
+      "englishName": "Adaptive Tactics",
+      "signature": "0140585bf8c332604657489c934a48f8a9871a15571aef0f50f3dbf756114c7a"
+    },
+    {
+      "rawKey": "wh3_twa06_unit_passive_festering_gate",
+      "canonicalId": "wh3_twa06_unit_passive_festering_gate",
+      "name": "고름 찬 관문",
+      "englishName": "Festering Gate",
+      "signature": "d6e41d1d0881f04fe82c1379b1b6420a40bca749b47a3a575d778444cdf300cc"
+    },
+    {
+      "rawKey": "wh3_twa06_unit_passive_gloom_of_flies",
+      "canonicalId": "wh3_twa06_unit_passive_gloom_of_flies",
+      "name": "시커먼 벌레떼",
+      "englishName": "Gloom of Flies",
+      "signature": "057b47e6ecc6ac8afa960fe6e98d0f03ff99bfb6c6c65b7fd969fe2b3e19212c"
+    },
+    {
+      "rawKey": "wh3_twa06_unit_passive_hungering_blades",
+      "canonicalId": "wh3_twa06_unit_passive_hungering_blades",
+      "name": "굶주린 칼날",
+      "englishName": "Hungering Blades",
+      "signature": "f5942a304a4ce8738477fee8d11c57bb3b60b12697f943dd017dfdf9d897de2a"
+    },
+    {
+      "rawKey": "wh3_twa07_unit_passive_mantle_of_immolation",
+      "canonicalId": "wh3_twa07_unit_passive_mantle_of_immolation",
+      "name": "번제의 망토",
+      "englishName": "Mantle of Immolation",
+      "signature": "5c73677791078a8ef2c2b679522e68fa6d5aad716f5b1c03c2228ecb3a5e6d67"
+    },
+    {
+      "rawKey": "wh3_twa07_unit_passive_miasma_of_rot",
+      "canonicalId": "wh3_twa07_unit_passive_miasma_of_rot",
+      "name": "부패의 독기",
+      "englishName": "Miasma of Rot",
+      "signature": "62519e8114c43be86f4e3a7efe01edd79cc59a39c94021db68649b4900210663"
+    },
+    {
+      "rawKey": "wh3_twa07_unit_passive_obsessive_adoration",
+      "canonicalId": "wh3_twa07_unit_passive_obsessive_adoration",
+      "name": "광적인 숭배",
+      "englishName": "Obsessive Adoration",
+      "signature": "6a08865fcc5fed760a3a2f4b953de74347838640d5c7a424da10942affcf9e6e"
+    },
+    {
+      "rawKey": "wh3_twa07_unit_passive_wasting_sickness",
+      "canonicalId": "wh3_twa07_unit_passive_wasting_sickness",
+      "name": "쇠락의 역병",
+      "englishName": "The Wasting Sickness",
+      "signature": "e2afda038302518c424281ec410ce783f2204a1cd662b9fa4ceb980229e044dc"
+    },
+    {
+      "rawKey": "wh3_twa08_unit_passive_goreshell",
+      "canonicalId": "wh3_twa08_unit_passive_goreshell",
+      "name": "선혈 껍질",
+      "englishName": "Goreshell",
+      "signature": "3ac5363009ce0c4663620c65ad16951a16c1fbdfc4538ca5b84af5beb9617c05"
+    },
+    {
+      "rawKey": "wh3_twa08_unit_passive_redirecting_aura",
+      "canonicalId": "wh3_twa08_unit_passive_redirecting_aura",
+      "name": "전환의 기운",
+      "englishName": "Redirecting Aura",
+      "signature": "fc31f58cc232569643df6fa26dac1189892150eeb7aae01505d862a487768f49"
+    },
+    {
+      "rawKey": "wh3_twa10_unit_passive_barrier_boost",
+      "canonicalId": "wh3_twa10_unit_passive_barrier_boost",
+      "name": "방어막 강화",
+      "englishName": "Barrier Boost",
+      "signature": "b1747e68e43f6e22f10f956ed9d547dd621a8e8ec1d9758ae6729c21bc7a0b9a"
+    },
+    {
+      "rawKey": "wh3_twa10_unit_passive_blisterback",
+      "canonicalId": "wh3_twa10_unit_passive_blisterback",
+      "name": "물집 분출",
+      "englishName": "Blisterback",
+      "signature": "f0472b91e87dbc2a4a7d69ed0bd6dc4c0c7fa01f5c0e66f7ef11f135f4a49d51"
+    },
+    {
+      "rawKey": "wh3_twa10_unit_passive_waterbirth",
+      "canonicalId": "wh3_twa10_unit_passive_waterbirth",
+      "name": "물 태생",
+      "englishName": "Waterbirth",
+      "signature": "12f7b10f438912eec13cbbff404333a3e8a902783771e6376e5ae9cbdf215560"
+    },
+    {
+      "rawKey": "wh_dlc02_unit_passive_the_flag_of_blood_keep",
+      "canonicalId": "wh_dlc02_unit_passive_the_flag_of_blood_keep",
+      "name": "피의 성채의 깃발",
+      "englishName": "The Flag of Blood Keep",
+      "signature": "733aff76821181a0e861ccb256342e9068224ae42c093fa8e08ed57812dfa7a0"
+    },
+    {
+      "rawKey": "wh_dlc03_unit_passive_bloodgreed",
+      "canonicalId": "wh_dlc03_unit_passive_bloodgreed",
+      "name": "혈욕",
+      "englishName": "Bloodgreed",
+      "signature": "b04841ae75521ca34df986bf7151c2cc5a6d909dc657dbda0ac03cb2469cb76b"
+    },
+    {
+      "rawKey": "wh_dlc03_unit_passive_drunken",
+      "canonicalId": "wh_dlc03_unit_passive_drunken",
+      "name": "난폭함",
+      "englishName": "Rowdy",
+      "signature": "3de151c2e39feb1b316913c719cac4a2036148ce9bd87946b7cd9929572d6bc8"
+    },
+    {
+      "rawKey": "wh_dlc03_unit_passive_primal_fury",
+      "canonicalId": "wh_dlc03_unit_passive_primal_fury",
+      "name": "태고의 분노",
+      "englishName": "Primal Fury",
+      "signature": "d8744974abea3289106fea1b9e1c22b266ba8cda44cb553b6543f134d3b6545d"
+    },
+    {
+      "rawKey": "wh_dlc03_unit_passive_soul_eater",
+      "canonicalId": "wh_dlc03_unit_passive_soul_eater",
+      "name": "영혼 포식자",
+      "englishName": "Soul Eater",
+      "signature": "a8197fbe7495b3d211920adbe4ad2530018d91ea41e16bf8152c60cb7ede7a31"
+    },
+    {
+      "rawKey": "wh_dlc04_unit_passive_balefire",
+      "canonicalId": "wh_dlc04_unit_passive_balefire",
+      "name": "화톳불",
+      "englishName": "Balefire",
+      "signature": "43034990704ca2deaee1e6bab9428f2c79c034d53e1cc4a699f2378d54a52046"
+    },
+    {
+      "rawKey": "wh_dlc04_unit_passive_blasphemous_tome",
+      "canonicalId": "wh_dlc04_unit_passive_blasphemous_tome",
+      "name": "불경한 장서",
+      "englishName": "Blasphemous Tome",
+      "signature": "8a9776cc190bc98ee25c4421a7a55ff5a983d803043d83b2d3c634cf394c907b"
+    },
+    {
+      "rawKey": "wh_dlc04_unit_passive_chilling_aura",
+      "canonicalId": "wh_dlc04_unit_passive_chilling_aura",
+      "name": "차가운 오라",
+      "englishName": "The Chilling Aura",
+      "signature": "e784426ec902b0dc0d51bc8636d62237e65e7238e72dd3dfdce373e260bc9848"
+    },
+    {
+      "rawKey": "wh_dlc04_unit_passive_strength_of_the_penitent",
+      "canonicalId": "wh_dlc04_unit_passive_strength_of_the_penitent",
+      "name": "참회자의 힘",
+      "englishName": "Strength of the Penitent",
+      "signature": "062c17fc96e292c97d5541cec0e18c54816c30a5005b6a0396ab4254fd16f7c8"
+    },
+    {
+      "rawKey": "wh_dlc04_unit_passive_the_reliquary_binding",
+      "canonicalId": "wh_dlc04_unit_passive_the_reliquary_binding",
+      "name": "성골 속박",
+      "englishName": "The Reliquary Binding",
+      "signature": "dae536d2806bdd1c5517032e8f6bda6586d69da8ecd06c6a7fcccf2423c960e6"
+    },
+    {
+      "rawKey": "wh_dlc04_unit_passive_the_reliquary_corruption",
+      "canonicalId": "wh_dlc04_unit_passive_the_reliquary_corruption",
+      "name": "성골 오염",
+      "englishName": "The Reliquary Corruption",
+      "signature": "920a14d2624b2f78385eda64f82cfcfeae5adb457f7278dad0ac06c39ba71100"
+    },
+    {
+      "rawKey": "wh_dlc04_unit_passive_unholy_lodestone",
+      "canonicalId": "wh_dlc04_unit_passive_unholy_lodestone",
+      "name": "불경한 자철석",
+      "englishName": "Unholy Lodestone",
+      "signature": "6dbd5931bad40df670e4e48606b4ed68280f231d63b9a6f18c4dac957626da10"
+    },
+    {
+      "rawKey": "wh_dlc04_unit_passive_vigour_mortis",
+      "canonicalId": "wh_dlc04_unit_passive_vigour_mortis",
+      "name": "죽음의 활력",
+      "englishName": "Vigour Mortis",
+      "signature": "d80e921c0101d700be1f8a540412b836e4c9e845281cea1ddb3b785274a23f7e"
+    },
+    {
+      "rawKey": "wh_dlc05_hero_passive_hawkish_precision",
+      "canonicalId": "wh_dlc05_hero_passive_hawkish_precision",
+      "name": "매의 정확함",
+      "englishName": "Hawkish Precision",
+      "signature": "4c6ec5851171219f3638d5e42451cd95ee1dedde975204d3f9aafe446d972616"
+    },
+    {
+      "rawKey": "wh_dlc05_unit_passive_ancient_protector",
+      "canonicalId": "wh_dlc05_unit_passive_ancient_protector",
+      "name": "고대의 수호자",
+      "englishName": "Ancient Protector",
+      "signature": "277e0f0000d62a0377b766d95b992e1285387dea124d8730d45b5efd33506e14"
+    },
+    {
+      "rawKey": "wh_dlc05_unit_passive_guardians_of_the_wildwood",
+      "canonicalId": "wh_dlc05_unit_passive_guardians_of_the_wildwood",
+      "name": "야생숲의 수호자",
+      "englishName": "Guardians of the Wildwood",
+      "signature": "e0f3a4803ba22c8a48bce20f2261d1cfe87872eec743e3e3269a5f3a8c039c03"
+    },
+    {
+      "rawKey": "wh_dlc06_quest_passive_squigs_go_boom",
+      "canonicalId": "wh_dlc06_quest_passive_squigs_go_boom",
+      "name": "스퀴그 폭발",
+      "englishName": "Squigs Go Boom",
+      "signature": "8f55e17a068f408088da75e12aa1cbd0436b422f4707d900a2700e7c11b4d698"
+    },
+    {
+      "rawKey": "wh_dlc06_unit_passive_liquid_fortification",
+      "canonicalId": "wh_dlc06_unit_passive_liquid_fortification",
+      "name": "한 잔 걸쳐",
+      "englishName": "Liquid Fortification",
+      "signature": "42eee7f73aec61f57817aab0e20f557a0f3faeabdf2615519a55b1f48a3d1a0d"
+    },
+    {
+      "rawKey": "wh_dlc06_unit_passive_opportunist_murderer",
+      "canonicalId": "wh_dlc06_unit_passive_opportunist_murderer",
+      "name": "기회주의 살인자",
+      "englishName": "Opportunist Murderer",
+      "signature": "75491179305f44673f4e45e3b8c7daeb49d068a2c8c41964c44f3e1375f3e2ac"
+    },
+    {
+      "rawKey": "wh_dlc06_unit_passive_power_of_the_dragonback",
+      "canonicalId": "wh_dlc06_unit_passive_power_of_the_dragonback",
+      "name": "용등골산맥의 힘",
+      "englishName": "Power of the Dragonback",
+      "signature": "c128b5cccc996a29635be328cd6be18983228b7a7ffc90136a617496634a5620"
+    },
+    {
+      "rawKey": "wh_dlc06_unit_passive_squigs_go_wild",
+      "canonicalId": "wh_dlc06_unit_passive_squigs_go_wild",
+      "name": "야생의 스퀴그",
+      "englishName": "Squigs Go Wild",
+      "signature": "c273a081b7303b1eea9fd9d75b54c8d6246cfa7e73d6d60e7230814bf2097ab9"
+    },
+    {
+      "rawKey": "wh_dlc06_unit_passive_the_old_grumblers",
+      "canonicalId": "wh_dlc06_unit_passive_the_old_grumblers",
+      "name": "늙은 불평꾼",
+      "englishName": "The Old Grumblers",
+      "signature": "d05604095ca6d1f78488a178d0d4361ff2c5fbf1f580dd204965cd4787d748ad"
+    },
+    {
+      "rawKey": "wh_dlc07_unit_passive_icon_of_devotion",
+      "canonicalId": "wh_dlc07_unit_passive_icon_of_devotion",
+      "name": "헌신의 아이콘",
+      "englishName": "Icon of Devotion",
+      "signature": "b4efaea28f458691feef5c4933e2c05a5699b912e18625402c6d85e29fe7dd0c"
+    },
+    {
+      "rawKey": "wh_dlc07_unit_passive_impetuous",
+      "canonicalId": "wh_dlc07_unit_passive_impetuous",
+      "name": "성급함",
+      "englishName": "Impetuous",
+      "signature": "945e3d551e40e56f874f73b3d428503c1da4ad95de761f48bd4176ab92da05a3"
+    },
+    {
+      "rawKey": "wh_dlc07_unit_passive_the_peasants_duty",
+      "canonicalId": "wh_dlc07_unit_passive_the_peasants_duty",
+      "name": "농민의 의무",
+      "englishName": "The Peasant's Duty",
+      "signature": "7a94c7b7bc98662d884cefe975fb6abbd5b8f7db23e069136e04e50b604f2ce5"
+    },
+    {
+      "rawKey": "wh_dlc08_lord_passive_daring_deathblow",
+      "canonicalId": "wh_dlc08_lord_passive_daring_deathblow",
+      "name": "지극히 대담한 치명타",
+      "englishName": "Extremely Daring Deathblow",
+      "signature": "633eee172d34f319b4970760d822f5f647dff9e39f52af60de6dc1b46c07b069"
+    },
+    {
+      "rawKey": "wh_dlc08_unit_passive_berserk",
+      "canonicalId": "wh_dlc08_unit_passive_berserk",
+      "name": "광폭",
+      "englishName": "Berserk",
+      "signature": "85d68a31d530c36e8a0b079067c204b0f42ec4c102f70efa740f94e59a069bc5"
+    },
+    {
+      "rawKey": "wh_dlc08_unit_passive_favour_of_the_ruinous_powers",
+      "canonicalId": "wh_dlc08_unit_passive_favour_of_the_ruinous_powers",
+      "name": "파멸의 권능의 총애",
+      "englishName": "Favour of the Ruinous Powers",
+      "signature": "2ac255a93aa07f1d9af256fc7f2dbf46d86e9cb80db0ab10f46274175aa3a130"
+    },
+    {
+      "rawKey": "wh_dlc08_unit_passive_from_the_mist",
+      "canonicalId": "wh_dlc08_unit_passive_from_the_mist",
+      "name": "안개 속에서",
+      "englishName": "From the Mist",
+      "signature": "7eef13eb1ffff3535d6b56a3f725dcf2beb20b4539937598c357571e460459bd"
+    },
+    {
+      "rawKey": "wh_dlc08_unit_passive_rage",
+      "canonicalId": "wh_dlc08_unit_passive_rage",
+      "name": "분노",
+      "englishName": "Rage",
+      "signature": "65a8602c6f883a7bdc05324092d32f7173b21173db79f74be12290b3052a25b7"
+    },
+    {
+      "rawKey": "wh_dlc15_quest_passive_primal_rage",
+      "canonicalId": "wh_dlc15_quest_passive_primal_rage",
+      "name": "원시의 분노",
+      "englishName": "Primal Rage",
+      "signature": "9533c153afcafec669f4ded928180cb54c6dad6b20b4508112cd0826f6053be9"
+    },
+    {
+      "rawKey": "wh_main_hero_passive_swarm_of_flies",
+      "canonicalId": "wh_main_hero_passive_swarm_of_flies",
+      "name": "파리 떼",
+      "englishName": "Swarm of Flies",
+      "signature": "ba15a39d7c441776cffc43e8fa11fdee4654caf7e2094d43dfde1b935cca33f8"
+    },
+    {
+      "rawKey": "wh_main_lord_passive_the_blessing_of_the_lady",
+      "canonicalId": "blessing_of_the_lady",
+      "name": "여제의 축복",
+      "englishName": "The Blessing of the Lady",
+      "signature": "992a469cd27bf111a54e5c864e7d8c66d04dff68e2852bd70cce83ac5f06d249"
+    },
+    {
+      "rawKey": "wh_main_mount_abilities_locus_of_hysh",
+      "canonicalId": "wh_main_mount_abilities_locus_of_hysh",
+      "name": "히쉬의 핵",
+      "englishName": "Locus of Hysh",
+      "signature": "d17039df0daed31eb293db65a4ce10ddc2b56b8f61906aa63b26f0ccc3ec4fd7"
+    },
+    {
+      "rawKey": "wh_main_mount_passive_aura_of_protection",
+      "canonicalId": "wh_main_mount_passive_aura_of_protection",
+      "name": "보호의 오라",
+      "englishName": "Aura of Protection",
+      "signature": "9f53f4a2190122acbddc96cd308c073ca9a2227327f4d22f9c05510050cae8db"
+    },
+    {
+      "rawKey": "wh_main_unit_abilities_black_nimbus",
+      "canonicalId": "wh_main_unit_abilities_black_nimbus",
+      "name": "검은 후광",
+      "englishName": "Black Nimbus",
+      "signature": "54e9571507b1d4ad1c48351f97fdfa72ae077ce367734310c2943ac60b8f2628"
+    },
+    {
+      "rawKey": "wh_main_unit_abilities_black_scythes",
+      "canonicalId": "wh_main_unit_abilities_black_scythes",
+      "name": "검은 낫",
+      "englishName": "Black Scythes",
+      "signature": "65b7d09e95af2ae0fd1cb805411dc7aee4bcddc2598048b57d3b5e2466debb1d"
+    },
+    {
+      "rawKey": "wh_main_unit_abilities_unholy_vigour",
+      "canonicalId": "wh_main_unit_abilities_unholy_vigour",
+      "name": "불경한 활력",
+      "englishName": "Unholy Vigour",
+      "signature": "3f737bcfae55f50b5693189adcb9d35426bda055d841b3128b0d269443c465d5"
+    },
+    {
+      "rawKey": "wh_main_unit_passive_deathblow",
+      "canonicalId": "wh_main_unit_passive_deathblow",
+      "name": "치명타",
+      "englishName": "Deathblow",
+      "signature": "63d0e991c5743a89879dedd19b78bd960f4b725ca8c3c0233a75d3761173e78c"
+    },
+    {
+      "rawKey": "wh_main_unit_passive_frenzy",
+      "canonicalId": "frenzy",
+      "name": "광란",
+      "englishName": "Frenzy",
+      "signature": "3f18b42baa7c899bc45b9850a0281b9a2fdda8279c3bb507b72d9c964910b51c"
+    },
+    {
+      "rawKey": "wh_main_unit_passive_regeneration",
+      "canonicalId": "regeneration",
+      "name": "재생",
+      "englishName": "Regeneration",
+      "signature": "a828685f46b3fd94e4e3803310164e1cef8d988189c8bc5e3d0c7fda4984f08f"
+    },
+    {
+      "rawKey": "wh_main_unit_passive_unstable",
+      "canonicalId": "crumbling",
+      "name": "붕괴",
+      "englishName": "Crumbling",
+      "signature": "9baba033d2020e2a33090394a37e090cfcdd1f7a3f16ce245a96c47433eb5783"
+    },
+    {
+      "rawKey": "wh_main_unit_passive_unstable_mark_ii",
+      "canonicalId": "disintegrating",
+      "name": "분해",
+      "englishName": "Disintegrating",
+      "signature": "110ba2305a201e635fb4e2771ca1c7837646552fdbef5c94f45b351b0d133a5d"
+    },
+    {
+      "rawKey": "wh_pro04_unit_abilities_soul_devourer",
+      "canonicalId": "wh_pro04_unit_abilities_soul_devourer",
+      "name": "영혼 포식",
+      "englishName": "Soul Devourer",
+      "signature": "2e2ac85ae6b7932eccbce15eabc2ec45822ff5e3331465d377a2f31f1d2adc9a"
+    },
+    {
+      "rawKey": "wh_pro04_unit_passive_guardian",
+      "canonicalId": "guardian",
+      "name": "수호자",
+      "englishName": "Guardian",
+      "signature": "9e29b4af74a94d271b679f0d908a988673579e357ac519d54f57bd15b22d5ad3"
+    },
+    {
+      "rawKey": "wh_pro04_unit_passive_wildfire_aura",
+      "canonicalId": "wh_pro04_unit_passive_wildfire_aura",
+      "name": "도깨비불 오라",
+      "englishName": "The Wildfire Aura",
+      "signature": "2ffb564ed197cc30c8101be545a1df012103cd486fa96720d0776d93d26995bf"
+    }
+  ]
+}

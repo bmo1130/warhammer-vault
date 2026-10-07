@@ -4,6 +4,7 @@ import speedAdmissions from '../data/unitSpeedAdmissions.json';
 import type { Unit } from '../domain/unit';
 import { withoutUnitLocalisation } from './unitLocalisation';
 import { withoutUnitAttributes } from './unitAttributes';
+import { withoutUnitPassives } from './unitPassives';
 import { unitDiagnosticRepository, type UnitDiagnostic } from './unitDiagnosticRepository';
 
 // Bounded admission projection, replay-checked against the pinned static review.
@@ -18,7 +19,7 @@ export function assertSharedUnitIdentity(unit: Unit, diagnostic: UnitDiagnostic,
   const identity=link?.partialReviewIdentity;
   // Keep the exact static identity anchor; strip only explicit field admissions.
   const hp=hpAdmissions.admissions.find(admission=>admission.id===unit.id);
-  let staticUnit: Unit=withoutUnitAttributes(withoutUnitLocalisation(unit));
+  let staticUnit: Unit=withoutUnitPassives(withoutUnitAttributes(withoutUnitLocalisation(unit)));
   if (hp && unit.entities.totalHealth!==undefined && hpAdmissions.unitSize==='ULTRA' &&
     hpAdmissions.unitSizeSource==='DECLARED_SETUP' && hp.kind==='DIRECT_ULTRA_RUNTIME' &&
     hp.field==='entities.totalHealth' && hp.mainKey===link?.mainKey && hp.landKey===link?.landKey &&

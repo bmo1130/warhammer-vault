@@ -7,8 +7,11 @@ const read=p=>JSON.parse(fs.readFileSync(p));
 export function auditUnitData(){
   const attributeProjection=read('src/data/unitAttributeAdmissions.json');
   const attributeById=new Map(attributeProjection.admissions.map(a=>[a.id,a]));
+  const passiveProjection=read('src/data/unitPassiveAdmissions.json');
+  const passiveById=new Map(passiveProjection.admissions.map(a=>[a.id,a]));
   const units=read('src/data/units.json').filter(u=>u.gameVersion!=='sample').map(u=>{
-    const a=attributeById.get(u.id);return a?.attributes!==undefined?{...u,attributes:a.attributes}:u;
+    const a=attributeById.get(u.id),p=passiveById.get(u.id);
+    return {...u,...(a?.attributes!==undefined?{attributes:a.attributes}:{}),...(p?.passiveAbilities!==undefined?{passiveAbilities:p.passiveAbilities}:{})};
   }),total=units.length;
   const paths=['abilities','passiveAbilities','attributes','entities.count','entities.totalHealth','entities.healthPerEntity','movement.speed','defense.resistances','defense.projectilePenetrationResistance','missile','missile.range','missile.projectile.baseDamage','missile.projectile.armorPiercingDamage','missile.reload.baseTime','missile.projectile.shotsPerVolley','missile.ammunition','missile.accuracy.accuracy','missile.reload.reloadSkill','campaign.recruitmentRequirements'];
   const coverage=Object.fromEntries(paths.map(p=>{const known=units.filter(u=>p.split('.').reduce((v,k)=>v?.[k],u)!==undefined).length;return [p,{known,unknown:total-known}];}));
@@ -37,6 +40,10 @@ export function auditUnitData(){
   coverage.attributes.partial=attributeProjection.admissions.filter(a=>a.status==='PARTIAL').length;
   coverage.attributes.knownEmpty=attributeProjection.admissions.filter(a=>a.attributes?.length===0).length;
   coverage.attributes.nonempty=units.filter(u=>u.attributes?.length).length;
+  coverage.passiveAbilities.complete=passiveProjection.admissions.filter(a=>a.status==='COMPLETE').length;
+  coverage.passiveAbilities.partial=passiveProjection.admissions.filter(a=>a.status==='PARTIAL').length;
+  coverage.passiveAbilities.knownEmpty=passiveProjection.admissions.filter(a=>a.passiveAbilities?.length===0).length;
+  coverage.passiveAbilities.nonempty=units.filter(u=>u.passiveAbilities?.length).length;
   return {production:total,sample:read('src/data/units.json').length-total,koreanNames:{known:koreanNames,unknown:total-koreanNames},coverage,raw,roster:{complete:read('src/data/factionRosters.json').coverage.filter(r=>r.status==='ROSTER COMPLETE').length,lords:read('src/data/lords.json').length,heroes:read('src/data/heroes.json').length,aliases:read('src/data/characterAliases.json').length},traceEvidence:{scope:s.candidates.length,abilityMembership,attributeMembership,buildingSources,rawSpeed,rawHitPoints,materializableWholeGroups:materializable,unmappedDistinctIds:Object.fromEntries(Object.entries(unmapped).map(([k,v])=>[k,v.size]))}};
 }
 if(process.argv[1]?.endsWith('audit-unit-data.mjs'))console.log(JSON.stringify(auditUnitData(),null,2));

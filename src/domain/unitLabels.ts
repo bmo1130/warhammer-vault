@@ -1,5 +1,6 @@
 import type { AttackAttributeId, UnitAbilityId, UnitAttributeId } from './unit';
 import attributeAdmissions from '../data/unitAttributeAdmissions.json';
+import passiveAdmissions from '../data/unitPassiveAdmissions.json';
 
 // These are display labels, not canonical game DB IDs. Importers must map
 // verified source IDs to these app IDs, or supply additional labels.
@@ -26,7 +27,9 @@ const legacyAttributeLabels: Readonly<Record<UnitAttributeId, string>> = {
 export const unitAttributeLabels: Readonly<Record<UnitAttributeId, string>> = { ...legacyAttributeLabels, ...attributeAdmissions.labels };
 export const attackAttributeLabels: Readonly<Record<AttackAttributeId, string>> = { magical: '마법 공격', flaming: '화염 공격' };
 export const unitAbilityLabels: Readonly<Record<UnitAbilityId, string>> = { lance: '랜스', blessing_of_the_lady: '여제의 축복', wounds: '부상', daemonic_instability: '악마의 불안정성', banished: '추방됨', regeneration: 'Regeneration', crumbling: 'Crumbling', disintegrating: 'Disintegrating' };
+export const unitPassiveAbilityLabels: Readonly<Record<UnitAbilityId, string>> = passiveAdmissions.labels;
 
 export const getUnitAttributeLabel = (id: UnitAttributeId) => unitAttributeLabels[id] ?? id;
 export const getAttackAttributeLabel = (id: AttackAttributeId) => attackAttributeLabels[id] ?? id;
 export const getUnitAbilityLabel = (id: UnitAbilityId) => unitAbilityLabels[id] ?? id;
+export const getUnitPassiveAbilityLabel = (id: UnitAbilityId) => unitPassiveAbilityLabels[id] ?? getUnitAbilityLabel(id);

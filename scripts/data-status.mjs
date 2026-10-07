@@ -6,6 +6,8 @@ const skills = ['caSkillEffect', 'caSkillBatch01', 'caSkillBatch02'].map(name =>
 const coverage = json('tools/wh3-importer/skill-production-bretonnia/coverage.json');
 console.log(`Production ${production.length} / Sample ${units.length - production.length}`);
 const attributes = json('src/data/unitAttributeAdmissions.json');
+const passives = json('src/data/unitPassiveAdmissions.json');
+console.log(`Passive ability lists ${passives.admissions.filter(a=>a.passiveAbilities!==undefined).length}/${production.length}; nonempty ${passives.admissions.filter(a=>a.passiveAbilities?.length).length}; COMPLETE ${passives.admissions.filter(a=>a.status==='COMPLETE').length}; PARTIAL ${passives.admissions.filter(a=>a.status==='PARTIAL').length}; missing collection ${passives.admissions.filter(a=>a.passiveAbilities===undefined).length}`);
 console.log(`Attributes ${attributes.admissions.filter(a=>a.attributes!==undefined).length}/${production.length}; COMPLETE ${attributes.admissions.filter(a=>a.status==='COMPLETE').length}; PARTIAL ${attributes.admissions.filter(a=>a.status==='PARTIAL').length}; missing collection ${attributes.admissions.filter(a=>a.attributes===undefined).length}`);
 console.log(`HP ${production.filter(u => u.entities.totalHealth !== undefined).length}/${production.length}; Speed ${production.filter(u => u.movement.speed !== undefined).length}/${production.length}`);
 const names = json('src/data/unitLocalisations.json');

@@ -3,13 +3,15 @@ import { getMeleeWeaponDamage } from '../domain/unitCalculations';
 import SectionTitle from './SectionTitle';
 import { unitLocalisation } from '../repositories/unitLocalisation';
 import { unitAttributeAdmission } from '../repositories/unitAttributes';
-import { getUnitAttributeLabel } from '../domain/unitLabels';
+import { getUnitAttributeLabel, getUnitPassiveAbilityLabel } from '../domain/unitLabels';
+import { unitPassiveAdmission } from '../repositories/unitPassives';
 
 // Read stored fields only; the optional total uses the existing approved sum.
 export default function UnitProductionDetails({ unit }: { unit: Unit }) {
   const total = getMeleeWeaponDamage(unit);
   const localisation = unitLocalisation(unit);
   const attributes = unitAttributeAdmission(unit);
+  const passives = unitPassiveAdmission(unit);
   const damage = [
     ['기본 피해', unit.melee.damage.base], ['관통 피해', unit.melee.damage.armorPiercing],
     ['총 무기 피해', total], ['대형 보너스', unit.melee.damage.bonusVsLarge],
@@ -35,6 +37,13 @@ export default function UnitProductionDetails({ unit }: { unit: Unit }) {
         : <p className="data-note">{unit.attributes === undefined ? '미입력 · 특성 미확인' : '검토된 기본 특성 없음'}</p>}
       {attributes?.status === 'PARTIAL' && <p className="data-note">확인된 특성만 표시합니다. 추가 특성은 미확인입니다.</p>}
     </section>
+    <section className="section">
+      <SectionTitle title="지속 능력"/>
+      {unit.passiveAbilities?.length ? <ul>{unit.passiveAbilities.map(id => <li key={id} title={id}>{getUnitPassiveAbilityLabel(id)}</li>)}</ul>
+        : <p className="data-note">{unit.passiveAbilities === undefined ? '미입력 · 지속 능력 미확인' : '검토된 기본 지속 능력 없음'}</p>}
+      {passives?.status === 'PARTIAL' && <p className="data-note">확인된 보유 능력만 표시합니다. 추가 능력은 보류 중입니다.</p>}
+      <p className="data-note">기본 유닛 기록의 보유 목록입니다. 보유가 항상 활성화됨을 뜻하지 않습니다. 발동 조건과 효과 수치는 계산하지 않습니다.</p>
+    </section>
     {damage.some(([, value]) => value !== undefined) && <section className="section">
       <SectionTitle title="근접 피해"/>
       <div className="stats-card">{damage.map(([label, value]) => <div className="stat" key={label}><span>{label}</span><strong>{value ?? '미입력'}</strong></div>)}</div>
@@ -53,6 +62,11 @@ export default function UnitProductionDetails({ unit }: { unit: Unit }) {
         <p>{unit.sources?.publicStats}</p>
         {localisation && <p>한국어 유닛명: CA {localisation.sourcePack} · {localisation.localisationKey} · pack SHA256 {localisation.packHash}</p>}
         {attributes && <p>특성: CA attribute 그룹 및 검토된 공성 플래그 · {attributes.status === 'PARTIAL' ? '일부 보류' : '검토 완료'} · source SHA256 {attributes.sourceHash}</p>}
+        {passives && <>
+          <p>지속 능력: CA 기본 land-unit 연결 및 passive 분류 · {passives.status === 'PARTIAL' ? '일부 보류' : '보유 목록 검토 완료'} · source SHA256 {passives.sourceHash}</p>
+          {!!unit.passiveAbilities?.length && <p>능력 식별자: {unit.passiveAbilities.join(', ')}</p>}
+          {!!passives.rawKeys.length && <p>원본 CA ability key: {passives.rawKeys.join(', ')}</p>}
+        </>}
         <p>미입력은 미확인입니다. 개체 수·HP·속도·저항 변환·모집 조건 등 미확인 값은 생략했습니다. 사격 자료가 없다는 사실만으로 사격 불가능을 확정하지 않습니다.</p>
       </div>
     </details>

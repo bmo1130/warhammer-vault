@@ -5,6 +5,9 @@ Production 1,110개 유닛명은 CA `local_kr.pack`의 exact Loc evidence로 한
 영문명·ID 검색과 기존 개인 기록을 유지합니다. `npm run data:audit-units`로 현재 필드 coverage를 다시 집계할 수 있습니다.
 특성은 [CA attribute admission](docs/UNIT_ATTRIBUTE_ADMISSION.md)으로 1,107개 목록을 저장합니다.
 849개는 검토 범위 COMPLETE, 261개는 일부 특성 보류이며 그중 3개는 목록 UNKNOWN을 유지합니다.
+지속 능력은 [기본 유닛 passive admission](docs/UNIT_PASSIVE_ADMISSION.md)으로 검증합니다.
+실제 능력 보유 유닛 832개, 확인된 빈 목록 273개, 목록 UNKNOWN 5개입니다.
+보유와 활성 상태를 구분하며 액티브·주문·해금용 능력은 이 승격에서 제외합니다.
 
 Total War: Warhammer III 개인 위키의 첫 버전입니다. 원본 게임 데이터와 개인 기록을 분리했습니다.
 

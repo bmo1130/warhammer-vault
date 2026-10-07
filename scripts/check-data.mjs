@@ -1,5 +1,8 @@
 import { spawnSync } from 'node:child_process';
 import { prepareEvidenceView } from './evidence-view.mjs';
+const passives = spawnSync(process.execPath, ['scripts/promote-unit-passives.mjs', '--check'], {stdio:'inherit'});
+if (passives.error) throw passives.error;
+if (passives.status !== 0) process.exit(passives.status ?? 1);
 const attributes = spawnSync(process.execPath, ['scripts/promote-unit-attributes.mjs', '--check'], {stdio:'inherit'});
 if (attributes.error) throw attributes.error;
 if (attributes.status !== 0) process.exit(attributes.status ?? 1);

@@ -52,6 +52,11 @@ export function validateUnits(units: readonly Unit[], factionIds: Iterable<strin
     ] as const) nonNegative(field, value);
     stableIds('abilities', unit.abilities);
     stableIds('passiveAbilities', unit.passiveAbilities);
+    if (unit.passiveAbilities && new Set(unit.passiveAbilities).size !== unit.passiveAbilities.length) issue('passiveAbilities', '지속 능력 ID는 중복될 수 없습니다.');
+    unit.passiveAbilities?.forEach((ability, index) => {
+      if (ability === 'lance' || unit.abilities?.includes(ability)) issue(`passiveAbilities.${index}`, '액티브 능력과 지속 능력은 구분해야 합니다.');
+      if (unit.attributes?.includes(ability)) issue(`passiveAbilities.${index}`, '특성과 지속 능력은 중복 저장할 수 없습니다.');
+    });
     stableIds('attributes', unit.attributes);
     if (unit.attributes && new Set(unit.attributes).size !== unit.attributes.length) issue('attributes', '특성 ID는 중복될 수 없습니다.');
     unit.attributes?.forEach((attribute, index) => {
