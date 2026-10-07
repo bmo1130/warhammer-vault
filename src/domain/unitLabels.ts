@@ -1,8 +1,9 @@
 import type { AttackAttributeId, UnitAbilityId, UnitAttributeId } from './unit';
+import attributeAdmissions from '../data/unitAttributeAdmissions.json';
 
 // These are display labels, not canonical game DB IDs. Importers must map
 // verified source IDs to these app IDs, or supply additional labels.
-export const unitAttributeLabels: Readonly<Record<UnitAttributeId, string>> = {
+const legacyAttributeLabels: Readonly<Record<UnitAttributeId, string>> = {
   perfect_vigour: '완벽한 활력',
   immune_to_psychology: '심리 면역',
   stalk_in_forest: '은신 (숲)',
@@ -21,6 +22,8 @@ export const unitAttributeLabels: Readonly<Record<UnitAttributeId, string>> = {
   charge_defense: 'Expert Charge Defence',
   undead: 'Undead',
 };
+// Exact CA Korean titles of admitted native attributes; IDs stay unchanged.
+export const unitAttributeLabels: Readonly<Record<UnitAttributeId, string>> = { ...legacyAttributeLabels, ...attributeAdmissions.labels };
 export const attackAttributeLabels: Readonly<Record<AttackAttributeId, string>> = { magical: '마법 공격', flaming: '화염 공격' };
 export const unitAbilityLabels: Readonly<Record<UnitAbilityId, string>> = { lance: '랜스', blessing_of_the_lady: '여제의 축복', wounds: '부상', daemonic_instability: '악마의 불안정성', banished: '추방됨', regeneration: 'Regeneration', crumbling: 'Crumbling', disintegrating: 'Disintegrating' };
 

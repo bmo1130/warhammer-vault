@@ -1,5 +1,8 @@
 import { spawnSync } from 'node:child_process';
 import { prepareEvidenceView } from './evidence-view.mjs';
+const attributes = spawnSync(process.execPath, ['scripts/promote-unit-attributes.mjs', '--check'], {stdio:'inherit'});
+if (attributes.error) throw attributes.error;
+if (attributes.status !== 0) process.exit(attributes.status ?? 1);
 const localisation = spawnSync(process.execPath, ['scripts/promote-unit-localisation.mjs', '--check'], {stdio:'inherit'});
 if (localisation.error) throw localisation.error;
 if (localisation.status !== 0) process.exit(localisation.status ?? 1);

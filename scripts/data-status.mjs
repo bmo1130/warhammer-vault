@@ -5,6 +5,8 @@ const research = json('src/data/caResearchEffect.json');
 const skills = ['caSkillEffect', 'caSkillBatch01', 'caSkillBatch02'].map(name => json(`src/data/${name}.json`));
 const coverage = json('tools/wh3-importer/skill-production-bretonnia/coverage.json');
 console.log(`Production ${production.length} / Sample ${units.length - production.length}`);
+const attributes = json('src/data/unitAttributeAdmissions.json');
+console.log(`Attributes ${attributes.admissions.filter(a=>a.attributes!==undefined).length}/${production.length}; COMPLETE ${attributes.admissions.filter(a=>a.status==='COMPLETE').length}; PARTIAL ${attributes.admissions.filter(a=>a.status==='PARTIAL').length}; missing collection ${attributes.admissions.filter(a=>a.attributes===undefined).length}`);
 console.log(`HP ${production.filter(u => u.entities.totalHealth !== undefined).length}/${production.length}; Speed ${production.filter(u => u.movement.speed !== undefined).length}/${production.length}`);
 const names = json('src/data/unitLocalisations.json');
 console.log(`Korean Unit names ${names.admissions.length}/${production.length}; HOLD ${names.holds.length}; full field audit: npm run data:audit-units`);

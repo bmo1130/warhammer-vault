@@ -2,11 +2,14 @@ import type { Unit } from '../domain/unit';
 import { getMeleeWeaponDamage } from '../domain/unitCalculations';
 import SectionTitle from './SectionTitle';
 import { unitLocalisation } from '../repositories/unitLocalisation';
+import { unitAttributeAdmission } from '../repositories/unitAttributes';
+import { getUnitAttributeLabel } from '../domain/unitLabels';
 
 // Read stored fields only; the optional total uses the existing approved sum.
 export default function UnitProductionDetails({ unit }: { unit: Unit }) {
   const total = getMeleeWeaponDamage(unit);
   const localisation = unitLocalisation(unit);
+  const attributes = unitAttributeAdmission(unit);
   const damage = [
     ['기본 피해', unit.melee.damage.base], ['관통 피해', unit.melee.damage.armorPiercing],
     ['총 무기 피해', total], ['대형 보너스', unit.melee.damage.bonusVsLarge],
@@ -26,6 +29,12 @@ export default function UnitProductionDetails({ unit }: { unit: Unit }) {
     ['관통 저항 예산 (resistance budget)', missile?.projectile.penetration?.resistanceBudget],
   ] as const).filter(([, value]) => value !== undefined);
   return <>
+    <section className="section">
+      <SectionTitle title="특성"/>
+      {unit.attributes?.length ? <ul>{unit.attributes.map(id => <li key={id}>{getUnitAttributeLabel(id)}</li>)}</ul>
+        : <p className="data-note">{unit.attributes === undefined ? '미입력 · 특성 미확인' : '검토된 기본 특성 없음'}</p>}
+      {attributes?.status === 'PARTIAL' && <p className="data-note">확인된 특성만 표시합니다. 추가 특성은 미확인입니다.</p>}
+    </section>
     {damage.some(([, value]) => value !== undefined) && <section className="section">
       <SectionTitle title="근접 피해"/>
       <div className="stats-card">{damage.map(([label, value]) => <div className="stat" key={label}><span>{label}</span><strong>{value ?? '미입력'}</strong></div>)}</div>
@@ -43,6 +52,7 @@ export default function UnitProductionDetails({ unit }: { unit: Unit }) {
         <p>{unit.source}</p>
         <p>{unit.sources?.publicStats}</p>
         {localisation && <p>한국어 유닛명: CA {localisation.sourcePack} · {localisation.localisationKey} · pack SHA256 {localisation.packHash}</p>}
+        {attributes && <p>특성: CA attribute 그룹 및 검토된 공성 플래그 · {attributes.status === 'PARTIAL' ? '일부 보류' : '검토 완료'} · source SHA256 {attributes.sourceHash}</p>}
         <p>미입력은 미확인입니다. 개체 수·HP·속도·저항 변환·모집 조건 등 미확인 값은 생략했습니다. 사격 자료가 없다는 사실만으로 사격 불가능을 확정하지 않습니다.</p>
       </div>
     </details>

@@ -53,8 +53,11 @@ export function validateUnits(units: readonly Unit[], factionIds: Iterable<strin
     stableIds('abilities', unit.abilities);
     stableIds('passiveAbilities', unit.passiveAbilities);
     stableIds('attributes', unit.attributes);
+    if (unit.attributes && new Set(unit.attributes).size !== unit.attributes.length) issue('attributes', '특성 ID는 중복될 수 없습니다.');
     unit.attributes?.forEach((attribute, index) => {
-      if (['can_fly', 'cannot_run', 'can_run', 'can_skirmish', 'cannot_skirmish'].includes(attribute)) issue(`attributes.${index}`, '이동 상태는 movement의 구조화 필드에만 저장해야 합니다.');
+      if (['can_fly', 'cannot_run', 'can_run', 'can_skirmish', 'cannot_skirmish', 'flying', 'always_flying', 'cant_run'].includes(attribute)) issue(`attributes.${index}`, '이동 상태는 movement의 구조화 필드에만 저장해야 합니다.');
+      if (['squig', 'gorger', 'guerrilla_deploy', 'rampage', 'underground'].includes(attribute)) issue(`attributes.${index}`, '대상 판정 전용 또는 의미 미확정 CA 키는 특성으로 승격할 수 없습니다.');
+      if (['lance', 'blessing_of_the_lady', 'wounds', 'daemonic_instability', 'banished', 'regeneration', 'crumbling', 'disintegrating'].includes(attribute)) issue(`attributes.${index}`, '능력은 attributes에 저장할 수 없습니다.');
     });
     stableIds('melee.attackAttributes', unit.melee.attackAttributes);
     unit.campaign?.recruitmentRequirements?.forEach((requirement, index) => {

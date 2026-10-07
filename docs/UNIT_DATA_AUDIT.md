@@ -1,5 +1,9 @@
 # 유닛 데이터 감사 및 한국어 유닛명 admission
 
+아래 표와 테스트 숫자는 한국어 이름 slice 당시의 기록입니다. 이후 특성 승격의 현재 결과는
+[attribute admission](UNIT_ATTRIBUTE_ADMISSION.md)을 참조하세요. 현재 특성 목록은 1,107 / UNKNOWN 3이며,
+849 COMPLETE / 261 PARTIAL입니다. `data:audit-units`는 현재 materialized 특성을 집계합니다.
+
 감사 기준: 2026-10-07, 작업 시작 commit `52d4a40`의 실제 코드/JSON/CA trace.
 과거 README나 coverage 보고서의 숫자를 현재값으로 사용하지 않았다.
 Production 1,110개 + Sample 5개, 23 race ROSTER COMPLETE,
