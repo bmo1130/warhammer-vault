@@ -6,13 +6,14 @@ import characterAliases from '../data/characterAliases.json';
 import legacyCharacters from '../data/legacyCharacters.json';
 import unitsJson from '../data/units.json';
 import type { EntityType, Faction, Lord, Hero, Unit } from '../domain/types';
+import { localiseUnit, originalUnitName } from './unitLocalisation';
 
 const factions: Faction[] = factionsJson;
 const lords: Lord[] = lordsJson as Lord[];
 const heroes: Hero[] = heroesJson as Hero[];
 // JSON imports widen enum strings. The promotion gate and dataset tests run the
 // actual Unit validator; this assertion only restores the declared enum types.
-const units: Unit[] = unitsJson as Unit[];
+const units: Unit[] = (unitsJson as Unit[]).map(localiseUnit);
 
 const factionById = new Map(factions.map((item) => [item.id, item]));
 const lordById = new Map(lords.map((item) => [item.id, item]));
@@ -94,7 +95,8 @@ export const gameRepository = {
       ...units.map((item) => ({ type: 'unit' as const, id: item.id, name: item.name, detail: item.classification.category })),
     ].filter((item) => {
       const character = item.type === 'lord' ? lordById.get(item.id) : item.type === 'hero' ? heroById.get(item.id) : undefined;
-      return `${item.name} ${item.id} ${item.detail} ${character?.subtypeKey ?? ''} ${character?.subtypeAliases.join(' ') ?? ''}`.toLocaleLowerCase().includes(term);
+      const originalName = item.type === 'unit' ? originalUnitName(unitById.get(item.id)!) : '';
+      return `${item.name} ${originalName ?? ''} ${item.id} ${item.detail} ${character?.subtypeKey ?? ''} ${character?.subtypeAliases.join(' ') ?? ''}`.toLocaleLowerCase().includes(term);
     });
   },
 };

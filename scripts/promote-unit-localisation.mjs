@@ -1,0 +1,12 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import {decodeSource} from '../tools/wh3-importer/expansion-batch-01/compact.mjs';
+import {rosterSourceHash} from '../tools/wh3-importer/production-growth/roster.mjs';
+import {reviewUnitLocalisation} from '../tools/wh3-importer/unit-localisation/review.mjs';
+const read=p=>JSON.parse(fs.readFileSync(p));
+const mode=process.argv[2]??'--check';assert(['--write','--check'].includes(mode));
+const result=reviewUnitLocalisation(read('tools/wh3-importer/unit-localisation/source.json'),decodeSource(read('tools/wh3-importer/faction-rosters/source.json'),rosterSourceHash),read('src/data/units.json'));
+const output='src/data/unitLocalisations.json';
+if(mode==='--write')fs.writeFileSync(output,JSON.stringify(result,null,2)+'\n');
+else assert.deepEqual(read(output),result,'Unit Korean admission/projection drift');
+console.log(`Unit Korean names ${result.admissions.length} / ${result.admissions.length+result.holds.length}; HOLD ${result.holds.length}; ${mode} PASS`);

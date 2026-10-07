@@ -92,7 +92,7 @@ test('/units renders labels, availability, accessible filters, counts and exact 
     assert.equal(filtered.includes(`href="${catalog.list().find(entry => entry.hasDiagnostic).route}"`), filter !== 'diagnostic-only');
   }
   const searched = render('/units?filter=evidence&q=Dread');
-  assert(searched.includes('1개 항목') && searched.includes('Dread Saurian'));
+  assert(searched.includes('1개 항목') && searched.includes(production.getUnit(diagnostics.list().find(e=>e.name==='Dread Saurian').id).name));
   assert(!searched.includes('Black Coach'));
   assert(render('/units?filter=unknown').includes(`${totalUnits}개 항목`));
 });

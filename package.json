@@ -18,6 +18,7 @@
     "pilot:wh3-units": "node tools/wh3-importer/pilot-cli.mjs",
     "check:data": "node scripts/check-data.mjs",
     "data:status": "node scripts/data-status.mjs",
+    "data:audit-units": "node scripts/audit-unit-data.mjs",
     "check:pages": "node scripts/check-pages.mjs"
   },
   "dependencies": {

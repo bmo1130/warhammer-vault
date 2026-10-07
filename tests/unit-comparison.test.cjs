@@ -49,7 +49,7 @@ test('unknown and actual zero remain distinct; partial damage and unknown number
 
 test('compare route renders exact details links, stat labels and same-unit/invalid URL states safely', () => {
   const html = render(`/compare?left=${grail.id}&right=${ogres.id}`);
-  for (const label of ['Grail Knights', 'Dragon Ogres', '장갑', '속도', '총 무기 피해', '무기 길이', '총 생명력', '개체 수', '모집 턴', '방벽', '와드 저항']) assert(html.includes(label), label);
+  for (const label of [grail.name, ogres.name, '장갑', '속도', '총 무기 피해', '무기 길이', '총 생명력', '개체 수', '모집 턴', '방벽', '와드 저항']) assert(html.includes(label), label);
   assert(html.includes(`href="${pathFor('unit', grail.id)}"`));
   assert(html.includes(`href="${pathFor('unit', ogres.id)}"`));
   assert(render(`/compare?left=${grail.id}&right=${grail.id}`).includes('기본 스탯 비교'));

@@ -6,6 +6,8 @@ const skills = ['caSkillEffect', 'caSkillBatch01', 'caSkillBatch02'].map(name =>
 const coverage = json('tools/wh3-importer/skill-production-bretonnia/coverage.json');
 console.log(`Production ${production.length} / Sample ${units.length - production.length}`);
 console.log(`HP ${production.filter(u => u.entities.totalHealth !== undefined).length}/${production.length}; Speed ${production.filter(u => u.movement.speed !== undefined).length}/${production.length}`);
+const names = json('src/data/unitLocalisations.json');
+console.log(`Korean Unit names ${names.admissions.length}/${production.length}; HOLD ${names.holds.length}; full field audit: npm run data:audit-units`);
 console.log(`Research ${research.technologies.length} technologies / ${research.effects.length} effects / ${research.modifiers.length} modifiers / ${research.targets.length} exact targets`);
 console.log(`Skill ${skills.length} admitted; scan ${coverage.totalSkills} Skills / ${coverage.totalSkillRanks} ranks / ${coverage.totalEffectJunctions} junctions`);
 for (const skill of skills) console.log(`  ${skill.name} (Rank 1, ${skill.owner.name}) → ${skill.targets.map(t => production.find(u => u.id === t.unitId)?.name ?? t.unitId).join(', ')}`);

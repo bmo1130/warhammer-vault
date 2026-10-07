@@ -3,6 +3,7 @@ import type { Unit } from '../domain/unit';
 import { gameRepository } from './gameRepository';
 import { unitDiagnosticRepository, type UnitDiagnostic } from './unitDiagnosticRepository';
 import { assertSharedUnitIdentity } from './unitSharedIdentity';
+import { originalUnitName } from './unitLocalisation';
 
 export const unitCatalogFilters = [
   { id: 'all', label: '전체' },
@@ -40,7 +41,7 @@ export function createUnitCatalog(
       id: unit.id, name: unit.name, kind: 'unit' as const, isSample: unit.gameVersion === 'sample',
       hasProduction: true, hasDiagnostic: shared.has(unit.id), route: pathFor('unit', unit.id),
       description: unit.classification.category,
-      searchText: `${unit.name} ${unit.id} ${unit.classification.category}`.toLocaleLowerCase(),
+      searchText: `${unit.name} ${originalUnitName(unit) ?? ''} ${unit.id} ${unit.classification.category}`.toLocaleLowerCase(),
     })),
     ...diagnostics.filter(entry=>!shared.has(entry.id)).map(entry => ({
       id: entry.id, name: entry.name, kind: 'diagnostic-only' as const, isSample: false,

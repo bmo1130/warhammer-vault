@@ -1,5 +1,9 @@
 # 전쟁 서고
 
+유닛 데이터 최신 감사와 한국어 이름 admission은 [현재 유닛 데이터 감사](docs/UNIT_DATA_AUDIT.md)를 참조하세요.
+Production 1,110개 유닛명은 CA `local_kr.pack`의 exact Loc evidence로 한국어를 표시하며,
+영문명·ID 검색과 기존 개인 기록을 유지합니다. `npm run data:audit-units`로 현재 필드 coverage를 다시 집계할 수 있습니다.
+
 Total War: Warhammer III 개인 위키의 첫 버전입니다. 원본 게임 데이터와 개인 기록을 분리했습니다.
 
 현재 source-driven race roster는 **23개 ROSTER COMPLETE**입니다.

@@ -6,6 +6,9 @@ import { resolve } from 'node:path';
 import { prepareEvidenceView } from './evidence-view.mjs';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
+const localisation = spawnSync(process.execPath, ['scripts/promote-unit-localisation.mjs', '--check'], {cwd:root,stdio:'inherit'});
+if (localisation.error) throw localisation.error;
+if (localisation.status !== 0) process.exit(localisation.status ?? 1);
 const roster = spawnSync(process.execPath, ['scripts/review-faction-rosters.mjs', '--check'], {cwd:root,stdio:'inherit'});
 if (roster.error) throw roster.error;
 if (roster.status !== 0) process.exit(roster.status ?? 1);

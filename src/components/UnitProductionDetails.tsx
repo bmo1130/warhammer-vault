@@ -1,10 +1,12 @@
 import type { Unit } from '../domain/unit';
 import { getMeleeWeaponDamage } from '../domain/unitCalculations';
 import SectionTitle from './SectionTitle';
+import { unitLocalisation } from '../repositories/unitLocalisation';
 
 // Read stored fields only; the optional total uses the existing approved sum.
 export default function UnitProductionDetails({ unit }: { unit: Unit }) {
   const total = getMeleeWeaponDamage(unit);
+  const localisation = unitLocalisation(unit);
   const damage = [
     ['기본 피해', unit.melee.damage.base], ['관통 피해', unit.melee.damage.armorPiercing],
     ['총 무기 피해', total], ['대형 보너스', unit.melee.damage.bonusVsLarge],
@@ -40,6 +42,7 @@ export default function UnitProductionDetails({ unit }: { unit: Unit }) {
         <p>팩션은 검토된 기본 catalog 분류입니다. 다른 permission을 배제하거나 전체 roster·캠페인 모집 가능성을 확정하지 않습니다.</p>
         <p>{unit.source}</p>
         <p>{unit.sources?.publicStats}</p>
+        {localisation && <p>한국어 유닛명: CA {localisation.sourcePack} · {localisation.localisationKey} · pack SHA256 {localisation.packHash}</p>}
         <p>미입력은 미확인입니다. 개체 수·HP·속도·저항 변환·모집 조건 등 미확인 값은 생략했습니다. 사격 자료가 없다는 사실만으로 사격 불가능을 확정하지 않습니다.</p>
       </div>
     </details>

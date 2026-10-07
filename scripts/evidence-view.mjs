@@ -10,17 +10,17 @@ export const baseline = '93130d543cc927cdd69cb8b920dc3553538b69f0';
 // Historical evidence reports pin the whole former app, including its CSS.
 // Replay that app in isolation; verify all evidence/policies/current game data
 // still match. Current UI/storage/engine tests run separately in the real tree.
-const evolving = new Set(['README.md', '.gitignore', 'package.json', 'scripts/test.mjs',
+const evolving = new Set(['README.md', '.gitignore', 'package.json', 'scripts/test.mjs', 'scripts/data-status.mjs',
   'index.html', 'vite.config.ts', 'tsconfig.test.json', 'src/main.tsx', 'src/style.css',
   'src/components/ArticleEditor.tsx', 'src/pages/NotesPage.tsx',
   'src/pages/UnitPage.tsx', 'src/pages/FactionPage.tsx', 'src/pages/LordPage.tsx',
   'src/pages/SettingsPage.tsx', 'src/pages/CalculatorPage.tsx']);
 // Reviewed roster projections are checked in the live tree before replay.
 for (const path of ['src/App.tsx','src/domain/types.ts','src/domain/unit.ts','src/domain/unitValidation.ts',
-  'src/repositories/gameRepository.ts','src/repositories/unitDiagnosticRepository.ts','src/components/EntityRow.tsx','src/pages/FactionsPage.tsx','src/pages/HomePage.tsx',
+  'src/repositories/gameRepository.ts','src/repositories/unitSharedIdentity.ts','src/repositories/unitCatalogRepository.ts','src/components/UnitProductionDetails.tsx','src/repositories/unitDiagnosticRepository.ts','src/components/EntityRow.tsx','src/pages/FactionsPage.tsx','src/pages/HomePage.tsx',
   'src/data/units.json','src/data/factions.json','src/data/lords.json',
   'tools/wh3-importer/normalization/normalizer.mjs','tools/wh3-importer/promotion/first-batch.mjs',
-  'tests/app.test.cjs','tests/unit-catalog.test.cjs','tests/unit-comparison.test.cjs',
+  'tests/app.test.cjs','tests/unit-catalog.test.cjs','tests/unit-comparison.test.cjs','tests/wiki-workflow.test.cjs',
   'tests/unit-modifiers.test.cjs','tests/ca-research.test.cjs',
   'tests/manual-calculator.test.cjs','tests/unit-diagnostics.test.cjs']) evolving.add(path);
 const normalized = (path, bytes) => /\.(?:mjs|cjs|mts|cts|ts|tsx|ps1|md|css|html|json|yml|svg|lua|gitattributes|gitignore)$/.test(path) ? bytes.toString().replace(/\r\n/g, '\n') : bytes;

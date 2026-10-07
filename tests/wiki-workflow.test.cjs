@@ -3,6 +3,7 @@ const assert = require('node:assert/strict');
 const { memoryIndexedDb } = require('./fixtures/memoryIndexedDb.cjs');
 const { wikiRepository: wiki, parseBackup } = require('../.test-build/src/repositories/wikiRepository.js');
 const { unitDiagnosticRepository: diagnostics } = require('../.test-build/src/repositories/unitDiagnosticRepository.js');
+const { gameRepository: production } = require('../.test-build/src/repositories/gameRepository.js');
 const { resolveSavedTargetName } = require('../.test-build/src/repositories/archivePresentation.js');
 const { pathFor } = require('../.test-build/src/domain/entities.js');
 const dread = diagnostics.list().find(entry => entry.name === 'Dread Saurian');
@@ -24,7 +25,7 @@ test('diagnostic target supports article create/read/update/delete, bookmark tog
   assert.equal(await wiki.hasBookmark(target), true);
   assert.equal((await wiki.listBookmarks())[0].entityId, dread.id);
   assert.equal((await wiki.listRecent())[0].entityId, dread.id);
-  assert.equal(resolveSavedTargetName((await wiki.listRecent())[0]), dread.name);
+  assert.equal(resolveSavedTargetName((await wiki.listRecent())[0]), production.getUnit(dread.id).name);
   await wiki.setBookmark(target, false);
   await wiki.deleteArticle(target);
   assert.equal(await wiki.hasBookmark(target), false);
@@ -52,7 +53,7 @@ test('version 1 backup round-trips diagnostic, sample, and stale personal target
   await wiki.importBackup(transported);
   const restored = await wiki.exportBackup();
   for (const key of ['articles', 'notes', 'bookmarks', 'recentViews']) assert.deepEqual(restored[key], exported[key]);
-  assert.equal(resolveSavedTargetName(restored.bookmarks.find(item => item.entityId === dread.id)), dread.name);
+  assert.equal(resolveSavedTargetName(restored.bookmarks.find(item => item.entityId === dread.id)), production.getUnit(dread.id).name);
   assert.equal(pathFor('unit', dread.id), `/units/${dread.id}`);
   assert.equal(await wiki.hasBookmark(target), true);
   assert.equal((await wiki.getArticle(target)).evaluation, content.evaluation);
