@@ -25,7 +25,7 @@ export function reviewedCount(record) {
   return first.NumEntitiesInitial;
 }
 
-export function reviewUnitEntities(manifest=read(folder+'manifest.json'),units=read('src/data/units.json')) {
+export function reviewUnitEntities(manifest=read(folder+'manifest.json'),units=read('src/data/units.json'),inspect) {
   gate(manifest.format==='reviewed-ultra-unit-entities-scope-v1'&&manifest.unitSize==='ULTRA','explicit ULTRA scope required');
   gate(digest(units)===manifest.unitsHash,'Unit baseline drift');
   for(const pin of manifest.inputs)gate(byteHash(fs.readFileSync(pin.file))===pin.sha256,'source hash drift: '+pin.file);
@@ -55,6 +55,7 @@ export function reviewUnitEntities(manifest=read(folder+'manifest.json'),units=r
     gate(u.id==='ca_unit_'+inspected.chain.sourceMainKey&&u.gameVersion===inspected.chain.snapshot.gameVersion,'exact identity/version changed');
     const facts={...inspected.facts,...Object.fromEntries(['category','class'].map(f=>[f,s.fact(ctx.land,f)??null]))};
     byId.set(u.id,{unit:u,inspected,facts,source:t.source});
+    inspect?.({unit:u,inspected,facts,source:t.source,dump:t.dump,selectors:s,context:ctx});
     return {id:u.id,name:u.name,mainKey:inspected.chain.sourceMainKey,landKey:inspected.chain.sourceLandKey,
       source:t.source,shape:inspected.shape,classification:{caste:s.fact(ctx.root,'caste')?.value,category:facts.category?.value,class:facts.class?.value},
       rawValues:Object.fromEntries(Object.entries(inspected.facts).map(([k,f])=>[k,f?.value??null])),

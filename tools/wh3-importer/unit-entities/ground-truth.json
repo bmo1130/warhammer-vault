@@ -1,0 +1,84 @@
+{
+  "unitSize": "ULTRA",
+  "source": "Existing reviewed HP/entity admission; 10 direct runtime observations and 3 previously admitted exact-profile equivalents",
+  "cases": [
+    {
+      "id": "ca_unit_wh_main_emp_inf_swordsmen",
+      "name": "Swordsmen",
+      "count": 120,
+      "totalHealth": 8280
+    },
+    {
+      "id": "ca_unit_wh_main_brt_cav_mounted_yeomen_0",
+      "name": "Mounted Yeomen",
+      "count": 60,
+      "totalHealth": 5520
+    },
+    {
+      "id": "ca_unit_wh_dlc01_chs_mon_dragon_ogre",
+      "name": "Dragon Ogres",
+      "count": 16,
+      "totalHealth": 9856
+    },
+    {
+      "id": "ca_unit_wh2_dlc13_lzd_mon_dread_saurian_1",
+      "name": "Dread Saurian",
+      "count": 1,
+      "totalHealth": 15088
+    },
+    {
+      "id": "ca_unit_wh2_dlc09_tmb_veh_skeleton_chariot_0",
+      "name": "Skeleton Chariots",
+      "count": 12,
+      "totalHealth": 7032
+    },
+    {
+      "id": "ca_unit_wh_main_brt_art_field_trebuchet",
+      "name": "Field Trebuchets",
+      "count": 4,
+      "totalHealth": 4512
+    },
+    {
+      "id": "ca_unit_wh2_dlc09_tmb_art_screaming_skull_catapult_0",
+      "name": "Screaming Skull Catapults",
+      "count": 4,
+      "totalHealth": 4356
+    },
+    {
+      "id": "ca_unit_wh2_main_skv_art_plagueclaw_catapult",
+      "name": "Plagueclaw Catapults",
+      "count": 4,
+      "totalHealth": 5028
+    },
+    {
+      "id": "ca_unit_wh2_dlc12_skv_veh_doom_flayer_0",
+      "name": "Doom-Flayers",
+      "count": 8,
+      "totalHealth": 6128
+    },
+    {
+      "id": "ca_unit_wh_main_vmp_veh_black_coach",
+      "name": "Black Coach",
+      "count": 1,
+      "totalHealth": 5980
+    },
+    {
+      "id": "ca_unit_wh_main_emp_inf_spearmen_1",
+      "name": "Spearmen (Shields)",
+      "count": 120,
+      "totalHealth": 8280
+    },
+    {
+      "id": "ca_unit_wh_dlc07_brt_inf_battle_pilgrims_0",
+      "name": "Battle Pilgrims",
+      "count": 120,
+      "totalHealth": 8280
+    },
+    {
+      "id": "ca_unit_wh_dlc07_brt_art_blessed_field_trebuchet_0",
+      "name": "Blessed Field Trebuchets",
+      "count": 4,
+      "totalHealth": 4512
+    }
+  ]
+}

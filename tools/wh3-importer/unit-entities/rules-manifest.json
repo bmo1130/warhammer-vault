@@ -1,0 +1,48 @@
+{
+  "format": "empirical-ultra-hp-entity-scope-v1",
+  "baselineCommit": "129f55f",
+  "gameVersion": "9.0.2.0",
+  "unitSize": "ULTRA",
+  "inputs": [
+    {
+      "file": "tools/wh3-importer/unit-entities/manifest.json",
+      "hash": "47a33185d0fcb6325175fc97c78e34d1255f9bef8f1ab208dd0c1788b0be90e1"
+    },
+    {
+      "file": "tools/wh3-importer/unit-entities/admission.json",
+      "hash": "8dad54ef389e7ea4eaf759b36c263cbd935c75576b6bba243b5f8277e03fa358"
+    },
+    {
+      "file": "tools/wh3-importer/unit-entities/ground-truth.json",
+      "hash": "d4a8f8053da524eb3ce5c24eea29bf15a8c0d9f329e0cf9ff23f790d47a0cd15"
+    },
+    {
+      "file": "tools/wh3-importer/hp-research/articulation.source.json",
+      "hash": "a91d9f9f214353aab84318b74906e13650697d6ceb212119a69c31291c308800"
+    },
+    {
+      "file": "src/data/units.json",
+      "hash": "1484a2f8fd9cc39999d9a178a75c074d8a660f0548898742433b5fe19ab760bb"
+    }
+  ],
+  "validationInputs": [
+    {
+      "file": "tools/wh3-importer/hp-policy/inputs/independent-necrofex-medium.log",
+      "originalArchive": "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2/inputs/desktop__script_log_011026_2138.txt",
+      "sha256": "8088e0ec34bf13f3176a6247facdabd039dd6a66d3d7ea29a8e7447b1903c470"
+    },
+    {
+      "file": "tools/wh3-importer/hp-policy/inputs/independent-free-company-medium.log",
+      "originalArchive": "generated/wh3/runtime-evidence/runtime-2026-10-01-9.0.2/inputs/game__script_log_011026_2146.txt",
+      "sha256": "a8877e0f691182a2e94d92ce753ebc3a26417aa7bc818c09b704663299fd02bc"
+    }
+  ],
+  "validationSubjects": [
+    {
+      "id": "ca_unit_wh2_dlc11_cst_mon_necrofex_colossus_0"
+    },
+    {
+      "id": "ca_unit_wh_dlc04_emp_inf_free_company_militia_0"
+    }
+  ]
+}

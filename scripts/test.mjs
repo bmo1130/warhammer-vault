@@ -6,6 +6,9 @@ import { resolve } from 'node:path';
 import { prepareEvidenceView } from './evidence-view.mjs';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
+const hpEntityRules = spawnSync(process.execPath, ['scripts/promote-unit-hp-entity-rules.mjs', '--check'], {cwd:root,stdio:'inherit'});
+if (hpEntityRules.error) throw hpEntityRules.error;
+if (hpEntityRules.status !== 0) process.exit(hpEntityRules.status ?? 1);
 const archiveNames = spawnSync(process.execPath, ['scripts/promote-archive-localisation.mjs', '--check'], {cwd:root,stdio:'inherit'});
 if (archiveNames.error) throw archiveNames.error;
 if (archiveNames.status !== 0) process.exit(archiveNames.status ?? 1);

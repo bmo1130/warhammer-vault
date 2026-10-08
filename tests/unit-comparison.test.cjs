@@ -28,9 +28,11 @@ test('base comparison reads admitted values only and uses the approved damage he
   const rows = compareUnits(grail, ogres);
   const row = label => rows.find(r => r.label === label);
   assert.deepEqual(row('속도'), { label: '속도', left: 84, right: 64, delta: 20 });
-  assert.equal(row('총 생명력 (ULTRA)').left, undefined);
+  assert.equal(row('총 생명력 (ULTRA)').left, 7296);
   assert.equal(row('총 생명력 (ULTRA)').right, 9856);
-  assert.equal(row('총 생명력 (ULTRA)').delta, undefined);
+  assert.equal(row('총 생명력 (ULTRA)').delta, -2560);
+  const unknown = compareUnits(comparisonUnit('ca_unit_wh_main_emp_veh_steam_tank'), ogres).find(r => r.label === '총 생명력 (ULTRA)');
+  assert.equal(unknown.left, undefined); assert.equal(unknown.delta, undefined);
 });
 
 test('unknown and actual zero remain distinct; partial damage and unknown numbers have no delta', () => {

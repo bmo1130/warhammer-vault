@@ -34,8 +34,9 @@ test('calculator input bridge reuses exact production selection and handles add/
 });
 
 test('UI bridge preserves unknown, calculates zero, rejects bad input/conflict and recomputes total damage', () => {
-  const hp = calculate(grail, [row('hp', 'entities.totalHealth', 'multiply', 15)]);
+  const hp = calculate(comparisonUnit('ca_unit_wh_main_emp_veh_steam_tank'), [row('hp', 'entities.totalHealth', 'multiply', 15)]);
   assert.equal(hp.unit.entities.totalHealth, undefined); assert.equal(hp.breakdown[0].status, 'unknown');
+  close(calculate(grail, [row('known-hp', 'entities.totalHealth', 'multiply', 15)]).unit.entities.totalHealth, 8390.4);
   assert.equal(calculate(grail, [row('zero', 'melee.damage.bonusVsInfantry', 'add', 10)]).unit.melee.damage.bonusVsInfantry, 10);
   for (const value of ['', ' ', 'abc', 'NaN', 'Infinity', '-Infinity', '0x20']) {
     const bad = calculate(grail, [row('bad', 'movement.speed', 'add', value)]);

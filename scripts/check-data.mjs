@@ -1,5 +1,8 @@
 import { spawnSync } from 'node:child_process';
 import { prepareEvidenceView } from './evidence-view.mjs';
+const hpEntityRules = spawnSync(process.execPath, ['scripts/promote-unit-hp-entity-rules.mjs', '--check'], {stdio:'inherit'});
+if (hpEntityRules.error) throw hpEntityRules.error;
+if (hpEntityRules.status !== 0) process.exit(hpEntityRules.status ?? 1);
 const archiveNames = spawnSync(process.execPath, ['scripts/promote-archive-localisation.mjs', '--check'], {stdio:'inherit'});
 if (archiveNames.error) throw archiveNames.error;
 if (archiveNames.status !== 0) process.exit(archiveNames.status ?? 1);

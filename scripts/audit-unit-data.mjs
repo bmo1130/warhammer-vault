@@ -9,11 +9,11 @@ export function auditUnitData(){
   const attributeById=new Map(attributeProjection.admissions.map(a=>[a.id,a]));
   const passiveProjection=read('src/data/unitPassiveAdmissions.json');
   const passiveById=new Map(passiveProjection.admissions.map(a=>[a.id,a]));
-  const entityProjection=read('src/data/unitEntityAdmissions.json');
+  const entityProjection=read('src/data/unitHpEntityRuleAdmissions.json');
   const entityById=new Map(entityProjection.admissions.map(a=>[a.id,a]));
   const units=read('src/data/units.json').filter(u=>u.gameVersion!=='sample').map(u=>{
     const a=attributeById.get(u.id),p=passiveById.get(u.id),e=entityById.get(u.id);
-    return {...u,...(a?.attributes!==undefined?{attributes:a.attributes}:{}),...(p?.passiveAbilities!==undefined?{passiveAbilities:p.passiveAbilities}:{}),...(e?{entities:{...u.entities,count:e.count}}:{})};
+    return {...u,...(a?.attributes!==undefined?{attributes:a.attributes}:{}),...(p?.passiveAbilities!==undefined?{passiveAbilities:p.passiveAbilities}:{}),...(e?{entities:{...u.entities,...(e.count!==null?{count:e.count}:{}),...(e.totalHealth!==null?{totalHealth:e.totalHealth}:{})}}:{})};
   }),total=units.length;
   const paths=['abilities','passiveAbilities','attributes','entities.count','entities.totalHealth','entities.healthPerEntity','movement.speed','defense.resistances','defense.projectilePenetrationResistance','missile','missile.range','missile.projectile.baseDamage','missile.projectile.armorPiercingDamage','missile.reload.baseTime','missile.projectile.shotsPerVolley','missile.ammunition','missile.accuracy.accuracy','missile.reload.reloadSkill','campaign.recruitmentRequirements'];
   const coverage=Object.fromEntries(paths.map(p=>{const known=units.filter(u=>p.split('.').reduce((v,k)=>v?.[k],u)!==undefined).length;return [p,{known,unknown:total-known}];}));
@@ -46,9 +46,9 @@ export function auditUnitData(){
   coverage.passiveAbilities.partial=passiveProjection.admissions.filter(a=>a.status==='PARTIAL').length;
   coverage.passiveAbilities.knownEmpty=passiveProjection.admissions.filter(a=>a.passiveAbilities?.length===0).length;
   coverage.passiveAbilities.nonempty=units.filter(u=>u.passiveAbilities?.length).length;
-  coverage['entities.count'].complete=entityProjection.admissions.length;
+  coverage['entities.count'].complete=entityProjection.admissions.filter(a=>a.count!==null).length;
   coverage['entities.count'].partial=0;
-  coverage['entities.totalHealth'].complete=entityProjection.admissions.length;
+  coverage['entities.totalHealth'].complete=entityProjection.admissions.filter(a=>a.totalHealth!==null).length;
   coverage['entities.totalHealth'].partial=0;
   return {production:total,sample:read('src/data/units.json').length-total,koreanNames:{known:koreanNames,unknown:total-koreanNames},coverage,raw,roster:{complete:read('src/data/factionRosters.json').coverage.filter(r=>r.status==='ROSTER COMPLETE').length,lords:read('src/data/lords.json').length,heroes:read('src/data/heroes.json').length,aliases:read('src/data/characterAliases.json').length},traceEvidence:{scope:s.candidates.length,abilityMembership,attributeMembership,buildingSources,rawSpeed,rawHitPoints,materializableWholeGroups:materializable,unmappedDistinctIds:Object.fromEntries(Object.entries(unmapped).map(([k,v])=>[k,v.size]))}};
 }

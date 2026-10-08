@@ -19,6 +19,7 @@ const read=p=>JSON.parse(readFileSync(p));
 const raw=read('src/data/units.json'),manifest=read('tools/wh3-importer/unit-entities/manifest.json');
 const review=read('tools/wh3-importer/unit-entities/admission.json'),projection=read('src/data/unitEntityAdmissions.json');
 const production=game.listUnits().filter(u=>u.gameVersion!=='sample');
+const rules=read('src/data/unitHpEntityRuleAdmissions.json');
 const expected={
   wh_main_emp_inf_swordsmen:[120,8280],wh_main_brt_cav_mounted_yeomen_0:[60,5520],wh_dlc01_chs_mon_dragon_ogre:[16,9856],
   wh2_dlc13_lzd_mon_dread_saurian_1:[1,15088],wh2_dlc09_tmb_veh_skeleton_chariot_0:[12,7032],
@@ -27,11 +28,11 @@ const expected={
   wh_main_emp_inf_spearmen_1:[120,8280],wh_dlc07_brt_inf_battle_pilgrims_0:[120,8280],wh_dlc07_brt_art_blessed_field_trebuchet_0:[4,4512],
 };
 
-test('all thirteen previously verified HP values regress exactly; only their proved Ultra counts are promoted',()=>{
+test('all thirteen previously verified HP values regress exactly inside expanded empirical Ultra coverage',()=>{
   assert.equal(production.length,1110);
-  assert.equal(production.filter(u=>u.entities.count!==undefined).length,13);
-  assert.equal(production.filter(u=>u.entities.count===undefined).length,1097);
-  assert.equal(production.filter(u=>u.entities.totalHealth!==undefined).length,13);
+  assert.equal(production.filter(u=>u.entities.count!==undefined).length,1071);
+  assert.equal(production.filter(u=>u.entities.count===undefined).length,39);
+  assert.equal(production.filter(u=>u.entities.totalHealth!==undefined).length,986);
   assert.equal(production.filter(u=>u.entities.healthPerEntity!==undefined).length,0);
   assert.deepEqual(review.summary.combined,{complete:13,partial:0,unknown:1097});
   assert.equal(projection.admissions.length,Object.keys(expected).length);
@@ -115,7 +116,7 @@ test('validator rejects unsafe, fractional, nonpositive counts; UI retains Ultra
   const html=renderToString(React.createElement(Details,{unit:known})).replace(/<!--.*?-->/g,'');
   assert(html.includes('전투 개체 수 (Ultra)'));assert(html.includes('부대 총 생명력 (Ultra)'));assert(html.includes('개체당 생명력'));
   assert(html.includes('승무원이나 탑승자를 별도로 더하지 않습니다'));assert(html.includes('4512'));assert(html.includes('script_log_031026_1244.txt:83'));
-  assert(html.includes(projection.sourceHash));
+  assert(html.includes(rules.sourceHash));
   const unknown=production.find(u=>u.entities.count===undefined);assert(renderToString(React.createElement(Details,{unit:unknown})).includes('미확인'));
 });
 

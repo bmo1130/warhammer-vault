@@ -78,7 +78,7 @@ export default function UnitProductionDetails({ unit }: { unit: Unit }) {
           {!!unit.passiveAbilities?.length && <p>능력 식별자: {unit.passiveAbilities.join(', ')}</p>}
           {!!passives.rawKeys.length && <p>원본 CA ability key: {passives.rawKeys.join(', ')}</p>}
         </>}
-        {entities && <p>개체 수·총 HP: Ultra · {entities.kind === 'DIRECT_ULTRA_RUNTIME' ? '기본 전투 원본 측정' : '기존 검증된 동일 profile'} · {entities.reviewReference} · {entities.references.join(', ')} · source SHA256 {entities.sourceHash}</p>}
+        {entities && <p>개체 수·총 HP: Ultra · {entities.kind === 'DIRECT_ULTRA_RUNTIME' ? '기본 전투 원본 측정' : entities.kind === 'EMPIRICAL_CATEGORY_RULE' ? '실측으로 검증한 동일 원본 구조의 계산값' : '기존 검증된 동일 profile'} · {entities.status === 'PARTIAL' ? '개체 수 확인 · 총 HP 미확인' : '개체 수·총 HP 확인'} · {entities.reviewReference} · {entities.references.join(', ')} · source SHA256 {entities.sourceHash}</p>}
         <p>미입력은 미확인입니다. 개체 수·HP·속도·저항 변환·모집 조건 등 미확인 값은 생략했습니다. 사격 자료가 없다는 사실만으로 사격 불가능을 확정하지 않습니다.</p>
       </div>
     </details>

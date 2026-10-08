@@ -103,6 +103,6 @@ test('prior Production data, admissions, rosters and identity files remain byte-
     assert.equal(readFileSync(path,'utf8').replace(/\r\n/g,'\n'),old.stdout.toString().replace(/\r\n/g,'\n'),path);
   }
   const units=game.listUnits().filter(u=>u.gameVersion!=='sample');assert.equal(units.length,1110);
-  for(const [predicate,count]of [[u=>/[가-힣]/.test(u.name),1110],[u=>u.attributes!==undefined,1107],[u=>u.passiveAbilities!==undefined,1105],[u=>u.entities.count!==undefined,13],[u=>u.entities.totalHealth!==undefined,13]])assert.equal(units.filter(predicate).length,count);
+  for(const [predicate,count]of [[u=>/[가-힣]/.test(u.name),1110],[u=>u.attributes!==undefined,1107],[u=>u.passiveAbilities!==undefined,1105],[u=>u.entities.count!==undefined,1071],[u=>u.entities.totalHealth!==undefined,986]])assert.equal(units.filter(predicate).length,count);
   assert.equal(game.listFactions().filter(f=>game.getRosterCoverage(f.id)?.status==='ROSTER COMPLETE').length,23);
 });
