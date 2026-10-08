@@ -1,0 +1,56 @@
+{
+  "format": "empirical-base-card-speed-rules-v1",
+  "baselineCommit": "4d41fa6",
+  "gameVersion": "9.0.2.0",
+  "snapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+  "inputs": [
+    {
+      "file": "src/data/units.json",
+      "hash": "1484a2f8fd9cc39999d9a178a75c074d8a660f0548898742433b5fe19ab760bb"
+    },
+    {
+      "file": "src/data/unitSpeedAdmissions.json",
+      "hash": "61eaeed88d14fa9a0f7b13fe60ef447d65cdb6381c07ea18c572959d42bb5dc1"
+    },
+    {
+      "file": "tools/wh3-importer/speed-research/manual-card-evidence.json",
+      "hash": "3d7a372f4dfb111f9410e600f7bd00440dd02c7729ced0e653f82612a314c497"
+    },
+    {
+      "file": "tools/wh3-importer/speed-research/mounted-manual-card-evidence.json",
+      "hash": "5a74456f8ed0bd51880356e99be32b1cbe4260cf39176442e1b0af73d32a674f"
+    },
+    {
+      "file": "tools/wh3-importer/speed-rules/artillery.source.json",
+      "hash": "33833a101ee03ec1f8a9538ae4bb9e457055c205a17da753f14e947bb0d47fca"
+    },
+    {
+      "file": "tools/wh3-importer/speed-rules/schema-inventory.json",
+      "hash": "646054100b378a4d263cf69581da37cd45cfe46d48399901861f5a3f19036e84"
+    },
+    {
+      "file": "tools/wh3-importer/speed-rules/ground-truth.json",
+      "hash": "4ce3493604cff5599e511ae5a364f1bf0e22657fa8a29c6afdf8aa86c29230ac"
+    },
+    {
+      "file": "tools/wh3-importer/unit-entities/manifest.json",
+      "hash": "47a33185d0fcb6325175fc97c78e34d1255f9bef8f1ab208dd0c1788b0be90e1"
+    },
+    {
+      "file": "tools/wh3-importer/hp-research/articulation.source.json",
+      "hash": "a91d9f9f214353aab84318b74906e13650697d6ceb212119a69c31291c308800"
+    },
+    {
+      "file": "src/data/lords.json",
+      "hash": "4cdfd775c6e8982a55b935682a8a3f7dacbf13dbf1e8427f0d1000be2d8c13f5"
+    },
+    {
+      "file": "src/data/heroes.json",
+      "hash": "f67834912b02eaddcbbdc808024e4e723816e83ca6987a9c0770bb4ad3974fea"
+    },
+    {
+      "file": "tools/wh3-importer/unit-entities/rules-report.json",
+      "hash": "37ed80cdf7bceb1d66c2151f97a6b63349fd56349b9bbcc645b869e35075224c"
+    }
+  ]
+}

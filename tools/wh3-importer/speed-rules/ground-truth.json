@@ -1,0 +1,1208 @@
+{
+  "format": "frozen-speed-ground-truth-v1",
+  "baselineCommit": "4d41fa6",
+  "legacy": [
+    {
+      "id": "ca_unit_wh_dlc01_chs_mon_dragon_ogre",
+      "value": 64,
+      "kind": "STATIC_DERIVED_SPEED",
+      "selectedComponent": "man",
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "reference": "src/data/unitSpeedAdmissions.json#/admissions/0",
+      "validationAnchor": {
+        "id": "ca_unit_wh_main_emp_inf_swordsmen",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 30,
+        "reference": "tools/wh3-importer/speed-research/manual-card-evidence.json#/samples/0"
+      }
+    },
+    {
+      "id": "ca_unit_wh_main_emp_inf_swordsmen",
+      "value": 30,
+      "kind": "STATIC_DERIVED_SPEED",
+      "selectedComponent": "man",
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "reference": "src/data/unitSpeedAdmissions.json#/admissions/1",
+      "validationAnchor": {
+        "id": "ca_unit_wh_main_emp_inf_swordsmen",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 30,
+        "reference": "tools/wh3-importer/speed-research/manual-card-evidence.json#/samples/0"
+      }
+    },
+    {
+      "id": "ca_unit_wh_main_emp_inf_spearmen_1",
+      "value": 30,
+      "kind": "STATIC_DERIVED_SPEED",
+      "selectedComponent": "man",
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "reference": "src/data/unitSpeedAdmissions.json#/admissions/2",
+      "validationAnchor": {
+        "id": "ca_unit_wh_main_emp_inf_swordsmen",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 30,
+        "reference": "tools/wh3-importer/speed-research/manual-card-evidence.json#/samples/0"
+      }
+    },
+    {
+      "id": "ca_unit_wh_dlc04_vmp_inf_sternsmen_0",
+      "value": 27,
+      "kind": "STATIC_DERIVED_SPEED",
+      "selectedComponent": "man",
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "reference": "src/data/unitSpeedAdmissions.json#/admissions/3",
+      "validationAnchor": {
+        "id": "ca_unit_wh_main_emp_inf_swordsmen",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 30,
+        "reference": "tools/wh3-importer/speed-research/manual-card-evidence.json#/samples/0"
+      }
+    },
+    {
+      "id": "ca_unit_wh_main_brt_cav_mounted_yeomen_0",
+      "value": 92,
+      "kind": "STATIC_DERIVED_SPEED",
+      "selectedComponent": "mount",
+      "profile": "EXACT_MOUNTED_YEOMEN_CHAIN",
+      "reference": "src/data/unitSpeedAdmissions.json#/admissions/4",
+      "validationAnchor": {
+        "id": "ca_unit_wh_main_brt_cav_mounted_yeomen_0",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 92,
+        "reference": "tools/wh3-importer/speed-research/manual-card-evidence.json#/samples/1"
+      }
+    },
+    {
+      "id": "ca_unit_wh2_dlc12_skv_inf_ratling_gun_0",
+      "value": 38,
+      "kind": "STATIC_DERIVED_SPEED",
+      "selectedComponent": "man",
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "reference": "src/data/unitSpeedAdmissions.json#/admissions/5",
+      "validationAnchor": {
+        "id": "ca_unit_wh_main_emp_inf_swordsmen",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 30,
+        "reference": "tools/wh3-importer/speed-research/manual-card-evidence.json#/samples/0"
+      }
+    },
+    {
+      "id": "ca_unit_wh_dlc04_emp_inf_free_company_militia_0",
+      "value": 36,
+      "kind": "STATIC_DERIVED_SPEED",
+      "selectedComponent": "man",
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "reference": "src/data/unitSpeedAdmissions.json#/admissions/6",
+      "validationAnchor": {
+        "id": "ca_unit_wh_main_emp_inf_swordsmen",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 30,
+        "reference": "tools/wh3-importer/speed-research/manual-card-evidence.json#/samples/0"
+      }
+    },
+    {
+      "id": "ca_unit_wh_main_brt_inf_men_at_arms",
+      "value": 30,
+      "kind": "STATIC_DERIVED_SPEED",
+      "selectedComponent": "man",
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "reference": "src/data/unitSpeedAdmissions.json#/admissions/7",
+      "validationAnchor": {
+        "id": "ca_unit_wh_main_emp_inf_swordsmen",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 30,
+        "reference": "tools/wh3-importer/speed-research/manual-card-evidence.json#/samples/0"
+      }
+    },
+    {
+      "id": "ca_unit_wh_dlc07_brt_inf_foot_squires_0",
+      "value": 28,
+      "kind": "STATIC_DERIVED_SPEED",
+      "selectedComponent": "man",
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "reference": "src/data/unitSpeedAdmissions.json#/admissions/8",
+      "validationAnchor": {
+        "id": "ca_unit_wh_main_emp_inf_swordsmen",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 30,
+        "reference": "tools/wh3-importer/speed-research/manual-card-evidence.json#/samples/0"
+      }
+    },
+    {
+      "id": "ca_unit_wh2_main_skv_inf_clanrats_1",
+      "value": 42,
+      "kind": "STATIC_DERIVED_SPEED",
+      "selectedComponent": "man",
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "reference": "src/data/unitSpeedAdmissions.json#/admissions/9",
+      "validationAnchor": {
+        "id": "ca_unit_wh_main_emp_inf_swordsmen",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 30,
+        "reference": "tools/wh3-importer/speed-research/manual-card-evidence.json#/samples/0"
+      }
+    },
+    {
+      "id": "ca_unit_wh_main_vmp_inf_grave_guard_1",
+      "value": 27,
+      "kind": "STATIC_DERIVED_SPEED",
+      "selectedComponent": "man",
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "reference": "src/data/unitSpeedAdmissions.json#/admissions/10",
+      "validationAnchor": {
+        "id": "ca_unit_wh_main_emp_inf_swordsmen",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 30,
+        "reference": "tools/wh3-importer/speed-research/manual-card-evidence.json#/samples/0"
+      }
+    },
+    {
+      "id": "ca_unit_wh2_main_lzd_inf_saurus_warriors_1",
+      "value": 31,
+      "kind": "STATIC_DERIVED_SPEED",
+      "selectedComponent": "man",
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "reference": "src/data/unitSpeedAdmissions.json#/admissions/11",
+      "validationAnchor": {
+        "id": "ca_unit_wh_main_emp_inf_swordsmen",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 30,
+        "reference": "tools/wh3-importer/speed-research/manual-card-evidence.json#/samples/0"
+      }
+    },
+    {
+      "id": "ca_unit_wh2_dlc11_cst_inf_depth_guard_0",
+      "value": 36,
+      "kind": "STATIC_DERIVED_SPEED",
+      "selectedComponent": "man",
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "reference": "src/data/unitSpeedAdmissions.json#/admissions/12",
+      "validationAnchor": {
+        "id": "ca_unit_wh_main_emp_inf_swordsmen",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 30,
+        "reference": "tools/wh3-importer/speed-research/manual-card-evidence.json#/samples/0"
+      }
+    },
+    {
+      "id": "ca_unit_wh2_dlc11_cst_inf_depth_guard_1",
+      "value": 36,
+      "kind": "STATIC_DERIVED_SPEED",
+      "selectedComponent": "man",
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "reference": "src/data/unitSpeedAdmissions.json#/admissions/13",
+      "validationAnchor": {
+        "id": "ca_unit_wh_main_emp_inf_swordsmen",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 30,
+        "reference": "tools/wh3-importer/speed-research/manual-card-evidence.json#/samples/0"
+      }
+    },
+    {
+      "id": "ca_unit_wh_main_chs_inf_chosen_0",
+      "value": 28,
+      "kind": "STATIC_DERIVED_SPEED",
+      "selectedComponent": "man",
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "reference": "src/data/unitSpeedAdmissions.json#/admissions/14",
+      "validationAnchor": {
+        "id": "ca_unit_wh_main_emp_inf_swordsmen",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 30,
+        "reference": "tools/wh3-importer/speed-research/manual-card-evidence.json#/samples/0"
+      }
+    },
+    {
+      "id": "ca_unit_wh_main_chs_inf_chosen_1",
+      "value": 28,
+      "kind": "STATIC_DERIVED_SPEED",
+      "selectedComponent": "man",
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "reference": "src/data/unitSpeedAdmissions.json#/admissions/15",
+      "validationAnchor": {
+        "id": "ca_unit_wh_main_emp_inf_swordsmen",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 30,
+        "reference": "tools/wh3-importer/speed-research/manual-card-evidence.json#/samples/0"
+      }
+    },
+    {
+      "id": "ca_unit_wh_dlc07_brt_peasant_mob_0",
+      "value": 33,
+      "kind": "STATIC_DERIVED_SPEED",
+      "selectedComponent": "man",
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "reference": "src/data/unitSpeedAdmissions.json#/admissions/16",
+      "validationAnchor": {
+        "id": "ca_unit_wh_main_emp_inf_swordsmen",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 30,
+        "reference": "tools/wh3-importer/speed-research/manual-card-evidence.json#/samples/0"
+      }
+    },
+    {
+      "id": "ca_unit_wh_dlc07_brt_inf_men_at_arms_1",
+      "value": 30,
+      "kind": "STATIC_DERIVED_SPEED",
+      "selectedComponent": "man",
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "reference": "src/data/unitSpeedAdmissions.json#/admissions/17",
+      "validationAnchor": {
+        "id": "ca_unit_wh_main_emp_inf_swordsmen",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 30,
+        "reference": "tools/wh3-importer/speed-research/manual-card-evidence.json#/samples/0"
+      }
+    },
+    {
+      "id": "ca_unit_wh_dlc07_brt_inf_men_at_arms_2",
+      "value": 30,
+      "kind": "STATIC_DERIVED_SPEED",
+      "selectedComponent": "man",
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "reference": "src/data/unitSpeedAdmissions.json#/admissions/18",
+      "validationAnchor": {
+        "id": "ca_unit_wh_main_emp_inf_swordsmen",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 30,
+        "reference": "tools/wh3-importer/speed-research/manual-card-evidence.json#/samples/0"
+      }
+    },
+    {
+      "id": "ca_unit_wh_dlc07_brt_inf_spearmen_at_arms_1",
+      "value": 30,
+      "kind": "STATIC_DERIVED_SPEED",
+      "selectedComponent": "man",
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "reference": "src/data/unitSpeedAdmissions.json#/admissions/19",
+      "validationAnchor": {
+        "id": "ca_unit_wh_main_emp_inf_swordsmen",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 30,
+        "reference": "tools/wh3-importer/speed-research/manual-card-evidence.json#/samples/0"
+      }
+    },
+    {
+      "id": "ca_unit_wh_main_brt_inf_spearmen_at_arms",
+      "value": 30,
+      "kind": "STATIC_DERIVED_SPEED",
+      "selectedComponent": "man",
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "reference": "src/data/unitSpeedAdmissions.json#/admissions/20",
+      "validationAnchor": {
+        "id": "ca_unit_wh_main_emp_inf_swordsmen",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 30,
+        "reference": "tools/wh3-importer/speed-research/manual-card-evidence.json#/samples/0"
+      }
+    },
+    {
+      "id": "ca_unit_wh_dlc07_brt_inf_battle_pilgrims_0",
+      "value": 30,
+      "kind": "STATIC_DERIVED_SPEED",
+      "selectedComponent": "man",
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "reference": "src/data/unitSpeedAdmissions.json#/admissions/21",
+      "validationAnchor": {
+        "id": "ca_unit_wh_main_emp_inf_swordsmen",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 30,
+        "reference": "tools/wh3-importer/speed-research/manual-card-evidence.json#/samples/0"
+      }
+    },
+    {
+      "id": "ca_unit_wh_main_brt_inf_peasant_bowmen",
+      "value": 33,
+      "kind": "STATIC_DERIVED_SPEED",
+      "selectedComponent": "man",
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "reference": "src/data/unitSpeedAdmissions.json#/admissions/22",
+      "validationAnchor": {
+        "id": "ca_unit_wh_main_emp_inf_swordsmen",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 30,
+        "reference": "tools/wh3-importer/speed-research/manual-card-evidence.json#/samples/0"
+      }
+    },
+    {
+      "id": "ca_unit_wh_dlc07_brt_inf_peasant_bowmen_1",
+      "value": 33,
+      "kind": "STATIC_DERIVED_SPEED",
+      "selectedComponent": "man",
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "reference": "src/data/unitSpeedAdmissions.json#/admissions/23",
+      "validationAnchor": {
+        "id": "ca_unit_wh_main_emp_inf_swordsmen",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 30,
+        "reference": "tools/wh3-importer/speed-research/manual-card-evidence.json#/samples/0"
+      }
+    },
+    {
+      "id": "ca_unit_wh_dlc07_brt_inf_peasant_bowmen_2",
+      "value": 33,
+      "kind": "STATIC_DERIVED_SPEED",
+      "selectedComponent": "man",
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "reference": "src/data/unitSpeedAdmissions.json#/admissions/24",
+      "validationAnchor": {
+        "id": "ca_unit_wh_main_emp_inf_swordsmen",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 30,
+        "reference": "tools/wh3-importer/speed-research/manual-card-evidence.json#/samples/0"
+      }
+    },
+    {
+      "id": "ca_unit_wh_main_brt_cav_mounted_yeomen_1",
+      "value": 92,
+      "kind": "STATIC_DERIVED_SPEED",
+      "selectedComponent": "mount",
+      "profile": "EXACT_MOUNTED_YEOMEN_CHAIN",
+      "reference": "src/data/unitSpeedAdmissions.json#/admissions/25",
+      "validationAnchor": {
+        "id": "ca_unit_wh_main_brt_cav_mounted_yeomen_0",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 92,
+        "reference": "tools/wh3-importer/speed-research/manual-card-evidence.json#/samples/1"
+      }
+    },
+    {
+      "id": "ca_unit_wh_main_brt_art_field_trebuchet",
+      "value": 20,
+      "kind": "STATIC_DERIVED_SPEED",
+      "selectedComponent": "engine",
+      "profile": "EXACT_FIELD_TREBUCHETS_CHAIN",
+      "reference": "src/data/unitSpeedAdmissions.json#/admissions/26",
+      "validationAnchor": {
+        "id": "ca_unit_wh_main_brt_art_field_trebuchet",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 20,
+        "reference": "tools/wh3-importer/speed-research/manual-card-evidence.json#/samples/2"
+      }
+    },
+    {
+      "id": "ca_unit_wh_dlc07_brt_art_blessed_field_trebuchet_0",
+      "value": 20,
+      "kind": "STATIC_DERIVED_SPEED",
+      "selectedComponent": "engine",
+      "profile": "EXACT_FIELD_TREBUCHETS_CHAIN",
+      "reference": "src/data/unitSpeedAdmissions.json#/admissions/27",
+      "validationAnchor": {
+        "id": "ca_unit_wh_main_brt_art_field_trebuchet",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 20,
+        "reference": "tools/wh3-importer/speed-research/manual-card-evidence.json#/samples/2"
+      }
+    },
+    {
+      "id": "ca_unit_wh_dlc04_emp_inf_flagellants_0",
+      "value": 36,
+      "kind": "STATIC_DERIVED_SPEED",
+      "selectedComponent": "man",
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "reference": "src/data/unitSpeedAdmissions.json#/admissions/28",
+      "validationAnchor": {
+        "id": "ca_unit_wh_main_emp_inf_swordsmen",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 30,
+        "reference": "tools/wh3-importer/speed-research/manual-card-evidence.json#/samples/0"
+      }
+    },
+    {
+      "id": "ca_unit_wh_main_emp_inf_crossbowmen",
+      "value": 33,
+      "kind": "STATIC_DERIVED_SPEED",
+      "selectedComponent": "man",
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "reference": "src/data/unitSpeedAdmissions.json#/admissions/29",
+      "validationAnchor": {
+        "id": "ca_unit_wh_main_emp_inf_swordsmen",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 30,
+        "reference": "tools/wh3-importer/speed-research/manual-card-evidence.json#/samples/0"
+      }
+    },
+    {
+      "id": "ca_unit_wh3_dlc25_emp_inf_hochland_long_rifles",
+      "value": 33,
+      "kind": "STATIC_DERIVED_SPEED",
+      "selectedComponent": "man",
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "reference": "src/data/unitSpeedAdmissions.json#/admissions/30",
+      "validationAnchor": {
+        "id": "ca_unit_wh_main_emp_inf_swordsmen",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 30,
+        "reference": "tools/wh3-importer/speed-research/manual-card-evidence.json#/samples/0"
+      }
+    },
+    {
+      "id": "ca_unit_wh3_dlc25_emp_inf_nuln_ironsides",
+      "value": 33,
+      "kind": "STATIC_DERIVED_SPEED",
+      "selectedComponent": "man",
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "reference": "src/data/unitSpeedAdmissions.json#/admissions/31",
+      "validationAnchor": {
+        "id": "ca_unit_wh_main_emp_inf_swordsmen",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 30,
+        "reference": "tools/wh3-importer/speed-research/manual-card-evidence.json#/samples/0"
+      }
+    },
+    {
+      "id": "ca_unit_wh3_dlc29_emp_inf_teutogen_guard",
+      "value": 28,
+      "kind": "STATIC_DERIVED_SPEED",
+      "selectedComponent": "man",
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "reference": "src/data/unitSpeedAdmissions.json#/admissions/32",
+      "validationAnchor": {
+        "id": "ca_unit_wh_main_emp_inf_swordsmen",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 30,
+        "reference": "tools/wh3-importer/speed-research/manual-card-evidence.json#/samples/0"
+      }
+    },
+    {
+      "id": "ca_unit_wh3_dlc29_emp_inf_warriors_of_ulric",
+      "value": 36,
+      "kind": "STATIC_DERIVED_SPEED",
+      "selectedComponent": "man",
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "reference": "src/data/unitSpeedAdmissions.json#/admissions/33",
+      "validationAnchor": {
+        "id": "ca_unit_wh_main_emp_inf_swordsmen",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 30,
+        "reference": "tools/wh3-importer/speed-research/manual-card-evidence.json#/samples/0"
+      }
+    },
+    {
+      "id": "ca_unit_wh3_dlc29_emp_inf_wolf_kin",
+      "value": 36,
+      "kind": "STATIC_DERIVED_SPEED",
+      "selectedComponent": "man",
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "reference": "src/data/unitSpeedAdmissions.json#/admissions/34",
+      "validationAnchor": {
+        "id": "ca_unit_wh_main_emp_inf_swordsmen",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 30,
+        "reference": "tools/wh3-importer/speed-research/manual-card-evidence.json#/samples/0"
+      }
+    },
+    {
+      "id": "ca_unit_wh2_main_skv_inf_clanrat_spearmen_0",
+      "value": 42,
+      "kind": "STATIC_DERIVED_SPEED",
+      "selectedComponent": "man",
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "reference": "src/data/unitSpeedAdmissions.json#/admissions/35",
+      "validationAnchor": {
+        "id": "ca_unit_wh_main_emp_inf_swordsmen",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 30,
+        "reference": "tools/wh3-importer/speed-research/manual-card-evidence.json#/samples/0"
+      }
+    },
+    {
+      "id": "ca_unit_wh2_main_skv_inf_clanrat_spearmen_1",
+      "value": 42,
+      "kind": "STATIC_DERIVED_SPEED",
+      "selectedComponent": "man",
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "reference": "src/data/unitSpeedAdmissions.json#/admissions/36",
+      "validationAnchor": {
+        "id": "ca_unit_wh_main_emp_inf_swordsmen",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 30,
+        "reference": "tools/wh3-importer/speed-research/manual-card-evidence.json#/samples/0"
+      }
+    },
+    {
+      "id": "ca_unit_wh2_main_skv_inf_plague_monk_censer_bearer",
+      "value": 42,
+      "kind": "STATIC_DERIVED_SPEED",
+      "selectedComponent": "man",
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "reference": "src/data/unitSpeedAdmissions.json#/admissions/37",
+      "validationAnchor": {
+        "id": "ca_unit_wh_main_emp_inf_swordsmen",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 30,
+        "reference": "tools/wh3-importer/speed-research/manual-card-evidence.json#/samples/0"
+      }
+    },
+    {
+      "id": "ca_unit_wh2_dlc14_skv_inf_eshin_triads_0",
+      "value": 54,
+      "kind": "STATIC_DERIVED_SPEED",
+      "selectedComponent": "man",
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "reference": "src/data/unitSpeedAdmissions.json#/admissions/38",
+      "validationAnchor": {
+        "id": "ca_unit_wh_main_emp_inf_swordsmen",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 30,
+        "reference": "tools/wh3-importer/speed-research/manual-card-evidence.json#/samples/0"
+      }
+    },
+    {
+      "id": "ca_unit_wh2_dlc14_skv_inf_warp_grinder_0",
+      "value": 38,
+      "kind": "STATIC_DERIVED_SPEED",
+      "selectedComponent": "man",
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "reference": "src/data/unitSpeedAdmissions.json#/admissions/39",
+      "validationAnchor": {
+        "id": "ca_unit_wh_main_emp_inf_swordsmen",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 30,
+        "reference": "tools/wh3-importer/speed-research/manual-card-evidence.json#/samples/0"
+      }
+    },
+    {
+      "id": "ca_unit_wh2_main_skv_inf_gutter_runners_0",
+      "value": 54,
+      "kind": "STATIC_DERIVED_SPEED",
+      "selectedComponent": "man",
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "reference": "src/data/unitSpeedAdmissions.json#/admissions/40",
+      "validationAnchor": {
+        "id": "ca_unit_wh_main_emp_inf_swordsmen",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 30,
+        "reference": "tools/wh3-importer/speed-research/manual-card-evidence.json#/samples/0"
+      }
+    },
+    {
+      "id": "ca_unit_wh2_main_skv_inf_gutter_runners_1",
+      "value": 54,
+      "kind": "STATIC_DERIVED_SPEED",
+      "selectedComponent": "man",
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "reference": "src/data/unitSpeedAdmissions.json#/admissions/41",
+      "validationAnchor": {
+        "id": "ca_unit_wh_main_emp_inf_swordsmen",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 30,
+        "reference": "tools/wh3-importer/speed-research/manual-card-evidence.json#/samples/0"
+      }
+    },
+    {
+      "id": "ca_unit_wh2_main_skv_inf_night_runners_0",
+      "value": 54,
+      "kind": "STATIC_DERIVED_SPEED",
+      "selectedComponent": "man",
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "reference": "src/data/unitSpeedAdmissions.json#/admissions/42",
+      "validationAnchor": {
+        "id": "ca_unit_wh_main_emp_inf_swordsmen",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 30,
+        "reference": "tools/wh3-importer/speed-research/manual-card-evidence.json#/samples/0"
+      }
+    },
+    {
+      "id": "ca_unit_wh2_main_skv_inf_night_runners_1",
+      "value": 54,
+      "kind": "STATIC_DERIVED_SPEED",
+      "selectedComponent": "man",
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "reference": "src/data/unitSpeedAdmissions.json#/admissions/43",
+      "validationAnchor": {
+        "id": "ca_unit_wh_main_emp_inf_swordsmen",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 30,
+        "reference": "tools/wh3-importer/speed-research/manual-card-evidence.json#/samples/0"
+      }
+    },
+    {
+      "id": "ca_unit_wh2_main_skv_inf_gutter_runner_slingers_0",
+      "value": 54,
+      "kind": "STATIC_DERIVED_SPEED",
+      "selectedComponent": "man",
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "reference": "src/data/unitSpeedAdmissions.json#/admissions/44",
+      "validationAnchor": {
+        "id": "ca_unit_wh_main_emp_inf_swordsmen",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 30,
+        "reference": "tools/wh3-importer/speed-research/manual-card-evidence.json#/samples/0"
+      }
+    },
+    {
+      "id": "ca_unit_wh2_main_skv_inf_gutter_runner_slingers_1",
+      "value": 54,
+      "kind": "STATIC_DERIVED_SPEED",
+      "selectedComponent": "man",
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "reference": "src/data/unitSpeedAdmissions.json#/admissions/45",
+      "validationAnchor": {
+        "id": "ca_unit_wh_main_emp_inf_swordsmen",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 30,
+        "reference": "tools/wh3-importer/speed-research/manual-card-evidence.json#/samples/0"
+      }
+    },
+    {
+      "id": "ca_unit_wh2_dlc12_skv_inf_warplock_jezzails_0",
+      "value": 42,
+      "kind": "STATIC_DERIVED_SPEED",
+      "selectedComponent": "man",
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "reference": "src/data/unitSpeedAdmissions.json#/admissions/46",
+      "validationAnchor": {
+        "id": "ca_unit_wh_main_emp_inf_swordsmen",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 30,
+        "reference": "tools/wh3-importer/speed-research/manual-card-evidence.json#/samples/0"
+      }
+    },
+    {
+      "id": "ca_unit_wh2_main_skv_inf_poison_wind_globadiers",
+      "value": 38,
+      "kind": "STATIC_DERIVED_SPEED",
+      "selectedComponent": "man",
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "reference": "src/data/unitSpeedAdmissions.json#/admissions/47",
+      "validationAnchor": {
+        "id": "ca_unit_wh_main_emp_inf_swordsmen",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 30,
+        "reference": "tools/wh3-importer/speed-research/manual-card-evidence.json#/samples/0"
+      }
+    },
+    {
+      "id": "ca_unit_wh2_main_skv_inf_death_globe_bombardiers",
+      "value": 38,
+      "kind": "STATIC_DERIVED_SPEED",
+      "selectedComponent": "man",
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "reference": "src/data/unitSpeedAdmissions.json#/admissions/48",
+      "validationAnchor": {
+        "id": "ca_unit_wh_main_emp_inf_swordsmen",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 30,
+        "reference": "tools/wh3-importer/speed-research/manual-card-evidence.json#/samples/0"
+      }
+    },
+    {
+      "id": "ca_unit_wh2_dlc14_skv_inf_poison_wind_mortar_0",
+      "value": 38,
+      "kind": "STATIC_DERIVED_SPEED",
+      "selectedComponent": "man",
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "reference": "src/data/unitSpeedAdmissions.json#/admissions/49",
+      "validationAnchor": {
+        "id": "ca_unit_wh_main_emp_inf_swordsmen",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 30,
+        "reference": "tools/wh3-importer/speed-research/manual-card-evidence.json#/samples/0"
+      }
+    },
+    {
+      "id": "ca_unit_wh2_main_skv_inf_skavenslave_slingers_0",
+      "value": 42,
+      "kind": "STATIC_DERIVED_SPEED",
+      "selectedComponent": "man",
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "reference": "src/data/unitSpeedAdmissions.json#/admissions/50",
+      "validationAnchor": {
+        "id": "ca_unit_wh_main_emp_inf_swordsmen",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 30,
+        "reference": "tools/wh3-importer/speed-research/manual-card-evidence.json#/samples/0"
+      }
+    },
+    {
+      "id": "ca_unit_wh2_main_skv_inf_warpfire_thrower",
+      "value": 38,
+      "kind": "STATIC_DERIVED_SPEED",
+      "selectedComponent": "man",
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "reference": "src/data/unitSpeedAdmissions.json#/admissions/51",
+      "validationAnchor": {
+        "id": "ca_unit_wh_main_emp_inf_swordsmen",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 30,
+        "reference": "tools/wh3-importer/speed-research/manual-card-evidence.json#/samples/0"
+      }
+    },
+    {
+      "id": "ca_unit_wh2_dlc09_tmb_inf_skeleton_archers_0",
+      "value": 31,
+      "kind": "STATIC_DERIVED_SPEED",
+      "selectedComponent": "man",
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "reference": "src/data/unitSpeedAdmissions.json#/admissions/52",
+      "validationAnchor": {
+        "id": "ca_unit_wh_main_emp_inf_swordsmen",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 30,
+        "reference": "tools/wh3-importer/speed-research/manual-card-evidence.json#/samples/0"
+      }
+    },
+    {
+      "id": "ca_unit_wh2_dlc09_tmb_mon_ushabti_1",
+      "value": 54,
+      "kind": "STATIC_DERIVED_SPEED",
+      "selectedComponent": "man",
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "reference": "src/data/unitSpeedAdmissions.json#/admissions/53",
+      "validationAnchor": {
+        "id": "ca_unit_wh_main_emp_inf_swordsmen",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 30,
+        "reference": "tools/wh3-importer/speed-research/manual-card-evidence.json#/samples/0"
+      }
+    },
+    {
+      "id": "ca_unit_wh2_dlc09_tmb_inf_nehekhara_warriors_0",
+      "value": 28,
+      "kind": "STATIC_DERIVED_SPEED",
+      "selectedComponent": "man",
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "reference": "src/data/unitSpeedAdmissions.json#/admissions/54",
+      "validationAnchor": {
+        "id": "ca_unit_wh_main_emp_inf_swordsmen",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 30,
+        "reference": "tools/wh3-importer/speed-research/manual-card-evidence.json#/samples/0"
+      }
+    },
+    {
+      "id": "ca_unit_wh2_main_lzd_inf_saurus_warriors_0",
+      "value": 31,
+      "kind": "STATIC_DERIVED_SPEED",
+      "selectedComponent": "man",
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "reference": "src/data/unitSpeedAdmissions.json#/admissions/55",
+      "validationAnchor": {
+        "id": "ca_unit_wh_main_emp_inf_swordsmen",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 30,
+        "reference": "tools/wh3-importer/speed-research/manual-card-evidence.json#/samples/0"
+      }
+    },
+    {
+      "id": "ca_unit_wh2_main_lzd_inf_saurus_spearmen_0",
+      "value": 31,
+      "kind": "STATIC_DERIVED_SPEED",
+      "selectedComponent": "man",
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "reference": "src/data/unitSpeedAdmissions.json#/admissions/56",
+      "validationAnchor": {
+        "id": "ca_unit_wh_main_emp_inf_swordsmen",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 30,
+        "reference": "tools/wh3-importer/speed-research/manual-card-evidence.json#/samples/0"
+      }
+    },
+    {
+      "id": "ca_unit_wh2_main_lzd_inf_saurus_spearmen_1",
+      "value": 31,
+      "kind": "STATIC_DERIVED_SPEED",
+      "selectedComponent": "man",
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "reference": "src/data/unitSpeedAdmissions.json#/admissions/57",
+      "validationAnchor": {
+        "id": "ca_unit_wh_main_emp_inf_swordsmen",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 30,
+        "reference": "tools/wh3-importer/speed-research/manual-card-evidence.json#/samples/0"
+      }
+    },
+    {
+      "id": "ca_unit_wh2_dlc12_lzd_inf_skink_red_crested_0",
+      "value": 46,
+      "kind": "STATIC_DERIVED_SPEED",
+      "selectedComponent": "man",
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "reference": "src/data/unitSpeedAdmissions.json#/admissions/58",
+      "validationAnchor": {
+        "id": "ca_unit_wh_main_emp_inf_swordsmen",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 30,
+        "reference": "tools/wh3-importer/speed-research/manual-card-evidence.json#/samples/0"
+      }
+    },
+    {
+      "id": "ca_unit_wh2_main_lzd_inf_skink_cohort_0",
+      "value": 46,
+      "kind": "STATIC_DERIVED_SPEED",
+      "selectedComponent": "man",
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "reference": "src/data/unitSpeedAdmissions.json#/admissions/59",
+      "validationAnchor": {
+        "id": "ca_unit_wh_main_emp_inf_swordsmen",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 30,
+        "reference": "tools/wh3-importer/speed-research/manual-card-evidence.json#/samples/0"
+      }
+    },
+    {
+      "id": "ca_unit_wh2_main_lzd_inf_skink_cohort_1",
+      "value": 46,
+      "kind": "STATIC_DERIVED_SPEED",
+      "selectedComponent": "man",
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "reference": "src/data/unitSpeedAdmissions.json#/admissions/60",
+      "validationAnchor": {
+        "id": "ca_unit_wh_main_emp_inf_swordsmen",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 30,
+        "reference": "tools/wh3-importer/speed-research/manual-card-evidence.json#/samples/0"
+      }
+    },
+    {
+      "id": "ca_unit_wh2_main_lzd_inf_chameleon_skinks_0",
+      "value": 48,
+      "kind": "STATIC_DERIVED_SPEED",
+      "selectedComponent": "man",
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "reference": "src/data/unitSpeedAdmissions.json#/admissions/61",
+      "validationAnchor": {
+        "id": "ca_unit_wh_main_emp_inf_swordsmen",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 30,
+        "reference": "tools/wh3-importer/speed-research/manual-card-evidence.json#/samples/0"
+      }
+    },
+    {
+      "id": "ca_unit_wh2_main_lzd_inf_skink_skirmishers_0",
+      "value": 48,
+      "kind": "STATIC_DERIVED_SPEED",
+      "selectedComponent": "man",
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "reference": "src/data/unitSpeedAdmissions.json#/admissions/62",
+      "validationAnchor": {
+        "id": "ca_unit_wh_main_emp_inf_swordsmen",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 30,
+        "reference": "tools/wh3-importer/speed-research/manual-card-evidence.json#/samples/0"
+      }
+    },
+    {
+      "id": "ca_unit_wh2_main_lzd_mon_bastiladon_0",
+      "value": 40,
+      "kind": "STATIC_DERIVED_SPEED",
+      "selectedComponent": "man",
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "reference": "src/data/unitSpeedAdmissions.json#/admissions/63",
+      "validationAnchor": {
+        "id": "ca_unit_wh_main_emp_inf_swordsmen",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 30,
+        "reference": "tools/wh3-importer/speed-research/manual-card-evidence.json#/samples/0"
+      }
+    },
+    {
+      "id": "ca_unit_wh2_main_lzd_mon_stegadon_0",
+      "value": 50,
+      "kind": "STATIC_DERIVED_SPEED",
+      "selectedComponent": "man",
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "reference": "src/data/unitSpeedAdmissions.json#/admissions/64",
+      "validationAnchor": {
+        "id": "ca_unit_wh_main_emp_inf_swordsmen",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 30,
+        "reference": "tools/wh3-importer/speed-research/manual-card-evidence.json#/samples/0"
+      }
+    },
+    {
+      "id": "ca_unit_wh2_dlc12_lzd_mon_ancient_salamander_0",
+      "value": 75,
+      "kind": "STATIC_DERIVED_SPEED",
+      "selectedComponent": "man",
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "reference": "src/data/unitSpeedAdmissions.json#/admissions/65",
+      "validationAnchor": {
+        "id": "ca_unit_wh_main_emp_inf_swordsmen",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 30,
+        "reference": "tools/wh3-importer/speed-research/manual-card-evidence.json#/samples/0"
+      }
+    },
+    {
+      "id": "ca_unit_wh2_dlc11_cst_inf_syreens",
+      "value": 48,
+      "kind": "STATIC_DERIVED_SPEED",
+      "selectedComponent": "man",
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "reference": "src/data/unitSpeedAdmissions.json#/admissions/66",
+      "validationAnchor": {
+        "id": "ca_unit_wh_main_emp_inf_swordsmen",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 30,
+        "reference": "tools/wh3-importer/speed-research/manual-card-evidence.json#/samples/0"
+      }
+    },
+    {
+      "id": "ca_unit_wh2_dlc11_cst_mon_animated_hulks_0",
+      "value": 42,
+      "kind": "STATIC_DERIVED_SPEED",
+      "selectedComponent": "man",
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "reference": "src/data/unitSpeedAdmissions.json#/admissions/67",
+      "validationAnchor": {
+        "id": "ca_unit_wh_main_emp_inf_swordsmen",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 30,
+        "reference": "tools/wh3-importer/speed-research/manual-card-evidence.json#/samples/0"
+      }
+    },
+    {
+      "id": "ca_unit_wh2_dlc11_cst_mon_scurvy_dogs",
+      "value": 95,
+      "kind": "STATIC_DERIVED_SPEED",
+      "selectedComponent": "man",
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "reference": "src/data/unitSpeedAdmissions.json#/admissions/68",
+      "validationAnchor": {
+        "id": "ca_unit_wh_main_emp_inf_swordsmen",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 30,
+        "reference": "tools/wh3-importer/speed-research/manual-card-evidence.json#/samples/0"
+      }
+    },
+    {
+      "id": "ca_unit_wh2_dlc11_cst_inf_deck_gunners_0",
+      "value": 23,
+      "kind": "STATIC_DERIVED_SPEED",
+      "selectedComponent": "man",
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "reference": "src/data/unitSpeedAdmissions.json#/admissions/69",
+      "validationAnchor": {
+        "id": "ca_unit_wh_main_emp_inf_swordsmen",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 30,
+        "reference": "tools/wh3-importer/speed-research/manual-card-evidence.json#/samples/0"
+      }
+    },
+    {
+      "id": "ca_unit_wh2_dlc11_cst_inf_zombie_gunnery_mob_1",
+      "value": 23,
+      "kind": "STATIC_DERIVED_SPEED",
+      "selectedComponent": "man",
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "reference": "src/data/unitSpeedAdmissions.json#/admissions/70",
+      "validationAnchor": {
+        "id": "ca_unit_wh_main_emp_inf_swordsmen",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 30,
+        "reference": "tools/wh3-importer/speed-research/manual-card-evidence.json#/samples/0"
+      }
+    },
+    {
+      "id": "ca_unit_wh_dlc01_chs_inf_chosen_2",
+      "value": 28,
+      "kind": "STATIC_DERIVED_SPEED",
+      "selectedComponent": "man",
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "reference": "src/data/unitSpeedAdmissions.json#/admissions/71",
+      "validationAnchor": {
+        "id": "ca_unit_wh_main_emp_inf_swordsmen",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 30,
+        "reference": "tools/wh3-importer/speed-research/manual-card-evidence.json#/samples/0"
+      }
+    },
+    {
+      "id": "ca_unit_wh_dlc01_chs_inf_forsaken_0",
+      "value": 46,
+      "kind": "STATIC_DERIVED_SPEED",
+      "selectedComponent": "man",
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "reference": "src/data/unitSpeedAdmissions.json#/admissions/72",
+      "validationAnchor": {
+        "id": "ca_unit_wh_main_emp_inf_swordsmen",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 30,
+        "reference": "tools/wh3-importer/speed-research/manual-card-evidence.json#/samples/0"
+      }
+    },
+    {
+      "id": "ca_unit_wh_main_chs_mon_giant",
+      "value": 39,
+      "kind": "STATIC_DERIVED_SPEED",
+      "selectedComponent": "man",
+      "profile": "NONFLYING_SINGLE_MAN_RUN",
+      "reference": "src/data/unitSpeedAdmissions.json#/admissions/73",
+      "validationAnchor": {
+        "id": "ca_unit_wh_main_emp_inf_swordsmen",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 30,
+        "reference": "tools/wh3-importer/speed-research/manual-card-evidence.json#/samples/0"
+      }
+    },
+    {
+      "id": "ca_unit_wh_main_brt_cav_grail_knights",
+      "value": 84,
+      "kind": "STATIC_DERIVED_SPEED",
+      "selectedComponent": "mount",
+      "profile": "EXACT_GRAIL_KNIGHTS_CHAIN",
+      "reference": "src/data/unitSpeedAdmissions.json#/admissions/74",
+      "validationAnchor": {
+        "id": "ca_unit_wh_main_brt_cav_grail_knights",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 84,
+        "reference": "tools/wh3-importer/speed-research/mounted-manual-card-evidence.json#/samples/2"
+      }
+    },
+    {
+      "id": "ca_unit_wh_main_brt_cav_knights_of_the_realm",
+      "value": 84,
+      "kind": "STATIC_DERIVED_SPEED",
+      "selectedComponent": "mount",
+      "profile": "EXACT_KNIGHTS_OF_THE_REALM_CHAIN",
+      "reference": "src/data/unitSpeedAdmissions.json#/admissions/75",
+      "validationAnchor": {
+        "id": "ca_unit_wh_main_brt_cav_knights_of_the_realm",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 84,
+        "reference": "tools/wh3-importer/speed-research/mounted-manual-card-evidence.json#/samples/0"
+      }
+    },
+    {
+      "id": "ca_unit_wh_dlc07_brt_cav_questing_knights_0",
+      "value": 84,
+      "kind": "STATIC_DERIVED_SPEED",
+      "selectedComponent": "mount",
+      "profile": "EXACT_KNIGHTS_OF_THE_REALM_CHAIN",
+      "reference": "src/data/unitSpeedAdmissions.json#/admissions/76",
+      "validationAnchor": {
+        "id": "ca_unit_wh_main_brt_cav_knights_of_the_realm",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 84,
+        "reference": "tools/wh3-importer/speed-research/mounted-manual-card-evidence.json#/samples/0"
+      }
+    },
+    {
+      "id": "ca_unit_wh_dlc07_brt_cav_knights_errant_0",
+      "value": 84,
+      "kind": "STATIC_DERIVED_SPEED",
+      "selectedComponent": "mount",
+      "profile": "EXACT_KNIGHTS_OF_THE_REALM_CHAIN",
+      "reference": "src/data/unitSpeedAdmissions.json#/admissions/77",
+      "validationAnchor": {
+        "id": "ca_unit_wh_main_brt_cav_knights_of_the_realm",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 84,
+        "reference": "tools/wh3-importer/speed-research/mounted-manual-card-evidence.json#/samples/0"
+      }
+    },
+    {
+      "id": "ca_unit_wh_dlc07_brt_cav_grail_guardians_0",
+      "value": 84,
+      "kind": "STATIC_DERIVED_SPEED",
+      "selectedComponent": "mount",
+      "profile": "EXACT_GRAIL_KNIGHTS_CHAIN",
+      "reference": "src/data/unitSpeedAdmissions.json#/admissions/78",
+      "validationAnchor": {
+        "id": "ca_unit_wh_main_brt_cav_grail_knights",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 84,
+        "reference": "tools/wh3-importer/speed-research/mounted-manual-card-evidence.json#/samples/2"
+      }
+    },
+    {
+      "id": "ca_unit_wh2_main_lzd_cav_cold_ones_1",
+      "value": 66,
+      "kind": "STATIC_DERIVED_SPEED",
+      "selectedComponent": "mount",
+      "profile": "EXACT_COLD_ONE_RIDERS_CHAIN",
+      "reference": "src/data/unitSpeedAdmissions.json#/admissions/79",
+      "validationAnchor": {
+        "id": "ca_unit_wh2_main_lzd_cav_cold_ones_1",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 66,
+        "reference": "tools/wh3-importer/speed-research/mounted-manual-card-evidence.json#/samples/1"
+      }
+    },
+    {
+      "id": "ca_unit_wh2_main_lzd_cav_cold_one_spearmen_1",
+      "value": 66,
+      "kind": "STATIC_DERIVED_SPEED",
+      "selectedComponent": "mount",
+      "profile": "EXACT_COLD_ONE_RIDERS_CHAIN",
+      "reference": "src/data/unitSpeedAdmissions.json#/admissions/80",
+      "validationAnchor": {
+        "id": "ca_unit_wh2_main_lzd_cav_cold_ones_1",
+        "kind": "MANUAL_CARD_VALIDATION",
+        "observedCardSpeed": 66,
+        "reference": "tools/wh3-importer/speed-research/mounted-manual-card-evidence.json#/samples/1"
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "ca_unit_wh_main_emp_inf_swordsmen",
+      "value": 30,
+      "selectedRole": "man",
+      "phase": "TRAINING",
+      "reference": "tools/wh3-importer/speed-research/manual-card-evidence.json#/samples/0",
+      "kind": "USER_MANUAL_CARD",
+      "observedGameVersion": null,
+      "observedAt": null,
+      "contextModifiers": "NOT_REPORTED"
+    },
+    {
+      "id": "ca_unit_wh_main_brt_cav_mounted_yeomen_0",
+      "value": 92,
+      "selectedRole": "mount",
+      "phase": "TRAINING",
+      "reference": "tools/wh3-importer/speed-research/manual-card-evidence.json#/samples/1",
+      "kind": "USER_MANUAL_CARD",
+      "observedGameVersion": null,
+      "observedAt": null,
+      "contextModifiers": "NOT_REPORTED"
+    },
+    {
+      "id": "ca_unit_wh_main_brt_art_field_trebuchet",
+      "value": 20,
+      "selectedRole": "engine",
+      "phase": "TRAINING",
+      "reference": "tools/wh3-importer/speed-research/manual-card-evidence.json#/samples/2",
+      "kind": "USER_MANUAL_CARD",
+      "observedGameVersion": null,
+      "observedAt": null,
+      "contextModifiers": "NOT_REPORTED"
+    },
+    {
+      "id": "ca_unit_wh_main_brt_cav_knights_of_the_realm",
+      "value": 84,
+      "selectedRole": "mount",
+      "phase": "INDEPENDENT_MOUNTED_HOLDOUT",
+      "reference": "tools/wh3-importer/speed-research/mounted-manual-card-evidence.json#/samples/0",
+      "kind": "USER_MANUAL_CARD",
+      "observedGameVersion": null,
+      "observedAt": null,
+      "contextModifiers": "NOT_REPORTED"
+    },
+    {
+      "id": "ca_unit_wh2_main_lzd_cav_cold_ones_1",
+      "value": 66,
+      "selectedRole": "mount",
+      "phase": "INDEPENDENT_MOUNTED_HOLDOUT",
+      "reference": "tools/wh3-importer/speed-research/mounted-manual-card-evidence.json#/samples/1",
+      "kind": "USER_MANUAL_CARD",
+      "observedGameVersion": null,
+      "observedAt": null,
+      "contextModifiers": "NOT_REPORTED"
+    },
+    {
+      "id": "ca_unit_wh_main_brt_cav_grail_knights",
+      "value": 84,
+      "selectedRole": "mount",
+      "phase": "INDEPENDENT_MOUNTED_HOLDOUT",
+      "reference": "tools/wh3-importer/speed-research/mounted-manual-card-evidence.json#/samples/2",
+      "kind": "USER_MANUAL_CARD",
+      "observedGameVersion": null,
+      "observedAt": null,
+      "contextModifiers": "NOT_REPORTED"
+    }
+  ]
+}

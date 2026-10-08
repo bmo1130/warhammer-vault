@@ -1,4 +1,5 @@
 const {withoutUnitEntities}=require('../.test-build/src/repositories/unitEntities.js');
+const {withoutUnitSpeed}=require('../.test-build/src/repositories/unitSpeed.js');
 const {test}=require('node:test');
 const assert=require('node:assert/strict');
 const {readFileSync}=require('node:fs');
@@ -33,7 +34,7 @@ test('passive collections promote with proved-empty and partial states; every no
   assert.equal(review.summary.rawKeys,416);assert.equal(review.summary.passiveCandidates,264);assert.equal(review.summary.admittedRawKeys,254);assert.equal(review.summary.landGroups,1072);assert.equal(review.summary.junctions,2013);
   for(const baseline of raw){
     const current=game.getUnit(baseline.id),previous=applyUnitAttributes(localiseUnit(baseline));
-    assert.deepEqual(withoutUnitEntities(withoutUnitPassives(current)),previous,baseline.id);
+    assert.deepEqual(withoutUnitSpeed(withoutUnitEntities(withoutUnitPassives(current))),previous,baseline.id);
     if(baseline.gameVersion==='sample'){assert.deepEqual(current,baseline);continue;}
     assert(/[가-힣]/.test(current.name));
     assert.deepEqual(current.passiveAbilities?.slice(0,baseline.passiveAbilities?.length??0),current.passiveAbilities===undefined?undefined:baseline.passiveAbilities??[]);

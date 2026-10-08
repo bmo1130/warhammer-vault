@@ -11,9 +11,11 @@ export function auditUnitData(){
   const passiveById=new Map(passiveProjection.admissions.map(a=>[a.id,a]));
   const entityProjection=read('src/data/unitHpEntityRuleAdmissions.json');
   const entityById=new Map(entityProjection.admissions.map(a=>[a.id,a]));
+  const speedProjection=read('src/data/unitSpeedRuleAdmissions.json');
+  const speedById=new Map(speedProjection.admissions.map(a=>[a.id,a]));
   const units=read('src/data/units.json').filter(u=>u.gameVersion!=='sample').map(u=>{
-    const a=attributeById.get(u.id),p=passiveById.get(u.id),e=entityById.get(u.id);
-    return {...u,...(a?.attributes!==undefined?{attributes:a.attributes}:{}),...(p?.passiveAbilities!==undefined?{passiveAbilities:p.passiveAbilities}:{}),...(e?{entities:{...u.entities,...(e.count!==null?{count:e.count}:{}),...(e.totalHealth!==null?{totalHealth:e.totalHealth}:{})}}:{})};
+    const a=attributeById.get(u.id),p=passiveById.get(u.id),e=entityById.get(u.id),s=speedById.get(u.id);
+    return {...u,...(a?.attributes!==undefined?{attributes:a.attributes}:{}),...(p?.passiveAbilities!==undefined?{passiveAbilities:p.passiveAbilities}:{}),...(e?{entities:{...u.entities,...(e.count!==null?{count:e.count}:{}),...(e.totalHealth!==null?{totalHealth:e.totalHealth}:{})}}:{}),...(s?{movement:{...u.movement,speed:s.value}}:{})};
   }),total=units.length;
   const paths=['abilities','passiveAbilities','attributes','entities.count','entities.totalHealth','entities.healthPerEntity','movement.speed','defense.resistances','defense.projectilePenetrationResistance','missile','missile.range','missile.projectile.baseDamage','missile.projectile.armorPiercingDamage','missile.reload.baseTime','missile.projectile.shotsPerVolley','missile.ammunition','missile.accuracy.accuracy','missile.reload.reloadSkill','campaign.recruitmentRequirements'];
   const coverage=Object.fromEntries(paths.map(p=>{const known=units.filter(u=>p.split('.').reduce((v,k)=>v?.[k],u)!==undefined).length;return [p,{known,unknown:total-known}];}));

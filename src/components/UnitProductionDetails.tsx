@@ -6,6 +6,7 @@ import { unitAttributeAdmission } from '../repositories/unitAttributes';
 import { getUnitAttributeLabel, getUnitPassiveAbilityLabel } from '../domain/unitLabels';
 import { unitPassiveAdmission } from '../repositories/unitPassives';
 import { unitEntityAdmission } from '../repositories/unitEntities';
+import { unitSpeedAdmission } from '../repositories/unitSpeed';
 
 // Read stored fields only; the optional total uses the existing approved sum.
 export default function UnitProductionDetails({ unit }: { unit: Unit }) {
@@ -14,6 +15,7 @@ export default function UnitProductionDetails({ unit }: { unit: Unit }) {
   const attributes = unitAttributeAdmission(unit);
   const passives = unitPassiveAdmission(unit);
   const entities = unitEntityAdmission(unit);
+  const speed = unitSpeedAdmission(unit);
   const damage = [
     ['기본 피해', unit.melee.damage.base], ['관통 피해', unit.melee.damage.armorPiercing],
     ['총 무기 피해', total], ['대형 보너스', unit.melee.damage.bonusVsLarge],
@@ -71,6 +73,7 @@ export default function UnitProductionDetails({ unit }: { unit: Unit }) {
         <p>팩션은 검토된 기본 catalog 분류입니다. 다른 permission을 배제하거나 전체 roster·캠페인 모집 가능성을 확정하지 않습니다.</p>
         <p>{unit.source}</p>
         <p>{unit.sources?.publicStats}</p>
+        {speed && <p>기본 속도: CA {speed.selectedRole === 'man' ? '본체' : speed.selectedRole === 'mount' ? '탈것' : '포병 엔진'} run_speed {speed.rawRunSpeed} × 10 = {speed.value} · {speed.kind === 'PRESERVED_STATIC_SPEED' ? '기존 검증값 보존' : '검증된 구조 규칙으로 추론'}{speed.directCardReference ? ' · 게임 카드 확인 표본' : ''} · source SHA256 {speed.sourceHash}</p>}
         {localisation && <p>한국어 유닛명: CA {localisation.sourcePack} · {localisation.localisationKey} · pack SHA256 {localisation.packHash}</p>}
         {attributes && <p>특성: CA attribute 그룹 및 검토된 공성 플래그 · {attributes.status === 'PARTIAL' ? '일부 보류' : '검토 완료'} · source SHA256 {attributes.sourceHash}</p>}
         {passives && <>

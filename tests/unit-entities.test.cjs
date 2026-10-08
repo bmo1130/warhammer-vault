@@ -6,6 +6,7 @@ const React=require('react');
 const {renderToString}=require('react-dom/server');
 const {gameRepository:game}=require('../.test-build/src/repositories/gameRepository.js');
 const {applyUnitEntities,withoutUnitEntities,unitEntityAdmission}=require('../.test-build/src/repositories/unitEntities.js');
+const {withoutUnitSpeed}=require('../.test-build/src/repositories/unitSpeed.js');
 const {applyUnitPassives}=require('../.test-build/src/repositories/unitPassives.js');
 const {applyUnitAttributes}=require('../.test-build/src/repositories/unitAttributes.js');
 const {localiseUnit}=require('../.test-build/src/repositories/unitLocalisation.js');
@@ -50,7 +51,7 @@ test('all thirteen previously verified HP values regress exactly inside expanded
 test('every non-count field, old HP, Sample, roster, Character identity and prior slice evidence survives',()=>{
   for(const r of raw){
     const previous=applyUnitPassives(applyUnitAttributes(localiseUnit(r))),current=game.getUnit(r.id);
-    assert.deepEqual(withoutUnitEntities(current),previous,r.id);
+    assert.deepEqual(withoutUnitSpeed(withoutUnitEntities(current)),previous,r.id);
     if(r.gameVersion==='sample')assert.deepEqual(current,r);
   }
   for(const path of ['src/data/units.json','src/data/unitLocalisations.json','src/data/unitAttributeAdmissions.json','src/data/unitPassiveAdmissions.json',

@@ -6,6 +6,9 @@ import { resolve } from 'node:path';
 import { prepareEvidenceView } from './evidence-view.mjs';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
+const speedRules = spawnSync(process.execPath, ['scripts/promote-unit-speed-rules.mjs', '--check'], {cwd:root,stdio:'inherit'});
+if (speedRules.error) throw speedRules.error;
+if (speedRules.status !== 0) process.exit(speedRules.status ?? 1);
 const hpEntityRules = spawnSync(process.execPath, ['scripts/promote-unit-hp-entity-rules.mjs', '--check'], {cwd:root,stdio:'inherit'});
 if (hpEntityRules.error) throw hpEntityRules.error;
 if (hpEntityRules.status !== 0) process.exit(hpEntityRules.status ?? 1);

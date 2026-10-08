@@ -1,5 +1,8 @@
 import { spawnSync } from 'node:child_process';
 import { prepareEvidenceView } from './evidence-view.mjs';
+const speedRules = spawnSync(process.execPath, ['scripts/promote-unit-speed-rules.mjs', '--check'], {stdio:'inherit'});
+if (speedRules.error) throw speedRules.error;
+if (speedRules.status !== 0) process.exit(speedRules.status ?? 1);
 const hpEntityRules = spawnSync(process.execPath, ['scripts/promote-unit-hp-entity-rules.mjs', '--check'], {stdio:'inherit'});
 if (hpEntityRules.error) throw hpEntityRules.error;
 if (hpEntityRules.status !== 0) process.exit(hpEntityRules.status ?? 1);
