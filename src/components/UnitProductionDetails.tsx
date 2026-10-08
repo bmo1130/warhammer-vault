@@ -7,6 +7,8 @@ import { getUnitAttributeLabel, getUnitPassiveAbilityLabel } from '../domain/uni
 import { unitPassiveAdmission } from '../repositories/unitPassives';
 import { unitEntityAdmission } from '../repositories/unitEntities';
 import { unitSpeedAdmission } from '../repositories/unitSpeed';
+import { unitResistanceAdmission } from '../repositories/unitResistances';
+import UnitResistanceDetails from './UnitResistanceDetails';
 
 // Read stored fields only; the optional total uses the existing approved sum.
 export default function UnitProductionDetails({ unit }: { unit: Unit }) {
@@ -16,6 +18,7 @@ export default function UnitProductionDetails({ unit }: { unit: Unit }) {
   const passives = unitPassiveAdmission(unit);
   const entities = unitEntityAdmission(unit);
   const speed = unitSpeedAdmission(unit);
+  const resistances = unitResistanceAdmission(unit);
   const damage = [
     ['기본 피해', unit.melee.damage.base], ['관통 피해', unit.melee.damage.armorPiercing],
     ['총 무기 피해', total], ['대형 보너스', unit.melee.damage.bonusVsLarge],
@@ -44,6 +47,7 @@ export default function UnitProductionDetails({ unit }: { unit: Unit }) {
       </div>
       {entities && <p className="data-note">Ultra 기준 기본값입니다. 개체 수는 전투 개체를 세며 포병 승무원이나 탑승자를 별도로 더하지 않습니다. 총 생명력을 개체 수로 나눈 값은 개체당 생명력으로 확정하지 않습니다.</p>}
     </section>
+    <UnitResistanceDetails resistances={unit.defense.resistances}/>
     <section className="section">
       <SectionTitle title="특성"/>
       {unit.attributes?.length ? <ul>{unit.attributes.map(id => <li key={id}>{getUnitAttributeLabel(id)}</li>)}</ul>
@@ -74,6 +78,7 @@ export default function UnitProductionDetails({ unit }: { unit: Unit }) {
         <p>{unit.source}</p>
         <p>{unit.sources?.publicStats}</p>
         {speed && <p>기본 속도: CA {speed.selectedRole === 'man' ? '본체' : speed.selectedRole === 'mount' ? '탈것' : '포병 엔진'} run_speed {speed.rawRunSpeed} × 10 = {speed.value} · {speed.kind === 'PRESERVED_STATIC_SPEED' ? '기존 검증값 보존' : '검증된 구조 규칙으로 추론'}{speed.directCardReference ? ' · 게임 카드 확인 표본' : ''} · source SHA256 {speed.sourceHash}</p>}
+        {resistances && <p>기본 피해 저항: CA land_units의 명시적 damage_mod 필드 · 퍼센트 단위 그대로 · 원본 및 게임 표시 명칭 검증 · {resistances.status === 'COMPLETE' ? '다섯 저항 확인' : '일부 저항 확인'} · 능력 효과 별도 · source SHA256 {resistances.sourceHash}</p>}
         {localisation && <p>한국어 유닛명: CA {localisation.sourcePack} · {localisation.localisationKey} · pack SHA256 {localisation.packHash}</p>}
         {attributes && <p>특성: CA attribute 그룹 및 검토된 공성 플래그 · {attributes.status === 'PARTIAL' ? '일부 보류' : '검토 완료'} · source SHA256 {attributes.sourceHash}</p>}
         {passives && <>
@@ -82,7 +87,7 @@ export default function UnitProductionDetails({ unit }: { unit: Unit }) {
           {!!passives.rawKeys.length && <p>원본 CA ability key: {passives.rawKeys.join(', ')}</p>}
         </>}
         {entities && <p>개체 수·총 HP: Ultra · {entities.kind === 'DIRECT_ULTRA_RUNTIME' ? '기본 전투 원본 측정' : entities.kind === 'EMPIRICAL_CATEGORY_RULE' ? '실측으로 검증한 동일 원본 구조의 계산값' : '기존 검증된 동일 profile'} · {entities.status === 'PARTIAL' ? '개체 수 확인 · 총 HP 미확인' : '개체 수·총 HP 확인'} · {entities.reviewReference} · {entities.references.join(', ')} · source SHA256 {entities.sourceHash}</p>}
-        <p>미입력은 미확인입니다. 개체 수·HP·속도·저항 변환·모집 조건 등 미확인 값은 생략했습니다. 사격 자료가 없다는 사실만으로 사격 불가능을 확정하지 않습니다.</p>
+        <p>미입력은 미확인입니다. 개체 수·HP·속도·모집 조건 등 미확인 값은 생략했습니다. 저항은 확인된 0%와 미확인을 구별해 표시합니다. 사격 자료가 없다는 사실만으로 사격 불가능을 확정하지 않습니다.</p>
       </div>
     </details>
   </>;

@@ -13,12 +13,21 @@ export function auditUnitData(){
   const entityById=new Map(entityProjection.admissions.map(a=>[a.id,a]));
   const speedProjection=read('src/data/unitSpeedRuleAdmissions.json');
   const speedById=new Map(speedProjection.admissions.map(a=>[a.id,a]));
+  const resistanceProjection=read('src/data/unitResistanceAdmissions.json');
+  const resistanceById=new Map(resistanceProjection.admissions.map(a=>[a.id,a]));
   const units=read('src/data/units.json').filter(u=>u.gameVersion!=='sample').map(u=>{
-    const a=attributeById.get(u.id),p=passiveById.get(u.id),e=entityById.get(u.id),s=speedById.get(u.id);
-    return {...u,...(a?.attributes!==undefined?{attributes:a.attributes}:{}),...(p?.passiveAbilities!==undefined?{passiveAbilities:p.passiveAbilities}:{}),...(e?{entities:{...u.entities,...(e.count!==null?{count:e.count}:{}),...(e.totalHealth!==null?{totalHealth:e.totalHealth}:{})}}:{}),...(s?{movement:{...u.movement,speed:s.value}}:{})};
+    const a=attributeById.get(u.id),p=passiveById.get(u.id),e=entityById.get(u.id),s=speedById.get(u.id),r=resistanceById.get(u.id);
+    return {...u,...(a?.attributes!==undefined?{attributes:a.attributes}:{}),...(p?.passiveAbilities!==undefined?{passiveAbilities:p.passiveAbilities}:{}),...(e?{entities:{...u.entities,...(e.count!==null?{count:e.count}:{}),...(e.totalHealth!==null?{totalHealth:e.totalHealth}:{})}}:{}),...(s?{movement:{...u.movement,speed:s.value}}:{}),...(r?{defense:{...u.defense,resistances:{...u.defense.resistances,...r.values}}}:{})};
   }),total=units.length;
   const paths=['abilities','passiveAbilities','attributes','entities.count','entities.totalHealth','entities.healthPerEntity','movement.speed','defense.resistances','defense.projectilePenetrationResistance','missile','missile.range','missile.projectile.baseDamage','missile.projectile.armorPiercingDamage','missile.reload.baseTime','missile.projectile.shotsPerVolley','missile.ammunition','missile.accuracy.accuracy','missile.reload.reloadSkill','campaign.recruitmentRequirements'];
   const coverage=Object.fromEntries(paths.map(p=>{const known=units.filter(u=>p.split('.').reduce((v,k)=>v?.[k],u)!==undefined).length;return [p,{known,unknown:total-known}];}));
+  const resistances=Object.fromEntries(['physical','missile','spell','fire','ward'].map(k=>{
+    const values=units.map(u=>u.defense.resistances?.[k]),known=values.filter(v=>v!==undefined).length;
+    return [k,{known,unknown:total-known,explicitZero:values.filter(v=>v===0).length,nonzero:values.filter(v=>v!==undefined&&v!==0).length,negative:values.filter(v=>v<0).length,COMPLETE:known,PARTIAL:0,UNKNOWN:total-known}];
+  }));
+  const resistanceStatuses=Object.fromEntries(['COMPLETE','PARTIAL','UNKNOWN'].map(k=>[k,units.filter(u=>{
+    const count=Object.keys(u.defense.resistances??{}).length;return (count===5?'COMPLETE':count?'PARTIAL':'UNKNOWN')===k;
+  }).length]));
   const s=decodeSource(read('tools/wh3-importer/faction-rosters/source.json'),rosterSourceHash),rosters=discoverRoster(s);
   const entries=new Map(rosters.flatMap(r=>r.units).map(e=>[e.id,e]));
   const materializable={abilities:0,passiveAbilities:0,attributes:0},unmapped={ability:new Set(),attribute:new Set()};
@@ -52,6 +61,6 @@ export function auditUnitData(){
   coverage['entities.count'].partial=0;
   coverage['entities.totalHealth'].complete=entityProjection.admissions.filter(a=>a.totalHealth!==null).length;
   coverage['entities.totalHealth'].partial=0;
-  return {production:total,sample:read('src/data/units.json').length-total,koreanNames:{known:koreanNames,unknown:total-koreanNames},coverage,raw,roster:{complete:read('src/data/factionRosters.json').coverage.filter(r=>r.status==='ROSTER COMPLETE').length,lords:read('src/data/lords.json').length,heroes:read('src/data/heroes.json').length,aliases:read('src/data/characterAliases.json').length},traceEvidence:{scope:s.candidates.length,abilityMembership,attributeMembership,buildingSources,rawSpeed,rawHitPoints,materializableWholeGroups:materializable,unmappedDistinctIds:Object.fromEntries(Object.entries(unmapped).map(([k,v])=>[k,v.size]))}};
+  return {production:total,sample:read('src/data/units.json').length-total,koreanNames:{known:koreanNames,unknown:total-koreanNames},coverage,resistances,resistanceStatuses,raw,roster:{complete:read('src/data/factionRosters.json').coverage.filter(r=>r.status==='ROSTER COMPLETE').length,lords:read('src/data/lords.json').length,heroes:read('src/data/heroes.json').length,aliases:read('src/data/characterAliases.json').length},traceEvidence:{scope:s.candidates.length,abilityMembership,attributeMembership,buildingSources,rawSpeed,rawHitPoints,materializableWholeGroups:materializable,unmappedDistinctIds:Object.fromEntries(Object.entries(unmapped).map(([k,v])=>[k,v.size]))}};
 }
 if(process.argv[1]?.endsWith('audit-unit-data.mjs'))console.log(JSON.stringify(auditUnitData(),null,2));

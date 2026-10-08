@@ -1,0 +1,42 @@
+{
+  "format": "base-resistance-validation-references-v1",
+  "liveGameReadings": 0,
+  "manualReference": {
+    "id": "ca_unit_wh3_main_kho_mon_bloodthirster_0",
+    "kind": "USER_PROVIDED_WIKI_REFERENCE",
+    "source": "User-provided wiki values; comparison only, never CA extraction input",
+    "archivedFrom": "generated/wh3/research/semantics-evidence.json#/samples/2/manualComparisonOnly",
+    "observedGameVersion": null,
+    "observedAt": null,
+    "contextModifiers": "NOT_RECORDED",
+    "confidence": "MEDIUM_HISTORICAL_REFERENCE",
+    "expected": {
+      "physical": 20,
+      "spell": 35
+    }
+  },
+  "official": {
+    "url": "https://community.creative-assembly.com/total-war/total-war-warhammer/blogs/6-feature-focus-2-damage-part-1",
+    "author": "CA-Pingu / Total War Team",
+    "originalPublication": "2023-07-13",
+    "migrationDate": "2024-03-28",
+    "kind": "OFFICIAL_MECHANICS_AND_HISTORICAL_UNIT_EXAMPLE",
+    "zeroExample": {
+      "id": "ca_unit_wh_main_emp_inf_spearmen_0",
+      "expected": {
+        "physical": 0,
+        "missile": 0,
+        "spell": 0,
+        "fire": 0,
+        "ward": 0
+      },
+      "confidence": "HISTORICAL_NO_VERSION_MATCH"
+    },
+    "fiveIndependentTypes": true,
+    "onlyFireCanBeNegative": true,
+    "spellDoesNotMeanMagicalWeaponAttack": true,
+    "aggregateApplicableResistanceCap": 90,
+    "capIsNotAnIndividualBaseFieldClamp": true
+  },
+  "limit": "No fresh unit-card measurement; fresh pack replay checks extraction, not live UI. Base fields exclude every ability/effect contribution, including passive phases that may be active at battle start."
+}

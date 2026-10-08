@@ -33,7 +33,8 @@ export type UnitMovement = {
   canRun?: boolean;
   canSkirmish?: boolean;
 };
-// Percentages use percentage points: 20 means 20%, rather than 0.2.
+// Base percentages use percentage points: 20 means 20%, rather than 0.2.
+// Explicit 0 is known; omitted fields are unknown. Negative fire is weakness.
 export type UnitResistances = {
   physical?: number;
   missile?: number;

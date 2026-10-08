@@ -1,0 +1,476 @@
+{
+  "format": "base-resistance-schema-audit-v1",
+  "schemaSha256": "5d628a0167b34a096752c5c21acd16493834a987c80dc9f02364617f796ba2a4",
+  "tables": [
+    {
+      "table": "main_units_tables",
+      "presentInSchema": true,
+      "definitions": [
+        {
+          "version": 7,
+          "fields": [
+            {
+              "name": "land_unit",
+              "field_type": "StringU8",
+              "default_value": null,
+              "is_reference": [
+                "land_units",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "mount",
+              "field_type": "OptionalStringU8",
+              "default_value": null,
+              "is_reference": [
+                "campaign_mounts",
+                "model"
+              ],
+              "description": ""
+            }
+          ],
+          "localised_fields": []
+        }
+      ],
+      "observedProcessedVersions": [
+        7
+      ],
+      "definitionSelection": "OBSERVED_PROCESSED_SCHEMA_VERSIONS"
+    },
+    {
+      "table": "land_units_tables",
+      "presentInSchema": true,
+      "definitions": [
+        {
+          "version": 54,
+          "fields": [
+            {
+              "name": "key",
+              "field_type": "StringU8",
+              "default_value": null,
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "man_entity",
+              "field_type": "StringU8",
+              "default_value": null,
+              "is_reference": [
+                "battle_entities",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "mount",
+              "field_type": "OptionalStringU8",
+              "default_value": null,
+              "is_reference": [
+                "mounts",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "articulated_record",
+              "field_type": "OptionalStringU8",
+              "default_value": null,
+              "is_reference": [
+                "land_unit_articulated_vehicles",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "engine",
+              "field_type": "OptionalStringU8",
+              "default_value": null,
+              "is_reference": [
+                "battlefield_engines",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "damage_mod_flame",
+              "field_type": "I32",
+              "default_value": "0",
+              "is_reference": null,
+              "description": "How much we modify flaming damage, 0 is unaffected, -100 is double damage, +100 is negation"
+            },
+            {
+              "name": "damage_mod_magic",
+              "field_type": "I32",
+              "default_value": "0",
+              "is_reference": null,
+              "description": "How much we modify magical damage, 0 is unaffected, -100 is double damage, +100 is negation"
+            },
+            {
+              "name": "damage_mod_physical",
+              "field_type": "I32",
+              "default_value": "0",
+              "is_reference": null,
+              "description": "How much we modify physical damage, 0 is unaffected, -100 is double damage, +100 is negation"
+            },
+            {
+              "name": "damage_mod_missile",
+              "field_type": "I32",
+              "default_value": "0",
+              "is_reference": null,
+              "description": "How much we modify missile damage, 0 is unaffected, -100 is double damage, +100 is negation"
+            },
+            {
+              "name": "damage_mod_all",
+              "field_type": "I32",
+              "default_value": "0",
+              "is_reference": null,
+              "description": "How much we modify all damage, 0 is unaffected, -100 is double damage, +100 is negation"
+            }
+          ],
+          "localised_fields": [
+            {
+              "name": "onscreen_name",
+              "field_type": "StringU8",
+              "is_key": false,
+              "default_value": null,
+              "is_filename": false,
+              "filename_relative_path": null,
+              "is_reference": null,
+              "lookup": null,
+              "description": "",
+              "ca_order": -1,
+              "is_bitwise": 0,
+              "enum_values": {},
+              "is_part_of_colour": null
+            },
+            {
+              "name": "concealed_name",
+              "field_type": "StringU8",
+              "is_key": false,
+              "default_value": null,
+              "is_filename": false,
+              "filename_relative_path": null,
+              "is_reference": null,
+              "lookup": null,
+              "description": "This name is used in battle for enemy units when it is present (for goblin fanatics for example will show them as regular goblins, but want player who has these units to tell difference)",
+              "ca_order": -1,
+              "is_bitwise": 0,
+              "enum_values": {},
+              "is_part_of_colour": null
+            }
+          ]
+        }
+      ],
+      "observedProcessedVersions": [
+        54
+      ],
+      "definitionSelection": "OBSERVED_PROCESSED_SCHEMA_VERSIONS"
+    },
+    {
+      "table": "battle_entities_tables",
+      "presentInSchema": true,
+      "definitions": [
+        {
+          "version": 39,
+          "fields": [
+            {
+              "name": "key",
+              "field_type": "StringU8",
+              "default_value": null,
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "projectile_penetration_resistance",
+              "field_type": "I32",
+              "default_value": "1",
+              "is_reference": null,
+              "description": "Added to the projectile penetration counter. Higher number means this entity can stop projectiles more easily."
+            }
+          ],
+          "localised_fields": []
+        }
+      ],
+      "observedProcessedVersions": [
+        39
+      ],
+      "definitionSelection": "OBSERVED_PROCESSED_SCHEMA_VERSIONS"
+    },
+    {
+      "table": "mounts_tables",
+      "presentInSchema": true,
+      "definitions": [
+        {
+          "version": 10,
+          "fields": [
+            {
+              "name": "key",
+              "field_type": "StringU8",
+              "default_value": null,
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "entity",
+              "field_type": "StringU8",
+              "default_value": null,
+              "is_reference": [
+                "battle_entities",
+                "key"
+              ],
+              "description": ""
+            }
+          ],
+          "localised_fields": []
+        }
+      ],
+      "observedProcessedVersions": [
+        10
+      ],
+      "definitionSelection": "OBSERVED_PROCESSED_SCHEMA_VERSIONS"
+    },
+    {
+      "table": "battlefield_engines_tables",
+      "presentInSchema": true,
+      "definitions": [
+        {
+          "version": 24,
+          "fields": [
+            {
+              "name": "key",
+              "field_type": "StringU8",
+              "default_value": null,
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "battle_entity",
+              "field_type": "StringU8",
+              "default_value": null,
+              "is_reference": [
+                "battle_entities",
+                "key"
+              ],
+              "description": ""
+            }
+          ],
+          "localised_fields": []
+        }
+      ],
+      "observedProcessedVersions": [
+        24
+      ],
+      "definitionSelection": "OBSERVED_PROCESSED_SCHEMA_VERSIONS"
+    },
+    {
+      "table": "land_unit_articulated_vehicles_tables",
+      "presentInSchema": true,
+      "definitions": [
+        {
+          "version": 6,
+          "fields": [
+            {
+              "name": "articulated_entity",
+              "field_type": "OptionalStringU8",
+              "default_value": null,
+              "is_reference": [
+                "battle_entities",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "key",
+              "field_type": "StringU8",
+              "default_value": null,
+              "is_reference": null,
+              "description": ""
+            }
+          ],
+          "localised_fields": []
+        }
+      ],
+      "observedProcessedVersions": [],
+      "definitionSelection": "LATEST_CACHED_DEFINITION_FOR_DISCOVERY_ONLY"
+    },
+    {
+      "table": "ui_unit_stats_tables",
+      "presentInSchema": true,
+      "definitions": [
+        {
+          "version": 10,
+          "fields": [
+            {
+              "name": "key",
+              "field_type": "StringU8",
+              "default_value": null,
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "localisation",
+              "field_type": "StringU8",
+              "default_value": null,
+              "is_reference": [
+                "unit_stat_localisations",
+                "stat_key"
+              ],
+              "description": "Where the localisation lives"
+            }
+          ],
+          "localised_fields": []
+        }
+      ],
+      "observedProcessedVersions": [
+        10
+      ],
+      "definitionSelection": "OBSERVED_PROCESSED_SCHEMA_VERSIONS"
+    },
+    {
+      "table": "modifiable_unit_stats_tables",
+      "presentInSchema": true,
+      "definitions": [
+        {
+          "version": 0,
+          "fields": [
+            {
+              "name": "localisation",
+              "field_type": "StringU8",
+              "default_value": null,
+              "is_reference": [
+                "unit_stat_localisations",
+                "stat_key"
+              ],
+              "description": ""
+            }
+          ],
+          "localised_fields": []
+        }
+      ],
+      "observedProcessedVersions": [
+        0
+      ],
+      "definitionSelection": "OBSERVED_PROCESSED_SCHEMA_VERSIONS"
+    },
+    {
+      "table": "special_ability_phase_stat_effects_tables",
+      "presentInSchema": true,
+      "definitions": [
+        {
+          "version": 3,
+          "fields": [
+            {
+              "name": "stat",
+              "field_type": "StringU8",
+              "default_value": null,
+              "is_reference": [
+                "modifiable_unit_stats",
+                "stat_key"
+              ],
+              "description": ""
+            }
+          ],
+          "localised_fields": []
+        }
+      ],
+      "observedProcessedVersions": [
+        3
+      ],
+      "definitionSelection": "OBSERVED_PROCESSED_SCHEMA_VERSIONS"
+    },
+    {
+      "table": "unit_stat_localisations_tables",
+      "presentInSchema": true,
+      "definitions": [
+        {
+          "version": 0,
+          "fields": [],
+          "localised_fields": [
+            {
+              "name": "onscreen_name",
+              "field_type": "StringU8",
+              "is_key": false,
+              "default_value": null,
+              "is_filename": false,
+              "filename_relative_path": null,
+              "is_reference": null,
+              "lookup": null,
+              "description": "",
+              "ca_order": -1,
+              "is_bitwise": 0,
+              "enum_values": {},
+              "is_part_of_colour": null
+            },
+            {
+              "name": "tooltip_text",
+              "field_type": "StringU8",
+              "is_key": false,
+              "default_value": null,
+              "is_filename": false,
+              "filename_relative_path": null,
+              "is_reference": null,
+              "lookup": null,
+              "description": "",
+              "ca_order": -1,
+              "is_bitwise": 0,
+              "enum_values": {},
+              "is_part_of_colour": null
+            }
+          ]
+        }
+      ],
+      "observedProcessedVersions": [
+        0
+      ],
+      "definitionSelection": "OBSERVED_PROCESSED_SCHEMA_VERSIONS"
+    },
+    {
+      "table": "unit_variants_tables",
+      "presentInSchema": true,
+      "definitions": [
+        {
+          "version": 5,
+          "fields": [],
+          "localised_fields": []
+        }
+      ],
+      "observedProcessedVersions": [],
+      "definitionSelection": "LATEST_CACHED_DEFINITION_FOR_DISCOVERY_ONLY"
+    }
+  ],
+  "relatedNamedFields": [
+    {
+      "table": "battle_entities_tables",
+      "discoverySchemaVersion": 39,
+      "fields": [
+        "projectile_penetration_resistance"
+      ]
+    },
+    {
+      "table": "land_units_tables",
+      "discoverySchemaVersion": 54,
+      "fields": [
+        "damage_mod_flame",
+        "damage_mod_magic",
+        "damage_mod_physical",
+        "damage_mod_missile",
+        "damage_mod_all"
+      ]
+    },
+    {
+      "table": "naval_units_tables",
+      "discoverySchemaVersion": 18,
+      "fields": [
+        "strengths_weaknesses_text"
+      ]
+    },
+    {
+      "table": "projectiles_tables",
+      "discoverySchemaVersion": 53,
+      "fields": [
+        "high_air_resistance"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "format": "ca-base-resistance-rules-v1",
+  "baselineCommit": "5f001a2",
+  "gameVersion": "9.0.2.0",
+  "snapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+  "inputs": [
+    {
+      "file": "src/data/units.json",
+      "hash": "1484a2f8fd9cc39999d9a178a75c074d8a660f0548898742433b5fe19ab760bb"
+    },
+    {
+      "file": "src/data/unitHpEntityRuleAdmissions.json",
+      "hash": "c15ad4a92a9d424ad14171fa701bce0ac7183134ec81fbff7ec03ad6e468e387"
+    },
+    {
+      "file": "src/data/unitSpeedRuleAdmissions.json",
+      "hash": "feaf8f49f63ca2de61df096182720c721246dea9f4da90b7b36656db7da21bd6"
+    },
+    {
+      "file": "src/data/unitAttributeAdmissions.json",
+      "hash": "0d9bfde9c347b67edc5b053e6addfcd6cef5833b4bf71d8e8c88d1c8d315423b"
+    },
+    {
+      "file": "src/data/unitPassiveAdmissions.json",
+      "hash": "b7722d3672bf8887744777e0aa809e38370c84f6fcb08f33bd07d802080e0d32"
+    },
+    {
+      "file": "src/data/lords.json",
+      "hash": "4cdfd775c6e8982a55b935682a8a3f7dacbf13dbf1e8427f0d1000be2d8c13f5"
+    },
+    {
+      "file": "src/data/heroes.json",
+      "hash": "f67834912b02eaddcbbdc808024e4e723816e83ca6987a9c0770bb4ad3974fea"
+    },
+    {
+      "file": "tools/wh3-importer/unit-entities/manifest.json",
+      "hash": "47a33185d0fcb6325175fc97c78e34d1255f9bef8f1ab208dd0c1788b0be90e1"
+    },
+    {
+      "file": "tools/wh3-importer/unit-passives/source.json",
+      "hash": "01a1a00c34f8cef93931c3454645f52311b838dd69adebcc7e66c81f1210bae6"
+    },
+    {
+      "file": "tools/wh3-importer/resistance-rules/semantics.source.json",
+      "hash": "58f090dae6dcd09d99f87e9606ca43df252078db48ece2a1ecee718472f8d763"
+    },
+    {
+      "file": "tools/wh3-importer/resistance-rules/schema-inventory.json",
+      "hash": "a3b09d8147e04fa3fee976eba5f9a4fad744bbf6bd6f09017252e361afeaffe3"
+    },
+    {
+      "file": "tools/wh3-importer/resistance-rules/ground-truth.json",
+      "hash": "9049a8c61e609fdcc4ca32a2472a945698b0a3f13f4dcd72e0d2ff1f0648a6da"
+    }
+  ]
+}

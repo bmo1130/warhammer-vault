@@ -1,3 +1,4 @@
+const {withoutUnitResistances}=require('../.test-build/src/repositories/unitResistances.js');
 const {withoutUnitEntities}=require('../.test-build/src/repositories/unitEntities.js');
 const {withoutUnitSpeed}=require('../.test-build/src/repositories/unitSpeed.js');
 const {test}=require('node:test');
@@ -28,7 +29,7 @@ test('every exact Production ID gets its admitted Korean name; Samples, all stat
   assert.equal(new Set(projection.admissions.map(a=>a.id)).size,projection.admissions.length);
   for(const u of raw){
     const current=game.getUnit(u.id);
-    assert.deepEqual(withoutUnitSpeed(withoutUnitEntities(withoutUnitPassives(withoutUnitAttributes(withoutUnitLocalisation(current))))),u);
+    assert.deepEqual(withoutUnitSpeed(withoutUnitEntities(withoutUnitPassives(withoutUnitAttributes(withoutUnitLocalisation(withoutUnitResistances(current)))))),u);
     if(u.gameVersion==='sample')assert.deepEqual(current,u);
     else {
       const a=projection.admissions.find(a=>a.id===u.id);

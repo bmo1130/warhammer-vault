@@ -34,6 +34,11 @@ export function validateUnits(units: readonly Unit[], factionIds: Iterable<strin
     size('entities.entitySize', unit.entities.entitySize);
     size('melee.splash.maxTargetSize', unit.melee.splash?.maxTargetSize);
     size('missile.projectile.penetration.stopsAtEntitySize', unit.missile?.projectile.penetration?.stopsAtEntitySize);
+    for (const kind of ['physical', 'missile', 'spell', 'ward'] as const) {
+      nonNegative(`defense.resistances.${kind}`, unit.defense.resistances?.[kind]);
+    }
+    const fire = unit.defense.resistances?.fire;
+    if (fire !== undefined && !Number.isFinite(fire)) issue('defense.resistances.fire', '화염 저항·취약성은 유한한 값이어야 합니다.');
     for (const [field, value] of [
       ['entities.totalHealth', unit.entities.totalHealth],
       ['entities.healthPerEntity', unit.entities.healthPerEntity],

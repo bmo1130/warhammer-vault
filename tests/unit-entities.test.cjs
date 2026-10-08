@@ -1,3 +1,4 @@
+const {withoutUnitResistances}=require('../.test-build/src/repositories/unitResistances.js');
 const {test}=require('node:test');
 const assert=require('node:assert/strict');
 const {readFileSync}=require('node:fs');
@@ -51,7 +52,7 @@ test('all thirteen previously verified HP values regress exactly inside expanded
 test('every non-count field, old HP, Sample, roster, Character identity and prior slice evidence survives',()=>{
   for(const r of raw){
     const previous=applyUnitPassives(applyUnitAttributes(localiseUnit(r))),current=game.getUnit(r.id);
-    assert.deepEqual(withoutUnitSpeed(withoutUnitEntities(current)),previous,r.id);
+    assert.deepEqual(withoutUnitSpeed(withoutUnitEntities(withoutUnitResistances(current))),previous,r.id);
     if(r.gameVersion==='sample')assert.deepEqual(current,r);
   }
   for(const path of ['src/data/units.json','src/data/unitLocalisations.json','src/data/unitAttributeAdmissions.json','src/data/unitPassiveAdmissions.json',
