@@ -1,0 +1,140 @@
+{
+  "format": "ability-dictionary-manifest-v1",
+  "baselineCommit": "e9b1f2e",
+  "sourceHash": "b9ac104e16a8977a35ba536a0e524152d54f7ab8fee42443c1cd9d8d3e04e24d",
+  "inputs": [
+    {
+      "file": "src/data/archiveLocalisations.json",
+      "hash": "d81a86b1527cdbf94d6a8cea1e78d79bbb19508888f24a0e813a0a4e23b16029"
+    },
+    {
+      "file": "src/data/caResearchEffect.json",
+      "hash": "cbec05a6ab8a4b6b901fa8daa9343363092f691d485d0fb446648b695e6a74ff"
+    },
+    {
+      "file": "src/data/caSkillBatch01.json",
+      "hash": "690773406346b9a6e461302dc40df540d2c0a74090652a6b96c440c93f374f0d"
+    },
+    {
+      "file": "src/data/caSkillBatch02.json",
+      "hash": "a4a0ae8423ff52efb9fec530d3b575b9db23f00f0a28778a2a36639237c6af22"
+    },
+    {
+      "file": "src/data/caSkillEffect.json",
+      "hash": "f12ddeaf15cd6270ca417521e8ae0d632a9574547a563309cedd2cb362110831"
+    },
+    {
+      "file": "src/data/characterAliases.json",
+      "hash": "078e237e42dac804c8fa1f81722e777b45a9ff2d181d6e825e9c28c37d6ac2de"
+    },
+    {
+      "file": "src/data/factionRosters.json",
+      "hash": "65372981956658426f52ecd826de4a0be3611f5f508a791ece0ada62dba15449"
+    },
+    {
+      "file": "src/data/factions.json",
+      "hash": "274d06d64bfaa73426ad6c0b751d67d7a71bd530af83a4c2b07721162c554107"
+    },
+    {
+      "file": "src/data/heroes.json",
+      "hash": "20cab12b7c5c4a98aa70b62ad2a024b83f9df5aa35c2acbf0380904899cf9381"
+    },
+    {
+      "file": "src/data/legacyCharacters.json",
+      "hash": "85c92d40b2cd40fcb5296163259e57206a2254c951a0341347e1fbbdc1055f6a"
+    },
+    {
+      "file": "src/data/lords.json",
+      "hash": "e8416be11722c9d107eddc3a1015dfbdc812fcf700f20f0454631c5abd07b288"
+    },
+    {
+      "file": "src/data/unitActiveAdmissions.json",
+      "hash": "3b8ec551f8c733632fcc52325bce77fa817c7cc1f8f9c437e43be97c7b19cb64"
+    },
+    {
+      "file": "src/data/unitAttributeAdmissions.json",
+      "hash": "d0960064ece43767410d0b886fb2465b3267e191ca63fb58b865b2936cf92da3"
+    },
+    {
+      "file": "src/data/unitDiagnostics.json",
+      "hash": "1abbe4b8251320e86dbe7470bf3cf3729b7759c7c71af2af2b5b9f4ce680bb1f"
+    },
+    {
+      "file": "src/data/unitEntityAdmissions.json",
+      "hash": "896aabee6157f43500991881a88b8b349bc2eab5ebee2f16eaca43a7b7aa3821"
+    },
+    {
+      "file": "src/data/unitHpAdmissions.json",
+      "hash": "2d4e0e79e755086170358325427bfa6d6395f2d6162ba250f83b0404b21a17bd"
+    },
+    {
+      "file": "src/data/unitHpEntityRuleAdmissions.json",
+      "hash": "afc724c56c46eee0612d8927d6b4a2731a6bad82d8a4d6f021381abe7dc4a192"
+    },
+    {
+      "file": "src/data/unitLocalisations.json",
+      "hash": "db02b4c356e2e4d2eb7d91d7a69795feb464eb315fb54ba5f04b74520cdc88b4"
+    },
+    {
+      "file": "src/data/unitMissileAdmissions.json",
+      "hash": "6365fd45d3d6e1eb8dbe96f83c59980909d18bc6600db5689b8a4fd3941d1d8e"
+    },
+    {
+      "file": "src/data/unitPassiveAdmissions.json",
+      "hash": "7ca20c722b774020bae60f23bea11b40b5e897d29eb9d52609d1ed97ab66f6cd"
+    },
+    {
+      "file": "src/data/unitRecruitmentAdmissions.json",
+      "hash": "2af86396d2679b7eb1bdcaf485b456506b558da2eccb7b9b4bc66ddca379e244"
+    },
+    {
+      "file": "src/data/unitResistanceAdmissions.json",
+      "hash": "93ae1de47c699ec837cef26779d5c796f68aee63d60267951265de4e6b69bde9"
+    },
+    {
+      "file": "src/data/units.json",
+      "hash": "5e84b027bd0d6b10489d56cdb42657425a63ea6e926096d32c27299c69276379"
+    },
+    {
+      "file": "src/data/unitSharedIdentities.json",
+      "hash": "3e256bf5c850df65e70a539062a5109a36c75757f8f3a34bc75d8b492aa9d13e"
+    },
+    {
+      "file": "src/data/unitSpeedAdmissions.json",
+      "hash": "2c397f2677e78c92bf9fc91c6c82c1dc43c19798e5c43335872b954f29a1e8dd"
+    },
+    {
+      "file": "src/data/unitSpeedRuleAdmissions.json",
+      "hash": "67fd46121185bb9097f86e6aa571a7b967a572a300b8212e8b0263854b81e171"
+    },
+    {
+      "file": "tools/wh3-importer/unit-attributes/source.json",
+      "hash": "1f9afd7a0705c6d18b924c219aaf15cc9492d4fd358d6ecb455affdda4bf5f6c"
+    },
+    {
+      "file": "tools/wh3-importer/unit-attributes/admission.json",
+      "hash": "d1a6bfdd528366b6580186689cef657dfe3743d1c38a5764ed50951827064e72"
+    },
+    {
+      "file": "tools/wh3-importer/unit-passives/source.json",
+      "hash": "b21613bd998e54e4049b1bda23793bb86a664308f2d7b7d534c5f82931514f0e"
+    },
+    {
+      "file": "tools/wh3-importer/unit-passives/admission.json",
+      "hash": "398e59b79445750d98275af39ef13125b29c94ff67b93b68ae1c2e54074d36e6"
+    },
+    {
+      "file": "tools/wh3-importer/unit-actives/source.json",
+      "hash": "2c1fb1c9b7e8248b20dc44ce1f251631fa655d8ff723718452e3435eafc7746e"
+    },
+    {
+      "file": "tools/wh3-importer/unit-actives/admission.json",
+      "hash": "5fdc41ff550746884f9aa4ff1b6dfdd8a65cf4b4e9679e4d8be4731c64f0ef3a"
+    },
+    {
+      "file": "tools/wh3-importer/ability-dictionary/reference.json",
+      "hash": "ce3d234df74f6c0aea3bc5a76af09d6421a94468232d5499388b2474ce6b87c1"
+    }
+  ],
+  "inputHashConvention": "SHA256 UTF-8 text with CRLF normalized to LF (Git/Windows checkout portability)"
+}

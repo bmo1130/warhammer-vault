@@ -14,6 +14,7 @@ import UnitMissileDetails from './UnitMissileDetails';
 import UnitRecruitmentDetails from './UnitRecruitmentDetails';
 import { unitRecruitmentAdmission } from '../repositories/unitRecruitment';
 import UnitActiveDetails from './UnitActiveDetails';
+import AbilityButton, { AbilityPanelProvider } from './AbilityButton';
 
 // Read stored fields only; the optional total uses the existing approved sum.
 export default function UnitProductionDetails({ unit }: { unit: Unit }) {
@@ -40,7 +41,7 @@ export default function UnitProductionDetails({ unit }: { unit: Unit }) {
     ['보정 영역 (calibration area)', missile?.accuracy?.calibrationArea],
     ['관통 저항 예산 (resistance budget)', missile?.projectile.penetration?.resistanceBudget],
   ] as const).filter(([, value]) => value !== undefined);
-  return <>
+  return <AbilityPanelProvider>
     <section className="section">
       <SectionTitle title="개체 수 · 생명력"/>
       <div className="stats-card">
@@ -53,16 +54,16 @@ export default function UnitProductionDetails({ unit }: { unit: Unit }) {
     <UnitResistanceDetails resistances={unit.defense.resistances}/>
     <section className="section">
       <SectionTitle title="특성"/>
-      {unit.attributes?.length ? <ul>{unit.attributes.map(id => <li key={id}>{getUnitAttributeLabel(id)}</li>)}</ul>
+      {unit.attributes?.length ? <ul className="ability-list">{unit.attributes.map(id => <li key={id}><AbilityButton id={id} fallback={getUnitAttributeLabel(id)}/></li>)}</ul>
         : <p className="data-note">{unit.attributes === undefined ? '미입력 · 특성 미확인' : '검토된 기본 특성 없음'}</p>}
       {attributes?.status === 'PARTIAL' && <p className="data-note">확인된 특성만 표시합니다. 추가 특성은 미확인입니다.</p>}
     </section>
     <section className="section">
       <SectionTitle title="지속 능력"/>
-      {unit.passiveAbilities?.length ? <ul>{unit.passiveAbilities.map(id => <li key={id} title={id}>{getUnitPassiveAbilityLabel(id)}</li>)}</ul>
+      {unit.passiveAbilities?.length ? <ul className="ability-list">{unit.passiveAbilities.map(id => <li key={id} title={id}><AbilityButton id={id} fallback={getUnitPassiveAbilityLabel(id)}/></li>)}</ul>
         : <p className="data-note">{unit.passiveAbilities === undefined ? '미입력 · 지속 능력 미확인' : '검토된 기본 지속 능력 없음'}</p>}
       {passives?.status === 'PARTIAL' && <p className="data-note">확인된 보유 능력만 표시합니다. 추가 능력은 보류 중입니다.</p>}
-      <p className="data-note">기본 유닛 기록의 보유 목록입니다. 보유가 항상 활성화됨을 뜻하지 않습니다. 발동 조건과 효과 수치는 계산하지 않습니다.</p>
+      <p className="data-note">이름을 누르면 공식 설명과 확인된 효과를 볼 수 있습니다. 보유가 항상 활성화됨을 뜻하지 않습니다.</p>
     </section>
     <UnitActiveDetails unit={unit}/>
     {damage.some(([, value]) => value !== undefined) && <section className="section">
@@ -98,5 +99,5 @@ export default function UnitProductionDetails({ unit }: { unit: Unit }) {
         <p>미입력은 미확인입니다. 개체 수·HP·속도 등 미확인 값은 생략했습니다. 저항은 확인된 0%와 미확인을 구별해 표시합니다. 사격은 정규 무기가 없는 N/A와 수치 미확인을 구별합니다. 모집 출처 미확인과 비모집 확정(N/A)은 다릅니다.</p>
       </div>
     </details>
-  </>;
+  </AbilityPanelProvider>;
 }

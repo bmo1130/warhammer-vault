@@ -1,5 +1,8 @@
 import { spawnSync } from 'node:child_process';
 import { prepareEvidenceView } from './evidence-view.mjs';
+const dictionary = spawnSync(process.execPath, ['scripts/promote-ability-dictionary.mjs', '--check'], {stdio:'inherit'});
+if (dictionary.error) throw dictionary.error;
+if (dictionary.status !== 0) process.exit(dictionary.status ?? 1);
 const actives = spawnSync(process.execPath, ['scripts/promote-unit-actives.mjs', '--check'], {stdio:'inherit'});
 if (actives.error) throw actives.error;
 if (actives.status !== 0) process.exit(actives.status ?? 1);

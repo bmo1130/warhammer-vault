@@ -15,6 +15,7 @@ import HeroPage from './pages/HeroPage';
 import NotesPage from './pages/NotesPage';
 import SettingsPage from './pages/SettingsPage';
 import NotFound from './pages/NotFound';
+import AbilityPage from './pages/AbilityPage';
 
 export default function AppShell() {
   const location = useLocation();
@@ -36,6 +37,7 @@ export default function AppShell() {
           <Route path="/compare" element={<ComparePage/>}/>
           <Route path="/calculator" element={<CalculatorPage/>}/>
           <Route path="/settings" element={<SettingsPage/>}/>
+          <Route path="/abilities/:id" element={<AbilityPage/>}/>
           <Route path="*" element={<NotFound/>}/>
         </Routes>
       </main>

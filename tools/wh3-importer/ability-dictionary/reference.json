@@ -1,0 +1,13 @@
+{
+  "format": "ca-ability-mechanics-reference-v1",
+  "source": "CA-generated WH3 CCO API documentation, community-hosted mirror",
+  "url": "https://chadvandy.github.io/tw_modding_resources/WH3/cco/documentation.html#CcoSpecialAbilityPhaseRecord",
+  "retrieved": "2026-10-09",
+  "liveGameMeasurement": false,
+  "mappings": [
+    {"rawField": "heal_amount", "apiField": "CcoSpecialAbilityPhaseRecord.HealPercent", "meaning": "Fraction of target maximum HP per HpChangeFrequency tick; multiply by 100 for percentage display."},
+    {"rawField": "hp_change_frequency", "apiField": "CcoSpecialAbilityPhaseRecord.HpChangeFrequency", "meaning": "Application period. Installed processed schema explicitly specifies seconds."},
+    {"rawField": "barrier_heal_amount", "apiField": "CcoSpecialAbilityPhaseRecord.TotalBarrierHealPercent", "meaning": "Fraction of maximum barrier health. Installed schema specifies proportion per tick."}
+  ],
+  "limitations": "API semantics corroborate raw field interpretation; document version is not pinned to CA 9.0.2.0. No live battle verification, healing cap, intensity, damage resistance or total healing calculation."
+}

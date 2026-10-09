@@ -47,7 +47,7 @@ test('all existing Unit fields and five original lance lists survive exact overl
 test('preceding data JSON bytes and unrelated personal-document/search implementation remain unchanged',()=>{
  const manifest=read(folder+'manifest.json');
  const diff=spawnSync('git',['diff','--name-only',manifest.baselineCommit,'--','src/data','src/lib','src/hooks'],{encoding:'utf8'});assert.equal(diff.status,0);
- assert.deepEqual(diff.stdout.trim().split('\n').filter(Boolean).filter(p=>p!=='src/data/unitActiveAdmissions.json'),[]);
+ assert.deepEqual(diff.stdout.trim().split('\n').filter(Boolean).filter(p=>!['src/data/unitActiveAdmissions.json','src/data/abilityDictionary.json'].includes(p)),[]);
 });
 
 test('public ownership requires native type, non-passive flag, unlocked visible default land assignment',()=>{
@@ -69,7 +69,8 @@ test('toggle groups and formation are explicit; infinite projectile duration is 
 
 test('conditions are preserved independently of base ownership, including HP restrictions',()=>{
  const c=byRaw('wh_dlc06_unit_abilities_the_loons_of_eight_peaks');assert.equal(c.status,'ADMITTED');assert(c.graph.conditionReferences.some(r=>r.rawFlag==='health_below_25%'));assert.equal(c.graph.activationStatus,'NOT_EVALUATED');
- const u=game.getUnit('ca_unit_wh_dlc06_grn_inf_da_eight_peaks_loonies_0');assert(u.abilities.includes(c.canonicalId));assert.match(html(u),/생명력 25% 미만/);assert.match(html(u),/현재 사용 가능 여부는 판단하지 않습니다/);
+ const u=game.getUnit('ca_unit_wh_dlc06_grn_inf_da_eight_peaks_loonies_0');assert(u.abilities.includes(c.canonicalId));assert.match(html(u),/aria-haspopup="dialog"/);assert.match(html(u),/현재 사용 가능 여부는 판단하지 않습니다/);
+ const detail=require('../.test-build/src/repositories/abilityDictionary.js').abilityDictionary.get(c.canonicalId);assert(detail.conditions.some(r=>r.rawFlag==='health_below_25%'&&r.text));
 });
 
 test('native bound source is a separate list; ordinary spell-named candidates stay held',()=>{

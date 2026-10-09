@@ -1,20 +1,13 @@
 import type { Unit } from '../domain/unit';
 import { unitActiveAdmission, unitActiveDefinition } from '../repositories/unitActives';
 import SectionTitle from './SectionTitle';
-const conditionKinds: Record<string, string> = {
-  special_ability_to_invalid_usage_flags_tables: '사용 제한',
-  special_ability_to_auto_deactivate_flags_tables: '자동 해제 조건',
-  special_ability_to_invalid_target_flags_tables: '대상 제한',
-  special_ability_to_recharge_contexts_tables: '재충전 조건',
-};
-const flags: Record<string, string> = { health_below_25: '생명력 25% 미만', engaged_in_melee: '근접 교전 중', grounded: '지상 상태', flying_currently: '비행 중', morale_is_broken_or_lower: '사기 붕괴 이하', phase_is_deployment: '배치 단계', unit_alive: '유닛 생존' };
+import AbilityButton from './AbilityButton';
 function AbilityList({ids}: {ids: string[]}) {
   return <ul>{ids.map(id => {
     const d = unitActiveDefinition(id);
     if (!d) return <li key={id}>{id}</li>;
-    return <li key={id} title={d.rawKeys.join(', ')}><strong>{d.name}</strong> · {d.kind === 'BOUND' ? '귀속 (BOUND)' : d.kind === 'TOGGLE' ? '토글' : '액티브'} · {d.typeLabel}
+    return <li key={id} title={d.rawKeys.join(', ')}><AbilityButton id={id} fallback={d.name}/> · {d.kind === 'BOUND' ? '귀속 (BOUND)' : d.kind === 'TOGGLE' ? '토글' : '액티브'} · {d.typeLabel}
       <div className="data-note">{d.englishName}</div>
-      {d.conditionReferences.length > 0 && <ul>{d.conditionReferences.map((c, i) => <li key={i}>{conditionKinds[c.table] ?? '원본 조건'}: {flags[c.rawFlag.replace('%', '')] ?? c.rawFlag}</li>)}</ul>}
     </li>;
   })}</ul>;
 }
