@@ -14,6 +14,7 @@ import { applyUnitSpeed } from './unitSpeed';
 import { applyUnitResistances } from './unitResistances';
 import { applyUnitMissiles } from './unitMissiles';
 import { applyUnitRecruitment } from './unitRecruitment';
+import { applyUnitActives, unitActiveSearchNames } from './unitActives';
 import { localiseArchiveName, archiveSearchNames } from './archiveLocalisation';
 
 const factions: Faction[] = factionsJson.map(f => localiseArchiveName(f,'faction'));
@@ -21,7 +22,7 @@ const lords: Lord[] = (lordsJson as Lord[]).map(c => localiseArchiveName(c,'lord
 const heroes: Hero[] = (heroesJson as Hero[]).map(c => localiseArchiveName(c,'hero'));
 // JSON imports widen enum strings. The promotion gate and dataset tests run the
 // actual Unit validator; this assertion only restores the declared enum types.
-const units: Unit[] = (unitsJson as Unit[]).map(localiseUnit).map(applyUnitAttributes).map(applyUnitPassives).map(applyUnitEntities).map(applyUnitSpeed).map(applyUnitResistances).map(applyUnitMissiles).map(applyUnitRecruitment);
+const units: Unit[] = (unitsJson as Unit[]).map(localiseUnit).map(applyUnitAttributes).map(applyUnitPassives).map(applyUnitEntities).map(applyUnitSpeed).map(applyUnitResistances).map(applyUnitMissiles).map(applyUnitRecruitment).map(applyUnitActives);
 
 const factionById = new Map(factions.map((item) => [item.id, item]));
 const lordById = new Map(lords.map((item) => [item.id, item]));
@@ -108,8 +109,9 @@ export const gameRepository = {
     ].filter((item) => {
       const character = item.type === 'lord' ? lordById.get(item.id) : item.type === 'hero' ? heroById.get(item.id) : undefined;
       const originalName = item.type === 'unit' ? originalUnitName(unitById.get(item.id)!) : '';
+      const abilityNames = item.type === 'unit' ? unitActiveSearchNames(unitById.get(item.id)!) : '';
       const originalArchiveName = item.type === 'faction' ? archiveSearchNames(factionById.get(item.id)!,'faction') : character ? archiveSearchNames(character,item.type as 'lord'|'hero') : '';
-      return `${item.name} ${originalName ?? ''} ${originalArchiveName} ${item.id} ${item.detail} ${character?.subtypeKey ?? ''} ${character?.subtypeAliases.join(' ') ?? ''}`.toLocaleLowerCase().includes(term);
+      return `${item.name} ${originalName ?? ''} ${originalArchiveName} ${abilityNames} ${item.id} ${item.detail} ${character?.subtypeKey ?? ''} ${character?.subtypeAliases.join(' ') ?? ''}`.toLocaleLowerCase().includes(term);
     });
   },
 };

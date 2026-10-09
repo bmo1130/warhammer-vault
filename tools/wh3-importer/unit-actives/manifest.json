@@ -1,0 +1,108 @@
+{
+  "baselineCommit": "865b04365c3cfaa88b78499226d93e4ae709bf3d",
+  "gameVersion": "9.0.2.0",
+  "inputs": [
+    {
+      "file": "src/data/archiveLocalisations.json",
+      "hash": "0544c722ebb0bbe1b9d0ca6d42722bf00c411e1ba88f61902eada887c8b379ab"
+    },
+    {
+      "file": "src/data/caResearchEffect.json",
+      "hash": "71e5fe5cef0b769d98efe489661d8c9db0e1164a9ee19d58468caefe92e28fd2"
+    },
+    {
+      "file": "src/data/caSkillBatch01.json",
+      "hash": "c7bbd4861a5bf5dc5d89bd1ba7b3d37353b4568542c8f80ebe6924d5a30be250"
+    },
+    {
+      "file": "src/data/caSkillBatch02.json",
+      "hash": "73b688730815c9f8ecdaf746a92c7655f370fd030f28260ed4cc3fd8996f3ee1"
+    },
+    {
+      "file": "src/data/caSkillEffect.json",
+      "hash": "f4f772dc344fc32d9642811aed74b7e7eec2551876660afad2a6be5127f8684e"
+    },
+    {
+      "file": "src/data/characterAliases.json",
+      "hash": "6ae8269458931685d4346758bf247d305bae31ce6a622390d513cabf9769c597"
+    },
+    {
+      "file": "src/data/factionRosters.json",
+      "hash": "b28480f9d852b3d48da60a96933263250ebfce51a474e9fa03533bfbebf069fd"
+    },
+    {
+      "file": "src/data/factions.json",
+      "hash": "540665b732d7aebdda61535fe977a1598a4a42cc9d9dfdb86026fcf42543d98e"
+    },
+    {
+      "file": "src/data/heroes.json",
+      "hash": "20b5e51a278c11a5137441a2e75d52b4b0e96a1943a5bee35c4d7e1315a36a6b"
+    },
+    {
+      "file": "src/data/legacyCharacters.json",
+      "hash": "896ddcfe4215dc8b11522381c8c6c277c630324ed41882ad49174bda840c9e6e"
+    },
+    {
+      "file": "src/data/lords.json",
+      "hash": "08874c230e9dff1215a5357df12246b38428d8e56e5611d6e02e90aa65bfe5cc"
+    },
+    {
+      "file": "src/data/unitAttributeAdmissions.json",
+      "hash": "45826ade59aceb8d2111b24231b383c542a1f692562da01c6245c83f81ae8b96"
+    },
+    {
+      "file": "src/data/unitDiagnostics.json",
+      "hash": "da1b1437ed3e9af6031580de78c6dcc4517974b2b6b46e68a682b7205998b118"
+    },
+    {
+      "file": "src/data/unitEntityAdmissions.json",
+      "hash": "470b112950a9d85d67745f766835804ccb1782ff4d19566f726fccb6f2b4ffe2"
+    },
+    {
+      "file": "src/data/unitHpAdmissions.json",
+      "hash": "65a51abba3f0a264fa8d6a0fdaaf8e0739fe83709c4f57e263b58db0d645c82b"
+    },
+    {
+      "file": "src/data/unitHpEntityRuleAdmissions.json",
+      "hash": "aed2361ff049c011e5a980aa6641f6c93093f32b40d8e50a60a2dda63d664d69"
+    },
+    {
+      "file": "src/data/unitLocalisations.json",
+      "hash": "799d7e5b34571bf4f02164a9fd97546e29566474c35162dc7e580d8536c49d21"
+    },
+    {
+      "file": "src/data/unitMissileAdmissions.json",
+      "hash": "0911857c9f8fcd05006c84e3c1830cb0a2d409c6760e1356adf003af2e9e2e2f"
+    },
+    {
+      "file": "src/data/unitPassiveAdmissions.json",
+      "hash": "9e89773086daf0ce95130f9c5fa90c255b8219ad4229a2653b9b5d0251f11303"
+    },
+    {
+      "file": "src/data/unitRecruitmentAdmissions.json",
+      "hash": "18a9ad252e5641d18dee4dd9054e7463cca1244667e63ce6106991404ea28032"
+    },
+    {
+      "file": "src/data/unitResistanceAdmissions.json",
+      "hash": "cacbf63bfcbe248b8406d9b44f1a3f67cd0f1075861367d9912c9e36d37b178a"
+    },
+    {
+      "file": "src/data/units.json",
+      "hash": "871daf7a4aeeef0c941908e6509dac68158a3f2842d25ab4b333651ab24df14c"
+    },
+    {
+      "file": "src/data/unitSharedIdentities.json",
+      "hash": "4d8d38bb0fbe474de23d445c448446edd971b301cf84118a8b1c6e3b8b0cbe7d"
+    },
+    {
+      "file": "src/data/unitSpeedAdmissions.json",
+      "hash": "32204466678ac8d85447d4387b138d168419d188ccd3bd7f532b2df0684820db"
+    },
+    {
+      "file": "src/data/unitSpeedRuleAdmissions.json",
+      "hash": "bed52089ba2d53c87943cd2109c1ad69781df83e4cc18f3913c1d68081221095"
+    }
+  ],
+  "validationHash": "50ca1b37d3e95295605527ab05da0afeb1a44e0cc353fa46b99ecba961643ef5",
+  "ownershipSchemaHash": "b020bdcf9c75570dc0066ca2ba9021e384ee9343074ec788fc29d73b41e943c4"
+}

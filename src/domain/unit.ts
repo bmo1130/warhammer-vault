@@ -192,6 +192,8 @@ export type Unit = SourceInfo & {
   missile?: UnitMissile;
   terrainModifiers?: TerrainModifier[];
   abilities?: UnitAbilityId[];
+  // Default native bound abilities stay separate from ordinary active/toggle IDs.
+  boundAbilities?: UnitAbilityId[];
   passiveAbilities?: UnitAbilityId[];
   attributes?: UnitAttributeId[];
   campaign?: UnitCampaignData;

@@ -1,3 +1,4 @@
+const {withoutUnitActives}=require('../.test-build/src/repositories/unitActives.js');
 const {test}=require('node:test');
 const assert=require('node:assert/strict');
 const fs=require('node:fs');
@@ -107,7 +108,7 @@ test('12 independently collected categories agree; CA replay is distinguished fr
 });
 
 test('recruitment overlay has an exact inverse, all previous full Production records and five samples remain identical',()=>{
-  for(const raw of read('src/data/units.json')){const before=previous(raw),current=game.getUnit(raw.id);assert.deepEqual(withoutUnitRecruitment(current),before,raw.id);
+  for(const raw of read('src/data/units.json')){const before=previous(raw),current=game.getUnit(raw.id);assert.deepEqual(withoutUnitRecruitment(withoutUnitActives(current)),before,raw.id);
     assert.deepEqual(withoutUnitRecruitment(applyUnitRecruitment(raw)),raw);assert.deepEqual(current.entities,before.entities);assert.deepEqual(current.missile,before.missile);
     if(raw.gameVersion==='sample'){assert.deepEqual(current,before);assert.equal(unitRecruitmentAdmission(current),undefined);}
   }

@@ -56,6 +56,13 @@ export function validateUnits(units: readonly Unit[], factionIds: Iterable<strin
       ['missile.explosion.armorPiercingDamage', unit.missile?.explosion?.armorPiercingDamage],
     ] as const) nonNegative(field, value);
     stableIds('abilities', unit.abilities);
+    stableIds('boundAbilities', unit.boundAbilities);
+    for (const [field, values] of [['abilities', unit.abilities], ['boundAbilities', unit.boundAbilities]] as const) {
+      if (values && new Set(values).size !== values.length) issue(field, '능력 ID는 중복될 수 없습니다.');
+      values?.forEach((id, index) => {
+        if (unit.passiveAbilities?.includes(id) || unit.attributes?.includes(id) || (field === 'boundAbilities' && unit.abilities?.includes(id))) issue(`${field}.${index}`, '액티브·귀속·지속 능력과 특성은 독립된 식별자여야 합니다.');
+      });
+    }
     stableIds('passiveAbilities', unit.passiveAbilities);
     if (unit.passiveAbilities && new Set(unit.passiveAbilities).size !== unit.passiveAbilities.length) issue('passiveAbilities', '지속 능력 ID는 중복될 수 없습니다.');
     unit.passiveAbilities?.forEach((ability, index) => {

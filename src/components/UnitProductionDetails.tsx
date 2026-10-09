@@ -13,6 +13,7 @@ import { unitMissileAdmission } from '../repositories/unitMissiles';
 import UnitMissileDetails from './UnitMissileDetails';
 import UnitRecruitmentDetails from './UnitRecruitmentDetails';
 import { unitRecruitmentAdmission } from '../repositories/unitRecruitment';
+import UnitActiveDetails from './UnitActiveDetails';
 
 // Read stored fields only; the optional total uses the existing approved sum.
 export default function UnitProductionDetails({ unit }: { unit: Unit }) {
@@ -63,6 +64,7 @@ export default function UnitProductionDetails({ unit }: { unit: Unit }) {
       {passives?.status === 'PARTIAL' && <p className="data-note">확인된 보유 능력만 표시합니다. 추가 능력은 보류 중입니다.</p>}
       <p className="data-note">기본 유닛 기록의 보유 목록입니다. 보유가 항상 활성화됨을 뜻하지 않습니다. 발동 조건과 효과 수치는 계산하지 않습니다.</p>
     </section>
+    <UnitActiveDetails unit={unit}/>
     {damage.some(([, value]) => value !== undefined) && <section className="section">
       <SectionTitle title="근접 피해"/>
       <div className="stats-card">{damage.map(([label, value]) => <div className="stat" key={label}><span>{label}</span><strong>{value ?? '미입력'}</strong></div>)}</div>

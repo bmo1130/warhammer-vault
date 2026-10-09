@@ -1,0 +1,4498 @@
+{
+  "schemaSha256": "5d628a0167b34a096752c5c21acd16493834a987c80dc9f02364617f796ba2a4",
+  "gameVersion": "9.0.2.0",
+  "tables": [
+    {
+      "table": "campaign_mounts_tables",
+      "presentInPack": true,
+      "definitions": [
+        {
+          "version": 9,
+          "fields": [
+            {
+              "name": "animation_set",
+              "is_reference": [
+                "campaign_anim_set_enums",
+                "name"
+              ],
+              "description": ""
+            },
+            {
+              "name": "model",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "variant",
+              "is_reference": [
+                "variants",
+                "variant_name"
+              ],
+              "description": ""
+            },
+            {
+              "name": "scale",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "actor",
+              "is_reference": [
+                "audio_voiceover_cultures",
+                "name"
+              ],
+              "description": ""
+            },
+            {
+              "name": "ignore_rider_variant_scale",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "vfx_filter",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "banner_relative_to_mount",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "prebattle_separation_offset",
+              "is_reference": null,
+              "description": ""
+            }
+          ],
+          "localised_fields": []
+        },
+        {
+          "version": 8,
+          "fields": [
+            {
+              "name": "animation_set",
+              "is_reference": [
+                "campaign_anim_set_enums",
+                "name"
+              ],
+              "description": ""
+            },
+            {
+              "name": "model",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "variant",
+              "is_reference": [
+                "variants",
+                "variant_name"
+              ],
+              "description": ""
+            },
+            {
+              "name": "scale",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "actor",
+              "is_reference": [
+                "audio_voiceover_cultures",
+                "name"
+              ],
+              "description": ""
+            },
+            {
+              "name": "ignore_rider_variant_scale",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "vfx_filter",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "banner_relative_to_mount",
+              "is_reference": null,
+              "description": ""
+            }
+          ],
+          "localised_fields": []
+        },
+        {
+          "version": 6,
+          "fields": [
+            {
+              "name": "animation_set",
+              "is_reference": [
+                "campaign_anim_set_enums",
+                "name"
+              ],
+              "description": ""
+            },
+            {
+              "name": "model",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "variant",
+              "is_reference": [
+                "variants",
+                "variant_name"
+              ],
+              "description": ""
+            },
+            {
+              "name": "scale",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "actor",
+              "is_reference": [
+                "audio_voiceover_cultures",
+                "name"
+              ],
+              "description": ""
+            },
+            {
+              "name": "ignore_rider_variant_scale",
+              "is_reference": null,
+              "description": ""
+            }
+          ],
+          "localised_fields": []
+        }
+      ]
+    },
+    {
+      "table": "land_units_tables",
+      "presentInPack": true,
+      "definitions": [
+        {
+          "version": 54,
+          "fields": [
+            {
+              "name": "accuracy",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "armour",
+              "is_reference": [
+                "unit_armour_types",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "campaign_action_points",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "category",
+              "is_reference": [
+                "unit_category",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "charge_bonus",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "class",
+              "is_reference": [
+                "unit_class",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "historical_description_text",
+              "is_reference": [
+                "unit_description_historical_texts",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "key",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "man_animation",
+              "is_reference": [
+                "battle_animations_table",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "man_entity",
+              "is_reference": [
+                "battle_entities",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "melee_attack",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "melee_defence",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "morale",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "bonus_hit_points",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "mount",
+              "is_reference": [
+                "mounts",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "num_mounts",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "primary_melee_weapon",
+              "is_reference": [
+                "melee_weapons",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "primary_missile_weapon",
+              "is_reference": [
+                "missile_weapons",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "rank_depth",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "shield",
+              "is_reference": [
+                "unit_shield_types",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "short_description_text",
+              "is_reference": [
+                "unit_description_short_texts",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "spacing",
+              "is_reference": [
+                "unit_spacings",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "training_level",
+              "is_reference": [
+                "unit_training_level_enum",
+                "key"
+              ],
+              "description": "This should always be set to \"trained\" in Warhammer. The rest of the options have been design-deprecated."
+            },
+            {
+              "name": "articulated_record",
+              "is_reference": [
+                "land_unit_articulated_vehicles",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "engine",
+              "is_reference": [
+                "battlefield_engines",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "is_male",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "visibility_spotting_range_min",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "visibility_spotting_range_max",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "attribute_group",
+              "is_reference": [
+                "unit_attributes_groups",
+                "group_name"
+              ],
+              "description": ""
+            },
+            {
+              "name": "spot_dist_tree",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "spot_dist_scrub",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "reload",
+              "is_reference": null,
+              "description": "Percentage reduction of projectile reload time"
+            },
+            {
+              "name": "selection_vo",
+              "is_reference": [
+                "audio_vo_selected_switches",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "selected_vo_secondary",
+              "is_reference": [
+                "audio_vo_selected_switches",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "selected_vo_tertiary",
+              "is_reference": [
+                "audio_vo_selected_switches",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "hiding_scalar",
+              "is_reference": null,
+              "description": "This affects the range that the unit can be spotted at, less than 1 makes it longer, greater than 1 shorter. So 1.5 would increase the spotters range by +50%"
+            },
+            {
+              "name": "ground_stat_effect_group",
+              "is_reference": [
+                "ground_type_stat_effect_groups",
+                "group_name"
+              ],
+              "description": ""
+            },
+            {
+              "name": "secondary_ammo",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "primary_ammo",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "damage_mod_flame",
+              "is_reference": null,
+              "description": "How much we modify flaming damage, 0 is unaffected, -100 is double damage, +100 is negation"
+            },
+            {
+              "name": "damage_mod_magic",
+              "is_reference": null,
+              "description": "How much we modify magical damage, 0 is unaffected, -100 is double damage, +100 is negation"
+            },
+            {
+              "name": "num_engines",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "damage_mod_physical",
+              "is_reference": null,
+              "description": "How much we modify physical damage, 0 is unaffected, -100 is double damage, +100 is negation"
+            },
+            {
+              "name": "damage_mod_missile",
+              "is_reference": null,
+              "description": "How much we modify missile damage, 0 is unaffected, -100 is double damage, +100 is negation"
+            },
+            {
+              "name": "damage_mod_all",
+              "is_reference": null,
+              "description": "How much we modify all damage, 0 is unaffected, -100 is double damage, +100 is negation"
+            },
+            {
+              "name": "ai_usage_group",
+              "is_reference": [
+                "ai_usage_groups",
+                "key"
+              ],
+              "description": "How should the ai use this unit in battle?"
+            },
+            {
+              "name": "can_skirmish",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "can_brace",
+              "is_reference": null,
+              "description": "Indicates units capable of bracing"
+            },
+            {
+              "name": "mounted_draughts",
+              "is_reference": null,
+              "description": "draughts needs mounting with man_entity."
+            },
+            {
+              "name": "sync_locomotion",
+              "is_reference": null,
+              "description": "Check this to force synchronised walk, run, charge animation."
+            },
+            {
+              "name": "capture_tier",
+              "is_reference": [
+                "capture_tier_to_power",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "key_building_capture_tier",
+              "is_reference": [
+                "capture_tier_to_power",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "score_capture_tier",
+              "is_reference": [
+                "capture_tier_to_power",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "harmony_amplification_type",
+              "is_reference": [
+                "harmony_amplification_types",
+                "key"
+              ],
+              "description": "Use this to make a unit a harmony amplifie. Needs to have encourage attribute to work!"
+            },
+            {
+              "name": "first_person",
+              "is_reference": [
+                "first_person_engines",
+                "key"
+              ],
+              "description": "First person firing information"
+            },
+            {
+              "name": "ar_unit_category",
+              "is_reference": [
+                "autoresolver_unit_group_categories_enums",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "healing_power",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "spell_mastery",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "infinite_secondary_ammo",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "default_guard_mode",
+              "is_reference": null,
+              "description": "Enabled/Disabled the gurad mode for this unit at the start of the battle"
+            }
+          ],
+          "localised_fields": [
+            {
+              "name": "onscreen_name",
+              "field_type": "StringU8",
+              "is_key": false,
+              "default_value": null,
+              "is_filename": false,
+              "filename_relative_path": null,
+              "is_reference": null,
+              "lookup": null,
+              "description": "",
+              "ca_order": -1,
+              "is_bitwise": 0,
+              "enum_values": {},
+              "is_part_of_colour": null
+            },
+            {
+              "name": "concealed_name",
+              "field_type": "StringU8",
+              "is_key": false,
+              "default_value": null,
+              "is_filename": false,
+              "filename_relative_path": null,
+              "is_reference": null,
+              "lookup": null,
+              "description": "This name is used in battle for enemy units when it is present (for goblin fanatics for example will show them as regular goblins, but want player who has these units to tell difference)",
+              "ca_order": -1,
+              "is_bitwise": 0,
+              "enum_values": {},
+              "is_part_of_colour": null
+            }
+          ]
+        },
+        {
+          "version": 53,
+          "fields": [
+            {
+              "name": "accuracy",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "armour",
+              "is_reference": [
+                "unit_armour_types",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "campaign_action_points",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "category",
+              "is_reference": [
+                "unit_category",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "charge_bonus",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "class",
+              "is_reference": [
+                "unit_class",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "historical_description_text",
+              "is_reference": [
+                "unit_description_historical_texts",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "key",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "man_animation",
+              "is_reference": [
+                "battle_animations_table",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "man_entity",
+              "is_reference": [
+                "battle_entities",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "melee_attack",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "melee_defence",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "morale",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "bonus_hit_points",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "mount",
+              "is_reference": [
+                "mounts",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "num_mounts",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "primary_melee_weapon",
+              "is_reference": [
+                "melee_weapons",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "primary_missile_weapon",
+              "is_reference": [
+                "missile_weapons",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "rank_depth",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "shield",
+              "is_reference": [
+                "unit_shield_types",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "short_description_text",
+              "is_reference": [
+                "unit_description_short_texts",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "spacing",
+              "is_reference": [
+                "unit_spacings",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "training_level",
+              "is_reference": [
+                "unit_training_level_enum",
+                "key"
+              ],
+              "description": "This should always be set to \"trained\" in Warhammer. The rest of the options have been design-deprecated."
+            },
+            {
+              "name": "articulated_record",
+              "is_reference": [
+                "land_unit_articulated_vehicles",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "engine",
+              "is_reference": [
+                "battlefield_engines",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "is_male",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "visibility_spotting_range_min",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "visibility_spotting_range_max",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "attribute_group",
+              "is_reference": [
+                "unit_attributes_groups",
+                "group_name"
+              ],
+              "description": ""
+            },
+            {
+              "name": "spot_dist_tree",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "spot_dist_scrub",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "reload",
+              "is_reference": null,
+              "description": "Percentage reduction of projectile reload time"
+            },
+            {
+              "name": "selection_vo",
+              "is_reference": [
+                "audio_vo_selected_switches",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "selected_vo_secondary",
+              "is_reference": [
+                "audio_vo_selected_switches",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "selected_vo_tertiary",
+              "is_reference": [
+                "audio_vo_selected_switches",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "hiding_scalar",
+              "is_reference": null,
+              "description": "This affects the range that the unit can be spotted at, less than 1 makes it longer, greater than 1 shorter. So 1.5 would increase the spotters range by +50%"
+            },
+            {
+              "name": "ground_stat_effect_group",
+              "is_reference": [
+                "ground_type_stat_effect_groups",
+                "group_name"
+              ],
+              "description": ""
+            },
+            {
+              "name": "secondary_ammo",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "primary_ammo",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "damage_mod_flame",
+              "is_reference": null,
+              "description": "How much we modify flaming damage, 0 is unaffected, -100 is double damage, +100 is negation"
+            },
+            {
+              "name": "damage_mod_magic",
+              "is_reference": null,
+              "description": "How much we modify magical damage, 0 is unaffected, -100 is double damage, +100 is negation"
+            },
+            {
+              "name": "num_engines",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "damage_mod_physical",
+              "is_reference": null,
+              "description": "How much we modify physical damage, 0 is unaffected, -100 is double damage, +100 is negation"
+            },
+            {
+              "name": "damage_mod_missile",
+              "is_reference": null,
+              "description": "How much we modify missile damage, 0 is unaffected, -100 is double damage, +100 is negation"
+            },
+            {
+              "name": "damage_mod_all",
+              "is_reference": null,
+              "description": "How much we modify all damage, 0 is unaffected, -100 is double damage, +100 is negation"
+            },
+            {
+              "name": "ai_usage_group",
+              "is_reference": [
+                "ai_usage_groups",
+                "key"
+              ],
+              "description": "How should the ai use this unit in battle?"
+            },
+            {
+              "name": "can_skirmish",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "can_brace",
+              "is_reference": null,
+              "description": "Indicates units capable of bracing"
+            },
+            {
+              "name": "mounted_draughts",
+              "is_reference": null,
+              "description": "draughts needs mounting with man_entity."
+            },
+            {
+              "name": "sync_locomotion",
+              "is_reference": null,
+              "description": "Check this to force synchronised walk, run, charge animation."
+            },
+            {
+              "name": "capture_tier",
+              "is_reference": [
+                "capture_tier_to_power",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "key_building_capture_tier",
+              "is_reference": [
+                "capture_tier_to_power",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "score_capture_tier",
+              "is_reference": [
+                "capture_tier_to_power",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "harmony_amplification_type",
+              "is_reference": [
+                "harmony_amplification_types",
+                "key"
+              ],
+              "description": "Use this to make a unit a harmony amplifie. Needs to have encourage attribute to work!"
+            },
+            {
+              "name": "first_person",
+              "is_reference": [
+                "first_person_engines",
+                "key"
+              ],
+              "description": "First person firing information"
+            },
+            {
+              "name": "ar_unit_category",
+              "is_reference": [
+                "autoresolver_unit_group_categories_enums",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "healing_power",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "spell_mastery",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "infinite_secondary_ammo",
+              "is_reference": null,
+              "description": ""
+            }
+          ],
+          "localised_fields": [
+            {
+              "name": "onscreen_name",
+              "field_type": "StringU8",
+              "is_key": false,
+              "default_value": null,
+              "is_filename": false,
+              "filename_relative_path": null,
+              "is_reference": null,
+              "lookup": null,
+              "description": "",
+              "ca_order": 0,
+              "is_bitwise": 0,
+              "enum_values": {},
+              "is_part_of_colour": null
+            },
+            {
+              "name": "concealed_name",
+              "field_type": "StringU8",
+              "is_key": false,
+              "default_value": null,
+              "is_filename": false,
+              "filename_relative_path": null,
+              "is_reference": null,
+              "lookup": null,
+              "description": "This name is used in battle for enemy units when it is present (for goblin fanatics for example will show them as regular goblins, but want player who has these units to tell difference)",
+              "ca_order": 0,
+              "is_bitwise": 0,
+              "enum_values": {},
+              "is_part_of_colour": null
+            }
+          ]
+        },
+        {
+          "version": 50,
+          "fields": [
+            {
+              "name": "accuracy",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "armour",
+              "is_reference": [
+                "unit_armour_types",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "campaign_action_points",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "category",
+              "is_reference": [
+                "unit_category",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "charge_bonus",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "class",
+              "is_reference": [
+                "unit_class",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "historical_description_text",
+              "is_reference": [
+                "unit_description_historical_texts",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "key",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "man_animation",
+              "is_reference": [
+                "battle_animations_table",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "man_entity",
+              "is_reference": [
+                "battle_entities",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "melee_attack",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "melee_defence",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "morale",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "bonus_hit_points",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "mount",
+              "is_reference": [
+                "mounts",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "num_mounts",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "primary_melee_weapon",
+              "is_reference": [
+                "melee_weapons",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "primary_missile_weapon",
+              "is_reference": [
+                "missile_weapons",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "rank_depth",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "shield",
+              "is_reference": [
+                "unit_shield_types",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "short_description_text",
+              "is_reference": [
+                "unit_description_short_texts",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "spacing",
+              "is_reference": [
+                "unit_spacings",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "training_level",
+              "is_reference": [
+                "unit_training_level_enum",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "articulated_record",
+              "is_reference": [
+                "land_unit_articulated_vehicles",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "engine",
+              "is_reference": [
+                "battlefield_engines",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "is_male",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "visibility_spotting_range_min",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "visibility_spotting_range_max",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "attribute_group",
+              "is_reference": [
+                "unit_attributes_groups",
+                "group_name"
+              ],
+              "description": ""
+            },
+            {
+              "name": "spot_dist_tree",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "spot_dist_scrub",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "reload",
+              "is_reference": null,
+              "description": "Percentage reduction of projectile reload time"
+            },
+            {
+              "name": "selection_vo",
+              "is_reference": [
+                "audio_vo_selected_switches",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "selected_vo_secondary",
+              "is_reference": [
+                "audio_vo_selected_switches",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "selected_vo_tertiary",
+              "is_reference": [
+                "audio_vo_selected_switches",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "hiding_scalar",
+              "is_reference": null,
+              "description": "This affects the range that the unit can be spotted at, less than 1 makes it longer, greater than 1 shorter. So 1.5 would increase the spotters range by +50%"
+            },
+            {
+              "name": "ground_stat_effect_group",
+              "is_reference": [
+                "ground_type_stat_effect_groups",
+                "group_name"
+              ],
+              "description": ""
+            },
+            {
+              "name": "secondary_ammo",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "primary_ammo",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "damage_mod_flame",
+              "is_reference": null,
+              "description": "How much we modify flaming damage, 0 is unaffected, -100 is double damage, +100 is negation"
+            },
+            {
+              "name": "damage_mod_magic",
+              "is_reference": null,
+              "description": "How much we modify magical damage, 0 is unaffected, -100 is double damage, +100 is negation"
+            },
+            {
+              "name": "num_engines",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "damage_mod_physical",
+              "is_reference": null,
+              "description": "How much we modify physical damage, 0 is unaffected, -100 is double damage, +100 is negation"
+            },
+            {
+              "name": "damage_mod_missile",
+              "is_reference": null,
+              "description": "How much we modify missile damage, 0 is unaffected, -100 is double damage, +100 is negation"
+            },
+            {
+              "name": "damage_mod_all",
+              "is_reference": null,
+              "description": "How much we modify all damage, 0 is unaffected, -100 is double damage, +100 is negation"
+            },
+            {
+              "name": "ai_usage_group",
+              "is_reference": [
+                "ai_usage_groups",
+                "key"
+              ],
+              "description": "How should the ai use this unit in battle?"
+            },
+            {
+              "name": "can_skirmish",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "can_brace",
+              "is_reference": null,
+              "description": "Indicates units capable of bracing"
+            },
+            {
+              "name": "mounted_draughts",
+              "is_reference": null,
+              "description": "draughts needs mounting with man_entity."
+            },
+            {
+              "name": "sync_locomotion",
+              "is_reference": null,
+              "description": "Check this to force synchronised walk, run, charge animation."
+            },
+            {
+              "name": "capture_tier",
+              "is_reference": [
+                "capture_tier_to_power",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "key_building_capture_tier",
+              "is_reference": [
+                "capture_tier_to_power",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "score_capture_tier",
+              "is_reference": [
+                "capture_tier_to_power",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "harmony_amplification_type",
+              "is_reference": [
+                "harmony_amplification_types",
+                "key"
+              ],
+              "description": "Use this to make a unit a harmony amplifie. Needs to have encourage attribute to work!"
+            },
+            {
+              "name": "first_person",
+              "is_reference": [
+                "first_person_engines",
+                "key"
+              ],
+              "description": "First person firing information"
+            }
+          ],
+          "localised_fields": [
+            {
+              "name": "concealed_name",
+              "field_type": "OptionalStringU8",
+              "is_key": false,
+              "default_value": null,
+              "is_filename": false,
+              "filename_relative_path": null,
+              "is_reference": null,
+              "lookup": null,
+              "description": "",
+              "ca_order": -1,
+              "is_bitwise": 0,
+              "enum_values": {},
+              "is_part_of_colour": null
+            },
+            {
+              "name": "onscreen_name",
+              "field_type": "OptionalStringU8",
+              "is_key": false,
+              "default_value": null,
+              "is_filename": false,
+              "filename_relative_path": null,
+              "is_reference": null,
+              "lookup": null,
+              "description": "",
+              "ca_order": -1,
+              "is_bitwise": 0,
+              "enum_values": {},
+              "is_part_of_colour": null
+            }
+          ]
+        },
+        {
+          "version": 44,
+          "fields": [
+            {
+              "name": "accuracy",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "armour",
+              "is_reference": [
+                "unit_armour_types",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "campaign_action_points",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "category",
+              "is_reference": [
+                "unit_category",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "charge_bonus",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "class",
+              "is_reference": [
+                "unit_class",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "dismounted_charge_bonus",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "dismounted_melee_attack",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "historical_description_text",
+              "is_reference": [
+                "unit_description_historical_texts",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "key",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "man_animation",
+              "is_reference": [
+                "battle_animations_table",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "man_entity",
+              "is_reference": [
+                "battle_entities",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "melee_attack",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "melee_defence",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "morale",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "bonus_hit_points",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "mount",
+              "is_reference": [
+                "mounts",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "animal",
+              "is_reference": [
+                "animals",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "num_animals",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "num_mounts",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "primary_melee_weapon",
+              "is_reference": [
+                "melee_weapons",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "primary_missile_weapon",
+              "is_reference": [
+                "missile_weapons",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "rank_depth",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "shield",
+              "is_reference": [
+                "unit_shield_types",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "short_description_text",
+              "is_reference": [
+                "unit_description_short_texts",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "spacing",
+              "is_reference": [
+                "unit_spacings",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "strengths_&_weaknesses_text",
+              "is_reference": [
+                "unit_description_strengths_weaknesses_texts",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "supports_first_person",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "training_level",
+              "is_reference": [
+                "unit_training_level_enum",
+                "key"
+              ],
+              "description": "Deprecated. Field should always be set to \"Trained\" - BL"
+            },
+            {
+              "name": "officers",
+              "is_reference": [
+                "land_units_officers",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "articulated_record",
+              "is_reference": [
+                "land_unit_articulated_vehicles",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "engine",
+              "is_reference": [
+                "battlefield_engines",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "is_male",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "visibility_spotting_range_min",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "visibility_spotting_range_max",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "ability_global_recharge",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "attribute_group",
+              "is_reference": [
+                "unit_attributes_groups",
+                "group_name"
+              ],
+              "description": ""
+            },
+            {
+              "name": "spot_dist_tree",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "spot_dist_scrub",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "reload",
+              "is_reference": null,
+              "description": "Percentage reduction of projectile reload time"
+            },
+            {
+              "name": "loose_spacing",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "selection_vo",
+              "is_reference": [
+                "audio_vo_selected_switches",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "selected_vo_secondary",
+              "is_reference": [
+                "audio_vo_selected_switches",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "selected_vo_tertiary",
+              "is_reference": [
+                "audio_vo_selected_switches",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "hiding_scalar",
+              "is_reference": null,
+              "description": "This affects the range that the unit can be spotted at, less than 1 makes it longer, greater than 1 shorter. So 1.5 would increase the spotters range by +50%"
+            },
+            {
+              "name": "capture_power",
+              "is_reference": null,
+              "description": "Amount of 'points' this unit adds to the capture point every second"
+            },
+            {
+              "name": "ground_stat_effect_group",
+              "is_reference": [
+                "ground_type_stat_effect_groups",
+                "group_name"
+              ],
+              "description": ""
+            },
+            {
+              "name": "secondary_ammo",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "primary_ammo",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "damage_mod_flame",
+              "is_reference": null,
+              "description": "How much we modify flaming damage, 0 is unaffected, -100 is double damage, +100 is negation"
+            },
+            {
+              "name": "damage_mod_magic",
+              "is_reference": null,
+              "description": "How much we modify magical damage, 0 is unaffected, -100 is double damage, +100 is negation"
+            },
+            {
+              "name": "num_engines",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "damage_mod_physical",
+              "is_reference": null,
+              "description": "How much we modify physical damage, 0 is unaffected, -100 is double damage, +100 is negation"
+            },
+            {
+              "name": "damage_mod_missile",
+              "is_reference": null,
+              "description": "How much we modify missile damage, 0 is unaffected, -100 is double damage, +100 is negation"
+            },
+            {
+              "name": "damage_mod_all",
+              "is_reference": null,
+              "description": "How much we modify all damage, 0 is unaffected, -100 is double damage, +100 is negation"
+            },
+            {
+              "name": "ai_usage_group",
+              "is_reference": [
+                "ai_usage_groups",
+                "key"
+              ],
+              "description": "How should the ai use this unit in battle?"
+            },
+            {
+              "name": "can_skirmish",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "mounted_draughts",
+              "is_reference": null,
+              "description": "draughts needs mounting with man_entity."
+            },
+            {
+              "name": "sync_locomotion",
+              "is_reference": null,
+              "description": "Check this to force synchronised walk, run, charge animation."
+            },
+            {
+              "name": "can_brace",
+              "is_reference": null,
+              "description": ""
+            }
+          ],
+          "localised_fields": [
+            {
+              "name": "onscreen_name",
+              "field_type": "StringU8",
+              "is_key": false,
+              "default_value": null,
+              "is_filename": false,
+              "filename_relative_path": null,
+              "is_reference": null,
+              "lookup": null,
+              "description": "",
+              "ca_order": -1,
+              "is_bitwise": 0,
+              "enum_values": {},
+              "is_part_of_colour": null
+            },
+            {
+              "name": "concealed_name",
+              "field_type": "OptionalStringU8",
+              "is_key": false,
+              "default_value": null,
+              "is_filename": false,
+              "filename_relative_path": null,
+              "is_reference": null,
+              "lookup": null,
+              "description": "This name is used in battle for enemy units when it is present (for goblin fanatics for example will show them as regular goblins, but want player who has these units to tell difference)",
+              "ca_order": -1,
+              "is_bitwise": 0,
+              "enum_values": {},
+              "is_part_of_colour": null
+            }
+          ]
+        },
+        {
+          "version": 43,
+          "fields": [
+            {
+              "name": "accuracy",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "armour",
+              "is_reference": [
+                "unit_armour_types",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "campaign_action_points",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "category",
+              "is_reference": [
+                "unit_category",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "charge_bonus",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "class",
+              "is_reference": [
+                "unit_class",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "dismounted_charge_bonus",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "dismounted_melee_attack",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "historical_description_text",
+              "is_reference": [
+                "unit_description_historical_texts",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "key",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "man_animation",
+              "is_reference": [
+                "battle_animations_table",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "man_entity",
+              "is_reference": [
+                "battle_entities",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "melee_attack",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "melee_defence",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "morale",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "bonus_hit_points",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "mount",
+              "is_reference": [
+                "mounts",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "animal",
+              "is_reference": [
+                "animals",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "num_animals",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "num_mounts",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "primary_melee_weapon",
+              "is_reference": [
+                "melee_weapons",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "primary_missile_weapon",
+              "is_reference": [
+                "missile_weapons",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "rank_depth",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "shield",
+              "is_reference": [
+                "unit_shield_types",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "short_description_text",
+              "is_reference": [
+                "unit_description_short_texts",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "spacing",
+              "is_reference": [
+                "unit_spacings",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "strengths_&_weaknesses_text",
+              "is_reference": [
+                "unit_description_strengths_weaknesses_texts",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "supports_first_person",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "training_level",
+              "is_reference": [
+                "unit_training_level_enum",
+                "key"
+              ],
+              "description": "Deprecated. Field should always be set to \"Trained\" - BL"
+            },
+            {
+              "name": "officers",
+              "is_reference": [
+                "land_units_officers",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "articulated_record",
+              "is_reference": [
+                "land_unit_articulated_vehicles",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "engine",
+              "is_reference": [
+                "battlefield_engines",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "is_male",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "visibility_spotting_range_min",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "visibility_spotting_range_max",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "ability_global_recharge",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "attribute_group",
+              "is_reference": [
+                "unit_attributes_groups",
+                "group_name"
+              ],
+              "description": ""
+            },
+            {
+              "name": "spot_dist_tree",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "spot_dist_scrub",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "reload",
+              "is_reference": null,
+              "description": "Percentage reduction of projectile reload time"
+            },
+            {
+              "name": "loose_spacing",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "selection_vo",
+              "is_reference": [
+                "audio_vo_selected_switches",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "selected_vo_secondary",
+              "is_reference": [
+                "audio_vo_selected_switches",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "selected_vo_tertiary",
+              "is_reference": [
+                "audio_vo_selected_switches",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "hiding_scalar",
+              "is_reference": null,
+              "description": "This affects the range that the unit can be spotted at, less than 1 makes it longer, greater than 1 shorter. So 1.5 would increase the spotters range by +50%"
+            },
+            {
+              "name": "capture_power",
+              "is_reference": null,
+              "description": "Amount of 'points' this unit adds to the capture point every second"
+            },
+            {
+              "name": "ground_stat_effect_group",
+              "is_reference": [
+                "ground_type_stat_effect_groups",
+                "group_name"
+              ],
+              "description": ""
+            },
+            {
+              "name": "secondary_ammo",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "primary_ammo",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "damage_mod_flame",
+              "is_reference": null,
+              "description": "How much we modify flaming damage, 0 is unaffected, -100 is double damage, +100 is negation"
+            },
+            {
+              "name": "damage_mod_magic",
+              "is_reference": null,
+              "description": "How much we modify magical damage, 0 is unaffected, -100 is double damage, +100 is negation"
+            },
+            {
+              "name": "num_engines",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "damage_mod_physical",
+              "is_reference": null,
+              "description": "How much we modify physical damage, 0 is unaffected, -100 is double damage, +100 is negation"
+            },
+            {
+              "name": "damage_mod_missile",
+              "is_reference": null,
+              "description": "How much we modify missile damage, 0 is unaffected, -100 is double damage, +100 is negation"
+            },
+            {
+              "name": "damage_mod_all",
+              "is_reference": null,
+              "description": "How much we modify all damage, 0 is unaffected, -100 is double damage, +100 is negation"
+            },
+            {
+              "name": "ai_usage_group",
+              "is_reference": [
+                "ai_usage_groups",
+                "key"
+              ],
+              "description": "How should the ai use this unit in battle?"
+            },
+            {
+              "name": "can_skirmish",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "mounted_draughts",
+              "is_reference": null,
+              "description": "draughts needs mounting with man_entity."
+            },
+            {
+              "name": "sync_locomotion",
+              "is_reference": null,
+              "description": "Check this to force synchronised walk, run, charge animation."
+            }
+          ],
+          "localised_fields": [
+            {
+              "name": "onscreen_name",
+              "field_type": "StringU8",
+              "is_key": false,
+              "default_value": null,
+              "is_filename": false,
+              "filename_relative_path": null,
+              "is_reference": null,
+              "lookup": null,
+              "description": "",
+              "ca_order": -1,
+              "is_bitwise": 0,
+              "enum_values": {},
+              "is_part_of_colour": null
+            },
+            {
+              "name": "concealed_name",
+              "field_type": "StringU8",
+              "is_key": false,
+              "default_value": null,
+              "is_filename": false,
+              "filename_relative_path": null,
+              "is_reference": null,
+              "lookup": null,
+              "description": "This name is used in battle for enemy units when it is present (for goblin fanatics for example will show them as regular goblins, but want player who has these units to tell difference)",
+              "ca_order": -1,
+              "is_bitwise": 0,
+              "enum_values": {},
+              "is_part_of_colour": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "table": "land_units_to_deployables_abilities_junctions_tables",
+      "presentInPack": false,
+      "definitions": [
+        {
+          "version": 1,
+          "fields": [
+            {
+              "name": "deployable_ability",
+              "is_reference": [
+                "deployables_abilities",
+                "ability_key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "land_unit",
+              "is_reference": [
+                "land_units",
+                "key"
+              ],
+              "description": ""
+            }
+          ],
+          "localised_fields": []
+        }
+      ]
+    },
+    {
+      "table": "main_units_tables",
+      "presentInPack": true,
+      "definitions": [
+        {
+          "version": 36,
+          "fields": [
+            {
+              "name": "additional_building_requirement",
+              "is_reference": [
+                "building_levels",
+                "level_name"
+              ],
+              "description": ""
+            },
+            {
+              "name": "campaign_cap",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "caste",
+              "is_reference": [
+                "unit_castes",
+                "caste"
+              ],
+              "description": "Among other usages, caste allows the overriding of UI stat bar max values"
+            },
+            {
+              "name": "create_time",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "is_naval",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "land_unit",
+              "is_reference": [
+                "land_units",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "num_men",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "multiplayer_cap",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "multiplayer_cost",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "naval_unit",
+              "is_reference": [
+                "naval_units",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "num_ships",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "min_men_per_ship",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "max_men_per_ship",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "prestige",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "recruitment_cost",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "recruitment_movie",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "religion_requirement",
+              "is_reference": [
+                "religions",
+                "religion_key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "unit",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "upkeep_cost",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "weight",
+              "is_reference": [
+                "unit_weights",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "resource_requirement",
+              "is_reference": [
+                "resources",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "world_leader_only",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "can_trade",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "special_edition_mask",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "unique_index",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "in_encyclopedia",
+              "is_reference": null,
+              "description": "Generally, this is the case. However some units (mainly bastions) are not in the encyclopaedia and the code will look up the redirects table"
+            },
+            {
+              "name": "region_unit_resource_requirement",
+              "is_reference": [
+                "region_unit_resources",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "audio_voiceover_culture",
+              "is_reference": [
+                "audio_voiceover_cultures",
+                "name"
+              ],
+              "description": ""
+            },
+            {
+              "name": "ui_unit_group_land",
+              "is_reference": [
+                "ui_unit_groupings",
+                "key"
+              ],
+              "description": "This is used for category icon on unit when on land"
+            },
+            {
+              "name": "ui_unit_group_naval",
+              "is_reference": [
+                "ui_unit_groupings",
+                "key"
+              ],
+              "description": "This is used for category icon on unit when on ship"
+            },
+            {
+              "name": "tier",
+              "is_reference": null,
+              "description": "Tier, only used in ui to show level of unit"
+            },
+            {
+              "name": "is_high_threat",
+              "is_reference": null,
+              "description": "High threat units override the entity threshold checks of melee reactions. If they run into or attack a unit, the unit will instantly react, even if less than 25% of their entities are affected."
+            },
+            {
+              "name": "porthole_camera",
+              "is_reference": [
+                "unit_porthole_camera_settings",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "mount",
+              "is_reference": [
+                "campaign_mounts",
+                "model"
+              ],
+              "description": ""
+            },
+            {
+              "name": "use_hitpoints_in_campaign",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "unit_scaling",
+              "is_reference": null,
+              "description": "Determines if the number of men / artillery pieces in this unit should be scaled with the gfx unit size setting (true) or not (false)"
+            },
+            {
+              "name": "porthole_composite_scene",
+              "is_reference": null,
+              "description": "Full path of composite scene to use for porthole in battle (optional, if empty will just render unit from battle. Only required for special circumstances like chariots)"
+            },
+            {
+              "name": "melee_cp",
+              "is_reference": null,
+              "description": "Base Melee Combat Potential of this unit. Must be >= 0.0 or the game will crash on startup. This value is modified (increased) by other factors such as Rank and equipped Abilities / Items. Reduced by 20% for missile cav."
+            },
+            {
+              "name": "missile_cp",
+              "is_reference": null,
+              "description": "Base Missile Combat Potential of this unit. Must be >= 0.0 or the game will crash on startup. This value is modified (increased) by other factors such as Rank and equipped Abilities / Items. Reduced by 20% for missile cav."
+            },
+            {
+              "name": "can_siege",
+              "is_reference": null,
+              "description": "If true, can attack the turn a settlement is besieged - do not need to wait to build siege equipment on the campaign map"
+            },
+            {
+              "name": "audio_voiceover_culture_override",
+              "is_reference": [
+                "audio_voiceover_cultures",
+                "name"
+              ],
+              "description": ""
+            },
+            {
+              "name": "restrict_xp_gain_in_campaign",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "audio_voiceover_actor_group",
+              "is_reference": [
+                "audio_vo_actor_groups",
+                "name"
+              ],
+              "description": ""
+            },
+            {
+              "name": "food_cost",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "has_spoken_vo",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "is_monstrous",
+              "is_reference": null,
+              "description": "For voiceover : Is this unit regarded as monstrous?"
+            },
+            {
+              "name": "multiplayer_qb_cap",
+              "is_reference": null,
+              "description": "Multiplayer cap for quest battles, requested by Alisdair"
+            },
+            {
+              "name": "vo_is_dragon",
+              "is_reference": null,
+              "description": "For voiceover : Is this unit regarded as a dragon?"
+            },
+            {
+              "name": "vo_is_dinosaur",
+              "is_reference": null,
+              "description": "For voiceover : Is this unit regarded as a dinosaur?"
+            },
+            {
+              "name": "optional_ui_element",
+              "is_reference": null,
+              "description": ""
+            }
+          ],
+          "localised_fields": []
+        },
+        {
+          "version": 35,
+          "fields": [
+            {
+              "name": "additional_building_requirement",
+              "is_reference": [
+                "building_levels",
+                "level_name"
+              ],
+              "description": ""
+            },
+            {
+              "name": "campaign_cap",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "caste",
+              "is_reference": [
+                "unit_castes",
+                "caste"
+              ],
+              "description": "Among other usages, caste allows the overriding of UI stat bar max values"
+            },
+            {
+              "name": "create_time",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "is_naval",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "land_unit",
+              "is_reference": [
+                "land_units",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "num_men",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "multiplayer_cap",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "multiplayer_cost",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "naval_unit",
+              "is_reference": [
+                "naval_units",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "num_ships",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "min_men_per_ship",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "max_men_per_ship",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "prestige",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "recruitment_cost",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "recruitment_movie",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "religion_requirement",
+              "is_reference": [
+                "religions",
+                "religion_key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "unit",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "upkeep_cost",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "weight",
+              "is_reference": [
+                "unit_weights",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "resource_requirement",
+              "is_reference": [
+                "resources",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "world_leader_only",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "can_trade",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "special_edition_mask",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "unique_index",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "in_encyclopedia",
+              "is_reference": null,
+              "description": "Generally, this is the case. However some units (mainly bastions) are not in the encyclopaedia and the code will look up the redirects table"
+            },
+            {
+              "name": "region_unit_resource_requirement",
+              "is_reference": [
+                "region_unit_resources",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "audio_voiceover_culture",
+              "is_reference": [
+                "audio_voiceover_cultures",
+                "name"
+              ],
+              "description": ""
+            },
+            {
+              "name": "ui_unit_group_land",
+              "is_reference": [
+                "ui_unit_groupings",
+                "key"
+              ],
+              "description": "This is used for category icon on unit when on land"
+            },
+            {
+              "name": "ui_unit_group_naval",
+              "is_reference": [
+                "ui_unit_groupings",
+                "key"
+              ],
+              "description": "This is used for category icon on unit when on ship"
+            },
+            {
+              "name": "tier",
+              "is_reference": null,
+              "description": "Tier, only used in ui to show level of unit"
+            },
+            {
+              "name": "is_high_threat",
+              "is_reference": null,
+              "description": "High threat units override the entity threshold checks of melee reactions. If they run into or attack a unit, the unit will instantly react, even if less than 25% of their entities are affected."
+            },
+            {
+              "name": "porthole_camera",
+              "is_reference": [
+                "unit_porthole_camera_settings",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "mount",
+              "is_reference": [
+                "campaign_mounts",
+                "model"
+              ],
+              "description": ""
+            },
+            {
+              "name": "use_hitpoints_in_campaign",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "unit_scaling",
+              "is_reference": null,
+              "description": "Determines if the number of men / artillery pieces in this unit should be scaled with the gfx unit size setting (true) or not (false)"
+            },
+            {
+              "name": "porthole_composite_scene",
+              "is_reference": null,
+              "description": "Full path of composite scene to use for porthole in battle (optional, if empty will just render unit from battle. Only required for special circumstances like chariots)"
+            },
+            {
+              "name": "melee_cp",
+              "is_reference": null,
+              "description": "Base Melee Combat Potential of this unit. Must be >= 0.0 or the game will crash on startup. This value is modified (increased) by other factors such as Rank and equipped Abilities / Items. Reduced by 20% for missile cav."
+            },
+            {
+              "name": "missile_cp",
+              "is_reference": null,
+              "description": "Base Missile Combat Potential of this unit. Must be >= 0.0 or the game will crash on startup. This value is modified (increased) by other factors such as Rank and equipped Abilities / Items. Reduced by 20% for missile cav."
+            },
+            {
+              "name": "can_siege",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "audio_voiceover_culture_override",
+              "is_reference": [
+                "audio_voiceover_cultures",
+                "name"
+              ],
+              "description": ""
+            },
+            {
+              "name": "restrict_xp_gain_in_campaign",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "audio_voiceover_actor_group",
+              "is_reference": [
+                "audio_vo_actor_groups",
+                "name"
+              ],
+              "description": ""
+            },
+            {
+              "name": "food_cost",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "has_spoken_vo",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "is_monstrous",
+              "is_reference": null,
+              "description": "For voiceover : Is this unit regarded as monstrous?"
+            },
+            {
+              "name": "multiplayer_qb_cap",
+              "is_reference": null,
+              "description": "Multiplayer cap for quest battles, requested by Alisdair"
+            },
+            {
+              "name": "vo_is_dragon",
+              "is_reference": null,
+              "description": "For voiceover : Is this unit regarded as a dragon?"
+            },
+            {
+              "name": "vo_is_dinosaur",
+              "is_reference": null,
+              "description": "For voiceover : Is this unit regarded as a dinosaur?"
+            }
+          ],
+          "localised_fields": []
+        },
+        {
+          "version": 33,
+          "fields": [
+            {
+              "name": "additional_building_requirement",
+              "is_reference": [
+                "building_levels",
+                "level_name"
+              ],
+              "description": ""
+            },
+            {
+              "name": "campaign_cap",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "caste",
+              "is_reference": [
+                "unit_castes",
+                "caste"
+              ],
+              "description": "Among other usages, caste allows the overriding of UI stat bar max values"
+            },
+            {
+              "name": "create_time",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "is_naval",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "land_unit",
+              "is_reference": [
+                "land_units",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "num_men",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "multiplayer_cap",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "multiplayer_cost",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "naval_unit",
+              "is_reference": [
+                "naval_units",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "num_ships",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "min_men_per_ship",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "max_men_per_ship",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "prestige",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "recruitment_cost",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "recruitment_movie",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "religion_requirement",
+              "is_reference": [
+                "religions",
+                "religion_key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "unit",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "upkeep_cost",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "weight",
+              "is_reference": [
+                "unit_weights",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "resource_requirement",
+              "is_reference": [
+                "resources",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "world_leader_only",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "can_trade",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "special_edition_mask",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "unique_index",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "in_encyclopedia",
+              "is_reference": null,
+              "description": "Generally, this is the case. However some units (mainly bastions) are not in the encyclopaedia and the code will look up the redirects table"
+            },
+            {
+              "name": "region_unit_resource_requirement",
+              "is_reference": [
+                "region_unit_resources",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "audio_voiceover_culture",
+              "is_reference": [
+                "audio_voiceover_cultures",
+                "name"
+              ],
+              "description": ""
+            },
+            {
+              "name": "ui_unit_group_land",
+              "is_reference": [
+                "ui_unit_groupings",
+                "key"
+              ],
+              "description": "This is used for category icon on unit when on land"
+            },
+            {
+              "name": "ui_unit_group_naval",
+              "is_reference": [
+                "ui_unit_groupings",
+                "key"
+              ],
+              "description": "This is used for category icon on unit when on ship"
+            },
+            {
+              "name": "tier",
+              "is_reference": null,
+              "description": "Tier, only used in ui to show level of unit"
+            },
+            {
+              "name": "is_high_threat",
+              "is_reference": null,
+              "description": "High threat units override the entity threshold checks of melee reactions. If they run into or attack a unit, the unit will instantly react, even if less than 25% of their entities are affected."
+            },
+            {
+              "name": "porthole_camera",
+              "is_reference": [
+                "unit_porthole_camera_settings",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "mount",
+              "is_reference": [
+                "campaign_mounts",
+                "model"
+              ],
+              "description": ""
+            },
+            {
+              "name": "use_hitpoints_in_campaign",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "unit_scaling",
+              "is_reference": null,
+              "description": "Determines if the number of men / artillery pieces in this unit should be scaled with the gfx unit size setting (true) or not (false)"
+            },
+            {
+              "name": "porthole_composite_scene",
+              "is_reference": null,
+              "description": "Full path of composite scene to use for porthole in battle (optional, if empty will just render unit from battle. Only required for special circumstances like chariots)"
+            },
+            {
+              "name": "melee_cp",
+              "is_reference": null,
+              "description": "Base Melee Combat Potential of this unit. Must be >= 0.0 or the game will crash on startup. This value is modified (increased) by other factors such as Rank and equipped Abilities / Items. Reduced by 20% for missile cav."
+            },
+            {
+              "name": "missile_cp",
+              "is_reference": null,
+              "description": "Base Missile Combat Potential of this unit. Must be >= 0.0 or the game will crash on startup. This value is modified (increased) by other factors such as Rank and equipped Abilities / Items. Reduced by 20% for missile cav."
+            },
+            {
+              "name": "can_siege",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "audio_voiceover_culture_override",
+              "is_reference": [
+                "audio_voiceover_cultures",
+                "name"
+              ],
+              "description": ""
+            },
+            {
+              "name": "restrict_xp_gain_in_campaign",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "audio_voiceover_actor_group",
+              "is_reference": [
+                "audio_vo_actor_groups",
+                "name"
+              ],
+              "description": ""
+            },
+            {
+              "name": "food_cost",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "has_spoken_vo",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "is_monstrous",
+              "is_reference": null,
+              "description": "For voiceover : Is this unit regarded as monstrous?"
+            }
+          ],
+          "localised_fields": []
+        },
+        {
+          "version": 7,
+          "fields": [
+            {
+              "name": "additional_building_requirement",
+              "is_reference": [
+                "building_levels",
+                "level_name"
+              ],
+              "description": ""
+            },
+            {
+              "name": "campaign_cap",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "caste",
+              "is_reference": [
+                "unit_castes",
+                "caste"
+              ],
+              "description": "Among other usages, caste allows the overriding of UI stat bar max values"
+            },
+            {
+              "name": "create_time",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "is_naval",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "land_unit",
+              "is_reference": [
+                "land_units",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "num_men",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "multiplayer_cap",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "multiplayer_cost",
+              "is_reference": null,
+              "description": "This is the value (in gold) that a unit or character is worth in custom battle and quick battle."
+            },
+            {
+              "name": "naval_unit",
+              "is_reference": [
+                "naval_units",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "num_ships",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "min_men_per_ship",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "max_men_per_ship",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "recruitment_cost",
+              "is_reference": null,
+              "description": "This field is for setting the recruitment gold value of a unit in campaign. This field is no longer relevant for characters, as it is overridden in the agent_subtypes table."
+            },
+            {
+              "name": "unit",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "upkeep_cost",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "weight",
+              "is_reference": [
+                "unit_weights",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "resource_requirement",
+              "is_reference": [
+                "resources",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "special_edition_mask",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "in_encyclopedia",
+              "is_reference": null,
+              "description": "Generally, this is the case. However some units (mainly bastions) are not in the encyclopaedia and the code will look up the redirects table"
+            },
+            {
+              "name": "audio_voiceover_culture",
+              "is_reference": [
+                "audio_voiceover_cultures",
+                "name"
+              ],
+              "description": ""
+            },
+            {
+              "name": "ui_unit_group_land",
+              "is_reference": [
+                "ui_unit_groupings",
+                "key"
+              ],
+              "description": "This field defines what unit category icon and title is used for a unit. A unit's category also defines which larger category it sits in the custom battle menu. e.g. Infantry, Cavalry etc."
+            },
+            {
+              "name": "tier",
+              "is_reference": null,
+              "description": "Used in the UI to show the Tier of unit<br><br>This is the general rule for approximating a unit tiers:<br>=IF([@[multiplayer_cost]]=0, - do nothing<br>IF([@[multiplayer_cost]] is less than 500, - unit tier 1,<br>IF([@[multiplayer_cost]] is less than 1000, - unit tier 2,<br>IF([@[multiplayer_cost]] is less than 1500, - unit tier 3,<br>IF([@[multiplayer_cost]] is less than 2000, - unit tier 4,<br>else - unit tier 5<br><br>Characters don't have tiers."
+            },
+            {
+              "name": "is_high_threat",
+              "is_reference": null,
+              "description": "High threat units override the entity threshold checks of melee reactions. If they run into or attack a unit, the unit will instantly react, even if less than 25% of their entities are affected."
+            },
+            {
+              "name": "porthole_camera",
+              "is_reference": [
+                "unit_porthole_camera_settings",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "mount",
+              "is_reference": [
+                "campaign_mounts",
+                "model"
+              ],
+              "description": ""
+            },
+            {
+              "name": "use_hitpoints_in_campaign",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "porthole_composite_scene",
+              "is_reference": null,
+              "description": "Full path of composite scene to use for porthole in battle (optional, if empty will just render unit from battle. Only required for special circumstances like chariots). Note that switching armies through DEV UI breaks 3D Portholes"
+            },
+            {
+              "name": "melee_cp",
+              "is_reference": null,
+              "description": "Base Melee Combat Potential of this unit. Must be >= 0.0 or the game will crash on startup. This value is modified (increased) by other factors such as Rank and equipped Abilities / Items. Reduced by 20% for missile cav."
+            },
+            {
+              "name": "missile_cp",
+              "is_reference": null,
+              "description": "Base Missile Combat Potential of this unit. Must be >= 0.0 or the game will crash on startup. This value is modified (increased) by other factors such as Rank and equipped Abilities / Items. Reduced by 20% for missile cav."
+            },
+            {
+              "name": "can_siege",
+              "is_reference": null,
+              "description": "If true, can attack the turn a settlement is besieged - do not need to wait to build siege equipment on the campaign map"
+            },
+            {
+              "name": "audio_voiceover_culture_override",
+              "is_reference": [
+                "audio_voiceover_cultures",
+                "name"
+              ],
+              "description": ""
+            },
+            {
+              "name": "restrict_xp_gain_in_campaign",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "audio_voiceover_actor_group",
+              "is_reference": [
+                "audio_vo_actor_groups",
+                "name"
+              ],
+              "description": ""
+            },
+            {
+              "name": "food_cost",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "has_spoken_vo",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "is_monstrous",
+              "is_reference": null,
+              "description": "For voiceover : Is this unit regarded as monstrous?"
+            },
+            {
+              "name": "multiplayer_qb_cap",
+              "is_reference": null,
+              "description": "Multiplayer cap for quest battles, requested by Alisdair"
+            },
+            {
+              "name": "vo_is_dragon",
+              "is_reference": null,
+              "description": "For voiceover : Is this unit regarded as a dragon?"
+            },
+            {
+              "name": "vo_is_dinosaur",
+              "is_reference": null,
+              "description": "For voiceover : Is this unit regarded as a dinosaur?"
+            },
+            {
+              "name": "optional_ui_element",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "barrier_health",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "can_be_bribed",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "point_allowance_weight",
+              "is_reference": null,
+              "description": "Amount of points this unit uses in the Unit Allowance"
+            },
+            {
+              "name": "is_renown",
+              "is_reference": null,
+              "description": "Specifies whether this unit is a Regiment of Renown or not"
+            }
+          ],
+          "localised_fields": []
+        },
+        {
+          "version": 6,
+          "fields": [
+            {
+              "name": "additional_building_requirement",
+              "is_reference": [
+                "building_levels",
+                "level_name"
+              ],
+              "description": ""
+            },
+            {
+              "name": "campaign_cap",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "caste",
+              "is_reference": [
+                "unit_castes",
+                "caste"
+              ],
+              "description": "Among other usages, caste allows the overriding of UI stat bar max values"
+            },
+            {
+              "name": "create_time",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "is_naval",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "land_unit",
+              "is_reference": [
+                "land_units",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "num_men",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "multiplayer_cap",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "multiplayer_cost",
+              "is_reference": null,
+              "description": "This is the value (in gold) that a unit or character is worth in custom battle and quick battle."
+            },
+            {
+              "name": "naval_unit",
+              "is_reference": [
+                "naval_units",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "num_ships",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "min_men_per_ship",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "max_men_per_ship",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "recruitment_cost",
+              "is_reference": null,
+              "description": "This field is for setting the recruitment gold value of a unit in campaign. This field is no longer relevant for characters, as it is overridden in the agent_subtypes table."
+            },
+            {
+              "name": "unit",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "upkeep_cost",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "weight",
+              "is_reference": [
+                "unit_weights",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "resource_requirement",
+              "is_reference": [
+                "resources",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "special_edition_mask",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "unique_index",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "in_encyclopedia",
+              "is_reference": null,
+              "description": "Generally, this is the case. However some units (mainly bastions) are not in the encyclopaedia and the code will look up the redirects table"
+            },
+            {
+              "name": "audio_voiceover_culture",
+              "is_reference": [
+                "audio_voiceover_cultures",
+                "name"
+              ],
+              "description": ""
+            },
+            {
+              "name": "ui_unit_group_land",
+              "is_reference": [
+                "ui_unit_groupings",
+                "key"
+              ],
+              "description": "This field defines what unit category icon and title is used for a unit. A unit's category also defines which larger category it sits in the custom battle menu. e.g. Infantry, Cavalry etc."
+            },
+            {
+              "name": "tier",
+              "is_reference": null,
+              "description": "Tier, only used in ui to show level of unit"
+            },
+            {
+              "name": "is_high_threat",
+              "is_reference": null,
+              "description": "High threat units override the entity threshold checks of melee reactions. If they run into or attack a unit, the unit will instantly react, even if less than 25% of their entities are affected."
+            },
+            {
+              "name": "porthole_camera",
+              "is_reference": [
+                "unit_porthole_camera_settings",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "mount",
+              "is_reference": [
+                "campaign_mounts",
+                "model"
+              ],
+              "description": ""
+            },
+            {
+              "name": "use_hitpoints_in_campaign",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "porthole_composite_scene",
+              "is_reference": null,
+              "description": "Full path of composite scene to use for porthole in battle (optional, if empty will just render unit from battle. Only required for special circumstances like chariots). Note that switching armies through DEV UI breaks 3D Portholes"
+            },
+            {
+              "name": "melee_cp",
+              "is_reference": null,
+              "description": "Base Melee Combat Potential of this unit. Must be >= 0.0 or the game will crash on startup. This value is modified (increased) by other factors such as Rank and equipped Abilities / Items. Reduced by 20% for missile cav."
+            },
+            {
+              "name": "missile_cp",
+              "is_reference": null,
+              "description": "Base Missile Combat Potential of this unit. Must be >= 0.0 or the game will crash on startup. This value is modified (increased) by other factors such as Rank and equipped Abilities / Items. Reduced by 20% for missile cav."
+            },
+            {
+              "name": "can_siege",
+              "is_reference": null,
+              "description": "If true, can attack the turn a settlement is besieged - do not need to wait to build siege equipment on the campaign map"
+            },
+            {
+              "name": "audio_voiceover_culture_override",
+              "is_reference": [
+                "audio_voiceover_cultures",
+                "name"
+              ],
+              "description": ""
+            },
+            {
+              "name": "restrict_xp_gain_in_campaign",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "audio_voiceover_actor_group",
+              "is_reference": [
+                "audio_vo_actor_groups",
+                "name"
+              ],
+              "description": ""
+            },
+            {
+              "name": "food_cost",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "has_spoken_vo",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "is_monstrous",
+              "is_reference": null,
+              "description": "For voiceover : Is this unit regarded as monstrous?"
+            },
+            {
+              "name": "multiplayer_qb_cap",
+              "is_reference": null,
+              "description": "Multiplayer cap for quest battles, requested by Alisdair"
+            },
+            {
+              "name": "vo_is_dragon",
+              "is_reference": null,
+              "description": "For voiceover : Is this unit regarded as a dragon?"
+            },
+            {
+              "name": "vo_is_dinosaur",
+              "is_reference": null,
+              "description": "For voiceover : Is this unit regarded as a dinosaur?"
+            },
+            {
+              "name": "optional_ui_element",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "barrier_health",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "can_be_bribed",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "point_allowance_weight",
+              "is_reference": null,
+              "description": "Amount of points this unit uses in the Unit Allowance"
+            },
+            {
+              "name": "is_renown",
+              "is_reference": null,
+              "description": "Specifies whether this unit is a Regiment of Renown or not"
+            }
+          ],
+          "localised_fields": []
+        },
+        {
+          "version": 4,
+          "fields": [
+            {
+              "name": "additional_building_requirement",
+              "is_reference": [
+                "building_levels",
+                "level_name"
+              ],
+              "description": ""
+            },
+            {
+              "name": "campaign_cap",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "caste",
+              "is_reference": [
+                "unit_castes",
+                "caste"
+              ],
+              "description": "Among other usages, caste allows the overriding of UI stat bar max values"
+            },
+            {
+              "name": "create_time",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "is_naval",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "land_unit",
+              "is_reference": [
+                "land_units",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "num_men",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "multiplayer_cap",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "multiplayer_cost",
+              "is_reference": null,
+              "description": "This is the value (in gold) that a unit or character is worth in custom battle and quick battle."
+            },
+            {
+              "name": "naval_unit",
+              "is_reference": [
+                "naval_units",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "num_ships",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "min_men_per_ship",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "max_men_per_ship",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "recruitment_cost",
+              "is_reference": null,
+              "description": "This field is for setting the recruitment gold value of a unit in campaign. This field is no longer relevant for characters, as it is overridden in the agent_subtypes table."
+            },
+            {
+              "name": "unit",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "upkeep_cost",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "weight",
+              "is_reference": [
+                "unit_weights",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "resource_requirement",
+              "is_reference": [
+                "resources",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "special_edition_mask",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "unique_index",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "in_encyclopedia",
+              "is_reference": null,
+              "description": "Generally, this is the case. However some units (mainly bastions) are not in the encyclopaedia and the code will look up the redirects table"
+            },
+            {
+              "name": "audio_voiceover_culture",
+              "is_reference": [
+                "audio_voiceover_cultures",
+                "name"
+              ],
+              "description": ""
+            },
+            {
+              "name": "ui_unit_group_land",
+              "is_reference": [
+                "ui_unit_groupings",
+                "key"
+              ],
+              "description": "This field defines what unit category icon and title is used for a unit. A unit's category also defines which larger category it sits in the custom battle menu. e.g. Infantry, Cavalry etc."
+            },
+            {
+              "name": "tier",
+              "is_reference": null,
+              "description": "Tier, only used in ui to show level of unit"
+            },
+            {
+              "name": "is_high_threat",
+              "is_reference": null,
+              "description": "High threat units override the entity threshold checks of melee reactions. If they run into or attack a unit, the unit will instantly react, even if less than 25% of their entities are affected."
+            },
+            {
+              "name": "porthole_camera",
+              "is_reference": [
+                "unit_porthole_camera_settings",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "mount",
+              "is_reference": [
+                "campaign_mounts",
+                "model"
+              ],
+              "description": ""
+            },
+            {
+              "name": "use_hitpoints_in_campaign",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "porthole_composite_scene",
+              "is_reference": null,
+              "description": "Full path of composite scene to use for porthole in battle (optional, if empty will just render unit from battle. Only required for special circumstances like chariots)"
+            },
+            {
+              "name": "melee_cp",
+              "is_reference": null,
+              "description": "Base Melee Combat Potential of this unit. Must be >= 0.0 or the game will crash on startup. This value is modified (increased) by other factors such as Rank and equipped Abilities / Items. Reduced by 20% for missile cav."
+            },
+            {
+              "name": "missile_cp",
+              "is_reference": null,
+              "description": "Base Missile Combat Potential of this unit. Must be >= 0.0 or the game will crash on startup. This value is modified (increased) by other factors such as Rank and equipped Abilities / Items. Reduced by 20% for missile cav."
+            },
+            {
+              "name": "can_siege",
+              "is_reference": null,
+              "description": "If true, can attack the turn a settlement is besieged - do not need to wait to build siege equipment on the campaign map"
+            },
+            {
+              "name": "audio_voiceover_culture_override",
+              "is_reference": [
+                "audio_voiceover_cultures",
+                "name"
+              ],
+              "description": ""
+            },
+            {
+              "name": "restrict_xp_gain_in_campaign",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "audio_voiceover_actor_group",
+              "is_reference": [
+                "audio_vo_actor_groups",
+                "name"
+              ],
+              "description": ""
+            },
+            {
+              "name": "food_cost",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "has_spoken_vo",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "is_monstrous",
+              "is_reference": null,
+              "description": "For voiceover : Is this unit regarded as monstrous?"
+            },
+            {
+              "name": "multiplayer_qb_cap",
+              "is_reference": null,
+              "description": "Multiplayer cap for quest battles, requested by Alisdair"
+            },
+            {
+              "name": "vo_is_dragon",
+              "is_reference": null,
+              "description": "For voiceover : Is this unit regarded as a dragon?"
+            },
+            {
+              "name": "vo_is_dinosaur",
+              "is_reference": null,
+              "description": "For voiceover : Is this unit regarded as a dinosaur?"
+            },
+            {
+              "name": "optional_ui_element",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "barrier_health",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "can_be_bribed",
+              "is_reference": null,
+              "description": ""
+            }
+          ],
+          "localised_fields": []
+        }
+      ]
+    },
+    {
+      "table": "mounts_tables",
+      "presentInPack": true,
+      "definitions": [
+        {
+          "version": 10,
+          "fields": [
+            {
+              "name": "key",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "animation",
+              "is_reference": [
+                "battle_animations_table",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "entity",
+              "is_reference": [
+                "battle_entities",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "audio_armour_type",
+              "is_reference": [
+                "audio_armour_types",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "variant",
+              "is_reference": [
+                "variants",
+                "variant_name"
+              ],
+              "description": ""
+            },
+            {
+              "name": "voiceover",
+              "is_reference": [
+                "audio_voiceover_cultures",
+                "name"
+              ],
+              "description": ""
+            }
+          ],
+          "localised_fields": []
+        },
+        {
+          "version": 9,
+          "fields": [
+            {
+              "name": "key",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "animation",
+              "is_reference": [
+                "battle_animations_table",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "entity",
+              "is_reference": [
+                "battle_entities",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "audio_armour_type",
+              "is_reference": [
+                "audio_armour_types",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "variant",
+              "is_reference": [
+                "variants",
+                "variant_name"
+              ],
+              "description": ""
+            },
+            {
+              "name": "voiceover",
+              "is_reference": [
+                "audio_voiceover_cultures",
+                "name"
+              ],
+              "description": ""
+            }
+          ],
+          "localised_fields": []
+        }
+      ]
+    },
+    {
+      "table": "unit_variants_colours_tables",
+      "presentInPack": true,
+      "definitions": [
+        {
+          "version": 5,
+          "fields": [
+            {
+              "name": "faction",
+              "is_reference": [
+                "factions",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "primary_colour_b",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "primary_colour_g",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "primary_colour_r",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "secondary_colour_b",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "secondary_colour_g",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "secondary_colour_r",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "soldier_type",
+              "is_reference": [
+                "uniform_type_enums",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "tertiary_colour_b",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "tertiary_colour_g",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "tertiary_colour_r",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "key",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "unit_variant",
+              "is_reference": [
+                "unit_variants",
+                "name"
+              ],
+              "description": ""
+            },
+            {
+              "name": "subculture",
+              "is_reference": [
+                "cultures_subcultures",
+                "subculture"
+              ],
+              "description": ""
+            }
+          ],
+          "localised_fields": []
+        },
+        {
+          "version": 3,
+          "fields": [
+            {
+              "name": "faction",
+              "is_reference": [
+                "factions",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "primary_colour_b",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "primary_colour_g",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "primary_colour_r",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "secondary_colour_b",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "secondary_colour_g",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "secondary_colour_r",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "soldier_type",
+              "is_reference": [
+                "uniform_type_enums",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "tertiary_colour_b",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "tertiary_colour_g",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "tertiary_colour_r",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "key",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "unit_variant",
+              "is_reference": [
+                "unit_variants",
+                "name"
+              ],
+              "description": ""
+            },
+            {
+              "name": "subculture",
+              "is_reference": [
+                "cultures_subcultures",
+                "subculture"
+              ],
+              "description": ""
+            }
+          ],
+          "localised_fields": []
+        },
+        {
+          "version": 2,
+          "fields": [
+            {
+              "name": "faction",
+              "is_reference": [
+                "factions",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "primary_colour_b",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "primary_colour_g",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "primary_colour_r",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "secondary_colour_b",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "secondary_colour_g",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "secondary_colour_r",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "soldier_type",
+              "is_reference": [
+                "uniform_type_enums",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "tertiary_colour_b",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "tertiary_colour_g",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "tertiary_colour_r",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "key",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "unit_variant",
+              "is_reference": [
+                "land_units",
+                "key"
+              ],
+              "description": ""
+            }
+          ],
+          "localised_fields": []
+        }
+      ]
+    },
+    {
+      "table": "unit_variants_tables",
+      "presentInPack": true,
+      "definitions": [
+        {
+          "version": 5,
+          "fields": [
+            {
+              "name": "faction",
+              "is_reference": [
+                "factions",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "name",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "unit",
+              "is_reference": [
+                "land_units",
+                "key"
+              ],
+              "description": ""
+            },
+            {
+              "name": "variant",
+              "is_reference": [
+                "variants",
+                "variant_name"
+              ],
+              "description": ""
+            },
+            {
+              "name": "unit_card",
+              "is_reference": null,
+              "description": ""
+            }
+          ],
+          "localised_fields": []
+        }
+      ]
+    },
+    {
+      "table": "units_custom_battle_mounts_tables",
+      "presentInPack": true,
+      "definitions": [
+        {
+          "version": 1,
+          "fields": [
+            {
+              "name": "base_unit",
+              "is_reference": [
+                "main_units",
+                "unit"
+              ],
+              "description": "Unit upgrading from"
+            },
+            {
+              "name": "icon_name",
+              "is_reference": null,
+              "description": "Icon to show in custom battle screen for mount - Find in UI/skins/default"
+            },
+            {
+              "name": "mounted_unit",
+              "is_reference": [
+                "main_units",
+                "unit"
+              ],
+              "description": "Unit upgrades to"
+            }
+          ],
+          "localised_fields": [
+            {
+              "name": "mount_name",
+              "field_type": "StringU8",
+              "is_key": false,
+              "default_value": "placeholder",
+              "is_filename": false,
+              "filename_relative_path": null,
+              "is_reference": null,
+              "lookup": null,
+              "description": "Name for mount",
+              "ca_order": -1,
+              "is_bitwise": 0,
+              "enum_values": {},
+              "is_part_of_colour": null
+            },
+            {
+              "name": "localised_description",
+              "field_type": "StringU8",
+              "is_key": false,
+              "default_value": null,
+              "is_filename": false,
+              "filename_relative_path": null,
+              "is_reference": null,
+              "lookup": null,
+              "description": "",
+              "ca_order": -1,
+              "is_bitwise": 0,
+              "enum_values": {},
+              "is_part_of_colour": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "table": "variants_tables",
+      "presentInPack": true,
+      "definitions": [
+        {
+          "version": 6,
+          "fields": [
+            {
+              "name": "variant_name",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "tech_folder",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "variant_filename",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "low_poly_filename",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "mount_scale",
+              "is_reference": null,
+              "description": "Special mount scale. Cavalry riders will not automatically match this scale."
+            },
+            {
+              "name": "scale",
+              "is_reference": null,
+              "description": "A multiplier that dictates the visual scale of an entity. i.e. Setting this to 2 will make your unit 200% bigger than the scale that the asset has been authored at.<br><br>If this variant is a rider of a War Beast macro entity, this multiplier will not have any effect. A rider's scale is set by the mount. <br><br>Note: This does not matter for Chariots, which use the rider scale independantly of the mount scale.<br><br>If this variant is a mount of a War Beast macro entity, set it to the scale that you wish the rider to be. Then adjust the value in the mount_scale column in order to multiply up to the value you want. i.e. If an Arachnarok Spider is scale 4, but has a character rider that is scale 1.15, set the scale to be 1.15, then the mount_scale to be 3.48 (in order to multiply back up to 4).<br><br>Sync Rider Cavalry variants must be configured to use an agreed-upon scale before animation begins, in order to avoid de-sycnchronisation.<br><br>"
+            },
+            {
+              "name": "scale_variation",
+              "is_reference": null,
+              "description": "The randomised  'micro' scale."
+            },
+            {
+              "name": "super_low_poly_filename",
+              "is_reference": null,
+              "description": ""
+            }
+          ],
+          "localised_fields": []
+        },
+        {
+          "version": 5,
+          "fields": [
+            {
+              "name": "variant_name",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "tech_folder",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "variant_filename",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "low_poly_filename",
+              "is_reference": null,
+              "description": ""
+            },
+            {
+              "name": "mount_scale",
+              "is_reference": null,
+              "description": "Special mount scale. Cavalry riders will not automatically match this scale."
+            },
+            {
+              "name": "scale",
+              "is_reference": null,
+              "description": "The 'macro' scale."
+            },
+            {
+              "name": "scale_variation",
+              "is_reference": null,
+              "description": "The randomised  'micro' scale."
+            }
+          ],
+          "localised_fields": []
+        }
+      ]
+    }
+  ]
+}

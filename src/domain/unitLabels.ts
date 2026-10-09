@@ -1,6 +1,7 @@
 import type { AttackAttributeId, UnitAbilityId, UnitAttributeId } from './unit';
 import attributeAdmissions from '../data/unitAttributeAdmissions.json';
 import passiveAdmissions from '../data/unitPassiveAdmissions.json';
+import activeAdmissions from '../data/unitActiveAdmissions.json';
 
 // These are display labels, not canonical game DB IDs. Importers must map
 // verified source IDs to these app IDs, or supply additional labels.
@@ -31,5 +32,5 @@ export const unitPassiveAbilityLabels: Readonly<Record<UnitAbilityId, string>> =
 
 export const getUnitAttributeLabel = (id: UnitAttributeId) => unitAttributeLabels[id] ?? id;
 export const getAttackAttributeLabel = (id: AttackAttributeId) => attackAttributeLabels[id] ?? id;
-export const getUnitAbilityLabel = (id: UnitAbilityId) => unitAbilityLabels[id] ?? id;
+export const getUnitAbilityLabel = (id: UnitAbilityId) => (activeAdmissions.labels as Record<string, string>)[id] ?? unitAbilityLabels[id] ?? id;
 export const getUnitPassiveAbilityLabel = (id: UnitAbilityId) => unitPassiveAbilityLabels[id] ?? getUnitAbilityLabel(id);

@@ -1,3 +1,4 @@
+const {withoutUnitActives}=require('../.test-build/src/repositories/unitActives.js');
 const {test}=require('node:test');
 const assert=require('node:assert/strict');
 const fs=require('node:fs');
@@ -126,7 +127,7 @@ test('10 independent exact-key traces cover required structures; raw equality is
 
 test('missile overlay has an exact inverse and all prior slices, Korean names and 23 rosters remain unchanged',()=>{
   for(const raw of read('src/data/units.json')){
-    const previous=before(raw),current=withoutUnitRecruitment(game.getUnit(raw.id));assert.deepEqual(withoutUnitMissiles(current),previous,raw.id);assert.deepEqual(withoutUnitMissiles(applyUnitMissiles(raw)),raw);
+    const previous=before(raw),current=withoutUnitRecruitment(withoutUnitActives(game.getUnit(raw.id)));assert.deepEqual(withoutUnitMissiles(current),previous,raw.id);assert.deepEqual(withoutUnitMissiles(applyUnitMissiles(raw)),raw);
     const {...a}=current,{...b}=previous;delete a.missile;delete b.missile;assert.deepEqual(a,b,raw.id);
     if(raw.gameVersion==='sample'){assert.deepEqual(current,previous);assert.equal(unitMissileAdmission(current),undefined);}
   }
