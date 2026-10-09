@@ -103,15 +103,15 @@ Speed 1,099개, 저항 5종×1,110, 사격 기본/AP 328/327, 사거리 333, 재
 | HP/entity 관련 테스트 | **23/23 PASS** |
 | 새 규칙에 기존 13개 Ultra tuple 적용 | **13/13 PASS**, Doom-Flayers의 ENGINE_CREW도 8 / 6,128 재현 |
 | `npm test` 현재 앱 | **223/223 PASS** |
-| `npm test` 격리 역사 증거 | **622/623 PASS**, 아래 환경 차단 1건 |
-| `npm test` 전체 | **845/846 PASS**, 실패 1 / skipped 0 |
+| `npm test` 격리 역사 증거 · 최종 재실행 | **623/623 PASS** |
+| `npm test` 전체 · 최종 재실행 | **846/846 PASS**, 실패 0 / skipped 0 |
 | `npm run check:data` | **PASS**, live projection 및 17개 역사 replay |
 | `npm run build` | **PASS**, TypeScript + Vite, 141 modules |
 | `npm run check:pages` | **PASS**, 8 route/query/hash roundtrips 및 built assets |
 | `node scripts/promote-unit-entities-second.mjs --check` | **PASS** |
 | `git diff --check` | **PASS** |
 
-전체 테스트의 남은 실패는 `tests/skill-rank-runtime-resolution.test.cjs`의 임시 폴더용 Windows installer 회귀다. `install.ps1`이 실행 중인 실제 `Warhammer3` 프로세스를 감지하고 `Close the game before installation/removal.`로 거부했다. HP/count 계산 실패가 아니다. 보호 조건·installer·역사 테스트를 수정하지 않았고 게임 프로세스도 종료하지 않았다. 사용자에게 저장 후 직접 종료 가능 여부를 확인했으며 완료 시점에도 게임 실행 상태를 확인했다. 게임 종료 후 재실행이 필요하다. 이 실패를 숨기거나 통과로 집계하지 않았다.
+최초 전체 실행에서는 `tests/skill-rank-runtime-resolution.test.cjs`의 임시 폴더용 Windows installer 회귀 한 건이 실행 중인 실제 `Warhammer3` 프로세스 때문에 `Close the game before installation/removal.`로 거부되어 845/846이었다. 사용자 요청에 따라 게임 종료 상태를 확인한 뒤 해당 테스트를 단독 재실행하여 1/1 PASS, 이어서 전체 `npm test`를 다시 실행하여 **846/846 PASS**를 확인했다. 보호 조건·installer·역사 테스트를 수정하지 않았고 게임 프로세스도 종료하지 않았다. 최초 로그는 그대로 보존하고 최종 전체 재실행 로그는 `generated/wh3/entities-second/full-tests-rerun.log`에 별도 보존했다.
 
 Production 빌드에서 다음 화면을 확인했다: Swordsmen **120 / 8,280**, Dragon Ogres **16 / 9,856**, Great Cannons **4 / 4,356**, Snotling Pump Wagons **12 / 5,088**, Black Coach **1 / 5,980**. 모두 Ultra 표기와 개체당 HP 미확인 상태를 유지한다. 브라우저 오류는 0개이며 임시 preview를 종료했다. 이는 전쟁서고 UI 확인이며 게임 자체 실측이 아니다.
 
