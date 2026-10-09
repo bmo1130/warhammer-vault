@@ -51,7 +51,7 @@ test('second overlay changes only Speed and rejects both value and version drift
     const changed={...current,movement:{...current.movement,speed:current.movement.speed+1}};assert.deepEqual(withoutUnitSpeed(changed),changed);assert.equal(unitSpeedAdmission(changed),undefined);
   }
   const units=game.listUnits().filter(u=>u.gameVersion!=='sample');
-  for(const [n,field]of [[986,u=>u.entities.totalHealth],[1071,u=>u.entities.count],[328,u=>u.missile?.projectile.baseDamage],[327,u=>u.missile?.projectile.armorPiercingDamage],[333,u=>u.missile?.range],[336,u=>u.missile?.reload?.baseTime]])assert.equal(units.filter(u=>field(u)!==undefined).length,n);
+  for(const [n,field]of [[1026,u=>u.entities.totalHealth],[1097,u=>u.entities.count],[328,u=>u.missile?.projectile.baseDamage],[327,u=>u.missile?.projectile.armorPiercingDamage],[333,u=>u.missile?.range],[336,u=>u.missile?.reload?.baseTime]])assert.equal(units.filter(u=>field(u)!==undefined).length,n);
 });
 test('the full second report, source pins and admission overlay replay deterministically',async()=>{
   const {buildSecond}=await import('../tools/wh3-importer/speed-second/rules.mjs');assert.deepEqual(buildSecond(),{report,projection});

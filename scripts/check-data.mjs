@@ -1,5 +1,8 @@
 import { spawnSync } from 'node:child_process';
 import { prepareEvidenceView } from './evidence-view.mjs';
+const entitiesSecond = spawnSync(process.execPath, ['scripts/promote-unit-entities-second.mjs', '--check'], {stdio:'inherit'});
+if (entitiesSecond.error) throw entitiesSecond.error;
+if (entitiesSecond.status !== 0) process.exit(entitiesSecond.status ?? 1);
 const speedSecond = spawnSync(process.execPath, ['scripts/promote-unit-speed-second.mjs', '--check'], {stdio:'inherit'});
 if (speedSecond.error) throw speedSecond.error;
 if (speedSecond.status !== 0) process.exit(speedSecond.status ?? 1);

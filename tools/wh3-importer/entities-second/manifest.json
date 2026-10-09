@@ -1,0 +1,45 @@
+{
+  "format": "unit-ultra-entities-second-manifest-v1",
+  "baselineCommit": "533df13",
+  "unitSize": "ULTRA",
+  "gameVersion": "9.0.2.0",
+  "snapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+  "inputs": [
+    {
+      "file": "src/data/units.json",
+      "hash": "1484a2f8fd9cc39999d9a178a75c074d8a660f0548898742433b5fe19ab760bb"
+    },
+    {
+      "file": "src/data/unitHpEntityRuleAdmissions.json",
+      "hash": "c15ad4a92a9d424ad14171fa701bce0ac7183134ec81fbff7ec03ad6e468e387"
+    },
+    {
+      "file": "tools/wh3-importer/unit-entities/rules-report.json",
+      "hash": "37ed80cdf7bceb1d66c2151f97a6b63349fd56349b9bbcc645b869e35075224c"
+    },
+    {
+      "file": "tools/wh3-importer/unit-entities/ground-truth.json",
+      "hash": "d4a8f8053da524eb3ce5c24eea29bf15a8c0d9f329e0cf9ff23f790d47a0cd15"
+    },
+    {
+      "file": "src/data/unitSpeedSecondAdmissions.json",
+      "hash": "4b50c5a94271996be17917a87dacfe429d70d655f4634495716b12cd8313d271"
+    },
+    {
+      "file": "tools/wh3-importer/entities-second/stored.source.json",
+      "hash": "4ffdf409617f410014c94efc9b2fec5bde4221b05f1c45629fd12af41fdbcb14"
+    },
+    {
+      "file": "tools/wh3-importer/entities-second/reference.source.json",
+      "hash": "b7a40e4650f0d220a5310410677baa72ea0e95d3586a1c6aaaa4bf93f3e4b000"
+    },
+    {
+      "file": "tools/wh3-importer/entities-second/fresh.source.json",
+      "hash": "4b9a5bf59c85719236b204856de87903f8bf480df4cf6404213a1ded0d3a7a68"
+    },
+    {
+      "file": "tools/wh3-importer/entities-second/browser-card-evidence.json",
+      "hash": "4f9f1f46664a858efc799023164115e4f3828c375c0e23cf01a896145eeec50a"
+    }
+  ]
+}

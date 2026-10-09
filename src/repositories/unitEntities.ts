@@ -1,7 +1,12 @@
 import projection from '../data/unitHpEntityRuleAdmissions.json';
+import second from '../data/unitHpEntitySecondAdmissions.json';
 import type { Unit } from '../domain/unit';
 
-const byId = new Map(projection.admissions.map(a => [a.id, a]));
+type EntityAdmission = (typeof projection.admissions[number] | typeof second.admissions[number]) & {unitSize:string;sourceHash:string};
+const byId = new Map<string,EntityAdmission>([
+  ...projection.admissions.map(a => [a.id, {...a, unitSize:projection.unitSize, sourceHash:projection.sourceHash}] as const),
+  ...second.admissions.map(a => [a.id, {...a, unitSize:second.unitSize, sourceHash:second.sourceHash}] as const),
+]);
 export function applyUnitEntities(unit: Unit): Unit {
   const a = byId.get(unit.id);
   if (!a) return unit;
@@ -17,7 +22,7 @@ export function applyUnitEntities(unit: Unit): Unit {
 export function unitEntityAdmission(unit: Unit) {
   const a = byId.get(unit.id);
   return a && unit.gameVersion === projection.gameVersion && unit.entities.count === (a.count ?? undefined) && unit.entities.totalHealth === (a.totalHealth ?? undefined)
-    ? { ...a, unitSize: projection.unitSize, sourceHash: projection.sourceHash } : undefined;
+    ? { ...a } : undefined;
 }
 
 // Restore only exact admitted fields. A changed count or HP cannot be stripped

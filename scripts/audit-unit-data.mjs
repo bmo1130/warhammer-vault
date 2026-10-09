@@ -13,7 +13,8 @@ export function auditUnitData(){
   const activeProjection=read('src/data/unitActiveAdmissions.json');
   const activeById=new Map(activeProjection.admissions.map(a=>[a.id,a]));
   const entityProjection=read('src/data/unitHpEntityRuleAdmissions.json');
-  const entityById=new Map(entityProjection.admissions.map(a=>[a.id,a]));
+  const entitySecondProjection=read('src/data/unitHpEntitySecondAdmissions.json');
+  const entityById=new Map([...entityProjection.admissions,...entitySecondProjection.admissions].map(a=>[a.id,a]));
   const speedProjection=read('src/data/unitSpeedRuleAdmissions.json');
   const speedSecondProjection=read('src/data/unitSpeedSecondAdmissions.json');
   const speedById=new Map([...speedProjection.admissions,...speedSecondProjection.admissions].map(a=>[a.id,a]));

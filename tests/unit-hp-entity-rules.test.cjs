@@ -46,15 +46,15 @@ test('global candidates are rejected by measured deltas; Black Coach distinguish
 
 test('mass promotion reaches current repository and agrees with field and category coverage',()=>{
   assert.equal(production.length,1110);
-  assert.equal(production.filter(u=>u.entities.count!==undefined).length,1071);
-  assert.equal(production.filter(u=>u.entities.totalHealth!==undefined).length,986);
+  assert.equal(production.filter(u=>u.entities.count!==undefined).length,1097);
+  assert.equal(production.filter(u=>u.entities.totalHealth!==undefined).length,1026);
   assert.equal(production.filter(u=>u.entities.healthPerEntity!==undefined).length,0);
   assert.deepEqual(report.summary.combined,{complete:986,partial:85,unknown:39});
   assert.equal(report.summary.newIdentities,1058);assert.equal(report.summary.newHP,973);
   assert.equal(report.rules.find(r=>r.id==='MAN_ONLY_N').hpKnown,773);
   for(const c of report.catalog){
-    const u=game.getUnit(c.id);assert.equal(u.entities.count??null,c.prediction.count,c.id);
-    assert.equal(u.entities.totalHealth??null,c.prediction.totalHealth,c.id);
+    const u=game.getUnit(c.id);if(c.prediction.count!==null)assert.equal(u.entities.count,c.prediction.count,c.id);
+    if(c.prediction.totalHealth!==null)assert.equal(u.entities.totalHealth,c.prediction.totalHealth,c.id);
     const man=c.sourceFields['land.man_entity'].source;
     assert(c.sourceFields['main.num_men'].source.rowId&&report.joinPaths[man.pathId].length);
     assert.equal(report.sourceRows[man.sourceId].table,'land_units_tables');

@@ -96,8 +96,8 @@ test('speed-only overlay preserves every other Unit field, HP/count, names, rost
     assert.deepEqual(withoutUnitSpeed(applyUnitSpeed(raw)),raw);
     if(raw.gameVersion==='sample')assert.equal(unitSpeedAdmission(after),undefined);
   }
-  assert.equal(production.filter(u=>u.entities.count!==undefined).length,1071);
-  assert.equal(production.filter(u=>u.entities.totalHealth!==undefined).length,986);
+  assert.equal(production.filter(u=>u.entities.count!==undefined).length,1097);
+  assert.equal(production.filter(u=>u.entities.totalHealth!==undefined).length,1026);
   assert.equal(production.filter(u=>/[가-힣]/.test(u.name)).length,1110);
   assert.equal(game.listFactions().filter(f=>game.getRosterCoverage(f.id)?.status==='ROSTER COMPLETE').length,23);
   const paths=spawnSync('git',['ls-tree','-r','--name-only','4d41fa6','--','src/data'],{encoding:'utf8'});assert.equal(paths.status,0);

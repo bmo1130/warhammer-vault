@@ -1,0 +1,58 @@
+{
+  "format": "independent-ultra-entities-website-observation-v1",
+  "observedAt": "2026-10-09T12:21:24.255Z",
+  "url": "https://twwstats.com/unitscards?compare=1&units=f%3D0%26k%3Dwh_main_emp_art_great_cannon%26m%26r%3D0%26v%3D4512102377651127604&units=f%3D0%26k%3Dwh2_dlc11_cst_art_queen_bess%26m%26r%3D0%26v%3D4512102377651127604&units=f%3D0%26k%3Dwh2_dlc15_grn_veh_snotling_pump_wagon_0%26m%26r%3D0%26v%3D4512102377651127604&units=f%3D0%26k%3Dwh2_dlc09_tmb_veh_skeleton_archer_chariot_0%26m%26r%3D0%26v%3D4512102377651127604&units=f%3D0%26k%3Dwh3_dlc25_dwf_art_goblin_hewer%26m%26r%3D0%26v%3D4512102377651127604",
+  "gameVersion": "9.0.0",
+  "gameExecuted": false,
+  "unitSize": "ULTRA",
+  "rank": 0,
+  "fatigue": "Fresh",
+  "comparisonMode": "No Comparison",
+  "kind": "WEBSITE_DERIVED_CARD_NOT_GAME_UI",
+  "cards": [
+    {
+      "mainKey": "wh_main_emp_art_great_cannon",
+      "count": 4,
+      "totalHealth": 4356,
+      "url": "https://twwstats.com/unitscards?compare=1&units=f%3D0%26k%3Dwh_main_emp_art_great_cannon%26m%26r%3D0%26v%3D4512102377651127604&units=f%3D0%26k%3Dwh2_dlc11_cst_art_queen_bess%26m%26r%3D0%26v%3D4512102377651127604&units=f%3D0%26k%3Dwh2_dlc15_grn_veh_snotling_pump_wagon_0%26m%26r%3D0%26v%3D4512102377651127604&units=f%3D0%26k%3Dwh2_dlc09_tmb_veh_skeleton_archer_chariot_0%26m%26r%3D0%26v%3D4512102377651127604&units=f%3D0%26k%3Dwh3_dlc25_dwf_art_goblin_hewer%26m%26r%3D0%26v%3D4512102377651127604",
+      "rankLabel": "Rank 0"
+    },
+    {
+      "mainKey": "wh2_dlc11_cst_art_queen_bess",
+      "count": 1,
+      "totalHealth": 7392,
+      "url": "https://twwstats.com/unitscards?compare=1&units=f%3D0%26k%3Dwh_main_emp_art_great_cannon%26m%26r%3D0%26v%3D4512102377651127604&units=f%3D0%26k%3Dwh2_dlc11_cst_art_queen_bess%26m%26r%3D0%26v%3D4512102377651127604&units=f%3D0%26k%3Dwh2_dlc15_grn_veh_snotling_pump_wagon_0%26m%26r%3D0%26v%3D4512102377651127604&units=f%3D0%26k%3Dwh2_dlc09_tmb_veh_skeleton_archer_chariot_0%26m%26r%3D0%26v%3D4512102377651127604&units=f%3D0%26k%3Dwh3_dlc25_dwf_art_goblin_hewer%26m%26r%3D0%26v%3D4512102377651127604",
+      "rankLabel": "RoR; no Rank 0 label"
+    },
+    {
+      "mainKey": "wh2_dlc15_grn_veh_snotling_pump_wagon_0",
+      "count": 12,
+      "totalHealth": 5088,
+      "url": "https://twwstats.com/unitscards?compare=1&units=f%3D0%26k%3Dwh_main_emp_art_great_cannon%26m%26r%3D0%26v%3D4512102377651127604&units=f%3D0%26k%3Dwh2_dlc11_cst_art_queen_bess%26m%26r%3D0%26v%3D4512102377651127604&units=f%3D0%26k%3Dwh2_dlc15_grn_veh_snotling_pump_wagon_0%26m%26r%3D0%26v%3D4512102377651127604&units=f%3D0%26k%3Dwh2_dlc09_tmb_veh_skeleton_archer_chariot_0%26m%26r%3D0%26v%3D4512102377651127604&units=f%3D0%26k%3Dwh3_dlc25_dwf_art_goblin_hewer%26m%26r%3D0%26v%3D4512102377651127604",
+      "rankLabel": "Rank 0"
+    },
+    {
+      "mainKey": "wh2_dlc09_tmb_veh_skeleton_archer_chariot_0",
+      "count": 12,
+      "totalHealth": 7032,
+      "url": "https://twwstats.com/unitscards?compare=1&units=f%3D0%26k%3Dwh_main_emp_art_great_cannon%26m%26r%3D0%26v%3D4512102377651127604&units=f%3D0%26k%3Dwh2_dlc11_cst_art_queen_bess%26m%26r%3D0%26v%3D4512102377651127604&units=f%3D0%26k%3Dwh2_dlc15_grn_veh_snotling_pump_wagon_0%26m%26r%3D0%26v%3D4512102377651127604&units=f%3D0%26k%3Dwh2_dlc09_tmb_veh_skeleton_archer_chariot_0%26m%26r%3D0%26v%3D4512102377651127604&units=f%3D0%26k%3Dwh3_dlc25_dwf_art_goblin_hewer%26m%26r%3D0%26v%3D4512102377651127604",
+      "rankLabel": "Rank 0"
+    },
+    {
+      "mainKey": "wh3_dlc25_dwf_art_goblin_hewer",
+      "count": 4,
+      "totalHealth": 6420,
+      "url": "https://twwstats.com/unitscards?compare=1&units=f%3D0%26k%3Dwh_main_emp_art_great_cannon%26m%26r%3D0%26v%3D4512102377651127604&units=f%3D0%26k%3Dwh2_dlc11_cst_art_queen_bess%26m%26r%3D0%26v%3D4512102377651127604&units=f%3D0%26k%3Dwh2_dlc15_grn_veh_snotling_pump_wagon_0%26m%26r%3D0%26v%3D4512102377651127604&units=f%3D0%26k%3Dwh2_dlc09_tmb_veh_skeleton_archer_chariot_0%26m%26r%3D0%26v%3D4512102377651127604&units=f%3D0%26k%3Dwh3_dlc25_dwf_art_goblin_hewer%26m%26r%3D0%26v%3D4512102377651127604",
+      "rankLabel": "Rank 0"
+    },
+    {
+      "mainKey": "wh_dlc05_wef_cav_wild_riders_0",
+      "count": 60,
+      "totalHealth": 6900,
+      "url": "https://twwstats.com/unitscards?units=f%3D0%26k%3Dwh_dlc05_wef_cav_wild_riders_0%26m%26r%3D0%26v%3D4512102377651127604",
+      "rankLabel": "Rank 0",
+      "comparisonMode": "Compare to First",
+      "purpose": "Conflicting mounted cardinality; not promoted"
+    }
+  ]
+}

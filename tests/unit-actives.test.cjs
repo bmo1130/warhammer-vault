@@ -38,7 +38,7 @@ test('all existing Unit fields and five original lance lists survive exact overl
   if(b.gameVersion==='sample'){assert.deepEqual(u,b);assert.equal(unitActiveAdmission(u),undefined);}
  }
  assert.equal(production.filter(u=>u.attributes!==undefined).length,1107);assert.equal(production.filter(u=>u.passiveAbilities!==undefined).length,1105);
- assert.equal(production.filter(u=>u.entities.count!==undefined).length,1071);assert.equal(production.filter(u=>u.entities.totalHealth!==undefined).length,986);assert.equal(production.filter(u=>u.movement.speed!==undefined).length,1099);
+ assert.equal(production.filter(u=>u.entities.count!==undefined).length,1097);assert.equal(production.filter(u=>u.entities.totalHealth!==undefined).length,1026);assert.equal(production.filter(u=>u.movement.speed!==undefined).length,1099);
  for(const k of ['physical','missile','spell','fire','ward'])assert.equal(production.filter(u=>u.defense.resistances?.[k]!==undefined).length,1110);
  assert.equal(game.listFactions().filter(f=>game.getRosterCoverage(f.id)?.status==='ROSTER COMPLETE').length,23);
  assert.deepEqual(validateUnits(game.listUnits(),game.listFactions().map(f=>f.id)),[]);

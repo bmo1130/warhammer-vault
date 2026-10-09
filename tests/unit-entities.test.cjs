@@ -36,9 +36,9 @@ const expected={
 
 test('all thirteen previously verified HP values regress exactly inside expanded empirical Ultra coverage',()=>{
   assert.equal(production.length,1110);
-  assert.equal(production.filter(u=>u.entities.count!==undefined).length,1071);
-  assert.equal(production.filter(u=>u.entities.count===undefined).length,39);
-  assert.equal(production.filter(u=>u.entities.totalHealth!==undefined).length,986);
+  assert.equal(production.filter(u=>u.entities.count!==undefined).length,1097);
+  assert.equal(production.filter(u=>u.entities.count===undefined).length,13);
+  assert.equal(production.filter(u=>u.entities.totalHealth!==undefined).length,1026);
   assert.equal(production.filter(u=>u.entities.healthPerEntity!==undefined).length,0);
   assert.deepEqual(review.summary.combined,{complete:13,partial:0,unknown:1097});
   assert.equal(projection.admissions.length,Object.keys(expected).length);

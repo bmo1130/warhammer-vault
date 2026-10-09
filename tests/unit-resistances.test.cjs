@@ -104,7 +104,7 @@ test('resistance overlay is exactly reversible and preserves every previous fiel
     assert.deepEqual(withoutUnitResistances(applyUnitResistances(raw)),raw);
     if(raw.gameVersion==='sample')assert.equal(unitResistanceAdmission(after),undefined);
   }
-  assert.equal(production.filter(u=>u.entities.count!==undefined).length,1071);assert.equal(production.filter(u=>u.entities.totalHealth!==undefined).length,986);
+  assert.equal(production.filter(u=>u.entities.count!==undefined).length,1097);assert.equal(production.filter(u=>u.entities.totalHealth!==undefined).length,1026);
   assert.equal(production.filter(u=>u.movement.speed!==undefined).length,1099);assert.equal(production.filter(u=>u.attributes!==undefined).length,1107);
   assert.equal(production.filter(u=>u.passiveAbilities!==undefined).length,1105);
   assert.equal(production.filter(u=>/[가-힣]/.test(u.name)).length,1110);
