@@ -1,3 +1,4 @@
+const {withoutUnitMissiles}=require('../.test-build/src/repositories/unitMissiles.js');
 const {withoutUnitResistances}=require('../.test-build/src/repositories/unitResistances.js');
 const {withoutUnitEntities}=require('../.test-build/src/repositories/unitEntities.js');
 const {withoutUnitSpeed}=require('../.test-build/src/repositories/unitSpeed.js');
@@ -33,7 +34,7 @@ test('attribute collections promote with exact provenance; all other Unit fields
   assert.equal(review.summary.rawKeys,58);assert.equal(review.summary.groups,1038);assert.equal(review.summary.junctions,3249);
   for(const baseline of raw){
     const current=game.getUnit(baseline.id);
-    assert.deepEqual(withoutUnitSpeed(withoutUnitEntities(withoutUnitPassives(withoutUnitAttributes(withoutUnitLocalisation(withoutUnitResistances(current)))))),baseline,baseline.id);
+    assert.deepEqual(withoutUnitSpeed(withoutUnitEntities(withoutUnitPassives(withoutUnitAttributes(withoutUnitLocalisation(withoutUnitResistances(withoutUnitMissiles(current))))))),baseline,baseline.id);
     if(baseline.gameVersion==='sample'){assert.deepEqual(current,baseline);continue;}
     assert(/[가-힣]/.test(current.name));
     const admission=review.admissions.find(a=>a.id===current.id);

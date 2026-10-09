@@ -1,3 +1,4 @@
+const {withoutUnitMissiles}=require('../.test-build/src/repositories/unitMissiles.js');
 const {test}=require('node:test');
 const assert=require('node:assert/strict');
 const fs=require('node:fs');
@@ -96,7 +97,7 @@ test('passive and timed active resistance/weakness phases are recorded separatel
 test('resistance overlay is exactly reversible and preserves every previous field and sample',()=>{
   for(const raw of read('src/data/units.json')){
     const before=applyUnitSpeed(applyUnitEntities(applyUnitPassives(applyUnitAttributes(localiseUnit(raw))))),after=game.getUnit(raw.id);
-    assert.deepEqual(withoutUnitResistances(after),before,raw.id);
+    assert.deepEqual(withoutUnitResistances(withoutUnitMissiles(after)),before,raw.id);
     assert.deepEqual(withoutUnitResistances(applyUnitResistances(raw)),raw);
     if(raw.gameVersion==='sample')assert.equal(unitResistanceAdmission(after),undefined);
   }

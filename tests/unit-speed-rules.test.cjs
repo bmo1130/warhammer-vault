@@ -1,3 +1,4 @@
+const {withoutUnitMissiles}=require('../.test-build/src/repositories/unitMissiles.js');
 const {withoutUnitResistances}=require('../.test-build/src/repositories/unitResistances.js');
 const {test}=require('node:test');
 const assert=require('node:assert/strict');
@@ -88,7 +89,7 @@ test('fresh artillery source restores 34 missing chains with unchanged snapshot 
 test('speed-only overlay preserves every other Unit field, HP/count, names, rosters and immutable data',()=>{
   for(const raw of read('src/data/units.json')){
     const before=applyUnitEntities(applyUnitPassives(applyUnitAttributes(localiseUnit(raw)))),after=game.getUnit(raw.id);
-    assert.deepEqual(withoutUnitSpeed(withoutUnitResistances(after)),before,raw.id);
+    assert.deepEqual(withoutUnitSpeed(withoutUnitResistances(withoutUnitMissiles(after))),before,raw.id);
     assert.deepEqual(withoutUnitSpeed(applyUnitSpeed(raw)),raw);
     if(raw.gameVersion==='sample')assert.equal(unitSpeedAdmission(after),undefined);
   }

@@ -1,0 +1,726 @@
+{
+  "format": "ca-missile-reference-v1",
+  "liveGameReadings": 0,
+  "baseline": [
+    {
+      "id": "ca_unit_wh2_dlc12_skv_inf_ratling_gun_0",
+      "name": "Ratling Guns",
+      "expected": {
+        "baseDamage": 2,
+        "armorPiercingDamage": 6,
+        "range": 145,
+        "baseTime": 5
+      },
+      "originalMissile": {
+        "projectile": {
+          "baseDamage": 2,
+          "armorPiercingDamage": 6,
+          "bonusVsLarge": 0,
+          "bonusVsInfantry": 0,
+          "shotsPerVolley": 18,
+          "penetration": {
+            "resistanceBudget": 0
+          }
+        },
+        "range": 145,
+        "accuracy": {
+          "calibrationDistance": 70,
+          "calibrationArea": 2.7
+        },
+        "reload": {
+          "baseTime": 5
+        }
+      },
+      "provenance": {
+        "source": "CA base DB · WH3 9.0.2.0 · reviewed field subset · tools/wh3-importer/promotion/PARTIAL_REVIEW.md#sample-16",
+        "publicStats": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; public fields: land_units, armour/shield, melee_weapons and verified projectile/explosion rows; pinned PARTIAL source SHA256 9f4dd0f3890d6d07804ff6e075e02c346178f316b0c5d388e0e82c4e935a2b65; original generated/wh3/refresh-9.0.2/pilot/units/sample-16.result.json SHA256 d3bbcd833812879adc9fa99f6ddce6af23741eb120c4e287b5111ae479e3ae87; omissions reviewed separately; incomplete optional ID groups omitted, not absent in-game",
+        "kind": "EXISTING_REVIEWED_CA_STATIC_ADMISSION",
+        "liveGameReading": false,
+        "confidence": "EXACT_RAW_REFERENCE_NOT_INDEPENDENT_GAME_UI"
+      }
+    },
+    {
+      "id": "ca_unit_wh_main_brt_inf_peasant_bowmen",
+      "name": "Peasant Bowmen",
+      "expected": {
+        "baseDamage": 16,
+        "armorPiercingDamage": 3,
+        "range": 160,
+        "baseTime": 11
+      },
+      "originalMissile": {
+        "projectile": {
+          "baseDamage": 16,
+          "armorPiercingDamage": 3,
+          "bonusVsLarge": 0,
+          "bonusVsInfantry": 0,
+          "shotsPerVolley": 1,
+          "penetration": {
+            "resistanceBudget": 0
+          }
+        },
+        "range": 160,
+        "accuracy": {
+          "calibrationDistance": 120,
+          "calibrationArea": 5.9
+        },
+        "reload": {
+          "baseTime": 11
+        }
+      },
+      "provenance": {
+        "source": "CA base DB · WH3 9.0.2.0 · reviewed expansion-batch-02 · tools/wh3-importer/expansion-batch-02/EXPANSION_BATCH.md#expansion-02-07",
+        "publicStats": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; public fields: land_units, armour/shield, melee_weapons and verified projectile/explosion rows; reviewed source SHA256 27dc903fc231c84f4e9a7bb197ff99a3fc104c84756b8748b597d2ec7a3aadd6; original candidate SHA256 0620df522c8b1895782236914b51a7a608050b757162289cf4717280909c5715; compact review SHA256 58eedc410ca9243b2f0987f62a6a63a00397764ce4c9f82a7aaed1bc25fbb185",
+        "kind": "EXISTING_REVIEWED_CA_STATIC_ADMISSION",
+        "liveGameReading": false,
+        "confidence": "EXACT_RAW_REFERENCE_NOT_INDEPENDENT_GAME_UI"
+      }
+    },
+    {
+      "id": "ca_unit_wh_dlc07_brt_inf_peasant_bowmen_1",
+      "name": "Peasant Bowmen (Fire Arrows)",
+      "expected": {
+        "baseDamage": 21,
+        "armorPiercingDamage": 2,
+        "range": 160,
+        "baseTime": 11
+      },
+      "originalMissile": {
+        "projectile": {
+          "baseDamage": 21,
+          "armorPiercingDamage": 2,
+          "bonusVsLarge": 0,
+          "bonusVsInfantry": 0,
+          "shotsPerVolley": 1,
+          "penetration": {
+            "resistanceBudget": 0
+          }
+        },
+        "range": 160,
+        "accuracy": {
+          "calibrationDistance": 120,
+          "calibrationArea": 5.9
+        },
+        "reload": {
+          "baseTime": 11
+        }
+      },
+      "provenance": {
+        "source": "CA base DB · WH3 9.0.2.0 · reviewed expansion-batch-02 · tools/wh3-importer/expansion-batch-02/EXPANSION_BATCH.md#expansion-02-08",
+        "publicStats": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; public fields: land_units, armour/shield, melee_weapons and verified projectile/explosion rows; reviewed source SHA256 27dc903fc231c84f4e9a7bb197ff99a3fc104c84756b8748b597d2ec7a3aadd6; original candidate SHA256 025bcd2959d6e709d322ba32de75d15a1ea147f34eb4531f7ea33cfec5e1bac3; compact review SHA256 58eedc410ca9243b2f0987f62a6a63a00397764ce4c9f82a7aaed1bc25fbb185",
+        "kind": "EXISTING_REVIEWED_CA_STATIC_ADMISSION",
+        "liveGameReading": false,
+        "confidence": "EXACT_RAW_REFERENCE_NOT_INDEPENDENT_GAME_UI"
+      }
+    },
+    {
+      "id": "ca_unit_wh_dlc07_brt_inf_peasant_bowmen_2",
+      "name": "Peasant Bowmen (Pox Arrows)",
+      "expected": {
+        "baseDamage": 16,
+        "armorPiercingDamage": 3,
+        "range": 160,
+        "baseTime": 11
+      },
+      "originalMissile": {
+        "projectile": {
+          "baseDamage": 16,
+          "armorPiercingDamage": 3,
+          "bonusVsLarge": 0,
+          "bonusVsInfantry": 0,
+          "shotsPerVolley": 1,
+          "penetration": {
+            "resistanceBudget": 0
+          }
+        },
+        "range": 160,
+        "accuracy": {
+          "calibrationDistance": 120,
+          "calibrationArea": 5.9
+        },
+        "reload": {
+          "baseTime": 11
+        }
+      },
+      "provenance": {
+        "source": "CA base DB · WH3 9.0.2.0 · reviewed expansion-batch-02 · tools/wh3-importer/expansion-batch-02/EXPANSION_BATCH.md#expansion-02-09",
+        "publicStats": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; public fields: land_units, armour/shield, melee_weapons and verified projectile/explosion rows; reviewed source SHA256 27dc903fc231c84f4e9a7bb197ff99a3fc104c84756b8748b597d2ec7a3aadd6; original candidate SHA256 21c4a09113563f4cd61d2a388b04d22b0f7fcd022a2c68cf8058a04625fd36cc; compact review SHA256 58eedc410ca9243b2f0987f62a6a63a00397764ce4c9f82a7aaed1bc25fbb185",
+        "kind": "EXISTING_REVIEWED_CA_STATIC_ADMISSION",
+        "liveGameReading": false,
+        "confidence": "EXACT_RAW_REFERENCE_NOT_INDEPENDENT_GAME_UI"
+      }
+    },
+    {
+      "id": "ca_unit_wh_main_brt_cav_mounted_yeomen_1",
+      "name": "Mounted Yeomen Archers",
+      "expected": {
+        "baseDamage": 16,
+        "armorPiercingDamage": 3,
+        "range": 125,
+        "baseTime": 11
+      },
+      "originalMissile": {
+        "projectile": {
+          "baseDamage": 16,
+          "armorPiercingDamage": 3,
+          "bonusVsLarge": 0,
+          "bonusVsInfantry": 0,
+          "shotsPerVolley": 1,
+          "penetration": {
+            "resistanceBudget": 0
+          }
+        },
+        "range": 125,
+        "accuracy": {
+          "calibrationDistance": 90,
+          "calibrationArea": 4
+        },
+        "reload": {
+          "baseTime": 11
+        }
+      },
+      "provenance": {
+        "source": "CA base DB · WH3 9.0.2.0 · reviewed expansion-batch-02 · tools/wh3-importer/expansion-batch-02/EXPANSION_BATCH.md#expansion-02-12",
+        "publicStats": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; public fields: land_units, armour/shield, melee_weapons and verified projectile/explosion rows; reviewed source SHA256 27dc903fc231c84f4e9a7bb197ff99a3fc104c84756b8748b597d2ec7a3aadd6; original candidate SHA256 95a3628281d0b3b5ef4710498dd2f424ecf8c21997f55f830c06099c4cb0386a; compact review SHA256 58eedc410ca9243b2f0987f62a6a63a00397764ce4c9f82a7aaed1bc25fbb185",
+        "kind": "EXISTING_REVIEWED_CA_STATIC_ADMISSION",
+        "liveGameReading": false,
+        "confidence": "EXACT_RAW_REFERENCE_NOT_INDEPENDENT_GAME_UI"
+      }
+    },
+    {
+      "id": "ca_unit_wh_main_brt_art_field_trebuchet",
+      "name": "Field Trebuchets",
+      "expected": {
+        "baseDamage": 40,
+        "armorPiercingDamage": 145,
+        "range": 440,
+        "baseTime": 20
+      },
+      "originalMissile": {
+        "projectile": {
+          "baseDamage": 40,
+          "armorPiercingDamage": 145,
+          "bonusVsLarge": 0,
+          "bonusVsInfantry": 0,
+          "shotsPerVolley": 1,
+          "penetration": {
+            "resistanceBudget": 10,
+            "stopsAtEntitySize": "large"
+          }
+        },
+        "range": 440,
+        "explosion": {
+          "baseDamage": 50,
+          "armorPiercingDamage": 70,
+          "radius": 4
+        },
+        "accuracy": {
+          "calibrationDistance": 340,
+          "calibrationArea": 90
+        },
+        "reload": {
+          "baseTime": 20
+        }
+      },
+      "provenance": {
+        "source": "CA base DB · WH3 9.0.2.0 · reviewed expansion-batch-02 · tools/wh3-importer/expansion-batch-02/EXPANSION_BATCH.md#expansion-02-14",
+        "publicStats": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; public fields: land_units, armour/shield, melee_weapons and verified projectile/explosion rows; reviewed source SHA256 27dc903fc231c84f4e9a7bb197ff99a3fc104c84756b8748b597d2ec7a3aadd6; original candidate SHA256 50b70171db5cf94c6f512c7a4834a391e1c87551884df39b33548d5883192698; compact review SHA256 58eedc410ca9243b2f0987f62a6a63a00397764ce4c9f82a7aaed1bc25fbb185",
+        "kind": "EXISTING_REVIEWED_CA_STATIC_ADMISSION",
+        "liveGameReading": false,
+        "confidence": "EXACT_RAW_REFERENCE_NOT_INDEPENDENT_GAME_UI"
+      }
+    },
+    {
+      "id": "ca_unit_wh_dlc07_brt_art_blessed_field_trebuchet_0",
+      "name": "Blessed Field Trebuchets",
+      "expected": {
+        "baseDamage": 70,
+        "armorPiercingDamage": 270,
+        "range": 440,
+        "baseTime": 20
+      },
+      "originalMissile": {
+        "projectile": {
+          "baseDamage": 70,
+          "armorPiercingDamage": 270,
+          "bonusVsLarge": 0,
+          "bonusVsInfantry": 0,
+          "shotsPerVolley": 1,
+          "penetration": {
+            "resistanceBudget": 10,
+            "stopsAtEntitySize": "large"
+          }
+        },
+        "range": 440,
+        "explosion": {
+          "baseDamage": 60,
+          "armorPiercingDamage": 16,
+          "radius": 6
+        },
+        "accuracy": {
+          "calibrationDistance": 340,
+          "calibrationArea": 90
+        },
+        "reload": {
+          "baseTime": 20
+        }
+      },
+      "provenance": {
+        "source": "CA base DB · WH3 9.0.2.0 · reviewed expansion-batch-02 · tools/wh3-importer/expansion-batch-02/EXPANSION_BATCH.md#expansion-02-15",
+        "publicStats": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; public fields: land_units, armour/shield, melee_weapons and verified projectile/explosion rows; reviewed source SHA256 27dc903fc231c84f4e9a7bb197ff99a3fc104c84756b8748b597d2ec7a3aadd6; original candidate SHA256 173ed6e1dbd6c904fcd108b4709f5e5f61d9efb9d3176358a5e7a990e313364a; compact review SHA256 58eedc410ca9243b2f0987f62a6a63a00397764ce4c9f82a7aaed1bc25fbb185",
+        "kind": "EXISTING_REVIEWED_CA_STATIC_ADMISSION",
+        "liveGameReading": false,
+        "confidence": "EXACT_RAW_REFERENCE_NOT_INDEPENDENT_GAME_UI"
+      }
+    },
+    {
+      "id": "ca_unit_wh_main_emp_inf_crossbowmen",
+      "name": "Crossbowmen",
+      "expected": {
+        "baseDamage": 18,
+        "armorPiercingDamage": 6,
+        "range": 160,
+        "baseTime": 13
+      },
+      "originalMissile": {
+        "projectile": {
+          "baseDamage": 18,
+          "armorPiercingDamage": 6,
+          "bonusVsLarge": 0,
+          "bonusVsInfantry": 0,
+          "shotsPerVolley": 1,
+          "penetration": {
+            "resistanceBudget": 0
+          }
+        },
+        "range": 160,
+        "accuracy": {
+          "calibrationDistance": 120,
+          "calibrationArea": 5.1
+        },
+        "reload": {
+          "baseTime": 13
+        }
+      },
+      "provenance": {
+        "source": "CA base DB · WH3 9.0.2.0 · reviewed expansion-batch-02 · tools/wh3-importer/expansion-batch-02/EXPANSION_BATCH.md#expansion-02-17",
+        "publicStats": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; public fields: land_units, armour/shield, melee_weapons and verified projectile/explosion rows; reviewed source SHA256 27dc903fc231c84f4e9a7bb197ff99a3fc104c84756b8748b597d2ec7a3aadd6; original candidate SHA256 87b33150de39cb98596b1c1666eef1924954f5e36aaf787ca6e8485597ec7341; compact review SHA256 58eedc410ca9243b2f0987f62a6a63a00397764ce4c9f82a7aaed1bc25fbb185",
+        "kind": "EXISTING_REVIEWED_CA_STATIC_ADMISSION",
+        "liveGameReading": false,
+        "confidence": "EXACT_RAW_REFERENCE_NOT_INDEPENDENT_GAME_UI"
+      }
+    },
+    {
+      "id": "ca_unit_wh_main_emp_cav_outriders_0",
+      "name": "Outriders",
+      "expected": {
+        "baseDamage": 2,
+        "armorPiercingDamage": 6,
+        "range": 115,
+        "baseTime": 13
+      },
+      "originalMissile": {
+        "projectile": {
+          "baseDamage": 2,
+          "armorPiercingDamage": 6,
+          "bonusVsLarge": 0,
+          "bonusVsInfantry": 0,
+          "shotsPerVolley": 6,
+          "penetration": {
+            "resistanceBudget": 0
+          }
+        },
+        "range": 115,
+        "accuracy": {
+          "calibrationDistance": 75,
+          "calibrationArea": 5
+        },
+        "reload": {
+          "baseTime": 13
+        }
+      },
+      "provenance": {
+        "source": "CA base DB · WH3 9.0.2.0 · reviewed expansion-batch-02 · tools/wh3-importer/expansion-batch-02/EXPANSION_BATCH.md#expansion-02-18",
+        "publicStats": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; public fields: land_units, armour/shield, melee_weapons and verified projectile/explosion rows; reviewed source SHA256 27dc903fc231c84f4e9a7bb197ff99a3fc104c84756b8748b597d2ec7a3aadd6; original candidate SHA256 ef66db2d76029a8ee6cfdef1b2bba12a9aac28bf4d643e53d73cca04407ba535; compact review SHA256 58eedc410ca9243b2f0987f62a6a63a00397764ce4c9f82a7aaed1bc25fbb185",
+        "kind": "EXISTING_REVIEWED_CA_STATIC_ADMISSION",
+        "liveGameReading": false,
+        "confidence": "EXACT_RAW_REFERENCE_NOT_INDEPENDENT_GAME_UI"
+      }
+    },
+    {
+      "id": "ca_unit_wh2_dlc12_skv_inf_warplock_jezzails_0",
+      "name": "Warplock Jezzails",
+      "expected": {
+        "baseDamage": 6,
+        "armorPiercingDamage": 30,
+        "range": 275,
+        "baseTime": 12
+      },
+      "originalMissile": {
+        "projectile": {
+          "baseDamage": 6,
+          "armorPiercingDamage": 30,
+          "bonusVsLarge": 0,
+          "bonusVsInfantry": 0,
+          "shotsPerVolley": 1,
+          "penetration": {
+            "resistanceBudget": 1,
+            "stopsAtEntitySize": "medium"
+          }
+        },
+        "range": 275,
+        "accuracy": {
+          "calibrationDistance": 150,
+          "calibrationArea": 0.6
+        },
+        "reload": {
+          "baseTime": 12
+        }
+      },
+      "provenance": {
+        "source": "CA base DB · WH3 9.0.2.0 · reviewed expansion-batch-03 · tools/wh3-importer/expansion-batch-03/EXPANSION_BATCH.md#expansion-03-12",
+        "publicStats": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; public fields: land_units, armour/shield, melee_weapons and verified projectile/explosion rows; reviewed source SHA256 ae5df25d0a9787cf0e2da4a563ba7bf838ace9576b0ae08999841c4850547eb5; original candidate SHA256 4da9292dd7850c99685802c922fff238dc1b5e7a00b231b8249b6c99c8ba8f7b; compact review SHA256 a5e13054e95b206476fe2cdf10b91ec29b0799575b7a925cd1d2f856134d5521",
+        "kind": "EXISTING_REVIEWED_CA_STATIC_ADMISSION",
+        "liveGameReading": false,
+        "confidence": "EXACT_RAW_REFERENCE_NOT_INDEPENDENT_GAME_UI"
+      }
+    },
+    {
+      "id": "ca_unit_wh2_main_skv_inf_skavenslave_slingers_0",
+      "name": "Skavenslave Slingers",
+      "expected": {
+        "baseDamage": 7,
+        "armorPiercingDamage": 1,
+        "range": 120,
+        "baseTime": 9
+      },
+      "originalMissile": {
+        "projectile": {
+          "baseDamage": 7,
+          "armorPiercingDamage": 1,
+          "bonusVsLarge": 0,
+          "bonusVsInfantry": 0,
+          "shotsPerVolley": 1,
+          "penetration": {
+            "resistanceBudget": 0
+          }
+        },
+        "range": 120,
+        "accuracy": {
+          "calibrationDistance": 85,
+          "calibrationArea": 4.8
+        },
+        "reload": {
+          "baseTime": 9
+        }
+      },
+      "provenance": {
+        "source": "CA base DB · WH3 9.0.2.0 · reviewed expansion-batch-03 · tools/wh3-importer/expansion-batch-03/EXPANSION_BATCH.md#expansion-03-16",
+        "publicStats": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; public fields: land_units, armour/shield, melee_weapons and verified projectile/explosion rows; reviewed source SHA256 ae5df25d0a9787cf0e2da4a563ba7bf838ace9576b0ae08999841c4850547eb5; original candidate SHA256 5cd4f6b444914f8821168869674dae9fda67eeced73ef2ee5f306563493b1d10; compact review SHA256 a5e13054e95b206476fe2cdf10b91ec29b0799575b7a925cd1d2f856134d5521",
+        "kind": "EXISTING_REVIEWED_CA_STATIC_ADMISSION",
+        "liveGameReading": false,
+        "confidence": "EXACT_RAW_REFERENCE_NOT_INDEPENDENT_GAME_UI"
+      }
+    },
+    {
+      "id": "ca_unit_wh2_main_skv_art_plagueclaw_catapult",
+      "name": "Plagueclaw Catapults",
+      "expected": {
+        "baseDamage": 45,
+        "armorPiercingDamage": 105,
+        "range": 400,
+        "baseTime": 18
+      },
+      "originalMissile": {
+        "projectile": {
+          "baseDamage": 45,
+          "armorPiercingDamage": 105,
+          "bonusVsLarge": 0,
+          "bonusVsInfantry": 0,
+          "shotsPerVolley": 1,
+          "penetration": {
+            "resistanceBudget": 10,
+            "stopsAtEntitySize": "large"
+          }
+        },
+        "range": 400,
+        "explosion": {
+          "baseDamage": 35,
+          "armorPiercingDamage": 70,
+          "radius": 5
+        },
+        "accuracy": {
+          "calibrationDistance": 600,
+          "calibrationArea": 150
+        },
+        "reload": {
+          "baseTime": 18
+        }
+      },
+      "provenance": {
+        "source": "CA base DB · WH3 9.0.2.0 · reviewed expansion-batch-03 · tools/wh3-importer/expansion-batch-03/EXPANSION_BATCH.md#expansion-03-18",
+        "publicStats": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; public fields: land_units, armour/shield, melee_weapons and verified projectile/explosion rows; reviewed source SHA256 ae5df25d0a9787cf0e2da4a563ba7bf838ace9576b0ae08999841c4850547eb5; original candidate SHA256 7c1492187b831e22b8bc1ea8b954f888f5f6be59679220819ce193814d318232; compact review SHA256 a5e13054e95b206476fe2cdf10b91ec29b0799575b7a925cd1d2f856134d5521",
+        "kind": "EXISTING_REVIEWED_CA_STATIC_ADMISSION",
+        "liveGameReading": false,
+        "confidence": "EXACT_RAW_REFERENCE_NOT_INDEPENDENT_GAME_UI"
+      }
+    },
+    {
+      "id": "ca_unit_wh2_main_skv_art_warp_lightning_cannon",
+      "name": "Warp Lightning Cannons",
+      "expected": {
+        "baseDamage": 80,
+        "armorPiercingDamage": 260,
+        "range": 430,
+        "baseTime": 21
+      },
+      "originalMissile": {
+        "projectile": {
+          "baseDamage": 80,
+          "armorPiercingDamage": 260,
+          "bonusVsLarge": 70,
+          "bonusVsInfantry": 0,
+          "shotsPerVolley": 1,
+          "penetration": {
+            "resistanceBudget": 9,
+            "stopsAtEntitySize": "very_large"
+          }
+        },
+        "range": 430,
+        "explosion": {
+          "baseDamage": 5,
+          "armorPiercingDamage": 20,
+          "radius": 2
+        },
+        "accuracy": {
+          "calibrationDistance": 350,
+          "calibrationArea": 9
+        },
+        "reload": {
+          "baseTime": 21
+        }
+      },
+      "provenance": {
+        "source": "CA base DB · WH3 9.0.2.0 · reviewed expansion-batch-03 · tools/wh3-importer/expansion-batch-03/EXPANSION_BATCH.md#expansion-03-19",
+        "publicStats": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; public fields: land_units, armour/shield, melee_weapons and verified projectile/explosion rows; reviewed source SHA256 ae5df25d0a9787cf0e2da4a563ba7bf838ace9576b0ae08999841c4850547eb5; original candidate SHA256 74a56e0d0c3a619e2aa29a7e80eef9bcebe78f17087885839bf2440491e8554b; compact review SHA256 a5e13054e95b206476fe2cdf10b91ec29b0799575b7a925cd1d2f856134d5521",
+        "kind": "EXISTING_REVIEWED_CA_STATIC_ADMISSION",
+        "liveGameReading": false,
+        "confidence": "EXACT_RAW_REFERENCE_NOT_INDEPENDENT_GAME_UI"
+      }
+    },
+    {
+      "id": "ca_unit_wh2_dlc09_tmb_mon_ushabti_1",
+      "name": "Ushabti (Great Bows)",
+      "expected": {
+        "baseDamage": 18,
+        "armorPiercingDamage": 104,
+        "range": 255,
+        "baseTime": 11
+      },
+      "originalMissile": {
+        "projectile": {
+          "baseDamage": 18,
+          "armorPiercingDamage": 104,
+          "bonusVsLarge": 0,
+          "bonusVsInfantry": 0,
+          "shotsPerVolley": 1,
+          "penetration": {
+            "resistanceBudget": 2,
+            "stopsAtEntitySize": "small"
+          }
+        },
+        "range": 255,
+        "accuracy": {
+          "calibrationDistance": 212,
+          "calibrationArea": 6
+        },
+        "reload": {
+          "baseTime": 11
+        }
+      },
+      "provenance": {
+        "source": "CA base DB · WH3 9.0.2.0 · reviewed expansion-batch-03 · tools/wh3-importer/expansion-batch-03/EXPANSION_BATCH.md#expansion-03-21",
+        "publicStats": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; public fields: land_units, armour/shield, melee_weapons and verified projectile/explosion rows; reviewed source SHA256 ae5df25d0a9787cf0e2da4a563ba7bf838ace9576b0ae08999841c4850547eb5; original candidate SHA256 d336c3daa986861468f6a67df2a606686bd8dfc3e9a87858e36eac18b732925e; compact review SHA256 a5e13054e95b206476fe2cdf10b91ec29b0799575b7a925cd1d2f856134d5521",
+        "kind": "EXISTING_REVIEWED_CA_STATIC_ADMISSION",
+        "liveGameReading": false,
+        "confidence": "EXACT_RAW_REFERENCE_NOT_INDEPENDENT_GAME_UI"
+      }
+    },
+    {
+      "id": "ca_unit_wh2_dlc12_lzd_mon_ancient_salamander_0",
+      "name": "Ancient Salamander",
+      "expected": {
+        "baseDamage": 70,
+        "armorPiercingDamage": 265,
+        "range": 160,
+        "baseTime": 12
+      },
+      "originalMissile": {
+        "projectile": {
+          "baseDamage": 70,
+          "armorPiercingDamage": 265,
+          "bonusVsLarge": 0,
+          "bonusVsInfantry": 0,
+          "shotsPerVolley": 1,
+          "penetration": {
+            "resistanceBudget": 2,
+            "stopsAtEntitySize": "small"
+          }
+        },
+        "range": 160,
+        "explosion": {
+          "baseDamage": 85,
+          "armorPiercingDamage": 34,
+          "radius": 7
+        },
+        "accuracy": {
+          "calibrationDistance": 120,
+          "calibrationArea": 2.3
+        },
+        "reload": {
+          "baseTime": 12
+        }
+      },
+      "provenance": {
+        "source": "CA base DB · WH3 9.0.2.0 · reviewed expansion-batch-04 · tools/wh3-importer/expansion-batch-04/EXPANSION_BATCH.md#expansion-04-11",
+        "publicStats": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; public fields: land_units, armour/shield, melee_weapons and verified projectile/explosion rows; reviewed source SHA256 96a6d2c5c8ad235561a542cbb2e138eb853de061aa4ebaaa1e49e149026aa55a; original candidate SHA256 d62920e95c78a8b44ebcef56e25e149512e7b10fc9a1ac73872d4f1c3f8d78ff; compact review SHA256 c4566b086c2541fc2e1a0402f3ea046ce75d384b8a86f74e47a82e3ec4040da2",
+        "kind": "EXISTING_REVIEWED_CA_STATIC_ADMISSION",
+        "liveGameReading": false,
+        "confidence": "EXACT_RAW_REFERENCE_NOT_INDEPENDENT_GAME_UI"
+      }
+    },
+    {
+      "id": "ca_unit_wh2_dlc11_cst_inf_deck_gunners_0",
+      "name": "Deck Gunners",
+      "expected": {
+        "baseDamage": 8,
+        "armorPiercingDamage": 39,
+        "range": 245,
+        "baseTime": 11
+      },
+      "originalMissile": {
+        "projectile": {
+          "baseDamage": 8,
+          "armorPiercingDamage": 39,
+          "bonusVsLarge": 0,
+          "bonusVsInfantry": 0,
+          "shotsPerVolley": 1,
+          "penetration": {
+            "resistanceBudget": 2,
+            "stopsAtEntitySize": "small"
+          }
+        },
+        "range": 245,
+        "accuracy": {
+          "calibrationDistance": 145,
+          "calibrationArea": 1.8
+        },
+        "reload": {
+          "baseTime": 11
+        }
+      },
+      "provenance": {
+        "source": "CA base DB · WH3 9.0.2.0 · reviewed expansion-batch-04 · tools/wh3-importer/expansion-batch-04/EXPANSION_BATCH.md#expansion-04-19",
+        "publicStats": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; public fields: land_units, armour/shield, melee_weapons and verified projectile/explosion rows; reviewed source SHA256 96a6d2c5c8ad235561a542cbb2e138eb853de061aa4ebaaa1e49e149026aa55a; original candidate SHA256 853e5bfe345a44816a93b206523fc1ed0094129fc531f7d5b56357d097c6c290; compact review SHA256 c4566b086c2541fc2e1a0402f3ea046ce75d384b8a86f74e47a82e3ec4040da2",
+        "kind": "EXISTING_REVIEWED_CA_STATIC_ADMISSION",
+        "liveGameReading": false,
+        "confidence": "EXACT_RAW_REFERENCE_NOT_INDEPENDENT_GAME_UI"
+      }
+    },
+    {
+      "id": "ca_unit_wh2_dlc11_cst_inf_zombie_gunnery_mob_1",
+      "name": "Zombie Pirate Gunnery Mob (Handgunners)",
+      "expected": {
+        "baseDamage": 8,
+        "armorPiercingDamage": 20,
+        "range": 145,
+        "baseTime": 13
+      },
+      "originalMissile": {
+        "projectile": {
+          "baseDamage": 8,
+          "armorPiercingDamage": 20,
+          "bonusVsLarge": 0,
+          "bonusVsInfantry": 0,
+          "shotsPerVolley": 1,
+          "penetration": {
+            "resistanceBudget": 0
+          }
+        },
+        "range": 145,
+        "accuracy": {
+          "calibrationDistance": 90,
+          "calibrationArea": 3.5
+        },
+        "reload": {
+          "baseTime": 13
+        }
+      },
+      "provenance": {
+        "source": "CA base DB · WH3 9.0.2.0 · reviewed expansion-batch-04 · tools/wh3-importer/expansion-batch-04/EXPANSION_BATCH.md#expansion-04-20",
+        "publicStats": "Current CA base DB via verified raw trace; no runtime/campaign effects applied; public fields: land_units, armour/shield, melee_weapons and verified projectile/explosion rows; reviewed source SHA256 96a6d2c5c8ad235561a542cbb2e138eb853de061aa4ebaaa1e49e149026aa55a; original candidate SHA256 259384eef56c2e4f026a54a051d7ebcba9020010d41c3cb73976ffb5a88f66d8; compact review SHA256 c4566b086c2541fc2e1a0402f3ea046ce75d384b8a86f74e47a82e3ec4040da2",
+        "kind": "EXISTING_REVIEWED_CA_STATIC_ADMISSION",
+        "liveGameReading": false,
+        "confidence": "EXACT_RAW_REFERENCE_NOT_INDEPENDENT_GAME_UI"
+      }
+    }
+  ],
+  "representatives": [
+    {
+      "category": "BOW",
+      "id": "ca_unit_wh2_main_hef_inf_archers_0"
+    },
+    {
+      "category": "CROSSBOW",
+      "id": "ca_unit_wh_main_emp_inf_crossbowmen"
+    },
+    {
+      "category": "GUN",
+      "id": "ca_unit_wh_main_emp_inf_handgunners"
+    },
+    {
+      "category": "MOUNTED_RANGED",
+      "id": "ca_unit_wh_main_brt_cav_mounted_yeomen_1"
+    },
+    {
+      "category": "THROWING_AXE",
+      "id": "ca_unit_wh_dlc08_nor_inf_marauder_hunters_0"
+    },
+    {
+      "category": "CANNON",
+      "id": "ca_unit_wh_main_dwf_art_cannon"
+    },
+    {
+      "category": "CATAPULT",
+      "id": "ca_unit_wh_main_dwf_art_grudge_thrower"
+    },
+    {
+      "category": "EXPLOSIVE_ARTILLERY",
+      "id": "ca_unit_wh_main_emp_art_helstorm_rocket_battery"
+    },
+    {
+      "category": "MULTISHOT",
+      "id": "ca_unit_wh2_dlc12_skv_inf_ratling_gun_0"
+    },
+    {
+      "category": "WAR_MACHINE",
+      "id": "ca_unit_wh3_dlc23_chd_veh_iron_daemon"
+    }
+  ],
+  "manualReference": {
+    "id": "ca_unit_wh_main_emp_art_helstorm_rocket_battery",
+    "kind": "HISTORICAL_USER_PROVIDED_WIKI_COMPARISON",
+    "reference": "tools/wh3-importer/manual-references/helstorm.json",
+    "observedGameVersion": null,
+    "expectedRaw": {
+      "baseDamage": 30,
+      "armorPiercingDamage": 70,
+      "range": 480,
+      "baseTime": 17
+    },
+    "missileStrength": 339,
+    "currentReload": 15.3,
+    "confidence": "VERSION_AND_MODIFIERS_UNRECORDED_COMPARISON_ONLY"
+  },
+  "limit": "No live game missile-card measurements found. Existing 17 are CA static admissions, not independent UI ground truth. Fresh pack reextraction is independent of the older trace extractor, but uses the same CA snapshot. Historical wiki card Strength 339/current reload 15.3 are comparison-only, not production fields or new empirical formulas."
+}

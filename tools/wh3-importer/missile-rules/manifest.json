@@ -1,0 +1,69 @@
+{
+  "format": "ca-basic-missile-rules-v1",
+  "baselineCommit": "c9168a6a2cb36c6de2e45dc8b9280c59443ed14f",
+  "gameVersion": "9.0.2.0",
+  "snapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+  "inputs": [
+    {
+      "file": "src/data/units.json",
+      "hash": "1484a2f8fd9cc39999d9a178a75c074d8a660f0548898742433b5fe19ab760bb"
+    },
+    {
+      "file": "src/data/unitLocalisations.json",
+      "hash": "3335cd7b59c9a1ba42a58a747a24fd7741bbf37d9d52e162efb386b51e60f97e"
+    },
+    {
+      "file": "src/data/unitAttributeAdmissions.json",
+      "hash": "0d9bfde9c347b67edc5b053e6addfcd6cef5833b4bf71d8e8c88d1c8d315423b"
+    },
+    {
+      "file": "src/data/unitPassiveAdmissions.json",
+      "hash": "b7722d3672bf8887744777e0aa809e38370c84f6fcb08f33bd07d802080e0d32"
+    },
+    {
+      "file": "src/data/unitHpEntityRuleAdmissions.json",
+      "hash": "c15ad4a92a9d424ad14171fa701bce0ac7183134ec81fbff7ec03ad6e468e387"
+    },
+    {
+      "file": "src/data/unitSpeedRuleAdmissions.json",
+      "hash": "feaf8f49f63ca2de61df096182720c721246dea9f4da90b7b36656db7da21bd6"
+    },
+    {
+      "file": "src/data/unitResistanceAdmissions.json",
+      "hash": "09bc9fd573de10cd7db83eebe73a96aa642e9621f8632bfb5902bb63d00c0fc4"
+    },
+    {
+      "file": "tools/wh3-importer/unit-entities/manifest.json",
+      "hash": "47a33185d0fcb6325175fc97c78e34d1255f9bef8f1ab208dd0c1788b0be90e1"
+    },
+    {
+      "file": "tools/wh3-importer/missile-rules/catalog.source.json",
+      "hash": "31477724f83e032a1705f7664df0ac758333b6e6550e778e19db71f5c4b24713"
+    },
+    {
+      "file": "tools/wh3-importer/missile-rules/schema-inventory.json",
+      "hash": "30b4191eb0ddeb13ec8b178f540037456f02709eb5e770bcaacb04f6170de8ec"
+    },
+    {
+      "file": "tools/wh3-importer/missile-rules/ground-truth.json",
+      "hash": "283d1bb05535df66507caaac7e207e05d8890b1d55a1a4548e30afacf6ee32dd"
+    },
+    {
+      "file": "tools/wh3-importer/missile-rules/ui.source.json",
+      "hash": "3a269bb67096d6dd4d658681d4785d8e5c0294099ab6c70663996105ec5e29ad"
+    },
+    {
+      "file": "tools/wh3-importer/missile-rules/validation.source.json",
+      "hash": "5fa9f4b54478ff0c6b9f59858d8c47c5a3355c4a7d8003d34a410964f9a81166"
+    },
+    {
+      "file": "tools/wh3-importer/missile-rules/owner-schema.source.json",
+      "hash": "188091bf70ddc4e213df17363c96e6efad1884dacebd8b812202d25e0ec3f6f9"
+    },
+    {
+      "file": "tools/wh3-importer/manual-references/helstorm.json",
+      "hash": "ce2d7c45dc6e27b44dca85cc6533b90f5460d7c401a1c341358196f0ff0c63fe"
+    }
+  ],
+  "policy": "Only four missile fields; exact reference closure and profile invariants. N/A is resolved non-target. Composite damage held; reviewed originals preserved. No dynamic effects or other slice rewrites."
+}

@@ -12,6 +12,7 @@ import { applyUnitPassives } from './unitPassives';
 import { applyUnitEntities } from './unitEntities';
 import { applyUnitSpeed } from './unitSpeed';
 import { applyUnitResistances } from './unitResistances';
+import { applyUnitMissiles } from './unitMissiles';
 import { localiseArchiveName, archiveSearchNames } from './archiveLocalisation';
 
 const factions: Faction[] = factionsJson.map(f => localiseArchiveName(f,'faction'));
@@ -19,7 +20,7 @@ const lords: Lord[] = (lordsJson as Lord[]).map(c => localiseArchiveName(c,'lord
 const heroes: Hero[] = (heroesJson as Hero[]).map(c => localiseArchiveName(c,'hero'));
 // JSON imports widen enum strings. The promotion gate and dataset tests run the
 // actual Unit validator; this assertion only restores the declared enum types.
-const units: Unit[] = (unitsJson as Unit[]).map(localiseUnit).map(applyUnitAttributes).map(applyUnitPassives).map(applyUnitEntities).map(applyUnitSpeed).map(applyUnitResistances);
+const units: Unit[] = (unitsJson as Unit[]).map(localiseUnit).map(applyUnitAttributes).map(applyUnitPassives).map(applyUnitEntities).map(applyUnitSpeed).map(applyUnitResistances).map(applyUnitMissiles);
 
 const factionById = new Map(factions.map((item) => [item.id, item]));
 const lordById = new Map(lords.map((item) => [item.id, item]));

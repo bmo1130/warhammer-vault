@@ -1,0 +1,1348 @@
+{
+  "format": "warhammer-vault-wh3-inspection-v1",
+  "sourceKind": "ca-pack",
+  "extractedAt": "2026-10-09T02:03:31.202Z",
+  "provenance": {
+    "gameVersion": "9.0.2.0",
+    "gameVersionSource": "Warhammer3.exe ProductVersion resource (not inferred from a wiki/Steam build)",
+    "rpfmVersion": "5.1.0",
+    "schemaFormatVersion": 5,
+    "schemaSha256": "5d628a0167b34a096752c5c21acd16493834a987c80dc9f02364617f796ba2a4",
+    "accessMethod": "Direct RPFM PackFile; bounded explicit queries, no effect application",
+    "packs": [
+      {
+        "file_name": "db.pack",
+        "file_path": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+        "pfh_version": "PFH5",
+        "pfh_file_type": "Release",
+        "bitmask": "",
+        "compress": "Zstd",
+        "timestamp": 0,
+        "sha256": "d0fafac984b3985ec47cec0ea957591424f1077e52ef61941dbf2dc46e6cf723"
+      },
+      {
+        "file_name": "local_en.pack",
+        "file_path": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/local_en.pack",
+        "pfh_version": "PFH5",
+        "pfh_file_type": "Release",
+        "bitmask": "",
+        "compress": "Zstd",
+        "timestamp": 1645478083,
+        "sha256": "f979527a5aaecf293a4e66afc25ed6c760e4107ef4920b73bd56e10e2652fd6a"
+      }
+    ]
+  },
+  "schemas": [
+    {
+      "table": "ui_unit_stats_tables",
+      "version": 10,
+      "fields": [
+        {
+          "name": "key",
+          "field_type": "StringU8",
+          "is_key": true,
+          "default_value": null,
+          "is_filename": false,
+          "filename_relative_path": null,
+          "is_reference": null,
+          "lookup": null,
+          "description": "",
+          "ca_order": 0,
+          "is_bitwise": 0,
+          "enum_values": {},
+          "is_part_of_colour": null
+        },
+        {
+          "name": "max_value",
+          "field_type": "I32",
+          "is_key": false,
+          "default_value": "100",
+          "is_filename": false,
+          "filename_relative_path": null,
+          "is_reference": null,
+          "lookup": null,
+          "description": "Maximum value of stat, affects stat bars on info panel when calculating percentage full",
+          "ca_order": 1,
+          "is_bitwise": 0,
+          "enum_values": {},
+          "is_part_of_colour": null
+        },
+        {
+          "name": "campaign_only",
+          "field_type": "Boolean",
+          "is_key": false,
+          "default_value": "false",
+          "is_filename": false,
+          "filename_relative_path": null,
+          "is_reference": null,
+          "lookup": null,
+          "description": "Is the stat only relevant to campaign? These are only shown in campaign.",
+          "ca_order": 2,
+          "is_bitwise": 0,
+          "enum_values": {},
+          "is_part_of_colour": null
+        },
+        {
+          "name": "sort_order",
+          "field_type": "I32",
+          "is_key": false,
+          "default_value": "0",
+          "is_filename": false,
+          "filename_relative_path": null,
+          "is_reference": null,
+          "lookup": null,
+          "description": "Determines order stats shown on info panel",
+          "ca_order": 3,
+          "is_bitwise": 0,
+          "enum_values": {},
+          "is_part_of_colour": null
+        },
+        {
+          "name": "localisation",
+          "field_type": "StringU8",
+          "is_key": false,
+          "default_value": null,
+          "is_filename": false,
+          "filename_relative_path": null,
+          "is_reference": [
+            "unit_stat_localisations",
+            "stat_key"
+          ],
+          "lookup": null,
+          "description": "Where the localisation lives",
+          "ca_order": 4,
+          "is_bitwise": 0,
+          "enum_values": {},
+          "is_part_of_colour": null
+        },
+        {
+          "name": "icon",
+          "field_type": "StringU8",
+          "is_key": false,
+          "default_value": "ui/skins/default/placeholder.png",
+          "is_filename": false,
+          "filename_relative_path": null,
+          "is_reference": null,
+          "lookup": null,
+          "description": "Full path to icon",
+          "ca_order": 5,
+          "is_bitwise": 0,
+          "enum_values": {},
+          "is_part_of_colour": null
+        },
+        {
+          "name": "min_value",
+          "field_type": "I32",
+          "is_key": false,
+          "default_value": "0",
+          "is_filename": false,
+          "filename_relative_path": null,
+          "is_reference": null,
+          "lookup": null,
+          "description": "",
+          "ca_order": 6,
+          "is_bitwise": 0,
+          "enum_values": {},
+          "is_part_of_colour": null
+        },
+        {
+          "name": "clamp_displayed_minimum",
+          "field_type": "Boolean",
+          "is_key": false,
+          "default_value": "true",
+          "is_filename": false,
+          "filename_relative_path": null,
+          "is_reference": null,
+          "lookup": null,
+          "description": "",
+          "ca_order": 7,
+          "is_bitwise": 0,
+          "enum_values": {},
+          "is_part_of_colour": null
+        },
+        {
+          "name": "clamp_displayed_maximum",
+          "field_type": "Boolean",
+          "is_key": false,
+          "default_value": "false",
+          "is_filename": false,
+          "filename_relative_path": null,
+          "is_reference": null,
+          "lookup": null,
+          "description": "",
+          "ca_order": 8,
+          "is_bitwise": 0,
+          "enum_values": {},
+          "is_part_of_colour": null
+        }
+      ],
+      "localisedFields": []
+    },
+    {
+      "table": "unit_stat_localisations_tables",
+      "version": 0,
+      "fields": [
+        {
+          "name": "stat_key",
+          "field_type": "StringU8",
+          "is_key": true,
+          "default_value": null,
+          "is_filename": false,
+          "filename_relative_path": null,
+          "is_reference": null,
+          "lookup": null,
+          "description": "",
+          "ca_order": 0,
+          "is_bitwise": 0,
+          "enum_values": {},
+          "is_part_of_colour": null
+        }
+      ],
+      "localisedFields": [
+        {
+          "name": "onscreen_name",
+          "field_type": "StringU8",
+          "is_key": false,
+          "default_value": null,
+          "is_filename": false,
+          "filename_relative_path": null,
+          "is_reference": null,
+          "lookup": null,
+          "description": "",
+          "ca_order": -1,
+          "is_bitwise": 0,
+          "enum_values": {},
+          "is_part_of_colour": null
+        },
+        {
+          "name": "tooltip_text",
+          "field_type": "StringU8",
+          "is_key": false,
+          "default_value": null,
+          "is_filename": false,
+          "filename_relative_path": null,
+          "is_reference": null,
+          "lookup": null,
+          "description": "",
+          "ca_order": -1,
+          "is_bitwise": 0,
+          "enum_values": {},
+          "is_part_of_colour": null
+        }
+      ]
+    },
+    {
+      "table": "Loc",
+      "version": 1,
+      "fields": [
+        {
+          "name": "key",
+          "field_type": "StringU16",
+          "is_key": true,
+          "default_value": "PLACEHOLDER",
+          "is_filename": false,
+          "filename_relative_path": null,
+          "is_reference": null,
+          "lookup": null,
+          "description": "",
+          "ca_order": -1,
+          "is_bitwise": 0,
+          "enum_values": {},
+          "is_part_of_colour": null
+        },
+        {
+          "name": "text",
+          "field_type": "StringU16",
+          "is_key": false,
+          "default_value": "PLACEHOLDER",
+          "is_filename": false,
+          "filename_relative_path": null,
+          "is_reference": null,
+          "lookup": null,
+          "description": "",
+          "ca_order": -1,
+          "is_bitwise": 0,
+          "enum_values": {},
+          "is_part_of_colour": null
+        },
+        {
+          "name": "tooltip",
+          "field_type": "Boolean",
+          "is_key": false,
+          "default_value": "PLACEHOLDER",
+          "is_filename": false,
+          "filename_relative_path": null,
+          "is_reference": null,
+          "lookup": null,
+          "description": "",
+          "ca_order": -1,
+          "is_bitwise": 0,
+          "enum_values": {},
+          "is_part_of_colour": null
+        }
+      ],
+      "localisedFields": []
+    }
+  ],
+  "rows": [
+    {
+      "id": "ui_unit_stats_tables:ec1bf2f33da32f00b40e",
+      "table": "ui_unit_stats_tables",
+      "key": {
+        "key": "scalar_missile_damage_ap"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/ui_unit_stats_tables/data__",
+      "tableVersion": 10,
+      "row": {
+        "key": "scalar_missile_damage_ap",
+        "max_value": 25,
+        "campaign_only": false,
+        "sort_order": -1,
+        "localisation": "scalar_missile_damage_ap",
+        "icon": "ui/skins/default/modifier_icon_armour_piercing_ranged.png",
+        "min_value": 0,
+        "clamp_displayed_minimum": true,
+        "clamp_displayed_maximum": false
+      }
+    },
+    {
+      "id": "ui_unit_stats_tables:e13f297f5a93ebcc1fcd",
+      "table": "ui_unit_stats_tables",
+      "key": {
+        "key": "scalar_missile_damage_base"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/ui_unit_stats_tables/data__",
+      "tableVersion": 10,
+      "row": {
+        "key": "scalar_missile_damage_base",
+        "max_value": 350,
+        "campaign_only": false,
+        "sort_order": -1,
+        "localisation": "scalar_missile_damage_base",
+        "icon": "ui/skins/default/icon_stat_ranged_damage_base.png",
+        "min_value": 0,
+        "clamp_displayed_minimum": true,
+        "clamp_displayed_maximum": false
+      }
+    },
+    {
+      "id": "ui_unit_stats_tables:5ebbed975a1ae1c2ffd5",
+      "table": "ui_unit_stats_tables",
+      "key": {
+        "key": "scalar_missile_explosion_damage_ap"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/ui_unit_stats_tables/data__",
+      "tableVersion": 10,
+      "row": {
+        "key": "scalar_missile_explosion_damage_ap",
+        "max_value": 400,
+        "campaign_only": false,
+        "sort_order": -1,
+        "localisation": "scalar_missile_explosion_damage_ap",
+        "icon": "ui/skins/default/icon_stat_explosive_armour_piercing_damage.png",
+        "min_value": 0,
+        "clamp_displayed_minimum": true,
+        "clamp_displayed_maximum": false
+      }
+    },
+    {
+      "id": "ui_unit_stats_tables:287069dcf2928df4e685",
+      "table": "ui_unit_stats_tables",
+      "key": {
+        "key": "scalar_missile_explosion_damage_base"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/ui_unit_stats_tables/data__",
+      "tableVersion": 10,
+      "row": {
+        "key": "scalar_missile_explosion_damage_base",
+        "max_value": 400,
+        "campaign_only": false,
+        "sort_order": -1,
+        "localisation": "scalar_missile_explosion_damage_base",
+        "icon": "ui/skins/default/icon_explosive_damage.png",
+        "min_value": 0,
+        "clamp_displayed_minimum": true,
+        "clamp_displayed_maximum": false
+      }
+    },
+    {
+      "id": "ui_unit_stats_tables:8cae5cf55677be0c5054",
+      "table": "ui_unit_stats_tables",
+      "key": {
+        "key": "scalar_missile_range"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/ui_unit_stats_tables/data__",
+      "tableVersion": 10,
+      "row": {
+        "key": "scalar_missile_range",
+        "max_value": 200,
+        "campaign_only": false,
+        "sort_order": -1,
+        "localisation": "scalar_missile_range",
+        "icon": "ui/skins/default/icon_stat_range.png",
+        "min_value": 0,
+        "clamp_displayed_minimum": true,
+        "clamp_displayed_maximum": false
+      }
+    },
+    {
+      "id": "ui_unit_stats_tables:18e05b965c7847c79666",
+      "table": "ui_unit_stats_tables",
+      "key": {
+        "key": "stat_missile_block_chance"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/ui_unit_stats_tables/data__",
+      "tableVersion": 10,
+      "row": {
+        "key": "stat_missile_block_chance",
+        "max_value": 100,
+        "campaign_only": false,
+        "sort_order": 7,
+        "localisation": "stat_missile_block_chance",
+        "icon": "ui/skins/default/icon_stat_missile_block_chance.png",
+        "min_value": 0,
+        "clamp_displayed_minimum": true,
+        "clamp_displayed_maximum": false
+      }
+    },
+    {
+      "id": "ui_unit_stats_tables:e496aa70e90c1557c46f",
+      "table": "ui_unit_stats_tables",
+      "key": {
+        "key": "stat_missile_damage"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/ui_unit_stats_tables/data__",
+      "tableVersion": 10,
+      "row": {
+        "key": "stat_missile_damage",
+        "max_value": 100,
+        "campaign_only": false,
+        "sort_order": -1,
+        "localisation": "stat_missile_strength",
+        "icon": "ui/skins/default/icon_stat_ranged_damage_base.png",
+        "min_value": 0,
+        "clamp_displayed_minimum": true,
+        "clamp_displayed_maximum": false
+      }
+    },
+    {
+      "id": "ui_unit_stats_tables:29cc20b06cf0cd08f01e",
+      "table": "ui_unit_stats_tables",
+      "key": {
+        "key": "stat_missile_damage_over_time"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/ui_unit_stats_tables/data__",
+      "tableVersion": 10,
+      "row": {
+        "key": "stat_missile_damage_over_time",
+        "max_value": 100,
+        "campaign_only": false,
+        "sort_order": -1,
+        "localisation": "stat_missile_strength",
+        "icon": "ui/skins/default/icon_stat_ranged_damage.png",
+        "min_value": 0,
+        "clamp_displayed_minimum": true,
+        "clamp_displayed_maximum": false
+      }
+    },
+    {
+      "id": "ui_unit_stats_tables:51aa6c0e780dad046fd0",
+      "table": "ui_unit_stats_tables",
+      "key": {
+        "key": "stat_missile_minimum_range"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/ui_unit_stats_tables/data__",
+      "tableVersion": 10,
+      "row": {
+        "key": "stat_missile_minimum_range",
+        "max_value": 50,
+        "campaign_only": false,
+        "sort_order": -1,
+        "localisation": "stat_missile_minimum_range",
+        "icon": "ui/skins/default/icon_stat_range.png",
+        "min_value": 0,
+        "clamp_displayed_minimum": true,
+        "clamp_displayed_maximum": false
+      }
+    },
+    {
+      "id": "ui_unit_stats_tables:265f912fff9adbef4ded",
+      "table": "ui_unit_stats_tables",
+      "key": {
+        "key": "stat_resistance_missile"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/ui_unit_stats_tables/data__",
+      "tableVersion": 10,
+      "row": {
+        "key": "stat_resistance_missile",
+        "max_value": 100,
+        "campaign_only": false,
+        "sort_order": 10,
+        "localisation": "stat_resistance_missile",
+        "icon": "ui/Battle UI/ability_icons/resistance_missile.png",
+        "min_value": 0,
+        "clamp_displayed_minimum": true,
+        "clamp_displayed_maximum": false
+      }
+    },
+    {
+      "id": "ui_unit_stats_tables:d649160ab86e7f026ded",
+      "table": "ui_unit_stats_tables",
+      "key": {
+        "key": "stat_reloading"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/ui_unit_stats_tables/data__",
+      "tableVersion": 10,
+      "row": {
+        "key": "stat_reloading",
+        "max_value": 15,
+        "campaign_only": false,
+        "sort_order": 18,
+        "localisation": "stat_reloading",
+        "icon": "ui/skins/default/icon_stat_reload_time.png",
+        "min_value": 0,
+        "clamp_displayed_minimum": true,
+        "clamp_displayed_maximum": false
+      }
+    },
+    {
+      "id": "unit_stat_localisations_tables:82bf696625a614a72d70",
+      "table": "unit_stat_localisations_tables",
+      "key": {
+        "stat_key": "scalar_missile_damage_ap"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/unit_stat_localisations_tables/data__",
+      "tableVersion": 0,
+      "row": {
+        "stat_key": "scalar_missile_damage_ap"
+      }
+    },
+    {
+      "id": "unit_stat_localisations_tables:94fbd6e2a3aa7cfb5709",
+      "table": "unit_stat_localisations_tables",
+      "key": {
+        "stat_key": "scalar_missile_damage_base"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/unit_stat_localisations_tables/data__",
+      "tableVersion": 0,
+      "row": {
+        "stat_key": "scalar_missile_damage_base"
+      }
+    },
+    {
+      "id": "unit_stat_localisations_tables:188c557e2e083378dd34",
+      "table": "unit_stat_localisations_tables",
+      "key": {
+        "stat_key": "scalar_missile_explosion_damage_ap"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/unit_stat_localisations_tables/data__",
+      "tableVersion": 0,
+      "row": {
+        "stat_key": "scalar_missile_explosion_damage_ap"
+      }
+    },
+    {
+      "id": "unit_stat_localisations_tables:89018be6a1df5ca39472",
+      "table": "unit_stat_localisations_tables",
+      "key": {
+        "stat_key": "scalar_missile_explosion_damage_base"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/unit_stat_localisations_tables/data__",
+      "tableVersion": 0,
+      "row": {
+        "stat_key": "scalar_missile_explosion_damage_base"
+      }
+    },
+    {
+      "id": "unit_stat_localisations_tables:6146f4753fe741c79843",
+      "table": "unit_stat_localisations_tables",
+      "key": {
+        "stat_key": "scalar_missile_range"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/unit_stat_localisations_tables/data__",
+      "tableVersion": 0,
+      "row": {
+        "stat_key": "scalar_missile_range"
+      }
+    },
+    {
+      "id": "unit_stat_localisations_tables:c36059c4302787f090a1",
+      "table": "unit_stat_localisations_tables",
+      "key": {
+        "stat_key": "stat_missile_block_chance"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/unit_stat_localisations_tables/data__",
+      "tableVersion": 0,
+      "row": {
+        "stat_key": "stat_missile_block_chance"
+      }
+    },
+    {
+      "id": "unit_stat_localisations_tables:06d58f9d3d2f46619bc4",
+      "table": "unit_stat_localisations_tables",
+      "key": {
+        "stat_key": "stat_missile_minimum_range"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/unit_stat_localisations_tables/data__",
+      "tableVersion": 0,
+      "row": {
+        "stat_key": "stat_missile_minimum_range"
+      }
+    },
+    {
+      "id": "unit_stat_localisations_tables:7c6282d377beca8d1133",
+      "table": "unit_stat_localisations_tables",
+      "key": {
+        "stat_key": "stat_missile_strength"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/unit_stat_localisations_tables/data__",
+      "tableVersion": 0,
+      "row": {
+        "stat_key": "stat_missile_strength"
+      }
+    },
+    {
+      "id": "unit_stat_localisations_tables:41e71683828d3637429c",
+      "table": "unit_stat_localisations_tables",
+      "key": {
+        "stat_key": "stat_reloading"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/unit_stat_localisations_tables/data__",
+      "tableVersion": 0,
+      "row": {
+        "stat_key": "stat_reloading"
+      }
+    },
+    {
+      "id": "unit_stat_localisations_tables:3f0b95e2241a891d16c6",
+      "table": "unit_stat_localisations_tables",
+      "key": {
+        "stat_key": "stat_resistance_missile"
+      },
+      "sourcePack": "db.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/db.pack",
+      "path": "db/unit_stat_localisations_tables/data__",
+      "tableVersion": 0,
+      "row": {
+        "stat_key": "stat_resistance_missile"
+      }
+    },
+    {
+      "id": "Loc:63823b0d77372dd540a4",
+      "table": "Loc",
+      "key": {
+        "key": "unit_stat_localisations_onscreen_name_scalar_missile_damage_ap"
+      },
+      "sourcePack": "local_en.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/local_en.pack",
+      "path": "text/db/unit_stat_localisations__.loc",
+      "tableVersion": 1,
+      "row": {
+        "key": "unit_stat_localisations_onscreen_name_scalar_missile_damage_ap",
+        "text": "[[img:ui/skins/default/modifier_icon_armour_piercing_ranged.png]][[/img]] Armour-Piercing Missile Damage",
+        "tooltip": false
+      }
+    },
+    {
+      "id": "Loc:0346cf74fbb4f12986c8",
+      "table": "Loc",
+      "key": {
+        "key": "unit_stat_localisations_onscreen_name_scalar_missile_damage_base"
+      },
+      "sourcePack": "local_en.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/local_en.pack",
+      "path": "text/db/unit_stat_localisations__.loc",
+      "tableVersion": 1,
+      "row": {
+        "key": "unit_stat_localisations_onscreen_name_scalar_missile_damage_base",
+        "text": "[[img:ui/skins/default/icon_stat_ranged_damage_base.png]][[/img]] Base Missile Damage",
+        "tooltip": false
+      }
+    },
+    {
+      "id": "Loc:7bf39e5bfef9e9b8adb5",
+      "table": "Loc",
+      "key": {
+        "key": "unit_stat_localisations_onscreen_name_scalar_missile_explosion_damage_ap"
+      },
+      "sourcePack": "local_en.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/local_en.pack",
+      "path": "text/db/unit_stat_localisations__.loc",
+      "tableVersion": 1,
+      "row": {
+        "key": "unit_stat_localisations_onscreen_name_scalar_missile_explosion_damage_ap",
+        "text": "[[img:ui/skins/default/icon_stat_explosive_armour_piercing_damage.png]][[/img]] Armour-Piercing Explosive Damage",
+        "tooltip": false
+      }
+    },
+    {
+      "id": "Loc:a416a04d6cc717bf0f64",
+      "table": "Loc",
+      "key": {
+        "key": "unit_stat_localisations_onscreen_name_scalar_missile_explosion_damage_base"
+      },
+      "sourcePack": "local_en.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/local_en.pack",
+      "path": "text/db/unit_stat_localisations__.loc",
+      "tableVersion": 1,
+      "row": {
+        "key": "unit_stat_localisations_onscreen_name_scalar_missile_explosion_damage_base",
+        "text": "[[img:ui/skins/default/icon_explosive_damage.png]][[/img]] Base Explosive Damage",
+        "tooltip": false
+      }
+    },
+    {
+      "id": "Loc:77f6a1f25e1ae84fbbb5",
+      "table": "Loc",
+      "key": {
+        "key": "unit_stat_localisations_onscreen_name_scalar_missile_range"
+      },
+      "sourcePack": "local_en.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/local_en.pack",
+      "path": "text/db/unit_stat_localisations__.loc",
+      "tableVersion": 1,
+      "row": {
+        "key": "unit_stat_localisations_onscreen_name_scalar_missile_range",
+        "text": "[[img:ui/skins/default/icon_stat_range.png]][[/img]] Range",
+        "tooltip": false
+      }
+    },
+    {
+      "id": "Loc:9b3659bbcf020b38d185",
+      "table": "Loc",
+      "key": {
+        "key": "unit_stat_localisations_onscreen_name_stat_missile_block_chance"
+      },
+      "sourcePack": "local_en.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/local_en.pack",
+      "path": "text/db/unit_stat_localisations__.loc",
+      "tableVersion": 1,
+      "row": {
+        "key": "unit_stat_localisations_onscreen_name_stat_missile_block_chance",
+        "text": "[[img:ui/skins/default/icon_stat_defence.png]][[/img]] Missile Block Chance",
+        "tooltip": false
+      }
+    },
+    {
+      "id": "Loc:4061434638fe51e63cda",
+      "table": "Loc",
+      "key": {
+        "key": "unit_stat_localisations_onscreen_name_stat_missile_minimum_range"
+      },
+      "sourcePack": "local_en.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/local_en.pack",
+      "path": "text/db/unit_stat_localisations__.loc",
+      "tableVersion": 1,
+      "row": {
+        "key": "unit_stat_localisations_onscreen_name_stat_missile_minimum_range",
+        "text": "[[img:ui/skins/default/icon_stat_range.png]][[/img]] Minimum Range",
+        "tooltip": false
+      }
+    },
+    {
+      "id": "Loc:33d17bbe3df7523209d3",
+      "table": "Loc",
+      "key": {
+        "key": "unit_stat_localisations_onscreen_name_stat_missile_strength"
+      },
+      "sourcePack": "local_en.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/local_en.pack",
+      "path": "text/db/unit_stat_localisations__.loc",
+      "tableVersion": 1,
+      "row": {
+        "key": "unit_stat_localisations_onscreen_name_stat_missile_strength",
+        "text": "[[img:ui/skins/default/icon_stat_ranged_damage.png]][[/img]] Missile Strength",
+        "tooltip": false
+      }
+    },
+    {
+      "id": "Loc:616d53b700f2eb582a4f",
+      "table": "Loc",
+      "key": {
+        "key": "unit_stat_localisations_onscreen_name_stat_reloading"
+      },
+      "sourcePack": "local_en.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/local_en.pack",
+      "path": "text/db/unit_stat_localisations__.loc",
+      "tableVersion": 1,
+      "row": {
+        "key": "unit_stat_localisations_onscreen_name_stat_reloading",
+        "text": "[[img:ui/skins/default/icon_stat_reload_time.png]][[/img]] Reload Skill",
+        "tooltip": false
+      }
+    },
+    {
+      "id": "Loc:119bbeeec9682e7e3895",
+      "table": "Loc",
+      "key": {
+        "key": "unit_stat_localisations_onscreen_name_stat_resistance_missile"
+      },
+      "sourcePack": "local_en.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/local_en.pack",
+      "path": "text/db/unit_stat_localisations__.loc",
+      "tableVersion": 1,
+      "row": {
+        "key": "unit_stat_localisations_onscreen_name_stat_resistance_missile",
+        "text": "[[img:ui/Battle UI/ability_icons/resistance_missile.png]][[/img]] Missile Resistance",
+        "tooltip": false
+      }
+    },
+    {
+      "id": "Loc:fc26cf88094c556c173c",
+      "table": "Loc",
+      "key": {
+        "key": "unit_stat_localisations_tooltip_text_scalar_missile_damage_ap"
+      },
+      "sourcePack": "local_en.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/local_en.pack",
+      "path": "text/db/unit_stat_localisations__.loc",
+      "tableVersion": 1,
+      "row": {
+        "key": "unit_stat_localisations_tooltip_text_scalar_missile_damage_ap",
+        "text": "Armour-piercing missile damage",
+        "tooltip": false
+      }
+    },
+    {
+      "id": "Loc:5654b97fc3a9cc18048e",
+      "table": "Loc",
+      "key": {
+        "key": "unit_stat_localisations_tooltip_text_scalar_missile_damage_base"
+      },
+      "sourcePack": "local_en.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/local_en.pack",
+      "path": "text/db/unit_stat_localisations__.loc",
+      "tableVersion": 1,
+      "row": {
+        "key": "unit_stat_localisations_tooltip_text_scalar_missile_damage_base",
+        "text": "Base missile damage",
+        "tooltip": false
+      }
+    },
+    {
+      "id": "Loc:d09700205d60f39f91b8",
+      "table": "Loc",
+      "key": {
+        "key": "unit_stat_localisations_tooltip_text_scalar_missile_explosion_damage_ap"
+      },
+      "sourcePack": "local_en.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/local_en.pack",
+      "path": "text/db/unit_stat_localisations__.loc",
+      "tableVersion": 1,
+      "row": {
+        "key": "unit_stat_localisations_tooltip_text_scalar_missile_explosion_damage_ap",
+        "text": "Armour-piercing explosive damage",
+        "tooltip": false
+      }
+    },
+    {
+      "id": "Loc:b38990d547087519c32a",
+      "table": "Loc",
+      "key": {
+        "key": "unit_stat_localisations_tooltip_text_scalar_missile_explosion_damage_base"
+      },
+      "sourcePack": "local_en.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/local_en.pack",
+      "path": "text/db/unit_stat_localisations__.loc",
+      "tableVersion": 1,
+      "row": {
+        "key": "unit_stat_localisations_tooltip_text_scalar_missile_explosion_damage_base",
+        "text": "Base explosive damage",
+        "tooltip": false
+      }
+    },
+    {
+      "id": "Loc:0c258cb2e3afcbc60145",
+      "table": "Loc",
+      "key": {
+        "key": "unit_stat_localisations_tooltip_text_scalar_missile_range"
+      },
+      "sourcePack": "local_en.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/local_en.pack",
+      "path": "text/db/unit_stat_localisations__.loc",
+      "tableVersion": 1,
+      "row": {
+        "key": "unit_stat_localisations_tooltip_text_scalar_missile_range",
+        "text": "A long range enables you to hit enemies from a distance, but weapons are still more accurate at shorter ranges.",
+        "tooltip": false
+      }
+    },
+    {
+      "id": "Loc:4095dd917daa61257254",
+      "table": "Loc",
+      "key": {
+        "key": "unit_stat_localisations_tooltip_text_stat_missile_block_chance"
+      },
+      "sourcePack": "local_en.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/local_en.pack",
+      "path": "text/db/unit_stat_localisations__.loc",
+      "tableVersion": 1,
+      "row": {
+        "key": "unit_stat_localisations_tooltip_text_stat_missile_block_chance",
+        "text": "The percentage change that the shield will block (non-artillery) missiles. ",
+        "tooltip": false
+      }
+    },
+    {
+      "id": "Loc:1e04ff92bee05f61199a",
+      "table": "Loc",
+      "key": {
+        "key": "unit_stat_localisations_tooltip_text_stat_missile_minimum_range"
+      },
+      "sourcePack": "local_en.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/local_en.pack",
+      "path": "text/db/unit_stat_localisations__.loc",
+      "tableVersion": 1,
+      "row": {
+        "key": "unit_stat_localisations_tooltip_text_stat_missile_minimum_range",
+        "text": "Weapons with a minimum range cannot fire if the enemy is too close.",
+        "tooltip": false
+      }
+    },
+    {
+      "id": "Loc:5695abab8b655911fbec",
+      "table": "Loc",
+      "key": {
+        "key": "unit_stat_localisations_tooltip_text_stat_missile_strength"
+      },
+      "sourcePack": "local_en.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/local_en.pack",
+      "path": "text/db/unit_stat_localisations__.loc",
+      "tableVersion": 1,
+      "row": {
+        "key": "unit_stat_localisations_tooltip_text_stat_missile_strength",
+        "text": "The damage caused by a missile attack, split between base and armour piercing.\\\\n\\\\nArmour-piercing damage is always applied, base damage can be blocked by armour.",
+        "tooltip": false
+      }
+    },
+    {
+      "id": "Loc:d4379260aedc3b2c556b",
+      "table": "Loc",
+      "key": {
+        "key": "unit_stat_localisations_tooltip_text_stat_reloading"
+      },
+      "sourcePack": "local_en.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/local_en.pack",
+      "path": "text/db/unit_stat_localisations__.loc",
+      "tableVersion": 1,
+      "row": {
+        "key": "unit_stat_localisations_tooltip_text_stat_reloading",
+        "text": "The rate at which this unit can fire.\\\\n\\\\nThis is improved with experience.",
+        "tooltip": false
+      }
+    },
+    {
+      "id": "Loc:0d93415ccbaaad6da336",
+      "table": "Loc",
+      "key": {
+        "key": "unit_stat_localisations_tooltip_text_stat_resistance_missile"
+      },
+      "sourcePack": "local_en.pack",
+      "sourcePackPath": "C:/Program Files (x86)/Steam/steamapps/common/Total War WARHAMMER III/data/local_en.pack",
+      "path": "text/db/unit_stat_localisations__.loc",
+      "tableVersion": 1,
+      "row": {
+        "key": "unit_stat_localisations_tooltip_text_stat_resistance_missile",
+        "text": "Missile resistance",
+        "tooltip": false
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "from": "ui_unit_stats_tables:ec1bf2f33da32f00b40e",
+      "field": "localisation",
+      "to": "unit_stat_localisations_tables:82bf696625a614a72d70",
+      "targetField": "stat_key",
+      "value": "scalar_missile_damage_ap",
+      "evidence": "RPFM processed schema is_reference"
+    },
+    {
+      "from": "ui_unit_stats_tables:e13f297f5a93ebcc1fcd",
+      "field": "localisation",
+      "to": "unit_stat_localisations_tables:94fbd6e2a3aa7cfb5709",
+      "targetField": "stat_key",
+      "value": "scalar_missile_damage_base",
+      "evidence": "RPFM processed schema is_reference"
+    },
+    {
+      "from": "ui_unit_stats_tables:5ebbed975a1ae1c2ffd5",
+      "field": "localisation",
+      "to": "unit_stat_localisations_tables:188c557e2e083378dd34",
+      "targetField": "stat_key",
+      "value": "scalar_missile_explosion_damage_ap",
+      "evidence": "RPFM processed schema is_reference"
+    },
+    {
+      "from": "ui_unit_stats_tables:287069dcf2928df4e685",
+      "field": "localisation",
+      "to": "unit_stat_localisations_tables:89018be6a1df5ca39472",
+      "targetField": "stat_key",
+      "value": "scalar_missile_explosion_damage_base",
+      "evidence": "RPFM processed schema is_reference"
+    },
+    {
+      "from": "ui_unit_stats_tables:8cae5cf55677be0c5054",
+      "field": "localisation",
+      "to": "unit_stat_localisations_tables:6146f4753fe741c79843",
+      "targetField": "stat_key",
+      "value": "scalar_missile_range",
+      "evidence": "RPFM processed schema is_reference"
+    },
+    {
+      "from": "ui_unit_stats_tables:18e05b965c7847c79666",
+      "field": "localisation",
+      "to": "unit_stat_localisations_tables:c36059c4302787f090a1",
+      "targetField": "stat_key",
+      "value": "stat_missile_block_chance",
+      "evidence": "RPFM processed schema is_reference"
+    },
+    {
+      "from": "ui_unit_stats_tables:e496aa70e90c1557c46f",
+      "field": "localisation",
+      "to": "unit_stat_localisations_tables:7c6282d377beca8d1133",
+      "targetField": "stat_key",
+      "value": "stat_missile_strength",
+      "evidence": "RPFM processed schema is_reference"
+    },
+    {
+      "from": "ui_unit_stats_tables:29cc20b06cf0cd08f01e",
+      "field": "localisation",
+      "to": "unit_stat_localisations_tables:7c6282d377beca8d1133",
+      "targetField": "stat_key",
+      "value": "stat_missile_strength",
+      "evidence": "RPFM processed schema is_reference"
+    },
+    {
+      "from": "ui_unit_stats_tables:51aa6c0e780dad046fd0",
+      "field": "localisation",
+      "to": "unit_stat_localisations_tables:06d58f9d3d2f46619bc4",
+      "targetField": "stat_key",
+      "value": "stat_missile_minimum_range",
+      "evidence": "RPFM processed schema is_reference"
+    },
+    {
+      "from": "ui_unit_stats_tables:265f912fff9adbef4ded",
+      "field": "localisation",
+      "to": "unit_stat_localisations_tables:3f0b95e2241a891d16c6",
+      "targetField": "stat_key",
+      "value": "stat_resistance_missile",
+      "evidence": "RPFM processed schema is_reference"
+    },
+    {
+      "from": "ui_unit_stats_tables:d649160ab86e7f026ded",
+      "field": "localisation",
+      "to": "unit_stat_localisations_tables:41e71683828d3637429c",
+      "targetField": "stat_key",
+      "value": "stat_reloading",
+      "evidence": "RPFM processed schema is_reference"
+    },
+    {
+      "from": "unit_stat_localisations_tables:82bf696625a614a72d70",
+      "field": "onscreen_name",
+      "to": "Loc:63823b0d77372dd540a4",
+      "targetField": "key",
+      "value": "unit_stat_localisations_onscreen_name_scalar_missile_damage_ap",
+      "evidence": "RPFM schema localised_fields + verified single-key Loc convention"
+    },
+    {
+      "from": "unit_stat_localisations_tables:82bf696625a614a72d70",
+      "field": "tooltip_text",
+      "to": "Loc:fc26cf88094c556c173c",
+      "targetField": "key",
+      "value": "unit_stat_localisations_tooltip_text_scalar_missile_damage_ap",
+      "evidence": "RPFM schema localised_fields + verified single-key Loc convention"
+    },
+    {
+      "from": "unit_stat_localisations_tables:94fbd6e2a3aa7cfb5709",
+      "field": "onscreen_name",
+      "to": "Loc:0346cf74fbb4f12986c8",
+      "targetField": "key",
+      "value": "unit_stat_localisations_onscreen_name_scalar_missile_damage_base",
+      "evidence": "RPFM schema localised_fields + verified single-key Loc convention"
+    },
+    {
+      "from": "unit_stat_localisations_tables:94fbd6e2a3aa7cfb5709",
+      "field": "tooltip_text",
+      "to": "Loc:5654b97fc3a9cc18048e",
+      "targetField": "key",
+      "value": "unit_stat_localisations_tooltip_text_scalar_missile_damage_base",
+      "evidence": "RPFM schema localised_fields + verified single-key Loc convention"
+    },
+    {
+      "from": "unit_stat_localisations_tables:188c557e2e083378dd34",
+      "field": "onscreen_name",
+      "to": "Loc:7bf39e5bfef9e9b8adb5",
+      "targetField": "key",
+      "value": "unit_stat_localisations_onscreen_name_scalar_missile_explosion_damage_ap",
+      "evidence": "RPFM schema localised_fields + verified single-key Loc convention"
+    },
+    {
+      "from": "unit_stat_localisations_tables:188c557e2e083378dd34",
+      "field": "tooltip_text",
+      "to": "Loc:d09700205d60f39f91b8",
+      "targetField": "key",
+      "value": "unit_stat_localisations_tooltip_text_scalar_missile_explosion_damage_ap",
+      "evidence": "RPFM schema localised_fields + verified single-key Loc convention"
+    },
+    {
+      "from": "unit_stat_localisations_tables:89018be6a1df5ca39472",
+      "field": "onscreen_name",
+      "to": "Loc:a416a04d6cc717bf0f64",
+      "targetField": "key",
+      "value": "unit_stat_localisations_onscreen_name_scalar_missile_explosion_damage_base",
+      "evidence": "RPFM schema localised_fields + verified single-key Loc convention"
+    },
+    {
+      "from": "unit_stat_localisations_tables:89018be6a1df5ca39472",
+      "field": "tooltip_text",
+      "to": "Loc:b38990d547087519c32a",
+      "targetField": "key",
+      "value": "unit_stat_localisations_tooltip_text_scalar_missile_explosion_damage_base",
+      "evidence": "RPFM schema localised_fields + verified single-key Loc convention"
+    },
+    {
+      "from": "unit_stat_localisations_tables:6146f4753fe741c79843",
+      "field": "onscreen_name",
+      "to": "Loc:77f6a1f25e1ae84fbbb5",
+      "targetField": "key",
+      "value": "unit_stat_localisations_onscreen_name_scalar_missile_range",
+      "evidence": "RPFM schema localised_fields + verified single-key Loc convention"
+    },
+    {
+      "from": "unit_stat_localisations_tables:6146f4753fe741c79843",
+      "field": "tooltip_text",
+      "to": "Loc:0c258cb2e3afcbc60145",
+      "targetField": "key",
+      "value": "unit_stat_localisations_tooltip_text_scalar_missile_range",
+      "evidence": "RPFM schema localised_fields + verified single-key Loc convention"
+    },
+    {
+      "from": "unit_stat_localisations_tables:c36059c4302787f090a1",
+      "field": "onscreen_name",
+      "to": "Loc:9b3659bbcf020b38d185",
+      "targetField": "key",
+      "value": "unit_stat_localisations_onscreen_name_stat_missile_block_chance",
+      "evidence": "RPFM schema localised_fields + verified single-key Loc convention"
+    },
+    {
+      "from": "unit_stat_localisations_tables:c36059c4302787f090a1",
+      "field": "tooltip_text",
+      "to": "Loc:4095dd917daa61257254",
+      "targetField": "key",
+      "value": "unit_stat_localisations_tooltip_text_stat_missile_block_chance",
+      "evidence": "RPFM schema localised_fields + verified single-key Loc convention"
+    },
+    {
+      "from": "unit_stat_localisations_tables:06d58f9d3d2f46619bc4",
+      "field": "onscreen_name",
+      "to": "Loc:4061434638fe51e63cda",
+      "targetField": "key",
+      "value": "unit_stat_localisations_onscreen_name_stat_missile_minimum_range",
+      "evidence": "RPFM schema localised_fields + verified single-key Loc convention"
+    },
+    {
+      "from": "unit_stat_localisations_tables:06d58f9d3d2f46619bc4",
+      "field": "tooltip_text",
+      "to": "Loc:1e04ff92bee05f61199a",
+      "targetField": "key",
+      "value": "unit_stat_localisations_tooltip_text_stat_missile_minimum_range",
+      "evidence": "RPFM schema localised_fields + verified single-key Loc convention"
+    },
+    {
+      "from": "unit_stat_localisations_tables:7c6282d377beca8d1133",
+      "field": "onscreen_name",
+      "to": "Loc:33d17bbe3df7523209d3",
+      "targetField": "key",
+      "value": "unit_stat_localisations_onscreen_name_stat_missile_strength",
+      "evidence": "RPFM schema localised_fields + verified single-key Loc convention"
+    },
+    {
+      "from": "unit_stat_localisations_tables:7c6282d377beca8d1133",
+      "field": "tooltip_text",
+      "to": "Loc:5695abab8b655911fbec",
+      "targetField": "key",
+      "value": "unit_stat_localisations_tooltip_text_stat_missile_strength",
+      "evidence": "RPFM schema localised_fields + verified single-key Loc convention"
+    },
+    {
+      "from": "unit_stat_localisations_tables:41e71683828d3637429c",
+      "field": "onscreen_name",
+      "to": "Loc:616d53b700f2eb582a4f",
+      "targetField": "key",
+      "value": "unit_stat_localisations_onscreen_name_stat_reloading",
+      "evidence": "RPFM schema localised_fields + verified single-key Loc convention"
+    },
+    {
+      "from": "unit_stat_localisations_tables:41e71683828d3637429c",
+      "field": "tooltip_text",
+      "to": "Loc:d4379260aedc3b2c556b",
+      "targetField": "key",
+      "value": "unit_stat_localisations_tooltip_text_stat_reloading",
+      "evidence": "RPFM schema localised_fields + verified single-key Loc convention"
+    },
+    {
+      "from": "unit_stat_localisations_tables:3f0b95e2241a891d16c6",
+      "field": "onscreen_name",
+      "to": "Loc:119bbeeec9682e7e3895",
+      "targetField": "key",
+      "value": "unit_stat_localisations_onscreen_name_stat_resistance_missile",
+      "evidence": "RPFM schema localised_fields + verified single-key Loc convention"
+    },
+    {
+      "from": "unit_stat_localisations_tables:3f0b95e2241a891d16c6",
+      "field": "tooltip_text",
+      "to": "Loc:0d93415ccbaaad6da336",
+      "targetField": "key",
+      "value": "unit_stat_localisations_tooltip_text_stat_resistance_missile",
+      "evidence": "RPFM schema localised_fields + verified single-key Loc convention"
+    }
+  ],
+  "coverage": [
+    {
+      "query": {
+        "table": "ui_unit_stats_tables",
+        "where": [
+          {
+            "field": "key",
+            "op": "contains",
+            "value": "missile"
+          }
+        ]
+      },
+      "matchedRows": 10,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "ui_unit_stats_tables",
+        "where": [
+          {
+            "field": "key",
+            "op": "contains",
+            "value": "range"
+          }
+        ]
+      },
+      "matchedRows": 2,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "ui_unit_stats_tables",
+        "where": [
+          {
+            "field": "key",
+            "op": "contains",
+            "value": "reload"
+          }
+        ]
+      },
+      "matchedRows": 1,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "unit_stat_localisations_tables",
+        "where": [
+          {
+            "field": "stat_key",
+            "op": "oneOf",
+            "value": [
+              "scalar_missile_damage_ap",
+              "scalar_missile_damage_base",
+              "scalar_missile_explosion_damage_ap",
+              "scalar_missile_explosion_damage_base",
+              "scalar_missile_range",
+              "stat_missile_block_chance",
+              "stat_missile_strength",
+              "stat_missile_strength",
+              "stat_missile_minimum_range",
+              "stat_resistance_missile",
+              "stat_reloading"
+            ]
+          }
+        ]
+      },
+      "matchedRows": 10,
+      "tableFiles": 1
+    },
+    {
+      "query": {
+        "table": "Loc:text/db/unit_stat_localisations__.loc",
+        "where": [
+          {
+            "field": "key",
+            "op": "oneOf",
+            "value": [
+              "unit_stat_localisations_onscreen_name_scalar_missile_damage_ap",
+              "unit_stat_localisations_tooltip_text_scalar_missile_damage_ap",
+              "unit_stat_localisations_onscreen_name_scalar_missile_damage_base",
+              "unit_stat_localisations_tooltip_text_scalar_missile_damage_base",
+              "unit_stat_localisations_onscreen_name_scalar_missile_explosion_damage_ap",
+              "unit_stat_localisations_tooltip_text_scalar_missile_explosion_damage_ap",
+              "unit_stat_localisations_onscreen_name_scalar_missile_explosion_damage_base",
+              "unit_stat_localisations_tooltip_text_scalar_missile_explosion_damage_base",
+              "unit_stat_localisations_onscreen_name_scalar_missile_range",
+              "unit_stat_localisations_tooltip_text_scalar_missile_range",
+              "unit_stat_localisations_onscreen_name_stat_missile_block_chance",
+              "unit_stat_localisations_tooltip_text_stat_missile_block_chance",
+              "unit_stat_localisations_onscreen_name_stat_missile_strength",
+              "unit_stat_localisations_tooltip_text_stat_missile_strength",
+              "unit_stat_localisations_onscreen_name_stat_missile_strength",
+              "unit_stat_localisations_tooltip_text_stat_missile_strength",
+              "unit_stat_localisations_onscreen_name_stat_missile_minimum_range",
+              "unit_stat_localisations_tooltip_text_stat_missile_minimum_range",
+              "unit_stat_localisations_onscreen_name_stat_resistance_missile",
+              "unit_stat_localisations_tooltip_text_stat_resistance_missile",
+              "unit_stat_localisations_onscreen_name_stat_reloading",
+              "unit_stat_localisations_tooltip_text_stat_reloading"
+            ]
+          }
+        ]
+      },
+      "matchedRows": 20,
+      "tableFiles": 1
+    }
+  ]
+}

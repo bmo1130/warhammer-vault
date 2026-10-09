@@ -1,5 +1,8 @@
 import { spawnSync } from 'node:child_process';
 import { prepareEvidenceView } from './evidence-view.mjs';
+const missiles = spawnSync(process.execPath, ['scripts/promote-unit-missiles.mjs', '--check'], {stdio:'inherit'});
+if (missiles.error) throw missiles.error;
+if (missiles.status !== 0) process.exit(missiles.status ?? 1);
 const resistances = spawnSync(process.execPath, ['scripts/promote-unit-resistances.mjs', '--check'], {stdio:'inherit'});
 if (resistances.error) throw resistances.error;
 if (resistances.status !== 0) process.exit(resistances.status ?? 1);

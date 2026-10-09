@@ -6,6 +6,9 @@ import { resolve } from 'node:path';
 import { prepareEvidenceView } from './evidence-view.mjs';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
+const missiles = spawnSync(process.execPath, ['scripts/promote-unit-missiles.mjs', '--check'], {cwd:root,stdio:'inherit'});
+if (missiles.error) throw missiles.error;
+if (missiles.status !== 0) process.exit(missiles.status ?? 1);
 const resistances = spawnSync(process.execPath, ['scripts/promote-unit-resistances.mjs', '--check'], {cwd:root,stdio:'inherit'});
 if (resistances.error) throw resistances.error;
 if (resistances.status !== 0) process.exit(resistances.status ?? 1);
