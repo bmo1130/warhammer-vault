@@ -11,6 +11,8 @@ import { unitResistanceAdmission } from '../repositories/unitResistances';
 import UnitResistanceDetails from './UnitResistanceDetails';
 import { unitMissileAdmission } from '../repositories/unitMissiles';
 import UnitMissileDetails from './UnitMissileDetails';
+import UnitRecruitmentDetails from './UnitRecruitmentDetails';
+import { unitRecruitmentAdmission } from '../repositories/unitRecruitment';
 
 // Read stored fields only; the optional total uses the existing approved sum.
 export default function UnitProductionDetails({ unit }: { unit: Unit }) {
@@ -22,6 +24,7 @@ export default function UnitProductionDetails({ unit }: { unit: Unit }) {
   const speed = unitSpeedAdmission(unit);
   const resistances = unitResistanceAdmission(unit);
   const missileAdmission = unitMissileAdmission(unit);
+  const recruitment = unitRecruitmentAdmission(unit);
   const damage = [
     ['기본 피해', unit.melee.damage.base], ['관통 피해', unit.melee.damage.armorPiercing],
     ['총 무기 피해', total], ['대형 보너스', unit.melee.damage.bonusVsLarge],
@@ -71,6 +74,7 @@ export default function UnitProductionDetails({ unit }: { unit: Unit }) {
       <div className="stats-card">{missileStats.map(([label, value]) => <div className="stat" key={label}><span>{label}</span><strong>{value}</strong></div>)}</div>
       <p className="data-note">저장된 기본값입니다. 실제 장전시간·발사 간격·DPS로 환산하지 않습니다. 관통 저항 예산은 관통 개체 수가 아닙니다.</p>
     </section>}
+    <UnitRecruitmentDetails unit={unit}/>
     <details className="production-source panel">
       <summary>출처·버전·생략 범위</summary>
       <div><p>WH3 {unit.gameVersion} · 검토된 정적 source의 기본값입니다. 현재 전투나 캠페인에서의 최종 수치가 아닙니다.</p>
@@ -80,6 +84,7 @@ export default function UnitProductionDetails({ unit }: { unit: Unit }) {
         {speed && <p>기본 속도: CA {speed.selectedRole === 'man' ? '본체' : speed.selectedRole === 'mount' ? '탈것' : '포병 엔진'} run_speed {speed.rawRunSpeed} × 10 = {speed.value} · {speed.kind === 'PRESERVED_STATIC_SPEED' ? '기존 검증값 보존' : '검증된 구조 규칙으로 추론'}{speed.directCardReference ? ' · 게임 카드 확인 표본' : ''} · source SHA256 {speed.sourceHash}</p>}
         {resistances && <p>기본 피해 저항: CA land_units의 명시적 damage_mod 필드 · 퍼센트 단위 그대로 · 원본 및 게임 표시 명칭 검증 · {resistances.status === 'COMPLETE' ? '다섯 저항 확인' : '일부 저항 확인'} · 능력 효과 별도 · source SHA256 {resistances.sourceHash}</p>}
         {missileAdmission && <p>기본 사격: {missileAdmission.status} · {missileAdmission.originalMissile ? '기존 CA 정적 검토값 보존' : 'CA 원본 참조 구조와 필드 검증'} · 조건부 효과 별도 · 게임 카드 실측과 구분 · source SHA256 {missileAdmission.sourceHash}</p>}
+        {recruitment && <p>모집 조건·출처: {recruitment.status} · 직접 건물 참조 {recruitment.directBuildingStatus} · 실효 모집 조건 미완결 · CA pack 기반 추론, 캠페인 UI 실측 없음 · source SHA256 {recruitment.sourceHash}</p>}
         {localisation && <p>한국어 유닛명: CA {localisation.sourcePack} · {localisation.localisationKey} · pack SHA256 {localisation.packHash}</p>}
         {attributes && <p>특성: CA attribute 그룹 및 검토된 공성 플래그 · {attributes.status === 'PARTIAL' ? '일부 보류' : '검토 완료'} · source SHA256 {attributes.sourceHash}</p>}
         {passives && <>
@@ -88,7 +93,7 @@ export default function UnitProductionDetails({ unit }: { unit: Unit }) {
           {!!passives.rawKeys.length && <p>원본 CA ability key: {passives.rawKeys.join(', ')}</p>}
         </>}
         {entities && <p>개체 수·총 HP: Ultra · {entities.kind === 'DIRECT_ULTRA_RUNTIME' ? '기본 전투 원본 측정' : entities.kind === 'EMPIRICAL_CATEGORY_RULE' ? '실측으로 검증한 동일 원본 구조의 계산값' : '기존 검증된 동일 profile'} · {entities.status === 'PARTIAL' ? '개체 수 확인 · 총 HP 미확인' : '개체 수·총 HP 확인'} · {entities.reviewReference} · {entities.references.join(', ')} · source SHA256 {entities.sourceHash}</p>}
-        <p>미입력은 미확인입니다. 개체 수·HP·속도·모집 조건 등 미확인 값은 생략했습니다. 저항은 확인된 0%와 미확인을 구별해 표시합니다. 사격은 정규 무기가 없는 N/A와 수치 미확인을 구별합니다.</p>
+        <p>미입력은 미확인입니다. 개체 수·HP·속도 등 미확인 값은 생략했습니다. 저항은 확인된 0%와 미확인을 구별해 표시합니다. 사격은 정규 무기가 없는 N/A와 수치 미확인을 구별합니다. 모집 출처 미확인과 비모집 확정(N/A)은 다릅니다.</p>
       </div>
     </details>
   </>;

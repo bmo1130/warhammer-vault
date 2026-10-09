@@ -107,3 +107,6 @@
 .character-source { margin-top: 16px; overflow-wrap: anywhere; }
 .character-source summary { cursor: pointer; }
 .character-source dd { margin: 4px 0 12px; }
+.recruitment-path { margin-block: 10px; overflow-wrap: anywhere; }
+.recruitment-path summary { cursor: pointer; min-height: 44px; padding-block: 10px; }
+.recruitment-path li { margin-block: 10px; line-height: 1.7; }

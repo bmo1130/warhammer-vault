@@ -1,4 +1,6 @@
-const {withoutUnitMissiles}=require('../.test-build/src/repositories/unitMissiles.js');
+const {withoutUnitMissiles:stripMissiles}=require('../.test-build/src/repositories/unitMissiles.js');
+const {withoutUnitRecruitment}=require('../.test-build/src/repositories/unitRecruitment.js');
+const withoutUnitMissiles=unit=>stripMissiles(withoutUnitRecruitment(unit));
 const {withoutUnitResistances}=require('../.test-build/src/repositories/unitResistances.js');
 const {test}=require('node:test');
 const assert=require('node:assert/strict');

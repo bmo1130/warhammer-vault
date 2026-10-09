@@ -74,7 +74,22 @@ export function validateUnits(units: readonly Unit[], factionIds: Iterable<strin
       const field = `campaign.recruitmentRequirements.${index}`;
       if (requirement.factionId !== undefined && !factions.has(requirement.factionId)) issue(`${field}.factionId`, '존재하지 않는 팩션입니다.');
       stableIds(`${field}.conditionIds`, requirement.conditionIds);
+      for(const [key,value] of [['buildingStage',requirement.buildingStage],['requiredPrimaryBuildingLevel',requirement.requiredPrimaryBuildingLevel]] as const){
+        if(value!==undefined&&(!Number.isSafeInteger(value)||value<0))issue(`${field}.${key}`,'CA 건물 단계는 0 이상의 정수여야 합니다.');
+      }
+      if(requirement.sourceStatus==='VERIFIED_DIRECT_SOURCE'&&(!requirement.buildingId||!requirement.buildingChainId||requirement.buildingStage===undefined||!requirement.sourceKey))issue(field,'검증된 직접 모집 조건에는 건물·체인·단계·source key가 필요합니다.');
     });
+    unit.campaign?.recruitmentSources?.forEach((source,index)=>{
+      const field=`campaign.recruitmentSources.${index}`;
+      if(!source.key||!source.reference?.rowId||!source.reference?.table)issue(field,'모집 출처에는 원본 key와 row reference가 필요합니다.');
+      if(source.type==='BUILDING'&&!unit.campaign?.recruitmentRequirements?.some(r=>r.sourceKey===source.requirementKey&&r.buildingId===source.key))issue(field,'건물 출처는 동일 key의 모집 조건을 참조해야 합니다.');
+      if(!['VERIFIED_DIRECT_SOURCE','PARTIAL_SOURCE'].includes(source.status)||source.effectiveStatus!=='PARTIAL_SOURCE')issue(field,'미완결 실효 모집 출처를 확정으로 표시할 수 없습니다.');
+    });
+    const review=unit.campaign?.recruitmentReview;
+    if(review){
+      if(!['PARTIAL','UNKNOWN'].includes(review.status))issue('campaign.recruitmentReview.status','전체 모집 경로 완결은 검증되지 않았습니다.');
+      if((review.status==='PARTIAL')!==Boolean(unit.campaign?.recruitmentSources?.length))issue('campaign.recruitmentReview','PARTIAL에는 확인된 출처가 필요하며 출처 없음은 UNKNOWN입니다.');
+    }
   }
   return issues;
 }

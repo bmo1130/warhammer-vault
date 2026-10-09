@@ -108,13 +108,66 @@ export type UnitRecruitmentRequirement = {
   buildingTier?: number;
   factionId?: string;
   conditionIds?: string[];
+  // CA building identity and zero-based chain stage are distinct from Tier.
+  buildingChainId?: string;
+  buildingStage?: number;
+  requiredPrimaryBuildingLevel?: number;
+  sourceKey?: string;
+  sourceStatus?: 'VERIFIED_DIRECT_SOURCE' | 'PARTIAL_SOURCE';
+  // Campaign faction keys are not the app's race catalog factionId.
+  factionKey?: string;
+  rawConditions?: number;
+  rawEnabled?: boolean;
+};
+export type RecruitmentReference = { table: string; key: Record<string, string | number | boolean>; rowId: string };
+export type UnitRecruitmentSource = {
+  type: 'BUILDING' | 'REGIMENT_OF_RENOWN' | 'MERCENARY_POOL' | 'MERCENARY_GROUP' | 'RECRUITMENT_SOURCE_OVERRIDE' | 'UNIT_UPGRADE' | 'RITUAL_MERCENARY_SPAWN' | 'CORE_MERCENARY_PERMISSION';
+  key: string;
+  status: 'VERIFIED_DIRECT_SOURCE' | 'PARTIAL_SOURCE';
+  effectiveStatus: 'PARTIAL_SOURCE';
+  reference: RecruitmentReference;
+  requirementKey?: string;
+  factionKey?: string;
+  subcultureKey?: string;
+  technologyKey?: string;
+  technologyKeys?: string[];
+  requiredBuildingKeys?: string[];
+  requiredRank?: number;
+  recruitmentSourceKey?: string;
+  costKey?: string;
+  groupKey?: string;
+  initialCount?: number;
+  baseGroupKey?: string;
+  targetGroupKey?: string;
+  resourceCostKey?: string;
+  performingFaction?: boolean;
+  reason?: string;
+};
+export type UnitRecruitmentReview = {
+  status: 'PARTIAL' | 'UNKNOWN';
+  directBuildingStatus: 'COMPLETE' | 'PARTIAL' | 'UNKNOWN';
+  effectiveStatus: 'PARTIAL_SOURCE' | 'UNKNOWN';
+  permissionContext: {
+    militaryGroups: string[];
+    factionOverrides: { factionKey: string; allowed: boolean; reference: RecruitmentReference }[];
+  };
+  unitConditions: null | {
+    additionalBuildingKey: string;
+    resourceKey: string;
+    rawCampaignCap: number;
+    characterLevelConditions: { level: number; factionKey: string; reference: RecruitmentReference }[];
+    capacityConditions: { payloadKey: string; capacity: number; reference: RecruitmentReference }[];
+  };
 };
 export type UnitCampaignData = {
   recruitmentCost?: number;
   upkeep?: number;
   recruitmentTurns?: number;
-  // OR between entries; AND between the conditions within each entry.
+  // OR between candidate paths; AND within each entry. Direct CA paths still
+  // need the separate recruitmentReview before effective eligibility is claimed.
   recruitmentRequirements?: UnitRecruitmentRequirement[];
+  recruitmentSources?: UnitRecruitmentSource[];
+  recruitmentReview?: UnitRecruitmentReview;
   unitCap?: number;
 };
 export type UnitCustomBattleData = { cost?: number };

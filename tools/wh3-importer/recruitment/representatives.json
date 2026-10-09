@@ -1,0 +1,78 @@
+{
+  "liveGameReadings": 0,
+  "limit": "Existing trace implementation plus separate exact-key probes, same CA snapshot. No independent live campaign or building browser measurement. No Legendary Lord exclusivity asserted from a faction permission.",
+  "representatives": [
+    {
+      "category": "BASIC_INFANTRY",
+      "id": "ca_unit_wh_main_emp_inf_spearmen_0",
+      "mainKey": "wh_main_emp_inf_spearmen_0",
+      "landKey": "wh_main_emp_inf_spearmen_0"
+    },
+    {
+      "category": "ELITE_INFANTRY",
+      "id": "ca_unit_wh_main_emp_inf_greatswords",
+      "mainKey": "wh_main_emp_inf_greatswords",
+      "landKey": "wh_main_emp_inf_greatswords"
+    },
+    {
+      "category": "CAVALRY",
+      "id": "ca_unit_wh_main_brt_cav_grail_knights",
+      "mainKey": "wh_main_brt_cav_grail_knights",
+      "landKey": "wh_main_brt_cav_grail_knights"
+    },
+    {
+      "category": "MONSTER",
+      "id": "ca_unit_wh3_main_kho_mon_bloodthirster_0",
+      "mainKey": "wh3_main_kho_mon_bloodthirster_0",
+      "landKey": "wh3_main_kho_mon_bloodthirster_0"
+    },
+    {
+      "category": "ARTILLERY",
+      "id": "ca_unit_wh_main_emp_art_helstorm_rocket_battery",
+      "mainKey": "wh_main_emp_art_helstorm_rocket_battery",
+      "landKey": "wh_main_emp_art_helstorm_rocket_battery"
+    },
+    {
+      "category": "REGIMENT_OF_RENOWN",
+      "id": "ca_unit_wh_dlc04_vmp_inf_sternsmen_0",
+      "mainKey": "wh_dlc04_vmp_inf_sternsmen_0",
+      "landKey": "wh_dlc04_vmp_inf_sternsmen_0"
+    },
+    {
+      "category": "FACTION_PERMISSION_CONTEXT",
+      "id": "ca_unit_wh2_dlc11_cst_mon_animated_hulks_0",
+      "mainKey": "wh2_dlc11_cst_mon_animated_hulks_0",
+      "landKey": "wh2_dlc11_cst_mon_animated_hulks_0"
+    },
+    {
+      "category": "MULTIPLE_BUILDING_CHAINS",
+      "id": "ca_unit_wh_main_emp_inf_swordsmen",
+      "mainKey": "wh_main_emp_inf_swordsmen",
+      "landKey": "wh_main_emp_inf_swordsmen"
+    },
+    {
+      "category": "RITUAL_PAYLOAD",
+      "id": "ca_unit_wh3_dlc25_emp_art_helstorm_rocket_battery_morr",
+      "mainKey": "wh3_dlc25_emp_art_helstorm_rocket_battery_morr",
+      "landKey": "wh3_dlc25_emp_art_helstorm_rocket_battery_morr"
+    },
+    {
+      "category": "UNIT_UPGRADE",
+      "id": "ca_unit_wh_main_chs_inf_chosen_0",
+      "mainKey": "wh_main_chs_inf_chosen_0",
+      "landKey": "wh_main_chs_inf_chosen_0"
+    },
+    {
+      "category": "TECHNOLOGY_UPGRADE_CONDITION",
+      "id": "ca_unit_wh_main_chs_inf_chosen_0",
+      "mainKey": "wh_main_chs_inf_chosen_0",
+      "landKey": "wh_main_chs_inf_chosen_0"
+    },
+    {
+      "category": "UNKNOWN",
+      "id": "ca_unit_wh3_dlc23_chd_veh_iron_daemon_3payload_qb",
+      "mainKey": "wh3_dlc23_chd_veh_iron_daemon_3payload_qb",
+      "landKey": "wh3_dlc23_chd_veh_iron_daemon_3payload_qb"
+    }
+  ]
+}

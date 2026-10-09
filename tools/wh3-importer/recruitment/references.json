@@ -1,0 +1,14 @@
+{
+  "format": "recruitment-semantics-review-v1",
+  "reviewedAt": "2026-10-09",
+  "liveGameReadings": 0,
+  "references": [
+    {
+      "url": "https://tw-modding.com/wiki/Building_units_allowed_tables",
+      "kind": "MOD_AUTHOR_REPORTED_BEHAVIOUR",
+      "finding": "The author's test describes disabling an existing building/unit pair for a named faction with enabled=false. Empty faction does not make a baseline false row a recruitment denial.",
+      "limit": "Independent rule evidence, not a live CA 9.0.2 campaign reading. Contradictory or standalone faction denial is held."
+    }
+  ],
+  "scope": "Direct building permission and special source identity. Campaign construction, startpos, scripts, implicit availability sets, faction permission precedence, local/global eligibility and live unlocks are not a closed proof. Effective sources remain PARTIAL_SOURCE until that proof exists."
+}
