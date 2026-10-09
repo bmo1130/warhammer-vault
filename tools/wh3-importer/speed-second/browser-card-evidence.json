@@ -1,0 +1,38 @@
+{
+  "format": "independent-website-card-observation-v1",
+  "observedAt": "2026-10-09T09:28:42.437Z",
+  "url": "https://twwstats.com/unitscards?compare=1&units=f%3D0%26k%3Dwh_main_brt_cav_pegasus_knights%26m%26r%3D0%26v%3D4512102377651127604&units=f%3D0%26k%3Dwh2_dlc13_huntmarshall_veh_obsinite_gyrocopter_0%26m%26r%3D0%26v%3D4512102377651127604&units=f%3D0%26k%3Dwh_main_vmp_mon_vargheists%26m%26r%3D0%26v%3D4512102377651127604&units=f%3D0%26k%3Dwh3_main_cth_veh_sky_junk_0%26m%26r%3D0%26v%3D4512102377651127604&units=f%3D0%26k%3Dwh2_dlc14_def_inf_harpies_ror_0%26m%26r%3D0%26v%3D4512102377651127604&units=f%3D0%26k%3Dwh_dlc04_vmp_inf_konigstein_stalkers_0%26m%26r%3D0%26v%3D4512102377651127604",
+  "gameVersion": "9.0.0",
+  "gameExecuted": false,
+  "comparisonMode": "No Comparison",
+  "rank": 0,
+  "fatigue": "Fresh",
+  "unitSize": "ULTRA",
+  "kind": "WEBSITE_DERIVED_CARD_NOT_GAME_UI",
+  "cards": [
+    {
+      "mainKey": "wh_main_brt_cav_pegasus_knights",
+      "speed": 105
+    },
+    {
+      "mainKey": "wh2_dlc13_huntmarshall_veh_obsinite_gyrocopter_0",
+      "speed": 100
+    },
+    {
+      "mainKey": "wh_main_vmp_mon_vargheists",
+      "speed": 92
+    },
+    {
+      "mainKey": "wh3_main_cth_veh_sky_junk_0",
+      "speed": 30
+    },
+    {
+      "mainKey": "wh2_dlc14_def_inf_harpies_ror_0",
+      "speed": 82
+    },
+    {
+      "mainKey": "wh_dlc04_vmp_inf_konigstein_stalkers_0",
+      "speed": 31
+    }
+  ]
+}

@@ -137,7 +137,7 @@ test('missile overlay has an exact inverse and all prior slices, Korean names an
     const {...a}=current,{...b}=previous;delete a.missile;delete b.missile;assert.deepEqual(a,b,raw.id);
     if(raw.gameVersion==='sample'){assert.deepEqual(current,previous);assert.equal(unitMissileAdmission(current),undefined);}
   }
-  for(const [path,n] of [['entities.count',1071],['entities.totalHealth',986],['movement.speed',908],['attributes',1107],['passiveAbilities',1105]])assert.equal(production.filter(u=>path.split('.').reduce((v,k)=>v?.[k],u)!==undefined).length,n);
+  for(const [path,n] of [['entities.count',1071],['entities.totalHealth',986],['movement.speed',1099],['attributes',1107],['passiveAbilities',1105]])assert.equal(production.filter(u=>path.split('.').reduce((v,k)=>v?.[k],u)!==undefined).length,n);
   for(const k of ['physical','missile','spell','fire','ward'])assert.equal(production.filter(u=>u.defense.resistances[k]!==undefined).length,1110);
   assert.equal(production.filter(u=>/[가-힣]/.test(u.name)).length,1110);assert.equal(game.listFactions().filter(f=>game.getRosterCoverage(f.id)?.status==='ROSTER COMPLETE').length,23);
 });

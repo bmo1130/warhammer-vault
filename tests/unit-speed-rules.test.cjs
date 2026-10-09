@@ -48,18 +48,18 @@ test('three fit cards and three independently held-out mounted cards select man,
   for(const c of ['ROUND_RUN_X10','FLOOR_RUN_X10','CEIL_RUN_X10'])assert.equal(report.candidateSummary.find(v=>v.candidate===c).manualMatches,6);
 });
 
-test('Production and audit materialize exactly 908 speeds with the three topology rules',async()=>{
-  assert.equal(production.length,1110);assert.equal(production.filter(u=>u.movement.speed!==undefined).length,908);
+test('the original 908-speed report stays immutable while the second overlay increases Production coverage',async()=>{
+  assert.equal(production.length,1110);assert.equal(production.filter(u=>u.movement.speed!==undefined).length,1099);
   assert.deepEqual(report.summary,{production:1110,before:81,after:908,unknownBefore:1029,unknownAfter:202,promoted:827,
     COMPLETE:908,PARTIAL:125,UNKNOWN:77,regressionMatches:81,directManualSamples:6,independentMountedHoldouts:3});
   assert.deepEqual(report.rules.map(r=>[r.stored,r.promoted]),[[683,613],[187,178],[38,36]]);
-  for(const c of report.catalog){assert.equal(game.getUnit(c.id).movement.speed??null,c.prediction.value,c.id);
+  for(const c of report.catalog){if(c.prediction.value!==null)assert.equal(game.getUnit(c.id).movement.speed,c.prediction.value,c.id);
     for(const fields of Object.values(c.roleFields))for(const fact of Object.values(fields).filter(Boolean)){
       assert(report.sourceRows[fact.sourceId].rowId);assert(Array.isArray(report.joinPaths[fact.pathId]));assert(fact.field);
     }
   }
   const {auditUnitData}=await import('../scripts/audit-unit-data.mjs');
-  assert.deepEqual(auditUnitData().coverage['movement.speed'],{known:908,unknown:202});
+  assert.deepEqual(auditUnitData().coverage['movement.speed'],{known:1099,unknown:11});
   assert.equal(report.categories.reduce((n,c)=>n+c.COMPLETE,0),908);
 });
 
@@ -115,13 +115,13 @@ test('exact overlay guards reject version/value drift and cannot hide modified s
   assert.deepEqual(withoutUnitSpeed(changed),changed);assert.equal(unitSpeedAdmission(changed),undefined);
 });
 
-test('Production UnitPage shows newly promoted Speed with derived provenance and leaves flight unresolved',()=>{
+test('Production UnitPage preserves ground provenance and displays flight with its independent raw field',()=>{
   const page=id=>renderToString(React.createElement(MemoryRouter,{initialEntries:['/units/'+id]},React.createElement(Routes,null,
     React.createElement(Route,{path:'/units/:id',element:React.createElement(UnitPage)})))).replace(/<!--.*?-->/g,'');
   const known=page('ca_unit_wh_main_emp_art_great_cannon');assert(known.includes('<span>속도</span><strong>20</strong>'));
   assert(known.includes('검증된 구조 규칙으로 추론'));assert(known.includes('포병 엔진'));assert(known.includes(projection.sourceHash));
   const old=page('ca_unit_wh_main_emp_inf_swordsmen');assert(old.includes('기존 검증값 보존'));assert(old.includes('게임 카드 확인 표본'));
-  const flight=page('ca_unit_wh_main_brt_cav_pegasus_knights');assert(flight.includes('<span>속도</span><strong>미입력</strong>'));
+  const flight=page('ca_unit_wh_main_brt_cav_pegasus_knights');assert(flight.includes('<span>속도</span><strong>105</strong>'));assert(flight.includes('fly_speed 10.5 × 10 = 105'));
 });
 
 test('full catalog, source pins, candidate comparisons and projection replay deterministically',async()=>{

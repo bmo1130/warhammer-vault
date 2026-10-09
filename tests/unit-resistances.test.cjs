@@ -105,7 +105,7 @@ test('resistance overlay is exactly reversible and preserves every previous fiel
     if(raw.gameVersion==='sample')assert.equal(unitResistanceAdmission(after),undefined);
   }
   assert.equal(production.filter(u=>u.entities.count!==undefined).length,1071);assert.equal(production.filter(u=>u.entities.totalHealth!==undefined).length,986);
-  assert.equal(production.filter(u=>u.movement.speed!==undefined).length,908);assert.equal(production.filter(u=>u.attributes!==undefined).length,1107);
+  assert.equal(production.filter(u=>u.movement.speed!==undefined).length,1099);assert.equal(production.filter(u=>u.attributes!==undefined).length,1107);
   assert.equal(production.filter(u=>u.passiveAbilities!==undefined).length,1105);
   assert.equal(production.filter(u=>/[가-힣]/.test(u.name)).length,1110);
   assert.equal(game.listFactions().filter(f=>game.getRosterCoverage(f.id)?.status==='ROSTER COMPLETE').length,23);
@@ -155,5 +155,5 @@ test('all raw sources, schema meanings, references, report and projection replay
   const changed=read(folder+'manifest.json');changed.inputs[0].hash='changed';assert.throws(()=>verifyInputs(changed),/Resistance source drift/);
   const {auditUnitData}=await import('../scripts/audit-unit-data.mjs');const audit=auditUnitData();
   assert.deepEqual(audit.resistanceStatuses,{COMPLETE:1110,PARTIAL:0,UNKNOWN:0});
-  assert.equal(audit.resistances.fire.negative,15);assert.equal(audit.coverage['movement.speed'].known,908);
+  assert.equal(audit.resistances.fire.negative,15);assert.equal(audit.coverage['movement.speed'].known,1099);
 });

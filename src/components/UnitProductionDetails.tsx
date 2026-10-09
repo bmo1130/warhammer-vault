@@ -84,7 +84,7 @@ export default function UnitProductionDetails({ unit }: { unit: Unit }) {
         <p>팩션은 검토된 기본 catalog 분류입니다. 다른 permission을 배제하거나 전체 roster·캠페인 모집 가능성을 확정하지 않습니다.</p>
         <p>{unit.source}</p>
         <p>{unit.sources?.publicStats}</p>
-        {speed && <p>기본 속도: CA {speed.selectedRole === 'man' ? '본체' : speed.selectedRole === 'mount' ? '탈것' : '포병 엔진'} run_speed {speed.rawRunSpeed} × 10 = {speed.value} · {speed.kind === 'PRESERVED_STATIC_SPEED' ? '기존 검증값 보존' : '검증된 구조 규칙으로 추론'}{speed.directCardReference ? ' · 게임 카드 확인 표본' : ''} · source SHA256 {speed.sourceHash}</p>}
+        {speed && <p>기본 속도: CA {speed.selectedRole === 'man' ? '본체' : speed.selectedRole === 'mount' ? '탈것' : '포병 엔진'} {speed.rawField} {speed.rawDisplaySpeed} × 10 = {speed.value} · {speed.kind === 'PRESERVED_STATIC_SPEED' ? '기존 검증값 보존' : '검증된 구조 규칙으로 추론'}{speed.directCardReference ? ' · 게임 카드 확인 표본' : ''} · source SHA256 {speed.sourceHash}</p>}
         {resistances && <p>기본 피해 저항: CA land_units의 명시적 damage_mod 필드 · 퍼센트 단위 그대로 · 원본 및 게임 표시 명칭 검증 · {resistances.status === 'COMPLETE' ? '다섯 저항 확인' : '일부 저항 확인'} · 능력 효과 별도 · source SHA256 {resistances.sourceHash}</p>}
         {missileAdmission && <p>기본 사격: {missileAdmission.status} · {missileAdmission.originalMissile ? '기존 CA 정적 검토값 보존' : 'CA 원본 참조 구조와 필드 검증'} · 조건부 효과 별도 · 게임 카드 실측과 구분 · source SHA256 {missileAdmission.sourceHash}</p>}
         {recruitment && <p>모집 조건·출처: {recruitment.status} · 직접 건물 참조 {recruitment.directBuildingStatus} · 실효 모집 조건 미완결 · CA pack 기반 추론, 캠페인 UI 실측 없음 · source SHA256 {recruitment.sourceHash}</p>}

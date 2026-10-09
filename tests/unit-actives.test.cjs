@@ -38,7 +38,7 @@ test('all existing Unit fields and five original lance lists survive exact overl
   if(b.gameVersion==='sample'){assert.deepEqual(u,b);assert.equal(unitActiveAdmission(u),undefined);}
  }
  assert.equal(production.filter(u=>u.attributes!==undefined).length,1107);assert.equal(production.filter(u=>u.passiveAbilities!==undefined).length,1105);
- assert.equal(production.filter(u=>u.entities.count!==undefined).length,1071);assert.equal(production.filter(u=>u.entities.totalHealth!==undefined).length,986);assert.equal(production.filter(u=>u.movement.speed!==undefined).length,908);
+ assert.equal(production.filter(u=>u.entities.count!==undefined).length,1071);assert.equal(production.filter(u=>u.entities.totalHealth!==undefined).length,986);assert.equal(production.filter(u=>u.movement.speed!==undefined).length,1099);
  for(const k of ['physical','missile','spell','fire','ward'])assert.equal(production.filter(u=>u.defense.resistances?.[k]!==undefined).length,1110);
  assert.equal(game.listFactions().filter(f=>game.getRosterCoverage(f.id)?.status==='ROSTER COMPLETE').length,23);
  assert.deepEqual(validateUnits(game.listUnits(),game.listFactions().map(f=>f.id)),[]);
@@ -46,8 +46,13 @@ test('all existing Unit fields and five original lance lists survive exact overl
 
 test('preceding data JSON bytes and unrelated personal-document/search implementation remain unchanged',()=>{
  const manifest=read(folder+'manifest.json');
- const diff=spawnSync('git',['diff','--name-only',manifest.baselineCommit,'--','src/data','src/lib','src/hooks'],{encoding:'utf8'});assert.equal(diff.status,0);
- assert.deepEqual(diff.stdout.trim().split('\n').filter(Boolean).filter(p=>!['src/data/unitActiveAdmissions.json','src/data/abilityDictionary.json'].includes(p)),[]);
+ const files=spawnSync('git',['ls-tree','-r','--name-only',manifest.baselineCommit,'--','src/data','src/lib','src/hooks'],{encoding:'utf8'});assert.equal(files.status,0);
+ // Later slices add their own overlays. Compare every pre-existing file byte
+ // rather than mistaking a newly committed admission file for baseline drift.
+ for(const path of files.stdout.trim().split('\n').filter(Boolean).filter(p=>!['src/data/unitActiveAdmissions.json','src/data/abilityDictionary.json'].includes(p))){
+  const before=spawnSync('git',['show',manifest.baselineCommit+':'+path],{maxBuffer:128*1024*1024});assert.equal(before.status,0);
+  assert.equal(fs.readFileSync(path,'utf8').replace(/\r\n/g,'\n'),before.stdout.toString().replace(/\r\n/g,'\n'),path);
+ }
 });
 
 test('public ownership requires native type, non-passive flag, unlocked visible default land assignment',()=>{

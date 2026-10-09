@@ -1,0 +1,40 @@
+{
+  "format": "unit-base-card-speed-second-manifest-v1",
+  "baselineCommit": "c122973",
+  "gameVersion": "9.0.2.0",
+  "snapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+  "inputs": [
+    {
+      "file": "src/data/units.json",
+      "hash": "1484a2f8fd9cc39999d9a178a75c074d8a660f0548898742433b5fe19ab760bb"
+    },
+    {
+      "file": "src/data/unitSpeedRuleAdmissions.json",
+      "hash": "feaf8f49f63ca2de61df096182720c721246dea9f4da90b7b36656db7da21bd6"
+    },
+    {
+      "file": "tools/wh3-importer/speed-rules/report.json",
+      "hash": "5402e690994cefe8cc9d0d044e711840bb5491db149f9a3e5170e60d78698f84"
+    },
+    {
+      "file": "tools/wh3-importer/speed-second/stored.source.json",
+      "hash": "2caaeec232ac5316431fc70f34282114fd17e5443963873177e82f7dee86882c"
+    },
+    {
+      "file": "tools/wh3-importer/speed-second/movement.source.json",
+      "hash": "90cb164ff81bc7aebc43d00676e89a0b41be8990be5bc7ed2c420a11d9c96995"
+    },
+    {
+      "file": "tools/wh3-importer/speed-second/reference.source.json",
+      "hash": "6dd573305d3adf4517d02d537b66b0b5721b07092a110da577c70d67f99b48e6"
+    },
+    {
+      "file": "tools/wh3-importer/speed-second/independent.source.json",
+      "hash": "3ad1bb506b64f29da5652404f70b9cf415a7111275a621d57244affb7ab002d1"
+    },
+    {
+      "file": "tools/wh3-importer/speed-second/browser-card-evidence.json",
+      "hash": "84bce63bdcd69ebc06631337455c12a21404a250a1b012be60b1e2dc9f61a856"
+    }
+  ]
+}

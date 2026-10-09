@@ -15,7 +15,8 @@ export function auditUnitData(){
   const entityProjection=read('src/data/unitHpEntityRuleAdmissions.json');
   const entityById=new Map(entityProjection.admissions.map(a=>[a.id,a]));
   const speedProjection=read('src/data/unitSpeedRuleAdmissions.json');
-  const speedById=new Map(speedProjection.admissions.map(a=>[a.id,a]));
+  const speedSecondProjection=read('src/data/unitSpeedSecondAdmissions.json');
+  const speedById=new Map([...speedProjection.admissions,...speedSecondProjection.admissions].map(a=>[a.id,a]));
   const resistanceProjection=read('src/data/unitResistanceAdmissions.json');
   const resistanceById=new Map(resistanceProjection.admissions.map(a=>[a.id,a]));
   const missileProjection=read('src/data/unitMissileAdmissions.json');
