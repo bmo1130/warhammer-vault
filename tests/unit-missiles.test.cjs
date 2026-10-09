@@ -22,6 +22,9 @@ const Details=require('../.test-build/src/components/UnitMissileDetails.js').def
 const UnitPage=require('../.test-build/src/pages/UnitPage.js').default;
 const read=p=>JSON.parse(fs.readFileSync(p)),folder='tools/wh3-importer/missile-rules/';
 const report=read(folder+'report.json'),projection=read('src/data/unitMissileAdmissions.json');
+const damage=read('src/data/unitMissileDamageAdmissions.json'),damageById=new Map(damage.admissions.map(a=>[a.id,a]));
+const effective=projection.admissions.map(a=>({...a,...damageById.get(a.id)}));
+const damageReport=read('tools/wh3-importer/missile-damage/report.json');
 const production=game.listUnits().filter(u=>u.gameVersion!=='sample');
 const core=m=>Object.fromEntries(Object.entries({baseDamage:m?.projectile.baseDamage,armorPiercingDamage:m?.projectile.armorPiercingDamage,range:m?.range,baseTime:m?.reload?.baseTime}).filter(([,v])=>v!==undefined));
 const before=raw=>applyUnitResistances(applyUnitSpeed(applyUnitEntities(applyUnitPassives(applyUnitAttributes(localiseUnit(raw))))));
@@ -30,14 +33,15 @@ const modules=async()=>({...await import('../tools/wh3-importer/missile-rules/pr
 
 test('370 actual missile targets, 740 resolved N/A and four independent field coverages agree in Production',()=>{
   assert.equal(production.length,1110);assert.equal(projection.admissions.length,1110);
-  const expected={baseDamage:155,armorPiercingDamage:149,range:333,baseTime:336};
+  const expected={baseDamage:328,armorPiercingDamage:327,range:333,baseTime:336};
   for(const [k,n] of Object.entries(expected)){
-    assert.equal(production.filter(u=>core(u.missile)[k]!==undefined).length,n);assert.equal(report.summary.perField[k].after,n);
-    assert.equal(report.summary.perField[k].unknownAfter,370-n);assert.equal(report.summary.perField[k].notApplicable,740);
+    assert.equal(production.filter(u=>core(u.missile)[k]!==undefined).length,n);assert.equal(damageReport.summary.fields[k].after,n);
+    assert.equal(report.summary.perField[k].notApplicable,740);
   }
   assert.deepEqual(Object.fromEntries(['COMPLETE','PARTIAL','UNKNOWN','N/A'].map(s=>[s,projection.admissions.filter(a=>a.status===s).length])),{COMPLETE:148,PARTIAL:190,UNKNOWN:32,'N/A':740});
   assert.equal(report.summary.newlyPromotedUnits,321);
-  for(const a of projection.admissions){const u=game.getUnit(a.id);assert.deepEqual(core(u.missile),a.values);assert.equal(unitMissileAdmission(u).status,a.status);if(a.status==='N/A')assert.equal(u.missile,undefined);}
+  assert.deepEqual(Object.fromEntries(['COMPLETE','PARTIAL','UNKNOWN','N/A'].map(s=>[s,effective.filter(a=>a.status===s).length])),{COMPLETE:307,PARTIAL:38,UNKNOWN:25,'N/A':740});
+  for(const a of effective){const u=game.getUnit(a.id);assert.deepEqual(core(u.missile),a.values);assert.equal(unitMissileAdmission(u).status,a.status);if(a.status==='N/A')assert.equal(u.missile,undefined);}
   assert.deepEqual(validateUnits(game.listUnits(),game.listFactions().map(f=>f.id)),[]);
 });
 
@@ -105,7 +109,9 @@ test('explosion, launch count, volley, burst, scaling and vortex hold new damage
     const changed=structuredClone(t);changed.paths[0].projectiles[0].facts[field].value=value;
     assert.deepEqual(predictMissile(changed).values,{range:140,baseTime:11});assert.equal(predictMissile(changed).review.baseDamage.reason,'COMPOSITE_DAMAGE_DISPLAY_HELD');
   }
-  const hel=game.getUnit('ca_unit_wh_main_emp_art_helstorm_rocket_battery');assert.equal(hel.missile.projectile.baseDamage,undefined);assert.equal(hel.missile.range,480);assert.equal(hel.missile.reload.baseTime,17);assert.equal(hel.missile.explosion,undefined);
+  // The immutable first rule remains replayable; the damage slice now admits
+  // the independently proved direct values without modifying that evidence.
+  const hel=game.getUnit('ca_unit_wh_main_emp_art_helstorm_rocket_battery');assert.equal(hel.missile.projectile.baseDamage,30);assert.equal(hel.missile.range,480);assert.equal(hel.missile.reload.baseTime,17);assert.equal(hel.missile.explosion,undefined);
 });
 
 test('precursor/hidden secondary retain positive weapon identity as UNKNOWN; spell damage flag alone never reclassifies a weapon as an ability',async()=>{
@@ -113,7 +119,7 @@ test('precursor/hidden secondary retain positive weapon identity as UNKNOWN; spe
   const t=inspectMissileUnit(missileGraph(s),seed);
   for(const flag of ['precursor','hide_secondary_range_ammo_statistics_ui']){const changed=structuredClone(t);changed.paths[0].flags[flag].value=true;assert.equal(predictMissile(changed).status,'UNKNOWN');}
   const spell=structuredClone(t);spell.paths[0].projectiles[0].facts.is_spell.value=true;assert.equal(predictMissile(spell).status,'COMPLETE');
-  assert.equal(unitMissileAdmission(game.getUnit('ca_unit_wh3_main_kho_mon_soul_grinder_0')).status,'UNKNOWN');
+  assert.equal(unitMissileAdmission(game.getUnit('ca_unit_wh3_main_kho_mon_soul_grinder_0')).status,'PARTIAL');
 });
 
 test('10 independent exact-key traces cover required structures; raw equality is explicitly distinguished from live game UI',()=>{
@@ -158,7 +164,7 @@ test('UI distinguishes N/A, UNKNOWN, per-field partial, raw direct damage and ex
   const partial=html({projectile:{},range:480,reload:{baseTime:17}},'PARTIAL');assert(partial.includes('<span>사거리</span><strong>480</strong>'));assert(partial.includes('<span>발사체 기본 피해</span><strong>미확인</strong>'));
   assert(html({projectile:{baseDamage:0,armorPiercingDamage:0},range:0,reload:{baseTime:0}},'COMPLETE').includes('<span>발사체 기본 피해</span><strong>0</strong>'));
   const page=id=>clean(renderToString(React.createElement(MemoryRouter,{initialEntries:['/units/'+id]},React.createElement(Routes,null,React.createElement(Route,{path:'/units/:id',element:React.createElement(UnitPage)})))));
-  assert(page('ca_unit_wh_main_emp_inf_spearmen_0').includes('정규 사격 무기 없음 (N/A)'));assert(page('ca_unit_wh_main_emp_art_helstorm_rocket_battery').includes('PARTIAL'));assert(page('ca_unit_wh3_main_kho_mon_soul_grinder_0').includes('UNKNOWN'));
+  assert(page('ca_unit_wh_main_emp_inf_spearmen_0').includes('정규 사격 무기 없음 (N/A)'));assert(page('ca_unit_wh_main_emp_art_helstorm_rocket_battery').includes('COMPLETE'));assert(page('ca_unit_wh3_main_kho_mon_soul_grinder_0').includes('PARTIAL'));
   assert(page('ca_unit_wh3_main_cth_inf_peasant_archers_0').includes(projection.sourceHash));
 });
 
@@ -166,6 +172,6 @@ test('all source hashes, compressed evidence, report, projection and target-base
   const {buildMissileRules,verifyInputs}=await import('../tools/wh3-importer/missile-rules/rules.mjs');assert.deepEqual(buildMissileRules(),{report,projection});
   const manifest=read(folder+'manifest.json');manifest.inputs[0].hash='changed';assert.throws(()=>verifyInputs(manifest),/Missile source drift/);
   const {decodeSource}=await modules(),source=read(folder+'catalog.source.json');source.expandedHash='changed';assert.throws(()=>decodeSource(source),/Expanded missile source drift/);
-  const {auditUnitData}=await import('../scripts/audit-unit-data.mjs'),audit=auditUnitData();assert.equal(audit.missileTargets,370);assert.deepEqual(audit.missileStatuses,{COMPLETE:148,PARTIAL:190,UNKNOWN:32,'N/A':740});
+  const {auditUnitData}=await import('../scripts/audit-unit-data.mjs'),audit=auditUnitData();assert.equal(audit.missileTargets,370);assert.deepEqual(audit.missileStatuses,{COMPLETE:307,PARTIAL:38,UNKNOWN:25,'N/A':740});
   assert.equal(audit.coverage['missile.range'].known,333);assert.equal(audit.coverage['missile.range'].unknown,37);assert.equal(audit.coverage['missile.range'].notApplicable,740);
 });

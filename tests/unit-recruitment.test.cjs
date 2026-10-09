@@ -152,5 +152,5 @@ test('compressed sources, pinned inputs, projection/report and live audit replay
   const m=read(folder+'manifest.json');m.inputs[0].hash='drift';assert.throws(()=>verifyInputs(m),/Recruitment source drift/);
   const {decodeSource}=await modules(),s=read(folder+'catalog.source.json');s.expandedHash='drift';assert.throws(()=>decodeSource(s),/expanded source drift/);
   const {auditUnitData}=await import('../scripts/audit-unit-data.mjs'),audit=auditUnitData();assert.equal(audit.coverage['campaign.recruitmentRequirements'].known,758);assert.equal(audit.coverage['campaign.recruitmentSources'].known,1107);assert.equal(audit.recruitment.verifiedEffectiveSources.after,0);
-  assert.deepEqual(audit.missileStatuses,{COMPLETE:148,PARTIAL:190,UNKNOWN:32,'N/A':740});
+  assert.deepEqual(audit.missileStatuses,{COMPLETE:307,PARTIAL:38,UNKNOWN:25,'N/A':740});
 });

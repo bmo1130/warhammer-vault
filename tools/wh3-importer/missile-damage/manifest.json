@@ -1,0 +1,44 @@
+{
+  "format": "ca-missile-direct-damage-rules-v1",
+  "baselineCommit": "6f230f09d6802a9ce00447427705da402f784a86",
+  "gameVersion": "9.0.2.0",
+  "snapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+  "inputs": [
+    {
+      "file": "src/data/unitMissileAdmissions.json",
+      "hash": "f25ccfb6eadfcc06d86f9677d3d1b83c453d12ba46d27ec9aa129276c6747eb5"
+    },
+    {
+      "file": "src/data/units.json",
+      "hash": "1484a2f8fd9cc39999d9a178a75c074d8a660f0548898742433b5fe19ab760bb"
+    },
+    {
+      "file": "tools/wh3-importer/missile-rules/report.json",
+      "hash": "3f95f622a30940ed69835a164d94f2f2172cd4ce9f8a344043bd67d1d2da2890"
+    },
+    {
+      "file": "tools/wh3-importer/missile-rules/catalog.source.json",
+      "hash": "31477724f83e032a1705f7664df0ac758333b6e6550e778e19db71f5c4b24713"
+    },
+    {
+      "file": "tools/wh3-importer/missile-rules/ground-truth.json",
+      "hash": "283d1bb05535df66507caaac7e207e05d8890b1d55a1a4548e30afacf6ee32dd"
+    },
+    {
+      "file": "tools/wh3-importer/missile-rules/ui.source.json",
+      "hash": "3a269bb67096d6dd4d658681d4785d8e5c0294099ab6c70663996105ec5e29ad"
+    },
+    {
+      "file": "tools/wh3-importer/missile-damage/selection.source.json",
+      "hash": "37caa866870f8263c5c748daa67c30a9817cf91b9d752a64dbc6e0315f42d9aa"
+    },
+    {
+      "file": "tools/wh3-importer/missile-damage/validation.source.json",
+      "hash": "1368c78f1c455d4ff8273254106b58537080631394bcdbe1cd258ce2b20da567"
+    },
+    {
+      "file": "tools/wh3-importer/missile-damage/representatives.json",
+      "hash": "e96fc9536292b7f056d0fdc036a7c471e333595f517afa7c077c9194ef56ab61"
+    }
+  ]
+}

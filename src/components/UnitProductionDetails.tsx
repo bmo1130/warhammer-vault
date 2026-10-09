@@ -71,7 +71,7 @@ export default function UnitProductionDetails({ unit }: { unit: Unit }) {
       <div className="stats-card">{damage.map(([label, value]) => <div className="stat" key={label}><span>{label}</span><strong>{value ?? '미입력'}</strong></div>)}</div>
       <p className="data-note">총 무기 피해는 기본 + 관통의 합입니다. 조건부 보너스와 전투·캠페인 효과는 포함하지 않습니다.</p>
     </section>}
-    <UnitMissileDetails missile={missile} status={missileAdmission?.status}/>
+    <UnitMissileDetails missile={missile} status={missileAdmission?.status} profiles={missileAdmission?.profiles}/>
     {missileStats.length > 0 && <section className="section">
       <SectionTitle title="추가 사격 원본"/>
       <div className="stats-card">{missileStats.map(([label, value]) => <div className="stat" key={label}><span>{label}</span><strong>{value}</strong></div>)}</div>

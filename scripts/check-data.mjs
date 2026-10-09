@@ -1,5 +1,8 @@
 import { spawnSync } from 'node:child_process';
 import { prepareEvidenceView } from './evidence-view.mjs';
+const damage = spawnSync(process.execPath, ['scripts/promote-unit-missile-damage.mjs', '--check'], {stdio:'inherit'});
+if (damage.error) throw damage.error;
+if (damage.status !== 0) process.exit(damage.status ?? 1);
 const dictionary = spawnSync(process.execPath, ['scripts/promote-ability-dictionary.mjs', '--check'], {stdio:'inherit'});
 if (dictionary.error) throw dictionary.error;
 if (dictionary.status !== 0) process.exit(dictionary.status ?? 1);

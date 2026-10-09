@@ -19,9 +19,12 @@ export function auditUnitData(){
   const resistanceProjection=read('src/data/unitResistanceAdmissions.json');
   const resistanceById=new Map(resistanceProjection.admissions.map(a=>[a.id,a]));
   const missileProjection=read('src/data/unitMissileAdmissions.json');
+  const damageProjection=read('src/data/unitMissileDamageAdmissions.json');
+  const damageById=new Map(damageProjection.admissions.map(a=>[a.id,a]));
+  const effectiveMissiles=missileProjection.admissions.map(a=>({...a,...damageById.get(a.id)}));
   const recruitmentProjection=read('src/data/unitRecruitmentAdmissions.json');
   const recruitmentById=new Map(recruitmentProjection.admissions.map(a=>[a.id,a]));
-  const missileById=new Map(missileProjection.admissions.map(a=>[a.id,a]));
+  const missileById=new Map(effectiveMissiles.map(a=>[a.id,a]));
   const units=read('src/data/units.json').filter(u=>u.gameVersion!=='sample').map(u=>{
     const a=attributeById.get(u.id),p=passiveById.get(u.id),e=entityById.get(u.id),s=speedById.get(u.id),r=resistanceById.get(u.id);
     return projectMissile({...u,...(a?.attributes!==undefined?{attributes:a.attributes}:{}),...(p?.passiveAbilities!==undefined?{passiveAbilities:p.passiveAbilities}:{}),...(e?{entities:{...u.entities,...(e.count!==null?{count:e.count}:{}),...(e.totalHealth!==null?{totalHealth:e.totalHealth}:{})}}:{}),...(s?{movement:{...u.movement,speed:s.value}}:{}),...(r?{defense:{...u.defense,resistances:{...u.defense.resistances,...r.values}}}:{})},missileById.get(u.id)?.values??{});
@@ -31,7 +34,7 @@ export function auditUnitData(){
   for(const u of units){const a=activeById.get(u.id);if(a?.abilities!==undefined){u.abilities=a.abilities;u.boundAbilities=a.boundAbilities;}}
   const paths=['abilities','passiveAbilities','attributes','entities.count','entities.totalHealth','entities.healthPerEntity','movement.speed','defense.resistances','defense.projectilePenetrationResistance','missile','missile.range','missile.projectile.baseDamage','missile.projectile.armorPiercingDamage','missile.reload.baseTime','missile.projectile.shotsPerVolley','missile.ammunition','missile.accuracy.accuracy','missile.reload.reloadSkill','campaign.recruitmentRequirements','campaign.recruitmentSources'];
   const coverage=Object.fromEntries(paths.map(p=>{const known=units.filter(u=>p.split('.').reduce((v,k)=>v?.[k],u)!==undefined).length;return [p,{known,unknown:total-known}];}));
-  const missileStatuses=Object.fromEntries(['COMPLETE','PARTIAL','UNKNOWN','N/A'].map(k=>[k,missileProjection.admissions.filter(a=>a.status===k).length]));
+  const missileStatuses=Object.fromEntries(['COMPLETE','PARTIAL','UNKNOWN','N/A'].map(k=>[k,effectiveMissiles.filter(a=>a.status===k).length]));
   const missileTargets=total-missileStatuses['N/A'];
   for(const p of ['missile','missile.range','missile.projectile.baseDamage','missile.projectile.armorPiercingDamage','missile.reload.baseTime']) {
     coverage[p]={...coverage[p],unknown:missileTargets-coverage[p].known,notApplicable:missileStatuses['N/A'],targets:missileTargets,
