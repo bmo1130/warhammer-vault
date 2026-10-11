@@ -8,6 +8,8 @@ Production 1,110개 유닛명은 CA `local_kr.pack`의 exact Loc evidence로 한
 지속 능력은 [기본 유닛 passive admission](docs/UNIT_PASSIVE_ADMISSION.md)으로 검증합니다.
 실제 능력 보유 유닛 832개, 확인된 빈 목록 273개, 목록 UNKNOWN 5개입니다.
 보유와 활성 상태를 구분하며 액티브·주문·해금용 능력은 이 승격에서 제외합니다.
+후속 [패시브 효과 정보 확충](docs/UNIT_PASSIVE_EFFECT_PROMOTION.md)은 246개 유닛의 33개 패시브에서
+단계 특성 효과 37개의 한국어 이름·공식 설명과 부여/제거 방향을 제공합니다. 기존 보유 목록은 유지합니다.
 개체 수·HP는 [Ultra 검증 admission](docs/UNIT_ENTITY_HP_ADMISSION.md)으로 관리합니다.
 개체 수는 기존 원본 runtime 10개와 승인된 동일 profile 3개에 한해 13개를 저장합니다.
 HP 13개는 보존하며 나머지 1,097개와 전체 개체당 HP는 미확정으로 유지합니다.

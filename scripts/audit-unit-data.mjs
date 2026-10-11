@@ -9,6 +9,7 @@ export function auditUnitData(){
   const attributeProjection=read('src/data/unitAttributeAdmissions.json');
   const attributeById=new Map(attributeProjection.admissions.map(a=>[a.id,a]));
   const passiveProjection=read('src/data/unitPassiveAdmissions.json');
+  const passiveEffects=read('tools/wh3-importer/passive-effects/admission.json').summary;
   const passiveById=new Map(passiveProjection.admissions.map(a=>[a.id,a]));
   const activeProjection=read('src/data/unitActiveAdmissions.json');
   const activeById=new Map(activeProjection.admissions.map(a=>[a.id,a]));
@@ -87,6 +88,6 @@ export function auditUnitData(){
   coverage['entities.count'].partial=0;
   coverage['entities.totalHealth'].complete=entityProjection.admissions.filter(a=>a.totalHealth!==null).length;
   coverage['entities.totalHealth'].partial=0;
-  return {production:total,sample:read('src/data/units.json').length-total,koreanNames:{known:koreanNames,unknown:total-koreanNames},coverage,actives,recruitment,missileStatuses,missileTargets,resistances,resistanceStatuses,raw,roster:{complete:read('src/data/factionRosters.json').coverage.filter(r=>r.status==='ROSTER COMPLETE').length,lords:read('src/data/lords.json').length,heroes:read('src/data/heroes.json').length,aliases:read('src/data/characterAliases.json').length},traceEvidence:{scope:s.candidates.length,abilityMembership,attributeMembership,buildingSources,rawSpeed,rawHitPoints,materializableWholeGroups:materializable,unmappedDistinctIds:Object.fromEntries(Object.entries(unmapped).map(([k,v])=>[k,v.size]))}};
+  return {production:total,sample:read('src/data/units.json').length-total,koreanNames:{known:koreanNames,unknown:total-koreanNames},coverage,passiveEffects,actives,recruitment,missileStatuses,missileTargets,resistances,resistanceStatuses,raw,roster:{complete:read('src/data/factionRosters.json').coverage.filter(r=>r.status==='ROSTER COMPLETE').length,lords:read('src/data/lords.json').length,heroes:read('src/data/heroes.json').length,aliases:read('src/data/characterAliases.json').length},traceEvidence:{scope:s.candidates.length,abilityMembership,attributeMembership,buildingSources,rawSpeed,rawHitPoints,materializableWholeGroups:materializable,unmappedDistinctIds:Object.fromEntries(Object.entries(unmapped).map(([k,v])=>[k,v.size]))}};
 }
 if(process.argv[1]?.endsWith('audit-unit-data.mjs'))console.log(JSON.stringify(auditUnitData(),null,2));

@@ -28,7 +28,10 @@ export default function AbilityDetails({ability, documentLink = false}: {ability
         <p>대상: {p.relationship !== 'DIRECT' ? '공격 접촉 대상 (직접 범위 효과와 구분)' : [p.targets.self && '자신', p.targets.friends && '아군', p.targets.enemies && '적'].filter(Boolean).join(' · ') || '원본 대상 연결 미지정'} · 지속: {duration(p.duration)}</p>
         {(!p.affectsAllies || !p.affectsEnemies) && <p className="data-note">단계 대상 제한: {p.affectsAllies ? '아군 허용' : '아군 제외'} · {p.affectsEnemies ? '적 허용' : '적 제외'}</p>}
         {p.effects.some(e => ['heal_amount','damage_amount','barrier_heal_amount'].includes(e.field)) && <p>적용 주기: {p.interval}초 · 주기당 개체 제한: {p.maxAffectedEntities < 0 ? '제한 없음' : p.maxAffectedEntities === 0 ? '원본 0 (회복 대상 제한 의미 별도)' : p.maxAffectedEntities}</p>}
-        {p.effects.length ? <ul>{p.effects.map((e,j) => <li key={j}><strong>{e.label}</strong>: {typeof e.value === 'boolean' ? (e.value ? '적용' : '적용하지 않음') : String(e.value)} {e.unit}{e.method && ` · ${e.method}`}</li>)}</ul> : <p className="data-note">이 단계에서 확인된 수치·특성 보정 없음. 외부 효과 참조는 별도 검토합니다.</p>}
+        {p.effects.length ? <ul>{p.effects.map((e,j) => <li key={j}><strong>{e.label}</strong>: {e.attributeOperation ? (e.attributeOperation === 'GRANT' ? '부여' : '제거') : typeof e.value === 'boolean' ? (e.value ? '적용' : '적용하지 않음') : String(e.value)} {e.attributeOperation ? '(능력이 발동한 단계의 효과)' : e.unit}{e.method && ` · ${e.method}`}
+          {e.description && <p className="ability-description">{e.description.text}<small> · {e.description.language === 'ko' ? '공식 한국어 특성 설명' : '공식 영어 특성 설명 · 한국어 미확인'}</small></p>}
+        </li>)}</ul> : <p className="data-note">이 단계에서 확인된 수치·특성 보정 없음. 외부 효과 참조는 별도 검토합니다.</p>}
+        {p.effects.some(e => e.attributeOperation) && <p className="data-note">특성 부여·제거는 이 단계가 적용되는 대상의 효과입니다. 유닛의 기본 보유 특성 목록과 구분합니다.</p>}
       </article>)}
     </section>}
     {ability.contextDescriptions.map(c => <section key={c.key} aria-label="관련 공식 메커니즘"><h3>관련 공식 메커니즘</h3><p className="ability-description">{c.text}</p><small>공식 게임 설명 · 해당 능력의 발동 조건과 구분</small></section>)}

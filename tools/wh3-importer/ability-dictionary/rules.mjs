@@ -29,6 +29,10 @@ export function buildDictionary({attributes,passives,actives,attributeAdmission,
  for(const source of [passives,actives]){
   reference(source,'special_ability_to_special_ability_phase_junctions_tables','phase',['special_ability_phases','id']);
   reference(source,'special_ability_phase_stat_effects_tables','stat',['modifiable_unit_stats','stat_key']);
+  reference(source,'special_ability_phase_attribute_effects_tables','attribute',['unit_attributes','key']);
+  reference(source,'special_ability_phase_attribute_effects_tables','attribute_type',['special_ability_phase_effect_types','effect_type']);
+  const meaning=source.schemas.find(s=>s.table==='special_ability_phase_attribute_effects_tables').fields.find(f=>f.name==='attribute_type').description;
+  assert(meaning.includes('Positive means the affected will have the attribute')&&meaning.includes('Negative means the affected will negate the attribute'),'Unverified attribute grant/removal semantics');
  }
  reference(supplement,'modifiable_unit_stats_tables','localisation',['unit_stat_localisations','stat_key']);
  assert(supplement.schemas.find(s=>s.table==='ui_text_replacements_tables')?.localisedFields.some(f=>f.name==='localised_text'),'Unverified text replacement field');
@@ -79,7 +83,23 @@ export function buildDictionary({attributes,passives,actives,attributeAdmission,
      const stat=one(supplement,'modifiable_unit_stats_tables','stat_key',r.row.stat),name=optionalLoc(locSource,`unit_stat_localisations_onscreen_name_${stat.row.localisation}`);
      effects.push({field:r.row.stat,label:name?.text??r.row.stat,value:r.row.value,rawValue:r.row.value,unit:'CA 보정값',method:r.row.how,sourceRowIds:unique([r.id,stat.id,...(name?.rowIds??[])])});ids.push(r.id,stat.id,...(name?.rowIds??[]));
     }
-    for(const r of rows(source,'special_ability_phase_attribute_effects_tables').filter(r=>r.row.phase===link.key)){effects.push({field:r.row.attribute,label:`특성 ${r.row.attribute}`,value:r.row.attribute_type,rawValue:r.row.attribute_type,unit:'CA 효과 유형',sourceRowIds:[r.id]});ids.push(r.id);}
+    for(const r of rows(source,'special_ability_phase_attribute_effects_tables').filter(r=>r.row.phase===link.key)){
+     if(identity.category!=='PASSIVE'){effects.push({field:r.row.attribute,label:`특성 ${r.row.attribute}`,value:r.row.attribute_type,rawValue:r.row.attribute_type,unit:'CA 효과 유형',sourceRowIds:[r.id]});ids.push(r.id);continue;}
+     assert(['positive','negative'].includes(r.row.attribute_type),'Unreviewed attribute effect type');
+     const definitions=rows(attributes,'unit_attributes_tables').filter(a=>a.row.key===r.row.attribute);
+     assert(definitions.length<=1,'Ambiguous effect attribute identity');
+     let description,name;
+     if(definitions.length){
+      const schema=attributes.schemas.find(s=>s.table==='unit_attributes_tables'&&s.version===definitions[0].tableVersion);
+      assert(schema?.localisedFields.some(f=>f.name==='bullet_text'),'Unverified effect attribute Loc');
+      const text=optionalLoc(locSource,`unit_attributes_bullet_text_${r.row.attribute}`);
+      if(text){const split=text.text.indexOf('\n\n');if(split>0){name=text.text.slice(0,split).trim();const body=text.text.slice(split+2).trim();if(body)description={...text,text:body};}}
+     }
+     const sourceRowIds=unique([r.id,...definitions.map(a=>a.id),...(description?.rowIds??[])]);
+     effects.push({field:r.row.attribute,label:name?`특성 ${name}`:`특성 문구 미확인 (${r.row.attribute})`,value:r.row.attribute_type,rawValue:r.row.attribute_type,unit:'CA 효과 유형',attributeOperation:r.row.attribute_type==='positive'?'GRANT':'REMOVE',...(description?{description}:{}),sourceRowIds});
+     ids.push(...sourceRowIds);
+     if(!description)held.push({rawKey,reason:`Phase attribute ${r.row.attribute}: exact definition or official effect description unresolved; raw effect preserved.`});
+    }
     phases.push({id:link.key,order:link.order,relationship:link.relationship,targets:link.targets,duration:p.row.duration,hidden:p.row.is_hidden_in_ui,interval:p.row.hp_change_frequency,maxAffectedEntities:p.row.max_damaged_entities,affectsAllies:p.row.affects_allies,affectsEnemies:p.row.affects_enemies,effects,sourceRowIds:[p.id,...link.ids]});
     if(p.row.imbue_contact&&!seen.has(p.row.imbue_contact)){seen.add(p.row.imbue_contact);queue.push({key:p.row.imbue_contact,order:link.order,relationship:`CONTACT:${link.key}`,targets:{self:false,friends:false,enemies:false},ids:[p.id]});}
     if(p.row.spreading)held.push({rawKey,reason:`spreading=${p.row.spreading}: propagation not evaluated.`});

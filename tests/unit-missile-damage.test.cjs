@@ -124,10 +124,15 @@ test('fresh exact selections and 12 independent traces are never represented as 
  assert(report.rawComparisons.some(c=>c.outsideScope.length>0));
 });
 
-test('all previous src/data and ability dictionary documentation are byte-equivalent to latest baseline',()=>{
+test('all unrelated src/data and ability dictionary evidence remain byte-equivalent to latest baseline',()=>{
  const commit=read(folder+'manifest.json').baselineCommit;
+ // The later passive-effect slice changes only these four dictionary files.
+ // passive-effects.test.cjs checks an exact inverse of every admitted change;
+ // all other files, including source/manifest/reference, keep the byte guard.
+ const passiveEffectFiles=new Set(['src/data/abilityDictionary.json','tools/wh3-importer/ability-dictionary/rules.mjs','tools/wh3-importer/ability-dictionary/RULES.md','tools/wh3-importer/ability-dictionary/AUDIT.md']);
  const paths=spawnSync('git',['ls-tree','-r','--name-only',commit,'--','src/data','tools/wh3-importer/ability-dictionary','docs'],{encoding:'utf8'});assert.equal(paths.status,0);
  for(const path of paths.stdout.trim().split('\n')){
+  if(passiveEffectFiles.has(path))continue;
   const old=spawnSync('git',['show',commit+':'+path],{maxBuffer:128*1024*1024});assert.equal(old.status,0);
   assert.equal(fs.readFileSync(path,'utf8').replace(/\r\n/g,'\n'),old.stdout.toString().replace(/\r\n/g,'\n'),path);
  }

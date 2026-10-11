@@ -3,6 +3,7 @@ export interface AbilityText { text: string; language: string; key: string; rowI
 export interface AbilityEffect {
   field: string; label: string; value: number | string | boolean; rawValue: number | string | boolean;
   unit: string; method?: string; sourceRowIds: string[];
+  attributeOperation?: 'GRANT' | 'REMOVE'; description?: AbilityText;
 }
 export interface AbilityPhase {
   id: string; order: number; relationship: string; targets: {self: boolean; friends: boolean; enemies: boolean};

@@ -2213,12 +2213,23 @@
             },
             {
               "field": "immune_to_psychology",
-              "label": "특성 immune_to_psychology",
+              "label": "특성 심리 면역",
               "value": "positive",
               "rawValue": "positive",
               "unit": "CA 효과 유형",
+              "attributeOperation": "GRANT",
+              "description": {
+                "key": "unit_attributes_bullet_text_immune_to_psychology",
+                "text": "이 부대는 심리 공격(공포와 섬뜩함)에 영향을 받지 않습니다.",
+                "rowIds": [
+                  "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_immune_to_psychology"
+                ],
+                "language": "ko"
+              },
               "sourceRowIds": [
-                "special_ability_phase_attribute_effects_tables:1735fe14680c54d6e5cf"
+                "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_immune_to_psychology",
+                "special_ability_phase_attribute_effects_tables:1735fe14680c54d6e5cf",
+                "unit_attributes_tables:a605bc58e42f26309483"
               ]
             }
           ],
@@ -2315,6 +2326,7 @@
         "local_kr.pack:text/localisation__.loc:ui_text_replacements_localised_text_morale",
         "local_kr.pack:text/localisation__.loc:unit_abilities_onscreen_name_wh_main_unit_passive_frenzy",
         "local_kr.pack:text/localisation__.loc:unit_abilities_tooltip_text_wh_main_unit_passive_frenzy",
+        "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_immune_to_psychology",
         "local_kr.pack:text/localisation__.loc:unit_stat_localisations_onscreen_name_stat_charge_bonus",
         "local_kr.pack:text/localisation__.loc:unit_stat_localisations_onscreen_name_stat_melee_attack",
         "local_kr.pack:text/localisation__.loc:unit_stat_localisations_onscreen_name_stat_melee_damage_ap",
@@ -2333,6 +2345,7 @@
         "special_ability_to_special_ability_phase_junctions_tables:c77c3ccb6219849bedc4",
         "unit_abilities_tables:3cdd05be8e3977dfb54e",
         "unit_ability_source_types_tables:014b15f27a8f723f4c5b",
+        "unit_attributes_tables:a605bc58e42f26309483",
         "unit_special_abilities_tables:bec2010b90f48e721563"
       ]
     },
@@ -3824,12 +3837,23 @@
             },
             {
               "field": "causes_fear",
-              "label": "특성 causes_fear",
+              "label": "특성 공포 유발",
               "value": "positive",
               "rawValue": "positive",
               "unit": "CA 효과 유형",
+              "attributeOperation": "GRANT",
+              "description": {
+                "key": "unit_attributes_bullet_text_causes_fear",
+                "text": "이 부대는 근처의 모든 적 부대에 겁을 주고 리더십을 꺾습니다. 또한 이 부대는 공포의 영향을 받지 않습니다. 공포 효과는 누적되지 않습니다.",
+                "rowIds": [
+                  "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_causes_fear"
+                ],
+                "language": "ko"
+              },
               "sourceRowIds": [
-                "special_ability_phase_attribute_effects_tables:d495ae003f9427597481"
+                "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_causes_fear",
+                "special_ability_phase_attribute_effects_tables:d495ae003f9427597481",
+                "unit_attributes_tables:9049777ddf284bde58f1"
               ]
             }
           ],
@@ -3940,6 +3964,7 @@
         "local_kr.pack:text/localisation__.loc:ui_text_replacements_localised_text_morale",
         "local_kr.pack:text/localisation__.loc:unit_abilities_onscreen_name_wh2_main_faction_abilities_murderous_mastery",
         "local_kr.pack:text/localisation__.loc:unit_abilities_tooltip_text_wh2_main_faction_abilities_murderous_mastery",
+        "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_causes_fear",
         "local_kr.pack:text/localisation__.loc:unit_stat_localisations_onscreen_name_scalar_missile_damage_ap",
         "local_kr.pack:text/localisation__.loc:unit_stat_localisations_onscreen_name_stat_charge_bonus",
         "local_kr.pack:text/localisation__.loc:unit_stat_localisations_onscreen_name_stat_melee_attack",
@@ -3959,6 +3984,7 @@
         "special_ability_to_special_ability_phase_junctions_tables:663b0de6eefe16471a36",
         "unit_abilities_tables:c217d3fdc01458086eb8",
         "unit_ability_source_types_tables:014b15f27a8f723f4c5b",
+        "unit_attributes_tables:9049777ddf284bde58f1",
         "unit_special_abilities_tables:73a0724817efd82c3870"
       ]
     },
@@ -5991,12 +6017,23 @@
             },
             {
               "field": "immune_to_psychology",
-              "label": "특성 immune_to_psychology",
+              "label": "특성 심리 면역",
               "value": "positive",
               "rawValue": "positive",
               "unit": "CA 효과 유형",
+              "attributeOperation": "GRANT",
+              "description": {
+                "key": "unit_attributes_bullet_text_immune_to_psychology",
+                "text": "이 부대는 심리 공격(공포와 섬뜩함)에 영향을 받지 않습니다.",
+                "rowIds": [
+                  "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_immune_to_psychology"
+                ],
+                "language": "ko"
+              },
               "sourceRowIds": [
-                "special_ability_phase_attribute_effects_tables:ea8339b00fae25fc9d33"
+                "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_immune_to_psychology",
+                "special_ability_phase_attribute_effects_tables:ea8339b00fae25fc9d33",
+                "unit_attributes_tables:a605bc58e42f26309483"
               ]
             }
           ],
@@ -6076,6 +6113,7 @@
         "local_en.pack:text/db/unit_abilities__.loc:unit_abilities_tooltip_text_wh_dlc03_unit_passive_bloodgreed",
         "local_kr.pack:text/localisation__.loc:unit_abilities_onscreen_name_wh_dlc03_unit_passive_bloodgreed",
         "local_kr.pack:text/localisation__.loc:unit_abilities_tooltip_text_wh_dlc03_unit_passive_bloodgreed",
+        "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_immune_to_psychology",
         "local_kr.pack:text/localisation__.loc:unit_stat_localisations_onscreen_name_stat_charge_bonus",
         "local_kr.pack:text/localisation__.loc:unit_stat_localisations_onscreen_name_stat_melee_attack",
         "local_kr.pack:text/localisation__.loc:unit_stat_localisations_onscreen_name_stat_melee_damage_ap",
@@ -6090,6 +6128,7 @@
         "special_ability_to_special_ability_phase_junctions_tables:dcb386effc2624de083d",
         "unit_abilities_tables:00e8f5aba465d99fff29",
         "unit_ability_source_types_tables:014b15f27a8f723f4c5b",
+        "unit_attributes_tables:a605bc58e42f26309483",
         "unit_special_abilities_tables:02fb92e58a8ec6da14e1"
       ]
     },
@@ -6155,12 +6194,23 @@
             },
             {
               "field": "fatigue_immune",
-              "label": "특성 fatigue_immune",
+              "label": "특성 완벽한 활력",
               "value": "positive",
               "rawValue": "positive",
               "unit": "CA 효과 유형",
+              "attributeOperation": "GRANT",
+              "description": {
+                "key": "unit_attributes_bullet_text_fatigue_immune",
+                "text": "아무리 피로를 유발하는 행동을 해도 이 부대는 활력을 잃지 않습니다.",
+                "rowIds": [
+                  "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_fatigue_immune"
+                ],
+                "language": "ko"
+              },
               "sourceRowIds": [
-                "special_ability_phase_attribute_effects_tables:071812658316a0a798c4"
+                "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_fatigue_immune",
+                "special_ability_phase_attribute_effects_tables:071812658316a0a798c4",
+                "unit_attributes_tables:ed318ae0a688b1c65c64"
               ]
             }
           ],
@@ -6257,6 +6307,7 @@
         "local_kr.pack:text/localisation__.loc:ui_text_replacements_localised_text_morale",
         "local_kr.pack:text/localisation__.loc:unit_abilities_onscreen_name_wh_dlc03_unit_passive_drunken",
         "local_kr.pack:text/localisation__.loc:unit_abilities_tooltip_text_wh_dlc03_unit_passive_drunken",
+        "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_fatigue_immune",
         "local_kr.pack:text/localisation__.loc:unit_stat_localisations_onscreen_name_stat_morale",
         "modifiable_unit_stats_tables:67f6d9fc322294db3c18",
         "special_ability_phase_attribute_effects_tables:071812658316a0a798c4",
@@ -6266,6 +6317,7 @@
         "special_ability_to_special_ability_phase_junctions_tables:ac24f4559eec433124d7",
         "unit_abilities_tables:3763de3c612e4ade2081",
         "unit_ability_source_types_tables:014b15f27a8f723f4c5b",
+        "unit_attributes_tables:ed318ae0a688b1c65c64",
         "unit_special_abilities_tables:d6f351085e12e3d287f7"
       ]
     },
@@ -6357,12 +6409,23 @@
             },
             {
               "field": "immune_to_psychology",
-              "label": "특성 immune_to_psychology",
+              "label": "특성 심리 면역",
               "value": "positive",
               "rawValue": "positive",
               "unit": "CA 효과 유형",
+              "attributeOperation": "GRANT",
+              "description": {
+                "key": "unit_attributes_bullet_text_immune_to_psychology",
+                "text": "이 부대는 심리 공격(공포와 섬뜩함)에 영향을 받지 않습니다.",
+                "rowIds": [
+                  "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_immune_to_psychology"
+                ],
+                "language": "ko"
+              },
               "sourceRowIds": [
-                "special_ability_phase_attribute_effects_tables:b0fb520a6641953d1e39"
+                "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_immune_to_psychology",
+                "special_ability_phase_attribute_effects_tables:b0fb520a6641953d1e39",
+                "unit_attributes_tables:a605bc58e42f26309483"
               ]
             }
           ],
@@ -6459,6 +6522,7 @@
         "local_kr.pack:text/localisation__.loc:ui_text_replacements_localised_text_morale",
         "local_kr.pack:text/localisation__.loc:unit_abilities_onscreen_name_wh_dlc03_unit_passive_primal_fury",
         "local_kr.pack:text/localisation__.loc:unit_abilities_tooltip_text_wh_dlc03_unit_passive_primal_fury",
+        "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_immune_to_psychology",
         "local_kr.pack:text/localisation__.loc:unit_stat_localisations_onscreen_name_scalar_speed",
         "local_kr.pack:text/localisation__.loc:unit_stat_localisations_onscreen_name_stat_charge_bonus",
         "local_kr.pack:text/localisation__.loc:unit_stat_localisations_onscreen_name_stat_melee_attack",
@@ -6474,6 +6538,7 @@
         "special_ability_to_special_ability_phase_junctions_tables:fbae13de4d850895551f",
         "unit_abilities_tables:70cf3655fe07923abfef",
         "unit_ability_source_types_tables:014b15f27a8f723f4c5b",
+        "unit_attributes_tables:a605bc58e42f26309483",
         "unit_special_abilities_tables:fa0a06b1295685aa6fd5"
       ]
     },
@@ -11475,12 +11540,23 @@
             },
             {
               "field": "immune_to_psychology",
-              "label": "특성 immune_to_psychology",
+              "label": "특성 심리 면역",
               "value": "positive",
               "rawValue": "positive",
               "unit": "CA 효과 유형",
+              "attributeOperation": "GRANT",
+              "description": {
+                "key": "unit_attributes_bullet_text_immune_to_psychology",
+                "text": "이 부대는 심리 공격(공포와 섬뜩함)에 영향을 받지 않습니다.",
+                "rowIds": [
+                  "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_immune_to_psychology"
+                ],
+                "language": "ko"
+              },
               "sourceRowIds": [
-                "special_ability_phase_attribute_effects_tables:6cf956a3f816c5dfc55d"
+                "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_immune_to_psychology",
+                "special_ability_phase_attribute_effects_tables:6cf956a3f816c5dfc55d",
+                "unit_attributes_tables:a605bc58e42f26309483"
               ]
             }
           ],
@@ -11560,6 +11636,7 @@
         "local_en.pack:text/db/unit_abilities__.loc:unit_abilities_tooltip_text_wh_dlc07_unit_passive_icon_of_devotion",
         "local_kr.pack:text/localisation__.loc:unit_abilities_onscreen_name_wh_dlc07_unit_passive_icon_of_devotion",
         "local_kr.pack:text/localisation__.loc:unit_abilities_tooltip_text_wh_dlc07_unit_passive_icon_of_devotion",
+        "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_immune_to_psychology",
         "local_kr.pack:text/localisation__.loc:unit_stat_localisations_onscreen_name_stat_melee_attack",
         "local_kr.pack:text/localisation__.loc:unit_stat_localisations_onscreen_name_stat_morale",
         "modifiable_unit_stats_tables:409637abb3a31e90d18d",
@@ -11571,6 +11648,7 @@
         "special_ability_to_special_ability_phase_junctions_tables:66fc428a1193c46d4eb5",
         "unit_abilities_tables:5168a121778a9463d8b5",
         "unit_ability_source_types_tables:014b15f27a8f723f4c5b",
+        "unit_attributes_tables:a605bc58e42f26309483",
         "unit_special_abilities_tables:b47a841fd0b338e7b300"
       ]
     },
@@ -11623,12 +11701,23 @@
           "effects": [
             {
               "field": "immune_to_psychology",
-              "label": "특성 immune_to_psychology",
+              "label": "특성 심리 면역",
               "value": "positive",
               "rawValue": "positive",
               "unit": "CA 효과 유형",
+              "attributeOperation": "GRANT",
+              "description": {
+                "key": "unit_attributes_bullet_text_immune_to_psychology",
+                "text": "이 부대는 심리 공격(공포와 섬뜩함)에 영향을 받지 않습니다.",
+                "rowIds": [
+                  "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_immune_to_psychology"
+                ],
+                "language": "ko"
+              },
               "sourceRowIds": [
-                "special_ability_phase_attribute_effects_tables:7c5d21f0a2de00274ddd"
+                "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_immune_to_psychology",
+                "special_ability_phase_attribute_effects_tables:7c5d21f0a2de00274ddd",
+                "unit_attributes_tables:a605bc58e42f26309483"
               ]
             }
           ],
@@ -11718,12 +11807,14 @@
         "local_kr.pack:text/localisation__.loc:special_ability_invalid_usage_flags_flag_description_unit_is_not_charging",
         "local_kr.pack:text/localisation__.loc:unit_abilities_onscreen_name_wh_dlc07_unit_passive_impetuous",
         "local_kr.pack:text/localisation__.loc:unit_abilities_tooltip_text_wh_dlc07_unit_passive_impetuous",
+        "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_immune_to_psychology",
         "special_ability_phase_attribute_effects_tables:7c5d21f0a2de00274ddd",
         "special_ability_phases_tables:b8a10898f874515daf23",
         "special_ability_to_auto_deactivate_flags_tables:4c60ae9febb174662332",
         "special_ability_to_special_ability_phase_junctions_tables:817cdaa4eb3f79d6e097",
         "unit_abilities_tables:cf4811bff2726510d1a5",
         "unit_ability_source_types_tables:014b15f27a8f723f4c5b",
+        "unit_attributes_tables:a605bc58e42f26309483",
         "unit_special_abilities_tables:8f0faae3e2bfb344d2e3"
       ]
     },
@@ -12228,12 +12319,23 @@
             },
             {
               "field": "rampage",
-              "label": "특성 rampage",
+              "label": "특성 난동",
               "value": "positive",
               "rawValue": "positive",
               "unit": "CA 효과 유형",
+              "attributeOperation": "GRANT",
+              "description": {
+                "key": "unit_attributes_bullet_text_rampage",
+                "text": "난동 중인 부대는 통제가 불가능하며 가장 가까운 적 부대를 공격합니다.\n근처에 적이 없다면 난동 중인 부대는 주변을 멋대로 방황합니다.",
+                "rowIds": [
+                  "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_rampage"
+                ],
+                "language": "ko"
+              },
               "sourceRowIds": [
-                "special_ability_phase_attribute_effects_tables:264b47a6767c0e201d5e"
+                "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_rampage",
+                "special_ability_phase_attribute_effects_tables:264b47a6767c0e201d5e",
+                "unit_attributes_tables:d17efefdc0d4f2fcb463"
               ]
             }
           ],
@@ -12344,6 +12446,7 @@
         "local_kr.pack:text/localisation__.loc:ui_text_replacements_localised_text_morale",
         "local_kr.pack:text/localisation__.loc:unit_abilities_onscreen_name_wh_dlc08_unit_passive_berserk",
         "local_kr.pack:text/localisation__.loc:unit_abilities_tooltip_text_wh_dlc08_unit_passive_berserk",
+        "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_rampage",
         "local_kr.pack:text/localisation__.loc:unit_stat_localisations_onscreen_name_stat_melee_attack",
         "local_kr.pack:text/localisation__.loc:unit_stat_localisations_onscreen_name_stat_resistance_physical",
         "modifiable_unit_stats_tables:409637abb3a31e90d18d",
@@ -12361,6 +12464,7 @@
         "special_ability_to_special_ability_phase_junctions_tables:665fae64d1c366326f1c",
         "unit_abilities_tables:94ad4666bbe0f99ae1a0",
         "unit_ability_source_types_tables:014b15f27a8f723f4c5b",
+        "unit_attributes_tables:d17efefdc0d4f2fcb463",
         "unit_special_abilities_tables:ba0f042f13cd9d8bdb00"
       ]
     },
@@ -20805,12 +20909,23 @@
           "effects": [
             {
               "field": "immune_to_psychology",
-              "label": "특성 immune_to_psychology",
+              "label": "특성 심리 면역",
               "value": "positive",
               "rawValue": "positive",
               "unit": "CA 효과 유형",
+              "attributeOperation": "GRANT",
+              "description": {
+                "key": "unit_attributes_bullet_text_immune_to_psychology",
+                "text": "이 부대는 심리 공격(공포와 섬뜩함)에 영향을 받지 않습니다.",
+                "rowIds": [
+                  "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_immune_to_psychology"
+                ],
+                "language": "ko"
+              },
               "sourceRowIds": [
-                "special_ability_phase_attribute_effects_tables:e7e6236d11ac3afb4890"
+                "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_immune_to_psychology",
+                "special_ability_phase_attribute_effects_tables:e7e6236d11ac3afb4890",
+                "unit_attributes_tables:a605bc58e42f26309483"
               ]
             }
           ],
@@ -20885,11 +21000,13 @@
         "local_en.pack:text/db/unit_abilities__.loc:unit_abilities_tooltip_text_wh2_dlc12_unit_passive_demagoguery",
         "local_kr.pack:text/localisation__.loc:unit_abilities_onscreen_name_wh2_dlc12_unit_passive_demagoguery",
         "local_kr.pack:text/localisation__.loc:unit_abilities_tooltip_text_wh2_dlc12_unit_passive_demagoguery",
+        "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_immune_to_psychology",
         "special_ability_phase_attribute_effects_tables:e7e6236d11ac3afb4890",
         "special_ability_phases_tables:b4c9c6f088e421b0fe73",
         "special_ability_to_special_ability_phase_junctions_tables:e5d05c6959e0c704573b",
         "unit_abilities_tables:15ba08cba60cd72cbcac",
         "unit_ability_source_types_tables:014b15f27a8f723f4c5b",
+        "unit_attributes_tables:a605bc58e42f26309483",
         "unit_special_abilities_tables:645cec8660bcf17685d0"
       ]
     },
@@ -21973,12 +22090,23 @@
           "effects": [
             {
               "field": "immune_to_psychology",
-              "label": "특성 immune_to_psychology",
+              "label": "특성 심리 면역",
               "value": "positive",
               "rawValue": "positive",
               "unit": "CA 효과 유형",
+              "attributeOperation": "GRANT",
+              "description": {
+                "key": "unit_attributes_bullet_text_immune_to_psychology",
+                "text": "이 부대는 심리 공격(공포와 섬뜩함)에 영향을 받지 않습니다.",
+                "rowIds": [
+                  "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_immune_to_psychology"
+                ],
+                "language": "ko"
+              },
               "sourceRowIds": [
-                "special_ability_phase_attribute_effects_tables:90217f59cb1ea43bfa91"
+                "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_immune_to_psychology",
+                "special_ability_phase_attribute_effects_tables:90217f59cb1ea43bfa91",
+                "unit_attributes_tables:a605bc58e42f26309483"
               ]
             }
           ],
@@ -22068,12 +22196,14 @@
         "local_kr.pack:text/localisation__.loc:special_ability_invalid_usage_flags_flag_description_out_of_melee",
         "local_kr.pack:text/localisation__.loc:unit_abilities_onscreen_name_wh2_dlc13_unit_passive_grim_resolve",
         "local_kr.pack:text/localisation__.loc:unit_abilities_tooltip_text_wh2_dlc13_unit_passive_grim_resolve",
+        "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_immune_to_psychology",
         "special_ability_phase_attribute_effects_tables:90217f59cb1ea43bfa91",
         "special_ability_phases_tables:b49b3894c1a30a2a1d15",
         "special_ability_to_auto_deactivate_flags_tables:447900afd1d67df6abc7",
         "special_ability_to_special_ability_phase_junctions_tables:76a47428248e9a603e19",
         "unit_abilities_tables:9496736038888d33982b",
         "unit_ability_source_types_tables:014b15f27a8f723f4c5b",
+        "unit_attributes_tables:a605bc58e42f26309483",
         "unit_special_abilities_tables:9254a74ca7569ac147b4"
       ]
     },
@@ -25093,12 +25223,23 @@
             },
             {
               "field": "immune_to_psychology",
-              "label": "특성 immune_to_psychology",
+              "label": "특성 심리 면역",
               "value": "positive",
               "rawValue": "positive",
               "unit": "CA 효과 유형",
+              "attributeOperation": "GRANT",
+              "description": {
+                "key": "unit_attributes_bullet_text_immune_to_psychology",
+                "text": "이 부대는 심리 공격(공포와 섬뜩함)에 영향을 받지 않습니다.",
+                "rowIds": [
+                  "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_immune_to_psychology"
+                ],
+                "language": "ko"
+              },
               "sourceRowIds": [
-                "special_ability_phase_attribute_effects_tables:7e8647df8f575b7cc6da"
+                "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_immune_to_psychology",
+                "special_ability_phase_attribute_effects_tables:7e8647df8f575b7cc6da",
+                "unit_attributes_tables:a605bc58e42f26309483"
               ]
             }
           ],
@@ -25173,11 +25314,13 @@
         "local_en.pack:text/db/unit_abilities__.loc:unit_abilities_tooltip_text_wh2_dlc15_unit_passive_omen_of_hope",
         "local_kr.pack:text/localisation__.loc:unit_abilities_onscreen_name_wh2_dlc15_unit_passive_omen_of_hope",
         "local_kr.pack:text/localisation__.loc:unit_abilities_tooltip_text_wh2_dlc15_unit_passive_omen_of_hope",
+        "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_immune_to_psychology",
         "special_ability_phase_attribute_effects_tables:7e8647df8f575b7cc6da",
         "special_ability_phases_tables:fdd04c7fe2a567ddc155",
         "special_ability_to_special_ability_phase_junctions_tables:edc0b72b556f18d33e99",
         "unit_abilities_tables:ed0f8cdf7a80e0eda2e6",
         "unit_ability_source_types_tables:014b15f27a8f723f4c5b",
+        "unit_attributes_tables:a605bc58e42f26309483",
         "unit_special_abilities_tables:c21486b5a69a36e8b391"
       ]
     },
@@ -26034,12 +26177,23 @@
             },
             {
               "field": "rampage",
-              "label": "특성 rampage",
+              "label": "특성 난동",
               "value": "positive",
               "rawValue": "positive",
               "unit": "CA 효과 유형",
+              "attributeOperation": "GRANT",
+              "description": {
+                "key": "unit_attributes_bullet_text_rampage",
+                "text": "난동 중인 부대는 통제가 불가능하며 가장 가까운 적 부대를 공격합니다.\n근처에 적이 없다면 난동 중인 부대는 주변을 멋대로 방황합니다.",
+                "rowIds": [
+                  "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_rampage"
+                ],
+                "language": "ko"
+              },
               "sourceRowIds": [
-                "special_ability_phase_attribute_effects_tables:883bd78cc2ed1def8a78"
+                "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_rampage",
+                "special_ability_phase_attribute_effects_tables:883bd78cc2ed1def8a78",
+                "unit_attributes_tables:d17efefdc0d4f2fcb463"
               ]
             }
           ],
@@ -26134,6 +26288,7 @@
         "local_kr.pack:text/localisation__.loc:special_ability_invalid_usage_flags_flag_description_health_above_25%",
         "local_kr.pack:text/localisation__.loc:unit_abilities_onscreen_name_wh2_dlc15_unit_passive_rubble_and_ruin_tier_3",
         "local_kr.pack:text/localisation__.loc:unit_abilities_tooltip_text_wh2_dlc15_unit_passive_rubble_and_ruin_tier_3",
+        "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_rampage",
         "local_kr.pack:text/localisation__.loc:unit_stat_localisations_onscreen_name_stat_armour",
         "local_kr.pack:text/localisation__.loc:unit_stat_localisations_onscreen_name_stat_melee_damage_ap",
         "modifiable_unit_stats_tables:30e45f7e07051dae2680",
@@ -26146,6 +26301,7 @@
         "special_ability_to_special_ability_phase_junctions_tables:7b99dd188de233a3dd09",
         "unit_abilities_tables:07b0704732b4bda76960",
         "unit_ability_source_types_tables:014b15f27a8f723f4c5b",
+        "unit_attributes_tables:d17efefdc0d4f2fcb463",
         "unit_special_abilities_tables:a2502aa65f193cf85a87"
       ]
     },
@@ -28382,12 +28538,23 @@
             },
             {
               "field": "fatigue_immune",
-              "label": "특성 fatigue_immune",
+              "label": "특성 완벽한 활력",
               "value": "positive",
               "rawValue": "positive",
               "unit": "CA 효과 유형",
+              "attributeOperation": "GRANT",
+              "description": {
+                "key": "unit_attributes_bullet_text_fatigue_immune",
+                "text": "아무리 피로를 유발하는 행동을 해도 이 부대는 활력을 잃지 않습니다.",
+                "rowIds": [
+                  "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_fatigue_immune"
+                ],
+                "language": "ko"
+              },
               "sourceRowIds": [
-                "special_ability_phase_attribute_effects_tables:dcba56864e7974c9fe43"
+                "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_fatigue_immune",
+                "special_ability_phase_attribute_effects_tables:dcba56864e7974c9fe43",
+                "unit_attributes_tables:ed318ae0a688b1c65c64"
               ]
             }
           ],
@@ -28485,6 +28652,7 @@
         "local_kr.pack:text/localisation__.loc:ui_text_replacements_localised_text_morale",
         "local_kr.pack:text/localisation__.loc:unit_abilities_onscreen_name_wh2_dlc17_unit_passive_drunken_bravado",
         "local_kr.pack:text/localisation__.loc:unit_abilities_tooltip_text_wh2_dlc17_unit_passive_drunken_bravado",
+        "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_fatigue_immune",
         "local_kr.pack:text/localisation__.loc:unit_stat_localisations_onscreen_name_stat_morale",
         "modifiable_unit_stats_tables:67f6d9fc322294db3c18",
         "special_ability_phase_attribute_effects_tables:dcba56864e7974c9fe43",
@@ -28494,6 +28662,7 @@
         "special_ability_to_special_ability_phase_junctions_tables:1695eab3804f0a5fe078",
         "unit_abilities_tables:734f0e150b5ec0f19c21",
         "unit_ability_source_types_tables:014b15f27a8f723f4c5b",
+        "unit_attributes_tables:ed318ae0a688b1c65c64",
         "unit_special_abilities_tables:0e8c1c632eeaf45ba2d6"
       ]
     },
@@ -28546,12 +28715,23 @@
           "effects": [
             {
               "field": "stalk",
-              "label": "특성 stalk",
+              "label": "특성 암행",
               "value": "positive",
               "rawValue": "positive",
               "unit": "CA 효과 유형",
+              "attributeOperation": "GRANT",
+              "description": {
+                "key": "unit_attributes_bullet_text_stalk",
+                "text": "이 부대는 어떤 지형에서건 숨은 상태로 움직일 수 있습니다.",
+                "rowIds": [
+                  "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_stalk"
+                ],
+                "language": "ko"
+              },
               "sourceRowIds": [
-                "special_ability_phase_attribute_effects_tables:941a22952bec6d5f0981"
+                "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_stalk",
+                "special_ability_phase_attribute_effects_tables:941a22952bec6d5f0981",
+                "unit_attributes_tables:baf1aa4a644fbc61664a"
               ]
             }
           ],
@@ -28655,6 +28835,7 @@
         "local_kr.pack:text/localisation__.loc:special_ability_invalid_usage_flags_flag_description_grounded",
         "local_kr.pack:text/localisation__.loc:unit_abilities_onscreen_name_wh2_dlc17_unit_passive_master_of_the_sacred_places",
         "local_kr.pack:text/localisation__.loc:unit_abilities_tooltip_text_wh2_dlc17_unit_passive_master_of_the_sacred_places",
+        "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_stalk",
         "special_ability_phase_attribute_effects_tables:941a22952bec6d5f0981",
         "special_ability_phases_tables:e8dea9f8ee4611fd9068",
         "special_ability_to_auto_deactivate_flags_tables:eb2bb726cb4800e17385",
@@ -28662,6 +28843,7 @@
         "special_ability_to_special_ability_phase_junctions_tables:e77623aa2d7ee3117276",
         "unit_abilities_tables:9c2fb0d3f6a8b2a73545",
         "unit_ability_source_types_tables:014b15f27a8f723f4c5b",
+        "unit_attributes_tables:baf1aa4a644fbc61664a",
         "unit_special_abilities_tables:606f4c81579a454cdecc"
       ]
     },
@@ -32821,12 +33003,23 @@
             },
             {
               "field": "devastating_flanker",
-              "label": "특성 devastating_flanker",
+              "label": "특성 파괴적인 측면 공격",
               "value": "positive",
               "rawValue": "positive",
               "unit": "CA 효과 유형",
+              "attributeOperation": "GRANT",
+              "description": {
+                "key": "unit_attributes_bullet_text_devastating_flanker",
+                "text": "이 속성을 가졌을 경우 적의 측후방을 공격할 때 돌격 보너스를 두 배로 얻습니다.",
+                "rowIds": [
+                  "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_devastating_flanker"
+                ],
+                "language": "ko"
+              },
               "sourceRowIds": [
-                "special_ability_phase_attribute_effects_tables:2717fdf2d001e5088093"
+                "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_devastating_flanker",
+                "special_ability_phase_attribute_effects_tables:2717fdf2d001e5088093",
+                "unit_attributes_tables:3fcc1e880fe61b5cf18e"
               ]
             }
           ],
@@ -32921,6 +33114,7 @@
         "local_kr.pack:text/localisation__.loc:special_ability_invalid_usage_flags_flag_description_unit_is_not_charging",
         "local_kr.pack:text/localisation__.loc:unit_abilities_onscreen_name_wh3_cp1_unit_passive_ferocious_ambush",
         "local_kr.pack:text/localisation__.loc:unit_abilities_tooltip_text_wh3_cp1_unit_passive_ferocious_ambush",
+        "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_devastating_flanker",
         "local_kr.pack:text/localisation__.loc:unit_stat_localisations_onscreen_name_scalar_charge_speed",
         "local_kr.pack:text/localisation__.loc:unit_stat_localisations_onscreen_name_scalar_speed",
         "local_kr.pack:text/localisation__.loc:unit_stat_localisations_onscreen_name_stat_charge_bonus",
@@ -32936,6 +33130,7 @@
         "special_ability_to_special_ability_phase_junctions_tables:e8261b31a43493813299",
         "unit_abilities_tables:a482f6b64701694035f1",
         "unit_ability_source_types_tables:014b15f27a8f723f4c5b",
+        "unit_attributes_tables:3fcc1e880fe61b5cf18e",
         "unit_special_abilities_tables:8831628e56e73a9ef42d"
       ]
     },
@@ -35526,12 +35721,23 @@
           "effects": [
             {
               "field": "unbreakable",
-              "label": "특성 unbreakable",
+              "label": "특성 불굴",
               "value": "positive",
               "rawValue": "positive",
               "unit": "CA 효과 유형",
+              "attributeOperation": "GRANT",
+              "description": {
+                "key": "unit_attributes_bullet_text_unbreakable",
+                "text": "이 부대는 어떤 종류의 리더십 불이익도 겪지 않으며 결코 패주하지 않습니다.",
+                "rowIds": [
+                  "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_unbreakable"
+                ],
+                "language": "ko"
+              },
               "sourceRowIds": [
-                "special_ability_phase_attribute_effects_tables:2a333f103937966c48f1"
+                "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_unbreakable",
+                "special_ability_phase_attribute_effects_tables:2a333f103937966c48f1",
+                "unit_attributes_tables:05aec19841e10e9400c3"
               ]
             }
           ],
@@ -35621,12 +35827,14 @@
         "local_kr.pack:text/localisation__.loc:special_ability_invalid_usage_flags_flag_description_health_below_25%",
         "local_kr.pack:text/localisation__.loc:unit_abilities_onscreen_name_wh3_dlc23_unit_passive_burning_bright",
         "local_kr.pack:text/localisation__.loc:unit_abilities_tooltip_text_wh3_dlc23_unit_passive_burning_bright",
+        "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_unbreakable",
         "special_ability_phase_attribute_effects_tables:2a333f103937966c48f1",
         "special_ability_phases_tables:54f1df16ec687ba9d16f",
         "special_ability_to_auto_deactivate_flags_tables:a99292e414e50db0d6a1",
         "special_ability_to_special_ability_phase_junctions_tables:8be882d61a7fe0329805",
         "unit_abilities_tables:4cee4b80e2c7f006efbe",
         "unit_ability_source_types_tables:014b15f27a8f723f4c5b",
+        "unit_attributes_tables:05aec19841e10e9400c3",
         "unit_special_abilities_tables:a3410f9d370dc3a35fc8"
       ]
     },
@@ -35889,12 +36097,23 @@
             },
             {
               "field": "charge_defense",
-              "label": "특성 charge_defense",
+              "label": "특성 돌격 방어 전문가",
               "value": "positive",
               "rawValue": "positive",
               "unit": "CA 효과 유형",
+              "attributeOperation": "GRANT",
+              "description": {
+                "key": "unit_attributes_bullet_text_charge_defense",
+                "text": "이 부대는 대비 중일 경우 모든 공격자의 돌격 보너스를 무시합니다.",
+                "rowIds": [
+                  "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_charge_defense"
+                ],
+                "language": "ko"
+              },
               "sourceRowIds": [
-                "special_ability_phase_attribute_effects_tables:519a5db0111e9c97f833"
+                "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_charge_defense",
+                "special_ability_phase_attribute_effects_tables:519a5db0111e9c97f833",
+                "unit_attributes_tables:5011953977e155027a33"
               ]
             }
           ],
@@ -36003,6 +36222,7 @@
         "local_kr.pack:text/localisation__.loc:special_ability_invalid_usage_flags_flag_description_moving",
         "local_kr.pack:text/localisation__.loc:unit_abilities_onscreen_name_wh3_dlc23_unit_passive_dig_in",
         "local_kr.pack:text/localisation__.loc:unit_abilities_tooltip_text_wh3_dlc23_unit_passive_dig_in",
+        "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_charge_defense",
         "local_kr.pack:text/localisation__.loc:unit_stat_localisations_onscreen_name_scalar_missile_range",
         "local_kr.pack:text/localisation__.loc:unit_stat_localisations_onscreen_name_stat_resistance_missile",
         "modifiable_unit_stats_tables:6ba749e103fdfe676b41",
@@ -36018,6 +36238,7 @@
         "special_ability_to_special_ability_phase_junctions_tables:fd347af251b50966a934",
         "unit_abilities_tables:f09a61b5b9c0c346bc66",
         "unit_ability_source_types_tables:014b15f27a8f723f4c5b",
+        "unit_attributes_tables:5011953977e155027a33",
         "unit_special_abilities_tables:5bfc6b405f82e0afee42"
       ]
     },
@@ -36969,10 +37190,11 @@
             },
             {
               "field": "silenced",
-              "label": "특성 silenced",
+              "label": "특성 문구 미확인 (silenced)",
               "value": "positive",
               "rawValue": "positive",
               "unit": "CA 효과 유형",
+              "attributeOperation": "GRANT",
               "sourceRowIds": [
                 "special_ability_phase_attribute_effects_tables:b7b8d2ea74eb33e7e04c"
               ]
@@ -37043,7 +37265,12 @@
         "activation": "NOT_EVALUATED",
         "mechanics": "PARTIAL"
       },
-      "held": [],
+      "held": [
+        {
+          "rawKey": "wh3_dlc23_unit_passive_sorcerous_miasma",
+          "reason": "Phase attribute silenced: exact definition or official effect description unresolved; raw effect preserved."
+        }
+      ],
       "sourceRowIds": [
         "local_en.pack:text/db/unit_abilities__.loc:unit_abilities_onscreen_name_wh3_dlc23_unit_passive_sorcerous_miasma",
         "local_en.pack:text/db/unit_abilities__.loc:unit_abilities_tooltip_text_wh3_dlc23_unit_passive_sorcerous_miasma",
@@ -37116,10 +37343,11 @@
             },
             {
               "field": "cannot_die",
-              "label": "특성 cannot_die",
+              "label": "특성 문구 미확인 (cannot_die)",
               "value": "positive",
               "rawValue": "positive",
               "unit": "CA 효과 유형",
+              "attributeOperation": "GRANT",
               "sourceRowIds": [
                 "special_ability_phase_attribute_effects_tables:93d3eaf4fd1304a9d554"
               ]
@@ -37203,7 +37431,12 @@
         "activation": "NOT_EVALUATED",
         "mechanics": "PARTIAL"
       },
-      "held": [],
+      "held": [
+        {
+          "rawKey": "wh3_dlc23_unit_passive_undying_will",
+          "reason": "Phase attribute cannot_die: exact definition or official effect description unresolved; raw effect preserved."
+        }
+      ],
       "sourceRowIds": [
         "local_en.pack:text/db/unit_abilities__.loc:unit_abilities_onscreen_name_wh3_dlc23_unit_passive_undying_will",
         "local_en.pack:text/db/unit_abilities__.loc:unit_abilities_tooltip_text_wh3_dlc23_unit_passive_undying_will",
@@ -40680,22 +40913,44 @@
           "effects": [
             {
               "field": "causes_fear",
-              "label": "특성 causes_fear",
+              "label": "특성 공포 유발",
               "value": "positive",
               "rawValue": "positive",
               "unit": "CA 효과 유형",
+              "attributeOperation": "GRANT",
+              "description": {
+                "key": "unit_attributes_bullet_text_causes_fear",
+                "text": "이 부대는 근처의 모든 적 부대에 겁을 주고 리더십을 꺾습니다. 또한 이 부대는 공포의 영향을 받지 않습니다. 공포 효과는 누적되지 않습니다.",
+                "rowIds": [
+                  "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_causes_fear"
+                ],
+                "language": "ko"
+              },
               "sourceRowIds": [
-                "special_ability_phase_attribute_effects_tables:bf74f0d29a4356ec5adb"
+                "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_causes_fear",
+                "special_ability_phase_attribute_effects_tables:bf74f0d29a4356ec5adb",
+                "unit_attributes_tables:9049777ddf284bde58f1"
               ]
             },
             {
               "field": "unbreakable",
-              "label": "특성 unbreakable",
+              "label": "특성 불굴",
               "value": "positive",
               "rawValue": "positive",
               "unit": "CA 효과 유형",
+              "attributeOperation": "GRANT",
+              "description": {
+                "key": "unit_attributes_bullet_text_unbreakable",
+                "text": "이 부대는 어떤 종류의 리더십 불이익도 겪지 않으며 결코 패주하지 않습니다.",
+                "rowIds": [
+                  "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_unbreakable"
+                ],
+                "language": "ko"
+              },
               "sourceRowIds": [
-                "special_ability_phase_attribute_effects_tables:6ed175ccbfaff51d66a8"
+                "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_unbreakable",
+                "special_ability_phase_attribute_effects_tables:6ed175ccbfaff51d66a8",
+                "unit_attributes_tables:05aec19841e10e9400c3"
               ]
             }
           ],
@@ -40785,6 +41040,8 @@
         "local_kr.pack:text/localisation__.loc:special_ability_invalid_usage_flags_flag_description_no_commander_class_allies_in_intercept_range",
         "local_kr.pack:text/localisation__.loc:unit_abilities_onscreen_name_wh3_dlc24_unit_passive_eternal_duty",
         "local_kr.pack:text/localisation__.loc:unit_abilities_tooltip_text_wh3_dlc24_unit_passive_eternal_duty",
+        "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_causes_fear",
+        "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_unbreakable",
         "special_ability_phase_attribute_effects_tables:6ed175ccbfaff51d66a8",
         "special_ability_phase_attribute_effects_tables:bf74f0d29a4356ec5adb",
         "special_ability_phases_tables:7896e8fabe36b275be1d",
@@ -40792,6 +41049,8 @@
         "special_ability_to_special_ability_phase_junctions_tables:b7b26c1a31e82dc22529",
         "unit_abilities_tables:10997de7b3eadbcf01d0",
         "unit_ability_source_types_tables:014b15f27a8f723f4c5b",
+        "unit_attributes_tables:05aec19841e10e9400c3",
+        "unit_attributes_tables:9049777ddf284bde58f1",
         "unit_special_abilities_tables:0d459c1d24fe49e4ac33"
       ]
     },
@@ -41007,12 +41266,23 @@
           "effects": [
             {
               "field": "rampage",
-              "label": "특성 rampage",
+              "label": "특성 난동",
               "value": "positive",
               "rawValue": "positive",
               "unit": "CA 효과 유형",
+              "attributeOperation": "GRANT",
+              "description": {
+                "key": "unit_attributes_bullet_text_rampage",
+                "text": "난동 중인 부대는 통제가 불가능하며 가장 가까운 적 부대를 공격합니다.\n근처에 적이 없다면 난동 중인 부대는 주변을 멋대로 방황합니다.",
+                "rowIds": [
+                  "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_rampage"
+                ],
+                "language": "ko"
+              },
               "sourceRowIds": [
-                "special_ability_phase_attribute_effects_tables:879f8fe885e977cf8fbd"
+                "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_rampage",
+                "special_ability_phase_attribute_effects_tables:879f8fe885e977cf8fbd",
+                "unit_attributes_tables:d17efefdc0d4f2fcb463"
               ]
             }
           ],
@@ -41102,12 +41372,14 @@
         "local_kr.pack:text/localisation__.loc:special_ability_invalid_usage_flags_flag_description_health_above_75%",
         "local_kr.pack:text/localisation__.loc:unit_abilities_onscreen_name_wh3_dlc24_unit_passive_feral_rage_i",
         "local_kr.pack:text/localisation__.loc:unit_abilities_tooltip_text_wh3_dlc24_unit_passive_feral_rage_i",
+        "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_rampage",
         "special_ability_phase_attribute_effects_tables:879f8fe885e977cf8fbd",
         "special_ability_phases_tables:b7158da9278ac071be9c",
         "special_ability_to_auto_deactivate_flags_tables:4bd6e2a79f8cd31008d3",
         "special_ability_to_special_ability_phase_junctions_tables:efb618f6ee2d9baec823",
         "unit_abilities_tables:ba395bb59731367cc254",
         "unit_ability_source_types_tables:014b15f27a8f723f4c5b",
+        "unit_attributes_tables:d17efefdc0d4f2fcb463",
         "unit_special_abilities_tables:2f0e21310b02ad0304fd"
       ]
     },
@@ -41160,12 +41432,23 @@
           "effects": [
             {
               "field": "rampage",
-              "label": "특성 rampage",
+              "label": "특성 난동",
               "value": "positive",
               "rawValue": "positive",
               "unit": "CA 효과 유형",
+              "attributeOperation": "GRANT",
+              "description": {
+                "key": "unit_attributes_bullet_text_rampage",
+                "text": "난동 중인 부대는 통제가 불가능하며 가장 가까운 적 부대를 공격합니다.\n근처에 적이 없다면 난동 중인 부대는 주변을 멋대로 방황합니다.",
+                "rowIds": [
+                  "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_rampage"
+                ],
+                "language": "ko"
+              },
               "sourceRowIds": [
-                "special_ability_phase_attribute_effects_tables:879f8fe885e977cf8fbd"
+                "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_rampage",
+                "special_ability_phase_attribute_effects_tables:879f8fe885e977cf8fbd",
+                "unit_attributes_tables:d17efefdc0d4f2fcb463"
               ]
             }
           ],
@@ -41255,12 +41538,14 @@
         "local_kr.pack:text/localisation__.loc:special_ability_invalid_usage_flags_flag_description_health_above_25%",
         "local_kr.pack:text/localisation__.loc:unit_abilities_onscreen_name_wh3_dlc24_unit_passive_feral_rage_ii",
         "local_kr.pack:text/localisation__.loc:unit_abilities_tooltip_text_wh3_dlc24_unit_passive_feral_rage_ii",
+        "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_rampage",
         "special_ability_phase_attribute_effects_tables:879f8fe885e977cf8fbd",
         "special_ability_phases_tables:b7158da9278ac071be9c",
         "special_ability_to_auto_deactivate_flags_tables:407140c1ee840a3e8191",
         "special_ability_to_special_ability_phase_junctions_tables:01695be2e56b1bfbf51d",
         "unit_abilities_tables:5bd45e7058c3ebab6d91",
         "unit_ability_source_types_tables:014b15f27a8f723f4c5b",
+        "unit_attributes_tables:d17efefdc0d4f2fcb463",
         "unit_special_abilities_tables:ac57b682b4c37112a36f"
       ]
     },
@@ -42529,22 +42814,44 @@
           "effects": [
             {
               "field": "causes_fear",
-              "label": "특성 causes_fear",
+              "label": "특성 공포 유발",
               "value": "positive",
               "rawValue": "positive",
               "unit": "CA 효과 유형",
+              "attributeOperation": "GRANT",
+              "description": {
+                "key": "unit_attributes_bullet_text_causes_fear",
+                "text": "이 부대는 근처의 모든 적 부대에 겁을 주고 리더십을 꺾습니다. 또한 이 부대는 공포의 영향을 받지 않습니다. 공포 효과는 누적되지 않습니다.",
+                "rowIds": [
+                  "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_causes_fear"
+                ],
+                "language": "ko"
+              },
               "sourceRowIds": [
-                "special_ability_phase_attribute_effects_tables:bc01c6acf7ee67896bd4"
+                "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_causes_fear",
+                "special_ability_phase_attribute_effects_tables:bc01c6acf7ee67896bd4",
+                "unit_attributes_tables:9049777ddf284bde58f1"
               ]
             },
             {
               "field": "immune_to_psychology",
-              "label": "특성 immune_to_psychology",
+              "label": "특성 심리 면역",
               "value": "positive",
               "rawValue": "positive",
               "unit": "CA 효과 유형",
+              "attributeOperation": "GRANT",
+              "description": {
+                "key": "unit_attributes_bullet_text_immune_to_psychology",
+                "text": "이 부대는 심리 공격(공포와 섬뜩함)에 영향을 받지 않습니다.",
+                "rowIds": [
+                  "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_immune_to_psychology"
+                ],
+                "language": "ko"
+              },
               "sourceRowIds": [
-                "special_ability_phase_attribute_effects_tables:ab97c04951c6cb465c40"
+                "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_immune_to_psychology",
+                "special_ability_phase_attribute_effects_tables:ab97c04951c6cb465c40",
+                "unit_attributes_tables:a605bc58e42f26309483"
               ]
             }
           ],
@@ -42634,6 +42941,8 @@
         "local_kr.pack:text/localisation__.loc:special_ability_invalid_usage_flags_flag_description_no_commander_class_allies_in_intercept_range",
         "local_kr.pack:text/localisation__.loc:unit_abilities_onscreen_name_wh3_dlc24_unit_passive_sacred_duty",
         "local_kr.pack:text/localisation__.loc:unit_abilities_tooltip_text_wh3_dlc24_unit_passive_sacred_duty",
+        "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_causes_fear",
+        "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_immune_to_psychology",
         "special_ability_phase_attribute_effects_tables:ab97c04951c6cb465c40",
         "special_ability_phase_attribute_effects_tables:bc01c6acf7ee67896bd4",
         "special_ability_phases_tables:f842e5b2e4be24af091b",
@@ -42641,6 +42950,8 @@
         "special_ability_to_special_ability_phase_junctions_tables:5747659d8d7a9327b92f",
         "unit_abilities_tables:7d97123c636a10dbe625",
         "unit_ability_source_types_tables:014b15f27a8f723f4c5b",
+        "unit_attributes_tables:9049777ddf284bde58f1",
+        "unit_attributes_tables:a605bc58e42f26309483",
         "unit_special_abilities_tables:c92e0bff3ba9df628118"
       ]
     },
@@ -43145,12 +43456,23 @@
           "effects": [
             {
               "field": "causes_fear",
-              "label": "특성 causes_fear",
+              "label": "특성 공포 유발",
               "value": "positive",
               "rawValue": "positive",
               "unit": "CA 효과 유형",
+              "attributeOperation": "GRANT",
+              "description": {
+                "key": "unit_attributes_bullet_text_causes_fear",
+                "text": "이 부대는 근처의 모든 적 부대에 겁을 주고 리더십을 꺾습니다. 또한 이 부대는 공포의 영향을 받지 않습니다. 공포 효과는 누적되지 않습니다.",
+                "rowIds": [
+                  "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_causes_fear"
+                ],
+                "language": "ko"
+              },
               "sourceRowIds": [
-                "special_ability_phase_attribute_effects_tables:16b89bed2ffe4e024898"
+                "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_causes_fear",
+                "special_ability_phase_attribute_effects_tables:16b89bed2ffe4e024898",
+                "unit_attributes_tables:9049777ddf284bde58f1"
               ]
             }
           ],
@@ -43242,12 +43564,14 @@
         "local_kr.pack:text/localisation__.loc:unit_abilities_onscreen_name_wh3_dlc24_unit_passive_spawn_kin_skinks",
         "local_kr.pack:text/localisation__.loc:unit_abilities_tooltip_text_wh3_dlc24_unit_passive_spawn_kin_kroxigors",
         "local_kr.pack:text/localisation__.loc:unit_abilities_tooltip_text_wh3_dlc24_unit_passive_spawn_kin_skinks",
+        "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_causes_fear",
         "special_ability_phase_attribute_effects_tables:16b89bed2ffe4e024898",
         "special_ability_phases_tables:ef9ec46f468aadfe5dcf",
         "special_ability_to_auto_deactivate_flags_tables:f8b8e985d57180ee0ba1",
         "special_ability_to_special_ability_phase_junctions_tables:4f62129493500f69b425",
         "unit_abilities_tables:f0f6847c8e5b9a2d5e55",
         "unit_ability_source_types_tables:014b15f27a8f723f4c5b",
+        "unit_attributes_tables:9049777ddf284bde58f1",
         "unit_special_abilities_tables:55e843a25afc7abb2080"
       ]
     },
@@ -47243,12 +47567,23 @@
           "effects": [
             {
               "field": "unbreakable",
-              "label": "특성 unbreakable",
+              "label": "특성 불굴",
               "value": "positive",
               "rawValue": "positive",
               "unit": "CA 효과 유형",
+              "attributeOperation": "GRANT",
+              "description": {
+                "key": "unit_attributes_bullet_text_unbreakable",
+                "text": "이 부대는 어떤 종류의 리더십 불이익도 겪지 않으며 결코 패주하지 않습니다.",
+                "rowIds": [
+                  "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_unbreakable"
+                ],
+                "language": "ko"
+              },
               "sourceRowIds": [
-                "special_ability_phase_attribute_effects_tables:062cbb3b8cf44e203b95"
+                "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_unbreakable",
+                "special_ability_phase_attribute_effects_tables:062cbb3b8cf44e203b95",
+                "unit_attributes_tables:05aec19841e10e9400c3"
               ]
             }
           ],
@@ -47338,12 +47673,14 @@
         "local_kr.pack:text/localisation__.loc:special_ability_invalid_usage_flags_flag_description_health_above_50%_base",
         "local_kr.pack:text/localisation__.loc:unit_abilities_onscreen_name_wh3_dlc26_unit_passive_fury_of_the_skullthrone",
         "local_kr.pack:text/localisation__.loc:unit_abilities_tooltip_text_wh3_dlc26_unit_passive_fury_of_the_skullthrone",
+        "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_unbreakable",
         "special_ability_phase_attribute_effects_tables:062cbb3b8cf44e203b95",
         "special_ability_phases_tables:37203d4c972618c5c061",
         "special_ability_to_auto_deactivate_flags_tables:f85cf399c78ac0c9d106",
         "special_ability_to_special_ability_phase_junctions_tables:38f22bc80e222f5ffe88",
         "unit_abilities_tables:6d30240ca32ff2d48227",
         "unit_ability_source_types_tables:014b15f27a8f723f4c5b",
+        "unit_attributes_tables:05aec19841e10e9400c3",
         "unit_special_abilities_tables:093dd7428d05715887ab"
       ]
     },
@@ -48001,22 +48338,44 @@
             },
             {
               "field": "rampage",
-              "label": "특성 rampage",
+              "label": "특성 난동",
               "value": "negative",
               "rawValue": "negative",
               "unit": "CA 효과 유형",
+              "attributeOperation": "REMOVE",
+              "description": {
+                "key": "unit_attributes_bullet_text_rampage",
+                "text": "난동 중인 부대는 통제가 불가능하며 가장 가까운 적 부대를 공격합니다.\n근처에 적이 없다면 난동 중인 부대는 주변을 멋대로 방황합니다.",
+                "rowIds": [
+                  "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_rampage"
+                ],
+                "language": "ko"
+              },
               "sourceRowIds": [
-                "special_ability_phase_attribute_effects_tables:f48ae8f8c2d54fd75d78"
+                "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_rampage",
+                "special_ability_phase_attribute_effects_tables:f48ae8f8c2d54fd75d78",
+                "unit_attributes_tables:d17efefdc0d4f2fcb463"
               ]
             },
             {
               "field": "unbreakable",
-              "label": "특성 unbreakable",
+              "label": "특성 불굴",
               "value": "positive",
               "rawValue": "positive",
               "unit": "CA 효과 유형",
+              "attributeOperation": "GRANT",
+              "description": {
+                "key": "unit_attributes_bullet_text_unbreakable",
+                "text": "이 부대는 어떤 종류의 리더십 불이익도 겪지 않으며 결코 패주하지 않습니다.",
+                "rowIds": [
+                  "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_unbreakable"
+                ],
+                "language": "ko"
+              },
               "sourceRowIds": [
-                "special_ability_phase_attribute_effects_tables:608892a238980460cdac"
+                "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_unbreakable",
+                "special_ability_phase_attribute_effects_tables:608892a238980460cdac",
+                "unit_attributes_tables:05aec19841e10e9400c3"
               ]
             }
           ],
@@ -48110,6 +48469,8 @@
         "local_kr.pack:text/localisation__.loc:special_ability_invalid_usage_flags_flag_description_friendly_battle_leader_not_killed_or_routing",
         "local_kr.pack:text/localisation__.loc:unit_abilities_onscreen_name_wh3_dlc26_unit_passive_runes_of_binding",
         "local_kr.pack:text/localisation__.loc:unit_abilities_tooltip_text_wh3_dlc26_unit_passive_runes_of_binding",
+        "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_rampage",
+        "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_unbreakable",
         "special_ability_phase_attribute_effects_tables:608892a238980460cdac",
         "special_ability_phase_attribute_effects_tables:f48ae8f8c2d54fd75d78",
         "special_ability_phases_tables:a5b6c24bafc8beaf9705",
@@ -48117,6 +48478,8 @@
         "special_ability_to_special_ability_phase_junctions_tables:af5fe14b14ea0d066119",
         "unit_abilities_tables:283040242b36cddfd6de",
         "unit_ability_source_types_tables:014b15f27a8f723f4c5b",
+        "unit_attributes_tables:05aec19841e10e9400c3",
+        "unit_attributes_tables:d17efefdc0d4f2fcb463",
         "unit_special_abilities_tables:da9c07af1ac9717665f4"
       ]
     },
@@ -49677,12 +50040,23 @@
             },
             {
               "field": "can_block_missiles_360",
-              "label": "특성 can_block_missiles_360",
+              "label": "특성 전방위 사격 차단",
               "value": "positive",
               "rawValue": "positive",
               "unit": "CA 효과 유형",
+              "attributeOperation": "GRANT",
+              "description": {
+                "key": "unit_attributes_bullet_text_can_block_missiles_360",
+                "text": "이 부대는 바라보는 방향에 상관 없이 모든 사격을 차단할 수 있습니다.",
+                "rowIds": [
+                  "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_can_block_missiles_360"
+                ],
+                "language": "ko"
+              },
               "sourceRowIds": [
-                "special_ability_phase_attribute_effects_tables:a4a64abe66a5684cce1f"
+                "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_can_block_missiles_360",
+                "special_ability_phase_attribute_effects_tables:a4a64abe66a5684cce1f",
+                "unit_attributes_tables:6193c1fa04dcf93f2cef"
               ]
             }
           ],
@@ -49814,6 +50188,7 @@
         "local_kr.pack:text/localisation__.loc:ui_text_replacements_localised_text_morale",
         "local_kr.pack:text/localisation__.loc:unit_abilities_onscreen_name_wh3_dlc27_unit_passive_abyssal_cloak",
         "local_kr.pack:text/localisation__.loc:unit_abilities_tooltip_text_wh3_dlc27_unit_passive_abyssal_cloak",
+        "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_can_block_missiles_360",
         "local_kr.pack:text/localisation__.loc:unit_stat_localisations_onscreen_name_stat_missile_block_chance",
         "local_kr.pack:text/localisation__.loc:unit_stat_localisations_onscreen_name_stat_morale",
         "modifiable_unit_stats_tables:1156447e287607cbd3dc",
@@ -49828,6 +50203,7 @@
         "special_ability_to_special_ability_phase_junctions_tables:923809bab61e8a331d10",
         "unit_abilities_tables:8675bd13b8fb7b9ed0c2",
         "unit_ability_source_types_tables:014b15f27a8f723f4c5b",
+        "unit_attributes_tables:6193c1fa04dcf93f2cef",
         "unit_special_abilities_tables:66c153c4d684f9d548cd"
       ]
     },
@@ -49893,12 +50269,23 @@
             },
             {
               "field": "causes_fear",
-              "label": "특성 causes_fear",
+              "label": "특성 공포 유발",
               "value": "positive",
               "rawValue": "positive",
               "unit": "CA 효과 유형",
+              "attributeOperation": "GRANT",
+              "description": {
+                "key": "unit_attributes_bullet_text_causes_fear",
+                "text": "이 부대는 근처의 모든 적 부대에 겁을 주고 리더십을 꺾습니다. 또한 이 부대는 공포의 영향을 받지 않습니다. 공포 효과는 누적되지 않습니다.",
+                "rowIds": [
+                  "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_causes_fear"
+                ],
+                "language": "ko"
+              },
               "sourceRowIds": [
-                "special_ability_phase_attribute_effects_tables:c1deef44ad2e03e1780c"
+                "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_causes_fear",
+                "special_ability_phase_attribute_effects_tables:c1deef44ad2e03e1780c",
+                "unit_attributes_tables:9049777ddf284bde58f1"
               ]
             }
           ],
@@ -49993,6 +50380,7 @@
         "local_kr.pack:text/localisation__.loc:special_ability_invalid_usage_flags_flag_description_cannot_find_enemies_in_intercept_range",
         "local_kr.pack:text/localisation__.loc:unit_abilities_onscreen_name_wh3_dlc27_unit_passive_battle_songs",
         "local_kr.pack:text/localisation__.loc:unit_abilities_tooltip_text_wh3_dlc27_unit_passive_battle_songs",
+        "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_causes_fear",
         "local_kr.pack:text/localisation__.loc:unit_stat_localisations_onscreen_name_stat_morale",
         "modifiable_unit_stats_tables:67f6d9fc322294db3c18",
         "special_ability_phase_attribute_effects_tables:c1deef44ad2e03e1780c",
@@ -50002,6 +50390,7 @@
         "special_ability_to_special_ability_phase_junctions_tables:e1e94d9511a011b983c7",
         "unit_abilities_tables:12a444141a6a0d4bfc88",
         "unit_ability_source_types_tables:014b15f27a8f723f4c5b",
+        "unit_attributes_tables:9049777ddf284bde58f1",
         "unit_special_abilities_tables:dd235e3dd58c2beb6496"
       ]
     },
@@ -50254,22 +50643,44 @@
             },
             {
               "field": "devastating_flanker",
-              "label": "특성 devastating_flanker",
+              "label": "특성 파괴적인 측면 공격",
               "value": "positive",
               "rawValue": "positive",
               "unit": "CA 효과 유형",
+              "attributeOperation": "GRANT",
+              "description": {
+                "key": "unit_attributes_bullet_text_devastating_flanker",
+                "text": "이 속성을 가졌을 경우 적의 측후방을 공격할 때 돌격 보너스를 두 배로 얻습니다.",
+                "rowIds": [
+                  "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_devastating_flanker"
+                ],
+                "language": "ko"
+              },
               "sourceRowIds": [
-                "special_ability_phase_attribute_effects_tables:fd67b931ec6aa42d6df1"
+                "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_devastating_flanker",
+                "special_ability_phase_attribute_effects_tables:fd67b931ec6aa42d6df1",
+                "unit_attributes_tables:3fcc1e880fe61b5cf18e"
               ]
             },
             {
               "field": "unyielding_assault",
-              "label": "특성 unyielding_assault",
+              "label": "특성 꿋꿋한 맹공",
               "value": "positive",
               "rawValue": "positive",
               "unit": "CA 효과 유형",
+              "attributeOperation": "GRANT",
+              "description": {
+                "key": "unit_attributes_bullet_text_unyielding_assault",
+                "text": "이 부대는 전투에서 근접 공격이 감소하지 않습니다.",
+                "rowIds": [
+                  "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_unyielding_assault"
+                ],
+                "language": "ko"
+              },
               "sourceRowIds": [
-                "special_ability_phase_attribute_effects_tables:695945b701f7ff6ba12f"
+                "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_unyielding_assault",
+                "special_ability_phase_attribute_effects_tables:695945b701f7ff6ba12f",
+                "unit_attributes_tables:5caee43513583c934d8d"
               ]
             }
           ],
@@ -50364,6 +50775,8 @@
         "local_kr.pack:text/localisation__.loc:special_ability_invalid_usage_flags_flag_description_health_below_50%_base",
         "local_kr.pack:text/localisation__.loc:unit_abilities_onscreen_name_wh3_dlc27_unit_passive_dual_personality_betrayer",
         "local_kr.pack:text/localisation__.loc:unit_abilities_tooltip_text_wh3_dlc27_unit_passive_dual_personality_betrayer",
+        "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_devastating_flanker",
+        "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_unyielding_assault",
         "local_kr.pack:text/localisation__.loc:unit_stat_localisations_onscreen_name_scalar_charge_speed",
         "local_kr.pack:text/localisation__.loc:unit_stat_localisations_onscreen_name_scalar_speed",
         "modifiable_unit_stats_tables:1f05e887602c194983de",
@@ -50377,6 +50790,8 @@
         "special_ability_to_special_ability_phase_junctions_tables:5f1e8d43080d716a1d99",
         "unit_abilities_tables:686c74a201cefc0c63bf",
         "unit_ability_source_types_tables:014b15f27a8f723f4c5b",
+        "unit_attributes_tables:3fcc1e880fe61b5cf18e",
+        "unit_attributes_tables:5caee43513583c934d8d",
         "unit_special_abilities_tables:547f185a780749c0d6a4"
       ]
     },
@@ -51102,12 +51517,23 @@
             },
             {
               "field": "unyielding_assault",
-              "label": "특성 unyielding_assault",
+              "label": "특성 꿋꿋한 맹공",
               "value": "positive",
               "rawValue": "positive",
               "unit": "CA 효과 유형",
+              "attributeOperation": "GRANT",
+              "description": {
+                "key": "unit_attributes_bullet_text_unyielding_assault",
+                "text": "이 부대는 전투에서 근접 공격이 감소하지 않습니다.",
+                "rowIds": [
+                  "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_unyielding_assault"
+                ],
+                "language": "ko"
+              },
               "sourceRowIds": [
-                "special_ability_phase_attribute_effects_tables:6f4d74b51d2284d9c572"
+                "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_unyielding_assault",
+                "special_ability_phase_attribute_effects_tables:6f4d74b51d2284d9c572",
+                "unit_attributes_tables:5caee43513583c934d8d"
               ]
             }
           ],
@@ -51202,6 +51628,7 @@
         "local_kr.pack:text/localisation__.loc:special_ability_invalid_usage_flags_flag_description_no_enemy_unit_routing_or_broken_within_range",
         "local_kr.pack:text/localisation__.loc:unit_abilities_onscreen_name_wh3_dlc27_unit_passive_endless_malice",
         "local_kr.pack:text/localisation__.loc:unit_abilities_tooltip_text_wh3_dlc27_unit_passive_endless_malice",
+        "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_unyielding_assault",
         "local_kr.pack:text/localisation__.loc:unit_stat_localisations_onscreen_name_stat_melee_attack",
         "local_kr.pack:text/localisation__.loc:unit_stat_localisations_onscreen_name_stat_melee_damage_ap",
         "local_kr.pack:text/localisation__.loc:unit_stat_localisations_onscreen_name_stat_melee_damage_base",
@@ -51217,6 +51644,7 @@
         "special_ability_to_special_ability_phase_junctions_tables:f9905419bce28c801c05",
         "unit_abilities_tables:625111ca59c3105c74ac",
         "unit_ability_source_types_tables:014b15f27a8f723f4c5b",
+        "unit_attributes_tables:5caee43513583c934d8d",
         "unit_special_abilities_tables:7c89fa58e1a614cd4bc6"
       ]
     },
@@ -52069,12 +52497,23 @@
             },
             {
               "field": "charge_defense_vs_large",
-              "label": "특성 charge_defense_vs_large",
+              "label": "특성 대형 상대 돌격 방어",
               "value": "positive",
               "rawValue": "positive",
               "unit": "CA 효과 유형",
+              "attributeOperation": "GRANT",
+              "description": {
+                "key": "unit_attributes_bullet_text_charge_defense_vs_large",
+                "text": "이 부대는 대비 중일 경우 대형 공격자의 돌격 보너스를 무시합니다.",
+                "rowIds": [
+                  "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_charge_defense_vs_large"
+                ],
+                "language": "ko"
+              },
               "sourceRowIds": [
-                "special_ability_phase_attribute_effects_tables:f0f820515eeee1319c5d"
+                "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_charge_defense_vs_large",
+                "special_ability_phase_attribute_effects_tables:f0f820515eeee1319c5d",
+                "unit_attributes_tables:51ba0aff69f91737837a"
               ]
             }
           ],
@@ -52156,6 +52595,7 @@
         "local_kr.pack:text/localisation__.loc:unit_abilities_onscreen_name_wh3_dlc27_lord_passive_naval_discipline",
         "local_kr.pack:text/localisation__.loc:unit_abilities_onscreen_name_wh3_dlc27_unit_passive_naval_discipline",
         "local_kr.pack:text/localisation__.loc:unit_abilities_tooltip_text_wh3_dlc27_unit_passive_naval_discipline",
+        "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_charge_defense_vs_large",
         "local_kr.pack:text/localisation__.loc:unit_stat_localisations_onscreen_name_stat_melee_defence",
         "local_kr.pack:text/localisation__.loc:unit_stat_localisations_onscreen_name_stat_morale",
         "modifiable_unit_stats_tables:20f10bd91adb78341294",
@@ -52167,6 +52607,7 @@
         "special_ability_to_special_ability_phase_junctions_tables:689a43a0b65a0c6c58e7",
         "unit_abilities_tables:3f0529e1443706e64030",
         "unit_ability_source_types_tables:014b15f27a8f723f4c5b",
+        "unit_attributes_tables:51ba0aff69f91737837a",
         "unit_special_abilities_tables:3876e40204930e3e8025"
       ]
     },
@@ -52813,12 +53254,23 @@
             },
             {
               "field": "immune_to_psychology",
-              "label": "특성 immune_to_psychology",
+              "label": "특성 심리 면역",
               "value": "positive",
               "rawValue": "positive",
               "unit": "CA 효과 유형",
+              "attributeOperation": "GRANT",
+              "description": {
+                "key": "unit_attributes_bullet_text_immune_to_psychology",
+                "text": "이 부대는 심리 공격(공포와 섬뜩함)에 영향을 받지 않습니다.",
+                "rowIds": [
+                  "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_immune_to_psychology"
+                ],
+                "language": "ko"
+              },
               "sourceRowIds": [
-                "special_ability_phase_attribute_effects_tables:604fad096f77bc711198"
+                "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_immune_to_psychology",
+                "special_ability_phase_attribute_effects_tables:604fad096f77bc711198",
+                "unit_attributes_tables:a605bc58e42f26309483"
               ]
             }
           ],
@@ -52898,6 +53350,7 @@
         "local_en.pack:text/db/unit_abilities__.loc:unit_abilities_tooltip_text_wh3_dlc29_mount_passive_unholiest_relic",
         "local_kr.pack:text/localisation__.loc:unit_abilities_onscreen_name_wh3_dlc29_mount_passive_unholiest_relic",
         "local_kr.pack:text/localisation__.loc:unit_abilities_tooltip_text_wh3_dlc29_mount_passive_unholiest_relic",
+        "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_immune_to_psychology",
         "local_kr.pack:text/localisation__.loc:unit_stat_localisations_onscreen_name_stat_melee_defence",
         "modifiable_unit_stats_tables:20f10bd91adb78341294",
         "special_ability_phase_attribute_effects_tables:604fad096f77bc711198",
@@ -52906,6 +53359,7 @@
         "special_ability_to_special_ability_phase_junctions_tables:e818b2212f6a437d7eba",
         "unit_abilities_tables:2528f891a34aaf42309d",
         "unit_ability_source_types_tables:014b15f27a8f723f4c5b",
+        "unit_attributes_tables:a605bc58e42f26309483",
         "unit_special_abilities_tables:20611918c4e2459c74b0"
       ]
     },
@@ -55962,12 +56416,23 @@
             },
             {
               "field": "unyielding_assault",
-              "label": "특성 unyielding_assault",
+              "label": "특성 꿋꿋한 맹공",
               "value": "positive",
               "rawValue": "positive",
               "unit": "CA 효과 유형",
+              "attributeOperation": "GRANT",
+              "description": {
+                "key": "unit_attributes_bullet_text_unyielding_assault",
+                "text": "이 부대는 전투에서 근접 공격이 감소하지 않습니다.",
+                "rowIds": [
+                  "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_unyielding_assault"
+                ],
+                "language": "ko"
+              },
               "sourceRowIds": [
-                "special_ability_phase_attribute_effects_tables:073ed17272efaa659f19"
+                "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_unyielding_assault",
+                "special_ability_phase_attribute_effects_tables:073ed17272efaa659f19",
+                "unit_attributes_tables:5caee43513583c934d8d"
               ]
             }
           ],
@@ -56058,12 +56523,14 @@
         "local_kr.pack:text/localisation__.loc:special_ability_invalid_usage_flags_flag_description_health_above_50%",
         "local_kr.pack:text/localisation__.loc:unit_abilities_onscreen_name_wh3_dlc29_unit_passive_chosen_of_the_plaguefather",
         "local_kr.pack:text/localisation__.loc:unit_abilities_tooltip_text_wh3_dlc29_unit_passive_chosen_of_the_plaguefather",
+        "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_unyielding_assault",
         "special_ability_phase_attribute_effects_tables:073ed17272efaa659f19",
         "special_ability_phases_tables:c0d69b778d1e13b7f3c9",
         "special_ability_to_auto_deactivate_flags_tables:742a3960bbb35c74d786",
         "special_ability_to_special_ability_phase_junctions_tables:9c9c461df2242b4860ae",
         "unit_abilities_tables:c4d340362fe3c43fb933",
         "unit_ability_source_types_tables:014b15f27a8f723f4c5b",
+        "unit_attributes_tables:5caee43513583c934d8d",
         "unit_special_abilities_tables:58b7813cfca7e18e9fa9"
       ]
     },
@@ -61660,12 +62127,23 @@
           "effects": [
             {
               "field": "unbreakable",
-              "label": "특성 unbreakable",
+              "label": "특성 불굴",
               "value": "positive",
               "rawValue": "positive",
               "unit": "CA 효과 유형",
+              "attributeOperation": "GRANT",
+              "description": {
+                "key": "unit_attributes_bullet_text_unbreakable",
+                "text": "이 부대는 어떤 종류의 리더십 불이익도 겪지 않으며 결코 패주하지 않습니다.",
+                "rowIds": [
+                  "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_unbreakable"
+                ],
+                "language": "ko"
+              },
               "sourceRowIds": [
-                "special_ability_phase_attribute_effects_tables:811f1c91e35771cbabcd"
+                "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_unbreakable",
+                "special_ability_phase_attribute_effects_tables:811f1c91e35771cbabcd",
+                "unit_attributes_tables:05aec19841e10e9400c3"
               ]
             }
           ],
@@ -61757,12 +62235,14 @@
         "local_kr.pack:text/localisation__.loc:ui_text_replacements_localised_text_morale",
         "local_kr.pack:text/localisation__.loc:unit_abilities_onscreen_name_wh3_main_unit_passive_by_our_blood",
         "local_kr.pack:text/localisation__.loc:unit_abilities_tooltip_text_wh3_main_unit_passive_by_our_blood",
+        "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_unbreakable",
         "special_ability_phase_attribute_effects_tables:811f1c91e35771cbabcd",
         "special_ability_phases_tables:2087a209f20dc6b113cc",
         "special_ability_to_auto_deactivate_flags_tables:121015e3ceb0670ac394",
         "special_ability_to_special_ability_phase_junctions_tables:38e1b673927d196b5834",
         "unit_abilities_tables:ee99a334a36591525438",
         "unit_ability_source_types_tables:014b15f27a8f723f4c5b",
+        "unit_attributes_tables:05aec19841e10e9400c3",
         "unit_special_abilities_tables:c189e927053fbbb0522a"
       ]
     },
@@ -65682,12 +66162,23 @@
             },
             {
               "field": "causes_terror",
-              "label": "특성 causes_terror",
+              "label": "특성 섬뜩함 유발",
               "value": "positive",
               "rawValue": "positive",
               "unit": "CA 효과 유형",
+              "attributeOperation": "GRANT",
+              "description": {
+                "key": "unit_attributes_bullet_text_causes_terror",
+                "text": "이 부대는 섬뜩함을 유발해 근접 대상이 일시적으로 패주하게 만듭니다. 섬뜩함을 유발하는 부대는 상대의 섬뜩함과 공포의 영향을 받지 않습니다.",
+                "rowIds": [
+                  "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_causes_terror"
+                ],
+                "language": "ko"
+              },
               "sourceRowIds": [
-                "special_ability_phase_attribute_effects_tables:bfe34fdbeac9e6cf3aff"
+                "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_causes_terror",
+                "special_ability_phase_attribute_effects_tables:bfe34fdbeac9e6cf3aff",
+                "unit_attributes_tables:23c3dd9becdbecc72dbb"
               ]
             }
           ],
@@ -65796,6 +66287,7 @@
         "local_kr.pack:text/localisation__.loc:special_ability_invalid_usage_flags_flag_description_out_of_melee",
         "local_kr.pack:text/localisation__.loc:unit_abilities_onscreen_name_wh3_twa06_unit_passive_gloom_of_flies",
         "local_kr.pack:text/localisation__.loc:unit_abilities_tooltip_text_wh3_twa06_unit_passive_gloom_of_flies",
+        "local_kr.pack:text/localisation__.loc:unit_attributes_bullet_text_causes_terror",
         "local_kr.pack:text/localisation__.loc:unit_stat_localisations_onscreen_name_stat_melee_defence",
         "modifiable_unit_stats_tables:20f10bd91adb78341294",
         "special_ability_phase_attribute_effects_tables:bfe34fdbeac9e6cf3aff",
@@ -65806,6 +66298,7 @@
         "special_ability_to_special_ability_phase_junctions_tables:1430aa709682bdab0b3b",
         "unit_abilities_tables:deccb5a2d39b5f3cf5a7",
         "unit_ability_source_types_tables:014b15f27a8f723f4c5b",
+        "unit_attributes_tables:23c3dd9becdbecc72dbb",
         "unit_special_abilities_tables:47abdc847a805a780190"
       ]
     },

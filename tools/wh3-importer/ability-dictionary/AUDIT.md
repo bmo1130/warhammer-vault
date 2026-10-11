@@ -277,6 +277,8 @@ phase expected(raw) / actual(projection): wh_main_unit_passive_unstable_mark_ii:
 - wh3_dlc23_unit_passive_pelt_of_wulfag / wh3_dlc23_unit_passive_pelt_of_wulfag: Stat effect value/how are verified raw modifiers; final stat, percentage unit and UI sign conversion are not evaluated.
 - wh3_dlc23_unit_passive_revel_in_fear / wh3_dlc23_unit_passive_revel_in_fear: Intensity-based activation: intensity formula is not evaluated.
 - wh3_dlc23_unit_passive_revel_in_fear / wh3_dlc23_unit_passive_revel_in_fear: Stat effect value/how are verified raw modifiers; final stat, percentage unit and UI sign conversion are not evaluated.
+- wh3_dlc23_unit_passive_sorcerous_miasma / wh3_dlc23_unit_passive_sorcerous_miasma: Phase attribute silenced: exact definition or official effect description unresolved; raw effect preserved.
+- wh3_dlc23_unit_passive_undying_will / wh3_dlc23_unit_passive_undying_will: Phase attribute cannot_die: exact definition or official effect description unresolved; raw effect preserved.
 - wh3_dlc24_mount_passive_wounded_pride / wh3_dlc24_mount_passive_wounded_pride: Stat effect value/how are verified raw modifiers; final stat, percentage unit and UI sign conversion are not evaluated.
 - wh3_dlc24_passive_shield_of_thorns / wh3_dlc24_passive_shield_of_thorns: Stat effect value/how are verified raw modifiers; final stat, percentage unit and UI sign conversion are not evaluated.
 - wh3_dlc24_unit_abilities_bastion_of_the_great_cities / wh3_dlc24_unit_abilities_bastion_of_the_great_cities: Stat effect value/how are verified raw modifiers; final stat, percentage unit and UI sign conversion are not evaluated.

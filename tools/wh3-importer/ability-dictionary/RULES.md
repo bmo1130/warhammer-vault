@@ -18,6 +18,8 @@ Loc의 `{{tr:token}}`은 정확한 key, `ui_text_replacements_localised_text_<to
 
 ## 의미와 제한
 
+- 패시브의 phase attribute 효과는 exact `unit_attributes.key` 및 선언된 `bullet_text` Loc으로 이름·본문을 연결한다. positive=부여 / negative=제거는 processed schema의 명시적 설명을 검증한다. 효과의 raw key/type 및 definition/Loc 행을 보존한다. Unit 기본 보유 특성으로 승격하지 않는다. 저장된 source에 정의·본문이 없는 silenced/cannot_die는 문구 미확인으로 유지한다. 이 후속 확충은 33개 패시브 / 246개 유닛 / 37개 표시 효과이며, 소유권 숫자 및 비패시브 사전 데이터는 유지한다.
+
 - 공식 툴팁은 배경 문구일 수도 있다. 446종 설명 coverage는 전투 메커니즘 446종 완결을 뜻하지 않는다.
 - 비영 수치 효과 290종은 phase의 수치와 참조가 확인된 수이다. stat 보정은 원본 value/how로 표시하며 최종 스탯, 퍼센트 단위, 표시 부호를 계산하지 않는다. `unit_stat_modifiers_how_enums` 정의가 설치 schema에 없으므로 add/mult는 원본 문자열로 보존한다.
 - 구조화된 조건 235종은 공식 flag 문구가 연결된 수이다. 특성의 조건은 공식 설명 본문에 그대로 제공하며 이 235종에 포함하지 않는다. flag 목록이 비어 있다고 무조건 상시 발동을 확정하지 않는다.
