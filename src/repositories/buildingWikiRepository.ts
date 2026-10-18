@@ -55,4 +55,15 @@ export function createBuildingWiki(units: readonly Unit[], lookup = recruitmentB
   };
 }
 
-export const buildingWikiRepository = createBuildingWiki(gameRepository.listUnits());
+
+let cached: ReturnType<typeof createBuildingWiki> | undefined;
+
+function getBuildingWiki() {
+  return cached ??= createBuildingWiki(gameRepository.listUnits());
+}
+
+export const buildingWikiRepository = {
+  get: (key: string) => getBuildingWiki().get(key),
+  list: (query?: string) => getBuildingWiki().list(query),
+  chain: (key: string) => getBuildingWiki().chain(key),
+};
