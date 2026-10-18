@@ -1,0 +1,4113 @@
+{
+  "format": "bounded-building-wiki-admission-v1",
+  "gameVersion": "9.0.4.0",
+  "snapshotId": "37f8972d127a304b431b18b27dedd4407c07d4e8551da0cc4a6bacad9b67edaf",
+  "recruitmentGameVersion": "9.0.2.0",
+  "recruitmentSnapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+  "sourceHash": "7a0da3e9680f4017dd3e0ff406084bd988795330fced0e5ba72daf9e724be84e",
+  "koreanPackHash": "b8433f8d430c3c97d4db2873e1cacfef5a2ea020587238a70f9ba53b54f84c01",
+  "coverage": {
+    "koreanName": {
+      "verified": 18,
+      "held": 0,
+      "total": 18
+    },
+    "constructionCost": {
+      "verified": 18,
+      "held": 0,
+      "total": 18
+    },
+    "constructionTurns": {
+      "verified": 18,
+      "held": 0,
+      "total": 18
+    },
+    "effects": {
+      "verified": 18,
+      "held": 0,
+      "total": 18
+    },
+    "income": {
+      "verified": 18,
+      "held": 0,
+      "total": 18
+    }
+  },
+  "effectCoverage": {
+    "rows": 42,
+    "definitions": 20,
+    "officialKoreanDescriptions": 20,
+    "officialScopeLabels": 7,
+    "missingOfficialScopeLabels": 5,
+    "scopeDefinitions": 12
+  },
+  "comparison": [
+    {
+      "key": "wh_main_brt_barracks_1",
+      "costMatch": true,
+      "turnsMatch": true
+    },
+    {
+      "key": "wh_main_brt_barracks_2",
+      "costMatch": true,
+      "turnsMatch": true
+    },
+    {
+      "key": "wh_main_brt_barracks_3",
+      "costMatch": true,
+      "turnsMatch": true
+    },
+    {
+      "key": "wh_main_brt_barracks_4",
+      "costMatch": true,
+      "turnsMatch": true
+    },
+    {
+      "key": "wh_main_brt_carpenter_1",
+      "costMatch": true,
+      "turnsMatch": true
+    },
+    {
+      "key": "wh_main_brt_carpenter_2",
+      "costMatch": true,
+      "turnsMatch": true
+    },
+    {
+      "key": "wh_main_brt_farm_1",
+      "costMatch": true,
+      "turnsMatch": true
+    },
+    {
+      "key": "wh_main_brt_farm_2",
+      "costMatch": true,
+      "turnsMatch": true
+    },
+    {
+      "key": "wh_main_brt_farm_3",
+      "costMatch": true,
+      "turnsMatch": true
+    },
+    {
+      "key": "wh_main_brt_farm_extra_1",
+      "costMatch": true,
+      "turnsMatch": true
+    },
+    {
+      "key": "wh_main_brt_farm_extra_2",
+      "costMatch": true,
+      "turnsMatch": true
+    },
+    {
+      "key": "wh_main_brt_stables_1",
+      "costMatch": true,
+      "turnsMatch": true
+    },
+    {
+      "key": "wh_main_brt_stables_2",
+      "costMatch": true,
+      "turnsMatch": true
+    },
+    {
+      "key": "wh_main_brt_stables_3",
+      "costMatch": true,
+      "turnsMatch": true
+    },
+    {
+      "key": "wh_main_brt_stables_4",
+      "costMatch": true,
+      "turnsMatch": true
+    },
+    {
+      "key": "wh_main_brt_stables_5",
+      "costMatch": true,
+      "turnsMatch": true
+    },
+    {
+      "key": "wh_main_brt_worship_2",
+      "costMatch": true,
+      "turnsMatch": true
+    },
+    {
+      "key": "wh_main_brt_worship_3",
+      "costMatch": true,
+      "turnsMatch": true
+    }
+  ],
+  "admissions": [
+    {
+      "key": "wh_main_brt_barracks_1",
+      "chainKey": "wh_main_BRETONNIA_barracks",
+      "stage": 0,
+      "koreanName": {
+        "status": "VERIFIED",
+        "value": "훈련장",
+        "field": "building_culture_variants_name_wh_main_brt_barracks_1wh_main_brt_bretonnia",
+        "reference": {
+          "table": "Loc",
+          "key": {
+            "key": "building_culture_variants_name_wh_main_brt_barracks_1wh_main_brt_bretonnia"
+          },
+          "rowId": "612c0d288b07cf5279861860baa2c4832c61068e092c7c5c9c02978d1ad63189"
+        }
+      },
+      "variantReference": {
+        "table": "building_culture_variants_tables",
+        "key": {
+          "building": "wh_main_brt_barracks_1",
+          "culture": "wh_main_brt_bretonnia",
+          "subculture": "",
+          "faction": ""
+        },
+        "rowId": "building_culture_variants_tables:fd7a56f9d4ac842eed12"
+      },
+      "constructionCost": {
+        "status": "VERIFIED",
+        "value": 750,
+        "field": "create_cost",
+        "reference": {
+          "table": "building_levels_tables",
+          "key": {
+            "level_name": "wh_main_brt_barracks_1"
+          },
+          "rowId": "building_levels_tables:ada4625d7e4fa7d17f92"
+        }
+      },
+      "constructionTurns": {
+        "status": "VERIFIED",
+        "value": 1,
+        "field": "create_time",
+        "reference": {
+          "table": "building_levels_tables",
+          "key": {
+            "level_name": "wh_main_brt_barracks_1"
+          },
+          "rowId": "building_levels_tables:ada4625d7e4fa7d17f92"
+        }
+      },
+      "effects": {
+        "status": "COMPLETE",
+        "items": []
+      },
+      "income": {
+        "status": "COMPLETE",
+        "effects": [],
+        "baseGold": 0
+      }
+    },
+    {
+      "key": "wh_main_brt_barracks_2",
+      "chainKey": "wh_main_BRETONNIA_barracks",
+      "stage": 1,
+      "koreanName": {
+        "status": "VERIFIED",
+        "value": "집결장",
+        "field": "building_culture_variants_name_wh_main_brt_barracks_2wh_main_brt_bretonnia",
+        "reference": {
+          "table": "Loc",
+          "key": {
+            "key": "building_culture_variants_name_wh_main_brt_barracks_2wh_main_brt_bretonnia"
+          },
+          "rowId": "b503d914cf7b17c3b5ec2a22120d0c4075efe0d40ef91b288fb734387ada2042"
+        }
+      },
+      "variantReference": {
+        "table": "building_culture_variants_tables",
+        "key": {
+          "building": "wh_main_brt_barracks_2",
+          "culture": "wh_main_brt_bretonnia",
+          "subculture": "",
+          "faction": ""
+        },
+        "rowId": "building_culture_variants_tables:77ca58f8359798b49da5"
+      },
+      "constructionCost": {
+        "status": "VERIFIED",
+        "value": 1500,
+        "field": "create_cost",
+        "reference": {
+          "table": "building_levels_tables",
+          "key": {
+            "level_name": "wh_main_brt_barracks_2"
+          },
+          "rowId": "building_levels_tables:c62fd77ce79c847dcc9a"
+        }
+      },
+      "constructionTurns": {
+        "status": "VERIFIED",
+        "value": 2,
+        "field": "create_time",
+        "reference": {
+          "table": "building_levels_tables",
+          "key": {
+            "level_name": "wh_main_brt_barracks_2"
+          },
+          "rowId": "building_levels_tables:c62fd77ce79c847dcc9a"
+        }
+      },
+      "effects": {
+        "status": "COMPLETE",
+        "items": []
+      },
+      "income": {
+        "status": "COMPLETE",
+        "effects": [],
+        "baseGold": 0
+      }
+    },
+    {
+      "key": "wh_main_brt_barracks_3",
+      "chainKey": "wh_main_BRETONNIA_barracks",
+      "stage": 2,
+      "koreanName": {
+        "status": "VERIFIED",
+        "value": "병영",
+        "field": "building_culture_variants_name_wh_main_brt_barracks_3wh_main_brt_bretonnia",
+        "reference": {
+          "table": "Loc",
+          "key": {
+            "key": "building_culture_variants_name_wh_main_brt_barracks_3wh_main_brt_bretonnia"
+          },
+          "rowId": "dca9930f3cc1fa6facfd59df4f8b9cea1faec0db23f3c85ecc3febfd01eb16b8"
+        }
+      },
+      "variantReference": {
+        "table": "building_culture_variants_tables",
+        "key": {
+          "building": "wh_main_brt_barracks_3",
+          "culture": "wh_main_brt_bretonnia",
+          "subculture": "",
+          "faction": ""
+        },
+        "rowId": "building_culture_variants_tables:a3a64598891ddbf9ca79"
+      },
+      "constructionCost": {
+        "status": "VERIFIED",
+        "value": 2500,
+        "field": "create_cost",
+        "reference": {
+          "table": "building_levels_tables",
+          "key": {
+            "level_name": "wh_main_brt_barracks_3"
+          },
+          "rowId": "building_levels_tables:44910a2557211cc625f1"
+        }
+      },
+      "constructionTurns": {
+        "status": "VERIFIED",
+        "value": 3,
+        "field": "create_time",
+        "reference": {
+          "table": "building_levels_tables",
+          "key": {
+            "level_name": "wh_main_brt_barracks_3"
+          },
+          "rowId": "building_levels_tables:44910a2557211cc625f1"
+        }
+      },
+      "effects": {
+        "status": "COMPLETE",
+        "items": []
+      },
+      "income": {
+        "status": "COMPLETE",
+        "effects": [],
+        "baseGold": 0
+      }
+    },
+    {
+      "key": "wh_main_brt_barracks_4",
+      "chainKey": "wh_main_BRETONNIA_barracks",
+      "stage": 3,
+      "koreanName": {
+        "status": "VERIFIED",
+        "value": "왕립 막사",
+        "field": "building_culture_variants_name_wh_main_brt_barracks_4wh_main_brt_bretonnia",
+        "reference": {
+          "table": "Loc",
+          "key": {
+            "key": "building_culture_variants_name_wh_main_brt_barracks_4wh_main_brt_bretonnia"
+          },
+          "rowId": "312557a14d2b0636884be51f3d6074a6184ca0e5299b859dd4fd49ecedc7e58c"
+        }
+      },
+      "variantReference": {
+        "table": "building_culture_variants_tables",
+        "key": {
+          "building": "wh_main_brt_barracks_4",
+          "culture": "wh_main_brt_bretonnia",
+          "subculture": "",
+          "faction": ""
+        },
+        "rowId": "building_culture_variants_tables:8b8b74e7168cff300cb4"
+      },
+      "constructionCost": {
+        "status": "VERIFIED",
+        "value": 4000,
+        "field": "create_cost",
+        "reference": {
+          "table": "building_levels_tables",
+          "key": {
+            "level_name": "wh_main_brt_barracks_4"
+          },
+          "rowId": "building_levels_tables:bd12f7272024d25cf723"
+        }
+      },
+      "constructionTurns": {
+        "status": "VERIFIED",
+        "value": 4,
+        "field": "create_time",
+        "reference": {
+          "table": "building_levels_tables",
+          "key": {
+            "level_name": "wh_main_brt_barracks_4"
+          },
+          "rowId": "building_levels_tables:bd12f7272024d25cf723"
+        }
+      },
+      "effects": {
+        "status": "COMPLETE",
+        "items": []
+      },
+      "income": {
+        "status": "COMPLETE",
+        "effects": [],
+        "baseGold": 0
+      }
+    },
+    {
+      "key": "wh_main_brt_carpenter_1",
+      "chainKey": "wh_main_BRETONNIA_carpenter",
+      "stage": 0,
+      "koreanName": {
+        "status": "VERIFIED",
+        "value": "목수 작업장",
+        "field": "building_culture_variants_name_wh_main_brt_carpenter_1wh_main_brt_bretonnia",
+        "reference": {
+          "table": "Loc",
+          "key": {
+            "key": "building_culture_variants_name_wh_main_brt_carpenter_1wh_main_brt_bretonnia"
+          },
+          "rowId": "19b4ca4206f2a26b0520e84d3da27b26bfdecd1feb084759ac829fa6523cc1ca"
+        }
+      },
+      "variantReference": {
+        "table": "building_culture_variants_tables",
+        "key": {
+          "building": "wh_main_brt_carpenter_1",
+          "culture": "wh_main_brt_bretonnia",
+          "subculture": "",
+          "faction": ""
+        },
+        "rowId": "building_culture_variants_tables:b962a68601a0008046f0"
+      },
+      "constructionCost": {
+        "status": "VERIFIED",
+        "value": 2000,
+        "field": "create_cost",
+        "reference": {
+          "table": "building_levels_tables",
+          "key": {
+            "level_name": "wh_main_brt_carpenter_1"
+          },
+          "rowId": "building_levels_tables:31f04eb47b4c6a0de39f"
+        }
+      },
+      "constructionTurns": {
+        "status": "VERIFIED",
+        "value": 3,
+        "field": "create_time",
+        "reference": {
+          "table": "building_levels_tables",
+          "key": {
+            "level_name": "wh_main_brt_carpenter_1"
+          },
+          "rowId": "building_levels_tables:31f04eb47b4c6a0de39f"
+        }
+      },
+      "effects": {
+        "status": "COMPLETE",
+        "items": [
+          {
+            "key": "wh_dlc05_effect_force_stat_reload_time_reduction_under_siege",
+            "name": "재장전 시간 감소: 수성 중에 %+n%",
+            "text": "재장전 시간 감소: 수성 중에 +10%",
+            "nameStatus": "VERIFIED",
+            "value": 10,
+            "valueDamaged": 5,
+            "valueRuined": 0,
+            "unit": "percent",
+            "scope": "지역 내 아군 군단",
+            "scopeKey": "region_to_force_own",
+            "officialScope": "(지역 내 군단)",
+            "scopeDefinition": {
+              "key": "region_to_force_own",
+              "location": "regionwide",
+              "ownership": "yours",
+              "source": "region",
+              "target": "force",
+              "territory": "any"
+            },
+            "condition": null,
+            "contextKey": "",
+            "kind": "OTHER",
+            "incomeKind": null,
+            "hidden": false,
+            "reference": {
+              "table": "building_effects_junction_tables",
+              "key": {
+                "building": "wh_main_brt_carpenter_1",
+                "effect": "wh_dlc05_effect_force_stat_reload_time_reduction_under_siege",
+                "context_requirement": ""
+              },
+              "rowId": "building_effects_junction_tables:5a62cb52186415cf6a72"
+            },
+            "definitionReference": {
+              "table": "effects_tables",
+              "key": {
+                "effect": "wh_dlc05_effect_force_stat_reload_time_reduction_under_siege"
+              },
+              "rowId": "effects_tables:181e2fdb7aa5f10e8c6e"
+            },
+            "scopeReference": {
+              "table": "campaign_effect_scopes_tables",
+              "key": {
+                "key": "region_to_force_own"
+              },
+              "rowId": "campaign_effect_scopes_tables:b7b16bd302562743743b"
+            },
+            "localisation": {
+              "status": "VERIFIED",
+              "value": "재장전 시간 감소: 수성 중에 %+n%",
+              "field": "effects_description_wh_dlc05_effect_force_stat_reload_time_reduction_under_siege",
+              "reference": {
+                "table": "Loc",
+                "key": {
+                  "key": "effects_description_wh_dlc05_effect_force_stat_reload_time_reduction_under_siege"
+                },
+                "rowId": "6aa5314ed3590b7c623013975c87f9800666d9c3df50f77b858d2164fb5604a6"
+              }
+            },
+            "scopeLocalisation": {
+              "status": "VERIFIED",
+              "value": "\\\\n(지역 내 군단)",
+              "field": "campaign_effect_scopes_localised_text_region_to_force_own",
+              "reference": {
+                "table": "Loc",
+                "key": {
+                  "key": "campaign_effect_scopes_localised_text_region_to_force_own"
+                },
+                "rowId": "21881552a3a71a07eacdf913c63955e1fb091f43efd4e4b4194e15df62cf8229"
+              }
+            }
+          },
+          {
+            "key": "wh_main_effect_building_construction_cost_mod",
+            "name": "건설 비용: 모든 건물에 %+n%",
+            "text": "건설 비용: 모든 건물에 -5%",
+            "nameStatus": "VERIFIED",
+            "value": -5,
+            "valueDamaged": -3,
+            "valueRuined": 0,
+            "unit": "percent",
+            "scope": "자신의 영지 내 지역",
+            "scopeKey": "province_to_region_own",
+            "officialScope": "(지역 영지)",
+            "scopeDefinition": {
+              "key": "province_to_region_own",
+              "location": "provincewide",
+              "ownership": "yours",
+              "source": "province",
+              "target": "region",
+              "territory": "any"
+            },
+            "condition": null,
+            "contextKey": "",
+            "kind": "OTHER",
+            "incomeKind": null,
+            "hidden": false,
+            "reference": {
+              "table": "building_effects_junction_tables",
+              "key": {
+                "building": "wh_main_brt_carpenter_1",
+                "effect": "wh_main_effect_building_construction_cost_mod",
+                "context_requirement": ""
+              },
+              "rowId": "building_effects_junction_tables:25d967b68c8df233042c"
+            },
+            "definitionReference": {
+              "table": "effects_tables",
+              "key": {
+                "effect": "wh_main_effect_building_construction_cost_mod"
+              },
+              "rowId": "effects_tables:ee65ecd907881bb79101"
+            },
+            "scopeReference": {
+              "table": "campaign_effect_scopes_tables",
+              "key": {
+                "key": "province_to_region_own"
+              },
+              "rowId": "campaign_effect_scopes_tables:7d1c8668dba648b57eb2"
+            },
+            "localisation": {
+              "status": "VERIFIED",
+              "value": "건설 비용: 모든 건물에 %+n%",
+              "field": "effects_description_wh_main_effect_building_construction_cost_mod",
+              "reference": {
+                "table": "Loc",
+                "key": {
+                  "key": "effects_description_wh_main_effect_building_construction_cost_mod"
+                },
+                "rowId": "d1b2a465c65f1e4571bfe470757228cd8f5bfccd4d896d381b15b3a273744c7c"
+              }
+            },
+            "scopeLocalisation": {
+              "status": "VERIFIED",
+              "value": "\\\\n(지역 영지)",
+              "field": "campaign_effect_scopes_localised_text_province_to_region_own",
+              "reference": {
+                "table": "Loc",
+                "key": {
+                  "key": "campaign_effect_scopes_localised_text_province_to_region_own"
+                },
+                "rowId": "a9e02617c98003935db6dcfacc831abfde93f21aebc291ec52657119d968a719"
+              }
+            }
+          }
+        ]
+      },
+      "income": {
+        "status": "COMPLETE",
+        "effects": [],
+        "baseGold": 0
+      }
+    },
+    {
+      "key": "wh_main_brt_carpenter_2",
+      "chainKey": "wh_main_BRETONNIA_carpenter",
+      "stage": 1,
+      "koreanName": {
+        "status": "VERIFIED",
+        "value": "공성병기 작업장",
+        "field": "building_culture_variants_name_wh_main_brt_carpenter_2wh_main_brt_bretonnia",
+        "reference": {
+          "table": "Loc",
+          "key": {
+            "key": "building_culture_variants_name_wh_main_brt_carpenter_2wh_main_brt_bretonnia"
+          },
+          "rowId": "1df3e97048da3f6b46e76dae1729b30f3436c9aa230de7c77653dc6de75caf1a"
+        }
+      },
+      "variantReference": {
+        "table": "building_culture_variants_tables",
+        "key": {
+          "building": "wh_main_brt_carpenter_2",
+          "culture": "wh_main_brt_bretonnia",
+          "subculture": "",
+          "faction": ""
+        },
+        "rowId": "building_culture_variants_tables:813016a17f3c3de795de"
+      },
+      "constructionCost": {
+        "status": "VERIFIED",
+        "value": 10000,
+        "field": "create_cost",
+        "reference": {
+          "table": "building_levels_tables",
+          "key": {
+            "level_name": "wh_main_brt_carpenter_2"
+          },
+          "rowId": "building_levels_tables:797afa3921e86e9a4623"
+        }
+      },
+      "constructionTurns": {
+        "status": "VERIFIED",
+        "value": 6,
+        "field": "create_time",
+        "reference": {
+          "table": "building_levels_tables",
+          "key": {
+            "level_name": "wh_main_brt_carpenter_2"
+          },
+          "rowId": "building_levels_tables:797afa3921e86e9a4623"
+        }
+      },
+      "effects": {
+        "status": "COMPLETE",
+        "items": [
+          {
+            "key": "wh_dlc05_effect_force_stat_reload_time_reduction_under_siege",
+            "name": "재장전 시간 감소: 수성 중에 %+n%",
+            "text": "재장전 시간 감소: 수성 중에 +20%",
+            "nameStatus": "VERIFIED",
+            "value": 20,
+            "valueDamaged": 10,
+            "valueRuined": 0,
+            "unit": "percent",
+            "scope": "지역 내 아군 군단",
+            "scopeKey": "region_to_force_own",
+            "officialScope": "(지역 내 군단)",
+            "scopeDefinition": {
+              "key": "region_to_force_own",
+              "location": "regionwide",
+              "ownership": "yours",
+              "source": "region",
+              "target": "force",
+              "territory": "any"
+            },
+            "condition": null,
+            "contextKey": "",
+            "kind": "OTHER",
+            "incomeKind": null,
+            "hidden": false,
+            "reference": {
+              "table": "building_effects_junction_tables",
+              "key": {
+                "building": "wh_main_brt_carpenter_2",
+                "effect": "wh_dlc05_effect_force_stat_reload_time_reduction_under_siege",
+                "context_requirement": ""
+              },
+              "rowId": "building_effects_junction_tables:85aad0c5e129116d2226"
+            },
+            "definitionReference": {
+              "table": "effects_tables",
+              "key": {
+                "effect": "wh_dlc05_effect_force_stat_reload_time_reduction_under_siege"
+              },
+              "rowId": "effects_tables:181e2fdb7aa5f10e8c6e"
+            },
+            "scopeReference": {
+              "table": "campaign_effect_scopes_tables",
+              "key": {
+                "key": "region_to_force_own"
+              },
+              "rowId": "campaign_effect_scopes_tables:b7b16bd302562743743b"
+            },
+            "localisation": {
+              "status": "VERIFIED",
+              "value": "재장전 시간 감소: 수성 중에 %+n%",
+              "field": "effects_description_wh_dlc05_effect_force_stat_reload_time_reduction_under_siege",
+              "reference": {
+                "table": "Loc",
+                "key": {
+                  "key": "effects_description_wh_dlc05_effect_force_stat_reload_time_reduction_under_siege"
+                },
+                "rowId": "6aa5314ed3590b7c623013975c87f9800666d9c3df50f77b858d2164fb5604a6"
+              }
+            },
+            "scopeLocalisation": {
+              "status": "VERIFIED",
+              "value": "\\\\n(지역 내 군단)",
+              "field": "campaign_effect_scopes_localised_text_region_to_force_own",
+              "reference": {
+                "table": "Loc",
+                "key": {
+                  "key": "campaign_effect_scopes_localised_text_region_to_force_own"
+                },
+                "rowId": "21881552a3a71a07eacdf913c63955e1fb091f43efd4e4b4194e15df62cf8229"
+              }
+            }
+          },
+          {
+            "key": "wh_main_effect_building_construction_cost_mod",
+            "name": "건설 비용: 모든 건물에 %+n%",
+            "text": "건설 비용: 모든 건물에 -10%",
+            "nameStatus": "VERIFIED",
+            "value": -10,
+            "valueDamaged": -3,
+            "valueRuined": 0,
+            "unit": "percent",
+            "scope": "자신의 영지 내 지역",
+            "scopeKey": "province_to_region_own",
+            "officialScope": "(지역 영지)",
+            "scopeDefinition": {
+              "key": "province_to_region_own",
+              "location": "provincewide",
+              "ownership": "yours",
+              "source": "province",
+              "target": "region",
+              "territory": "any"
+            },
+            "condition": null,
+            "contextKey": "",
+            "kind": "OTHER",
+            "incomeKind": null,
+            "hidden": false,
+            "reference": {
+              "table": "building_effects_junction_tables",
+              "key": {
+                "building": "wh_main_brt_carpenter_2",
+                "effect": "wh_main_effect_building_construction_cost_mod",
+                "context_requirement": ""
+              },
+              "rowId": "building_effects_junction_tables:2b0e8a5357b06ca8e5ff"
+            },
+            "definitionReference": {
+              "table": "effects_tables",
+              "key": {
+                "effect": "wh_main_effect_building_construction_cost_mod"
+              },
+              "rowId": "effects_tables:ee65ecd907881bb79101"
+            },
+            "scopeReference": {
+              "table": "campaign_effect_scopes_tables",
+              "key": {
+                "key": "province_to_region_own"
+              },
+              "rowId": "campaign_effect_scopes_tables:7d1c8668dba648b57eb2"
+            },
+            "localisation": {
+              "status": "VERIFIED",
+              "value": "건설 비용: 모든 건물에 %+n%",
+              "field": "effects_description_wh_main_effect_building_construction_cost_mod",
+              "reference": {
+                "table": "Loc",
+                "key": {
+                  "key": "effects_description_wh_main_effect_building_construction_cost_mod"
+                },
+                "rowId": "d1b2a465c65f1e4571bfe470757228cd8f5bfccd4d896d381b15b3a273744c7c"
+              }
+            },
+            "scopeLocalisation": {
+              "status": "VERIFIED",
+              "value": "\\\\n(지역 영지)",
+              "field": "campaign_effect_scopes_localised_text_province_to_region_own",
+              "reference": {
+                "table": "Loc",
+                "key": {
+                  "key": "campaign_effect_scopes_localised_text_province_to_region_own"
+                },
+                "rowId": "a9e02617c98003935db6dcfacc831abfde93f21aebc291ec52657119d968a719"
+              }
+            }
+          }
+        ]
+      },
+      "income": {
+        "status": "COMPLETE",
+        "effects": [],
+        "baseGold": 0
+      }
+    },
+    {
+      "key": "wh_main_brt_farm_1",
+      "chainKey": "wh_main_BRETONNIA_farm_basic",
+      "stage": 0,
+      "koreanName": {
+        "status": "VERIFIED",
+        "value": "평지",
+        "field": "building_culture_variants_name_wh_main_brt_farm_1wh_main_brt_bretonnia",
+        "reference": {
+          "table": "Loc",
+          "key": {
+            "key": "building_culture_variants_name_wh_main_brt_farm_1wh_main_brt_bretonnia"
+          },
+          "rowId": "a2049511ad43d69c322836bc6dd389e9b7dca08b67fe3a6c8a947db3fc9352a9"
+        }
+      },
+      "variantReference": {
+        "table": "building_culture_variants_tables",
+        "key": {
+          "building": "wh_main_brt_farm_1",
+          "culture": "wh_main_brt_bretonnia",
+          "subculture": "",
+          "faction": ""
+        },
+        "rowId": "building_culture_variants_tables:e5d587284769f8de7b0c"
+      },
+      "constructionCost": {
+        "status": "VERIFIED",
+        "value": 500,
+        "field": "create_cost",
+        "reference": {
+          "table": "building_levels_tables",
+          "key": {
+            "level_name": "wh_main_brt_farm_1"
+          },
+          "rowId": "building_levels_tables:5f207c2dcab5460946f0"
+        }
+      },
+      "constructionTurns": {
+        "status": "VERIFIED",
+        "value": 1,
+        "field": "create_time",
+        "reference": {
+          "table": "building_levels_tables",
+          "key": {
+            "level_name": "wh_main_brt_farm_1"
+          },
+          "rowId": "building_levels_tables:5f207c2dcab5460946f0"
+        }
+      },
+      "effects": {
+        "status": "COMPLETE",
+        "items": [
+          {
+            "key": "wh_dlc07_effect_dummy_peasant_building_chain",
+            "name": "농민 경제의 영향을 받음",
+            "text": "농민 경제의 영향을 받음",
+            "nameStatus": "VERIFIED",
+            "value": 0,
+            "valueDamaged": 0,
+            "valueRuined": 0,
+            "unit": "raw",
+            "scope": "이 건물",
+            "scopeKey": "building_to_building_own",
+            "officialScope": null,
+            "scopeDefinition": {
+              "key": "building_to_building_own",
+              "location": "buildingwide",
+              "ownership": "yours",
+              "source": "faction",
+              "target": "building",
+              "territory": "any"
+            },
+            "condition": null,
+            "contextKey": "",
+            "kind": "OTHER",
+            "incomeKind": null,
+            "hidden": false,
+            "reference": {
+              "table": "building_effects_junction_tables",
+              "key": {
+                "building": "wh_main_brt_farm_1",
+                "effect": "wh_dlc07_effect_dummy_peasant_building_chain",
+                "context_requirement": ""
+              },
+              "rowId": "building_effects_junction_tables:008ed0268fe31f171995"
+            },
+            "definitionReference": {
+              "table": "effects_tables",
+              "key": {
+                "effect": "wh_dlc07_effect_dummy_peasant_building_chain"
+              },
+              "rowId": "effects_tables:6a38a587f4d30dab556e"
+            },
+            "scopeReference": {
+              "table": "campaign_effect_scopes_tables",
+              "key": {
+                "key": "building_to_building_own"
+              },
+              "rowId": "campaign_effect_scopes_tables:729d40f6ca31e848a1bf"
+            },
+            "localisation": {
+              "status": "VERIFIED",
+              "value": "농민 경제의 영향을 받음",
+              "field": "effects_description_wh_dlc07_effect_dummy_peasant_building_chain",
+              "reference": {
+                "table": "Loc",
+                "key": {
+                  "key": "effects_description_wh_dlc07_effect_dummy_peasant_building_chain"
+                },
+                "rowId": "7d4029b7b6ac9b83f28a1769278e1536ba935e72bba9abfba893254240377a21"
+              }
+            },
+            "scopeLocalisation": {
+              "status": "UNKNOWN",
+              "value": null,
+              "reason": "공식 한국어 Loc 누락·중복·미해결: campaign_effect_scopes_localised_text_building_to_building_own"
+            }
+          },
+          {
+            "key": "wh_main_effect_economy_gdp_agriculture_farming",
+            "name": "수입: %n",
+            "text": "수입: 300",
+            "nameStatus": "VERIFIED",
+            "value": 300,
+            "valueDamaged": 150,
+            "valueRuined": 0,
+            "unit": "gold",
+            "scope": "이 건물",
+            "scopeKey": "building_to_building_own",
+            "officialScope": null,
+            "scopeDefinition": {
+              "key": "building_to_building_own",
+              "location": "buildingwide",
+              "ownership": "yours",
+              "source": "faction",
+              "target": "building",
+              "territory": "any"
+            },
+            "condition": null,
+            "contextKey": "",
+            "kind": "INCOME",
+            "incomeKind": "BASE",
+            "hidden": false,
+            "reference": {
+              "table": "building_effects_junction_tables",
+              "key": {
+                "building": "wh_main_brt_farm_1",
+                "effect": "wh_main_effect_economy_gdp_agriculture_farming",
+                "context_requirement": ""
+              },
+              "rowId": "building_effects_junction_tables:06cf48decf32db2e2a74"
+            },
+            "definitionReference": {
+              "table": "effects_tables",
+              "key": {
+                "effect": "wh_main_effect_economy_gdp_agriculture_farming"
+              },
+              "rowId": "effects_tables:9a256d3bf45c52dde547"
+            },
+            "scopeReference": {
+              "table": "campaign_effect_scopes_tables",
+              "key": {
+                "key": "building_to_building_own"
+              },
+              "rowId": "campaign_effect_scopes_tables:729d40f6ca31e848a1bf"
+            },
+            "localisation": {
+              "status": "VERIFIED",
+              "value": "수입: %n",
+              "field": "effects_description_wh_main_effect_economy_gdp_agriculture_farming",
+              "reference": {
+                "table": "Loc",
+                "key": {
+                  "key": "effects_description_wh_main_effect_economy_gdp_agriculture_farming"
+                },
+                "rowId": "e2b823e441f2ee90252dcfd0806639974038427e5c5e9cc729b0db80764edfc6"
+              }
+            },
+            "scopeLocalisation": {
+              "status": "UNKNOWN",
+              "value": null,
+              "reason": "공식 한국어 Loc 누락·중복·미해결: campaign_effect_scopes_localised_text_building_to_building_own"
+            }
+          }
+        ]
+      },
+      "income": {
+        "status": "COMPLETE",
+        "effects": [
+          "building_effects_junction_tables:06cf48decf32db2e2a74"
+        ],
+        "baseGold": 300
+      }
+    },
+    {
+      "key": "wh_main_brt_farm_2",
+      "chainKey": "wh_main_BRETONNIA_farm_basic",
+      "stage": 1,
+      "koreanName": {
+        "status": "VERIFIED",
+        "value": "농장",
+        "field": "building_culture_variants_name_wh_main_brt_farm_2wh_main_brt_bretonnia",
+        "reference": {
+          "table": "Loc",
+          "key": {
+            "key": "building_culture_variants_name_wh_main_brt_farm_2wh_main_brt_bretonnia"
+          },
+          "rowId": "f55ba940b087736d415ecdad9ede1e220ba75301a3a53a048e0b8346fccbfcd5"
+        }
+      },
+      "variantReference": {
+        "table": "building_culture_variants_tables",
+        "key": {
+          "building": "wh_main_brt_farm_2",
+          "culture": "wh_main_brt_bretonnia",
+          "subculture": "",
+          "faction": ""
+        },
+        "rowId": "building_culture_variants_tables:826f9663683c88ad994e"
+      },
+      "constructionCost": {
+        "status": "VERIFIED",
+        "value": 1000,
+        "field": "create_cost",
+        "reference": {
+          "table": "building_levels_tables",
+          "key": {
+            "level_name": "wh_main_brt_farm_2"
+          },
+          "rowId": "building_levels_tables:bd4eb612b820ea4427c3"
+        }
+      },
+      "constructionTurns": {
+        "status": "VERIFIED",
+        "value": 2,
+        "field": "create_time",
+        "reference": {
+          "table": "building_levels_tables",
+          "key": {
+            "level_name": "wh_main_brt_farm_2"
+          },
+          "rowId": "building_levels_tables:bd4eb612b820ea4427c3"
+        }
+      },
+      "effects": {
+        "status": "COMPLETE",
+        "items": [
+          {
+            "key": "wh_dlc07_effect_dummy_peasant_building_chain",
+            "name": "농민 경제의 영향을 받음",
+            "text": "농민 경제의 영향을 받음",
+            "nameStatus": "VERIFIED",
+            "value": 0,
+            "valueDamaged": 0,
+            "valueRuined": 0,
+            "unit": "raw",
+            "scope": "이 건물",
+            "scopeKey": "building_to_building_own",
+            "officialScope": null,
+            "scopeDefinition": {
+              "key": "building_to_building_own",
+              "location": "buildingwide",
+              "ownership": "yours",
+              "source": "faction",
+              "target": "building",
+              "territory": "any"
+            },
+            "condition": null,
+            "contextKey": "",
+            "kind": "OTHER",
+            "incomeKind": null,
+            "hidden": false,
+            "reference": {
+              "table": "building_effects_junction_tables",
+              "key": {
+                "building": "wh_main_brt_farm_2",
+                "effect": "wh_dlc07_effect_dummy_peasant_building_chain",
+                "context_requirement": ""
+              },
+              "rowId": "building_effects_junction_tables:5c8ce1ad2ea2622b0e5d"
+            },
+            "definitionReference": {
+              "table": "effects_tables",
+              "key": {
+                "effect": "wh_dlc07_effect_dummy_peasant_building_chain"
+              },
+              "rowId": "effects_tables:6a38a587f4d30dab556e"
+            },
+            "scopeReference": {
+              "table": "campaign_effect_scopes_tables",
+              "key": {
+                "key": "building_to_building_own"
+              },
+              "rowId": "campaign_effect_scopes_tables:729d40f6ca31e848a1bf"
+            },
+            "localisation": {
+              "status": "VERIFIED",
+              "value": "농민 경제의 영향을 받음",
+              "field": "effects_description_wh_dlc07_effect_dummy_peasant_building_chain",
+              "reference": {
+                "table": "Loc",
+                "key": {
+                  "key": "effects_description_wh_dlc07_effect_dummy_peasant_building_chain"
+                },
+                "rowId": "7d4029b7b6ac9b83f28a1769278e1536ba935e72bba9abfba893254240377a21"
+              }
+            },
+            "scopeLocalisation": {
+              "status": "UNKNOWN",
+              "value": null,
+              "reason": "공식 한국어 Loc 누락·중복·미해결: campaign_effect_scopes_localised_text_building_to_building_own"
+            }
+          },
+          {
+            "key": "wh_dlc07_effect_economy_gdp_mod_industry",
+            "name": "산업 수입: %+n%",
+            "text": "산업 수입: -50%",
+            "nameStatus": "VERIFIED",
+            "value": -50,
+            "valueDamaged": -50,
+            "valueRuined": 0,
+            "unit": "percent",
+            "scope": "자신의 지역",
+            "scopeKey": "region_to_region_own_text",
+            "officialScope": "(지역 지구)",
+            "scopeDefinition": {
+              "key": "region_to_region_own_text",
+              "location": "regionwide",
+              "ownership": "yours",
+              "source": "region",
+              "target": "region",
+              "territory": "any"
+            },
+            "condition": null,
+            "contextKey": "",
+            "kind": "INCOME",
+            "incomeKind": "MODIFIER",
+            "hidden": false,
+            "reference": {
+              "table": "building_effects_junction_tables",
+              "key": {
+                "building": "wh_main_brt_farm_2",
+                "effect": "wh_dlc07_effect_economy_gdp_mod_industry",
+                "context_requirement": ""
+              },
+              "rowId": "building_effects_junction_tables:371c81e23424c803ffe8"
+            },
+            "definitionReference": {
+              "table": "effects_tables",
+              "key": {
+                "effect": "wh_dlc07_effect_economy_gdp_mod_industry"
+              },
+              "rowId": "effects_tables:7e312e9c996a80296045"
+            },
+            "scopeReference": {
+              "table": "campaign_effect_scopes_tables",
+              "key": {
+                "key": "region_to_region_own_text"
+              },
+              "rowId": "campaign_effect_scopes_tables:84f25a7cad42c7bb2304"
+            },
+            "localisation": {
+              "status": "VERIFIED",
+              "value": "산업 수입: %+n%",
+              "field": "effects_description_wh_dlc07_effect_economy_gdp_mod_industry",
+              "reference": {
+                "table": "Loc",
+                "key": {
+                  "key": "effects_description_wh_dlc07_effect_economy_gdp_mod_industry"
+                },
+                "rowId": "65e3424596c23cf58a88feddf0b6f1fcf2c86a8e6d4125ab8052dbb9843250ed"
+              }
+            },
+            "scopeLocalisation": {
+              "status": "VERIFIED",
+              "value": "\\\\n(지역 지구)",
+              "field": "campaign_effect_scopes_localised_text_region_to_region_own_text",
+              "reference": {
+                "table": "Loc",
+                "key": {
+                  "key": "campaign_effect_scopes_localised_text_region_to_region_own_text"
+                },
+                "rowId": "ebc2e0f166e2f217b16f00f9b37aeb3373e5c8ce9792e6bcd191a9af589cd190"
+              }
+            }
+          },
+          {
+            "key": "wh_main_effect_economy_gdp_agriculture_farming",
+            "name": "수입: %n",
+            "text": "수입: 450",
+            "nameStatus": "VERIFIED",
+            "value": 450,
+            "valueDamaged": 225,
+            "valueRuined": 0,
+            "unit": "gold",
+            "scope": "이 건물",
+            "scopeKey": "building_to_building_own",
+            "officialScope": null,
+            "scopeDefinition": {
+              "key": "building_to_building_own",
+              "location": "buildingwide",
+              "ownership": "yours",
+              "source": "faction",
+              "target": "building",
+              "territory": "any"
+            },
+            "condition": null,
+            "contextKey": "",
+            "kind": "INCOME",
+            "incomeKind": "BASE",
+            "hidden": false,
+            "reference": {
+              "table": "building_effects_junction_tables",
+              "key": {
+                "building": "wh_main_brt_farm_2",
+                "effect": "wh_main_effect_economy_gdp_agriculture_farming",
+                "context_requirement": ""
+              },
+              "rowId": "building_effects_junction_tables:2c9f9bc4adc0c550f83f"
+            },
+            "definitionReference": {
+              "table": "effects_tables",
+              "key": {
+                "effect": "wh_main_effect_economy_gdp_agriculture_farming"
+              },
+              "rowId": "effects_tables:9a256d3bf45c52dde547"
+            },
+            "scopeReference": {
+              "table": "campaign_effect_scopes_tables",
+              "key": {
+                "key": "building_to_building_own"
+              },
+              "rowId": "campaign_effect_scopes_tables:729d40f6ca31e848a1bf"
+            },
+            "localisation": {
+              "status": "VERIFIED",
+              "value": "수입: %n",
+              "field": "effects_description_wh_main_effect_economy_gdp_agriculture_farming",
+              "reference": {
+                "table": "Loc",
+                "key": {
+                  "key": "effects_description_wh_main_effect_economy_gdp_agriculture_farming"
+                },
+                "rowId": "e2b823e441f2ee90252dcfd0806639974038427e5c5e9cc729b0db80764edfc6"
+              }
+            },
+            "scopeLocalisation": {
+              "status": "UNKNOWN",
+              "value": null,
+              "reason": "공식 한국어 Loc 누락·중복·미해결: campaign_effect_scopes_localised_text_building_to_building_own"
+            }
+          }
+        ]
+      },
+      "income": {
+        "status": "COMPLETE",
+        "effects": [
+          "building_effects_junction_tables:371c81e23424c803ffe8",
+          "building_effects_junction_tables:2c9f9bc4adc0c550f83f"
+        ],
+        "baseGold": 450
+      }
+    },
+    {
+      "key": "wh_main_brt_farm_3",
+      "chainKey": "wh_main_BRETONNIA_farm_basic",
+      "stage": 2,
+      "koreanName": {
+        "status": "VERIFIED",
+        "value": "영토",
+        "field": "building_culture_variants_name_wh_main_brt_farm_3wh_main_brt_bretonnia",
+        "reference": {
+          "table": "Loc",
+          "key": {
+            "key": "building_culture_variants_name_wh_main_brt_farm_3wh_main_brt_bretonnia"
+          },
+          "rowId": "6ce4d297cf99b821f2d84093cbc413d7de563d29afe88b1891372b5a995da47d"
+        }
+      },
+      "variantReference": {
+        "table": "building_culture_variants_tables",
+        "key": {
+          "building": "wh_main_brt_farm_3",
+          "culture": "wh_main_brt_bretonnia",
+          "subculture": "",
+          "faction": ""
+        },
+        "rowId": "building_culture_variants_tables:90db41a399caa43546b8"
+      },
+      "constructionCost": {
+        "status": "VERIFIED",
+        "value": 1500,
+        "field": "create_cost",
+        "reference": {
+          "table": "building_levels_tables",
+          "key": {
+            "level_name": "wh_main_brt_farm_3"
+          },
+          "rowId": "building_levels_tables:45d3336727b06899430f"
+        }
+      },
+      "constructionTurns": {
+        "status": "VERIFIED",
+        "value": 3,
+        "field": "create_time",
+        "reference": {
+          "table": "building_levels_tables",
+          "key": {
+            "level_name": "wh_main_brt_farm_3"
+          },
+          "rowId": "building_levels_tables:45d3336727b06899430f"
+        }
+      },
+      "effects": {
+        "status": "COMPLETE",
+        "items": [
+          {
+            "key": "wh_dlc07_effect_dummy_peasant_building_chain",
+            "name": "농민 경제의 영향을 받음",
+            "text": "농민 경제의 영향을 받음",
+            "nameStatus": "VERIFIED",
+            "value": 0,
+            "valueDamaged": 0,
+            "valueRuined": 0,
+            "unit": "raw",
+            "scope": "이 건물",
+            "scopeKey": "building_to_building_own",
+            "officialScope": null,
+            "scopeDefinition": {
+              "key": "building_to_building_own",
+              "location": "buildingwide",
+              "ownership": "yours",
+              "source": "faction",
+              "target": "building",
+              "territory": "any"
+            },
+            "condition": null,
+            "contextKey": "",
+            "kind": "OTHER",
+            "incomeKind": null,
+            "hidden": false,
+            "reference": {
+              "table": "building_effects_junction_tables",
+              "key": {
+                "building": "wh_main_brt_farm_3",
+                "effect": "wh_dlc07_effect_dummy_peasant_building_chain",
+                "context_requirement": ""
+              },
+              "rowId": "building_effects_junction_tables:f755ab38975096291e8a"
+            },
+            "definitionReference": {
+              "table": "effects_tables",
+              "key": {
+                "effect": "wh_dlc07_effect_dummy_peasant_building_chain"
+              },
+              "rowId": "effects_tables:6a38a587f4d30dab556e"
+            },
+            "scopeReference": {
+              "table": "campaign_effect_scopes_tables",
+              "key": {
+                "key": "building_to_building_own"
+              },
+              "rowId": "campaign_effect_scopes_tables:729d40f6ca31e848a1bf"
+            },
+            "localisation": {
+              "status": "VERIFIED",
+              "value": "농민 경제의 영향을 받음",
+              "field": "effects_description_wh_dlc07_effect_dummy_peasant_building_chain",
+              "reference": {
+                "table": "Loc",
+                "key": {
+                  "key": "effects_description_wh_dlc07_effect_dummy_peasant_building_chain"
+                },
+                "rowId": "7d4029b7b6ac9b83f28a1769278e1536ba935e72bba9abfba893254240377a21"
+              }
+            },
+            "scopeLocalisation": {
+              "status": "UNKNOWN",
+              "value": null,
+              "reason": "공식 한국어 Loc 누락·중복·미해결: campaign_effect_scopes_localised_text_building_to_building_own"
+            }
+          },
+          {
+            "key": "wh_dlc07_effect_economy_gdp_mod_industry",
+            "name": "산업 수입: %+n%",
+            "text": "산업 수입: -100%",
+            "nameStatus": "VERIFIED",
+            "value": -100,
+            "valueDamaged": -100,
+            "valueRuined": 0,
+            "unit": "percent",
+            "scope": "자신의 지역",
+            "scopeKey": "region_to_region_own_text",
+            "officialScope": "(지역 지구)",
+            "scopeDefinition": {
+              "key": "region_to_region_own_text",
+              "location": "regionwide",
+              "ownership": "yours",
+              "source": "region",
+              "target": "region",
+              "territory": "any"
+            },
+            "condition": null,
+            "contextKey": "",
+            "kind": "INCOME",
+            "incomeKind": "MODIFIER",
+            "hidden": false,
+            "reference": {
+              "table": "building_effects_junction_tables",
+              "key": {
+                "building": "wh_main_brt_farm_3",
+                "effect": "wh_dlc07_effect_economy_gdp_mod_industry",
+                "context_requirement": ""
+              },
+              "rowId": "building_effects_junction_tables:d30faf0e906dd46bf713"
+            },
+            "definitionReference": {
+              "table": "effects_tables",
+              "key": {
+                "effect": "wh_dlc07_effect_economy_gdp_mod_industry"
+              },
+              "rowId": "effects_tables:7e312e9c996a80296045"
+            },
+            "scopeReference": {
+              "table": "campaign_effect_scopes_tables",
+              "key": {
+                "key": "region_to_region_own_text"
+              },
+              "rowId": "campaign_effect_scopes_tables:84f25a7cad42c7bb2304"
+            },
+            "localisation": {
+              "status": "VERIFIED",
+              "value": "산업 수입: %+n%",
+              "field": "effects_description_wh_dlc07_effect_economy_gdp_mod_industry",
+              "reference": {
+                "table": "Loc",
+                "key": {
+                  "key": "effects_description_wh_dlc07_effect_economy_gdp_mod_industry"
+                },
+                "rowId": "65e3424596c23cf58a88feddf0b6f1fcf2c86a8e6d4125ab8052dbb9843250ed"
+              }
+            },
+            "scopeLocalisation": {
+              "status": "VERIFIED",
+              "value": "\\\\n(지역 지구)",
+              "field": "campaign_effect_scopes_localised_text_region_to_region_own_text",
+              "reference": {
+                "table": "Loc",
+                "key": {
+                  "key": "campaign_effect_scopes_localised_text_region_to_region_own_text"
+                },
+                "rowId": "ebc2e0f166e2f217b16f00f9b37aeb3373e5c8ce9792e6bcd191a9af589cd190"
+              }
+            }
+          },
+          {
+            "key": "wh_main_effect_economy_gdp_agriculture_farming",
+            "name": "수입: %n",
+            "text": "수입: 600",
+            "nameStatus": "VERIFIED",
+            "value": 600,
+            "valueDamaged": 300,
+            "valueRuined": 0,
+            "unit": "gold",
+            "scope": "이 건물",
+            "scopeKey": "building_to_building_own",
+            "officialScope": null,
+            "scopeDefinition": {
+              "key": "building_to_building_own",
+              "location": "buildingwide",
+              "ownership": "yours",
+              "source": "faction",
+              "target": "building",
+              "territory": "any"
+            },
+            "condition": null,
+            "contextKey": "",
+            "kind": "INCOME",
+            "incomeKind": "BASE",
+            "hidden": false,
+            "reference": {
+              "table": "building_effects_junction_tables",
+              "key": {
+                "building": "wh_main_brt_farm_3",
+                "effect": "wh_main_effect_economy_gdp_agriculture_farming",
+                "context_requirement": ""
+              },
+              "rowId": "building_effects_junction_tables:33790878f7e0feec4805"
+            },
+            "definitionReference": {
+              "table": "effects_tables",
+              "key": {
+                "effect": "wh_main_effect_economy_gdp_agriculture_farming"
+              },
+              "rowId": "effects_tables:9a256d3bf45c52dde547"
+            },
+            "scopeReference": {
+              "table": "campaign_effect_scopes_tables",
+              "key": {
+                "key": "building_to_building_own"
+              },
+              "rowId": "campaign_effect_scopes_tables:729d40f6ca31e848a1bf"
+            },
+            "localisation": {
+              "status": "VERIFIED",
+              "value": "수입: %n",
+              "field": "effects_description_wh_main_effect_economy_gdp_agriculture_farming",
+              "reference": {
+                "table": "Loc",
+                "key": {
+                  "key": "effects_description_wh_main_effect_economy_gdp_agriculture_farming"
+                },
+                "rowId": "e2b823e441f2ee90252dcfd0806639974038427e5c5e9cc729b0db80764edfc6"
+              }
+            },
+            "scopeLocalisation": {
+              "status": "UNKNOWN",
+              "value": null,
+              "reason": "공식 한국어 Loc 누락·중복·미해결: campaign_effect_scopes_localised_text_building_to_building_own"
+            }
+          }
+        ]
+      },
+      "income": {
+        "status": "COMPLETE",
+        "effects": [
+          "building_effects_junction_tables:d30faf0e906dd46bf713",
+          "building_effects_junction_tables:33790878f7e0feec4805"
+        ],
+        "baseGold": 600
+      }
+    },
+    {
+      "key": "wh_main_brt_farm_extra_1",
+      "chainKey": "wh_main_BRETONNIA_farm_extra",
+      "stage": 0,
+      "koreanName": {
+        "status": "VERIFIED",
+        "value": "풍차",
+        "field": "building_culture_variants_name_wh_main_brt_farm_extra_1wh_main_brt_bretonnia",
+        "reference": {
+          "table": "Loc",
+          "key": {
+            "key": "building_culture_variants_name_wh_main_brt_farm_extra_1wh_main_brt_bretonnia"
+          },
+          "rowId": "17e6340b8cbade6e700346ed0dff910cd590130d4f7e444dadba681532a33d17"
+        }
+      },
+      "variantReference": {
+        "table": "building_culture_variants_tables",
+        "key": {
+          "building": "wh_main_brt_farm_extra_1",
+          "culture": "wh_main_brt_bretonnia",
+          "subculture": "",
+          "faction": ""
+        },
+        "rowId": "building_culture_variants_tables:c8b260f6f147811fd5b4"
+      },
+      "constructionCost": {
+        "status": "VERIFIED",
+        "value": 1500,
+        "field": "create_cost",
+        "reference": {
+          "table": "building_levels_tables",
+          "key": {
+            "level_name": "wh_main_brt_farm_extra_1"
+          },
+          "rowId": "building_levels_tables:69b84057ae1f96c1473d"
+        }
+      },
+      "constructionTurns": {
+        "status": "VERIFIED",
+        "value": 2,
+        "field": "create_time",
+        "reference": {
+          "table": "building_levels_tables",
+          "key": {
+            "level_name": "wh_main_brt_farm_extra_1"
+          },
+          "rowId": "building_levels_tables:69b84057ae1f96c1473d"
+        }
+      },
+      "effects": {
+        "status": "COMPLETE",
+        "items": [
+          {
+            "key": "wh_dlc07_effect_economy_gdp_mod_farming",
+            "name": "농장 수입: %+n%",
+            "text": "농장 수입: +25%",
+            "nameStatus": "VERIFIED",
+            "value": 25,
+            "valueDamaged": 25,
+            "valueRuined": 0,
+            "unit": "percent",
+            "scope": "자신의 지역",
+            "scopeKey": "region_to_region_own_text",
+            "officialScope": "(지역 지구)",
+            "scopeDefinition": {
+              "key": "region_to_region_own_text",
+              "location": "regionwide",
+              "ownership": "yours",
+              "source": "region",
+              "target": "region",
+              "territory": "any"
+            },
+            "condition": null,
+            "contextKey": "",
+            "kind": "INCOME",
+            "incomeKind": "MODIFIER",
+            "hidden": false,
+            "reference": {
+              "table": "building_effects_junction_tables",
+              "key": {
+                "building": "wh_main_brt_farm_extra_1",
+                "effect": "wh_dlc07_effect_economy_gdp_mod_farming",
+                "context_requirement": ""
+              },
+              "rowId": "building_effects_junction_tables:29f42232c464121d1166"
+            },
+            "definitionReference": {
+              "table": "effects_tables",
+              "key": {
+                "effect": "wh_dlc07_effect_economy_gdp_mod_farming"
+              },
+              "rowId": "effects_tables:eb5bf609e104421d3047"
+            },
+            "scopeReference": {
+              "table": "campaign_effect_scopes_tables",
+              "key": {
+                "key": "region_to_region_own_text"
+              },
+              "rowId": "campaign_effect_scopes_tables:84f25a7cad42c7bb2304"
+            },
+            "localisation": {
+              "status": "VERIFIED",
+              "value": "농장 수입: %+n%",
+              "field": "effects_description_wh_dlc07_effect_economy_gdp_mod_farming",
+              "reference": {
+                "table": "Loc",
+                "key": {
+                  "key": "effects_description_wh_dlc07_effect_economy_gdp_mod_farming"
+                },
+                "rowId": "7c7fc955bcf25665a0448b91f33e496a730cd01ba2ce06c86466cd628cbfbc90"
+              }
+            },
+            "scopeLocalisation": {
+              "status": "VERIFIED",
+              "value": "\\\\n(지역 지구)",
+              "field": "campaign_effect_scopes_localised_text_region_to_region_own_text",
+              "reference": {
+                "table": "Loc",
+                "key": {
+                  "key": "campaign_effect_scopes_localised_text_region_to_region_own_text"
+                },
+                "rowId": "ebc2e0f166e2f217b16f00f9b37aeb3373e5c8ce9792e6bcd191a9af589cd190"
+              }
+            }
+          },
+          {
+            "key": "wh_main_effect_province_growth_adjacent_provinces",
+            "name": "성장: %+n",
+            "text": "성장: +2",
+            "nameStatus": "VERIFIED",
+            "value": 2,
+            "valueDamaged": 1,
+            "valueRuined": 0,
+            "unit": "raw",
+            "scope": "인접한 자신의 영지",
+            "scopeKey": "province_to_province_adjacent",
+            "officialScope": "(모든 인접 영지)",
+            "scopeDefinition": {
+              "key": "province_to_province_adjacent",
+              "location": "neighbour_faction_province",
+              "ownership": "yours",
+              "source": "province",
+              "target": "province",
+              "territory": "any"
+            },
+            "condition": null,
+            "contextKey": "",
+            "kind": "OTHER",
+            "incomeKind": null,
+            "hidden": false,
+            "reference": {
+              "table": "building_effects_junction_tables",
+              "key": {
+                "building": "wh_main_brt_farm_extra_1",
+                "effect": "wh_main_effect_province_growth_adjacent_provinces",
+                "context_requirement": ""
+              },
+              "rowId": "building_effects_junction_tables:14d88d1ccdec70ac5204"
+            },
+            "definitionReference": {
+              "table": "effects_tables",
+              "key": {
+                "effect": "wh_main_effect_province_growth_adjacent_provinces"
+              },
+              "rowId": "effects_tables:9ac5772c6518188a36e0"
+            },
+            "scopeReference": {
+              "table": "campaign_effect_scopes_tables",
+              "key": {
+                "key": "province_to_province_adjacent"
+              },
+              "rowId": "campaign_effect_scopes_tables:3cbd1dc8148374bfe2ed"
+            },
+            "localisation": {
+              "status": "VERIFIED",
+              "value": "성장: %+n",
+              "field": "effects_description_wh_main_effect_province_growth_adjacent_provinces",
+              "reference": {
+                "table": "Loc",
+                "key": {
+                  "key": "effects_description_wh_main_effect_province_growth_adjacent_provinces"
+                },
+                "rowId": "b06e7efb1c74292d587af104105cc7526251b47b477afa166647b005c266b56a"
+              }
+            },
+            "scopeLocalisation": {
+              "status": "VERIFIED",
+              "value": "\\\\n(모든 인접 영지)",
+              "field": "campaign_effect_scopes_localised_text_province_to_province_adjacent",
+              "reference": {
+                "table": "Loc",
+                "key": {
+                  "key": "campaign_effect_scopes_localised_text_province_to_province_adjacent"
+                },
+                "rowId": "dab3fce179d209ef15d028ccf5df349a553e42f150d48cf003e9cd4643af3252"
+              }
+            }
+          },
+          {
+            "key": "wh_main_effect_province_growth_building",
+            "name": "성장: %+n",
+            "text": "성장: +5",
+            "nameStatus": "VERIFIED",
+            "value": 5,
+            "valueDamaged": 5,
+            "valueRuined": 0,
+            "unit": "raw",
+            "scope": "자신의 영지",
+            "scopeKey": "region_to_province_own_unseen",
+            "officialScope": null,
+            "scopeDefinition": {
+              "key": "region_to_province_own_unseen",
+              "location": "provincewide",
+              "ownership": "yours",
+              "source": "region",
+              "target": "province",
+              "territory": "any"
+            },
+            "condition": null,
+            "contextKey": "",
+            "kind": "OTHER",
+            "incomeKind": null,
+            "hidden": false,
+            "reference": {
+              "table": "building_effects_junction_tables",
+              "key": {
+                "building": "wh_main_brt_farm_extra_1",
+                "effect": "wh_main_effect_province_growth_building",
+                "context_requirement": ""
+              },
+              "rowId": "building_effects_junction_tables:f3da9b92b546999e7a78"
+            },
+            "definitionReference": {
+              "table": "effects_tables",
+              "key": {
+                "effect": "wh_main_effect_province_growth_building"
+              },
+              "rowId": "effects_tables:96056b0fc015bf13f5a4"
+            },
+            "scopeReference": {
+              "table": "campaign_effect_scopes_tables",
+              "key": {
+                "key": "region_to_province_own_unseen"
+              },
+              "rowId": "campaign_effect_scopes_tables:a8de3aa8aba8574b35d0"
+            },
+            "localisation": {
+              "status": "VERIFIED",
+              "value": "성장: %+n",
+              "field": "effects_description_wh_main_effect_province_growth_building",
+              "reference": {
+                "table": "Loc",
+                "key": {
+                  "key": "effects_description_wh_main_effect_province_growth_building"
+                },
+                "rowId": "7bf471ea71ae45d3e3afa2c1b4a44b61732f1037a7c387ea525c1a5b2f847299"
+              }
+            },
+            "scopeLocalisation": {
+              "status": "UNKNOWN",
+              "value": null,
+              "reason": "공식 한국어 Loc 누락·중복·미해결: campaign_effect_scopes_localised_text_region_to_province_own_unseen"
+            }
+          },
+          {
+            "key": "wh_main_effect_unit_recruitment_points",
+            "name": "지역 모집 제한: %+n",
+            "text": "지역 모집 제한: +1",
+            "nameStatus": "VERIFIED",
+            "value": 1,
+            "valueDamaged": 1,
+            "valueRuined": 0,
+            "unit": "raw",
+            "scope": "자신의 영지",
+            "scopeKey": "province_to_province_own_unseen",
+            "officialScope": null,
+            "scopeDefinition": {
+              "key": "province_to_province_own_unseen",
+              "location": "provincewide",
+              "ownership": "yours",
+              "source": "province",
+              "target": "province",
+              "territory": "any"
+            },
+            "condition": null,
+            "contextKey": "",
+            "kind": "OTHER",
+            "incomeKind": null,
+            "hidden": false,
+            "reference": {
+              "table": "building_effects_junction_tables",
+              "key": {
+                "building": "wh_main_brt_farm_extra_1",
+                "effect": "wh_main_effect_unit_recruitment_points",
+                "context_requirement": ""
+              },
+              "rowId": "building_effects_junction_tables:ecb5f212ac288b230021"
+            },
+            "definitionReference": {
+              "table": "effects_tables",
+              "key": {
+                "effect": "wh_main_effect_unit_recruitment_points"
+              },
+              "rowId": "effects_tables:bbb6adfcc3cd1c628fb7"
+            },
+            "scopeReference": {
+              "table": "campaign_effect_scopes_tables",
+              "key": {
+                "key": "province_to_province_own_unseen"
+              },
+              "rowId": "campaign_effect_scopes_tables:8b8242d47ec33c3e2a17"
+            },
+            "localisation": {
+              "status": "VERIFIED",
+              "value": "지역 모집 제한: %+n",
+              "field": "effects_description_wh_main_effect_unit_recruitment_points",
+              "reference": {
+                "table": "Loc",
+                "key": {
+                  "key": "effects_description_wh_main_effect_unit_recruitment_points"
+                },
+                "rowId": "108a612049d873e1327b2492086445a6b437d56ef829b8e65c7f17ab4557885e"
+              }
+            },
+            "scopeLocalisation": {
+              "status": "UNKNOWN",
+              "value": null,
+              "reason": "공식 한국어 Loc 누락·중복·미해결: campaign_effect_scopes_localised_text_province_to_province_own_unseen"
+            }
+          }
+        ]
+      },
+      "income": {
+        "status": "COMPLETE",
+        "effects": [
+          "building_effects_junction_tables:29f42232c464121d1166"
+        ],
+        "baseGold": 0
+      }
+    },
+    {
+      "key": "wh_main_brt_farm_extra_2",
+      "chainKey": "wh_main_BRETONNIA_farm_extra",
+      "stage": 1,
+      "koreanName": {
+        "status": "VERIFIED",
+        "value": "물레방아",
+        "field": "building_culture_variants_name_wh_main_brt_farm_extra_2wh_main_brt_bretonnia",
+        "reference": {
+          "table": "Loc",
+          "key": {
+            "key": "building_culture_variants_name_wh_main_brt_farm_extra_2wh_main_brt_bretonnia"
+          },
+          "rowId": "d6667b407b4162cf4dad03147b9d5699ea34b67cdc1ea2484c589e614ffac1ad"
+        }
+      },
+      "variantReference": {
+        "table": "building_culture_variants_tables",
+        "key": {
+          "building": "wh_main_brt_farm_extra_2",
+          "culture": "wh_main_brt_bretonnia",
+          "subculture": "",
+          "faction": ""
+        },
+        "rowId": "building_culture_variants_tables:cdd9f8dad4576319e23d"
+      },
+      "constructionCost": {
+        "status": "VERIFIED",
+        "value": 2000,
+        "field": "create_cost",
+        "reference": {
+          "table": "building_levels_tables",
+          "key": {
+            "level_name": "wh_main_brt_farm_extra_2"
+          },
+          "rowId": "building_levels_tables:399f004eee2851ad90ef"
+        }
+      },
+      "constructionTurns": {
+        "status": "VERIFIED",
+        "value": 3,
+        "field": "create_time",
+        "reference": {
+          "table": "building_levels_tables",
+          "key": {
+            "level_name": "wh_main_brt_farm_extra_2"
+          },
+          "rowId": "building_levels_tables:399f004eee2851ad90ef"
+        }
+      },
+      "effects": {
+        "status": "COMPLETE",
+        "items": [
+          {
+            "key": "wh_dlc07_effect_economy_gdp_mod_farming",
+            "name": "농장 수입: %+n%",
+            "text": "농장 수입: +50%",
+            "nameStatus": "VERIFIED",
+            "value": 50,
+            "valueDamaged": 50,
+            "valueRuined": 0,
+            "unit": "percent",
+            "scope": "자신의 지역",
+            "scopeKey": "region_to_region_own_text",
+            "officialScope": "(지역 지구)",
+            "scopeDefinition": {
+              "key": "region_to_region_own_text",
+              "location": "regionwide",
+              "ownership": "yours",
+              "source": "region",
+              "target": "region",
+              "territory": "any"
+            },
+            "condition": null,
+            "contextKey": "",
+            "kind": "INCOME",
+            "incomeKind": "MODIFIER",
+            "hidden": false,
+            "reference": {
+              "table": "building_effects_junction_tables",
+              "key": {
+                "building": "wh_main_brt_farm_extra_2",
+                "effect": "wh_dlc07_effect_economy_gdp_mod_farming",
+                "context_requirement": ""
+              },
+              "rowId": "building_effects_junction_tables:ae8fd1687d869ee310ef"
+            },
+            "definitionReference": {
+              "table": "effects_tables",
+              "key": {
+                "effect": "wh_dlc07_effect_economy_gdp_mod_farming"
+              },
+              "rowId": "effects_tables:eb5bf609e104421d3047"
+            },
+            "scopeReference": {
+              "table": "campaign_effect_scopes_tables",
+              "key": {
+                "key": "region_to_region_own_text"
+              },
+              "rowId": "campaign_effect_scopes_tables:84f25a7cad42c7bb2304"
+            },
+            "localisation": {
+              "status": "VERIFIED",
+              "value": "농장 수입: %+n%",
+              "field": "effects_description_wh_dlc07_effect_economy_gdp_mod_farming",
+              "reference": {
+                "table": "Loc",
+                "key": {
+                  "key": "effects_description_wh_dlc07_effect_economy_gdp_mod_farming"
+                },
+                "rowId": "7c7fc955bcf25665a0448b91f33e496a730cd01ba2ce06c86466cd628cbfbc90"
+              }
+            },
+            "scopeLocalisation": {
+              "status": "VERIFIED",
+              "value": "\\\\n(지역 지구)",
+              "field": "campaign_effect_scopes_localised_text_region_to_region_own_text",
+              "reference": {
+                "table": "Loc",
+                "key": {
+                  "key": "campaign_effect_scopes_localised_text_region_to_region_own_text"
+                },
+                "rowId": "ebc2e0f166e2f217b16f00f9b37aeb3373e5c8ce9792e6bcd191a9af589cd190"
+              }
+            }
+          },
+          {
+            "key": "wh_main_effect_province_growth_adjacent_provinces",
+            "name": "성장: %+n",
+            "text": "성장: +5",
+            "nameStatus": "VERIFIED",
+            "value": 5,
+            "valueDamaged": 3,
+            "valueRuined": 0,
+            "unit": "raw",
+            "scope": "인접한 자신의 영지",
+            "scopeKey": "province_to_province_adjacent",
+            "officialScope": "(모든 인접 영지)",
+            "scopeDefinition": {
+              "key": "province_to_province_adjacent",
+              "location": "neighbour_faction_province",
+              "ownership": "yours",
+              "source": "province",
+              "target": "province",
+              "territory": "any"
+            },
+            "condition": null,
+            "contextKey": "",
+            "kind": "OTHER",
+            "incomeKind": null,
+            "hidden": false,
+            "reference": {
+              "table": "building_effects_junction_tables",
+              "key": {
+                "building": "wh_main_brt_farm_extra_2",
+                "effect": "wh_main_effect_province_growth_adjacent_provinces",
+                "context_requirement": ""
+              },
+              "rowId": "building_effects_junction_tables:ac2f675416ca59d282c3"
+            },
+            "definitionReference": {
+              "table": "effects_tables",
+              "key": {
+                "effect": "wh_main_effect_province_growth_adjacent_provinces"
+              },
+              "rowId": "effects_tables:9ac5772c6518188a36e0"
+            },
+            "scopeReference": {
+              "table": "campaign_effect_scopes_tables",
+              "key": {
+                "key": "province_to_province_adjacent"
+              },
+              "rowId": "campaign_effect_scopes_tables:3cbd1dc8148374bfe2ed"
+            },
+            "localisation": {
+              "status": "VERIFIED",
+              "value": "성장: %+n",
+              "field": "effects_description_wh_main_effect_province_growth_adjacent_provinces",
+              "reference": {
+                "table": "Loc",
+                "key": {
+                  "key": "effects_description_wh_main_effect_province_growth_adjacent_provinces"
+                },
+                "rowId": "b06e7efb1c74292d587af104105cc7526251b47b477afa166647b005c266b56a"
+              }
+            },
+            "scopeLocalisation": {
+              "status": "VERIFIED",
+              "value": "\\\\n(모든 인접 영지)",
+              "field": "campaign_effect_scopes_localised_text_province_to_province_adjacent",
+              "reference": {
+                "table": "Loc",
+                "key": {
+                  "key": "campaign_effect_scopes_localised_text_province_to_province_adjacent"
+                },
+                "rowId": "dab3fce179d209ef15d028ccf5df349a553e42f150d48cf003e9cd4643af3252"
+              }
+            }
+          },
+          {
+            "key": "wh_main_effect_province_growth_building",
+            "name": "성장: %+n",
+            "text": "성장: +10",
+            "nameStatus": "VERIFIED",
+            "value": 10,
+            "valueDamaged": 10,
+            "valueRuined": 0,
+            "unit": "raw",
+            "scope": "자신의 영지",
+            "scopeKey": "region_to_province_own_unseen",
+            "officialScope": null,
+            "scopeDefinition": {
+              "key": "region_to_province_own_unseen",
+              "location": "provincewide",
+              "ownership": "yours",
+              "source": "region",
+              "target": "province",
+              "territory": "any"
+            },
+            "condition": null,
+            "contextKey": "",
+            "kind": "OTHER",
+            "incomeKind": null,
+            "hidden": false,
+            "reference": {
+              "table": "building_effects_junction_tables",
+              "key": {
+                "building": "wh_main_brt_farm_extra_2",
+                "effect": "wh_main_effect_province_growth_building",
+                "context_requirement": ""
+              },
+              "rowId": "building_effects_junction_tables:ef6cc4389e5d739b3232"
+            },
+            "definitionReference": {
+              "table": "effects_tables",
+              "key": {
+                "effect": "wh_main_effect_province_growth_building"
+              },
+              "rowId": "effects_tables:96056b0fc015bf13f5a4"
+            },
+            "scopeReference": {
+              "table": "campaign_effect_scopes_tables",
+              "key": {
+                "key": "region_to_province_own_unseen"
+              },
+              "rowId": "campaign_effect_scopes_tables:a8de3aa8aba8574b35d0"
+            },
+            "localisation": {
+              "status": "VERIFIED",
+              "value": "성장: %+n",
+              "field": "effects_description_wh_main_effect_province_growth_building",
+              "reference": {
+                "table": "Loc",
+                "key": {
+                  "key": "effects_description_wh_main_effect_province_growth_building"
+                },
+                "rowId": "7bf471ea71ae45d3e3afa2c1b4a44b61732f1037a7c387ea525c1a5b2f847299"
+              }
+            },
+            "scopeLocalisation": {
+              "status": "UNKNOWN",
+              "value": null,
+              "reason": "공식 한국어 Loc 누락·중복·미해결: campaign_effect_scopes_localised_text_region_to_province_own_unseen"
+            }
+          },
+          {
+            "key": "wh_main_effect_unit_recruitment_points",
+            "name": "지역 모집 제한: %+n",
+            "text": "지역 모집 제한: +2",
+            "nameStatus": "VERIFIED",
+            "value": 2,
+            "valueDamaged": 2,
+            "valueRuined": 0,
+            "unit": "raw",
+            "scope": "자신의 영지",
+            "scopeKey": "province_to_province_own_unseen",
+            "officialScope": null,
+            "scopeDefinition": {
+              "key": "province_to_province_own_unseen",
+              "location": "provincewide",
+              "ownership": "yours",
+              "source": "province",
+              "target": "province",
+              "territory": "any"
+            },
+            "condition": null,
+            "contextKey": "",
+            "kind": "OTHER",
+            "incomeKind": null,
+            "hidden": false,
+            "reference": {
+              "table": "building_effects_junction_tables",
+              "key": {
+                "building": "wh_main_brt_farm_extra_2",
+                "effect": "wh_main_effect_unit_recruitment_points",
+                "context_requirement": ""
+              },
+              "rowId": "building_effects_junction_tables:5c36ba81c4fd3eabbf07"
+            },
+            "definitionReference": {
+              "table": "effects_tables",
+              "key": {
+                "effect": "wh_main_effect_unit_recruitment_points"
+              },
+              "rowId": "effects_tables:bbb6adfcc3cd1c628fb7"
+            },
+            "scopeReference": {
+              "table": "campaign_effect_scopes_tables",
+              "key": {
+                "key": "province_to_province_own_unseen"
+              },
+              "rowId": "campaign_effect_scopes_tables:8b8242d47ec33c3e2a17"
+            },
+            "localisation": {
+              "status": "VERIFIED",
+              "value": "지역 모집 제한: %+n",
+              "field": "effects_description_wh_main_effect_unit_recruitment_points",
+              "reference": {
+                "table": "Loc",
+                "key": {
+                  "key": "effects_description_wh_main_effect_unit_recruitment_points"
+                },
+                "rowId": "108a612049d873e1327b2492086445a6b437d56ef829b8e65c7f17ab4557885e"
+              }
+            },
+            "scopeLocalisation": {
+              "status": "UNKNOWN",
+              "value": null,
+              "reason": "공식 한국어 Loc 누락·중복·미해결: campaign_effect_scopes_localised_text_province_to_province_own_unseen"
+            }
+          }
+        ]
+      },
+      "income": {
+        "status": "COMPLETE",
+        "effects": [
+          "building_effects_junction_tables:ae8fd1687d869ee310ef"
+        ],
+        "baseGold": 0
+      }
+    },
+    {
+      "key": "wh_main_brt_stables_1",
+      "chainKey": "wh_main_BRETONNIA_stables",
+      "stage": 0,
+      "koreanName": {
+        "status": "VERIFIED",
+        "value": "마구간",
+        "field": "building_culture_variants_name_wh_main_brt_stables_1wh_main_brt_bretonnia",
+        "reference": {
+          "table": "Loc",
+          "key": {
+            "key": "building_culture_variants_name_wh_main_brt_stables_1wh_main_brt_bretonnia"
+          },
+          "rowId": "6eafde10205eeac28ac984d65b405f63ba59c679d34bbaa9ba1be8e1ad8134b4"
+        }
+      },
+      "variantReference": {
+        "table": "building_culture_variants_tables",
+        "key": {
+          "building": "wh_main_brt_stables_1",
+          "culture": "wh_main_brt_bretonnia",
+          "subculture": "",
+          "faction": ""
+        },
+        "rowId": "building_culture_variants_tables:f62698c6a14587a06da5"
+      },
+      "constructionCost": {
+        "status": "VERIFIED",
+        "value": 750,
+        "field": "create_cost",
+        "reference": {
+          "table": "building_levels_tables",
+          "key": {
+            "level_name": "wh_main_brt_stables_1"
+          },
+          "rowId": "building_levels_tables:80fe1c2c53f25bf9ec5d"
+        }
+      },
+      "constructionTurns": {
+        "status": "VERIFIED",
+        "value": 1,
+        "field": "create_time",
+        "reference": {
+          "table": "building_levels_tables",
+          "key": {
+            "level_name": "wh_main_brt_stables_1"
+          },
+          "rowId": "building_levels_tables:80fe1c2c53f25bf9ec5d"
+        }
+      },
+      "effects": {
+        "status": "COMPLETE",
+        "items": []
+      },
+      "income": {
+        "status": "COMPLETE",
+        "effects": [],
+        "baseGold": 0
+      }
+    },
+    {
+      "key": "wh_main_brt_stables_2",
+      "chainKey": "wh_main_BRETONNIA_stables",
+      "stage": 1,
+      "koreanName": {
+        "status": "VERIFIED",
+        "value": "마사",
+        "field": "building_culture_variants_name_wh_main_brt_stables_2wh_main_brt_bretonnia",
+        "reference": {
+          "table": "Loc",
+          "key": {
+            "key": "building_culture_variants_name_wh_main_brt_stables_2wh_main_brt_bretonnia"
+          },
+          "rowId": "412f4a28fd609941cbba320f33e5d1cd8bd9f0788afd09d506cfdcb47a5bbced"
+        }
+      },
+      "variantReference": {
+        "table": "building_culture_variants_tables",
+        "key": {
+          "building": "wh_main_brt_stables_2",
+          "culture": "wh_main_brt_bretonnia",
+          "subculture": "",
+          "faction": ""
+        },
+        "rowId": "building_culture_variants_tables:6d4719e99170b768a2fd"
+      },
+      "constructionCost": {
+        "status": "VERIFIED",
+        "value": 1500,
+        "field": "create_cost",
+        "reference": {
+          "table": "building_levels_tables",
+          "key": {
+            "level_name": "wh_main_brt_stables_2"
+          },
+          "rowId": "building_levels_tables:f2212b7110ab214887a1"
+        }
+      },
+      "constructionTurns": {
+        "status": "VERIFIED",
+        "value": 2,
+        "field": "create_time",
+        "reference": {
+          "table": "building_levels_tables",
+          "key": {
+            "level_name": "wh_main_brt_stables_2"
+          },
+          "rowId": "building_levels_tables:f2212b7110ab214887a1"
+        }
+      },
+      "effects": {
+        "status": "COMPLETE",
+        "items": [
+          {
+            "key": "wh_main_effect_agent_enable_recruitment_champion_bretonnia",
+            "name": "영웅 모집 해제: 성전사",
+            "text": "영웅 모집 해제: 성전사",
+            "nameStatus": "VERIFIED",
+            "value": 1,
+            "valueDamaged": 1,
+            "valueRuined": 0,
+            "unit": "raw",
+            "scope": "자신의 영지",
+            "scopeKey": "province_to_province_own_unseen",
+            "officialScope": null,
+            "scopeDefinition": {
+              "key": "province_to_province_own_unseen",
+              "location": "provincewide",
+              "ownership": "yours",
+              "source": "province",
+              "target": "province",
+              "territory": "any"
+            },
+            "condition": null,
+            "contextKey": "",
+            "kind": "OTHER",
+            "incomeKind": null,
+            "hidden": false,
+            "reference": {
+              "table": "building_effects_junction_tables",
+              "key": {
+                "building": "wh_main_brt_stables_2",
+                "effect": "wh_main_effect_agent_enable_recruitment_champion_bretonnia",
+                "context_requirement": ""
+              },
+              "rowId": "building_effects_junction_tables:2b4ace302613e3617e3d"
+            },
+            "definitionReference": {
+              "table": "effects_tables",
+              "key": {
+                "effect": "wh_main_effect_agent_enable_recruitment_champion_bretonnia"
+              },
+              "rowId": "effects_tables:57fa5cb3d6487e6b1ae6"
+            },
+            "scopeReference": {
+              "table": "campaign_effect_scopes_tables",
+              "key": {
+                "key": "province_to_province_own_unseen"
+              },
+              "rowId": "campaign_effect_scopes_tables:8b8242d47ec33c3e2a17"
+            },
+            "localisation": {
+              "status": "VERIFIED",
+              "value": "[[img:icon_hero]][[/img]]영웅 모집 해제: 성전사",
+              "field": "effects_description_wh_main_effect_agent_enable_recruitment_champion_bretonnia",
+              "reference": {
+                "table": "Loc",
+                "key": {
+                  "key": "effects_description_wh_main_effect_agent_enable_recruitment_champion_bretonnia"
+                },
+                "rowId": "0551b27eb50c23c9148895143aa833522d9b04acefa79a3225a15e1c3ed517a6"
+              }
+            },
+            "scopeLocalisation": {
+              "status": "UNKNOWN",
+              "value": null,
+              "reason": "공식 한국어 Loc 누락·중복·미해결: campaign_effect_scopes_localised_text_province_to_province_own_unseen"
+            }
+          }
+        ]
+      },
+      "income": {
+        "status": "COMPLETE",
+        "effects": [],
+        "baseGold": 0
+      }
+    },
+    {
+      "key": "wh_main_brt_stables_3",
+      "chainKey": "wh_main_BRETONNIA_stables",
+      "stage": 2,
+      "koreanName": {
+        "status": "VERIFIED",
+        "value": "왕립 마구간",
+        "field": "building_culture_variants_name_wh_main_brt_stables_3wh_main_brt_bretonnia",
+        "reference": {
+          "table": "Loc",
+          "key": {
+            "key": "building_culture_variants_name_wh_main_brt_stables_3wh_main_brt_bretonnia"
+          },
+          "rowId": "f34d11d13553e6bc25e272cae6982e3af814f8c67f1d6b81178a7e6a0098870b"
+        }
+      },
+      "variantReference": {
+        "table": "building_culture_variants_tables",
+        "key": {
+          "building": "wh_main_brt_stables_3",
+          "culture": "wh_main_brt_bretonnia",
+          "subculture": "",
+          "faction": ""
+        },
+        "rowId": "building_culture_variants_tables:fc36dc62ef7230aee997"
+      },
+      "constructionCost": {
+        "status": "VERIFIED",
+        "value": 2500,
+        "field": "create_cost",
+        "reference": {
+          "table": "building_levels_tables",
+          "key": {
+            "level_name": "wh_main_brt_stables_3"
+          },
+          "rowId": "building_levels_tables:0aee997fa566391dcfed"
+        }
+      },
+      "constructionTurns": {
+        "status": "VERIFIED",
+        "value": 3,
+        "field": "create_time",
+        "reference": {
+          "table": "building_levels_tables",
+          "key": {
+            "level_name": "wh_main_brt_stables_3"
+          },
+          "rowId": "building_levels_tables:0aee997fa566391dcfed"
+        }
+      },
+      "effects": {
+        "status": "COMPLETE",
+        "items": [
+          {
+            "key": "wh_main_effect_agent_cap_increase_champion_paladin",
+            "name": "영웅 모집 제한: 성전사에 %+n",
+            "text": "영웅 모집 제한: 성전사에 +1",
+            "nameStatus": "VERIFIED",
+            "value": 1,
+            "valueDamaged": 1,
+            "valueRuined": 0,
+            "unit": "raw",
+            "scope": "자신의 진영 전체",
+            "scopeKey": "faction_to_faction_own_unseen",
+            "officialScope": null,
+            "scopeDefinition": {
+              "key": "faction_to_faction_own_unseen",
+              "location": "factionwide",
+              "ownership": "yours",
+              "source": "faction",
+              "target": "faction",
+              "territory": "any"
+            },
+            "condition": null,
+            "contextKey": "",
+            "kind": "OTHER",
+            "incomeKind": null,
+            "hidden": false,
+            "reference": {
+              "table": "building_effects_junction_tables",
+              "key": {
+                "building": "wh_main_brt_stables_3",
+                "effect": "wh_main_effect_agent_cap_increase_champion_paladin",
+                "context_requirement": ""
+              },
+              "rowId": "building_effects_junction_tables:afe9837571d415f08bc7"
+            },
+            "definitionReference": {
+              "table": "effects_tables",
+              "key": {
+                "effect": "wh_main_effect_agent_cap_increase_champion_paladin"
+              },
+              "rowId": "effects_tables:4c535192484eb969458c"
+            },
+            "scopeReference": {
+              "table": "campaign_effect_scopes_tables",
+              "key": {
+                "key": "faction_to_faction_own_unseen"
+              },
+              "rowId": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823"
+            },
+            "localisation": {
+              "status": "VERIFIED",
+              "value": "영웅 모집 제한: 성전사에 %+n",
+              "field": "effects_description_wh_main_effect_agent_cap_increase_champion_paladin",
+              "reference": {
+                "table": "Loc",
+                "key": {
+                  "key": "effects_description_wh_main_effect_agent_cap_increase_champion_paladin"
+                },
+                "rowId": "0071c0db7b67288109e13c4cd53b4710c58940541ae2936d2fb2cd963315e04a"
+              }
+            },
+            "scopeLocalisation": {
+              "status": "UNKNOWN",
+              "value": null,
+              "reason": "공식 한국어 Loc 누락·중복·미해결: campaign_effect_scopes_localised_text_faction_to_faction_own_unseen"
+            }
+          },
+          {
+            "key": "wh_main_effect_agent_enable_recruitment_champion_bretonnia",
+            "name": "영웅 모집 해제: 성전사",
+            "text": "영웅 모집 해제: 성전사",
+            "nameStatus": "VERIFIED",
+            "value": 1,
+            "valueDamaged": 1,
+            "valueRuined": 0,
+            "unit": "raw",
+            "scope": "자신의 영지",
+            "scopeKey": "province_to_province_own_unseen",
+            "officialScope": null,
+            "scopeDefinition": {
+              "key": "province_to_province_own_unseen",
+              "location": "provincewide",
+              "ownership": "yours",
+              "source": "province",
+              "target": "province",
+              "territory": "any"
+            },
+            "condition": null,
+            "contextKey": "",
+            "kind": "OTHER",
+            "incomeKind": null,
+            "hidden": false,
+            "reference": {
+              "table": "building_effects_junction_tables",
+              "key": {
+                "building": "wh_main_brt_stables_3",
+                "effect": "wh_main_effect_agent_enable_recruitment_champion_bretonnia",
+                "context_requirement": ""
+              },
+              "rowId": "building_effects_junction_tables:d92d3d0619af463de1f7"
+            },
+            "definitionReference": {
+              "table": "effects_tables",
+              "key": {
+                "effect": "wh_main_effect_agent_enable_recruitment_champion_bretonnia"
+              },
+              "rowId": "effects_tables:57fa5cb3d6487e6b1ae6"
+            },
+            "scopeReference": {
+              "table": "campaign_effect_scopes_tables",
+              "key": {
+                "key": "province_to_province_own_unseen"
+              },
+              "rowId": "campaign_effect_scopes_tables:8b8242d47ec33c3e2a17"
+            },
+            "localisation": {
+              "status": "VERIFIED",
+              "value": "[[img:icon_hero]][[/img]]영웅 모집 해제: 성전사",
+              "field": "effects_description_wh_main_effect_agent_enable_recruitment_champion_bretonnia",
+              "reference": {
+                "table": "Loc",
+                "key": {
+                  "key": "effects_description_wh_main_effect_agent_enable_recruitment_champion_bretonnia"
+                },
+                "rowId": "0551b27eb50c23c9148895143aa833522d9b04acefa79a3225a15e1c3ed517a6"
+              }
+            },
+            "scopeLocalisation": {
+              "status": "UNKNOWN",
+              "value": null,
+              "reason": "공식 한국어 Loc 누락·중복·미해결: campaign_effect_scopes_localised_text_province_to_province_own_unseen"
+            }
+          }
+        ]
+      },
+      "income": {
+        "status": "COMPLETE",
+        "effects": [],
+        "baseGold": 0
+      }
+    },
+    {
+      "key": "wh_main_brt_stables_4",
+      "chainKey": "wh_main_BRETONNIA_stables",
+      "stage": 3,
+      "koreanName": {
+        "status": "VERIFIED",
+        "value": "페가서스 둥지",
+        "field": "building_culture_variants_name_wh_main_brt_stables_4wh_main_brt_bretonnia",
+        "reference": {
+          "table": "Loc",
+          "key": {
+            "key": "building_culture_variants_name_wh_main_brt_stables_4wh_main_brt_bretonnia"
+          },
+          "rowId": "4d7f0218e6eb9dc47d87d143d1cae064011dcdb533511cfbeb9a53f0ef94d489"
+        }
+      },
+      "variantReference": {
+        "table": "building_culture_variants_tables",
+        "key": {
+          "building": "wh_main_brt_stables_4",
+          "culture": "wh_main_brt_bretonnia",
+          "subculture": "",
+          "faction": ""
+        },
+        "rowId": "building_culture_variants_tables:1177e6daf872f0a4491f"
+      },
+      "constructionCost": {
+        "status": "VERIFIED",
+        "value": 4000,
+        "field": "create_cost",
+        "reference": {
+          "table": "building_levels_tables",
+          "key": {
+            "level_name": "wh_main_brt_stables_4"
+          },
+          "rowId": "building_levels_tables:511387360f9e8bebc511"
+        }
+      },
+      "constructionTurns": {
+        "status": "VERIFIED",
+        "value": 4,
+        "field": "create_time",
+        "reference": {
+          "table": "building_levels_tables",
+          "key": {
+            "level_name": "wh_main_brt_stables_4"
+          },
+          "rowId": "building_levels_tables:511387360f9e8bebc511"
+        }
+      },
+      "effects": {
+        "status": "COMPLETE",
+        "items": [
+          {
+            "key": "wh_main_effect_agent_cap_increase_champion_paladin",
+            "name": "영웅 모집 제한: 성전사에 %+n",
+            "text": "영웅 모집 제한: 성전사에 +1",
+            "nameStatus": "VERIFIED",
+            "value": 1,
+            "valueDamaged": 1,
+            "valueRuined": 0,
+            "unit": "raw",
+            "scope": "자신의 진영 전체",
+            "scopeKey": "faction_to_faction_own_unseen",
+            "officialScope": null,
+            "scopeDefinition": {
+              "key": "faction_to_faction_own_unseen",
+              "location": "factionwide",
+              "ownership": "yours",
+              "source": "faction",
+              "target": "faction",
+              "territory": "any"
+            },
+            "condition": null,
+            "contextKey": "",
+            "kind": "OTHER",
+            "incomeKind": null,
+            "hidden": false,
+            "reference": {
+              "table": "building_effects_junction_tables",
+              "key": {
+                "building": "wh_main_brt_stables_4",
+                "effect": "wh_main_effect_agent_cap_increase_champion_paladin",
+                "context_requirement": ""
+              },
+              "rowId": "building_effects_junction_tables:234ce60c12594f97322e"
+            },
+            "definitionReference": {
+              "table": "effects_tables",
+              "key": {
+                "effect": "wh_main_effect_agent_cap_increase_champion_paladin"
+              },
+              "rowId": "effects_tables:4c535192484eb969458c"
+            },
+            "scopeReference": {
+              "table": "campaign_effect_scopes_tables",
+              "key": {
+                "key": "faction_to_faction_own_unseen"
+              },
+              "rowId": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823"
+            },
+            "localisation": {
+              "status": "VERIFIED",
+              "value": "영웅 모집 제한: 성전사에 %+n",
+              "field": "effects_description_wh_main_effect_agent_cap_increase_champion_paladin",
+              "reference": {
+                "table": "Loc",
+                "key": {
+                  "key": "effects_description_wh_main_effect_agent_cap_increase_champion_paladin"
+                },
+                "rowId": "0071c0db7b67288109e13c4cd53b4710c58940541ae2936d2fb2cd963315e04a"
+              }
+            },
+            "scopeLocalisation": {
+              "status": "UNKNOWN",
+              "value": null,
+              "reason": "공식 한국어 Loc 누락·중복·미해결: campaign_effect_scopes_localised_text_faction_to_faction_own_unseen"
+            }
+          },
+          {
+            "key": "wh_main_effect_agent_enable_recruitment_champion_bretonnia",
+            "name": "영웅 모집 해제: 성전사",
+            "text": "영웅 모집 해제: 성전사",
+            "nameStatus": "VERIFIED",
+            "value": 1,
+            "valueDamaged": 1,
+            "valueRuined": 0,
+            "unit": "raw",
+            "scope": "자신의 영지",
+            "scopeKey": "province_to_province_own_unseen",
+            "officialScope": null,
+            "scopeDefinition": {
+              "key": "province_to_province_own_unseen",
+              "location": "provincewide",
+              "ownership": "yours",
+              "source": "province",
+              "target": "province",
+              "territory": "any"
+            },
+            "condition": null,
+            "contextKey": "",
+            "kind": "OTHER",
+            "incomeKind": null,
+            "hidden": false,
+            "reference": {
+              "table": "building_effects_junction_tables",
+              "key": {
+                "building": "wh_main_brt_stables_4",
+                "effect": "wh_main_effect_agent_enable_recruitment_champion_bretonnia",
+                "context_requirement": ""
+              },
+              "rowId": "building_effects_junction_tables:ee6b1c01c87003aa5d1e"
+            },
+            "definitionReference": {
+              "table": "effects_tables",
+              "key": {
+                "effect": "wh_main_effect_agent_enable_recruitment_champion_bretonnia"
+              },
+              "rowId": "effects_tables:57fa5cb3d6487e6b1ae6"
+            },
+            "scopeReference": {
+              "table": "campaign_effect_scopes_tables",
+              "key": {
+                "key": "province_to_province_own_unseen"
+              },
+              "rowId": "campaign_effect_scopes_tables:8b8242d47ec33c3e2a17"
+            },
+            "localisation": {
+              "status": "VERIFIED",
+              "value": "[[img:icon_hero]][[/img]]영웅 모집 해제: 성전사",
+              "field": "effects_description_wh_main_effect_agent_enable_recruitment_champion_bretonnia",
+              "reference": {
+                "table": "Loc",
+                "key": {
+                  "key": "effects_description_wh_main_effect_agent_enable_recruitment_champion_bretonnia"
+                },
+                "rowId": "0551b27eb50c23c9148895143aa833522d9b04acefa79a3225a15e1c3ed517a6"
+              }
+            },
+            "scopeLocalisation": {
+              "status": "UNKNOWN",
+              "value": null,
+              "reason": "공식 한국어 Loc 누락·중복·미해결: campaign_effect_scopes_localised_text_province_to_province_own_unseen"
+            }
+          }
+        ]
+      },
+      "income": {
+        "status": "COMPLETE",
+        "effects": [],
+        "baseGold": 0
+      }
+    },
+    {
+      "key": "wh_main_brt_stables_5",
+      "chainKey": "wh_main_BRETONNIA_stables",
+      "stage": 4,
+      "koreanName": {
+        "status": "VERIFIED",
+        "value": "왕립 동물원",
+        "field": "building_culture_variants_name_wh_main_brt_stables_5wh_main_brt_bretonnia",
+        "reference": {
+          "table": "Loc",
+          "key": {
+            "key": "building_culture_variants_name_wh_main_brt_stables_5wh_main_brt_bretonnia"
+          },
+          "rowId": "fe724169f1212729f3ea63798e8120459177b42b3dd53f68628b397a3616b0ff"
+        }
+      },
+      "variantReference": {
+        "table": "building_culture_variants_tables",
+        "key": {
+          "building": "wh_main_brt_stables_5",
+          "culture": "wh_main_brt_bretonnia",
+          "subculture": "",
+          "faction": ""
+        },
+        "rowId": "building_culture_variants_tables:aad255d4214513d8fc84"
+      },
+      "constructionCost": {
+        "status": "VERIFIED",
+        "value": 8000,
+        "field": "create_cost",
+        "reference": {
+          "table": "building_levels_tables",
+          "key": {
+            "level_name": "wh_main_brt_stables_5"
+          },
+          "rowId": "building_levels_tables:b7a6ffbfc73bd1982d9f"
+        }
+      },
+      "constructionTurns": {
+        "status": "VERIFIED",
+        "value": 5,
+        "field": "create_time",
+        "reference": {
+          "table": "building_levels_tables",
+          "key": {
+            "level_name": "wh_main_brt_stables_5"
+          },
+          "rowId": "building_levels_tables:b7a6ffbfc73bd1982d9f"
+        }
+      },
+      "effects": {
+        "status": "COMPLETE",
+        "items": [
+          {
+            "key": "wh_main_effect_agent_cap_increase_champion_paladin",
+            "name": "영웅 모집 제한: 성전사에 %+n",
+            "text": "영웅 모집 제한: 성전사에 +1",
+            "nameStatus": "VERIFIED",
+            "value": 1,
+            "valueDamaged": 1,
+            "valueRuined": 0,
+            "unit": "raw",
+            "scope": "자신의 진영 전체",
+            "scopeKey": "faction_to_faction_own_unseen",
+            "officialScope": null,
+            "scopeDefinition": {
+              "key": "faction_to_faction_own_unseen",
+              "location": "factionwide",
+              "ownership": "yours",
+              "source": "faction",
+              "target": "faction",
+              "territory": "any"
+            },
+            "condition": null,
+            "contextKey": "",
+            "kind": "OTHER",
+            "incomeKind": null,
+            "hidden": false,
+            "reference": {
+              "table": "building_effects_junction_tables",
+              "key": {
+                "building": "wh_main_brt_stables_5",
+                "effect": "wh_main_effect_agent_cap_increase_champion_paladin",
+                "context_requirement": ""
+              },
+              "rowId": "building_effects_junction_tables:2ad55dc1b9776c1ff7ae"
+            },
+            "definitionReference": {
+              "table": "effects_tables",
+              "key": {
+                "effect": "wh_main_effect_agent_cap_increase_champion_paladin"
+              },
+              "rowId": "effects_tables:4c535192484eb969458c"
+            },
+            "scopeReference": {
+              "table": "campaign_effect_scopes_tables",
+              "key": {
+                "key": "faction_to_faction_own_unseen"
+              },
+              "rowId": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823"
+            },
+            "localisation": {
+              "status": "VERIFIED",
+              "value": "영웅 모집 제한: 성전사에 %+n",
+              "field": "effects_description_wh_main_effect_agent_cap_increase_champion_paladin",
+              "reference": {
+                "table": "Loc",
+                "key": {
+                  "key": "effects_description_wh_main_effect_agent_cap_increase_champion_paladin"
+                },
+                "rowId": "0071c0db7b67288109e13c4cd53b4710c58940541ae2936d2fb2cd963315e04a"
+              }
+            },
+            "scopeLocalisation": {
+              "status": "UNKNOWN",
+              "value": null,
+              "reason": "공식 한국어 Loc 누락·중복·미해결: campaign_effect_scopes_localised_text_faction_to_faction_own_unseen"
+            }
+          },
+          {
+            "key": "wh_main_effect_agent_enable_recruitment_champion_bretonnia",
+            "name": "영웅 모집 해제: 성전사",
+            "text": "영웅 모집 해제: 성전사",
+            "nameStatus": "VERIFIED",
+            "value": 1,
+            "valueDamaged": 1,
+            "valueRuined": 0,
+            "unit": "raw",
+            "scope": "자신의 영지",
+            "scopeKey": "province_to_province_own_unseen",
+            "officialScope": null,
+            "scopeDefinition": {
+              "key": "province_to_province_own_unseen",
+              "location": "provincewide",
+              "ownership": "yours",
+              "source": "province",
+              "target": "province",
+              "territory": "any"
+            },
+            "condition": null,
+            "contextKey": "",
+            "kind": "OTHER",
+            "incomeKind": null,
+            "hidden": false,
+            "reference": {
+              "table": "building_effects_junction_tables",
+              "key": {
+                "building": "wh_main_brt_stables_5",
+                "effect": "wh_main_effect_agent_enable_recruitment_champion_bretonnia",
+                "context_requirement": ""
+              },
+              "rowId": "building_effects_junction_tables:b30698b5e230b03d4e37"
+            },
+            "definitionReference": {
+              "table": "effects_tables",
+              "key": {
+                "effect": "wh_main_effect_agent_enable_recruitment_champion_bretonnia"
+              },
+              "rowId": "effects_tables:57fa5cb3d6487e6b1ae6"
+            },
+            "scopeReference": {
+              "table": "campaign_effect_scopes_tables",
+              "key": {
+                "key": "province_to_province_own_unseen"
+              },
+              "rowId": "campaign_effect_scopes_tables:8b8242d47ec33c3e2a17"
+            },
+            "localisation": {
+              "status": "VERIFIED",
+              "value": "[[img:icon_hero]][[/img]]영웅 모집 해제: 성전사",
+              "field": "effects_description_wh_main_effect_agent_enable_recruitment_champion_bretonnia",
+              "reference": {
+                "table": "Loc",
+                "key": {
+                  "key": "effects_description_wh_main_effect_agent_enable_recruitment_champion_bretonnia"
+                },
+                "rowId": "0551b27eb50c23c9148895143aa833522d9b04acefa79a3225a15e1c3ed517a6"
+              }
+            },
+            "scopeLocalisation": {
+              "status": "UNKNOWN",
+              "value": null,
+              "reason": "공식 한국어 Loc 누락·중복·미해결: campaign_effect_scopes_localised_text_province_to_province_own_unseen"
+            }
+          }
+        ]
+      },
+      "income": {
+        "status": "COMPLETE",
+        "effects": [],
+        "baseGold": 0
+      }
+    },
+    {
+      "key": "wh_main_brt_worship_2",
+      "chainKey": "wh_main_BRETONNIA_worship",
+      "stage": 1,
+      "koreanName": {
+        "status": "VERIFIED",
+        "value": "성배 예배당",
+        "field": "building_culture_variants_name_wh_main_brt_worship_2wh_main_brt_bretonnia",
+        "reference": {
+          "table": "Loc",
+          "key": {
+            "key": "building_culture_variants_name_wh_main_brt_worship_2wh_main_brt_bretonnia"
+          },
+          "rowId": "624a80c05cb1493cf7da5f44607c3bffebf84142fe40e54a0a0344a036dbc944"
+        }
+      },
+      "variantReference": {
+        "table": "building_culture_variants_tables",
+        "key": {
+          "building": "wh_main_brt_worship_2",
+          "culture": "wh_main_brt_bretonnia",
+          "subculture": "",
+          "faction": ""
+        },
+        "rowId": "building_culture_variants_tables:fa99cc522b8bd8e6a141"
+      },
+      "constructionCost": {
+        "status": "VERIFIED",
+        "value": 3000,
+        "field": "create_cost",
+        "reference": {
+          "table": "building_levels_tables",
+          "key": {
+            "level_name": "wh_main_brt_worship_2"
+          },
+          "rowId": "building_levels_tables:40b6f4ccd551ea4278c9"
+        }
+      },
+      "constructionTurns": {
+        "status": "VERIFIED",
+        "value": 4,
+        "field": "create_time",
+        "reference": {
+          "table": "building_levels_tables",
+          "key": {
+            "level_name": "wh_main_brt_worship_2"
+          },
+          "rowId": "building_levels_tables:40b6f4ccd551ea4278c9"
+        }
+      },
+      "effects": {
+        "status": "COMPLETE",
+        "items": [
+          {
+            "key": "wh2_main_effect_ability_enable_garrison_heroes",
+            "name": "[HIDDEN]",
+            "text": "[HIDDEN]",
+            "nameStatus": "VERIFIED",
+            "value": 1,
+            "valueDamaged": 1,
+            "valueRuined": 1,
+            "unit": "raw",
+            "scope": "지역 내 아군 주둔군",
+            "scopeKey": "building_to_forces_own_regionwide_if_garrison",
+            "officialScope": "(지역 내 군단)",
+            "scopeDefinition": {
+              "key": "building_to_forces_own_regionwide_if_garrison",
+              "location": "regionwide",
+              "ownership": "yours",
+              "source": "building",
+              "target": "force_if_garrison",
+              "territory": "any"
+            },
+            "condition": null,
+            "contextKey": "",
+            "kind": "OTHER",
+            "incomeKind": null,
+            "hidden": true,
+            "reference": {
+              "table": "building_effects_junction_tables",
+              "key": {
+                "building": "wh_main_brt_worship_2",
+                "effect": "wh2_main_effect_ability_enable_garrison_heroes",
+                "context_requirement": ""
+              },
+              "rowId": "building_effects_junction_tables:c0f1d219e65d5c8e13f2"
+            },
+            "definitionReference": {
+              "table": "effects_tables",
+              "key": {
+                "effect": "wh2_main_effect_ability_enable_garrison_heroes"
+              },
+              "rowId": "effects_tables:2242e1509cb8706c30ce"
+            },
+            "scopeReference": {
+              "table": "campaign_effect_scopes_tables",
+              "key": {
+                "key": "building_to_forces_own_regionwide_if_garrison"
+              },
+              "rowId": "campaign_effect_scopes_tables:738271272db0a6cd5553"
+            },
+            "localisation": {
+              "status": "VERIFIED",
+              "value": "[HIDDEN]",
+              "field": "effects_description_wh2_main_effect_ability_enable_garrison_heroes",
+              "reference": {
+                "table": "Loc",
+                "key": {
+                  "key": "effects_description_wh2_main_effect_ability_enable_garrison_heroes"
+                },
+                "rowId": "19bdfde844e841fe521fba695f216d410a9200545239189f80175e7fe9534011"
+              }
+            },
+            "scopeLocalisation": {
+              "status": "VERIFIED",
+              "value": "\\\\n(지역 내 군단)",
+              "field": "campaign_effect_scopes_localised_text_building_to_forces_own_regionwide_if_garrison",
+              "reference": {
+                "table": "Loc",
+                "key": {
+                  "key": "campaign_effect_scopes_localised_text_building_to_forces_own_regionwide_if_garrison"
+                },
+                "rowId": "c2ee5428e0b0b9cf428deaf96fd7b814f8ed0be74e735941fbe5aa536ca669ee"
+              }
+            }
+          },
+          {
+            "key": "wh3_main_effect_corruption_reduction_adjacent_provinces",
+            "name": "인접 영지의 오염: %+n",
+            "text": "인접 영지의 오염: -2",
+            "nameStatus": "VERIFIED",
+            "value": -2,
+            "valueDamaged": -2,
+            "valueRuined": 0,
+            "unit": "raw",
+            "scope": "자신의 영지",
+            "scopeKey": "province_to_province_own_unseen",
+            "officialScope": null,
+            "scopeDefinition": {
+              "key": "province_to_province_own_unseen",
+              "location": "provincewide",
+              "ownership": "yours",
+              "source": "province",
+              "target": "province",
+              "territory": "any"
+            },
+            "condition": null,
+            "contextKey": "",
+            "kind": "OTHER",
+            "incomeKind": null,
+            "hidden": false,
+            "reference": {
+              "table": "building_effects_junction_tables",
+              "key": {
+                "building": "wh_main_brt_worship_2",
+                "effect": "wh3_main_effect_corruption_reduction_adjacent_provinces",
+                "context_requirement": ""
+              },
+              "rowId": "building_effects_junction_tables:0f3fb73e1ba5ec3f177a"
+            },
+            "definitionReference": {
+              "table": "effects_tables",
+              "key": {
+                "effect": "wh3_main_effect_corruption_reduction_adjacent_provinces"
+              },
+              "rowId": "effects_tables:17a48cd1137700a2f376"
+            },
+            "scopeReference": {
+              "table": "campaign_effect_scopes_tables",
+              "key": {
+                "key": "province_to_province_own_unseen"
+              },
+              "rowId": "campaign_effect_scopes_tables:8b8242d47ec33c3e2a17"
+            },
+            "localisation": {
+              "status": "VERIFIED",
+              "value": "인접 영지의 오염: %+n",
+              "field": "effects_description_wh3_main_effect_corruption_reduction_adjacent_provinces",
+              "reference": {
+                "table": "Loc",
+                "key": {
+                  "key": "effects_description_wh3_main_effect_corruption_reduction_adjacent_provinces"
+                },
+                "rowId": "bc7101193abf705ce0264c022903d53b106f98bac376085c7bf4b7549856906b"
+              }
+            },
+            "scopeLocalisation": {
+              "status": "UNKNOWN",
+              "value": null,
+              "reason": "공식 한국어 Loc 누락·중복·미해결: campaign_effect_scopes_localised_text_province_to_province_own_unseen"
+            }
+          },
+          {
+            "key": "wh3_main_effect_corruption_reduction_buildings",
+            "name": "오염: %+n",
+            "text": "오염: -3",
+            "nameStatus": "VERIFIED",
+            "value": -3,
+            "valueDamaged": -3,
+            "valueRuined": 0,
+            "unit": "raw",
+            "scope": "자신의 지역",
+            "scopeKey": "region_to_region_own",
+            "officialScope": null,
+            "scopeDefinition": {
+              "key": "region_to_region_own",
+              "location": "regionwide",
+              "ownership": "yours",
+              "source": "region",
+              "target": "region",
+              "territory": "any"
+            },
+            "condition": null,
+            "contextKey": "",
+            "kind": "OTHER",
+            "incomeKind": null,
+            "hidden": false,
+            "reference": {
+              "table": "building_effects_junction_tables",
+              "key": {
+                "building": "wh_main_brt_worship_2",
+                "effect": "wh3_main_effect_corruption_reduction_buildings",
+                "context_requirement": ""
+              },
+              "rowId": "building_effects_junction_tables:48f8895fd1affa2325f6"
+            },
+            "definitionReference": {
+              "table": "effects_tables",
+              "key": {
+                "effect": "wh3_main_effect_corruption_reduction_buildings"
+              },
+              "rowId": "effects_tables:c480318b1325df28972d"
+            },
+            "scopeReference": {
+              "table": "campaign_effect_scopes_tables",
+              "key": {
+                "key": "region_to_region_own"
+              },
+              "rowId": "campaign_effect_scopes_tables:b691a9e1ab534a3749bf"
+            },
+            "localisation": {
+              "status": "VERIFIED",
+              "value": "오염: %+n",
+              "field": "effects_description_wh3_main_effect_corruption_reduction_buildings",
+              "reference": {
+                "table": "Loc",
+                "key": {
+                  "key": "effects_description_wh3_main_effect_corruption_reduction_buildings"
+                },
+                "rowId": "80019de16a26eaa9da9b55479f9dee9f80558cb39ece5c01ce3adc11d43e3ee7"
+              }
+            },
+            "scopeLocalisation": {
+              "status": "UNKNOWN",
+              "value": null,
+              "reason": "공식 한국어 Loc 누락·중복·미해결: campaign_effect_scopes_localised_text_region_to_region_own"
+            }
+          },
+          {
+            "key": "wh_dlc07_effect_remove_bad_traits",
+            "name": "기도: 매 턴 마다 이 정착지에 주둔한 모든 군주의 캐릭터 특성에 %+n% 확률로 부정적인 영향 제거",
+            "text": "기도: 매 턴 마다 이 정착지에 주둔한 모든 군주의 캐릭터 특성에 +20% 확률로 부정적인 영향 제거",
+            "nameStatus": "VERIFIED",
+            "value": 20,
+            "valueDamaged": 1,
+            "valueRuined": 0,
+            "unit": "percent",
+            "scope": "자신의 지역",
+            "scopeKey": "region_to_region_own",
+            "officialScope": null,
+            "scopeDefinition": {
+              "key": "region_to_region_own",
+              "location": "regionwide",
+              "ownership": "yours",
+              "source": "region",
+              "target": "region",
+              "territory": "any"
+            },
+            "condition": null,
+            "contextKey": "",
+            "kind": "OTHER",
+            "incomeKind": null,
+            "hidden": false,
+            "reference": {
+              "table": "building_effects_junction_tables",
+              "key": {
+                "building": "wh_main_brt_worship_2",
+                "effect": "wh_dlc07_effect_remove_bad_traits",
+                "context_requirement": ""
+              },
+              "rowId": "building_effects_junction_tables:2a37de571cc2fb2a898e"
+            },
+            "definitionReference": {
+              "table": "effects_tables",
+              "key": {
+                "effect": "wh_dlc07_effect_remove_bad_traits"
+              },
+              "rowId": "effects_tables:b5741aa53c26c9c5fe3d"
+            },
+            "scopeReference": {
+              "table": "campaign_effect_scopes_tables",
+              "key": {
+                "key": "region_to_region_own"
+              },
+              "rowId": "campaign_effect_scopes_tables:b691a9e1ab534a3749bf"
+            },
+            "localisation": {
+              "status": "VERIFIED",
+              "value": "기도: 매 턴 마다 이 정착지에 주둔한 모든 [[img:icon_general]][[/img]]군주의 캐릭터 특성에 %+n% 확률로 부정적인 영향 제거",
+              "field": "effects_description_wh_dlc07_effect_remove_bad_traits",
+              "reference": {
+                "table": "Loc",
+                "key": {
+                  "key": "effects_description_wh_dlc07_effect_remove_bad_traits"
+                },
+                "rowId": "5c8429fadd895b9b2094eb82c09745b6913d7f18f782a13377f591fbfe17c997"
+              }
+            },
+            "scopeLocalisation": {
+              "status": "UNKNOWN",
+              "value": null,
+              "reason": "공식 한국어 Loc 누락·중복·미해결: campaign_effect_scopes_localised_text_region_to_region_own"
+            }
+          },
+          {
+            "key": "wh_main_effect_agent_cap_increase_wizard_damsel",
+            "name": "영웅 모집 제한: 여식에 %+n",
+            "text": "영웅 모집 제한: 여식에 +1",
+            "nameStatus": "VERIFIED",
+            "value": 1,
+            "valueDamaged": 1,
+            "valueRuined": 0,
+            "unit": "raw",
+            "scope": "자신의 진영 전체",
+            "scopeKey": "faction_to_faction_own_unseen",
+            "officialScope": null,
+            "scopeDefinition": {
+              "key": "faction_to_faction_own_unseen",
+              "location": "factionwide",
+              "ownership": "yours",
+              "source": "faction",
+              "target": "faction",
+              "territory": "any"
+            },
+            "condition": null,
+            "contextKey": "",
+            "kind": "OTHER",
+            "incomeKind": null,
+            "hidden": false,
+            "reference": {
+              "table": "building_effects_junction_tables",
+              "key": {
+                "building": "wh_main_brt_worship_2",
+                "effect": "wh_main_effect_agent_cap_increase_wizard_damsel",
+                "context_requirement": ""
+              },
+              "rowId": "building_effects_junction_tables:3e76a64f8ff1555f44f1"
+            },
+            "definitionReference": {
+              "table": "effects_tables",
+              "key": {
+                "effect": "wh_main_effect_agent_cap_increase_wizard_damsel"
+              },
+              "rowId": "effects_tables:1a49b6e379bfe568452d"
+            },
+            "scopeReference": {
+              "table": "campaign_effect_scopes_tables",
+              "key": {
+                "key": "faction_to_faction_own_unseen"
+              },
+              "rowId": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823"
+            },
+            "localisation": {
+              "status": "VERIFIED",
+              "value": "영웅 모집 제한: 여식에 %+n",
+              "field": "effects_description_wh_main_effect_agent_cap_increase_wizard_damsel",
+              "reference": {
+                "table": "Loc",
+                "key": {
+                  "key": "effects_description_wh_main_effect_agent_cap_increase_wizard_damsel"
+                },
+                "rowId": "58f4c33afef50b383578d9762bb015ce6e7b465d9b85c760a2320c1c79783525"
+              }
+            },
+            "scopeLocalisation": {
+              "status": "UNKNOWN",
+              "value": null,
+              "reason": "공식 한국어 Loc 누락·중복·미해결: campaign_effect_scopes_localised_text_faction_to_faction_own_unseen"
+            }
+          },
+          {
+            "key": "wh_main_effect_agent_enable_recruitment_wizard_bretonnia",
+            "name": "영웅 모집 해제: 여식",
+            "text": "영웅 모집 해제: 여식",
+            "nameStatus": "VERIFIED",
+            "value": 1,
+            "valueDamaged": 1,
+            "valueRuined": 0,
+            "unit": "raw",
+            "scope": "자신의 영지",
+            "scopeKey": "province_to_province_own_unseen",
+            "officialScope": null,
+            "scopeDefinition": {
+              "key": "province_to_province_own_unseen",
+              "location": "provincewide",
+              "ownership": "yours",
+              "source": "province",
+              "target": "province",
+              "territory": "any"
+            },
+            "condition": null,
+            "contextKey": "",
+            "kind": "OTHER",
+            "incomeKind": null,
+            "hidden": false,
+            "reference": {
+              "table": "building_effects_junction_tables",
+              "key": {
+                "building": "wh_main_brt_worship_2",
+                "effect": "wh_main_effect_agent_enable_recruitment_wizard_bretonnia",
+                "context_requirement": ""
+              },
+              "rowId": "building_effects_junction_tables:12fbd70aabaa1e84b90f"
+            },
+            "definitionReference": {
+              "table": "effects_tables",
+              "key": {
+                "effect": "wh_main_effect_agent_enable_recruitment_wizard_bretonnia"
+              },
+              "rowId": "effects_tables:f88ba8605c0c1cc70750"
+            },
+            "scopeReference": {
+              "table": "campaign_effect_scopes_tables",
+              "key": {
+                "key": "province_to_province_own_unseen"
+              },
+              "rowId": "campaign_effect_scopes_tables:8b8242d47ec33c3e2a17"
+            },
+            "localisation": {
+              "status": "VERIFIED",
+              "value": "[[img:icon_hero]][[/img]]영웅 모집 해제: 여식",
+              "field": "effects_description_wh_main_effect_agent_enable_recruitment_wizard_bretonnia",
+              "reference": {
+                "table": "Loc",
+                "key": {
+                  "key": "effects_description_wh_main_effect_agent_enable_recruitment_wizard_bretonnia"
+                },
+                "rowId": "675d1588f8eba7e577550e7117e173612b1dbc354d29efcfed56e33cbb35391d"
+              }
+            },
+            "scopeLocalisation": {
+              "status": "UNKNOWN",
+              "value": null,
+              "reason": "공식 한국어 Loc 누락·중복·미해결: campaign_effect_scopes_localised_text_province_to_province_own_unseen"
+            }
+          }
+        ]
+      },
+      "income": {
+        "status": "COMPLETE",
+        "effects": [],
+        "baseGold": 0
+      }
+    },
+    {
+      "key": "wh_main_brt_worship_3",
+      "chainKey": "wh_main_BRETONNIA_worship",
+      "stage": 2,
+      "koreanName": {
+        "status": "VERIFIED",
+        "value": "여제의 대성당",
+        "field": "building_culture_variants_name_wh_main_brt_worship_3wh_main_brt_bretonnia",
+        "reference": {
+          "table": "Loc",
+          "key": {
+            "key": "building_culture_variants_name_wh_main_brt_worship_3wh_main_brt_bretonnia"
+          },
+          "rowId": "daf2c03c44de36f468de15eafc0b7c80fa749fc3041166d9711a5ed5ca590683"
+        }
+      },
+      "variantReference": {
+        "table": "building_culture_variants_tables",
+        "key": {
+          "building": "wh_main_brt_worship_3",
+          "culture": "wh_main_brt_bretonnia",
+          "subculture": "",
+          "faction": ""
+        },
+        "rowId": "building_culture_variants_tables:84c8c088fbb6bfa0ab32"
+      },
+      "constructionCost": {
+        "status": "VERIFIED",
+        "value": 10000,
+        "field": "create_cost",
+        "reference": {
+          "table": "building_levels_tables",
+          "key": {
+            "level_name": "wh_main_brt_worship_3"
+          },
+          "rowId": "building_levels_tables:e17ac7ad1479af761e1b"
+        }
+      },
+      "constructionTurns": {
+        "status": "VERIFIED",
+        "value": 6,
+        "field": "create_time",
+        "reference": {
+          "table": "building_levels_tables",
+          "key": {
+            "level_name": "wh_main_brt_worship_3"
+          },
+          "rowId": "building_levels_tables:e17ac7ad1479af761e1b"
+        }
+      },
+      "effects": {
+        "status": "COMPLETE",
+        "items": [
+          {
+            "key": "wh2_main_effect_ability_enable_garrison_heroes",
+            "name": "[HIDDEN]",
+            "text": "[HIDDEN]",
+            "nameStatus": "VERIFIED",
+            "value": 1,
+            "valueDamaged": 1,
+            "valueRuined": 1,
+            "unit": "raw",
+            "scope": "지역 내 아군 주둔군",
+            "scopeKey": "building_to_forces_own_regionwide_if_garrison",
+            "officialScope": "(지역 내 군단)",
+            "scopeDefinition": {
+              "key": "building_to_forces_own_regionwide_if_garrison",
+              "location": "regionwide",
+              "ownership": "yours",
+              "source": "building",
+              "target": "force_if_garrison",
+              "territory": "any"
+            },
+            "condition": null,
+            "contextKey": "",
+            "kind": "OTHER",
+            "incomeKind": null,
+            "hidden": true,
+            "reference": {
+              "table": "building_effects_junction_tables",
+              "key": {
+                "building": "wh_main_brt_worship_3",
+                "effect": "wh2_main_effect_ability_enable_garrison_heroes",
+                "context_requirement": ""
+              },
+              "rowId": "building_effects_junction_tables:55d287085ed702a294c7"
+            },
+            "definitionReference": {
+              "table": "effects_tables",
+              "key": {
+                "effect": "wh2_main_effect_ability_enable_garrison_heroes"
+              },
+              "rowId": "effects_tables:2242e1509cb8706c30ce"
+            },
+            "scopeReference": {
+              "table": "campaign_effect_scopes_tables",
+              "key": {
+                "key": "building_to_forces_own_regionwide_if_garrison"
+              },
+              "rowId": "campaign_effect_scopes_tables:738271272db0a6cd5553"
+            },
+            "localisation": {
+              "status": "VERIFIED",
+              "value": "[HIDDEN]",
+              "field": "effects_description_wh2_main_effect_ability_enable_garrison_heroes",
+              "reference": {
+                "table": "Loc",
+                "key": {
+                  "key": "effects_description_wh2_main_effect_ability_enable_garrison_heroes"
+                },
+                "rowId": "19bdfde844e841fe521fba695f216d410a9200545239189f80175e7fe9534011"
+              }
+            },
+            "scopeLocalisation": {
+              "status": "VERIFIED",
+              "value": "\\\\n(지역 내 군단)",
+              "field": "campaign_effect_scopes_localised_text_building_to_forces_own_regionwide_if_garrison",
+              "reference": {
+                "table": "Loc",
+                "key": {
+                  "key": "campaign_effect_scopes_localised_text_building_to_forces_own_regionwide_if_garrison"
+                },
+                "rowId": "c2ee5428e0b0b9cf428deaf96fd7b814f8ed0be74e735941fbe5aa536ca669ee"
+              }
+            }
+          },
+          {
+            "key": "wh3_main_effect_corruption_reduction_adjacent_provinces",
+            "name": "인접 영지의 오염: %+n",
+            "text": "인접 영지의 오염: -3",
+            "nameStatus": "VERIFIED",
+            "value": -3,
+            "valueDamaged": -3,
+            "valueRuined": 0,
+            "unit": "raw",
+            "scope": "자신의 영지",
+            "scopeKey": "province_to_province_own_unseen",
+            "officialScope": null,
+            "scopeDefinition": {
+              "key": "province_to_province_own_unseen",
+              "location": "provincewide",
+              "ownership": "yours",
+              "source": "province",
+              "target": "province",
+              "territory": "any"
+            },
+            "condition": null,
+            "contextKey": "",
+            "kind": "OTHER",
+            "incomeKind": null,
+            "hidden": false,
+            "reference": {
+              "table": "building_effects_junction_tables",
+              "key": {
+                "building": "wh_main_brt_worship_3",
+                "effect": "wh3_main_effect_corruption_reduction_adjacent_provinces",
+                "context_requirement": ""
+              },
+              "rowId": "building_effects_junction_tables:b66328e53ada83dc5883"
+            },
+            "definitionReference": {
+              "table": "effects_tables",
+              "key": {
+                "effect": "wh3_main_effect_corruption_reduction_adjacent_provinces"
+              },
+              "rowId": "effects_tables:17a48cd1137700a2f376"
+            },
+            "scopeReference": {
+              "table": "campaign_effect_scopes_tables",
+              "key": {
+                "key": "province_to_province_own_unseen"
+              },
+              "rowId": "campaign_effect_scopes_tables:8b8242d47ec33c3e2a17"
+            },
+            "localisation": {
+              "status": "VERIFIED",
+              "value": "인접 영지의 오염: %+n",
+              "field": "effects_description_wh3_main_effect_corruption_reduction_adjacent_provinces",
+              "reference": {
+                "table": "Loc",
+                "key": {
+                  "key": "effects_description_wh3_main_effect_corruption_reduction_adjacent_provinces"
+                },
+                "rowId": "bc7101193abf705ce0264c022903d53b106f98bac376085c7bf4b7549856906b"
+              }
+            },
+            "scopeLocalisation": {
+              "status": "UNKNOWN",
+              "value": null,
+              "reason": "공식 한국어 Loc 누락·중복·미해결: campaign_effect_scopes_localised_text_province_to_province_own_unseen"
+            }
+          },
+          {
+            "key": "wh3_main_effect_corruption_reduction_buildings",
+            "name": "오염: %+n",
+            "text": "오염: -4",
+            "nameStatus": "VERIFIED",
+            "value": -4,
+            "valueDamaged": -4,
+            "valueRuined": 0,
+            "unit": "raw",
+            "scope": "자신의 지역",
+            "scopeKey": "region_to_region_own",
+            "officialScope": null,
+            "scopeDefinition": {
+              "key": "region_to_region_own",
+              "location": "regionwide",
+              "ownership": "yours",
+              "source": "region",
+              "target": "region",
+              "territory": "any"
+            },
+            "condition": null,
+            "contextKey": "",
+            "kind": "OTHER",
+            "incomeKind": null,
+            "hidden": false,
+            "reference": {
+              "table": "building_effects_junction_tables",
+              "key": {
+                "building": "wh_main_brt_worship_3",
+                "effect": "wh3_main_effect_corruption_reduction_buildings",
+                "context_requirement": ""
+              },
+              "rowId": "building_effects_junction_tables:798fa30f98aebea7c2e9"
+            },
+            "definitionReference": {
+              "table": "effects_tables",
+              "key": {
+                "effect": "wh3_main_effect_corruption_reduction_buildings"
+              },
+              "rowId": "effects_tables:c480318b1325df28972d"
+            },
+            "scopeReference": {
+              "table": "campaign_effect_scopes_tables",
+              "key": {
+                "key": "region_to_region_own"
+              },
+              "rowId": "campaign_effect_scopes_tables:b691a9e1ab534a3749bf"
+            },
+            "localisation": {
+              "status": "VERIFIED",
+              "value": "오염: %+n",
+              "field": "effects_description_wh3_main_effect_corruption_reduction_buildings",
+              "reference": {
+                "table": "Loc",
+                "key": {
+                  "key": "effects_description_wh3_main_effect_corruption_reduction_buildings"
+                },
+                "rowId": "80019de16a26eaa9da9b55479f9dee9f80558cb39ece5c01ce3adc11d43e3ee7"
+              }
+            },
+            "scopeLocalisation": {
+              "status": "UNKNOWN",
+              "value": null,
+              "reason": "공식 한국어 Loc 누락·중복·미해결: campaign_effect_scopes_localised_text_region_to_region_own"
+            }
+          },
+          {
+            "key": "wh_dlc07_effect_chivalry_building",
+            "name": "기사도: 턴 당 %+n",
+            "text": "기사도: 턴 당 +20",
+            "nameStatus": "VERIFIED",
+            "value": 20,
+            "valueDamaged": 20,
+            "valueRuined": 0,
+            "unit": "raw",
+            "scope": "자신의 지역",
+            "scopeKey": "region_to_region_own",
+            "officialScope": null,
+            "scopeDefinition": {
+              "key": "region_to_region_own",
+              "location": "regionwide",
+              "ownership": "yours",
+              "source": "region",
+              "target": "region",
+              "territory": "any"
+            },
+            "condition": "소유자 문화가 브레토니아일 때",
+            "contextKey": "IsBretonnia",
+            "kind": "OTHER",
+            "incomeKind": null,
+            "hidden": false,
+            "reference": {
+              "table": "building_effects_junction_tables",
+              "key": {
+                "building": "wh_main_brt_worship_3",
+                "effect": "wh_dlc07_effect_chivalry_building",
+                "context_requirement": "IsBretonnia"
+              },
+              "rowId": "building_effects_junction_tables:de2475b99593475645fc"
+            },
+            "definitionReference": {
+              "table": "effects_tables",
+              "key": {
+                "effect": "wh_dlc07_effect_chivalry_building"
+              },
+              "rowId": "effects_tables:171719adc7a79465db7d"
+            },
+            "scopeReference": {
+              "table": "campaign_effect_scopes_tables",
+              "key": {
+                "key": "region_to_region_own"
+              },
+              "rowId": "campaign_effect_scopes_tables:b691a9e1ab534a3749bf"
+            },
+            "localisation": {
+              "status": "VERIFIED",
+              "value": "기사도: 턴 당 %+n",
+              "field": "effects_description_wh_dlc07_effect_chivalry_building",
+              "reference": {
+                "table": "Loc",
+                "key": {
+                  "key": "effects_description_wh_dlc07_effect_chivalry_building"
+                },
+                "rowId": "362052ba6d904186e4b315782e143c1ee2150ec1bfcf40fb93f8aaec6fdc484c"
+              }
+            },
+            "scopeLocalisation": {
+              "status": "UNKNOWN",
+              "value": null,
+              "reason": "공식 한국어 Loc 누락·중복·미해결: campaign_effect_scopes_localised_text_region_to_region_own"
+            }
+          },
+          {
+            "key": "wh_dlc07_effect_remove_bad_traits",
+            "name": "기도: 매 턴 마다 이 정착지에 주둔한 모든 군주의 캐릭터 특성에 %+n% 확률로 부정적인 영향 제거",
+            "text": "기도: 매 턴 마다 이 정착지에 주둔한 모든 군주의 캐릭터 특성에 +30% 확률로 부정적인 영향 제거",
+            "nameStatus": "VERIFIED",
+            "value": 30,
+            "valueDamaged": 1,
+            "valueRuined": 0,
+            "unit": "percent",
+            "scope": "자신의 지역",
+            "scopeKey": "region_to_region_own",
+            "officialScope": null,
+            "scopeDefinition": {
+              "key": "region_to_region_own",
+              "location": "regionwide",
+              "ownership": "yours",
+              "source": "region",
+              "target": "region",
+              "territory": "any"
+            },
+            "condition": null,
+            "contextKey": "",
+            "kind": "OTHER",
+            "incomeKind": null,
+            "hidden": false,
+            "reference": {
+              "table": "building_effects_junction_tables",
+              "key": {
+                "building": "wh_main_brt_worship_3",
+                "effect": "wh_dlc07_effect_remove_bad_traits",
+                "context_requirement": ""
+              },
+              "rowId": "building_effects_junction_tables:af74f9451644e81cbb70"
+            },
+            "definitionReference": {
+              "table": "effects_tables",
+              "key": {
+                "effect": "wh_dlc07_effect_remove_bad_traits"
+              },
+              "rowId": "effects_tables:b5741aa53c26c9c5fe3d"
+            },
+            "scopeReference": {
+              "table": "campaign_effect_scopes_tables",
+              "key": {
+                "key": "region_to_region_own"
+              },
+              "rowId": "campaign_effect_scopes_tables:b691a9e1ab534a3749bf"
+            },
+            "localisation": {
+              "status": "VERIFIED",
+              "value": "기도: 매 턴 마다 이 정착지에 주둔한 모든 [[img:icon_general]][[/img]]군주의 캐릭터 특성에 %+n% 확률로 부정적인 영향 제거",
+              "field": "effects_description_wh_dlc07_effect_remove_bad_traits",
+              "reference": {
+                "table": "Loc",
+                "key": {
+                  "key": "effects_description_wh_dlc07_effect_remove_bad_traits"
+                },
+                "rowId": "5c8429fadd895b9b2094eb82c09745b6913d7f18f782a13377f591fbfe17c997"
+              }
+            },
+            "scopeLocalisation": {
+              "status": "UNKNOWN",
+              "value": null,
+              "reason": "공식 한국어 Loc 누락·중복·미해결: campaign_effect_scopes_localised_text_region_to_region_own"
+            }
+          },
+          {
+            "key": "wh_main_effect_agent_cap_increase_wizard_damsel",
+            "name": "영웅 모집 제한: 여식에 %+n",
+            "text": "영웅 모집 제한: 여식에 +1",
+            "nameStatus": "VERIFIED",
+            "value": 1,
+            "valueDamaged": 1,
+            "valueRuined": 0,
+            "unit": "raw",
+            "scope": "자신의 진영 전체",
+            "scopeKey": "faction_to_faction_own_unseen",
+            "officialScope": null,
+            "scopeDefinition": {
+              "key": "faction_to_faction_own_unseen",
+              "location": "factionwide",
+              "ownership": "yours",
+              "source": "faction",
+              "target": "faction",
+              "territory": "any"
+            },
+            "condition": null,
+            "contextKey": "",
+            "kind": "OTHER",
+            "incomeKind": null,
+            "hidden": false,
+            "reference": {
+              "table": "building_effects_junction_tables",
+              "key": {
+                "building": "wh_main_brt_worship_3",
+                "effect": "wh_main_effect_agent_cap_increase_wizard_damsel",
+                "context_requirement": ""
+              },
+              "rowId": "building_effects_junction_tables:626628af033e9c31fc1a"
+            },
+            "definitionReference": {
+              "table": "effects_tables",
+              "key": {
+                "effect": "wh_main_effect_agent_cap_increase_wizard_damsel"
+              },
+              "rowId": "effects_tables:1a49b6e379bfe568452d"
+            },
+            "scopeReference": {
+              "table": "campaign_effect_scopes_tables",
+              "key": {
+                "key": "faction_to_faction_own_unseen"
+              },
+              "rowId": "campaign_effect_scopes_tables:1ca04f0f7c52adc87823"
+            },
+            "localisation": {
+              "status": "VERIFIED",
+              "value": "영웅 모집 제한: 여식에 %+n",
+              "field": "effects_description_wh_main_effect_agent_cap_increase_wizard_damsel",
+              "reference": {
+                "table": "Loc",
+                "key": {
+                  "key": "effects_description_wh_main_effect_agent_cap_increase_wizard_damsel"
+                },
+                "rowId": "58f4c33afef50b383578d9762bb015ce6e7b465d9b85c760a2320c1c79783525"
+              }
+            },
+            "scopeLocalisation": {
+              "status": "UNKNOWN",
+              "value": null,
+              "reason": "공식 한국어 Loc 누락·중복·미해결: campaign_effect_scopes_localised_text_faction_to_faction_own_unseen"
+            }
+          },
+          {
+            "key": "wh_main_effect_agent_enable_recruitment_wizard_bretonnia",
+            "name": "영웅 모집 해제: 여식",
+            "text": "영웅 모집 해제: 여식",
+            "nameStatus": "VERIFIED",
+            "value": 1,
+            "valueDamaged": 1,
+            "valueRuined": 0,
+            "unit": "raw",
+            "scope": "자신의 영지",
+            "scopeKey": "province_to_province_own_unseen",
+            "officialScope": null,
+            "scopeDefinition": {
+              "key": "province_to_province_own_unseen",
+              "location": "provincewide",
+              "ownership": "yours",
+              "source": "province",
+              "target": "province",
+              "territory": "any"
+            },
+            "condition": null,
+            "contextKey": "",
+            "kind": "OTHER",
+            "incomeKind": null,
+            "hidden": false,
+            "reference": {
+              "table": "building_effects_junction_tables",
+              "key": {
+                "building": "wh_main_brt_worship_3",
+                "effect": "wh_main_effect_agent_enable_recruitment_wizard_bretonnia",
+                "context_requirement": ""
+              },
+              "rowId": "building_effects_junction_tables:fdc19de1356c57e83e45"
+            },
+            "definitionReference": {
+              "table": "effects_tables",
+              "key": {
+                "effect": "wh_main_effect_agent_enable_recruitment_wizard_bretonnia"
+              },
+              "rowId": "effects_tables:f88ba8605c0c1cc70750"
+            },
+            "scopeReference": {
+              "table": "campaign_effect_scopes_tables",
+              "key": {
+                "key": "province_to_province_own_unseen"
+              },
+              "rowId": "campaign_effect_scopes_tables:8b8242d47ec33c3e2a17"
+            },
+            "localisation": {
+              "status": "VERIFIED",
+              "value": "[[img:icon_hero]][[/img]]영웅 모집 해제: 여식",
+              "field": "effects_description_wh_main_effect_agent_enable_recruitment_wizard_bretonnia",
+              "reference": {
+                "table": "Loc",
+                "key": {
+                  "key": "effects_description_wh_main_effect_agent_enable_recruitment_wizard_bretonnia"
+                },
+                "rowId": "675d1588f8eba7e577550e7117e173612b1dbc354d29efcfed56e33cbb35391d"
+              }
+            },
+            "scopeLocalisation": {
+              "status": "UNKNOWN",
+              "value": null,
+              "reason": "공식 한국어 Loc 누락·중복·미해결: campaign_effect_scopes_localised_text_province_to_province_own_unseen"
+            }
+          },
+          {
+            "key": "wh_main_faction_xp_increase_generals",
+            "name": "군주 모집 시 등급: %+n",
+            "text": "군주 모집 시 등급: +1",
+            "nameStatus": "VERIFIED",
+            "value": 1,
+            "valueDamaged": 1,
+            "valueRuined": 0,
+            "unit": "raw",
+            "scope": "자신의 진영 전체 영지",
+            "scopeKey": "province_to_province_own_factionwide",
+            "officialScope": "(진영 전체)",
+            "scopeDefinition": {
+              "key": "province_to_province_own_factionwide",
+              "location": "factionwide",
+              "ownership": "yours",
+              "source": "province",
+              "target": "province",
+              "territory": "any"
+            },
+            "condition": null,
+            "contextKey": "",
+            "kind": "OTHER",
+            "incomeKind": null,
+            "hidden": false,
+            "reference": {
+              "table": "building_effects_junction_tables",
+              "key": {
+                "building": "wh_main_brt_worship_3",
+                "effect": "wh_main_faction_xp_increase_generals",
+                "context_requirement": ""
+              },
+              "rowId": "building_effects_junction_tables:0314ce8aa5ffe48c3e1f"
+            },
+            "definitionReference": {
+              "table": "effects_tables",
+              "key": {
+                "effect": "wh_main_faction_xp_increase_generals"
+              },
+              "rowId": "effects_tables:ad4a21b1f49c831a2a95"
+            },
+            "scopeReference": {
+              "table": "campaign_effect_scopes_tables",
+              "key": {
+                "key": "province_to_province_own_factionwide"
+              },
+              "rowId": "campaign_effect_scopes_tables:65bbc14086eb275b7fd7"
+            },
+            "localisation": {
+              "status": "VERIFIED",
+              "value": "군주 모집 시 등급: %+n",
+              "field": "effects_description_wh_main_faction_xp_increase_generals",
+              "reference": {
+                "table": "Loc",
+                "key": {
+                  "key": "effects_description_wh_main_faction_xp_increase_generals"
+                },
+                "rowId": "6dfd3266473cf24f838ef104a79066f181733054b76001863e32867f394404df"
+              }
+            },
+            "scopeLocalisation": {
+              "status": "VERIFIED",
+              "value": "\\\\n(진영 전체)",
+              "field": "campaign_effect_scopes_localised_text_province_to_province_own_factionwide",
+              "reference": {
+                "table": "Loc",
+                "key": {
+                  "key": "campaign_effect_scopes_localised_text_province_to_province_own_factionwide"
+                },
+                "rowId": "180e5a086e3555cbee4d4300ebe5842538e2afbeeec449cd4b69255a92d10211"
+              }
+            }
+          },
+          {
+            "key": "wh_main_faction_xp_increase_generals_hidden",
+            "name": "[HIDDEN]",
+            "text": "[HIDDEN]",
+            "nameStatus": "VERIFIED",
+            "value": 1,
+            "valueDamaged": 1,
+            "valueRuined": 0,
+            "unit": "raw",
+            "scope": "모든 아군 군단",
+            "scopeKey": "faction_to_force_own",
+            "officialScope": "(모든 군단)",
+            "scopeDefinition": {
+              "key": "faction_to_force_own",
+              "location": "factionwide",
+              "ownership": "yours",
+              "source": "faction",
+              "target": "force",
+              "territory": "any"
+            },
+            "condition": null,
+            "contextKey": "",
+            "kind": "OTHER",
+            "incomeKind": null,
+            "hidden": true,
+            "reference": {
+              "table": "building_effects_junction_tables",
+              "key": {
+                "building": "wh_main_brt_worship_3",
+                "effect": "wh_main_faction_xp_increase_generals_hidden",
+                "context_requirement": ""
+              },
+              "rowId": "building_effects_junction_tables:6b02ca42553d018c96db"
+            },
+            "definitionReference": {
+              "table": "effects_tables",
+              "key": {
+                "effect": "wh_main_faction_xp_increase_generals_hidden"
+              },
+              "rowId": "effects_tables:1f462ad859ce2b2f8c7e"
+            },
+            "scopeReference": {
+              "table": "campaign_effect_scopes_tables",
+              "key": {
+                "key": "faction_to_force_own"
+              },
+              "rowId": "campaign_effect_scopes_tables:fd62f4538b8d3323babe"
+            },
+            "localisation": {
+              "status": "VERIFIED",
+              "value": "[HIDDEN]",
+              "field": "effects_description_wh_main_faction_xp_increase_generals_hidden",
+              "reference": {
+                "table": "Loc",
+                "key": {
+                  "key": "effects_description_wh_main_faction_xp_increase_generals_hidden"
+                },
+                "rowId": "9f32df2bc7af869549c79fb90168f397b94808178662c675503d94a9fd080b0f"
+              }
+            },
+            "scopeLocalisation": {
+              "status": "VERIFIED",
+              "value": "\\\\n(모든 군단)",
+              "field": "campaign_effect_scopes_localised_text_faction_to_force_own",
+              "reference": {
+                "table": "Loc",
+                "key": {
+                  "key": "campaign_effect_scopes_localised_text_faction_to_force_own"
+                },
+                "rowId": "a2997f845a581b6653c7e3baf398cb6be41c4398ce8581236ec1502e5aee5468"
+              }
+            }
+          }
+        ]
+      },
+      "income": {
+        "status": "COMPLETE",
+        "effects": [],
+        "baseGold": 0
+      }
+    }
+  ]
+}

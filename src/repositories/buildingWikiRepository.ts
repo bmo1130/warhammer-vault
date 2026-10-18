@@ -1,6 +1,7 @@
 import type { Unit, UnitRecruitmentRequirement, UnitRecruitmentSource } from '../domain/unit';
 import { gameRepository } from './gameRepository';
 import { recruitmentBuilding, unitRecruitmentAdmission, type RecruitmentBuilding } from './unitRecruitment';
+import {buildingFacts} from './buildingFacts';
 
 // A reviewed UI scope, not a full Bretonnia building inventory. Exact keys keep
 // future registry growth from silently expanding this first slice.
@@ -14,6 +15,8 @@ export const bretonniaBuildingScope = [
 ] as const;
 
 export function buildingDisplayName(building: RecruitmentBuilding): string {
+  const official=buildingFacts(building)?.koreanName;
+  if(official?.status==='VERIFIED')return official.value;
   const names = [...new Set(building.variants.map(v=>v.name).filter((name): name is string=>!!name && !name.includes('{{tr:')))];
   return names.join(' / ') || building.key;
 }
@@ -49,7 +52,7 @@ export function createBuildingWiki(units: readonly Unit[], lookup = recruitmentB
     get: (key: string) => entries.get(key),
     list: (query = '') => {
       const term = query.trim().toLocaleLowerCase();
-      return [...entries.values()].filter(entry => `브레토니아 Bretonnia ${entry.name} ${entry.chainName} ${entry.building.key} ${entry.building.chainKey}`.toLocaleLowerCase().includes(term));
+      return [...entries.values()].filter(entry => `브레토니아 Bretonnia ${entry.name} ${entry.building.variants.map(v=>v.name??'').join(' ')} ${entry.chainName} ${entry.building.key} ${entry.building.chainKey}`.toLocaleLowerCase().includes(term));
     },
     chain: (key: string) => [...entries.values()].filter(entry=>entry.building.chainKey === key).sort((a,b)=>a.building.stage-b.building.stage || a.building.key.localeCompare(b.building.key)),
   };

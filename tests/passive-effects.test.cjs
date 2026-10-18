@@ -53,7 +53,12 @@ test('all unit data and non-passive dictionary entries preserve the starting com
   restored.held=restored.held.filter(h=>!newHolds.includes(h.reason));
   assert.deepEqual(restored,before,before.id);
  }
- for(const file of fs.readdirSync('src/data').filter(f=>f.endsWith('.json')&&f!=='abilityDictionary.json')){
+ // Preserve every starting dataset. The independently replayed building
+ // admission is the sole new dataset; it did not exist at this older commit.
+ const inventory=spawnSync('git',['ls-tree','-r','--name-only','4186895','--','src/data'],{encoding:'utf8'});assert.equal(inventory.status,0);
+ const originals=inventory.stdout.trim().split('\n').map(p=>p.slice('src/data/'.length)).filter(f=>f.endsWith('.json'));
+ assert.deepEqual(fs.readdirSync('src/data').filter(f=>f.endsWith('.json')).sort(),[...originals,'buildingWikiAdmissions.json'].sort());
+ for(const file of originals.filter(f=>f!=='abilityDictionary.json')){
   const before=spawnSync('git',['show',`4186895:src/data/${file}`],{maxBuffer:128*1024*1024});assert.equal(before.status,0,file);
   assert.equal(fs.readFileSync(`src/data/${file}`,'utf8').replace(/\r\n/g,'\n'),before.stdout.toString().replace(/\r\n/g,'\n'),file);
  }

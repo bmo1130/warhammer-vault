@@ -59,7 +59,7 @@ test('missing source, edited admission, same-name/sample and special-only units 
     {...unit,campaign:{...campaign,recruitmentSources:campaign.recruitmentSources.map(s=>s.key===key?{...s,type:'UNIT_UPGRADE'}:s)}},
   ])assert.equal(createBuildingWiki([changed]).list().flatMap(e=>e.links).length,0);
   const empty=createBuildingWiki([]);assert.equal(empty.get('wh_main_brt_stables_5').links.length,0);
-  assert.equal(createBuildingWiki([unit],k=>k===key?{...recruitmentBuilding(k),stage:99}:recruitmentBuilding(k)).get(key).links.length,0);
+  assert.throws(()=>createBuildingWiki([unit],k=>k===key?{...recruitmentBuilding(k),stage:99}:recruitmentBuilding(k)),/identity drift/);
 });
 
 test('search, saved names and fallback names use exact identity without merging by name',()=>{
@@ -67,18 +67,18 @@ test('search, saved names and fallback names use exact identity without merging 
   assert.equal(wiki.list('not-a-building').length,0);
   assert.equal(wiki.list('브레토니아').length,18);
   assert(searchArchive('Royal Stables').some(e=>e.type==='building'&&e.id===key));
-  assert.equal(resolveSavedTargetName({entityType:'building',entityId:key}),'Royal Stables');
+  assert.equal(resolveSavedTargetName({entityType:'building',entityId:key}),'왕립 마구간');
   assert.equal(resolveSavedTargetName({entityType:'building',entityId:'old-missing-building'}),undefined);
   const b=recruitmentBuilding(key);
-  assert.equal(buildingDisplayName({...b,variants:[{...b.variants[0],name:'{{tr:unknown}}'}]}),key);
-  assert.equal(buildingDisplayName({...b,variants:[]}),key);
+  assert.equal(buildingDisplayName({...b,variants:[{...b.variants[0],name:'{{tr:unknown}}'}]}),'왕립 마구간');
+  assert.equal(buildingDisplayName({...b,key:'unreviewed',variants:[]}), 'unreviewed');
 });
 
 test('list/detail routes show stages, prerequisites, uncertainty and provenance, with bidirectional exact links',()=>{
   const list=render('/buildings');assert(list.includes('6개 체인 · 18개 단계'));assert(list.includes('건물 이름, 체인, 영문 ID 검색'));
   assert.equal((list.match(/class="entity-row"/g)??[]).length,18);
   const detail=render('/buildings/'+key);
-  for(const text of ['Royal Stables','CA 단계 2 · 주건물 요구 단계 3','Tier로 환산하지','실제 캠페인 건설·모집 가능 여부: 미확인','문화·진영 variant','wh_main_brt_bretonnia','building_levels_tables','building_units_allowed_tables','Snapshot:','Source hash:','내 기록'])assert(detail.includes(text),text);
+  for(const text of ['왕립 마구간','CA 단계 2 · 주건물 요구 단계 3','Tier로 환산하지','실제 캠페인 건설·모집 가능 여부: 미확인','문화·진영 variant','wh_main_brt_bretonnia','building_levels_tables','building_units_allowed_tables','Snapshot:','Source hash:','내 기록'])assert(detail.includes(text),text);
   assert(detail.includes('href="/units/'+knight+'"'));assert(detail.includes('aria-current="page"'));
   assert(render('/units/'+knight).includes('href="/buildings/'+key+'"'));
   assert(render('/buildings/wh_main_brt_farm_2').includes('href="/buildings/wh_main_brt_farm_extra_1"'));

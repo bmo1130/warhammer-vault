@@ -1,0 +1,39 @@
+{
+  "format": "bounded-building-wiki-manifest-v1",
+  "baselineCommit": "24872a82cc0cc62fecf9d765e7bf351db935eade",
+  "gameVersion": "9.0.4.0",
+  "sourceHash": "7a0da3e9680f4017dd3e0ff406084bd988795330fced0e5ba72daf9e724be84e",
+  "recruitmentSnapshotId": "c7bd67f50bb4df4f16254e5e9615324e615debf434c865de014e77e4483471e5",
+  "versionPolicy": "User explicitly authorized 9.0.4.0 building data; existing 9.0.2.0 recruitment/Production remains unchanged.",
+  "scopeLabels": {
+    "building_to_building_own": "이 건물",
+    "building_to_forces_own_regionwide_if_garrison": "지역 내 아군 주둔군",
+    "faction_to_faction_own_unseen": "자신의 진영 전체",
+    "faction_to_force_own": "모든 아군 군단",
+    "province_to_province_adjacent": "인접한 자신의 영지",
+    "province_to_province_own_factionwide": "자신의 진영 전체 영지",
+    "province_to_province_own_unseen": "자신의 영지",
+    "province_to_region_own": "자신의 영지 내 지역",
+    "region_to_force_own": "지역 내 아군 군단",
+    "region_to_province_own_unseen": "자신의 영지",
+    "region_to_region_own": "자신의 지역",
+    "region_to_region_own_text": "자신의 지역"
+  },
+  "incomeRules": {
+    "wh_main_effect_economy_gdp_agriculture_farming": {
+      "bonus": "gdp_farming",
+      "unit": "gold",
+      "kind": "BASE"
+    },
+    "wh_dlc07_effect_economy_gdp_mod_farming": {
+      "bonus": "gdp_mod_farming",
+      "unit": "percent",
+      "kind": "MODIFIER"
+    },
+    "wh_dlc07_effect_economy_gdp_mod_industry": {
+      "bonus": "gdp_mod_manufacture",
+      "unit": "percent",
+      "kind": "MODIFIER"
+    }
+  }
+}

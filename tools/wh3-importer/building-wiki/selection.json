@@ -1,0 +1,23 @@
+{
+  "format": "building-wiki-selection-v1",
+  "keys": [
+    "wh_main_brt_barracks_1",
+    "wh_main_brt_barracks_2",
+    "wh_main_brt_barracks_3",
+    "wh_main_brt_barracks_4",
+    "wh_main_brt_carpenter_1",
+    "wh_main_brt_carpenter_2",
+    "wh_main_brt_farm_1",
+    "wh_main_brt_farm_2",
+    "wh_main_brt_farm_3",
+    "wh_main_brt_farm_extra_1",
+    "wh_main_brt_farm_extra_2",
+    "wh_main_brt_stables_1",
+    "wh_main_brt_stables_2",
+    "wh_main_brt_stables_3",
+    "wh_main_brt_stables_4",
+    "wh_main_brt_stables_5",
+    "wh_main_brt_worship_2",
+    "wh_main_brt_worship_3"
+  ]
+}

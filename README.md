@@ -18,8 +18,10 @@ Total War: Warhammer III 개인 위키의 첫 버전입니다. 원본 게임 데
 
 브레토니아 [건물 위키 첫 slice](docs/BRETONNIA_BUILDING_WIKI.md)는 `/buildings`에서
 기존 recruitment registry의 **6개 체인 · 18개 단계**, **24개 유닛 · 61개 직접 모집 행**을
-탐색합니다. 단계별 상세·선행 건물·출처·유닛 상호 링크와 기존 개인 기록 기능을
-사용하며, 전체 건물 목록이나 실제 캠페인 건설·모집 가능성을 확정하지 않습니다.
+탐색합니다. **9.0.4.0 CA 공식 한국어 이름·건설 비용·기본 턴·42개 건물 효과**를
+별도 admission으로 표시합니다. 정액 수입과 지역 수입 증감 효과를 구분하며,
+기존 9.0.2.0 모집 자료·개인 기록은 보존합니다. 전체 건물 목록이나 실제 캠페인
+건설·모집 가능성을 확정하지 않습니다.
 
 현재 source-driven race roster는 **23개 ROSTER COMPLETE**입니다.
 Production Units 1,110개 · canonical Lords 284개 · Heroes 210개이며, 각 팩션에서 전설/일반/특수 군주·영웅과 유닛을 구분해 개인 문서를 작성할 수 있습니다.

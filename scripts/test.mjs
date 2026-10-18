@@ -6,6 +6,9 @@ import { resolve } from 'node:path';
 import { prepareEvidenceView } from './evidence-view.mjs';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
+const buildings = spawnSync(process.execPath, ['tools/wh3-importer/building-wiki/admit.mjs', '--check'], {cwd:root,stdio:'inherit'});
+if (buildings.error) throw buildings.error;
+if (buildings.status !== 0) process.exit(buildings.status ?? 1);
 const entitiesSecond = spawnSync(process.execPath, ['scripts/promote-unit-entities-second.mjs', '--check'], {cwd:root,stdio:'inherit'});
 if (entitiesSecond.error) throw entitiesSecond.error;
 if (entitiesSecond.status !== 0) process.exit(entitiesSecond.status ?? 1);
