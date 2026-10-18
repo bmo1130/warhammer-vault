@@ -78,7 +78,7 @@ test('all previous data files and admissions retain pinned bytes after Git line-
  for(const {file,hash}of read(folder+'manifest.json').inputs)assert.equal(createHash('sha256').update(fs.readFileSync(file,'utf8').replace(/\r\n/g,'\n')).digest('hex'),hash,file);
 });
 test('every owned production ability is a keyboard button; mobile lists omit effect bodies until selected',()=>{
- for(const u of game.listUnits().filter(u=>u.gameVersion!=='sample')){const markup=renderToString(React.createElement(UnitDetails,{unit:u})),ids=[...(u.attributes??[]),...(u.passiveAbilities??[]),...(u.abilities??[]),...(u.boundAbilities??[])];assert.equal((markup.match(/aria-haspopup="dialog"/g)??[]).length,ids.length,u.id);assert(!markup.includes('ability-dialog-header'));assert(!markup.includes('role="dialog"'));}
+ for(const u of game.listUnits().filter(u=>u.gameVersion!=='sample')){const markup=renderToString(React.createElement(MemoryRouter,null,React.createElement(UnitDetails,{unit:u}))),ids=[...(u.attributes??[]),...(u.passiveAbilities??[]),...(u.abilities??[]),...(u.boundAbilities??[])];assert.equal((markup.match(/aria-haspopup="dialog"/g)??[]).length,ids.length,u.id);assert(!markup.includes('ability-dialog-header'));assert(!markup.includes('role="dialog"'));}
 });
 test('independent document route and panel render the same dictionary with provenance; missing id is not found',()=>{
  const render=id=>renderToString(React.createElement(MemoryRouter,{initialEntries:[abilityPath(id)]},React.createElement(Routes,null,React.createElement(Route,{path:'/abilities/:id',element:React.createElement(Page)}))));

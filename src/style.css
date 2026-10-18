@@ -110,6 +110,13 @@
 .recruitment-path { margin-block: 10px; overflow-wrap: anywhere; }
 .recruitment-path summary { cursor: pointer; min-height: 44px; padding-block: 10px; }
 .recruitment-path li { margin-block: 10px; line-height: 1.7; }
+.building-wiki { overflow-wrap: anywhere; }
+.building-stage-links { display: flex; flex-wrap: wrap; gap: 8px; }
+.building-stage-links a { display: inline-flex; align-items: center; min-height: 44px; padding: 10px 14px; border: 1px solid #586355; border-radius: 6px; }
+.building-stage-links a[aria-current="page"] { background: #343e30; border-color: #d2b783; }
+.building-unit-link { padding: 14px 18px; border-bottom: 1px solid #394239; }
+.building-unit-link > a { display: inline-flex; align-items: center; min-height: 44px; }
+.building-unit-link summary { cursor: pointer; min-height: 44px; padding-block: 10px; }
 /* Compact triggers; one native modal provides keyboard focus containment. */
 .ability-list { display:flex; flex-wrap:wrap; gap:.45rem; list-style:none; padding:0; }
 .ability-button { font:inherit; color:var(--accent, #e3be73); background:transparent; border:1px solid #746348; border-radius:.5rem; padding:.45rem .65rem; cursor:pointer; min-height:2.5rem; text-align:left; }

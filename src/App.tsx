@@ -16,6 +16,8 @@ import NotesPage from './pages/NotesPage';
 import SettingsPage from './pages/SettingsPage';
 import NotFound from './pages/NotFound';
 import AbilityPage from './pages/AbilityPage';
+import BuildingsPage from './pages/BuildingsPage';
+import BuildingPage from './pages/BuildingPage';
 
 export default function AppShell() {
   const location = useLocation();
@@ -38,6 +40,8 @@ export default function AppShell() {
           <Route path="/calculator" element={<CalculatorPage/>}/>
           <Route path="/settings" element={<SettingsPage/>}/>
           <Route path="/abilities/:id" element={<AbilityPage/>}/>
+          <Route path={`/${entityRoutes.building}`} element={<BuildingsPage/>}/>
+          <Route path={`/${entityRoutes.building}/:id`} element={<BuildingPage/>}/>
           <Route path="*" element={<NotFound/>}/>
         </Routes>
       </main>

@@ -15,6 +15,10 @@ const evolving = new Set(['README.md', '.gitignore', 'package.json', 'scripts/te
   'src/components/ArticleEditor.tsx', 'src/pages/NotesPage.tsx',
   'src/pages/UnitPage.tsx', 'src/pages/FactionPage.tsx', 'src/pages/LordPage.tsx',
   'src/pages/SettingsPage.tsx', 'src/pages/CalculatorPage.tsx']);
+// Building search/saved-name presentation evolves in the live app. Its new
+// tests check exact building identity and preserve all data/storage contracts;
+// historical evidence still replays the unchanged adapter from the baseline.
+evolving.add('src/repositories/archivePresentation.ts');
 // Reviewed roster projections are checked in the live tree before replay.
 for (const path of ['src/App.tsx','src/domain/types.ts','src/domain/unit.ts','src/domain/unitValidation.ts',
   'src/domain/unitLabels.ts','src/repositories/gameRepository.ts','src/repositories/unitSharedIdentity.ts','src/repositories/unitCatalogRepository.ts','src/components/UnitProductionDetails.tsx','src/repositories/unitDiagnosticRepository.ts','src/components/EntityRow.tsx','src/pages/FactionsPage.tsx','src/pages/HomePage.tsx',

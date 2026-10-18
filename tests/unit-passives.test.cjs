@@ -26,7 +26,7 @@ const json=p=>JSON.parse(readFileSync(p));
 const raw=json('src/data/units.json'),source=json('tools/wh3-importer/unit-passives/source.json'),membership=json('tools/wh3-importer/unit-attributes/source.json');
 const review=json('tools/wh3-importer/unit-passives/admission.json'),projection=json('src/data/unitPassiveAdmissions.json'),mappings=json('tools/wh3-importer/unit-passives/mappings.json');
 const attributes=json('src/data/unitAttributeAdmissions.json'),production=game.listUnits().filter(u=>u.gameVersion!=='sample');
-const render=u=>renderToString(React.createElement(Details,{unit:u}));
+const render=u=>renderToString(React.createElement(require('react-router-dom').MemoryRouter,null,React.createElement(Details,{unit:u})));
 
 test('passive collections promote with proved-empty and partial states; every non-passive field and old passive ID remains exact',()=>{
   assert.equal(production.length,1110);assert.equal(raw.filter(u=>u.passiveAbilities!==undefined).length,5);

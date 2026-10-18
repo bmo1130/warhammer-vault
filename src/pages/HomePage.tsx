@@ -30,7 +30,7 @@ export default function HomePage() {
   const results = searchArchive(query);
   return <>
     <PageIntro eyebrow="PERSONAL FIELD ARCHIVE" title="전쟁 서고" description="읽고, 기록하고, 다음 전투를 준비하는 나만의 햄탈워 기록장."/>
-    <SearchBox value={query} onChange={setQuery} label="팩션, 군주, 영웅, 유닛 검색"/>
+    <SearchBox value={query} onChange={setQuery} label="팩션, 군주, 영웅, 유닛, 건물 검색"/>
     {query.trim() ? <section className="section">
       <SectionTitle title="검색 결과" count={results.length}/>
       <div className="list-card">{results.length ? results.map(result => {
@@ -42,7 +42,7 @@ export default function HomePage() {
       <section className="section">
         <SectionTitle title="유닛 탐색" count={unitCatalogRepository.list().length}/>
         <div className="panel archive-start"><p>일반 유닛과 관찰 자료를 찾고, 즐겨찾기와 나만의 기록으로 다시 이어가세요.</p>
-          <div className="archive-links"><Link className="button button-primary" to="/units">전체 유닛 보기 <Icon name="arrow"/></Link><Link className="button button-secondary" to="/compare">유닛 비교 <Icon name="arrow"/></Link><Link className="button button-secondary" to="/calculator">스탯 계산기 <Icon name="arrow"/></Link><Link className="text-button" to="/units?filter=evidence">관찰 자료가 있는 유닛 <Icon name="arrow"/></Link></div>
+          <div className="archive-links"><Link className="button button-primary" to="/units">전체 유닛 보기 <Icon name="arrow"/></Link><Link className="button button-secondary" to="/compare">유닛 비교 <Icon name="arrow"/></Link><Link className="button button-secondary" to="/calculator">스탯 계산기 <Icon name="arrow"/></Link><Link className="button button-secondary" to="/buildings">브레토니아 건물 <Icon name="arrow"/></Link><Link className="text-button" to="/units?filter=evidence">관찰 자료가 있는 유닛 <Icon name="arrow"/></Link></div>
         </div>
       </section>
       <div className="two-columns">

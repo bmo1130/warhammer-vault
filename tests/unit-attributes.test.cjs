@@ -24,7 +24,7 @@ const json=p=>JSON.parse(readFileSync(p));
 const raw=json('src/data/units.json'),projection=json('src/data/unitAttributeAdmissions.json');
 const review=json('tools/wh3-importer/unit-attributes/admission.json'),source=json('tools/wh3-importer/unit-attributes/source.json');
 const production=game.listUnits().filter(u=>u.gameVersion!=='sample');
-const render=u=>renderToString(React.createElement(Details,{unit:u}));
+const render=u=>renderToString(React.createElement(require('react-router-dom').MemoryRouter,null,React.createElement(Details,{unit:u})));
 
 test('attribute collections promote with exact provenance; all other Unit fields, old traits and Korean names survive',()=>{
   assert.equal(production.length,1110);

@@ -1,6 +1,9 @@
 import type { Unit } from '../domain/unit';
 import { recruitmentBuilding } from '../repositories/unitRecruitment';
 import SectionTitle from './SectionTitle';
+import { Link } from 'react-router-dom';
+import { pathFor } from '../domain/entities';
+import { buildingWikiRepository } from '../repositories/buildingWikiRepository';
 
 const labels: Record<string,string>={REGIMENT_OF_RENOWN:'유명연대',MERCENARY_POOL:'특수 모집 풀',MERCENARY_GROUP:'모집 그룹 (풀 미확인)',
   RECRUITMENT_SOURCE_OVERRIDE:'별도 모집 출처',UNIT_UPGRADE:'유닛 업그레이드',RITUAL_MERCENARY_SPAWN:'의례를 통한 풀 추가',CORE_MERCENARY_PERMISSION:'핵심 용병 허용'};
@@ -24,6 +27,7 @@ export default function UnitRecruitmentDetails({unit}:{unit:Unit}){
           <summary>{names.join(' / ')||'건물 이름 미확인'} · 최소 CA 단계 {first.buildingStage}{first.factionKey?' · 진영 지정':''}</summary>
           <p>명시된 모집 단계: {stages.join(', ')} · 직접 출처 확인 · 실효 조건 일부 미확인</p>
           <ul>{ordered.map(r=>{const building=recruitmentBuilding(r.buildingId??'');return <li key={r.sourceKey}>
+            {buildingWikiRepository.get(r.buildingId??'')&&<><Link to={pathFor('building',r.buildingId!)}>{buildingWikiRepository.get(r.buildingId!)!.name}</Link> · </>}
             CA 단계 {r.buildingStage} · 주건물 요구 단계 {r.requiredPrimaryBuildingLevel}
             {building?.onlyInCapital?' · 주도시 조건':''}{building?.factionUnique?' · 진영 고유 표시':''}
             {!!building?.requiredBuildings.length&&` · 선행 건물 ${building.requiredBuildings.length}개`}

@@ -1,5 +1,5 @@
 import data from '../data/unitRecruitmentAdmissions.json';
-import type { Unit, UnitRecruitmentRequirement, UnitRecruitmentSource, UnitRecruitmentReview } from '../domain/unit';
+import type { Unit, UnitRecruitmentRequirement, UnitRecruitmentSource, UnitRecruitmentReview, RecruitmentReference } from '../domain/unit';
 
 const byId=new Map(data.admissions.map(a=>[a.id,a]));
 const canonical=(v: unknown): string=>Array.isArray(v)?'['+v.map(canonical).join(',')+']':
@@ -28,8 +28,13 @@ export function withoutUnitRecruitment(unit: Unit): Unit {
 }
 // Building restrictions are shared by exact CA key, never deduced from a name.
 export type RecruitmentBuilding={key:string;chainKey:string;stage:number;requiredPrimaryBuildingLevel:number;onlyInCapital:boolean;factionUnique:boolean;
-  variants:{name:string|null;cultureKey:string;subcultureKey:string;factionKey:string;disables:boolean;reference:{rowId:string}}[];
-  requiredBuildings:{key:string;reference:{rowId:string}}[];
-  availabilitySets:{key:string;rules:unknown[];reference:{rowId:string}}[]};
+  visibleInUi:boolean;resourceKey:string;resourceCostKey:string;instanceKey:string;requiredCommanderKey:string;
+  variants:{name:string|null;cultureKey:string;subcultureKey:string;factionKey:string;disables:boolean;reference:RecruitmentReference}[];
+  requiredBuildings:{key:string;reference:RecruitmentReference}[];
+  availabilitySets:{key:string;rules:{culture:string;sub_culture:string;faction:string;campaign:string;reference:RecruitmentReference}[];reference:RecruitmentReference}[];
+  settlementTypes:{key:string;exclude:boolean;reference:RecruitmentReference}[];
+  contentPacks:{raw:Record<string,string|number|boolean>;reference:RecruitmentReference}[];
+  reference:RecruitmentReference};
 const buildings=data.buildings as Record<string,RecruitmentBuilding>;
 export function recruitmentBuilding(key: string): RecruitmentBuilding|undefined{return buildings[key];}
+export const recruitmentSnapshot = {gameVersion:data.gameVersion,snapshotId:data.snapshotId,sourceHash:data.sourceHash,reportReference:data.reportReference} as const;

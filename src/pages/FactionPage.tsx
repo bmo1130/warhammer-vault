@@ -11,6 +11,7 @@ import EmptyState from '../components/EmptyState';
 import BookmarkButton from '../components/BookmarkButton';
 import ArticleEditor from '../components/ArticleEditor';
 import LocalisationSource from '../components/LocalisationSource';
+import BuildingCatalog from '../components/BuildingCatalog';
 
 const labels: Record<RosterCategory, string> = { legendaryLords: '전설 군주', genericLords: '일반 군주', specialLords: '특수 군주', legendaryHeroes: '전설 영웅', genericHeroes: '일반 영웅', specialHeroes: '특수 영웅', units: '유닛' };
 export default function FactionPage() {
@@ -45,6 +46,7 @@ export default function FactionPage() {
     {(tab === 'overview' || tab === 'lords' || tab === 'heroes') && <div className="two-columns">{groups.filter(g => tab === 'overview' || (tab === 'lords' ? g.type === 'lord' : g.type === 'hero')).map(group => <section className="section" key={group.key}><SectionTitle title={labels[group.key]} count={group.items.length}/><div className="list-card">{group.items.length ? group.items.map(c => <EntityRow key={c.id} type={group.type} id={c.id} name={c.name} subtitle={labels[group.key]}/>) : <EmptyState title={coverage ? '검토된 roster에 해당 entry가 없습니다' : '아직 검토되지 않았습니다'} text="이 분류의 등록 상태를 표시합니다."/>}</div></section>)}</div>}
     {(tab === 'overview' || tab === 'units') && <section className="section"><SectionTitle title="유닛 목록" count={units.length}/><div className="list-card">{units.map(u => <EntityRow key={u.id} type="unit" id={u.id} name={u.name} subtitle={u.classification.category}/>)}</div></section>}
     {tab === 'overview' && <ArticleEditor key={id} target={{ entityType: 'faction', entityId: id }} label={faction.name}/>}
-    {(tab === 'research' || tab === 'buildings') && <section className="section"><EmptyState title="등록된 데이터가 없습니다" text="이 항목은 roster 완료 범위에 포함되지 않습니다."/></section>}
+    {tab === 'buildings' && id === 'bretonnia' && <section className="section"><SectionTitle title="브레토니아 건물" to="/buildings" action="건물 도감"/><BuildingCatalog/></section>}
+    {(tab === 'research' || (tab === 'buildings' && id !== 'bretonnia')) && <section className="section"><EmptyState title="등록된 데이터가 없습니다" text="이 항목은 roster 완료 범위에 포함되지 않습니다."/></section>}
   </>;
 }

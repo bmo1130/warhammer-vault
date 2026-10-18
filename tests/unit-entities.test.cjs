@@ -119,11 +119,11 @@ test('validator rejects unsafe, fractional, nonpositive counts; UI retains Ultra
   const u=production[0],factions=game.listFactions().map(f=>f.id);
   for(const count of [0,-1,0.5,Infinity,NaN,Number.MAX_SAFE_INTEGER+1])assert(validateUnits([{...u,entities:{...u.entities,count}}],factions).some(i=>i.field==='entities.count'));
   const known=game.getUnit('ca_unit_wh_main_brt_art_field_trebuchet');
-  const html=renderToString(React.createElement(Details,{unit:known})).replace(/<!--.*?-->/g,'');
+  const html=renderToString(React.createElement(require('react-router-dom').MemoryRouter,null,React.createElement(Details,{unit:known}))).replace(/<!--.*?-->/g,'');
   assert(html.includes('전투 개체 수 (Ultra)'));assert(html.includes('부대 총 생명력 (Ultra)'));assert(html.includes('개체당 생명력'));
   assert(html.includes('승무원이나 탑승자를 별도로 더하지 않습니다'));assert(html.includes('4512'));assert(html.includes('script_log_031026_1244.txt:83'));
   assert(html.includes(rules.sourceHash));
-  const unknown=production.find(u=>u.entities.count===undefined);assert(renderToString(React.createElement(Details,{unit:unknown})).includes('미확인'));
+  const unknown=production.find(u=>u.entities.count===undefined);assert(renderToString(React.createElement(require('react-router-dom').MemoryRouter,null,React.createElement(Details,{unit:unknown}))).includes('미확인'));
 });
 
 test('existing bookmarks, article and recent records keep the exact Unit identity after count promotion',async()=>{

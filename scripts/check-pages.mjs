@@ -4,7 +4,8 @@ import vm from 'node:vm';
 const base = '/warhammer-vault/';
 const index = readFileSync('dist/index.html', 'utf8'), fallback = readFileSync('dist/404.html', 'utf8');
 const script = html => [...html.matchAll(/<script>([\s\S]*?)<\/script>/g)][0][1];
-for (const route of ['units/wh_main_brt_inf_men_at_arms', 'calculator?unit=a%2Fb&x=a%26b#result', 'compare?left=a&right=b', 'units?q=성배&filter=evidence', 'notes', 'factions/bretonnia', 'lords/alberic', 'abilities/regeneration']) {
+const routes = ['units/wh_main_brt_inf_men_at_arms', 'calculator?unit=a%2Fb&x=a%26b#result', 'compare?left=a&right=b', 'units?q=성배&filter=evidence', 'notes', 'factions/bretonnia', 'lords/alberic', 'abilities/regeneration', 'buildings', 'buildings/wh_main_brt_stables_3#my-record'];
+for (const route of routes) {
   const original = new URL(base + route, 'https://example.github.io');
   let redirect;
   vm.runInNewContext(script(fallback), { location: { pathname: original.pathname, search: original.search, hash: original.hash, replace: url => { redirect = url; } } });
@@ -19,4 +20,4 @@ assert.equal(escaped, false);
 for (const [, asset] of index.matchAll(/(?:src|href)="(\/warhammer-vault\/[^"?#]+)"/g)) assert(existsSync('dist/' + asset.slice(base.length)), `Missing built asset: ${asset}`);
 assert(index.includes('/warhammer-vault/assets/'));
 assert(!index.includes('%BASE_URL%'));
-console.log('PASS Pages: 8 route/query/hash roundtrips; bounded same-origin restoration; built assets present.');
+console.log(`PASS Pages: ${routes.length} route/query/hash roundtrips; bounded same-origin restoration; built assets present.`);

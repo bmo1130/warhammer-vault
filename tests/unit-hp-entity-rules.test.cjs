@@ -109,7 +109,7 @@ test('exact overlays restore original HP/count and partial UI never invents chas
   const raw=read('src/data/units.json');
   for(const original of raw){assert.deepEqual(withoutUnitEntities(applyUnitEntities(original)),original);}
   const current=game.getUnit('ca_unit_wh_main_emp_veh_steam_tank');assert.equal(current.entities.count,1);assert.equal(current.entities.totalHealth,undefined);
-  const html=renderToString(React.createElement(Details,{unit:current}));assert(html.includes('개체 수 확인 · 총 HP 미확인'));
+  const html=renderToString(React.createElement(require('react-router-dom').MemoryRouter,null,React.createElement(Details,{unit:current})));assert(html.includes('개체 수 확인 · 총 HP 미확인'));
   const known=production.find(u=>unitEntityAdmission(u)?.kind==='EMPIRICAL_CATEGORY_RULE'&&u.entities.totalHealth!==undefined);
   const drift={...known,entities:{...known.entities,totalHealth:known.entities.totalHealth+1}};
   assert.deepEqual(withoutUnitEntities(drift),drift);
